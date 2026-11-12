@@ -16,7 +16,9 @@
       "prop": "aggiungere (deroga: nutrizione dalle 'cipolline' CREA come approssimazione dichiarata)",
       "comp_re": "cipollott",
       "id": "cipollotto_spring_onion",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "very common in Italy, Cipollotto Nocerino PGI",
+      "prop_en": "add (exception: nutrition from CREA 'cipolline' as a declared approximation)"
     },
     {
       "it": "Agretti (barba di frate)",
@@ -29,7 +31,9 @@
       ],
       "prop": "aggiungere se si trova una seconda fonte stagionale",
       "id": "agretti_saltwort",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "typically Italian spring vegetable",
+      "prop_en": "add if a second seasonal source is found"
     },
     {
       "it": "Amarena / visciola",
@@ -42,7 +46,9 @@
       ],
       "prop": "valutare",
       "id": "amarena_sour_cherry",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "Amarene Brusche di Modena PGI; rarely eaten fresh",
+      "prop_en": "to evaluate"
     },
     {
       "it": "Noce",
@@ -55,7 +61,9 @@
       ],
       "prop": "valutare l'estensione alla frutta secca",
       "id": "noce_walnut",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "autumn nut, widely eaten",
+      "prop_en": "consider extending to nuts"
     },
     {
       "it": "Nocciola",
@@ -68,7 +76,9 @@
       ],
       "prop": "valutare l'estensione alla frutta secca",
       "id": "nocciola_hazelnut",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "three Italian PDO/PGI (Piemonte, Giffoni, Romana)",
+      "prop_en": "consider extending to nuts"
     },
     {
       "it": "Mandorla",
@@ -81,7 +91,9 @@
       ],
       "prop": "valutare l'estensione alla frutta secca",
       "id": "mandorla_almond",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "nut; fresh almonds have a short summer season",
+      "prop_en": "consider extending to nuts"
     },
     {
       "it": "Pistacchio",
@@ -94,7 +106,9 @@
       ],
       "prop": "valutare l'estensione alla frutta secca",
       "id": "pistacchio_pistachio",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "Pistacchio Verde di Bronte PDO",
+      "prop_en": "consider extending to nuts"
     },
     {
       "it": "Erba cipollina",
@@ -107,7 +121,9 @@
       ],
       "prop": "aggiungere se si trova una seconda fonte stagionale",
       "id": "erba_cipollina_chives",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "common garden herb",
+      "prop_en": "add if a second seasonal source is found"
     },
     {
       "it": "Crescione",
@@ -123,7 +139,9 @@
       ],
       "prop": "no",
       "id": "crescione_watercress",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "uncommon in Italy",
+      "prop_en": "no"
     },
     {
       "it": "Ribes nero",
@@ -138,7 +156,9 @@
       ],
       "prop": "no",
       "id": "ribes_nero_blackcurrant",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "mainly a Northern European crop",
+      "prop_en": "no"
     },
     {
       "it": "Uva spina",
@@ -153,7 +173,9 @@
       ],
       "prop": "no",
       "id": "uva_spina_gooseberry",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "mainly a Northern European crop",
+      "prop_en": "no"
     },
     {
       "it": "Mirtillo rosso",
@@ -169,7 +191,9 @@
       ],
       "prop": "no",
       "id": "mirtillo_rosso_lingonberry",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "in Italy almost only dried or as juice",
+      "prop_en": "no"
     },
     {
       "it": "Sambuco",
@@ -184,7 +208,9 @@
       ],
       "prop": "no",
       "id": "sambuco_elderberry",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "used mainly for flowers and syrups",
+      "prop_en": "no"
     },
     {
       "it": "Gelso (mora di gelso)",
@@ -200,7 +226,9 @@
       ],
       "prop": "valutare",
       "id": "gelso_mulberry",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "traditional fruit of Southern Italy, rarely sold",
+      "prop_en": "to evaluate"
     },
     {
       "it": "Rabarbaro",
@@ -215,7 +243,9 @@
       ],
       "prop": "no",
       "id": "rabarbaro_rhubarb",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "rarely used in Italian cooking",
+      "prop_en": "no"
     },
     {
       "it": "Rafano (cren)",
@@ -230,7 +260,9 @@
       ],
       "prop": "valutare",
       "id": "rafano_horseradish",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "traditional in Basilicata (rafanata) and North-East Italy",
+      "prop_en": "to evaluate"
     },
     {
       "it": "Scorzonera / scorzobianca",
@@ -246,7 +278,9 @@
       ],
       "prop": "no",
       "id": "scorzonera_black_salsify",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "niche vegetable",
+      "prop_en": "no"
     },
     {
       "it": "Cavolo cinese / pak choi",
@@ -263,7 +297,9 @@
       ],
       "prop": "valutare",
       "id": "cavolo_cinese_chinese_cabbage",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "increasingly common in supermarkets and gardens",
+      "prop_en": "to evaluate"
     },
     {
       "it": "Patata dolce (batata)",
@@ -279,7 +315,9 @@
       ],
       "prop": "valutare",
       "id": "patata_dolce_sweet_potato",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "also grown in Italy (Veneto, Apulia), growing consumption",
+      "prop_en": "to evaluate"
     },
     {
       "it": "Rapa / navone (rutabaga)",
@@ -297,7 +335,9 @@
       ],
       "prop": "no",
       "id": "navone_swede",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "niche in Italy",
+      "prop_en": "no"
     },
     {
       "it": "Daikon",
@@ -312,7 +352,9 @@
       ],
       "prop": "no",
       "id": "daikon_daikon",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "niche",
+      "prop_en": "no"
     },
     {
       "it": "Taccola (pisello mangiatutto)",
@@ -329,7 +371,9 @@
       ],
       "prop": "come varietà del pisello",
       "id": "taccola_snow_pea",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "common in gardens; could be a form of pea",
+      "prop_en": "as a variety of pea"
     },
     {
       "it": "Broccolo romanesco",
@@ -344,7 +388,9 @@
       ],
       "prop": "aggiungere (deroga, nutrizione da cavolfiore o broccolo come approssimata) o come varietà",
       "id": "broccolo_romanesco_romanesco",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "typically Italian winter vegetable",
+      "prop_en": "add (exception, nutrition from cauliflower or broccoli as an approximation) or as a variety"
     },
     {
       "it": "Puntarelle",
@@ -359,7 +405,9 @@
       ],
       "prop": "come varietà della cicoria da cespo (catalogna)",
       "id": "puntarelle_puntarelle",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "typical of Lazio, winter",
+      "prop_en": "as a variety of head chicory (catalogna)"
     },
     {
       "it": "Asparago selvatico",
@@ -372,7 +420,9 @@
       ],
       "prop": "come varietà o nota dell'asparago",
       "id": "asparago_selvatico_wild_asparagus",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "wild spring harvest, CREA has an entry",
+      "prop_en": "as a variety or note of asparagus"
     },
     {
       "it": "Portulaca",
@@ -386,7 +436,9 @@
         "erba spontanea"
       ],
       "prop": "no",
-      "status": "escluso su decisione dell'utente (2026-11-05)"
+      "status": "escluso su decisione dell'utente (2026-11-05)",
+      "rel_en": "wild herb",
+      "prop_en": "no"
     },
     {
       "it": "Acetosa",
@@ -400,7 +452,9 @@
         "erba spontanea"
       ],
       "prop": "no",
-      "status": "escluso su decisione dell'utente (2026-11-05)"
+      "status": "escluso su decisione dell'utente (2026-11-05)",
+      "rel_en": "wild herb",
+      "prop_en": "no"
     },
     {
       "it": "Salicornia",
@@ -415,7 +469,9 @@
       ],
       "prop": "no",
       "id": "salicornia_samphire",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "niche",
+      "prop_en": "no"
     },
     {
       "it": "Gombo (okra)",
@@ -430,7 +486,9 @@
       ],
       "prop": "no",
       "id": "gombo_okra",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "niche",
+      "prop_en": "no"
     },
     {
       "it": "Zucchina spinosa (chayote)",
@@ -445,7 +503,9 @@
       ],
       "prop": "no",
       "id": "zucchina_spinosa_chayote",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "niche",
+      "prop_en": "no"
     },
     {
       "it": "Alchechengi",
@@ -458,7 +518,9 @@
       ],
       "prop": "no",
       "id": "alchechengi_cape_gooseberry",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "ornamental fruit, occasionally eaten",
+      "prop_en": "no"
     },
     {
       "it": "Cocco",
@@ -471,7 +533,9 @@
       ],
       "prop": "no",
       "id": "cocco_coconut",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "exotic, no season in Italy",
+      "prop_en": "no"
     },
     {
       "it": "Carruba",
@@ -486,7 +550,9 @@
       ],
       "prop": "no",
       "id": "carruba_carob",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "eaten mainly as flour",
+      "prop_en": "no"
     },
     {
       "it": "Giuggiola",
@@ -501,7 +567,9 @@
       ],
       "prop": "valutare",
       "id": "giuggiola_jujube",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "traditional autumn fruit (Veneto, South)",
+      "prop_en": "to evaluate"
     },
     {
       "it": "Nespola comune (germanica)",
@@ -516,7 +584,9 @@
       ],
       "prop": "no",
       "id": "nespola_comune_medlar",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "heritage fruit, rarely sold",
+      "prop_en": "no"
     },
     {
       "it": "Corbezzolo",
@@ -528,7 +598,9 @@
         "frutto spontaneo"
       ],
       "prop": "no",
-      "status": "escluso su decisione dell'utente (2026-11-05)"
+      "status": "escluso su decisione dell'utente (2026-11-05)",
+      "rel_en": "wild fruit",
+      "prop_en": "no"
     },
     {
       "it": "Mirabella / susina gialla",
@@ -545,7 +617,9 @@
       ],
       "prop": "come varietà della susina",
       "id": "mirabella_mirabelle_plum",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "falls under plums",
+      "prop_en": "as a variety of plum"
     },
     {
       "it": "Finferlo (gallinaccio)",
@@ -560,7 +634,9 @@
       ],
       "prop": "aggiungere se si trova una fonte stagionale italiana",
       "id": "finferlo_chanterelle",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "wild mushroom, widely picked and sold",
+      "prop_en": "add if an Italian seasonal source is found"
     },
     {
       "it": "Spugnola",
@@ -575,7 +651,9 @@
       ],
       "prop": "no",
       "id": "spugnola_morel",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "niche wild spring mushroom",
+      "prop_en": "no"
     },
     {
       "it": "Shiitake",
@@ -590,7 +668,9 @@
       ],
       "prop": "no",
       "id": "shiitake_shiitake",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "cultivated, no seasonality",
+      "prop_en": "no"
     },
     {
       "it": "Cardoncello",
@@ -603,7 +683,9 @@
       ],
       "prop": "valutare",
       "id": "cardoncello_king_oyster_mushroom",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "cultivated and wild mushroom typical of Apulia and Basilicata",
+      "prop_en": "to evaluate"
     },
     {
       "it": "Lampascioni",
@@ -616,7 +698,9 @@
       ],
       "prop": "valutare",
       "id": "lampascioni_tassel_hyacinth",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "traditional in Apulia and Basilicata",
+      "prop_en": "to evaluate"
     },
     {
       "it": "Cicerchia",
@@ -629,7 +713,9 @@
       ],
       "prop": "valutare",
       "id": "cicerchia_grass_pea",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "traditional legume of Central Italy",
+      "prop_en": "to evaluate"
     },
     {
       "it": "Cappero",
@@ -641,7 +727,9 @@
         "DOP/IGP di Pantelleria e delle Eolie; consumo conservato"
       ],
       "prop": "no (prodotto conservato)",
-      "status": "escluso su decisione dell'utente (2026-11-05)"
+      "status": "escluso su decisione dell'utente (2026-11-05)",
+      "rel_en": "PDO/PGI of Pantelleria and the Aeolian Islands; eaten preserved",
+      "prop_en": "no (preserved product)"
     },
     {
       "it": "Cedro",
@@ -654,7 +742,9 @@
       ],
       "prop": "valutare",
       "id": "cedro_citron",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "Cedro di Santa Maria del Cedro PDO",
+      "prop_en": "to evaluate"
     },
     {
       "it": "Bergamotto",
@@ -666,7 +756,9 @@
         "agrume tipico della Calabria, uso soprattutto aromatico"
       ],
       "prop": "valutare",
-      "status": "escluso su decisione dell'utente (2026-11-05)"
+      "status": "escluso su decisione dell'utente (2026-11-05)",
+      "rel_en": "citrus typical of Calabria, used mainly for flavouring",
+      "prop_en": "to evaluate"
     },
     {
       "it": "Chinotto",
@@ -679,7 +771,9 @@
       ],
       "prop": "no",
       "id": "chinotto_chinotto",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "used processed",
+      "prop_en": "no"
     },
     {
       "it": "Oliva",
@@ -694,7 +788,9 @@
       ],
       "prop": "no (solo trasformata)",
       "id": "oliva_olive",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "many PDOs; not eaten fresh",
+      "prop_en": "no (processed only)"
     },
     {
       "it": "Zafferano",
@@ -707,7 +803,9 @@
       ],
       "prop": "no (spezia secca)",
       "id": "zafferano_saffron",
-      "status": "incluso il 2026-11-05"
+      "status": "incluso il 2026-11-05",
+      "rel_en": "spice; three Italian PDOs",
+      "prop_en": "no (dried spice)"
     }
   ]
 }

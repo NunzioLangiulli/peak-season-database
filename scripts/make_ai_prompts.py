@@ -1,10 +1,10 @@
-"""Prompt per generare con un modello di AI le immagini che mancano (data/ai_image_prompts.md).
+"""Prompts to generate the missing images with an AI model (data/ai_image_prompts.md).
 
-Per ogni alimento e per ciascuno dei 5 tipi senza foto attuale valida né candidate, scrive un prompt in inglese
-(i modelli generativi rendono meglio in inglese) con nome comune, nome scientifico e indicazioni di stile comuni a
-tutte le immagini dell'app. Le immagini generate vanno dichiarate come tali (provider "ai_generated") quando le
-aggiungeremo al database.
-Uso:  python scripts/make_ai_prompts.py   (dopo find_image_candidates.py, ed eventualmente dopo la scelta)
+For every product and each of the 5 view types with no valid current photo and no candidates, writes an English prompt
+(generative models work better in English) with common name, scientific name and the style guidelines shared by
+all the app's images. Generated images must be declared as such (provider "ai_generated") when they are
+added to the database.
+Usage:  python scripts/make_ai_prompts.py   (after find_image_candidates.py, and optionally after the selection)
 """
 from common import DATA, IMAGES, load_json
 from find_image_candidates import db_path
@@ -18,8 +18,8 @@ TYPE = {
     "botanical_plate": "Vintage botanical illustration plate of {sci} ({en}) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.",
     "cut_section": "Fresh {en} ({sci}) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background.",
 }
-LAB = {"full_frame": "Prodotto a tutto campo", "isolated_background": "Sfondo bianco o colorato", "plant_in_field": "Pianta",
-       "botanical_plate": "Tavola botanica", "cut_section": "Tagliato / sezione"}
+LAB = {"full_frame": "Full-frame product", "isolated_background": "White or coloured background", "plant_in_field": "Plant",
+       "botanical_plate": "Botanical plate", "cut_section": "Cut / cross-section"}
 NO_CUT = {"erbe_spezie", "cereali"}
 
 
@@ -27,10 +27,10 @@ def main():
     db = load_json(db_path())
     cpath = IMAGES / "_candidates" / "candidates.json"
     cand = load_json(cpath)["items"] if cpath.exists() else {}
-    L = ["# Prompt per immagini generate con AI\n",
-         "Solo per i tipi di immagine per cui non abbiamo né una foto attuale valida né candidate. Stile comune a tutti i prompt: "
+    L = ["# Prompts for AI-generated images\n",
+         "Only for the image types that have neither a valid current photo nor candidates. Style shared by all prompts: "
          f"*{STYLE}*\n",
-         "Le immagini generate andranno indicate come tali nei metadati (provider `ai_generated`, autore = modello usato).\n"]
+         "Generated images must be declared as such in the metadata (provider `ai_generated`, author = model used).\n"]
     n = 0
     for it in db["items"]:
         have = {d["view_type"] for d in it["images"]["image_details"] if not d.get("flags")}
@@ -42,7 +42,7 @@ def main():
         sci = it["botany"]["scientific_name"] or ""
         plant = "tree" if it["category"] == "frutta" else ("fungus" if it["category"] == "funghi" else "plant")
         where = "in a forest floor" if it["category"] == "funghi" else ("in an orchard" if it["category"] == "frutta" else "in a vegetable garden")
-        L.append(f"## {it['names']['it']} ({it['names']['en']})\n")
+        L.append(f"## {it['names']['en']} ({it['names']['it']})\n")
         for t in miss:
             p = TYPE[t].format(en=en, sci=sci, plant=plant, where=where, bg="white" if n % 2 == 0 else "pale coloured")
             full = p if t == "botanical_plate" else f"{p} {STYLE}"
@@ -50,7 +50,7 @@ def main():
             n += 1
         L.append("")
     (DATA / "ai_image_prompts.md").write_text("\n".join(L), encoding="utf-8")
-    print("scritto data/ai_image_prompts.md:", n, "prompt")
+    print("wrote data/ai_image_prompts.md:", n, "prompts")
 
 
 if __name__ == "__main__":

@@ -1,32 +1,32 @@
-# Guida al database Peak Season
+# Peak Season database guide
 
-Questa guida spiega come è costruito `data/database.json`, blocco per blocco, usando come esempio la scheda reale del **pomodoro**. Per ogni blocco: a cosa serve nell'app, da dove vengono i dati, come leggerli.
+This guide explains how `data/database.json` is built, block by block, using the real **tomato** record as an example. For each block: what it is for in the app, where the data come from, how to read them.
 
-## 1. I file
+## 1. Files
 
-| File | Contenuto |
+| File | Content |
 |---|---|
-| `data/database.json` | Il database: `metadata` (legende, metodi, fonti) + `items` (153 schede) |
-| `data/schema.json` | Le regole formali (JSON Schema): tipi, valori ammessi, campi obbligatori |
-| `data/items_index.json` | La lista master: per ogni alimento i codici e gli URL esatti su ogni fonte |
-| `data/draft_legacy_values.json` | I valori della tua bozza che non erano verificabili: tolti dall'app ma conservati |
-| `data/scraping_report.md` | Il report di affidabilità e lacune |
-| `data/audit_findings.json` | L'esito del ricontrollo voce per voce |
-| `data/raw/` | Copie dei dati grezzi delle fonti (PDF, CSV, xlsx, pagine) |
-| `scripts/config/` | Tabelle curate a mano dalle fonti, con citazioni e numeri di pagina |
-| `assets/images/` | Le foto `<id>_01.jpg`, `_02.jpg`… |
+| `data/database.json` | The database: `metadata` (legends, methods, sources) + `items` (153 records) |
+| `data/schema.json` | The formal rules (JSON Schema): types, allowed values, required fields |
+| `data/items_index.json` | The master list: for each product, its exact codes and URLs on every source |
+| `data/draft_legacy_values.json` | Values from the initial draft that could not be verified: removed from the app but preserved |
+| `data/scraping_report.md` | The reliability and gap report |
+| `data/audit_findings.json` | Results of the item-by-item re-check |
+| `data/raw/` | Copies of the raw source data (PDF, CSV, xlsx, pages; not published) |
+| `scripts/config/` | Tables hand-curated from the sources, with quotes and page numbers |
+| `assets/images/` | Photos `<id>_01.jpg`, `_02.jpg`… (credits in `_metadata.json`) |
 
-## 2. La logica generale
+## 2. General logic
 
-Ogni scheda segue lo stesso schema in 12 blocchi. Tre principi valgono ovunque:
+Every record follows the same 12-block structure. Three principles apply everywhere:
 
-1. **Ogni dato ha una fonte.** I blocchi strutturati portano la fonte accanto al valore (`source`, `basis`, `source_food`, `derivation`); le fonti di tutta la scheda sono elencate in `sources_by_topic.sources_used`.
-2. **`null` non è uguale a vuoto.** Un `null` è una lacuna vera (elencata in `data_completeness.missing_fields`), oppure un campo che non ha senso per quell'alimento (elencato in `not_applicable_fields`): ad esempio la soglia di danno da freddo per chi non soffre il freddo.
-3. **Bilingue.** Tutti i testi per l'utente sono oggetti `{"it": …, "en": …}` (vedi §13).
+1. **Every value has a source.** Structured blocks carry the source next to the value (`source`, `basis`, `source_food`, `derivation`); all sources of a record are listed in `sources_by_topic.sources_used`.
+2. **`null` is not the same as empty.** A `null` is either a real gap (listed in `data_completeness.missing_fields`) or a field that makes no sense for that product (listed in `not_applicable_fields`): e.g. the chilling-injury threshold for produce that is not chill-sensitive.
+3. **Bilingual.** Every user-facing text is an object `{"it": …, "en": …}` (see §13).
 
-Gli identificativi (`id`) sono `nome_it_name_en` senza accenti: sono le chiavi usate anche dai riferimenti tra schede (es. `keep_away_from`, `compatible_with`) e dai nomi delle foto.
+Identifiers (`id`) are `italianname_englishname` without accents: they are also the keys used by cross-references between records (e.g. `keep_away_from`, `compatible_with`) and by photo file names.
 
-## 3. Identità e botanica
+## 3. Identity and botany
 
 ```json
 {
@@ -39,7 +39,7 @@ Gli identificativi (`id`) sono `nome_it_name_en` senza accenti: sono le chiavi u
   "category": "verdura"
 }
 ```
-`category` è uno dei 5 valori del template. I sinonimi vengono da EPPO (nomi comuni ufficiali IT/EN).
+`category` is one of the 5 template values. Synonyms come from EPPO (official IT/EN common names).
 
 ```json
 {
@@ -65,11 +65,11 @@ Gli identificativi (`id`) sono `nome_it_name_en` senza accenti: sono le chiavi u
   }
 }
 ```
-- `scientific_name`, `family`, `genus`: verificati su EPPO e World Flora Online (`eppo_code`, `wfo_id` sono i codici ufficiali).
-- `plant_part_used`: confermata dai testi delle fonti.
-- `upov_*`: il codice di specie del **Catalogo comune UE delle varietà**; `varieties_registered_italy.count` = varietà oggi iscritte nel registro italiano.
+- `scientific_name`, `family`, `genus`: verified on EPPO and World Flora Online (`eppo_code` and `wfo_id` are the official codes).
+- `plant_part_used`: confirmed by the source texts.
+- `upov_*`: the species code of the **EU Common Catalogue of varieties**; `varieties_registered_italy.count` = varieties currently on the Italian register.
 
-## 4. Varietà e territori
+## 4. Varieties and territories
 
 ```json
 {
@@ -141,11 +141,11 @@ Gli identificativi (`id`) sono `nome_it_name_en` senza accenti: sono le chiavi u
               "country": "IT",
   …
 ```
-- `notable_varieties` contiene **solo** varietà verificate; `varieties_verification` dice dove (Slow Food, Catalogo UE, Orto da Coltivare…) e con che nome sono registrate.
-- `dop_igp_labels` e `has_dop_igp` sono verificati sul registro UE **eAmbrosia** (`eambrosia_verified`).
-- I **Prodotti Agroalimentari Tradizionali** stanno in `nutrition_and_sustainability.traditional_products_pat` (vedi §9).
+- `notable_varieties` contains **only** verified varieties; `varieties_verification` says where (Slow Food, EU Catalogue, Orto da Coltivare…) and under which name they are registered.
+- `dop_igp_labels` and `has_dop_igp` (PDO/PGI) are verified on the EU **eAmbrosia** register (`eambrosia_verified`).
+- **Traditional Agri-food Products (PAT)** are in `nutrition_and_sustainability.traditional_products_pat` (see §9).
 
-## 5. Immagini
+## 5. Images
 
 ```json
 {
@@ -171,11 +171,11 @@ Gli identificativi (`id`) sono `nome_it_name_en` senza accenti: sono le chiavi u
   ]
 }
 ```
-Ogni foto ha autore, licenza, URL d'origine e tipo (`view_type`): `full_frame` (il prodotto riempie l'inquadratura: è la foto principale quando c'è), `isolated_background` (sfondo bianco o colorato), `plant_in_field` (la pianta), `botanical_plate` (tavola botanica), `cut_section` (tagliato), `other`. `flags` segnala problemi noti (piatto, soggetto sbagliato), `variety` una varietà particolare (es. pesca tabacchiera). `sync_images.py` riallinea il database se togli foto dalla cartella.
+Every photo has author, licence, source URL and type (`view_type`): `full_frame` (the product fills the frame: it is the main photo when available), `isolated_background` (white or coloured background), `plant_in_field` (the plant), `botanical_plate` (botanical plate), `cut_section` (cut open), `other`. `flags` reports known issues (plate, wrong subject), `variety` a specific variety (e.g. flat peach). `sync_images.py` realigns the database when photos are removed from the folder.
 
-## 6. Stagionalità
+## 6. Seasonality
 
-Nell'estratto i 12 mesi (gen→dic) sono abbreviati: `·` fuori stagione, `p` primizia, `S` di stagione, `P` picco, `f` fine stagione.
+In the excerpt the 12 months (Jan→Dec) are abbreviated: `·` out of season, `p` early season, `S` in season, `P` peak, `f` end of season.
 
 ```json
 {
@@ -198,10 +198,10 @@ Nell'estratto i 12 mesi (gen→dic) sono abbreviati: `·` fuori stagione, `p` pr
   }
 }
 ```
-- `italy_macro_areas` (Nord, Centro, Sud e Isole) è la stagionalità per l'utente italiano: nasce dal **voto tra più fonti** (WWF, Greenpeace, Altroconsumo, EUFIC per l'Italia, epoche di raccolta di Orto da Coltivare); il metodo è in `metadata.seasonality_method`. Per ogni mese si contano le fonti che lo indicano: con almeno metà dei voti il mese è di stagione, con meno è inizio o fine stagione; il **picco** sono i mesi centrali di un periodo di almeno tre mesi su cui tutte le fonti concordano.
-- `eufic_climatic_zones`: le 6 zone europee, derivate dai Paesi EUFIC (`eufic_by_country`); dove EUFIC non ha l'alimento, la zona alpina viene dal calendario austriaco (fonte nazionale indicata da EUFIC) e la mediterranea è derivata dal Sud e Isole. `eufic_zone_sources` dice la provenienza di ogni zona.
+- `italy_macro_areas` (North, Centre, South and Islands) is the seasonality for Italian users: it comes from a **vote across several sources** (WWF, Greenpeace, Altroconsumo, EUFIC for Italy, Orto da Coltivare harvest periods); the method is in `metadata.seasonality_method`. For each month the sources listing it are counted: with at least half of the votes the month is in season, with fewer it is early or end of season; the **peak** is the central months of a run of at least three months on which all sources agree.
+- `eufic_climatic_zones`: the 6 European zones, derived from the EUFIC countries (`eufic_by_country`); where EUFIC lacks the product, the Alpine zone comes from the Austrian calendar (the national source cited by EUFIC) and the Mediterranean zone is derived from the South and Islands. `eufic_zone_sources` gives the provenance of each zone.
 
-## 7. Calendario agricolo (orto)
+## 7. Agricultural (garden) calendar
 
 ```json
 {
@@ -294,13 +294,13 @@ Nell'estratto i 12 mesi (gen→dic) sono abbreviati: `·` fuori stagione, `p` pr
       9,
   …
 ```
-Mesi di semina, trapianto e raccolta per zona, con parametri agronomici (profondità, sesto d'impianto, esposizione, luna) da Orto da Coltivare. Per frutta, erbe e cereali sono ancora i valori della bozza (lacuna documentata).
+Sowing, transplanting and harvest months by area, with agronomic parameters (depth, spacing, exposure, moon) from Orto da Coltivare. For fruit, herbs and cereals the draft values are still used (documented gap).
 
-## 8. Acquisto, maturazione e conservazione
+## 8. Buying, ripening and storage
 
-È il blocco più ricco. Va letto su tre livelli: **testi per l'utente**, **consiglio sintetico**, **dati scientifici**.
+This is the richest block. It reads on three levels: **user-facing texts**, **short advice**, **scientific data**.
 
-### 8a. Testi per l'utente
+### 8a. User-facing texts
 
 ```json
 {
@@ -324,21 +324,21 @@ Mesi di semina, trapianto e raccolta per zona, con parametri agronomici (profond
   }
 }
 ```
-`card_short_storage` è l'etichetta breve per la card (≤ 42 caratteri), allineata ai dati FoodKeeper e UC Davis; `storage_instructions` è il testo lungo.
+`card_short_storage` is the short label for the card (≤ 42 characters), consistent with FoodKeeper and UC Davis data; `storage_instructions` is the long text.
 
-### 8b. Consiglio sintetico per l'app
+### 8b. Short advice for the app
 
 ```json
 {
   "home_storage": {
     "location": "room_temperature",
     "label": {
-      "it": "A Temperatura Ambiente, Non in Frigo",
-      "en": "At Room Temperature, Not in the Fridge"
+      "it": "A Temperatura Ambiente",
+      "en": "At Room Temperature"
     },
     "tip": {
-      "it": "In frigo perde sapore e non si colora. Una volta tagliato va sempre in frigorifero.",
-      "en": "In the fridge it loses flavour and doesn't turn red. Once cut, always keep it in the fridge."
+      "it": "Una volta tagliato va sempre in frigorifero.",
+      "en": "Once cut, always keep it in the fridge."
     },
     "ucdavis_group": "room_temperature_only",
     "foodkeeper_mode": "until_ripe",
@@ -368,8 +368,8 @@ Mesi di semina, trapianto e raccolta per zona, con parametri agronomici (profond
   }
 }
 ```
-- `home_storage.location`: **dove** tenerlo in casa (frigo, fuori dal frigo finché matura, temperatura ambiente, dispensa). Fonte principale: la guida UC Davis/Kader; FoodKeeper per le durate; i conflitti tra le due fonti sono scritti in `derivation`.
-- `perishability`: la classe di respirazione tradotta in un livello da 1 a 6, con etichetta e consiglio. Più un prodotto respira, prima perde freschezza.
+- `home_storage.location`: **where** to keep it at home (fridge, on the counter until ripe, room temperature, pantry). Main source: the UC Davis/Kader guide; FoodKeeper for storage times; conflicts between the two sources are written in `derivation`.
+- `perishability`: the respiration class turned into a level from 1 to 6, with label and advice. The faster a product respires, the sooner it loses freshness.
 
 ```json
 {
@@ -402,9 +402,9 @@ Mesi di semina, trapianto e raccolta per zona, con parametri agronomici (profond
   }
 }
 ```
-`storage_compatibility`: con quali prodotti può stare (stessa temperatura e umidità, nessun conflitto di etilene). Fonte: HB66, tabella di Thompson.
+`storage_compatibility`: which products it can be stored with (same temperature and humidity, no ethylene conflict). Source: HB66, Thompson table.
 
-### 8c. Dati scientifici post-raccolta
+### 8c. Postharvest scientific data
 
 ```json
 {
@@ -448,11 +448,11 @@ Mesi di semina, trapianto e raccolta per zona, con parametri agronomici (profond
   "freezing_susceptibility": "most"
 }
 ```
-- `ripening_type` (nel blocco `ripening_and_storage`): `climaterico` (continua a maturare dopo la raccolta, es. pomodoro, banana, pera) o `non_climaterico` (non matura più, es. agrumi, uva, fragola); etichette IT/EN in `metadata.vocabulary`.
-- `freezing_point_c`: il "highest freezing point" di HB66, la temperatura più alta a cui inizia a formarsi ghiaccio; con un intervallo si usa l'estremo più alto (il più prudente).
-- `optimal_temperature_c` e `optimal_humidity_percent`: condizioni **professionali** ottimali (USDA HB66, UC Davis).
-- `chilling_injury`: se soffre il freddo, sotto quale soglia (`critical_temperature_c` = massimo dell'intervallo minimo sicuro, `lowest_safe_range_c`) e con quali sintomi. Il pomodoro maturo è sensibile sotto i 7-10 °C (13 °C se ancora verde): per questo è meglio fuori frigo.
-- `estimated_shelf_life_days`: durate **domestiche** da FoodKeeper (`room_temp_mode` dice se si usa "fino a maturazione" o "solo frigo"); `commercial_optimal_days` è la durata in condizioni professionali.
+- `ripening_type` (in the `ripening_and_storage` block): `climaterico` (keeps ripening after harvest, e.g. tomato, banana, pear) or `non_climaterico` (stops ripening, e.g. citrus, grape, strawberry); IT/EN labels in `metadata.vocabulary`.
+- `freezing_point_c`: HB66's "highest freezing point", the highest temperature at which ice starts to form; for a range the upper end (the most cautious) is used.
+- `optimal_temperature_c` and `optimal_humidity_percent`: optimal **commercial** conditions (USDA HB66, UC Davis).
+- `chilling_injury`: whether it is chill-sensitive, below which threshold (`critical_temperature_c` = upper end of the lowest safe range, `lowest_safe_range_c`) and with which symptoms. Ripe tomato is sensitive below 7-10 °C (13 °C when still green): that is why it is better kept out of the fridge.
+- `estimated_shelf_life_days`: **home** storage times from FoodKeeper (`room_temp_mode` says whether "until ripe" or "fridge only" applies); `commercial_optimal_days` is the shelf life under commercial conditions.
 
 ```json
 {
@@ -478,9 +478,9 @@ Mesi di semina, trapianto e raccolta per zona, con parametri agronomici (profond
   }
 }
 ```
-Etilene: se lo produce (e quanto, classe a 20 °C) e se ne è sensibile. `keep_away_from` è calcolato: i forti produttori del database da cui tenerlo lontano, se è sensibile.
+Ethylene: whether it produces it (and how much, class at 20 °C) and whether it is sensitive to it. `keep_away_from` is computed: the strong producers in the database to keep it away from, if it is sensitive.
 
-## 9. Nutrizione e sostenibilità
+## 9. Nutrition and sustainability
 
 ```json
 {
@@ -502,7 +502,7 @@ Etilene: se lo produce (e quanto, classe a 20 °C) e se ne è sensibile. `keep_a
   }
 }
 ```
-Valori per 100 g di parte edibile. `data_basis` dice quale scheda è la fonte primaria (CREA, poi BDA-IEO, USDA solo se mancano le prime).
+Values per 100 g of edible portion. `data_basis` says which record is the primary source (CREA, then BDA-IEO, USDA only when the first two are missing).
 
 ```json
 {
@@ -513,7 +513,8 @@ Valori per 100 g di parte edibile. `data_basis` dice quale scheda è la fonte pr
       "amount": 610.0,
       "unit": "µg",
       "percent_nrv": 76.2,
-      "source": "crea"
+      "source": "crea",
+      "key": "vitamin_a"
     },
     {
       "name": "Vitamina E",
@@ -521,7 +522,8 @@ Valori per 100 g di parte edibile. `data_basis` dice quale scheda è la fonte pr
       "amount": 1.06,
       "unit": "mg",
       "percent_nrv": 8.8,
-      "source": "bda_ieo"
+      "source": "bda_ieo",
+      "key": "vitamin_e"
     },
     {
       "name": "Vitamina C",
@@ -529,7 +531,8 @@ Valori per 100 g di parte edibile. `data_basis` dice quale scheda è la fonte pr
       "amount": 25.0,
       "unit": "mg",
       "percent_nrv": 31.2,
-      "source": "crea"
+      "source": "crea",
+      "key": "vitamin_c"
     },
     "…"
   ],
@@ -557,7 +560,7 @@ Valori per 100 g di parte edibile. `data_basis` dice quale scheda è la fonte pr
   }
 }
 ```
-Ogni vitamina e minerale ha quantità, unità, `percent_nrv` (% del Valore Nutritivo di Riferimento, Reg. UE 1169/2011) e la fonte. I **claim** sono calcolati applicando le soglie del Reg. CE 1924/2006 (es. "Ad alto contenuto di vitamina C" ≥ 30% VNR): non sono scritti a mano.
+Every vitamin and mineral has amount, unit, `percent_nrv` (% of the Nutrient Reference Value, Regulation (EU) 1169/2011) and source. **Claims** are computed by applying the thresholds of Regulation (EC) 1924/2006 (e.g. "High in vitamin C" ≥ 30% NRV): they are not written by hand.
 
 ```json
 {
@@ -593,7 +596,7 @@ Ogni vitamina e minerale ha quantità, unità, `percent_nrv` (% del Valore Nutri
   ]
 }
 ```
-Composti bioattivi: carotenoidi (USDA FDC), classi di flavonoidi (USDA Flavonoid DB), polifenoli totali e acidi fenolici (Phenol-Explorer). `group` permette di raggrupparli in app, `main_compounds` dice quali sono i principali.
+Bioactive compounds: carotenoids (USDA FDC), flavonoid classes (USDA Flavonoid DB), total polyphenols and phenolic acids (Phenol-Explorer). `group` lets the app group them, `main_compounds` says which are the main ones.
 
 ```json
 {
@@ -633,9 +636,9 @@ Composti bioattivi: carotenoidi (USDA FDC), classi di flavonoidi (USDA Flavonoid
   }
 }
 ```
-- `allergens_eu`: allergeni dell'allegato II del Reg. UE 1169/2011 (lista vuota = nessuno).
-- `reference_portion`: la porzione standard LARN (via IEO SmartFood), con un'equivalenza pratica e i valori per porzione.
-- `protein_reference`: le proteine rapportate al fabbisogno LARN.
+- `allergens_eu`: allergens from Annex II of Regulation (EU) 1169/2011 (empty list = none).
+- `reference_portion`: the standard LARN portion (via IEO SmartFood), with a practical equivalent and per-portion values.
+- `protein_reference`: protein compared with the LARN requirement.
 
 ```json
 {
@@ -697,7 +700,7 @@ Composti bioattivi: carotenoidi (USDA FDC), classi di flavonoidi (USDA Flavonoid
   }
 }
 ```
-Sostenibilità (SU-EATABLE LIFE): CO2 e acqua per kg e per porzione, con riferimento alla voce del database, numero di studi e intervallo. `greenhouse_comparison` mostra quanto pesa la serra riscaldata (fuori stagione). `sustainability_rating` traduce i numeri in livelli e consigli.
+Sustainability (SU-EATABLE LIFE): CO2 and water per kg and per portion, with the database entry, number of studies and range. `greenhouse_comparison` shows the weight of heated greenhouses (out of season). `sustainability_rating` turns the numbers into levels and advice.
 
 ```json
 {
@@ -734,7 +737,7 @@ Sostenibilità (SU-EATABLE LIFE): CO2 e acqua per kg e per porzione, con riferim
   "revision": "XXVI (2026)"
 }
 ```
-`traditional_products_pat`: i Prodotti Agroalimentari Tradizionali dell'elenco MASAF legati all'alimento, con la regione.
+`traditional_products_pat`: the Traditional Agri-food Products from the MASAF list linked to the product, with their region.
 
 ```json
 {
@@ -748,9 +751,9 @@ Sostenibilità (SU-EATABLE LIFE): CO2 e acqua per kg e per porzione, con riferim
   }
 }
 ```
-Testi: benefici (solo con nutrienti coerenti con i claim) e idee anti-spreco.
+Texts: benefits (only with nutrients consistent with the claims) and anti-waste ideas.
 
-## 10. Fonti della scheda
+## 10. Record sources
 
 ```json
 {
@@ -823,9 +826,9 @@ Testi: benefici (solo con nutrienti coerenti con i claim) e idee anti-spreco.
   ]
 }
 ```
-`sources_used` elenca **tutte** le fonti usate per questo alimento (27 per il pomodoro), con argomento, URL e file locali. `useful_links` sono i link da mostrare all'utente (12). `source_codes` contiene i codici esatti delle schede (CREA, BDA, FDC…).
+`sources_used` lists **all** the sources used for this product (27 for the tomato), with topic, URL and local files. `useful_links` are the links shown to the user (12). `source_codes` holds the exact record codes (CREA, BDA, FDC…).
 
-## 11. Tracciabilità: `data_completeness`
+## 11. Traceability: `data_completeness`
 
 ```json
 {
@@ -861,11 +864,11 @@ Testi: benefici (solo con nutrienti coerenti con i claim) e idee anti-spreco.
   "notes": "Immagini: i file PNG indicati dalla bozza non esistono; i riferimenti Commons sono in draft_legacy_values.json come candidati per il download. Stagionalità EUFIC a 6 zone della bozza NON proveniente da EUFIC (che pubblica dati per Paese): rimossa e conservata in draft_legacy_values.json; verrà ricalcolata dai dati EUFIC reali. Voci della lista 'vitamine' della bozza riclassificate (minerali o comp…"
 }
 ```
-Questo blocco serve a te, non all'utente: dice cosa veniva dalla bozza, cosa è stato verificato, cosa manca, cosa non è pertinente, dove la bozza era diversa dalle fonti (`discrepancies`, con valore della bozza, valore della fonte e fonte) e perché (`notes`).
+This block is for maintainers, not for users: it says what came from the draft, what was verified, what is missing, what is not applicable, where the draft differed from the sources (`discrepancies`, with draft value, source value and source) and why (`notes`, an internal log written in Italian).
 
-## 12. I metadati
+## 12. Metadata
 
-`metadata` contiene ciò che vale per tutto il database e sta in testa al file: 
+`metadata` holds everything that applies to the whole database and sits at the top of the file:
 
 - `app_title`
 - `version`
@@ -894,18 +897,20 @@ Questo blocco serve a te, non all'utente: dice cosa veniva dalla bozza, cosa è 
 - `seasonality_display_rules`
 - `ethylene_rules`
 - `seasonality_curve_method`
+- `nutrition_claims_eu_rules`
+- `detail_display_rules`
 
-Le **legende** (stati stagionali, zone, deperibilità, conservazione, gruppi di compatibilità) e i **metodi** (stagionalità, post-raccolta, proteine, impronte) sono pensati per essere letti direttamente dall'app.
+The **legends** (seasonal states, zones, perishability, storage, compatibility groups) and the **methods** (seasonality, postharvest, protein, footprints) are designed to be read directly by the app.
 
-## 13. Bilinguismo
+## 13. Bilingualism
 
-L'app può essere usata tutta in italiano o tutta in inglese:
+The app can be used entirely in Italian or entirely in English:
 
-- ogni testo per l'utente è `{"it": …, "en": …}`, comprese le motivazioni (`basis`, `derivation`, `method`, note delle varietà);
-- i valori codificati (es. `climaterico`, `in_season`, `fridge`) sono chiavi: l'etichetta da mostrare è in `metadata.vocabulary`;
-- nutrienti e composti hanno `name` e `name_en`;
-- restano in lingua originale solo i nomi propri (varietà, DOP/IGP, PAT, nomi scientifici, autori, licenze, fonti);
-- `data_completeness.notes` è un registro tecnico in italiano, non per l'app.
+- every user-facing text is `{"it": …, "en": …}`, including the rationales (`basis`, `derivation`, `method`, variety notes);
+- coded values (e.g. `climaterico`, `in_season`, `fridge`) are keys: the label to display is in `metadata.vocabulary`;
+- nutrients and compounds have `name` and `name_en`;
+- only proper names stay in their original language (varieties, PDO/PGI, PAT, scientific names, authors, licences, sources);
+- `data_completeness.notes` is a technical log in Italian, not used by the app.
 
 ```json
 {
@@ -924,19 +929,19 @@ L'app può essere usata tutta in italiano o tutta in inglese:
   }
 }
 ```
-Gruppi del vocabolario (24): `category`, `botany.plant_part_used`, `seasonality.state`, `seasonality.italy_macro_areas`, `seasonality.eufic_climatic_zones`, `seasonality.estimates`, `seasonality.estimates.from`, `month`, `ripening_and_storage.ripening_type`, `ripening_and_storage.primary_location`, `class_scale`, `ripening_and_storage.postharvest_physiology.freezing_susceptibility`, `ripening_and_storage.home_storage.location`, `ripening_and_storage.postharvest_physiology.estimated_shelf_life_days.room_temp_mode`, `ripening_and_storage.storage_compatibility.group`, `agricultural_calendar_italy.agronomic_params.sun_exposure`, `agricultural_calendar_italy.agronomic_params.lunar_phase_advice`, `images.image_details.view_type`, `botany.upov_register`, `nutrition_and_sustainability.bioactive_compounds.group`, `sustainability_level`, `match`, `nutrition_and_sustainability.allergens_eu.annex_ii_number`, `botany.family`.
+Vocabulary groups (24): `category`, `botany.plant_part_used`, `seasonality.state`, `seasonality.italy_macro_areas`, `seasonality.eufic_climatic_zones`, `seasonality.estimates`, `seasonality.estimates.from`, `month`, `ripening_and_storage.ripening_type`, `ripening_and_storage.primary_location`, `class_scale`, `ripening_and_storage.postharvest_physiology.freezing_susceptibility`, `ripening_and_storage.home_storage.location`, `ripening_and_storage.postharvest_physiology.estimated_shelf_life_days.room_temp_mode`, `ripening_and_storage.storage_compatibility.group`, `agricultural_calendar_italy.agronomic_params.sun_exposure`, `agricultural_calendar_italy.agronomic_params.lunar_phase_advice`, `images.image_details.view_type`, `botany.upov_register`, `nutrition_and_sustainability.bioactive_compounds.group`, `sustainability_level`, `match`, `nutrition_and_sustainability.allergens_eu.annex_ii_number`, `botany.family`.
 
-## 14. Glossario e icone "?"
+## 14. Glossary and "?" icons
 
-Le spiegazioni sono scritte una volta, in `metadata.glossary`, e raggiunte da più punti:
+Explanations are written once, in `metadata.glossary`, and reached from several places:
 
-| Da dove | Campo | Esempio |
+| From | Field | Example |
 |---|---|---|
-| un campo | `metadata.field_help[percorso]` | `ripening_and_storage.ripening_type` → `climacteric`, `non_climacteric` |
-| un valore | `metadata.vocabulary[gruppo][valore].glossary` | `climaterico` → `climacteric` |
-| un alimento | `item.help_refs` | fava → `favism` sul testo dei benefici |
-| un'altra voce | `glossary[id].see_also` | `climacteric` → `ethylene`, `non_climacteric` |
-| una fonte | `official_sources[].used_for.glossary_entries` | HB66 → voci di conservazione |
+| a field | `metadata.field_help[path]` | `ripening_and_storage.ripening_type` → `climacteric`, `non_climacteric` |
+| a value | `metadata.vocabulary[group][value].glossary` | `climaterico` → `climacteric` |
+| a product | `item.help_refs` | broad bean → `favism` on the benefits text |
+| another entry | `glossary[id].see_also` | `climacteric` → `ethylene`, `non_climacteric` |
+| a source | `official_sources[].used_for.glossary_entries` | HB66 → storage entries |
 
 ```json
 {
@@ -956,26 +961,44 @@ Le spiegazioni sono scritte una volta, in `metadata.glossary`, e raggiunte da pi
     {
       "key": "uc_davis",
       "name": "UC Davis Postharvest Research and Extension Center - Produce Fact Sheets",
-      "url": "https://postharvest.ucdavis.edu/produce-facts-sheets"
+      "url": "https://postharvest.ucdavis.edu/produce-facts-sheets",
+      "publisher": {
+        "it": "UC Davis",
+        "en": "UC Davis"
+      },
+      "title": {
+        "it": "Schede Post-Raccolta dei Prodotti",
+        "en": "Produce Fact Sheets"
+      },
+      "favicon": "uc_davis.png"
     },
     {
       "key": "usda_hb66",
       "name": "USDA ARS Agricultural Handbook 66 (2016)",
-      "url": "https://www.ars.usda.gov/is/np/commercialstorage/commercialstorage.pdf"
+      "url": "https://www.ars.usda.gov/is/np/commercialstorage/commercialstorage.pdf",
+      "publisher": {
+        "it": "USDA ARS",
+        "en": "USDA ARS"
+      },
+      "title": {
+        "it": "Agricultural Handbook 66 - Conservazione Commerciale",
+        "en": "Agricultural Handbook 66 - Commercial Storage"
+      },
+      "favicon": "usda_hb66.png"
     },
     {
       "key": "uc_davis_storing_guide",
       "name": "UC Davis / Kader - Storing Fresh Fruits and Vegetables for Better Taste (UC ANR Pub. 21590)",
-      "url": "https://homeorchard.ucanr.edu/files/115275.pdf"
-    }
-  ],
-  "see_also": [
-    "ethylene",
-    "non_climacteric"
-  ]
-}
+      "url": "https://homeorchard.ucanr.edu/files/115275.pdf",
+      "publisher": {
+        "it": "UC Davis",
+        "en": "UC Davis"
+      },
+      "title": {
+        "it": "Conservare Frutta e Verdura per un Gusto Migliore",
+  …
 ```
-Ogni voce: `term`, `short` (una riga per il tooltip), `text` (spiegazione completa), `sources` (nome e URL dal catalogo), `see_also`. Voci (44): `climacteric`, `non_climacteric`, `ethylene`, `ethylene_production`, `ethylene_sensitivity`, `keep_away_from`, `respiration_rate`, `perishability`, `q10`, `chilling_injury`, `lowest_safe_temperature`, `freezing_point`, `freezing_susceptibility`, `optimal_storage`, `shelf_life_home`, `home_storage`, `storage_compatibility`, `seasonality_states`, `italy_macro_areas`, `eufic_zones`, `seasonality_estimate`, `sowing_transplant`, `agronomic_params`, `edible_portion`, `nrv`, `nutrition_claims`, `larn`, `reference_portion`, `allergens`, `gluten`, `carotenoids`, `polyphenols`, `flavonoids`, `carbon_footprint`, `water_footprint`, `greenhouse`, `dop_igp`, `pat`, `slow_food`, `upov_variety_register`, `varieties`, `scientific_name`, `favism`, `data_quality`.
+Each entry: `term`, `short` (one line for the tooltip), `text` (full explanation), `sources` (name and URL from the catalogue), `see_also`. Entries (44): `climacteric`, `non_climacteric`, `ethylene`, `ethylene_production`, `ethylene_sensitivity`, `keep_away_from`, `respiration_rate`, `perishability`, `q10`, `chilling_injury`, `lowest_safe_temperature`, `freezing_point`, `freezing_susceptibility`, `optimal_storage`, `shelf_life_home`, `home_storage`, `storage_compatibility`, `seasonality_states`, `italy_macro_areas`, `eufic_zones`, `seasonality_estimate`, `sowing_transplant`, `agronomic_params`, `edible_portion`, `nrv`, `nutrition_claims`, `larn`, `reference_portion`, `allergens`, `gluten`, `carotenoids`, `polyphenols`, `flavonoids`, `carbon_footprint`, `water_footprint`, `greenhouse`, `dop_igp`, `pat`, `slow_food`, `upov_variety_register`, `varieties`, `scientific_name`, `favism`, `data_quality`.
 
 ```json
 {
@@ -1048,589 +1071,589 @@ Ogni voce: `term`, `short` (una riga per il tooltip), `text` (spiegazione comple
   }
 }
 ```
-## 15. Il catalogo delle fonti
+## 15. Source catalogue
 
-`metadata.official_sources` descrive ogni fonte: cos'è (`description`), perché è autorevole (`authority`), cosa offre (`offers`), per quali argomenti e per quali alimenti è stata consultata (`used_for`). Elenco completo:
+`metadata.official_sources` describes every source: what it is (`description`), why it is authoritative (`authority`), what it offers (`offers`), for which topics and which products it was consulted (`used_for`). Full list:
 
 ### Regolamento (UE) n. 1169/2011 - Allegato XIII, Valori Nutritivi di Riferimento
 
 `reg_1169_2011` · https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32011R1169
 
-- **Cos'è**: Regolamento (UE) n. 1169/2011 sulle informazioni sui prodotti ai consumatori.
-- **Perché è autorevole**: Norma europea vincolante sull'etichettatura.
-- **Cosa offre**: Valori Nutritivi di Riferimento (Allegato XIII) per le percentuali e l'elenco dei 14 allergeni (Allegato II).
-- **Usata per**: Allergeni, %VNR
-- **Alimenti (153)**: aglio_garlic, agretti_saltwort, albicocca_apricot, alchechengi_cape_gooseberry, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, cardoncello_king_oyster_mushroom, carota_carrot, carruba_carob, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cedro_citron, cetriolo_cucumber, chinotto_chinotto, cicerchia_grass_pea, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, giuggiola_jujube, gombo_okra, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampascioni_tassel_hyacinth, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, navone_swede, nespola_comune_medlar, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, rabarbaro_rhubarb, radicchio_radicchio, rafano_horseradish, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, salicornia_samphire, salvia_sage, sambuco_elderberry, scalogno_shallot, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, shiitake_shiitake, spinacio_spinach, spugnola_morel, susina_plum, taccola_snow_pea, tartufo_bianco_white_truffle, tartufo_nero_black_truffle, timo_thyme, topinambur_jerusalem_artichoke, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zafferano_saffron, zucca_pumpkin, zucchina_spinosa_chayote, zucchina_zucchini
-- **Voci di glossario**: allergens, gluten, nrv, nutrition_claims
+- **What it is**: Regulation (EU) No 1169/2011 on product information to consumers.
+- **Why it is authoritative**: Binding EU law on product labelling.
+- **What it offers**: Nutrient Reference Values (Annex XIII) for percentages and the list of 14 allergens (Annex II).
+- **Used for**: Allergens, %NRV
+- **Products (153)**: aglio_garlic, agretti_saltwort, albicocca_apricot, alchechengi_cape_gooseberry, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, cardoncello_king_oyster_mushroom, carota_carrot, carruba_carob, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cedro_citron, cetriolo_cucumber, chinotto_chinotto, cicerchia_grass_pea, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, giuggiola_jujube, gombo_okra, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampascioni_tassel_hyacinth, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, navone_swede, nespola_comune_medlar, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, rabarbaro_rhubarb, radicchio_radicchio, rafano_horseradish, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, salicornia_samphire, salvia_sage, sambuco_elderberry, scalogno_shallot, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, shiitake_shiitake, spinacio_spinach, spugnola_morel, susina_plum, taccola_snow_pea, tartufo_bianco_white_truffle, tartufo_nero_black_truffle, timo_thyme, topinambur_jerusalem_artichoke, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zafferano_saffron, zucca_pumpkin, zucchina_spinosa_chayote, zucchina_zucchini
+- **Glossary entries**: allergens, gluten, nrv, nutrition_claims
 
 ### IEO SmartFood - Porzioni e frequenze (porzioni standard LARN-SINU)
 
 `ieo_smartfood_portions` · https://www.smartfood.ieo.it/media/p02bkul0/smartfood-tab-porzioni-e-frequenze-completa.pdf
 
-- **Cos'è**: Tabella 'Porzioni e frequenze' del programma SmartFood dell'Istituto Europeo di Oncologia.
-- **Perché è autorevole**: Riporta le porzioni standard LARN-SINU in forma pratica, con equivalenze domestiche.
-- **Cosa offre**: Grammi della porzione per gruppo di prodotti, equivalenze ('2-3 pomodori') e frequenze di consumo.
-- **Usata per**: Porzioni
-- **Alimenti (153)**: aglio_garlic, agretti_saltwort, albicocca_apricot, alchechengi_cape_gooseberry, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, cardoncello_king_oyster_mushroom, carota_carrot, carruba_carob, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cedro_citron, cetriolo_cucumber, chinotto_chinotto, cicerchia_grass_pea, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, giuggiola_jujube, gombo_okra, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampascioni_tassel_hyacinth, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, navone_swede, nespola_comune_medlar, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, rabarbaro_rhubarb, radicchio_radicchio, rafano_horseradish, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, salicornia_samphire, salvia_sage, sambuco_elderberry, scalogno_shallot, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, shiitake_shiitake, spinacio_spinach, spugnola_morel, susina_plum, taccola_snow_pea, tartufo_bianco_white_truffle, tartufo_nero_black_truffle, timo_thyme, topinambur_jerusalem_artichoke, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zafferano_saffron, zucca_pumpkin, zucchina_spinosa_chayote, zucchina_zucchini
-- **Voci di glossario**: reference_portion
+- **What it is**: 'Portions and frequencies' table of the European Institute of Oncology's SmartFood programme.
+- **Why it is authoritative**: It presents the LARN-SINU standard portions in practical form, with household equivalents.
+- **What it offers**: Portion grams by product group, equivalents ('2-3 tomatoes') and consumption frequencies.
+- **Used for**: Portions
+- **Products (153)**: aglio_garlic, agretti_saltwort, albicocca_apricot, alchechengi_cape_gooseberry, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, cardoncello_king_oyster_mushroom, carota_carrot, carruba_carob, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cedro_citron, cetriolo_cucumber, chinotto_chinotto, cicerchia_grass_pea, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, giuggiola_jujube, gombo_okra, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampascioni_tassel_hyacinth, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, navone_swede, nespola_comune_medlar, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, rabarbaro_rhubarb, radicchio_radicchio, rafano_horseradish, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, salicornia_samphire, salvia_sage, sambuco_elderberry, scalogno_shallot, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, shiitake_shiitake, spinacio_spinach, spugnola_morel, susina_plum, taccola_snow_pea, tartufo_bianco_white_truffle, tartufo_nero_black_truffle, timo_thyme, topinambur_jerusalem_artichoke, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zafferano_saffron, zucca_pumpkin, zucchina_spinosa_chayote, zucchina_zucchini
+- **Glossary entries**: reference_portion
 
 ### EPPO Global Database
 
 `eppo` · https://gd.eppo.int/
 
-- **Cos'è**: EPPO Global Database dell'Organizzazione europea e mediterranea per la protezione delle piante.
-- **Perché è autorevole**: Organizzazione intergovernativa; i suoi codici sono lo standard per identificare le piante in Europa.
-- **Cosa offre**: Nome scientifico preferito, codice EPPO e nomi comuni ufficiali in italiano e inglese.
-- **Usata per**: Botanica
-- **Alimenti (151)**: aglio_garlic, agretti_saltwort, albicocca_apricot, alchechengi_cape_gooseberry, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, cardoncello_king_oyster_mushroom, carota_carrot, carruba_carob, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cedro_citron, cetriolo_cucumber, chinotto_chinotto, cicerchia_grass_pea, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, giuggiola_jujube, gombo_okra, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, navone_swede, nespola_comune_medlar, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, rabarbaro_rhubarb, radicchio_radicchio, rafano_horseradish, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, salicornia_samphire, salvia_sage, sambuco_elderberry, scalogno_shallot, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, shiitake_shiitake, spinacio_spinach, spugnola_morel, susina_plum, taccola_snow_pea, tartufo_bianco_white_truffle, tartufo_nero_black_truffle, timo_thyme, topinambur_jerusalem_artichoke, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zafferano_saffron, zucca_pumpkin, zucchina_zucchini
-- **Voci di glossario**: scientific_name
+- **What it is**: EPPO Global Database of the European and Mediterranean Plant Protection Organization.
+- **Why it is authoritative**: An intergovernmental organisation; its codes are the standard for identifying plants in Europe.
+- **What it offers**: Preferred scientific name, EPPO code and official common names in Italian and English.
+- **Used for**: Botany
+- **Products (151)**: aglio_garlic, agretti_saltwort, albicocca_apricot, alchechengi_cape_gooseberry, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, cardoncello_king_oyster_mushroom, carota_carrot, carruba_carob, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cedro_citron, cetriolo_cucumber, chinotto_chinotto, cicerchia_grass_pea, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, giuggiola_jujube, gombo_okra, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, navone_swede, nespola_comune_medlar, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, rabarbaro_rhubarb, radicchio_radicchio, rafano_horseradish, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, salicornia_samphire, salvia_sage, sambuco_elderberry, scalogno_shallot, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, shiitake_shiitake, spinacio_spinach, spugnola_morel, susina_plum, taccola_snow_pea, tartufo_bianco_white_truffle, tartufo_nero_black_truffle, timo_thyme, topinambur_jerusalem_artichoke, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zafferano_saffron, zucca_pumpkin, zucchina_zucchini
+- **Glossary entries**: scientific_name
 
 ### Regolamento (CE) n. 1924/2006 - indicazioni nutrizionali e sulla salute
 
 `reg_1924_2006` · https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32006R1924
 
-- **Cos'è**: Regolamento (CE) n. 1924/2006 sulle indicazioni nutrizionali e sulla salute.
-- **Perché è autorevole**: È la norma europea vincolante che stabilisce quali diciture nutrizionali si possono usare e con quali soglie.
-- **Cosa offre**: Le soglie per i claim 'fonte di', 'ad alto contenuto di', 'a basso contenuto di'.
-- **Usata per**: Claim UE
-- **Alimenti (146)**: aglio_garlic, agretti_saltwort, albicocca_apricot, alchechengi_cape_gooseberry, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, cardoncello_king_oyster_mushroom, carota_carrot, carruba_carob, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cetriolo_cucumber, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, giuggiola_jujube, gombo_okra, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, navone_swede, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, rabarbaro_rhubarb, radicchio_radicchio, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, salvia_sage, sambuco_elderberry, scalogno_shallot, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, shiitake_shiitake, spinacio_spinach, spugnola_morel, susina_plum, taccola_snow_pea, tartufo_bianco_white_truffle, tartufo_nero_black_truffle, timo_thyme, topinambur_jerusalem_artichoke, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zafferano_saffron, zucca_pumpkin, zucchina_spinosa_chayote, zucchina_zucchini
-- **Voci di glossario**: nutrition_claims
+- **What it is**: Regulation (EC) No 1924/2006 on nutrition and health claims.
+- **Why it is authoritative**: It is the binding EU law setting which nutrition claims may be used and with which thresholds.
+- **What it offers**: The thresholds for 'source of', 'high in' and 'low in' claims.
+- **Used for**: EU Claims
+- **Products (146)**: aglio_garlic, agretti_saltwort, albicocca_apricot, alchechengi_cape_gooseberry, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, cardoncello_king_oyster_mushroom, carota_carrot, carruba_carob, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cetriolo_cucumber, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, giuggiola_jujube, gombo_okra, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, navone_swede, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, rabarbaro_rhubarb, radicchio_radicchio, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, salvia_sage, sambuco_elderberry, scalogno_shallot, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, shiitake_shiitake, spinacio_spinach, spugnola_morel, susina_plum, taccola_snow_pea, tartufo_bianco_white_truffle, tartufo_nero_black_truffle, timo_thyme, topinambur_jerusalem_artichoke, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zafferano_saffron, zucca_pumpkin, zucchina_spinosa_chayote, zucchina_zucchini
+- **Glossary entries**: nutrition_claims
 
 ### LARN - SINU (tabelle riassuntive, PDF locale)
 
 `larn_sinu` · https://sinu.it/tabelle-larn-2014/
 
-- **Cos'è**: LARN - Livelli di Assunzione di Riferimento di Nutrienti ed energia, Società Italiana di Nutrizione Umana (IV revisione, 2014).
-- **Perché è autorevole**: Sono i valori di riferimento ufficiali per la popolazione italiana.
-- **Cosa offre**: Il fabbisogno di proteine per contestualizzare i claim proteici.
-- **Usata per**: LARN
-- **Alimenti (145)**: aglio_garlic, agretti_saltwort, albicocca_apricot, alchechengi_cape_gooseberry, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, cardoncello_king_oyster_mushroom, carota_carrot, carruba_carob, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cetriolo_cucumber, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, giuggiola_jujube, gombo_okra, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, navone_swede, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, rabarbaro_rhubarb, radicchio_radicchio, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, salvia_sage, sambuco_elderberry, scalogno_shallot, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, shiitake_shiitake, spinacio_spinach, spugnola_morel, susina_plum, taccola_snow_pea, tartufo_nero_black_truffle, timo_thyme, topinambur_jerusalem_artichoke, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zafferano_saffron, zucca_pumpkin, zucchina_spinosa_chayote, zucchina_zucchini
-- **Voci di glossario**: larn, reference_portion
+- **What it is**: LARN - Italian Reference Intake Levels of Nutrients and energy, Italian Society of Human Nutrition (4th revision, 2014).
+- **Why it is authoritative**: They are the official reference values for the Italian population.
+- **What it offers**: Protein requirements used to put protein claims in context.
+- **Used for**: LARN
+- **Products (145)**: aglio_garlic, agretti_saltwort, albicocca_apricot, alchechengi_cape_gooseberry, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, cardoncello_king_oyster_mushroom, carota_carrot, carruba_carob, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cetriolo_cucumber, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, giuggiola_jujube, gombo_okra, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, navone_swede, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, rabarbaro_rhubarb, radicchio_radicchio, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, salvia_sage, sambuco_elderberry, scalogno_shallot, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, shiitake_shiitake, spinacio_spinach, spugnola_morel, susina_plum, taccola_snow_pea, tartufo_nero_black_truffle, timo_thyme, topinambur_jerusalem_artichoke, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zafferano_saffron, zucca_pumpkin, zucchina_spinosa_chayote, zucchina_zucchini
+- **Glossary entries**: larn, reference_portion
 
 ### World Flora Online - Plant List
 
 `wfo` · https://list.worldfloraonline.org/
 
-- **Cos'è**: World Flora Online, catalogo mondiale delle specie vegetali.
-- **Perché è autorevole**: Progetto internazionale dei principali orti botanici, erede di The Plant List.
-- **Cosa offre**: Nome accettato, famiglia e genere.
-- **Usata per**: Botanica
-- **Alimenti (143)**: aglio_garlic, agretti_saltwort, albicocca_apricot, alchechengi_cape_gooseberry, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, carota_carrot, carruba_carob, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cedro_citron, cetriolo_cucumber, chinotto_chinotto, cicerchia_grass_pea, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finocchio_fennel, fragola_strawberry, gelso_mulberry, giuggiola_jujube, gombo_okra, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampascioni_tassel_hyacinth, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, navone_swede, nespola_comune_medlar, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, rabarbaro_rhubarb, radicchio_radicchio, rafano_horseradish, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, salicornia_samphire, salvia_sage, sambuco_elderberry, scalogno_shallot, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, spinacio_spinach, susina_plum, taccola_snow_pea, timo_thyme, topinambur_jerusalem_artichoke, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zafferano_saffron, zucca_pumpkin, zucchina_spinosa_chayote, zucchina_zucchini
-- **Voci di glossario**: scientific_name
+- **What it is**: World Flora Online, the global catalogue of plant species.
+- **Why it is authoritative**: An international project of the leading botanic gardens, successor to The Plant List.
+- **What it offers**: Accepted name, family and genus.
+- **Used for**: Botany
+- **Products (143)**: aglio_garlic, agretti_saltwort, albicocca_apricot, alchechengi_cape_gooseberry, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, carota_carrot, carruba_carob, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cedro_citron, cetriolo_cucumber, chinotto_chinotto, cicerchia_grass_pea, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finocchio_fennel, fragola_strawberry, gelso_mulberry, giuggiola_jujube, gombo_okra, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampascioni_tassel_hyacinth, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, navone_swede, nespola_comune_medlar, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, rabarbaro_rhubarb, radicchio_radicchio, rafano_horseradish, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, salicornia_samphire, salvia_sage, sambuco_elderberry, scalogno_shallot, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, spinacio_spinach, susina_plum, taccola_snow_pea, timo_thyme, topinambur_jerusalem_artichoke, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zafferano_saffron, zucca_pumpkin, zucchina_spinosa_chayote, zucchina_zucchini
+- **Glossary entries**: scientific_name
 
 ### USDA FoodData Central - SR Legacy (2018-04)
 
 `usda_fdc` · https://fdc.nal.usda.gov/
 
-- **Cos'è**: USDA FoodData Central, versione SR Legacy (2018) del Dipartimento dell'Agricoltura degli Stati Uniti.
-- **Perché è autorevole**: È la banca dati nazionale di composizione degli USA, in pubblico dominio e tra le più usate al mondo.
-- **Cosa offre**: Carotenoidi (licopene, luteina, ecc.), assenti nelle tabelle italiane, e i nutrienti di pochi prodotti senza scheda CREA o BDA-IEO.
-- **Usata per**: Composti Bioattivi, Nutrizione, Testi
-- **Alimenti (136)**: aglio_garlic, albicocca_apricot, alchechengi_cape_gooseberry, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, cardoncello_king_oyster_mushroom, carota_carrot, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cetriolo_cucumber, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_pleurotus_oyster_mushroom, gelso_mulberry, giuggiola_jujube, gombo_okra, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, navone_swede, nespola_loquat, nocciola_hazelnut, noce_walnut, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, rabarbaro_rhubarb, radicchio_radicchio, rafano_horseradish, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, sambuco_elderberry, scalogno_shallot, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, shiitake_shiitake, spinacio_spinach, spugnola_morel, susina_plum, taccola_snow_pea, timo_thyme, topinambur_jerusalem_artichoke, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zafferano_saffron, zucca_pumpkin, zucchina_spinosa_chayote, zucchina_zucchini
-- **Voci di glossario**: carotenoids
+- **What it is**: USDA FoodData Central, SR Legacy release (2018), US Department of Agriculture.
+- **Why it is authoritative**: It is the US national composition database, in the public domain and among the most used worldwide.
+- **What it offers**: Carotenoids (lycopene, lutein, etc.), absent from Italian tables, and nutrients for a few produce without a CREA or BDA-IEO entry.
+- **Used for**: Bioactive Compounds, Nutrition, Texts
+- **Products (136)**: aglio_garlic, albicocca_apricot, alchechengi_cape_gooseberry, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, cardoncello_king_oyster_mushroom, carota_carrot, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cetriolo_cucumber, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_pleurotus_oyster_mushroom, gelso_mulberry, giuggiola_jujube, gombo_okra, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, navone_swede, nespola_loquat, nocciola_hazelnut, noce_walnut, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, rabarbaro_rhubarb, radicchio_radicchio, rafano_horseradish, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, sambuco_elderberry, scalogno_shallot, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, shiitake_shiitake, spinacio_spinach, spugnola_morel, susina_plum, taccola_snow_pea, timo_thyme, topinambur_jerusalem_artichoke, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zafferano_saffron, zucca_pumpkin, zucchina_spinosa_chayote, zucchina_zucchini
+- **Glossary entries**: carotenoids
 
 ### USDA ARS Agricultural Handbook 66 (2016)
 
 `usda_hb66` · https://www.ars.usda.gov/is/np/commercialstorage/commercialstorage.pdf
 
-- **Cos'è**: USDA Agriculture Handbook 66 'The Commercial Storage of Fruits, Vegetables, and Florist and Nursery Stocks' (2016).
-- **Perché è autorevole**: È il manuale tecnico di riferimento internazionale sulla conservazione dei prodotti freschi, con capitoli scritti da specialisti per ogni prodotto.
-- **Cosa offre**: Condizioni ottimali, respirazione (classi di Kader), etilene, danno da freddo, punto di congelamento, gruppi di conservazione compatibile.
-- **Usata per**: Danno da Freddo, Freezing_susceptibility, Plant_part_used, Post-raccolta, Conservazione Compatibile, Testi, Varietà
-- **Alimenti (133)**: aglio_garlic, albicocca_apricot, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, cardoncello_king_oyster_mushroom, carota_carrot, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cedro_citron, cetriolo_cucumber, chinotto_chinotto, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gombo_okra, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, navone_swede, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, papaya_papaya, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, rabarbaro_rhubarb, radicchio_radicchio, rafano_horseradish, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, rosmarino_rosemary, rucola_arugula, salvia_sage, sambuco_elderberry, scalogno_shallot, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, shiitake_shiitake, spinacio_spinach, spugnola_morel, susina_plum, taccola_snow_pea, tartufo_bianco_white_truffle, tartufo_nero_black_truffle, timo_thyme, topinambur_jerusalem_artichoke, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zucca_pumpkin, zucchina_spinosa_chayote, zucchina_zucchini
-- **Voci di glossario**: chilling_injury, climacteric, ethylene, ethylene_production, ethylene_sensitivity, freezing_point, freezing_susceptibility, keep_away_from, lowest_safe_temperature, non_climacteric, optimal_storage, perishability, q10, respiration_rate, storage_compatibility
+- **What it is**: USDA Agriculture Handbook 66 'The Commercial Storage of Fruits, Vegetables, and Florist and Nursery Stocks' (2016).
+- **Why it is authoritative**: It is the international reference technical manual on fresh produce storage, with chapters written by specialists for each product.
+- **What it offers**: Optimal conditions, respiration (Kader classes), ethylene, chilling injury, freezing point, compatible storage groups.
+- **Used for**: Chilling Injury, Freezing_susceptibility, Plant_part_used, Postharvest, Compatible Storage, Texts, Varieties
+- **Products (133)**: aglio_garlic, albicocca_apricot, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, cardoncello_king_oyster_mushroom, carota_carrot, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cedro_citron, cetriolo_cucumber, chinotto_chinotto, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gombo_okra, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, navone_swede, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, papaya_papaya, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, rabarbaro_rhubarb, radicchio_radicchio, rafano_horseradish, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, rosmarino_rosemary, rucola_arugula, salvia_sage, sambuco_elderberry, scalogno_shallot, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, shiitake_shiitake, spinacio_spinach, spugnola_morel, susina_plum, taccola_snow_pea, tartufo_bianco_white_truffle, tartufo_nero_black_truffle, timo_thyme, topinambur_jerusalem_artichoke, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zucca_pumpkin, zucchina_spinosa_chayote, zucchina_zucchini
+- **Glossary entries**: chilling_injury, climacteric, ethylene, ethylene_production, ethylene_sensitivity, freezing_point, freezing_susceptibility, keep_away_from, lowest_safe_temperature, non_climacteric, optimal_storage, perishability, q10, respiration_rate, storage_compatibility
 
 ### SU-EATABLE LIFE - database delle impronte di carbonio e idrica (Petersson et al. 2021)
 
 `su_eatable_life` · https://doi.org/10.1038/s41597-021-00909-8
 
-- **Cos'è**: SU-EATABLE LIFE, database delle impronte di carbonio e idrica dei prodotti (Petersson et al., Scientific Data, 2021).
-- **Perché è autorevole**: Prodotto da un progetto LIFE finanziato dall'UE, pubblicato su rivista scientifica con revisione tra pari; armonizza oltre 800 studi.
-- **Cosa offre**: Impronta di carbonio e idrica per kg, con confronto tra pieno campo, serra e prodotti importati.
-- **Usata per**: Impronta Ambientale
-- **Alimenti (129)**: aglio_garlic, albicocca_apricot, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, cardoncello_king_oyster_mushroom, carota_carrot, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cedro_citron, cetriolo_cucumber, chinotto_chinotto, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, daikon_daikon, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_pleurotus_oyster_mushroom, gelso_mulberry, gombo_okra, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, navone_swede, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, radicchio_radicchio, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, salvia_sage, scalogno_shallot, scarola_escarole, sedano_celery, sedano_rapa_celeriac, shiitake_shiitake, spinacio_spinach, susina_plum, taccola_snow_pea, timo_thyme, topinambur_jerusalem_artichoke, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zafferano_saffron, zucca_pumpkin, zucchina_zucchini
-- **Voci di glossario**: carbon_footprint, greenhouse, water_footprint
+- **What it is**: SU-EATABLE LIFE, database of the carbon and water footprints of produce (Petersson et al., Scientific Data, 2021).
+- **Why it is authoritative**: Produced by an EU-funded LIFE project, published in a peer-reviewed journal; it harmonises over 800 studies.
+- **What it offers**: Carbon and water footprint per kg, comparing open field, greenhouse and imported produce.
+- **Used for**: Environmental Footprint
+- **Products (129)**: aglio_garlic, albicocca_apricot, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, cardoncello_king_oyster_mushroom, carota_carrot, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cedro_citron, cetriolo_cucumber, chinotto_chinotto, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, daikon_daikon, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_pleurotus_oyster_mushroom, gelso_mulberry, gombo_okra, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, navone_swede, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, radicchio_radicchio, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, salvia_sage, scalogno_shallot, scarola_escarole, sedano_celery, sedano_rapa_celeriac, shiitake_shiitake, spinacio_spinach, susina_plum, taccola_snow_pea, timo_thyme, topinambur_jerusalem_artichoke, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zafferano_saffron, zucca_pumpkin, zucchina_zucchini
+- **Glossary entries**: carbon_footprint, greenhouse, water_footprint
 
 ### Wikimedia Commons API
 
 `wikimedia` · https://commons.wikimedia.org/w/api.php
 
-- **Cos'è**: Wikimedia Commons.
-- **Perché è autorevole**: Archivio di immagini con licenza libera verificabile.
-- **Cosa offre**: Foto con autore e licenza (CC0, CC BY, CC BY-SA, pubblico dominio).
-- **Usata per**: Immagini
-- **Alimenti (124)**: aglio_garlic, agretti_saltwort, albicocca_apricot, alchechengi_cape_gooseberry, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, broccolo_romanesco_romanesco, cachi_persimmon, cardoncello_king_oyster_mushroom, carota_carrot, carruba_carob, cavolo_cappuccio_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_verza_savoy_cabbage, cece_chickpea, cedro_citron, cetriolo_cucumber, cicerchia_grass_pea, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, giuggiola_jujube, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, kiwi_kiwifruit, lampascioni_tassel_hyacinth, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, nespola_comune_medlar, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pisello_pea, pistacchio_pistachio, pompelmo_grapefruit, prezzemolo_parsley, puntarelle_puntarelle, rabarbaro_rhubarb, rafano_horseradish, rapa_turnip, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rucola_arugula, salicornia_samphire, salvia_sage, sambuco_elderberry, scalogno_shallot, spinacio_spinach, spugnola_morel, susina_plum, tartufo_nero_black_truffle, timo_thyme, topinambur_jerusalem_artichoke, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zafferano_saffron, zucca_pumpkin, zucchina_spinosa_chayote
+- **What it is**: Wikimedia Commons.
+- **Why it is authoritative**: An archive of images with verifiable free licences.
+- **What it offers**: Photos with author and licence (CC0, CC BY, CC BY-SA, public domain).
+- **Used for**: Images
+- **Products (124)**: aglio_garlic, agretti_saltwort, albicocca_apricot, alchechengi_cape_gooseberry, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, broccolo_romanesco_romanesco, cachi_persimmon, cardoncello_king_oyster_mushroom, carota_carrot, carruba_carob, cavolo_cappuccio_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_verza_savoy_cabbage, cece_chickpea, cedro_citron, cetriolo_cucumber, cicerchia_grass_pea, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, giuggiola_jujube, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, kiwi_kiwifruit, lampascioni_tassel_hyacinth, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, nespola_comune_medlar, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pisello_pea, pistacchio_pistachio, pompelmo_grapefruit, prezzemolo_parsley, puntarelle_puntarelle, rabarbaro_rhubarb, rafano_horseradish, rapa_turnip, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rucola_arugula, salicornia_samphire, salvia_sage, sambuco_elderberry, scalogno_shallot, spinacio_spinach, spugnola_morel, susina_plum, tartufo_nero_black_truffle, timo_thyme, topinambur_jerusalem_artichoke, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zafferano_saffron, zucca_pumpkin, zucchina_spinosa_chayote
 
 ### Pixabay API
 
 `pixabay` · https://pixabay.com/
 
-- **Cos'è**: Pixabay.
-- **Perché è autorevole**: Banca di immagini con licenza Pixabay.
-- **Cosa offre**: Foto ad alta risoluzione.
-- **Usata per**: Immagini
-- **Alimenti (124)**: aglio_garlic, agretti_saltwort, albicocca_apricot, alchechengi_cape_gooseberry, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, carota_carrot, carruba_carob, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cetriolo_cucumber, cicerchia_grass_pea, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, crescione_watercress, erba_cipollina_chives, fagiolino_green_bean, farro_emmer, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, giuggiola_jujube, gombo_okra, grano_duro_durum_wheat, grano_saraceno_buckwheat, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, nespola_comune_medlar, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, prezzemolo_parsley, rabarbaro_rhubarb, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, salvia_sage, sambuco_elderberry, scalogno_shallot, sedano_celery, sedano_rapa_celeriac, shiitake_shiitake, spinacio_spinach, susina_plum, timo_thyme, uva_spina_gooseberry, uva_table_grape, zafferano_saffron, zucca_pumpkin, zucchina_spinosa_chayote, zucchina_zucchini
+- **What it is**: Pixabay.
+- **Why it is authoritative**: An image bank under the Pixabay Content License.
+- **What it offers**: High-resolution photos.
+- **Used for**: Images
+- **Products (124)**: aglio_garlic, agretti_saltwort, albicocca_apricot, alchechengi_cape_gooseberry, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, carota_carrot, carruba_carob, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cetriolo_cucumber, cicerchia_grass_pea, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, crescione_watercress, erba_cipollina_chives, fagiolino_green_bean, farro_emmer, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, giuggiola_jujube, gombo_okra, grano_duro_durum_wheat, grano_saraceno_buckwheat, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, nespola_comune_medlar, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, prezzemolo_parsley, rabarbaro_rhubarb, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, salvia_sage, sambuco_elderberry, scalogno_shallot, sedano_celery, sedano_rapa_celeriac, shiitake_shiitake, spinacio_spinach, susina_plum, timo_thyme, uva_spina_gooseberry, uva_table_grape, zafferano_saffron, zucca_pumpkin, zucchina_spinosa_chayote, zucchina_zucchini
 
 ### BDA-IEO - Banca Dati di Composizione degli Alimenti (Istituto Europeo di Oncologia)
 
 `bda_ieo` · https://bda.ieo.it/
 
-- **Cos'è**: Banca Dati di Composizione degli Alimenti per studi epidemiologici in Italia, Istituto Europeo di Oncologia.
-- **Perché è autorevole**: Banca dati scientifica che riunisce e armonizza tabelle italiane e internazionali indicando per ogni valore la fonte originale.
-- **Cosa offre**: Nutrienti mancanti nelle tabelle CREA e prodotti non presenti in CREA (es. mais dolce crudo).
-- **Usata per**: Nutrizione, Testi
-- **Alimenti (121)**: aglio_garlic, agretti_saltwort, albicocca_apricot, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, cachi_persimmon, carciofo_artichoke, cardo_cardoon, carota_carrot, carruba_carob, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_rosso_red_cabbage, cece_chickpea, cetriolo_cucumber, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirtillo_blueberry, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, orzo_barley, papaya_papaya, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, radicchio_radicchio, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, salvia_sage, scalogno_shallot, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, spinacio_spinach, spugnola_morel, susina_plum, tartufo_nero_black_truffle, timo_thyme, uva_table_grape, valerianella_corn_salad, zafferano_saffron, zucca_pumpkin, zucchina_zucchini
-- **Voci di glossario**: edible_portion
+- **What it is**: Food Composition Database for Epidemiological Studies in Italy, European Institute of Oncology.
+- **Why it is authoritative**: A scientific database that brings together and harmonises Italian and international tables, citing the original source of every value.
+- **What it offers**: Nutrients missing from the CREA tables and produce not in CREA (e.g. raw sweet corn).
+- **Used for**: Nutrition, Texts
+- **Products (121)**: aglio_garlic, agretti_saltwort, albicocca_apricot, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, cachi_persimmon, carciofo_artichoke, cardo_cardoon, carota_carrot, carruba_carob, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_rosso_red_cabbage, cece_chickpea, cetriolo_cucumber, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirtillo_blueberry, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, orzo_barley, papaya_papaya, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, radicchio_radicchio, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, salvia_sage, scalogno_shallot, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, spinacio_spinach, spugnola_morel, susina_plum, tartufo_nero_black_truffle, timo_thyme, uva_table_grape, valerianella_corn_salad, zafferano_saffron, zucca_pumpkin, zucchina_zucchini
+- **Glossary entries**: edible_portion
 
 ### USDA FSIS FoodKeeper
 
 `usda_foodkeeper` · https://www.foodsafety.gov/keep-food-safe/foodkeeper-app
 
-- **Cos'è**: USDA FSIS FoodKeeper, banca dati sulla conservazione domestica dei prodotti.
-- **Perché è autorevole**: Strumento ufficiale del Food Safety and Inspection Service degli Stati Uniti, sviluppato con la Cornell University.
-- **Cosa offre**: Durate in dispensa, frigorifero e congelatore dalla data di acquisto, con note pratiche.
-- **Usata per**: Conservazione in Casa, Testi
-- **Alimenti (120)**: aglio_garlic, agretti_saltwort, albicocca_apricot, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, carciofo_artichoke, cardoncello_king_oyster_mushroom, carota_carrot, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cedro_citron, cetriolo_cucumber, chinotto_chinotto, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, clementine_clementine, crescione_watercress, daikon_daikon, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, finferlo_chanterelle, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mango_mango, maracuja_passion_fruit, mela_apple, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, origano_oregano, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, radicchio_radicchio, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, salicornia_samphire, sambuco_elderberry, scalogno_shallot, scarola_escarole, sedano_celery, sedano_rapa_celeriac, shiitake_shiitake, spinacio_spinach, spugnola_morel, susina_plum, taccola_snow_pea, timo_thyme, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zucca_pumpkin, zucchina_zucchini
-- **Voci di glossario**: home_storage, shelf_life_home
+- **What it is**: USDA FSIS FoodKeeper, a database on home product storage.
+- **Why it is authoritative**: An official tool of the US Food Safety and Inspection Service, developed with Cornell University.
+- **What it offers**: Pantry, fridge and freezer times from the purchase date, with practical notes.
+- **Used for**: Home Storage, Texts
+- **Products (120)**: aglio_garlic, agretti_saltwort, albicocca_apricot, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, carciofo_artichoke, cardoncello_king_oyster_mushroom, carota_carrot, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cedro_citron, cetriolo_cucumber, chinotto_chinotto, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, clementine_clementine, crescione_watercress, daikon_daikon, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, finferlo_chanterelle, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mango_mango, maracuja_passion_fruit, mela_apple, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, origano_oregano, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, radicchio_radicchio, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, salicornia_samphire, sambuco_elderberry, scalogno_shallot, scarola_escarole, sedano_celery, sedano_rapa_celeriac, shiitake_shiitake, spinacio_spinach, spugnola_morel, susina_plum, taccola_snow_pea, timo_thyme, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zucca_pumpkin, zucchina_zucchini
+- **Glossary entries**: home_storage, shelf_life_home
 
 ### MASAF - Elenco nazionale dei Prodotti Agroalimentari Tradizionali, XXVI revisione (2026)
 
 `masaf_pat` · https://www.masaf.gov.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/24151
 
-- **Cos'è**: Elenco nazionale dei Prodotti Agroalimentari Tradizionali del Ministero dell'Agricoltura (XXVI revisione, 2026).
-- **Perché è autorevole**: Elenco ufficiale aggiornato ogni anno su segnalazione delle Regioni.
-- **Cosa offre**: I prodotti tradizionali regionali legati a ciascun prodotto.
-- **Usata per**: Testi, Prodotti Tradizionali
-- **Alimenti (118)**: aglio_garlic, agretti_saltwort, albicocca_apricot, amarena_sour_cherry, anguria_watermelon, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, cardoncello_king_oyster_mushroom, carota_carrot, carruba_carob, castagna_chestnut, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_verza_savoy_cabbage, cece_chickpea, cedro_citron, cetriolo_cucumber, chinotto_chinotto, cicerchia_grass_pea, cicoria_da_cespo_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, giuggiola_jujube, grano_duro_durum_wheat, grano_saraceno_buckwheat, kiwi_kiwifruit, lampascioni_tassel_hyacinth, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, limone_lemon, mandarino_mandarin, mandorla_almond, mango_mango, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirtillo_blueberry, mirtillo_rosso_lingonberry, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, orzo_barley, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, radicchio_radicchio, rafano_horseradish, rapa_turnip, ravanello_radish, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, salicornia_samphire, salvia_sage, sambuco_elderberry, scalogno_shallot, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, spinacio_spinach, susina_plum, taccola_snow_pea, tartufo_bianco_white_truffle, tartufo_nero_black_truffle, timo_thyme, topinambur_jerusalem_artichoke, uva_table_grape, zafferano_saffron, zucca_pumpkin, zucchina_zucchini
-- **Voci di glossario**: pat
+- **What it is**: National list of Traditional Agri-food Products of the Italian Ministry of Agriculture (26th revision, 2026).
+- **Why it is authoritative**: An official list updated every year on the Regions' proposals.
+- **What it offers**: The regional traditional products linked to each product.
+- **Used for**: Texts, Traditional Products
+- **Products (118)**: aglio_garlic, agretti_saltwort, albicocca_apricot, amarena_sour_cherry, anguria_watermelon, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, cardoncello_king_oyster_mushroom, carota_carrot, carruba_carob, castagna_chestnut, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_verza_savoy_cabbage, cece_chickpea, cedro_citron, cetriolo_cucumber, chinotto_chinotto, cicerchia_grass_pea, cicoria_da_cespo_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, giuggiola_jujube, grano_duro_durum_wheat, grano_saraceno_buckwheat, kiwi_kiwifruit, lampascioni_tassel_hyacinth, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, limone_lemon, mandarino_mandarin, mandorla_almond, mango_mango, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirtillo_blueberry, mirtillo_rosso_lingonberry, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, orzo_barley, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, radicchio_radicchio, rafano_horseradish, rapa_turnip, ravanello_radish, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, salicornia_samphire, salvia_sage, sambuco_elderberry, scalogno_shallot, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, spinacio_spinach, susina_plum, taccola_snow_pea, tartufo_bianco_white_truffle, tartufo_nero_black_truffle, timo_thyme, topinambur_jerusalem_artichoke, uva_table_grape, zafferano_saffron, zucca_pumpkin, zucchina_zucchini
+- **Glossary entries**: pat
 
 ### EUFIC - Explore seasonal fruit and vegetables in Europe
 
 `eufic_map` · https://www.eufic.org/en/explore-seasonal-fruit-and-vegetables-in-europe
 
-- **Cos'è**: Mappa interattiva EUFIC della frutta e verdura di stagione in Europa.
-- **Perché è autorevole**: L'European Food Information Council è un'organizzazione senza scopo di lucro che divulga informazioni scientifiche su alimentazione e salute.
-- **Cosa offre**: Mesi di stagione per Paese europeo, aggregati per zona climatica.
-- **Usata per**: Stagionalità Europea, Testi
-- **Alimenti (115)**: aglio_garlic, albicocca_apricot, ananas_pineapple, anguria_watermelon, arancia_orange, asparago_asparagus, avocado_avocado, banana_banana, barbabietola_beetroot, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, carota_carrot, carruba_carob, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cetriolo_cucumber, cicoria_da_cespo_chicory, ciliegia_cherry, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, crescione_watercress, daikon_daikon, fagiolino_green_bean, fagiolo_bean, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, giuggiola_jujube, gombo_okra, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, limone_lemon, mais_corn, mandarino_mandarin, mango_mango, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, navone_swede, nespola_comune_medlar, nespola_loquat, oliva_olive, papaya_papaya, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pomodoro_tomato, pompelmo_grapefruit, porro_leek, puntarelle_puntarelle, rabarbaro_rhubarb, radicchio_radicchio, rafano_horseradish, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, rucola_arugula, salicornia_samphire, sambuco_elderberry, scalogno_shallot, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, shiitake_shiitake, spinacio_spinach, spugnola_morel, susina_plum, taccola_snow_pea, tartufo_bianco_white_truffle, tartufo_nero_black_truffle, topinambur_jerusalem_artichoke, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zucca_pumpkin, zucchina_spinosa_chayote, zucchina_zucchini
-- **Voci di glossario**: eufic_zones, italy_macro_areas, seasonality_estimate, seasonality_states
+- **What it is**: EUFIC interactive map of seasonal fruit and vegetables in Europe.
+- **Why it is authoritative**: The European Food Information Council is a non-profit organisation that communicates science-based information on product and health.
+- **What it offers**: In-season months by European country, aggregated by climate zone.
+- **Used for**: European Seasonality, Texts
+- **Products (115)**: aglio_garlic, albicocca_apricot, ananas_pineapple, anguria_watermelon, arancia_orange, asparago_asparagus, avocado_avocado, banana_banana, barbabietola_beetroot, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardo_cardoon, carota_carrot, carruba_carob, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cetriolo_cucumber, cicoria_da_cespo_chicory, ciliegia_cherry, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, crescione_watercress, daikon_daikon, fagiolino_green_bean, fagiolo_bean, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finferlo_chanterelle, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, giuggiola_jujube, gombo_okra, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, limone_lemon, mais_corn, mandarino_mandarin, mango_mango, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, navone_swede, nespola_comune_medlar, nespola_loquat, oliva_olive, papaya_papaya, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pomodoro_tomato, pompelmo_grapefruit, porro_leek, puntarelle_puntarelle, rabarbaro_rhubarb, radicchio_radicchio, rafano_horseradish, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, rucola_arugula, salicornia_samphire, sambuco_elderberry, scalogno_shallot, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, shiitake_shiitake, spinacio_spinach, spugnola_morel, susina_plum, taccola_snow_pea, tartufo_bianco_white_truffle, tartufo_nero_black_truffle, topinambur_jerusalem_artichoke, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zucca_pumpkin, zucchina_spinosa_chayote, zucchina_zucchini
+- **Glossary entries**: eufic_zones, italy_macro_areas, seasonality_estimate, seasonality_states
 
 ### Orto da Coltivare (Matteo Cereda) - tabelle di semina PDF + schede
 
 `ortodacoltivare` · https://www.ortodacoltivare.it/calendario/calendario-delle-raccolte/
 
-- **Cos'è**: Orto da Coltivare, sito e tabelle di semina di Matteo Cereda (PDF locali per Nord, Centro, Sud).
-- **Perché è autorevole**: Riferimento italiano molto usato per l'orto domestico, con tabelle per zona climatica.
-- **Cosa offre**: Mesi di semina, trapianto e raccolta per macro-area e parametri di coltivazione.
-- **Usata per**: Calendario Agricolo, Plant_part_used, Stagionalità, Testi, Varietà
-- **Alimenti (110)**: aglio_garlic, agretti_saltwort, albicocca_apricot, alchechengi_cape_gooseberry, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, cachi_persimmon, carciofo_artichoke, cardo_cardoon, carota_carrot, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_verza_savoy_cabbage, cece_chickpea, cedro_citron, cetriolo_cucumber, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, crescione_watercress, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finocchio_fennel, fragola_strawberry, gelso_mulberry, giuggiola_jujube, gombo_okra, grano_duro_durum_wheat, indivia_belga_belgian_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, limone_lemon, mais_corn, mandarino_mandarin, mandorla_almond, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirtillo_blueberry, mora_blackberry, nespola_comune_medlar, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, rabarbaro_rhubarb, radicchio_radicchio, rafano_horseradish, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, rosmarino_rosemary, rucola_arugula, salicornia_samphire, salvia_sage, scalogno_shallot, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, spinacio_spinach, susina_plum, timo_thyme, topinambur_jerusalem_artichoke, uva_table_grape, valerianella_corn_salad, zafferano_saffron, zucca_pumpkin, zucchina_spinosa_chayote, zucchina_zucchini
-- **Voci di glossario**: agronomic_params, italy_macro_areas, seasonality_states, sowing_transplant, varieties
+- **What it is**: Orto da Coltivare, Matteo Cereda's website and sowing tables (local PDFs for North, Centre, South).
+- **Why it is authoritative**: A widely used Italian reference for home gardens, with tables by climate area.
+- **What it offers**: Sowing, transplanting and harvest months by macro-area and growing parameters.
+- **Used for**: Growing Calendar, Plant_part_used, Seasonality, Texts, Varieties
+- **Products (110)**: aglio_garlic, agretti_saltwort, albicocca_apricot, alchechengi_cape_gooseberry, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, cachi_persimmon, carciofo_artichoke, cardo_cardoon, carota_carrot, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_verza_savoy_cabbage, cece_chickpea, cedro_citron, cetriolo_cucumber, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, crescione_watercress, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finocchio_fennel, fragola_strawberry, gelso_mulberry, giuggiola_jujube, gombo_okra, grano_duro_durum_wheat, indivia_belga_belgian_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, limone_lemon, mais_corn, mandarino_mandarin, mandorla_almond, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirtillo_blueberry, mora_blackberry, nespola_comune_medlar, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, origano_oregano, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, rabarbaro_rhubarb, radicchio_radicchio, rafano_horseradish, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, rosmarino_rosemary, rucola_arugula, salicornia_samphire, salvia_sage, scalogno_shallot, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, spinacio_spinach, susina_plum, timo_thyme, topinambur_jerusalem_artichoke, uva_table_grape, valerianella_corn_salad, zafferano_saffron, zucca_pumpkin, zucchina_spinosa_chayote, zucchina_zucchini
+- **Glossary entries**: agronomic_params, italy_macro_areas, seasonality_states, sowing_transplant, varieties
 
 ### CREA Alimenti e Nutrizione - Tabelle di composizione degli alimenti (rev. 2019)
 
 `crea` · https://www.alimentinutrizione.it/tabelle-nutrizionali/ricerca-per-alimento
 
-- **Cos'è**: Tabelle di composizione dei prodotti del CREA - Centro di ricerca Alimenti e Nutrizione (revisione 2019).
-- **Perché è autorevole**: È l'ente pubblico di ricerca del Ministero dell'Agricoltura e cura la banca dati nazionale di riferimento per la composizione dei prodotti in Italia.
-- **Cosa offre**: Energia, acqua, macronutrienti, vitamine, minerali e parte edibile per 100 g di prodotto crudo.
-- **Usata per**: Nutrizione, Testi
-- **Alimenti (109)**: aglio_garlic, agretti_saltwort, albicocca_apricot, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, cachi_persimmon, carciofo_artichoke, cardo_cardoon, carota_carrot, carruba_carob, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cetriolo_cucumber, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, limone_lemon, litchi_lychee, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirtillo_blueberry, mora_blackberry, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, orzo_barley, papaya_papaya, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, radicchio_radicchio, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, salvia_sage, scarola_escarole, sedano_celery, sedano_rapa_celeriac, spinacio_spinach, susina_plum, tartufo_nero_black_truffle, uva_table_grape, zucca_pumpkin, zucchina_zucchini
-- **Voci di glossario**: edible_portion
+- **What it is**: Food composition tables of CREA - Research Centre for Food and Nutrition (2019 revision).
+- **Why it is authoritative**: It is the public research body of the Italian Ministry of Agriculture and maintains Italy's national reference product composition database.
+- **What it offers**: Energy, water, macronutrients, vitamins, minerals and edible portion per 100 g of raw product.
+- **Used for**: Nutrition, Texts
+- **Products (109)**: aglio_garlic, agretti_saltwort, albicocca_apricot, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, cachi_persimmon, carciofo_artichoke, cardo_cardoon, carota_carrot, carruba_carob, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cetriolo_cucumber, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, cocco_coconut, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, grano_duro_durum_wheat, grano_saraceno_buckwheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, limone_lemon, litchi_lychee, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirtillo_blueberry, mora_blackberry, nespola_loquat, nocciola_hazelnut, noce_walnut, oliva_olive, orzo_barley, papaya_papaya, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, radicchio_radicchio, rapa_turnip, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, salvia_sage, scarola_escarole, sedano_celery, sedano_rapa_celeriac, spinacio_spinach, susina_plum, tartufo_nero_black_truffle, uva_table_grape, zucca_pumpkin, zucchina_zucchini
+- **Glossary entries**: edible_portion
 
 ### My-PersonalTrainer
 
 `my_personaltrainer` · https://www.my-personaltrainer.it/frutta-verdura-di-stagione.htm
 
-- **Cos'è**: My-PersonalTrainer, portale italiano di divulgazione su alimentazione e salute.
-- **Perché è autorevole**: Fonte divulgativa prevista dal progetto; non è una fonte primaria.
-- **Cosa offre**: Solo spunti per i testi e link di approfondimento: nessun valore numerico viene preso da qui.
-- **Usata per**: Plant_part_used, Varietà, Verification_texts
-- **Alimenti (109)**: aglio_garlic, albicocca_apricot, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, cachi_persimmon, carciofo_artichoke, cardo_cardoon, carota_carrot, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cetriolo_cucumber, chinotto_chinotto, cicerchia_grass_pea, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cocco_coconut, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_porcino_porcini_mushroom, grano_saraceno_buckwheat, indivia_belga_belgian_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirtillo_blueberry, mora_blackberry, nocciola_hazelnut, origano_oregano, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, radicchio_radicchio, rafano_horseradish, ravanello_radish, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, salicornia_samphire, salvia_sage, sambuco_elderberry, scalogno_shallot, scarola_escarole, sedano_celery, sedano_rapa_celeriac, spinacio_spinach, susina_plum, taccola_snow_pea, timo_thyme, topinambur_jerusalem_artichoke, uva_table_grape, zafferano_saffron, zucca_pumpkin, zucchina_zucchini
+- **What it is**: My-PersonalTrainer, an Italian popular-science portal on nutrition and health.
+- **Why it is authoritative**: A popular-science source included in the project brief; not a primary source.
+- **What it offers**: Only cues for texts and further-reading links: no numerical value is taken from it.
+- **Used for**: Plant_part_used, Varieties, Verification_texts
+- **Products (109)**: aglio_garlic, albicocca_apricot, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, cachi_persimmon, carciofo_artichoke, cardo_cardoon, carota_carrot, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cece_chickpea, cetriolo_cucumber, chinotto_chinotto, cicerchia_grass_pea, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cocco_coconut, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finocchio_fennel, fragola_strawberry, fungo_champignon_button_mushroom, fungo_porcino_porcini_mushroom, grano_saraceno_buckwheat, indivia_belga_belgian_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, lime_lime, limone_lemon, mais_corn, mandarino_mandarin, mandorla_almond, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirtillo_blueberry, mora_blackberry, nocciola_hazelnut, origano_oregano, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, radicchio_radicchio, rafano_horseradish, ravanello_radish, ribes_redcurrant, riso_rice, rosmarino_rosemary, rucola_arugula, salicornia_samphire, salvia_sage, sambuco_elderberry, scalogno_shallot, scarola_escarole, sedano_celery, sedano_rapa_celeriac, spinacio_spinach, susina_plum, taccola_snow_pea, timo_thyme, topinambur_jerusalem_artichoke, uva_table_grape, zafferano_saffron, zucca_pumpkin, zucchina_zucchini
 
 ### UC Davis / Kader - Storing Fresh Fruits and Vegetables for Better Taste (UC ANR Pub. 21590)
 
 `uc_davis_storing_guide` · https://homeorchard.ucanr.edu/files/115275.pdf
 
-- **Cos'è**: Guida 'Storing Fresh Fruits and Vegetables for Better Taste' (A. Kader, J. Thompson, K. Sylva, L. Harris), UC ANR Pub. 21590.
-- **Perché è autorevole**: Pubblicazione divulgativa ufficiale dell'Università della California firmata dai principali esperti di post-raccolta.
-- **Cosa offre**: Dove conservare in casa ogni prodotto: frigorifero, maturazione sul bancone, solo temperatura ambiente.
-- **Usata per**: Conservazione in Casa
-- **Alimenti (107)**: aglio_garlic, agretti_saltwort, albicocca_apricot, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardoncello_king_oyster_mushroom, carota_carrot, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cedro_citron, cetriolo_cucumber, chinotto_chinotto, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, fico_fig, finferlo_chanterelle, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lime_lime, limone_lemon, mais_corn, mandarino_mandarin, mango_mango, mela_apple, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, papaya_papaya, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, radicchio_radicchio, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, rosmarino_rosemary, rucola_arugula, salicornia_samphire, salvia_sage, sambuco_elderberry, scalogno_shallot, scarola_escarole, sedano_celery, shiitake_shiitake, spinacio_spinach, spugnola_morel, susina_plum, taccola_snow_pea, timo_thyme, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zucca_pumpkin, zucchina_zucchini
-- **Voci di glossario**: climacteric, ethylene, keep_away_from
+- **What it is**: 'Storing Fresh Fruits and Vegetables for Better Taste' guide (A. Kader, J. Thompson, K. Sylva, L. Harris), UC ANR Pub. 21590.
+- **Why it is authoritative**: An official University of California extension publication by leading postharvest experts.
+- **What it offers**: Where to keep each product at home: fridge, ripen on the counter, room temperature only.
+- **Used for**: Home Storage
+- **Products (107)**: aglio_garlic, agretti_saltwort, albicocca_apricot, amarena_sour_cherry, ananas_pineapple, anguria_watermelon, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cardoncello_king_oyster_mushroom, carota_carrot, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cedro_citron, cetriolo_cucumber, chinotto_chinotto, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, crescione_watercress, daikon_daikon, erba_cipollina_chives, fagiolino_green_bean, fagiolo_bean, fico_fig, finferlo_chanterelle, fragola_strawberry, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, gelso_mulberry, indivia_belga_belgian_endive, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lime_lime, limone_lemon, mais_corn, mandarino_mandarin, mango_mango, mela_apple, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, papaya_papaya, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, radicchio_radicchio, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, rosmarino_rosemary, rucola_arugula, salicornia_samphire, salvia_sage, sambuco_elderberry, scalogno_shallot, scarola_escarole, sedano_celery, shiitake_shiitake, spinacio_spinach, spugnola_morel, susina_plum, taccola_snow_pea, timo_thyme, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zucca_pumpkin, zucchina_zucchini
+- **Glossary entries**: climacteric, ethylene, keep_away_from
 
 ### USDA Database for the Flavonoid Content of Selected Foods, Release 3.3 (2018)
 
 `usda_flavonoids` · https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/flavonoids/
 
-- **Cos'è**: USDA Database for the Flavonoid Content of Selected Foods, Release 3.3 (2018).
-- **Perché è autorevole**: Banca dati del laboratorio di composizione dell'USDA, costruita da studi analitici selezionati con criteri di qualità.
-- **Cosa offre**: Contenuto di antocianine, flavonoli, flavoni, flavanoni e catechine.
-- **Usata per**: Composti Bioattivi
-- **Alimenti (97)**: aglio_garlic, albicocca_apricot, amarena_sour_cherry, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avocado_avocado, banana_banana, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, crescione_watercress, erba_cipollina_chives, fagiolino_green_bean, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finocchio_fennel, fragola_strawberry, gelso_mulberry, giuggiola_jujube, gombo_okra, grano_saraceno_buckwheat, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lime_lime, limone_lemon, mandarino_mandarin, mandorla_almond, mango_mango, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, navone_swede, nocciola_hazelnut, noce_walnut, origano_oregano, orzo_barley, pastinaca_parsnip, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, rabarbaro_rhubarb, radicchio_radicchio, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, rosmarino_rosemary, rucola_arugula, salvia_sage, sambuco_elderberry, scarola_escarole, sedano_celery, sedano_rapa_celeriac, spinacio_spinach, susina_plum, timo_thyme, uva_spina_gooseberry, uva_table_grape, zafferano_saffron, zucca_pumpkin, zucchina_zucchini
-- **Voci di glossario**: flavonoids, polyphenols
+- **What it is**: USDA Database for the Flavonoid Content of Selected Foods, Release 3.3 (2018).
+- **Why it is authoritative**: A database from USDA's composition laboratory, built from analytical studies selected with quality criteria.
+- **What it offers**: Content of anthocyanins, flavonols, flavones, flavanones and catechins.
+- **Used for**: Bioactive Compounds
+- **Products (97)**: aglio_garlic, albicocca_apricot, amarena_sour_cherry, arachide_peanut, arancia_orange, asparago_asparagus, asparago_selvatico_wild_asparagus, avocado_avocado, banana_banana, bietola_da_coste_swiss_chard, broccolo_broccoli, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, crescione_watercress, erba_cipollina_chives, fagiolino_green_bean, fava_broad_bean, fico_d_india_prickly_pear, fico_fig, finocchio_fennel, fragola_strawberry, gelso_mulberry, giuggiola_jujube, gombo_okra, grano_saraceno_buckwheat, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lime_lime, limone_lemon, mandarino_mandarin, mandorla_almond, mango_mango, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, navone_swede, nocciola_hazelnut, noce_walnut, origano_oregano, orzo_barley, pastinaca_parsnip, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, puntarelle_puntarelle, rabarbaro_rhubarb, radicchio_radicchio, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, rosmarino_rosemary, rucola_arugula, salvia_sage, sambuco_elderberry, scarola_escarole, sedano_celery, sedano_rapa_celeriac, spinacio_spinach, susina_plum, timo_thyme, uva_spina_gooseberry, uva_table_grape, zafferano_saffron, zucca_pumpkin, zucchina_zucchini
+- **Glossary entries**: flavonoids, polyphenols
 
 ### Phenol-Explorer 3.6 - database del contenuto di polifenoli negli alimenti (INRA)
 
 `phenol_explorer` · http://phenol-explorer.eu/
 
-- **Cos'è**: Phenol-Explorer 3.6, database dei polifenoli nei prodotti (INRA, Francia).
-- **Perché è autorevole**: Database scientifico citato nella letteratura internazionale, che raccoglie i dati di centinaia di pubblicazioni con il metodo di analisi.
-- **Cosa offre**: Polifenoli totali (saggio di Folin), acidi fenolici, stilbeni e altri polifenoli. Uso non commerciale con citazione.
-- **Usata per**: Composti Bioattivi
-- **Alimenti (86)**: aglio_garlic, albicocca_apricot, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, carciofo_artichoke, carota_carrot, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cetriolo_cucumber, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, clementine_clementine, fagiolino_green_bean, fagiolo_bean, fava_broad_bean, fico_fig, finocchio_fennel, fragola_strawberry, grano_duro_durum_wheat, grano_saraceno_buckwheat, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, limone_lemon, litchi_lychee, mandarino_mandarin, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melone_melon, menta_mint, mirtillo_blueberry, mora_blackberry, nespola_loquat, origano_oregano, orzo_barley, papaya_papaya, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pomodoro_tomato, pompelmo_grapefruit, prezzemolo_parsley, radicchio_radicchio, rapa_turnip, ravanello_radish, ribes_redcurrant, rosmarino_rosemary, rucola_arugula, salvia_sage, scalogno_shallot, sedano_celery, sedano_rapa_celeriac, spinacio_spinach, susina_plum, timo_thyme, uva_table_grape, zucca_pumpkin, zucchina_zucchini
-- **Voci di glossario**: flavonoids, polyphenols
+- **What it is**: Phenol-Explorer 3.6, database of polyphenols in produce (INRA, France).
+- **Why it is authoritative**: A scientific database cited in international literature, collecting data from hundreds of publications with the analytical method.
+- **What it offers**: Total polyphenols (Folin assay), phenolic acids, stilbenes and other polyphenols. Non-commercial use with citation.
+- **Used for**: Bioactive Compounds
+- **Products (86)**: aglio_garlic, albicocca_apricot, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, avena_oat, avocado_avocado, banana_banana, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, broccolo_broccoli, carciofo_artichoke, carota_carrot, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cetriolo_cucumber, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cima_di_rapa_turnip_greens, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, clementine_clementine, fagiolino_green_bean, fagiolo_bean, fava_broad_bean, fico_fig, finocchio_fennel, fragola_strawberry, grano_duro_durum_wheat, grano_saraceno_buckwheat, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, limone_lemon, litchi_lychee, mandarino_mandarin, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melone_melon, menta_mint, mirtillo_blueberry, mora_blackberry, nespola_loquat, origano_oregano, orzo_barley, papaya_papaya, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pomodoro_tomato, pompelmo_grapefruit, prezzemolo_parsley, radicchio_radicchio, rapa_turnip, ravanello_radish, ribes_redcurrant, rosmarino_rosemary, rucola_arugula, salvia_sage, scalogno_shallot, sedano_celery, sedano_rapa_celeriac, spinacio_spinach, susina_plum, timo_thyme, uva_table_grape, zucca_pumpkin, zucchina_zucchini
+- **Glossary entries**: flavonoids, polyphenols
 
 ### UC Davis Postharvest Research and Extension Center - Produce Fact Sheets
 
 `uc_davis` · https://postharvest.ucdavis.edu/produce-facts-sheets
 
-- **Cos'è**: Schede post-raccolta del Postharvest Research and Extension Center dell'Università della California, Davis.
-- **Perché è autorevole**: Centro di ricerca di riferimento mondiale sulla fisiologia post-raccolta (le schede sono curate da A. Kader e colleghi).
-- **Cosa offre**: Temperatura e umidità ottimali, etilene, danno da freddo, classificazione climaterica.
-- **Usata per**: Post-raccolta, Testi
-- **Alimenti (80)**: aglio_garlic, albicocca_apricot, ananas_pineapple, anguria_watermelon, arancia_orange, asparago_asparagus, avocado_avocado, banana_banana, basilico_basil, broccolo_broccoli, cachi_persimmon, carciofo_artichoke, carota_carrot, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_rosso_red_cabbage, cetriolo_cucumber, ciliegia_cherry, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, clementine_clementine, fagiolino_green_bean, fico_d_india_prickly_pear, fico_fig, fragola_strawberry, fungo_champignon_button_mushroom, giuggiola_jujube, gombo_okra, indivia_belga_belgian_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirtillo_blueberry, mora_blackberry, nespola_loquat, oliva_olive, origano_oregano, papaya_papaya, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, prezzemolo_parsley, radicchio_radicchio, ravanello_radish, ribes_redcurrant, rosmarino_rosemary, salvia_sage, sedano_celery, spinacio_spinach, susina_plum, taccola_snow_pea, timo_thyme, uva_table_grape, zucca_pumpkin, zucchina_zucchini
-- **Voci di glossario**: chilling_injury, climacteric, ethylene, ethylene_sensitivity, home_storage, non_climacteric, optimal_storage
+- **What it is**: Postharvest fact sheets of the University of California, Davis Postharvest Research and Extension Center.
+- **Why it is authoritative**: A world-leading research centre on postharvest physiology (fact sheets edited by A. Kader and colleagues).
+- **What it offers**: Optimal temperature and humidity, ethylene, chilling injury, climacteric classification.
+- **Used for**: Postharvest, Texts
+- **Products (80)**: aglio_garlic, albicocca_apricot, ananas_pineapple, anguria_watermelon, arancia_orange, asparago_asparagus, avocado_avocado, banana_banana, basilico_basil, broccolo_broccoli, cachi_persimmon, carciofo_artichoke, carota_carrot, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_rosso_red_cabbage, cetriolo_cucumber, ciliegia_cherry, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, clementine_clementine, fagiolino_green_bean, fico_d_india_prickly_pear, fico_fig, fragola_strawberry, fungo_champignon_button_mushroom, giuggiola_jujube, gombo_okra, indivia_belga_belgian_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lime_lime, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, mango_mango, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melanzana_eggplant, melograno_pomegranate, melone_melon, menta_mint, mirtillo_blueberry, mora_blackberry, nespola_loquat, oliva_olive, origano_oregano, papaya_papaya, patata_dolce_sweet_potato, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pistacchio_pistachio, pomodoro_tomato, pompelmo_grapefruit, prezzemolo_parsley, radicchio_radicchio, ravanello_radish, ribes_redcurrant, rosmarino_rosemary, salvia_sage, sedano_celery, spinacio_spinach, susina_plum, taccola_snow_pea, timo_thyme, uva_table_grape, zucca_pumpkin, zucchina_zucchini
+- **Glossary entries**: chilling_injury, climacteric, ethylene, ethylene_sensitivity, home_storage, non_climacteric, optimal_storage
 
 ### EU Plant Variety Portal - Catalogo comune UE delle varieta' (agricole, ortive, frutticole)
 
 `eu_plant_variety_portal` · https://ec.europa.eu/food/plant-variety-portal/
 
-- **Cos'è**: EU Plant Variety Portal, il Catalogo comune UE delle varietà di specie agricole, ortive e da frutto.
-- **Perché è autorevole**: Banca dati ufficiale della Commissione europea che riunisce i registri varietali nazionali.
-- **Cosa offre**: Codici di specie UPOV, verifica delle varietà e numero di varietà iscritte in Italia.
-- **Usata per**: Codice UPOV, Varietà
-- **Alimenti (76)**: aglio_garlic, albicocca_apricot, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, avena_oat, barbabietola_beetroot, bietola_da_coste_swiss_chard, broccolo_broccoli, carciofo_artichoke, cardo_cardoon, carota_carrot, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cetriolo_cucumber, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, clementine_clementine, fagiolino_green_bean, fagiolo_bean, fava_broad_bean, fico_fig, finocchio_fennel, fragola_strawberry, grano_duro_durum_wheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lime_lime, limone_lemon, mais_corn, mandarino_mandarin, mela_apple, mela_cotogna_quince, melanzana_eggplant, melone_melon, mirtillo_blueberry, mora_blackberry, orzo_barley, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, radicchio_radicchio, rapa_turnip, ravanello_radish, ribes_redcurrant, riso_rice, scalogno_shallot, scarola_escarole, sedano_celery, sedano_rapa_celeriac, spinacio_spinach, susina_plum, valerianella_corn_salad, zucca_pumpkin, zucchina_zucchini
-- **Voci di glossario**: upov_variety_register, varieties
+- **What it is**: EU Plant Variety Portal, the EU Common Catalogue of varieties of agricultural, vegetable and fruit species.
+- **Why it is authoritative**: The European Commission's official database gathering the national variety registers.
+- **What it offers**: UPOV species codes, variety verification and the number of varieties listed in Italy.
+- **Used for**: UPOV Code, Varieties
+- **Products (76)**: aglio_garlic, albicocca_apricot, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, avena_oat, barbabietola_beetroot, bietola_da_coste_swiss_chard, broccolo_broccoli, carciofo_artichoke, cardo_cardoon, carota_carrot, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cetriolo_cucumber, cicoria_da_cespo_chicory, cicoria_da_taglio_cutting_chicory, ciliegia_cherry, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, clementine_clementine, fagiolino_green_bean, fagiolo_bean, fava_broad_bean, fico_fig, finocchio_fennel, fragola_strawberry, grano_duro_durum_wheat, indivia_belga_belgian_endive, indivia_riccia_curly_endive, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lime_lime, limone_lemon, mais_corn, mandarino_mandarin, mela_apple, mela_cotogna_quince, melanzana_eggplant, melone_melon, mirtillo_blueberry, mora_blackberry, orzo_barley, patata_potato, peperoncino_chili_pepper, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pomodoro_tomato, pompelmo_grapefruit, porro_leek, prezzemolo_parsley, radicchio_radicchio, rapa_turnip, ravanello_radish, ribes_redcurrant, riso_rice, scalogno_shallot, scarola_escarole, sedano_celery, sedano_rapa_celeriac, spinacio_spinach, susina_plum, valerianella_corn_salad, zucca_pumpkin, zucchina_zucchini
+- **Glossary entries**: upov_variety_register, varieties
 
 ### Bio Suisse - Calendario stagionale (Svizzera, PDF locale)
 
 `biosuisse` · https://bio-suisse.ch/calendariostagionale
 
-- **Cos'è**: Calendario stagionale di Bio Suisse, federazione delle aziende biologiche svizzere (PDF locale).
-- **Perché è autorevole**: Ente di riferimento dell'agricoltura biologica in Svizzera; utile come riferimento per il clima alpino.
-- **Cosa offre**: Mesi di stagione per le zone alpine e di montagna.
-- **Usata per**: Stagionalità, Testi
-- **Alimenti (71)**: aglio_garlic, albicocca_apricot, asparago_asparagus, barbabietola_beetroot, basilico_basil, broccolo_broccoli, carciofo_artichoke, carota_carrot, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cetriolo_cucumber, cicoria_da_cespo_chicory, ciliegia_cherry, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, erba_cipollina_chives, fagiolo_bean, finocchio_fennel, fragola_strawberry, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, mais_corn, mela_apple, mela_cotogna_quince, melanzana_eggplant, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, noce_walnut, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pomodoro_tomato, porro_leek, prezzemolo_parsley, rabarbaro_rhubarb, radicchio_radicchio, rafano_horseradish, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, rucola_arugula, sambuco_elderberry, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, spinacio_spinach, susina_plum, taccola_snow_pea, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zucca_pumpkin, zucchina_zucchini
+- **What it is**: Seasonal calendar of Bio Suisse, the federation of Swiss organic farms (local PDF).
+- **Why it is authoritative**: The reference body for organic farming in Switzerland; useful as a reference for the Alpine climate.
+- **What it offers**: In-season months for Alpine and mountain areas.
+- **Used for**: Seasonality, Texts
+- **Products (71)**: aglio_garlic, albicocca_apricot, asparago_asparagus, barbabietola_beetroot, basilico_basil, broccolo_broccoli, carciofo_artichoke, carota_carrot, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_cinese_chinese_cabbage, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cetriolo_cucumber, cicoria_da_cespo_chicory, ciliegia_cherry, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, erba_cipollina_chives, fagiolo_bean, finocchio_fennel, fragola_strawberry, indivia_riccia_curly_endive, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, mais_corn, mela_apple, mela_cotogna_quince, melanzana_eggplant, mirabella_mirabelle_plum, mirtillo_blueberry, mirtillo_rosso_lingonberry, mora_blackberry, noce_walnut, pastinaca_parsnip, patata_dolce_sweet_potato, patata_potato, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pisello_pea, pomodoro_tomato, porro_leek, prezzemolo_parsley, rabarbaro_rhubarb, radicchio_radicchio, rafano_horseradish, ravanello_radish, ribes_nero_blackcurrant, ribes_redcurrant, rucola_arugula, sambuco_elderberry, scarola_escarole, scorzonera_black_salsify, sedano_celery, sedano_rapa_celeriac, spinacio_spinach, susina_plum, taccola_snow_pea, uva_spina_gooseberry, uva_table_grape, valerianella_corn_salad, zucca_pumpkin, zucchina_zucchini
 
 ### Altroconsumo - Calendario frutta e verdura
 
 `altroconsumo` · https://www.altroconsumo.it/alimentazione/fare-la-spesa/consigli/calendario-frutta-verdura
 
-- **Cos'è**: Calendario di frutta e verdura di Altroconsumo, associazione italiana dei consumatori.
-- **Perché è autorevole**: Associazione indipendente di tutela dei consumatori con test e guide d'acquisto.
-- **Cosa offre**: Mesi di stagione in Italia, consigli d'acquisto e di conservazione.
-- **Usata per**: Buying_guide, Plant_part_used, Stagionalità, Testi, Varietà
-- **Alimenti (65)**: aglio_garlic, albicocca_apricot, alchechengi_cape_gooseberry, ananas_pineapple, anguria_watermelon, arancia_orange, asparago_asparagus, avocado_avocado, banana_banana, barbabietola_beetroot, bietola_da_coste_swiss_chard, broccolo_broccoli, cachi_persimmon, carciofo_artichoke, carota_carrot, castagna_chestnut, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_nero_black_kale, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cetriolo_cucumber, ciliegia_cherry, cima_di_rapa_turnip_greens, clementine_clementine, cocco_coconut, fagiolino_green_bean, fava_broad_bean, fico_fig, finocchio_fennel, fragola_strawberry, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lime_lime, limone_lemon, litchi_lychee, mandarino_mandarin, mango_mango, maracuja_passion_fruit, mela_apple, melanzana_eggplant, melograno_pomegranate, melone_melon, mirtillo_blueberry, mora_blackberry, nespola_loquat, papaya_papaya, patata_potato, peperone_bell_pepper, pera_pear, pesca_peach, pisello_pea, pomodoro_tomato, pompelmo_grapefruit, porro_leek, ravanello_radish, sedano_celery, spinacio_spinach, susina_plum, topinambur_jerusalem_artichoke, uva_table_grape, zucca_pumpkin, zucchina_zucchini
-- **Voci di glossario**: italy_macro_areas, seasonality_states
+- **What it is**: Fruit and vegetable calendar by Altroconsumo, the Italian consumers' association.
+- **Why it is authoritative**: An independent consumer organisation that runs tests and buying guides.
+- **What it offers**: In-season months in Italy, buying and storage tips.
+- **Used for**: Buying_guide, Plant_part_used, Seasonality, Texts, Varieties
+- **Products (65)**: aglio_garlic, albicocca_apricot, alchechengi_cape_gooseberry, ananas_pineapple, anguria_watermelon, arancia_orange, asparago_asparagus, avocado_avocado, banana_banana, barbabietola_beetroot, bietola_da_coste_swiss_chard, broccolo_broccoli, cachi_persimmon, carciofo_artichoke, carota_carrot, castagna_chestnut, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_nero_black_kale, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cetriolo_cucumber, ciliegia_cherry, cima_di_rapa_turnip_greens, clementine_clementine, cocco_coconut, fagiolino_green_bean, fava_broad_bean, fico_fig, finocchio_fennel, fragola_strawberry, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lime_lime, limone_lemon, litchi_lychee, mandarino_mandarin, mango_mango, maracuja_passion_fruit, mela_apple, melanzana_eggplant, melograno_pomegranate, melone_melon, mirtillo_blueberry, mora_blackberry, nespola_loquat, papaya_papaya, patata_potato, peperone_bell_pepper, pera_pear, pesca_peach, pisello_pea, pomodoro_tomato, pompelmo_grapefruit, porro_leek, ravanello_radish, sedano_celery, spinacio_spinach, susina_plum, topinambur_jerusalem_artichoke, uva_table_grape, zucca_pumpkin, zucchina_zucchini
+- **Glossary entries**: italy_macro_areas, seasonality_states
 
 ### Unsplash API
 
 `unsplash` · https://unsplash.com/
 
-- **Cos'è**: Unsplash.
-- **Perché è autorevole**: Banca di immagini con licenza Unsplash.
-- **Cosa offre**: Foto ad alta risoluzione.
-- **Usata per**: Immagini
-- **Alimenti (63)**: aglio_garlic, albicocca_apricot, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, avena_oat, avocado_avocado, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, cachi_persimmon, carciofo_artichoke, carota_carrot, castagna_chestnut, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cetriolo_cucumber, ciliegia_cherry, cipolla_estiva_summer_onion, clementine_clementine, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fragola_strawberry, fungo_champignon_button_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, lampone_raspberry, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melograno_pomegranate, menta_mint, mirtillo_blueberry, mora_blackberry, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_potato, peperoncino_chili_pepper, pera_pear, pesca_peach, pisello_pea, pomodoro_tomato, pompelmo_grapefruit, prezzemolo_parsley, rapa_turnip, ravanello_radish, ribes_redcurrant, riso_rice, rosmarino_rosemary, salvia_sage, spinacio_spinach, susina_plum, timo_thyme, zucchina_zucchini
+- **What it is**: Unsplash.
+- **Why it is authoritative**: An image bank under the Unsplash License.
+- **What it offers**: High-resolution photos.
+- **Used for**: Images
+- **Products (63)**: aglio_garlic, albicocca_apricot, ananas_pineapple, anguria_watermelon, arachide_peanut, arancia_orange, asparago_asparagus, avena_oat, avocado_avocado, barbabietola_beetroot, basilico_basil, bietola_da_coste_swiss_chard, cachi_persimmon, carciofo_artichoke, carota_carrot, castagna_chestnut, cavolo_nero_black_kale, cavolo_rapa_kohlrabi, cetriolo_cucumber, ciliegia_cherry, cipolla_estiva_summer_onion, clementine_clementine, fagiolino_green_bean, fagiolo_bean, farro_emmer, fava_broad_bean, fragola_strawberry, fungo_champignon_button_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, lampone_raspberry, limone_lemon, litchi_lychee, mais_corn, mandarino_mandarin, maracuja_passion_fruit, mela_apple, mela_cotogna_quince, melograno_pomegranate, menta_mint, mirtillo_blueberry, mora_blackberry, orzo_barley, papaya_papaya, pastinaca_parsnip, patata_potato, peperoncino_chili_pepper, pera_pear, pesca_peach, pisello_pea, pomodoro_tomato, pompelmo_grapefruit, prezzemolo_parsley, rapa_turnip, ravanello_radish, ribes_redcurrant, riso_rice, rosmarino_rosemary, salvia_sage, spinacio_spinach, susina_plum, timo_thyme, zucchina_zucchini
 
 ### WWF Italia - Il calendario della frutta e verdura di stagione (PDF locale)
 
 `wwf` · https://www.wwf.it/ecotips
 
-- **Cos'è**: Calendario della frutta e verdura di stagione di WWF Italia (PDF locale).
-- **Perché è autorevole**: Organizzazione per la conservazione della natura; calendario usato nel voto tra fonti italiane.
-- **Cosa offre**: Mesi di stagione in Italia.
-- **Usata per**: Stagionalità, Testi
-- **Alimenti (60)**: aglio_garlic, albicocca_apricot, alchechengi_cape_gooseberry, anguria_watermelon, arancia_orange, asparago_asparagus, barbabietola_beetroot, bietola_da_coste_swiss_chard, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, carota_carrot, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_nero_black_kale, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cetriolo_cucumber, ciliegia_cherry, cima_di_rapa_turnip_greens, clementine_clementine, fagiolino_green_bean, fava_broad_bean, fico_fig, finocchio_fennel, fragola_strawberry, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lime_lime, limone_lemon, litchi_lychee, mandarino_mandarin, mango_mango, mela_apple, melanzana_eggplant, melograno_pomegranate, melone_melon, mirtillo_blueberry, mora_blackberry, nespola_loquat, patata_potato, peperone_bell_pepper, pera_pear, pesca_peach, pisello_pea, pomodoro_tomato, pompelmo_grapefruit, porro_leek, ravanello_radish, sedano_celery, spinacio_spinach, susina_plum, topinambur_jerusalem_artichoke, uva_table_grape, zucca_pumpkin, zucchina_zucchini
-- **Voci di glossario**: italy_macro_areas, seasonality_states
+- **What it is**: WWF Italy's seasonal fruit and vegetable calendar (local PDF).
+- **Why it is authoritative**: A conservation organisation; calendar used in the vote among Italian sources.
+- **What it offers**: In-season months in Italy.
+- **Used for**: Seasonality, Texts
+- **Products (60)**: aglio_garlic, albicocca_apricot, alchechengi_cape_gooseberry, anguria_watermelon, arancia_orange, asparago_asparagus, barbabietola_beetroot, bietola_da_coste_swiss_chard, broccolo_romanesco_romanesco, cachi_persimmon, carciofo_artichoke, carota_carrot, castagna_chestnut, cavoletto_di_bruxelles_brussels_sprout, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_nero_black_kale, cavolo_rosso_red_cabbage, cavolo_verza_savoy_cabbage, cetriolo_cucumber, ciliegia_cherry, cima_di_rapa_turnip_greens, clementine_clementine, fagiolino_green_bean, fava_broad_bean, fico_fig, finocchio_fennel, fragola_strawberry, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lime_lime, limone_lemon, litchi_lychee, mandarino_mandarin, mango_mango, mela_apple, melanzana_eggplant, melograno_pomegranate, melone_melon, mirtillo_blueberry, mora_blackberry, nespola_loquat, patata_potato, peperone_bell_pepper, pera_pear, pesca_peach, pisello_pea, pomodoro_tomato, pompelmo_grapefruit, porro_leek, ravanello_radish, sedano_celery, spinacio_spinach, susina_plum, topinambur_jerusalem_artichoke, uva_table_grape, zucca_pumpkin, zucchina_zucchini
+- **Glossary entries**: italy_macro_areas, seasonality_states
 
 ### Greenpeace Italia - Guida alla frutta e verdura di stagione (PDF locale)
 
 `greenpeace` · https://www.greenpeace.org/italy/
 
-- **Cos'è**: Guida alla frutta e verdura di stagione di Greenpeace Italia (PDF locale).
-- **Perché è autorevole**: Organizzazione ambientalista; la guida è usata come una delle fonti di stagionalità italiane.
-- **Cosa offre**: Mesi di stagione e consigli contro lo spreco.
-- **Usata per**: Stagionalità, Testi
-- **Alimenti (54)**: aglio_garlic, albicocca_apricot, anguria_watermelon, arancia_orange, asparago_asparagus, barbabietola_beetroot, bietola_da_coste_swiss_chard, broccolo_broccoli, cachi_persimmon, carciofo_artichoke, carota_carrot, castagna_chestnut, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_nero_black_kale, cetriolo_cucumber, ciliegia_cherry, cima_di_rapa_turnip_greens, clementine_clementine, fagiolino_green_bean, fagiolo_bean, fava_broad_bean, fico_fig, finocchio_fennel, fragola_strawberry, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, limone_lemon, mandarino_mandarin, mela_apple, melanzana_eggplant, melograno_pomegranate, melone_melon, mirtillo_blueberry, mora_blackberry, nespola_loquat, patata_potato, peperone_bell_pepper, pera_pear, pesca_peach, pisello_pea, pomodoro_tomato, pompelmo_grapefruit, porro_leek, ravanello_radish, sedano_celery, spinacio_spinach, susina_plum, topinambur_jerusalem_artichoke, uva_table_grape, zucca_pumpkin, zucchina_zucchini
-- **Voci di glossario**: italy_macro_areas, seasonality_states
+- **What it is**: Greenpeace Italy's seasonal fruit and vegetable guide (local PDF).
+- **Why it is authoritative**: An environmental organisation; the guide is used as one of the Italian seasonality sources.
+- **What it offers**: In-season months and anti-waste tips.
+- **Used for**: Seasonality, Texts
+- **Products (54)**: aglio_garlic, albicocca_apricot, anguria_watermelon, arancia_orange, asparago_asparagus, barbabietola_beetroot, bietola_da_coste_swiss_chard, broccolo_broccoli, cachi_persimmon, carciofo_artichoke, carota_carrot, castagna_chestnut, cavolfiore_cauliflower, cavolo_cappuccio_cabbage, cavolo_nero_black_kale, cetriolo_cucumber, ciliegia_cherry, cima_di_rapa_turnip_greens, clementine_clementine, fagiolino_green_bean, fagiolo_bean, fava_broad_bean, fico_fig, finocchio_fennel, fragola_strawberry, kiwi_kiwifruit, lampone_raspberry, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, limone_lemon, mandarino_mandarin, mela_apple, melanzana_eggplant, melograno_pomegranate, melone_melon, mirtillo_blueberry, mora_blackberry, nespola_loquat, patata_potato, peperone_bell_pepper, pera_pear, pesca_peach, pisello_pea, pomodoro_tomato, pompelmo_grapefruit, porro_leek, ravanello_radish, sedano_celery, spinacio_spinach, susina_plum, topinambur_jerusalem_artichoke, uva_table_grape, zucca_pumpkin, zucchina_zucchini
+- **Glossary entries**: italy_macro_areas, seasonality_states
 
 ### eAmbrosia - registro UE delle indicazioni geografiche
 
 `eambrosia` · https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/
 
-- **Cos'è**: eAmbrosia, registro dell'Unione europea delle indicazioni geografiche.
-- **Perché è autorevole**: Registro legale ufficiale delle DOP e IGP, gestito dalla Commissione europea.
-- **Cosa offre**: Verifica delle DOP e IGP e link alla scheda di ciascuna.
-- **Usata per**: DOP/IGP
-- **Alimenti (48)**: aglio_garlic, amarena_sour_cherry, anguria_watermelon, arancia_orange, asparago_asparagus, basilico_basil, broccolo_romanesco_romanesco, carciofo_artichoke, carota_carrot, castagna_chestnut, cavolfiore_cauliflower, cedro_citron, ciliegia_cherry, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, fagiolo_bean, farro_emmer, fico_d_india_prickly_pear, fico_fig, finocchio_fennel, fungo_porcino_porcini_mushroom, kiwi_kiwifruit, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, limone_lemon, mela_apple, melanzana_eggplant, melone_melon, nocciola_hazelnut, noce_walnut, oliva_olive, patata_potato, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pistacchio_pistachio, pomodoro_tomato, radicchio_radicchio, riso_rice, rucola_arugula, scalogno_shallot, sedano_celery, susina_plum, uva_table_grape
-- **Voci di glossario**: dop_igp, varieties
+- **What it is**: eAmbrosia, the European Union register of geographical indications.
+- **Why it is authoritative**: The official legal register of PDOs and PGIs, managed by the European Commission.
+- **What it offers**: Verification of PDOs and PGIs and a link to each one's record.
+- **Used for**: PDO/PGI
+- **Products (48)**: aglio_garlic, amarena_sour_cherry, anguria_watermelon, arancia_orange, asparago_asparagus, basilico_basil, broccolo_romanesco_romanesco, carciofo_artichoke, carota_carrot, castagna_chestnut, cavolfiore_cauliflower, cedro_citron, ciliegia_cherry, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, cipollotto_spring_onion, clementine_clementine, fagiolo_bean, farro_emmer, fico_d_india_prickly_pear, fico_fig, finocchio_fennel, fungo_porcino_porcini_mushroom, kiwi_kiwifruit, lattuga_da_cespo_head_lettuce, lattuga_da_taglio_leaf_lettuce, lenticchia_lentil, limone_lemon, mela_apple, melanzana_eggplant, melone_melon, nocciola_hazelnut, noce_walnut, oliva_olive, patata_potato, peperone_bell_pepper, pera_pear, pesca_noce_nectarine, pesca_peach, pistacchio_pistachio, pomodoro_tomato, radicchio_radicchio, riso_rice, rucola_arugula, scalogno_shallot, sedano_celery, susina_plum, uva_table_grape
+- **Glossary entries**: dop_igp, varieties
 
 ### Fondazione Slow Food per la Biodiversità - Presìdi e Arca del Gusto
 
 `slow_food` · https://www.fondazioneslowfood.com/it/
 
-- **Cos'è**: Fondazione Slow Food per la Biodiversità: Presìdi e Arca del Gusto.
-- **Perché è autorevole**: Fondazione che cataloga e tutela le varietà locali a rischio, con schede pubbliche per ciascun prodotto.
-- **Cosa offre**: Verifica delle varietà locali e della qualifica di Presidio.
-- **Usata per**: Stagionalità, Varietà
-- **Alimenti (34)**: aglio_garlic, albicocca_apricot, avocado_avocado, banana_banana, carciofo_artichoke, cardo_cardoon, carota_carrot, carruba_carob, cavolfiore_cauliflower, cece_chickpea, cedro_citron, chinotto_chinotto, cicerchia_grass_pea, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, fagiolo_bean, farro_emmer, fava_broad_bean, giuggiola_jujube, grano_duro_durum_wheat, grano_saraceno_buckwheat, lenticchia_lentil, limone_lemon, mandarino_mandarin, melanzana_eggplant, navone_swede, nespola_comune_medlar, peperone_bell_pepper, pesca_peach, porro_leek, rapa_turnip, riso_rice, sedano_celery, zucca_pumpkin
-- **Voci di glossario**: slow_food, varieties
+- **What it is**: Slow Food Foundation for Biodiversity: Presidia and Ark of Taste.
+- **Why it is authoritative**: A foundation that catalogues and protects endangered local varieties, with a public record for each product.
+- **What it offers**: Verification of local varieties and of Presidium status.
+- **Used for**: Seasonality, Varieties
+- **Products (34)**: aglio_garlic, albicocca_apricot, avocado_avocado, banana_banana, carciofo_artichoke, cardo_cardoon, carota_carrot, carruba_carob, cavolfiore_cauliflower, cece_chickpea, cedro_citron, chinotto_chinotto, cicerchia_grass_pea, cipolla_estiva_summer_onion, cipolla_invernale_winter_onion, fagiolo_bean, farro_emmer, fava_broad_bean, giuggiola_jujube, grano_duro_durum_wheat, grano_saraceno_buckwheat, lenticchia_lentil, limone_lemon, mandarino_mandarin, melanzana_eggplant, navone_swede, nespola_comune_medlar, peperone_bell_pepper, pesca_peach, porro_leek, rapa_turnip, riso_rice, sedano_celery, zucca_pumpkin
+- **Glossary entries**: slow_food, varieties
 
 ### GBIF Backbone Taxonomy (funghi)
 
 `gbif` · https://www.gbif.org/
 
-- **Cos'è**: GBIF Backbone Taxonomy, Global Biodiversity Information Facility.
-- **Perché è autorevole**: Infrastruttura internazionale finanziata dai governi per i dati sulla biodiversità.
-- **Cosa offre**: La tassonomia dei funghi, che EPPO e WFO coprono solo in parte.
-- **Usata per**: Botanica
-- **Alimenti (10)**: cardoncello_king_oyster_mushroom, finferlo_chanterelle, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, shiitake_shiitake, spugnola_morel, tartufo_bianco_white_truffle, tartufo_nero_black_truffle
+- **What it is**: GBIF Backbone Taxonomy, Global Biodiversity Information Facility.
+- **Why it is authoritative**: A government-funded international infrastructure for biodiversity data.
+- **What it offers**: The taxonomy of fungi, which EPPO and WFO cover only in part.
+- **Used for**: Botany
+- **Products (10)**: cardoncello_king_oyster_mushroom, finferlo_chanterelle, fungo_champignon_button_mushroom, fungo_ovolo_caesars_mushroom, fungo_pleurotus_oyster_mushroom, fungo_porcino_porcini_mushroom, shiitake_shiitake, spugnola_morel, tartufo_bianco_white_truffle, tartufo_nero_black_truffle
 
 ### AGRIBALYSE 3.1 (ADEME, Francia) - impatti ambientali degli alimenti
 
 `agribalyse` · https://data.ademe.fr/datasets/agribalyse-31-synthese
 
-- **Cos'è**: AGRIBALYSE 3.1, banca dati pubblica francese degli impatti ambientali dei prodotti (ADEME, INRAE).
-- **Perché è autorevole**: Banca dati ufficiale dell'agenzia francese per la transizione ecologica, basata sull'analisi del ciclo di vita.
-- **Cosa offre**: Impronta di carbonio delle erbe aromatiche fresche, assenti in SU-EATABLE LIFE (confini diversi: fino al consumo).
-- **Usata per**: Impronta Ambientale
-- **Alimenti (7)**: basilico_basil, menta_mint, origano_oregano, prezzemolo_parsley, rosmarino_rosemary, salvia_sage, timo_thyme
-- **Voci di glossario**: carbon_footprint
+- **What it is**: AGRIBALYSE 3.1, the French public database of the environmental impacts of produce (ADEME, INRAE).
+- **Why it is authoritative**: The official database of the French ecological transition agency, based on life-cycle assessment.
+- **What it offers**: Carbon footprint of fresh herbs, absent from SU-EATABLE LIFE (different boundaries: up to consumption).
+- **Used for**: Environmental Footprint
+- **Products (7)**: basilico_basil, menta_mint, origano_oregano, prezzemolo_parsley, rosmarino_rosemary, salvia_sage, timo_thyme
+- **Glossary entries**: carbon_footprint
 
 ### Provincia di Cuneo - Schede dei funghi commestibili
 
 `provincia_cuneo_funghi` · https://natura.provincia.cuneo.it/funghi/commestibili/amanita-caesarea/
 
-- **Cos'è**: Schede dei funghi commestibili del portale naturalistico della Provincia di Cuneo.
-- **Perché è autorevole**: Fonte istituzionale locale, in una delle principali zone di raccolta di funghi in Italia.
-- **Cosa offre**: Il periodo di crescita dell'ovolo buono (estate e inizio autunno).
-- **Usata per**: Stagionalità
-- **Alimenti (3)**: finferlo_chanterelle, fungo_ovolo_caesars_mushroom, spugnola_morel
+- **What it is**: Edible mushroom sheets on the nature portal of the Province of Cuneo.
+- **Why it is authoritative**: A local institutional source in one of Italy's main mushroom-gathering areas.
+- **What it offers**: The fruiting period of Caesar's mushroom (summer and early autumn).
+- **Used for**: Seasonality
+- **Products (3)**: finferlo_chanterelle, fungo_ovolo_caesars_mushroom, spugnola_morel
 
 ### Gesundheitsportal Österreichs - Saisonkalender (Ministero della salute austriaco)
 
 `austria_gesundheitsportal` · https://www.gesundheit.gv.at/leben/ernaehrung/saisonkalender.html
 
-- **Cos'è**: Calendario stagionale del portale sanitario pubblico austriaco (Ministero federale della salute).
-- **Perché è autorevole**: Fonte governativa indicata da EUFIC come riferimento nazionale per l'Austria.
-- **Cosa offre**: Mesi di stagione usati per la zona alpina dove EUFIC non elenca il prodotto.
-- **Usata per**: Stagionalità Europea
-- **Alimenti (2)**: fungo_pleurotus_oyster_mushroom, indivia_riccia_curly_endive
+- **What it is**: Seasonal calendar of Austria's public health portal (Federal Ministry of Health).
+- **Why it is authoritative**: A government source listed by EUFIC as the national reference for Austria.
+- **What it offers**: In-season months used for the Alpine zone where EUFIC does not list the product.
+- **Used for**: European Seasonality
+- **Products (2)**: fungo_pleurotus_oyster_mushroom, indivia_riccia_curly_endive
 
 ### Legge 16 dicembre 1985, n. 752 - Normativa quadro sui tartufi (art. 6, periodi di raccolta)
 
 `legge_752_1985` · https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1985-12-16;752~art6
 
-- **Cos'è**: Legge quadro nazionale su raccolta, coltivazione e commercio dei tartufi.
-- **Perché è autorevole**: Norma dello Stato: l'art. 6 fissa i periodi in cui raccolta e commercio dei tartufi freschi sono consentiti.
-- **Cosa offre**: Il calendario di raccolta per specie, usato come stagionalità del tartufo bianco e del tartufo nero.
-- **Usata per**: Stagionalità
-- **Alimenti (2)**: tartufo_bianco_white_truffle, tartufo_nero_black_truffle
+- **What it is**: Italian national framework law on harvesting, growing and selling truffles.
+- **Why it is authoritative**: State law: article 6 sets the periods in which harvesting and selling fresh truffles are allowed.
+- **What it offers**: The harvest calendar by species, used as the seasonality of white and black truffles.
+- **Used for**: Seasonality
+- **Products (2)**: tartufo_bianco_white_truffle, tartufo_nero_black_truffle
 
 ### iNaturalist (solo foto CC0 / CC BY / CC BY-SA)
 
 `inaturalist` · https://www.inaturalist.org/
 
-- **Cos'è**: iNaturalist (solo foto CC0, CC BY, CC BY-SA).
-- **Perché è autorevole**: Piattaforma di osservazioni naturalistiche con licenze dichiarate.
-- **Cosa offre**: Foto delle piante in campo.
-- **Usata per**: Immagini
-- **Alimenti (1)**: fungo_pleurotus_oyster_mushroom
+- **What it is**: iNaturalist (CC0, CC BY, CC BY-SA photos only).
+- **Why it is authoritative**: A nature observation platform with stated licences.
+- **What it offers**: Photos of plants in the field.
+- **Used for**: Images
+- **Products (1)**: fungo_pleurotus_oyster_mushroom
 
 ### Istituto Superiore di Sanità - Rapporti ISTISAN 09/47 (carenza di G6PD e favismo)
 
 `iss_istisan_09_47` · https://www.iss.it/documents/20126/45616/0947web.pdf
 
-- **Cos'è**: Istituto Superiore di Sanità, Rapporti ISTISAN 09/47 sulla carenza di G6PD.
-- **Perché è autorevole**: L'ISS è il principale ente pubblico di ricerca e controllo in sanità pubblica in Italia.
-- **Cosa offre**: La spiegazione del favismo collegata alla fava.
-- **Usata per**: Note di Salute
-- **Alimenti (1)**: fava_broad_bean
-- **Voci di glossario**: favism
+- **What it is**: Italian National Institute of Health, ISTISAN Report 09/47 on G6PD deficiency.
+- **Why it is authoritative**: ISS is Italy's main public body for research and control in public health.
+- **What it offers**: The explanation of favism linked to broad beans.
+- **Used for**: Health Notes
+- **Products (1)**: fava_broad_bean
+- **Glossary entries**: favism
 
 ### Regione Emilia-Romagna, BUR 2012 - Disciplinare IGP Amarene Brusche di Modena (richiesta di modifica)
 
 `bur_emilia_romagna_amarene` · https://bur.regione.emilia-romagna.it/area-bollettini/bollettini-pubblicati/2012/marzo-periodico-parte-seconda-1a-quindicina/richiesta-di-modifica-del-disciplinare-della-denominazione-amarene-brusche-di-modena/allegato.pdf
 
-- **Cos'è**: Disciplinare di produzione dell'IGP Amarene Brusche di Modena, pubblicato nel Bollettino Ufficiale della Regione Emilia-Romagna (richiesta di modifica, 2012).
-- **Perché è autorevole**: Atto ufficiale che regola una denominazione protetta: fissa il periodo in cui le amarene possono essere raccolte.
-- **Cosa offre**: Il periodo di raccolta delle amarene (20 maggio - 31 luglio).
-- **Usata per**: Stagionalità
-- **Alimenti (1)**: amarena_sour_cherry
+- **What it is**: Production specification of the PGI Amarene Brusche di Modena, published in the Official Bulletin of the Emilia-Romagna Region (amendment request, 2012).
+- **Why it is authoritative**: An official act regulating a protected name: it sets the period in which sour cherries may be harvested.
+- **What it offers**: The sour cherry harvest period (20 May - 31 July).
+- **Used for**: Seasonality
+- **Products (1)**: amarena_sour_cherry
 
 ### Biblioteca civica Bertoliana (Vicenza) - Scheda botanica del lampascione
 
 `biblioteca_bertoliana` · https://www.bibliotecabertoliana.it/file/4959-lampascione.pdf
 
-- **Cos'è**: Scheda botanica del lampascione pubblicata dalla Biblioteca civica Bertoliana di Vicenza.
-- **Perché è autorevole**: Fonte divulgativa di un ente pubblico; usata solo in mancanza di fonti agricole o regionali, e dichiarata come tale.
-- **Cosa offre**: Il periodo di raccolta dei bulbi (gennaio-marzo).
-- **Usata per**: Stagionalità
-- **Alimenti (1)**: lampascioni_tassel_hyacinth
+- **What it is**: Botanical sheet on tassel hyacinth bulbs published by the Bertoliana public library in Vicenza.
+- **Why it is authoritative**: A popular source from a public body; used only for lack of agricultural or regional sources, and stated as such.
+- **What it offers**: The bulb harvest period (January-March).
+- **Used for**: Seasonality
+- **Products (1)**: lampascioni_tassel_hyacinth
 
 ### NaturaSì - Frutta e verdura di stagione (schede prodotto)
 
 `naturasi` · https://www.naturasi.it/frutta-verdura-di-stagione/cipollotto
 
-- **Cos'è**: Schede di frutta e verdura di stagione di NaturaSì, catena italiana di negozi biologici.
-- **Perché è autorevole**: Fonte commerciale italiana indicata dall'utente; usata solo per il cipollotto, che nessun calendario riporta.
-- **Cosa offre**: La stagione del cipollotto (inizio della primavera).
-- **Usata per**: Stagionalità
-- **Alimenti (1)**: cipollotto_spring_onion
+- **What it is**: Seasonal fruit and vegetable sheets by NaturaSì, an Italian organic product retailer.
+- **Why it is authoritative**: An Italian commercial source suggested by the user; used only for spring onion, which no calendar lists.
+- **What it offers**: The spring onion season (early spring).
+- **Used for**: Seasonality
+- **Products (1)**: cipollotto_spring_onion
 
 ### ISMEA Mercati
 
 `ismea` · https://www.ismeamercati.it/
 
-- **Cos'è**: ISMEA Mercati, Istituto di Servizi per il Mercato Agricolo Alimentare.
-- **Perché è autorevole**: Ente pubblico per i dati di mercato agroalimentare.
-- **Cosa offre**: Previsto dal progetto per le epoche di raccolta della frutta: non disponibile in forma consultabile per Nord, Centro e Sud, quindi non usato.
-- **Usata per**: livello di database
+- **What it is**: ISMEA Mercati, Institute of Services for the Agricultural Food Market.
+- **Why it is authoritative**: A public body for agri-food market data.
+- **What it offers**: Planned for fruit harvest periods: not available in usable form for North, Centre and South, so not used.
+- **Used for**: database level
 
 ### Servizi agricoli regionali (Veneto Agricoltura, ERSA FVG, ARSIAL)
 
 `regional` · https://www.arsial.it/
 
-- **Cos'è**: Servizi agricoli regionali (Veneto Agricoltura, ERSA FVG, ARSIAL e altri).
-- **Perché è autorevole**: Enti pubblici regionali di assistenza tecnica.
-- **Cosa offre**: Previsti per i calendari della frutta: non usati (lacuna documentata).
-- **Usata per**: livello di database
+- **What it is**: Regional agricultural services (Veneto Agricoltura, ERSA FVG, ARSIAL and others).
+- **Why it is authoritative**: Regional public technical-advice bodies.
+- **What it offers**: Planned for fruit calendars: not used (documented gap).
+- **Used for**: database level
 
 ### EUFIC - European national sources on seasonal fruit and vegetables
 
 `eufic_national` · https://www.eufic.org/en/page/european-national-sources-to-find-information-on-seasonal-fruit-and-vegetables
 
-- **Cos'è**: Elenco EUFIC delle fonti nazionali sulla frutta e verdura di stagione.
-- **Perché è autorevole**: Selezione curata da EUFIC delle fonti di ciascun Paese.
-- **Cosa offre**: Le fonti nazionali usate per colmare le zone climatiche mancanti (es. il portale austriaco).
-- **Usata per**: livello di database
-- **Alimenti**: usata per l'intero database (metodi e legende), non per singole schede
-- **Voci di glossario**: eufic_zones
+- **What it is**: EUFIC list of national sources on seasonal fruit and vegetables.
+- **Why it is authoritative**: EUFIC's curated selection of sources for each country.
+- **What it offers**: The national sources used to fill missing climate zones (e.g. the Austrian portal).
+- **Used for**: database level
+- **Products**: used for the whole database (methods and legends), not for individual records
+- **Glossary entries**: eufic_zones
 
 ### EUFIC - Are seasonal fruit and vegetables better for the environment?
 
 `eufic_article` · https://www.eufic.org/en/healthy-living/article/are-seasonal-fruit-and-vegetables-better-for-the-environment
 
-- **Cos'è**: Articolo EUFIC 'Are seasonal fruit and vegetables better for the environment?' (2020).
-- **Perché è autorevole**: Sintesi divulgativa basata sulla letteratura scientifica sull'impatto ambientale della stagionalità.
-- **Cosa offre**: La sintesi sui benefici ambientali della dieta stagionale nei metadati.
-- **Usata per**: livello di database
-- **Alimenti**: usata per l'intero database (metodi e legende), non per singole schede
-- **Voci di glossario**: greenhouse
+- **What it is**: EUFIC article 'Are seasonal fruit and vegetables better for the environment?' (2020).
+- **Why it is authoritative**: A science-based summary of the literature on the environmental impact of seasonality.
+- **What it offers**: The summary on the environmental benefits of a seasonal diet in the metadata.
+- **Used for**: database level
+- **Products**: used for the whole database (methods and legends), not for individual records
+- **Glossary entries**: greenhouse
 
 ### USDA ARS Image Gallery
 
 `usda_ars_images` · https://www.ars.usda.gov/oc/images/image-gallery/
 
-- **Cos'è**: USDA ARS Image Gallery.
-- **Perché è autorevole**: Immagini istituzionali di pubblico dominio.
-- **Cosa offre**: Prevista dal progetto: poche immagini pertinenti, non usata.
-- **Usata per**: livello di database
+- **What it is**: USDA ARS Image Gallery.
+- **Why it is authoritative**: Public-domain institutional images.
+- **What it offers**: Planned: few relevant images, not used.
+- **Used for**: database level
 
 ### EEA - Biogeographical regions, Europe 2016 (Agenzia europea dell'ambiente)
 
 `eea_biogeo` · https://www.eea.europa.eu/
 
-- **Cos'è**: Strato cartografico delle regioni biogeografiche d'Europa (2016) dell'Agenzia europea dell'ambiente.
-- **Perché è autorevole**: Agenzia dell'Unione europea; è la stessa base delle zone climatiche usate da EUFIC.
-- **Cosa offre**: I confini continui delle zone climatiche per la mappa dell'app.
-- **Usata per**: livello di database
-- **Alimenti**: usata per l'intero database (metodi e legende), non per singole schede
+- **What it is**: Map layer of Europe's biogeographical regions (2016) by the European Environment Agency.
+- **Why it is authoritative**: An EU agency; it is the same basis as the climate zones used by EUFIC.
+- **What it offers**: The continuous boundaries of the climate zones for the app map.
+- **Used for**: database level
+- **Products**: used for the whole database (methods and legends), not for individual records
 
-## 16. Conflitti tra fonti
+## 16. Conflicts between sources
 
-`metadata.source_conflicts`: i casi generali in cui le fonti danno valori diversi, con la decisione presa.
+`metadata.source_conflicts`: the general cases where sources give different values, with the decision taken.
 
-### Molti valori della bozza iniziale non coincidevano con le fonti ufficiali.
+### Many values in the initial draft did not match the official sources.
 
-- **Perché**: La bozza era stata compilata senza riferimenti puntuali e mescolava fonti e contesti diversi.
-- **Decisione**: Vale sempre la fonte ufficiale. Il valore della bozza è registrato come discrepanza nella scheda e, se non verificabile, è tolto dall'app ma conservato a parte.
-- **Motivazione**: Nessun dato inventato e nessuna informazione persa.
+- **Why**: The draft had been compiled without specific references and mixed different sources and contexts.
+- **Decision**: The official source always prevails. The draft value is recorded as a discrepancy in the record and, if unverifiable, removed from the app but kept separately.
+- **Rationale**: No invented data and no information lost.
 
-### CREA, BDA-IEO e USDA danno valori diversi per lo stesso prodotto.
+### CREA, BDA-IEO and USDA give different values for the same product.
 
-- **Perché**: Campioni, varietà, Paesi e metodi diversi (es. carboidrati 'disponibili' in Europa e 'per differenza' negli USA).
-- **Decisione**: Ordine di priorità: CREA, poi BDA-IEO (anche per completare i nutrienti mancanti), USDA solo se mancano le prime due. La fonte è indicata per ogni valore.
-- **Motivazione**: Le tabelle italiane descrivono i prodotti venduti in Italia.
+- **Why**: Different samples, varieties, countries and methods (e.g. 'available' carbohydrates in Europe and 'by difference' in the USA).
+- **Decision**: Order of priority: CREA, then BDA-IEO (also to fill missing nutrients), USDA only when the first two are missing. The source is given for every value.
+- **Rationale**: Italian tables describe the products sold in Italy.
 
-### I calendari italiani non sempre coincidono sui mesi di stagione.
+### Italian calendars do not always agree on in-season months.
 
-- **Perché**: Considerano territori, varietà e coltivazioni (pieno campo, serra) diversi.
-- **Decisione**: Per ogni mese e macro-area si contano le fonti che lo indicano: con almeno metà dei voti il mese è di stagione, con meno è inizio o fine stagione; il picco sono i mesi centrali di un periodo di almeno tre mesi in cui tutte le fonti concordano.
-- **Motivazione**: Il voto riduce il peso di una singola fonte e la regola è la stessa per tutti i prodotti.
+- **Why**: They consider different areas, varieties and growing methods (open field, greenhouse).
+- **Decision**: For each month and macro-area the sources listing it are counted: with at least half of the votes the month is in season, with fewer it is early or end of season; the peak is the central months of a period of at least three months on which all sources agree.
+- **Rationale**: Voting reduces the weight of any single source and the same rule applies to every product.
 
-### EUFIC dà i dati per Paese, non per zona climatica, e non elenca tutti i prodotti.
+### EUFIC gives data by country, not by climate zone, and does not list every product.
 
-- **Perché**: Ogni Paese ha la sua fonte nazionale e i Paesi stanno in più zone.
-- **Decisione**: Ogni Paese è assegnato alla zona prevalente; le zone mancanti sono colmate con fonti nazionali indicate da EUFIC o, per la zona mediterranea, con la stagionalità del Sud Italia. La provenienza è indicata zona per zona.
-- **Motivazione**: Approssimazione dichiarata, utile per chi usa l'app fuori dall'Italia.
+- **Why**: Each country has its own national source and countries span several zones.
+- **Decision**: Each country is assigned to its main zone; missing zones are filled with national sources listed by EUFIC or, for the Mediterranean zone, with Southern Italian seasonality. The origin is given zone by zone.
+- **Rationale**: A declared approximation, useful for people using the app outside Italy.
 
-### Alcuni prodotti (tartufi, ovolo, pesca noce) non compaiono nei calendari di stagione italiani.
+### Some produce (truffles, Caesar's mushroom, nectarine) are missing from Italian seasonal calendars.
 
-- **Perché**: I calendari trattano frutta e verdura coltivate e non distinguono forme della stessa specie (pesca e pesca noce).
-- **Decisione**: Si usa la fonte più autorevole disponibile per quel prodotto: la legge sui periodi di raccolta per i tartufi, una scheda micologica istituzionale per l'ovolo, la stagionalità della pesca per la pesca noce. La fonte è indicata in seasonality.italy_source o nelle note.
-- **Motivazione**: Meglio una stagionalità da fonte specifica e dichiarata che un vuoto.
+- **Why**: Calendars cover cultivated produce and do not separate forms of the same species (peach and nectarine).
+- **Decision**: The most authoritative source available for that product is used: the harvest-period law for truffles, an institutional mushroom sheet for Caesar's mushroom, peach seasonality for nectarine. The source is stated in seasonality.italy_source or in the notes.
+- **Rationale**: A declared, product-specific source is better than a gap.
 
-### Per cetriolo, melanzana, peperoni e agrumi FoodKeeper indica il frigorifero, la guida UC Davis la temperatura ambiente.
+### For cucumber, eggplant, peppers and citrus FoodKeeper says fridge, the UC Davis guide room temperature.
 
-- **Perché**: FoodKeeper guarda alla sicurezza e alla durata, la guida UC Davis al gusto: questi prodotti soffrono il freddo e in frigo perdono qualità.
-- **Decisione**: Il 'dove' segue la guida UC Davis, le durate seguono FoodKeeper; l'etichetta breve riporta entrambe le opzioni e la scelta è spiegata nella scheda.
-- **Motivazione**: Per un'app sulla stagionalità conta mantenere il sapore, senza nascondere l'alternativa.
+- **Why**: FoodKeeper focuses on safety and storage time, the UC Davis guide on taste: these products are chilling-sensitive and lose quality in the fridge.
+- **Decision**: The 'where' follows the UC Davis guide, durations follow FoodKeeper; the short label gives both options and the choice is explained in the record.
+- **Rationale**: For a seasonality app keeping the flavour matters, without hiding the alternative.
 
-### Le durate di HB66 (settimane o mesi) sono molto più lunghe di quelle di FoodKeeper (giorni).
+### HB66 storage times (weeks or months) are much longer than FoodKeeper's (days).
 
-- **Perché**: HB66 si riferisce a celle professionali a temperatura e umidità ottimali; FoodKeeper a un frigorifero di casa.
-- **Decisione**: Sono due campi distinti: durata domestica e durata professionale. Una durata professionale non viene mai usata come durata domestica.
-- **Motivazione**: Evita promesse irrealistiche all'utente.
+- **Why**: HB66 refers to commercial cold stores at optimal temperature and humidity; FoodKeeper to a home fridge.
+- **Decision**: They are two separate fields: home and commercial storage time. A commercial time is never used as a home time.
+- **Rationale**: It avoids unrealistic promises to the user.
 
-### Soglia di danno da freddo e punto di congelamento sono spesso dati come intervalli.
+### Chilling threshold and freezing point are often given as ranges.
 
-- **Perché**: Dipendono da varietà, maturazione e zuccheri disciolti.
-- **Decisione**: Si usa l'estremo più alto (il più prudente) e si conserva l'intervallo quando disponibile. Se il danno avviene in una fascia (drupacee 2-8 °C) non si indica una soglia unica.
-- **Motivazione**: Un consiglio prudente non danneggia il prodotto.
+- **Why**: They depend on variety, ripeness and dissolved sugars.
+- **Decision**: The highest end (the most cautious) is used and the range is kept when available. If damage occurs within a band (stone fruit 2-8 °C) no single threshold is given.
+- **Rationale**: Cautious advice does not damage the produce.
 
-### La tabella riassuntiva di HB66 contiene alcuni refusi (es. 1310 per il radicchio) e molti prodotti non sono misurati a 5 °C.
+### HB66's summary table contains some typos (e.g. 1310 for radicchio) and many products are not measured at 5 °C.
 
-- **Perché**: Errori di impaginazione del PDF; i prodotti sensibili al freddo non vengono studiati a basse temperature.
-- **Decisione**: Ordine: classe della tabella di Kader, poi valori dei capitoli, poi stima a 5 °C con i Q10 di HB66 (marcata come stimata). I valori palesemente errati non sono usati.
-- **Motivazione**: Usare per prima la classificazione dell'autore di riferimento.
+- **Why**: PDF layout errors; chilling-sensitive products are not studied at low temperatures.
+- **Decision**: Order: Kader table class, then chapter values, then an estimate at 5 °C with HB66 Q10 values (marked as estimated). Clearly wrong values are not used.
+- **Rationale**: Use the reference author's classification first.
 
-### Le impronte ambientali variano molto tra studi e banche dati.
+### Environmental footprints vary widely between studies and databases.
 
-- **Perché**: Metodi, Paesi, rese e confini del sistema diversi (dal campo all'azienda, o fino al consumo).
-- **Decisione**: Si usa SU-EATABLE LIFE (mediana armonizzata) con numero di studi e intervallo; AGRIBALYSE solo per le erbe che mancano, con i confini dichiarati.
-- **Motivazione**: Valori confrontabili tra prodotti e incertezza trasparente.
+- **Why**: Different methods, countries, yields and system boundaries (field to farm gate, or up to consumption).
+- **Decision**: SU-EATABLE LIFE (harmonised median) is used with the number of studies and range; AGRIBALYSE only for the missing herbs, with its boundaries stated.
+- **Rationale**: Values comparable between produce and transparent uncertainty.
 
-### Alcuni testi scritti fondendo più fonti citavano durate o nutrienti diversi dai dati strutturati.
+### Some texts written by merging several sources quoted durations or nutrients different from the structured data.
 
-- **Perché**: I testi riprendevano fonti italiane divulgative, i dati vengono da banche dati ufficiali.
-- **Decisione**: I dati strutturati prevalgono: le etichette di conservazione e le liste 'ricco di / fonte di' sono state riallineate ai dati e ai claim UE.
-- **Motivazione**: L'app non deve dire due cose diverse sullo stesso prodotto.
+- **Why**: The texts drew on Italian popular sources, the data come from official databases.
+- **Decision**: Structured data prevail: storage labels and 'rich in / source of' lists were realigned with the data and EU claims.
+- **Rationale**: The app must not say two different things about the same product.
 
-### Per alcuni prodotti una fonte non ha una voce esatta.
+### For some produce a source has no exact entry.
 
-- **Perché**: Le banche dati internazionali non coprono tutte le specialità italiane (es. cicoria da taglio, cime di rapa, valerianella).
-- **Decisione**: Si usa la voce più vicina, sempre marcata 'approssimata' e indicata nella scheda.
-- **Motivazione**: Un dato approssimato dichiarato è più utile di un vuoto, purché trasparente.
+- **Why**: International databases do not cover every Italian speciality (e.g. cutting chicory, turnip tops, corn salad).
+- **Decision**: The closest entry is used, always marked 'approximate' and stated in the record.
+- **Rationale**: A declared approximate value is more useful than a gap, provided it is transparent.
 
-### Il nome d'uso di una varietà può differire da quello registrato.
+### A variety's common name may differ from its registered name.
 
-- **Perché**: I registri usano la denominazione ufficiale (es. 'Spadona' per Spadonino, 'Detroit 2' per Detroit).
-- **Decisione**: Si mostra il nome d'uso e si riporta il nome registrato con il Paese di iscrizione.
-- **Motivazione**: Leggibilità per l'utente e verificabilità sul registro.
+- **Why**: Registers use the official denomination (e.g. 'Spadona' for Spadonino, 'Detroit 2' for Detroit).
+- **Decision**: The common name is shown and the registered name is given with the country of registration.
+- **Rationale**: Readability for the user and verifiability on the register.
 
-## 17. Come usarlo nell'app (suggerimento)
+## 17. How the app uses it
 
-| Schermata | Campi |
+| Screen | Fields |
 |---|---|
-| Card dell'alimento | `names`, `images.primary`, stato del mese da `seasonality.italy_macro_areas[zona]`, `ripening_and_storage.card_short_storage`, `perishability.label` |
-| Lista della spesa | `buying_guide.shopping_list_preview`, `ripening_badge_label` |
-| Conservazione | `home_storage`, `storage_instructions`, `estimated_shelf_life_days`, `storage_compatibility`, `ethylene_compatibility` |
-| Nutrizione | `reference_portion`, `macros_per_100g`, `nutrition_claims_eu`, `vitamins`, `minerals`, `allergens_eu` |
-| Sostenibilità | `environmental_footprint.sustainability_rating`, `greenhouse_comparison`, `metadata.sustainable_diet_summary` |
-| Territorio | `notable_varieties`, `dop_igp_labels`, `traditional_products_pat`, `varieties_registered_italy` |
-| Orto | `agricultural_calendar_italy` |
-| Approfondimenti | `sources_by_topic.useful_links` |
-| Aiuto "?" | `metadata.field_help`, `metadata.vocabulary`, `item.help_refs` → `metadata.glossary` |
-| Fonti | `metadata.official_sources`, `metadata.source_conflicts` |
+| Product card | `names`, `images.primary`, month state from `seasonality.italy_macro_areas[area]`, `ripening_and_storage.card_short_storage`, `perishability.label` |
+| Shopping list | `buying_guide.shopping_list_preview`, `ripening_badge_label` |
+| Storage | `home_storage`, `storage_instructions`, `estimated_shelf_life_days`, `storage_compatibility`, `ethylene_compatibility` |
+| Nutrition | `reference_portion`, `macros_per_100g`, `nutrition_claims_eu`, `vitamins`, `minerals`, `allergens_eu` |
+| Sustainability | `environmental_footprint.sustainability_rating`, `greenhouse_comparison`, `metadata.sustainable_diet_summary` |
+| Territory | `notable_varieties`, `dop_igp_labels`, `traditional_products_pat`, `varieties_registered_italy` |
+| Garden | `agricultural_calendar_italy` |
+| Learn more | `sources_by_topic.useful_links` |
+| "?" help | `metadata.field_help`, `metadata.vocabulary`, `item.help_refs` → `metadata.glossary` |
+| Sources | `metadata.official_sources`, `metadata.source_conflicts` |

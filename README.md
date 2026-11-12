@@ -37,7 +37,7 @@ These rules apply to every field of the database and were followed throughout th
 
 ### Inclusion rule
 
-A product enters the database if it has **at least 2 seasonality or storage sources** **and** an official nutrition record (CREA or BDA-IEO). Rejected candidates and the reasons are listed in [`data/excluded_candidates_report.md`](data/excluded_candidates_report.md) (Italian). A few explicit exceptions (e.g. white truffle, which has no official nutrition data) are documented in the record notes.
+A product enters the database if it has **at least 2 seasonality or storage sources** **and** an official nutrition record (CREA or BDA-IEO). Rejected candidates and the reasons are listed in [`data/excluded_candidates_report.md`](data/excluded_candidates_report.md). A few explicit exceptions (e.g. white truffle, which has no official nutrition data) are documented in the record notes.
 
 ## 3. How the main data are computed
 
@@ -93,7 +93,7 @@ Up to 5 view types per product (main photo, neutral background, plant in the fie
 
 ## 4. Record structure
 
-Every product follows the same block structure (a full block-by-block example on the tomato is in [`data/database_guide.md`](data/database_guide.md), Italian):
+Every product follows the same block structure (a full block-by-block example on the tomato is in [`data/database_guide.md`](data/database_guide.md)):
 
 | Block | Content |
 |---|---|
@@ -120,20 +120,20 @@ The `metadata` block contains legends, methods, the glossary (44 entries), the v
 data/
   database.json              the database
   schema.json                JSON Schema (types, allowed values, required fields)
-  database_guide.md          block-by-block guide to the database (Italian)
-  scraping_report.md         reliability and gap report (Italian)
+  database_guide.md          block-by-block guide to the database
+  scraping_report.md         reliability and gap report
   audit_findings.json        results of the item-by-item re-check
   seasonality_audit.json     check of the seasonal curves
   template_coverage.json     coverage of the original template fields
   items_index.json           exact codes and URLs of every product on every source
   draft_legacy_values.json   unverifiable values from the initial draft, with the reason
   merged_items_archive.json  products merged into others
-  excluded_candidates_report.md  candidate products that were not admitted (Italian)
+  excluded_candidates_report.md  candidate products that were not admitted
   ui_copy.json, ui_config.json   app interface texts and icons
 scripts/                     Python pipeline that builds and checks the database
   config/                    tables hand-curated from the sources, with quotes and page numbers
   texts/                     IT/EN descriptive texts
-  README.md                  pipeline execution order (Italian, reference document)
+  README.md                  pipeline execution order (reference document)
 admin_studio/                local dashboard to edit texts, images, icons and sources
 assets/images/_metadata.json photo credits and licences
 ```

@@ -1,5 +1,5 @@
-"""Genera data/database_guide.md: guida commentata alla struttura del database, con estratti reali della scheda del pomodoro.
-Uso:  python scripts/make_db_guide.py
+"""Generates data/database_guide.md: an annotated guide to the database structure, with real excerpts from the tomato record.
+Usage:  python scripts/make_db_guide.py
 """
 import json
 
@@ -16,7 +16,7 @@ def js(o, limit=None):
 
 
 def trim_months(o):
-    """Abbrevia gli array di 12 mesi per leggibilità."""
+    """Shortens 12-month arrays for readability."""
     if isinstance(o, dict):
         return {k: trim_months(v) for k, v in o.items()}
     if isinstance(o, list) and len(o) == 12 and all(isinstance(x, str) for x in o):
@@ -27,6 +27,11 @@ def trim_months(o):
     return o
 
 
+def en(o):
+    """English side of an {it, en} text."""
+    return o.get("en") or o.get("it") if isinstance(o, dict) else o
+
+
 def main():
     db = load_json(DATA / "database.json")
     it = next(i for i in db["items"] if i["id"] == EX)
@@ -35,204 +40,204 @@ def main():
     ph = r["postharvest_physiology"]
     L = []
     w = L.append
-    w("# Guida al database Peak Season\n")
-    w("Questa guida spiega come è costruito `data/database.json`, blocco per blocco, usando come esempio la scheda reale del **pomodoro**. "
-      "Per ogni blocco: a cosa serve nell'app, da dove vengono i dati, come leggerli.\n")
-    w("## 1. I file\n")
-    w("| File | Contenuto |\n|---|---|\n"
-      f"| `data/database.json` | Il database: `metadata` (legende, metodi, fonti) + `items` ({len(db['items'])} schede) |\n"
-      "| `data/schema.json` | Le regole formali (JSON Schema): tipi, valori ammessi, campi obbligatori |\n"
-      "| `data/items_index.json` | La lista master: per ogni alimento i codici e gli URL esatti su ogni fonte |\n"
-      "| `data/draft_legacy_values.json` | I valori della tua bozza che non erano verificabili: tolti dall'app ma conservati |\n"
-      "| `data/scraping_report.md` | Il report di affidabilità e lacune |\n"
-      "| `data/audit_findings.json` | L'esito del ricontrollo voce per voce |\n"
-      "| `data/raw/` | Copie dei dati grezzi delle fonti (PDF, CSV, xlsx, pagine) |\n"
-      "| `scripts/config/` | Tabelle curate a mano dalle fonti, con citazioni e numeri di pagina |\n"
-      "| `assets/images/` | Le foto `<id>_01.jpg`, `_02.jpg`… |\n")
-    w("## 2. La logica generale\n")
-    w("Ogni scheda segue lo stesso schema in 12 blocchi. Tre principi valgono ovunque:\n")
-    w("1. **Ogni dato ha una fonte.** I blocchi strutturati portano la fonte accanto al valore (`source`, `basis`, `source_food`, `derivation`); "
-      "le fonti di tutta la scheda sono elencate in `sources_by_topic.sources_used`.")
-    w("2. **`null` non è uguale a vuoto.** Un `null` è una lacuna vera (elencata in `data_completeness.missing_fields`), oppure un campo che "
-      "non ha senso per quell'alimento (elencato in `not_applicable_fields`): ad esempio la soglia di danno da freddo per chi non soffre il freddo.")
-    w("3. **Bilingue.** Tutti i testi per l'utente sono oggetti `{\"it\": …, \"en\": …}` (vedi §13).\n")
-    w("Gli identificativi (`id`) sono `nome_it_name_en` senza accenti: sono le chiavi usate anche dai riferimenti tra schede "
-      "(es. `keep_away_from`, `compatible_with`) e dai nomi delle foto.\n")
+    w("# Peak Season database guide\n")
+    w("This guide explains how `data/database.json` is built, block by block, using the real **tomato** record as an example. "
+      "For each block: what it is for in the app, where the data come from, how to read them.\n")
+    w("## 1. Files\n")
+    w("| File | Content |\n|---|---|\n"
+      f"| `data/database.json` | The database: `metadata` (legends, methods, sources) + `items` ({len(db['items'])} records) |\n"
+      "| `data/schema.json` | The formal rules (JSON Schema): types, allowed values, required fields |\n"
+      "| `data/items_index.json` | The master list: for each product, its exact codes and URLs on every source |\n"
+      "| `data/draft_legacy_values.json` | Values from the initial draft that could not be verified: removed from the app but preserved |\n"
+      "| `data/scraping_report.md` | The reliability and gap report |\n"
+      "| `data/audit_findings.json` | Results of the item-by-item re-check |\n"
+      "| `data/raw/` | Copies of the raw source data (PDF, CSV, xlsx, pages; not published) |\n"
+      "| `scripts/config/` | Tables hand-curated from the sources, with quotes and page numbers |\n"
+      "| `assets/images/` | Photos `<id>_01.jpg`, `_02.jpg`… (credits in `_metadata.json`) |\n")
+    w("## 2. General logic\n")
+    w("Every record follows the same 12-block structure. Three principles apply everywhere:\n")
+    w("1. **Every value has a source.** Structured blocks carry the source next to the value (`source`, `basis`, `source_food`, `derivation`); "
+      "all sources of a record are listed in `sources_by_topic.sources_used`.")
+    w("2. **`null` is not the same as empty.** A `null` is either a real gap (listed in `data_completeness.missing_fields`) or a field that "
+      "makes no sense for that product (listed in `not_applicable_fields`): e.g. the chilling-injury threshold for produce that is not chill-sensitive.")
+    w("3. **Bilingual.** Every user-facing text is an object `{\"it\": …, \"en\": …}` (see §13).\n")
+    w("Identifiers (`id`) are `italianname_englishname` without accents: they are also the keys used by cross-references between records "
+      "(e.g. `keep_away_from`, `compatible_with`) and by photo file names.\n")
 
-    w("## 3. Identità e botanica\n")
+    w("## 3. Identity and botany\n")
     w(js({k: it[k] for k in ("id", "names", "category")}))
-    w("`category` è uno dei 5 valori del template. I sinonimi vengono da EPPO (nomi comuni ufficiali IT/EN).\n")
+    w("`category` is one of the 5 template values. Synonyms come from EPPO (official IT/EN common names).\n")
     w(js(b))
-    w("- `scientific_name`, `family`, `genus`: verificati su EPPO e World Flora Online (`eppo_code`, `wfo_id` sono i codici ufficiali).\n"
-      "- `plant_part_used`: confermata dai testi delle fonti.\n"
-      "- `upov_*`: il codice di specie del **Catalogo comune UE delle varietà**; `varieties_registered_italy.count` = varietà oggi iscritte nel registro italiano.\n")
+    w("- `scientific_name`, `family`, `genus`: verified on EPPO and World Flora Online (`eppo_code` and `wfo_id` are the official codes).\n"
+      "- `plant_part_used`: confirmed by the source texts.\n"
+      "- `upov_*`: the species code of the **EU Common Catalogue of varieties**; `varieties_registered_italy.count` = varieties currently on the Italian register.\n")
 
-    w("## 4. Varietà e territori\n")
+    w("## 4. Varieties and territories\n")
     iv = it["italian_varieties_and_territories"]
     w(js(iv, 2200))
-    w("- `notable_varieties` contiene **solo** varietà verificate; `varieties_verification` dice dove (Slow Food, Catalogo UE, Orto da Coltivare…) e con che nome sono registrate.\n"
-      "- `dop_igp_labels` e `has_dop_igp` sono verificati sul registro UE **eAmbrosia** (`eambrosia_verified`).\n"
-      "- I **Prodotti Agroalimentari Tradizionali** stanno in `nutrition_and_sustainability.traditional_products_pat` (vedi §9).\n")
+    w("- `notable_varieties` contains **only** verified varieties; `varieties_verification` says where (Slow Food, EU Catalogue, Orto da Coltivare…) and under which name they are registered.\n"
+      "- `dop_igp_labels` and `has_dop_igp` (PDO/PGI) are verified on the EU **eAmbrosia** register (`eambrosia_verified`).\n"
+      "- **Traditional Agri-food Products (PAT)** are in `nutrition_and_sustainability.traditional_products_pat` (see §9).\n")
 
-    w("## 5. Immagini\n")
+    w("## 5. Images\n")
     w(js({"primary": it["images"]["primary"], "gallery": it["images"]["gallery"][:3] + ["…"], "image_details": it["images"]["image_details"][:1]}))
-    w("Ogni foto ha autore, licenza, URL d'origine e tipo (`view_type`): `full_frame` (il prodotto riempie l'inquadratura: è la "
-      "foto principale quando c'è), `isolated_background` (sfondo bianco o colorato), `plant_in_field` (la pianta), `botanical_plate` "
-      "(tavola botanica), `cut_section` (tagliato), `other`. `flags` segnala problemi noti (piatto, soggetto sbagliato), `variety` una "
-      "varietà particolare (es. pesca tabacchiera). `sync_images.py` riallinea il database se togli foto dalla cartella.\n")
+    w("Every photo has author, licence, source URL and type (`view_type`): `full_frame` (the product fills the frame: it is the "
+      "main photo when available), `isolated_background` (white or coloured background), `plant_in_field` (the plant), `botanical_plate` "
+      "(botanical plate), `cut_section` (cut open), `other`. `flags` reports known issues (plate, wrong subject), `variety` a "
+      "specific variety (e.g. flat peach). `sync_images.py` realigns the database when photos are removed from the folder.\n")
 
-    w("## 6. Stagionalità\n")
-    w("Nell'estratto i 12 mesi (gen→dic) sono abbreviati: `·` fuori stagione, `p` primizia, `S` di stagione, `P` picco, `f` fine stagione.\n")
+    w("## 6. Seasonality\n")
+    w("In the excerpt the 12 months (Jan→Dec) are abbreviated: `·` out of season, `p` early season, `S` in season, `P` peak, `f` end of season.\n")
     w(js(trim_months({k: it["seasonality"][k] for k in ("italy_macro_areas", "eufic_climatic_zones", "derivation_notes")})))
-    w("- `italy_macro_areas` (Nord, Centro, Sud e Isole) è la stagionalità per l'utente italiano: nasce dal **voto tra più fonti** "
-      "(WWF, Greenpeace, Altroconsumo, EUFIC per l'Italia, epoche di raccolta di Orto da Coltivare); il metodo è in `metadata.seasonality_method`. "
-      "Per ogni mese si contano le fonti che lo indicano: con almeno metà dei voti il mese è di stagione, con meno è inizio o fine stagione; "
-      "il **picco** sono i mesi centrali di un periodo di almeno tre mesi su cui tutte le fonti concordano.\n"
-      "- `eufic_climatic_zones`: le 6 zone europee, derivate dai Paesi EUFIC (`eufic_by_country`); dove EUFIC non ha l'alimento, la zona alpina "
-      "viene dal calendario austriaco (fonte nazionale indicata da EUFIC) e la mediterranea è derivata dal Sud e Isole. "
-      "`eufic_zone_sources` dice la provenienza di ogni zona.\n")
+    w("- `italy_macro_areas` (North, Centre, South and Islands) is the seasonality for Italian users: it comes from a **vote across several sources** "
+      "(WWF, Greenpeace, Altroconsumo, EUFIC for Italy, Orto da Coltivare harvest periods); the method is in `metadata.seasonality_method`. "
+      "For each month the sources listing it are counted: with at least half of the votes the month is in season, with fewer it is early or end of season; "
+      "the **peak** is the central months of a run of at least three months on which all sources agree.\n"
+      "- `eufic_climatic_zones`: the 6 European zones, derived from the EUFIC countries (`eufic_by_country`); where EUFIC lacks the product, the Alpine zone "
+      "comes from the Austrian calendar (the national source cited by EUFIC) and the Mediterranean zone is derived from the South and Islands. "
+      "`eufic_zone_sources` gives the provenance of each zone.\n")
 
-    w("## 7. Calendario agricolo (orto)\n")
+    w("## 7. Agricultural (garden) calendar\n")
     w(js(it["agricultural_calendar_italy"], 1500))
-    w("Mesi di semina, trapianto e raccolta per zona, con parametri agronomici (profondità, sesto d'impianto, esposizione, luna) "
-      "da Orto da Coltivare. Per frutta, erbe e cereali sono ancora i valori della bozza (lacuna documentata).\n")
+    w("Sowing, transplanting and harvest months by area, with agronomic parameters (depth, spacing, exposure, moon) "
+      "from Orto da Coltivare. For fruit, herbs and cereals the draft values are still used (documented gap).\n")
 
-    w("## 8. Acquisto, maturazione e conservazione\n")
-    w("È il blocco più ricco. Va letto su tre livelli: **testi per l'utente**, **consiglio sintetico**, **dati scientifici**.\n")
-    w("### 8a. Testi per l'utente\n")
+    w("## 8. Buying, ripening and storage\n")
+    w("This is the richest block. It reads on three levels: **user-facing texts**, **short advice**, **scientific data**.\n")
+    w("### 8a. User-facing texts\n")
     w(js({"buying_guide": it["buying_guide"], "card_short_storage": r["card_short_storage"], "ripening_badge_label": r["ripening_badge_label"]}, 1800))
-    w("`card_short_storage` è l'etichetta breve per la card (≤ 42 caratteri), allineata ai dati FoodKeeper e UC Davis; `storage_instructions` è il testo lungo.\n")
-    w("### 8b. Consiglio sintetico per l'app\n")
+    w("`card_short_storage` is the short label for the card (≤ 42 characters), consistent with FoodKeeper and UC Davis data; `storage_instructions` is the long text.\n")
+    w("### 8b. Short advice for the app\n")
     w(js({"home_storage": r["home_storage"], "perishability": r["perishability"]}))
-    w("- `home_storage.location`: **dove** tenerlo in casa (frigo, fuori dal frigo finché matura, temperatura ambiente, dispensa). "
-      "Fonte principale: la guida UC Davis/Kader; FoodKeeper per le durate; i conflitti tra le due fonti sono scritti in `derivation`.\n"
-      "- `perishability`: la classe di respirazione tradotta in un livello da 1 a 6, con etichetta e consiglio. Più un prodotto respira, prima perde freschezza.\n")
+    w("- `home_storage.location`: **where** to keep it at home (fridge, on the counter until ripe, room temperature, pantry). "
+      "Main source: the UC Davis/Kader guide; FoodKeeper for storage times; conflicts between the two sources are written in `derivation`.\n"
+      "- `perishability`: the respiration class turned into a level from 1 to 6, with label and advice. The faster a product respires, the sooner it loses freshness.\n")
     w(js({"storage_compatibility": {**r["storage_compatibility"], "compatible_with": r["storage_compatibility"]["compatible_with"][:6] + ["…"]}}))
-    w("`storage_compatibility`: con quali prodotti può stare (stessa temperatura e umidità, nessun conflitto di etilene). Fonte: HB66, tabella di Thompson.\n")
-    w("### 8c. Dati scientifici post-raccolta\n")
+    w("`storage_compatibility`: which products it can be stored with (same temperature and humidity, no ethylene conflict). Source: HB66, Thompson table.\n")
+    w("### 8c. Postharvest scientific data\n")
     w(js(ph))
-    w("- `ripening_type` (nel blocco `ripening_and_storage`): `climaterico` (continua a maturare dopo la raccolta, es. pomodoro, banana, pera) "
-      "o `non_climaterico` (non matura più, es. agrumi, uva, fragola); etichette IT/EN in `metadata.vocabulary`.\n"
-      "- `freezing_point_c`: il \"highest freezing point\" di HB66, la temperatura più alta a cui inizia a formarsi ghiaccio; con un intervallo "
-      "si usa l'estremo più alto (il più prudente).\n"
-      "- `optimal_temperature_c` e `optimal_humidity_percent`: condizioni **professionali** ottimali (USDA HB66, UC Davis).\n"
-      "- `chilling_injury`: se soffre il freddo, sotto quale soglia (`critical_temperature_c` = massimo dell'intervallo minimo sicuro, "
-      "`lowest_safe_range_c`) e con quali sintomi. Il pomodoro maturo è sensibile sotto i 7-10 °C (13 °C se ancora verde): per questo è meglio fuori frigo.\n"
-      "- `estimated_shelf_life_days`: durate **domestiche** da FoodKeeper (`room_temp_mode` dice se si usa \"fino a maturazione\" o \"solo frigo\"); "
-      "`commercial_optimal_days` è la durata in condizioni professionali.\n")
+    w("- `ripening_type` (in the `ripening_and_storage` block): `climaterico` (keeps ripening after harvest, e.g. tomato, banana, pear) "
+      "or `non_climaterico` (stops ripening, e.g. citrus, grape, strawberry); IT/EN labels in `metadata.vocabulary`.\n"
+      "- `freezing_point_c`: HB66's \"highest freezing point\", the highest temperature at which ice starts to form; for a range "
+      "the upper end (the most cautious) is used.\n"
+      "- `optimal_temperature_c` and `optimal_humidity_percent`: optimal **commercial** conditions (USDA HB66, UC Davis).\n"
+      "- `chilling_injury`: whether it is chill-sensitive, below which threshold (`critical_temperature_c` = upper end of the lowest safe range, "
+      "`lowest_safe_range_c`) and with which symptoms. Ripe tomato is sensitive below 7-10 °C (13 °C when still green): that is why it is better kept out of the fridge.\n"
+      "- `estimated_shelf_life_days`: **home** storage times from FoodKeeper (`room_temp_mode` says whether \"until ripe\" or \"fridge only\" applies); "
+      "`commercial_optimal_days` is the shelf life under commercial conditions.\n")
     w(js(r["ethylene_compatibility"]))
-    w("Etilene: se lo produce (e quanto, classe a 20 °C) e se ne è sensibile. `keep_away_from` è calcolato: i forti produttori del database "
-      "da cui tenerlo lontano, se è sensibile.\n")
+    w("Ethylene: whether it produces it (and how much, class at 20 °C) and whether it is sensitive to it. `keep_away_from` is computed: the strong producers in the database "
+      "to keep it away from, if it is sensitive.\n")
 
-    w("## 9. Nutrizione e sostenibilità\n")
+    w("## 9. Nutrition and sustainability\n")
     w(js({k: n[k] for k in ("data_basis", "edible_portion_percentage", "water_percentage", "kcal_per_100g", "macros_per_100g")}))
-    w("Valori per 100 g di parte edibile. `data_basis` dice quale scheda è la fonte primaria (CREA, poi BDA-IEO, USDA solo se mancano le prime).\n")
+    w("Values per 100 g of edible portion. `data_basis` says which record is the primary source (CREA, then BDA-IEO, USDA only when the first two are missing).\n")
     w(js({"vitamins": n["vitamins"][:3] + ["…"], "nutrition_claims_eu": n["nutrition_claims_eu"]}))
-    w("Ogni vitamina e minerale ha quantità, unità, `percent_nrv` (% del Valore Nutritivo di Riferimento, Reg. UE 1169/2011) e la fonte. "
-      "I **claim** sono calcolati applicando le soglie del Reg. CE 1924/2006 (es. \"Ad alto contenuto di vitamina C\" ≥ 30% VNR): "
-      "non sono scritti a mano.\n")
+    w("Every vitamin and mineral has amount, unit, `percent_nrv` (% of the Nutrient Reference Value, Regulation (EU) 1169/2011) and source. "
+      "**Claims** are computed by applying the thresholds of Regulation (EC) 1924/2006 (e.g. \"High in vitamin C\" ≥ 30% NRV): "
+      "they are not written by hand.\n")
     w(js({"bioactive_compounds": n["bioactive_compounds"][:3] + ["…"]}))
-    w("Composti bioattivi: carotenoidi (USDA FDC), classi di flavonoidi (USDA Flavonoid DB), polifenoli totali e acidi fenolici "
-      "(Phenol-Explorer). `group` permette di raggrupparli in app, `main_compounds` dice quali sono i principali.\n")
+    w("Bioactive compounds: carotenoids (USDA FDC), flavonoid classes (USDA Flavonoid DB), total polyphenols and phenolic acids "
+      "(Phenol-Explorer). `group` lets the app group them, `main_compounds` says which are the main ones.\n")
     w(js({k: n[k] for k in ("allergens_eu", "reference_portion", "protein_reference")}))
-    w("- `allergens_eu`: allergeni dell'allegato II del Reg. UE 1169/2011 (lista vuota = nessuno).\n"
-      "- `reference_portion`: la porzione standard LARN (via IEO SmartFood), con un'equivalenza pratica e i valori per porzione.\n"
-      "- `protein_reference`: le proteine rapportate al fabbisogno LARN.\n")
+    w("- `allergens_eu`: allergens from Annex II of Regulation (EU) 1169/2011 (empty list = none).\n"
+      "- `reference_portion`: the standard LARN portion (via IEO SmartFood), with a practical equivalent and per-portion values.\n"
+      "- `protein_reference`: protein compared with the LARN requirement.\n")
     w(js(n["environmental_footprint"]))
-    w("Sostenibilità (SU-EATABLE LIFE): CO2 e acqua per kg e per porzione, con riferimento alla voce del database, numero di studi e intervallo. "
-      "`greenhouse_comparison` mostra quanto pesa la serra riscaldata (fuori stagione). `sustainability_rating` traduce i numeri in livelli e consigli.\n")
+    w("Sustainability (SU-EATABLE LIFE): CO2 and water per kg and per portion, with the database entry, number of studies and range. "
+      "`greenhouse_comparison` shows the weight of heated greenhouses (out of season). `sustainability_rating` turns the numbers into levels and advice.\n")
     pat = n["traditional_products_pat"]
     w(js({**pat, "products": pat["products"][:4] + ["…"], "regions": pat["regions"][:6] + ["…"]}))
-    w("`traditional_products_pat`: i Prodotti Agroalimentari Tradizionali dell'elenco MASAF legati all'alimento, con la regione.\n")
+    w("`traditional_products_pat`: the Traditional Agri-food Products from the MASAF list linked to the product, with their region.\n")
     w(js({k: n[k] for k in ("health_benefits_and_curiosities", "culinary_waste_reduction")}))
-    w("Testi: benefici (solo con nutrienti coerenti con i claim) e idee anti-spreco.\n")
+    w("Texts: benefits (only with nutrients consistent with the claims) and anti-waste ideas.\n")
 
-    w("## 10. Fonti della scheda\n")
+    w("## 10. Record sources\n")
     s = it["sources_by_topic"]
     w(js({"sources_used": s["sources_used"][:3] + ["…"], "useful_links": s["useful_links"][:3] + ["…"]}))
-    w(f"`sources_used` elenca **tutte** le fonti usate per questo alimento ({len(s['sources_used'])} per il pomodoro), con argomento, URL e file locali. "
-      f"`useful_links` sono i link da mostrare all'utente ({len(s['useful_links'])}). `source_codes` contiene i codici esatti delle schede (CREA, BDA, FDC…).\n")
+    w(f"`sources_used` lists **all** the sources used for this product ({len(s['sources_used'])} for the tomato), with topic, URL and local files. "
+      f"`useful_links` are the links shown to the user ({len(s['useful_links'])}). `source_codes` holds the exact record codes (CREA, BDA, FDC…).\n")
 
-    w("## 11. Tracciabilità: `data_completeness`\n")
+    w("## 11. Traceability: `data_completeness`\n")
     d = it["data_completeness"]
     w(js({"is_complete": d["is_complete"], "fields_pending_verification": d["fields_pending_verification"][:4],
           "missing_fields": d["missing_fields"][:4], "not_applicable_fields": d["not_applicable_fields"][:4],
           "discrepancies": d["discrepancies"][:2], "notes": d["notes"][:400] + "…"}))
-    w("Questo blocco serve a te, non all'utente: dice cosa veniva dalla bozza, cosa è stato verificato, cosa manca, cosa non è pertinente, "
-      "dove la bozza era diversa dalle fonti (`discrepancies`, con valore della bozza, valore della fonte e fonte) e perché (`notes`).\n")
+    w("This block is for maintainers, not for users: it says what came from the draft, what was verified, what is missing, what is not applicable, "
+      "where the draft differed from the sources (`discrepancies`, with draft value, source value and source) and why (`notes`, an internal log written in Italian).\n")
 
-    w("## 12. I metadati\n")
-    w("`metadata` contiene ciò che vale per tutto il database e sta in testa al file: \n")
+    w("## 12. Metadata\n")
+    w("`metadata` holds everything that applies to the whole database and sits at the top of the file:\n")
     for k in m:
         w(f"- `{k}`")
-    w("\nLe **legende** (stati stagionali, zone, deperibilità, conservazione, gruppi di compatibilità) e i **metodi** "
-      "(stagionalità, post-raccolta, proteine, impronte) sono pensati per essere letti direttamente dall'app.\n")
+    w("\nThe **legends** (seasonal states, zones, perishability, storage, compatibility groups) and the **methods** "
+      "(seasonality, postharvest, protein, footprints) are designed to be read directly by the app.\n")
 
-    w("## 13. Bilinguismo\n")
-    w("L'app può essere usata tutta in italiano o tutta in inglese:\n")
-    w("- ogni testo per l'utente è `{\"it\": …, \"en\": …}`, comprese le motivazioni (`basis`, `derivation`, `method`, note delle varietà);\n"
-      "- i valori codificati (es. `climaterico`, `in_season`, `fridge`) sono chiavi: l'etichetta da mostrare è in `metadata.vocabulary`;\n"
-      "- nutrienti e composti hanno `name` e `name_en`;\n"
-      "- restano in lingua originale solo i nomi propri (varietà, DOP/IGP, PAT, nomi scientifici, autori, licenze, fonti);\n"
-      "- `data_completeness.notes` è un registro tecnico in italiano, non per l'app.\n")
+    w("## 13. Bilingualism\n")
+    w("The app can be used entirely in Italian or entirely in English:\n")
+    w("- every user-facing text is `{\"it\": …, \"en\": …}`, including the rationales (`basis`, `derivation`, `method`, variety notes);\n"
+      "- coded values (e.g. `climaterico`, `in_season`, `fridge`) are keys: the label to display is in `metadata.vocabulary`;\n"
+      "- nutrients and compounds have `name` and `name_en`;\n"
+      "- only proper names stay in their original language (varieties, PDO/PGI, PAT, scientific names, authors, licences, sources);\n"
+      "- `data_completeness.notes` is a technical log in Italian, not used by the app.\n")
     voc = m["vocabulary"]
     w(js({"ripening_and_storage.ripening_type": voc["ripening_and_storage.ripening_type"]}))
-    w(f"Gruppi del vocabolario ({len(voc)}): " + ", ".join(f"`{k}`" for k in voc) + ".\n")
+    w(f"Vocabulary groups ({len(voc)}): " + ", ".join(f"`{k}`" for k in voc) + ".\n")
 
-    w("## 14. Glossario e icone \"?\"\n")
-    w("Le spiegazioni sono scritte una volta, in `metadata.glossary`, e raggiunte da più punti:\n")
-    w("| Da dove | Campo | Esempio |\n|---|---|---|\n"
-      "| un campo | `metadata.field_help[percorso]` | `ripening_and_storage.ripening_type` → `climacteric`, `non_climacteric` |\n"
-      "| un valore | `metadata.vocabulary[gruppo][valore].glossary` | `climaterico` → `climacteric` |\n"
-      "| un alimento | `item.help_refs` | fava → `favism` sul testo dei benefici |\n"
-      "| un'altra voce | `glossary[id].see_also` | `climacteric` → `ethylene`, `non_climacteric` |\n"
-      "| una fonte | `official_sources[].used_for.glossary_entries` | HB66 → voci di conservazione |\n")
+    w("## 14. Glossary and \"?\" icons\n")
+    w("Explanations are written once, in `metadata.glossary`, and reached from several places:\n")
+    w("| From | Field | Example |\n|---|---|---|\n"
+      "| a field | `metadata.field_help[path]` | `ripening_and_storage.ripening_type` → `climacteric`, `non_climacteric` |\n"
+      "| a value | `metadata.vocabulary[group][value].glossary` | `climaterico` → `climacteric` |\n"
+      "| a product | `item.help_refs` | broad bean → `favism` on the benefits text |\n"
+      "| another entry | `glossary[id].see_also` | `climacteric` → `ethylene`, `non_climacteric` |\n"
+      "| a source | `official_sources[].used_for.glossary_entries` | HB66 → storage entries |\n")
     g = m["glossary"]["climacteric"]
     w(js(g, 2500))
-    w("Ogni voce: `term`, `short` (una riga per il tooltip), `text` (spiegazione completa), `sources` (nome e URL dal catalogo), `see_also`. "
-      f"Voci ({len(m['glossary'])}): " + ", ".join(f"`{k}`" for k in m["glossary"]) + ".\n")
+    w("Each entry: `term`, `short` (one line for the tooltip), `text` (full explanation), `sources` (name and URL from the catalogue), `see_also`. "
+      f"Entries ({len(m['glossary'])}): " + ", ".join(f"`{k}`" for k in m["glossary"]) + ".\n")
     w(js({"help_refs": it.get("help_refs", [])[:6]}))
     w(js({"field_help": dict(list(m["field_help"].items())[:6])}))
 
-    w("## 15. Il catalogo delle fonti\n")
-    w("`metadata.official_sources` descrive ogni fonte: cos'è (`description`), perché è autorevole (`authority`), cosa offre (`offers`), "
-      "per quali argomenti e per quali alimenti è stata consultata (`used_for`). Elenco completo:\n")
+    w("## 15. Source catalogue\n")
+    w("`metadata.official_sources` describes every source: what it is (`description`), why it is authoritative (`authority`), what it offers (`offers`), "
+      "for which topics and which products it was consulted (`used_for`). Full list:\n")
     for s in sorted(m["official_sources"], key=lambda s: -s["used_for"]["items_count"]):
         u = s["used_for"]
         w(f"### {s.get('name', s['key'])}\n")
         w(f"`{s['key']}` · {s.get('url', '')}\n")
-        w(f"- **Cos'è**: {s['description']['it']}")
-        w(f"- **Perché è autorevole**: {s['authority']['it']}")
-        w(f"- **Cosa offre**: {s['offers']['it']}")
-        w(f"- **Usata per**: " + (", ".join(t["label"]["it"] for t in u["topics"]) or "livello di database"))
+        w(f"- **What it is**: {en(s['description'])}")
+        w(f"- **Why it is authoritative**: {en(s['authority'])}")
+        w(f"- **What it offers**: {en(s['offers'])}")
+        w("- **Used for**: " + (", ".join(en(t["label"]) for t in u["topics"]) or "database level"))
         if u["items"]:
-            w(f"- **Alimenti ({u['items_count']})**: " + ", ".join(u["items"]))
+            w(f"- **Products ({u['items_count']})**: " + ", ".join(u["items"]))
         elif u["database_level"]:
-            w("- **Alimenti**: usata per l'intero database (metodi e legende), non per singole schede")
+            w("- **Products**: used for the whole database (methods and legends), not for individual records")
         if u["glossary_entries"]:
-            w(f"- **Voci di glossario**: " + ", ".join(u["glossary_entries"]))
+            w("- **Glossary entries**: " + ", ".join(u["glossary_entries"]))
         w("")
 
-    w("## 16. Conflitti tra fonti\n")
-    w("`metadata.source_conflicts`: i casi generali in cui le fonti danno valori diversi, con la decisione presa.\n")
+    w("## 16. Conflicts between sources\n")
+    w("`metadata.source_conflicts`: the general cases where sources give different values, with the decision taken.\n")
     for cf in m["source_conflicts"]:
-        w(f"### {cf['issue']['it']}\n")
-        w(f"- **Perché**: {cf['why']['it']}\n- **Decisione**: {cf['decision']['it']}\n- **Motivazione**: {cf['rationale']['it']}\n")
+        w(f"### {en(cf['issue'])}\n")
+        w(f"- **Why**: {en(cf['why'])}\n- **Decision**: {en(cf['decision'])}\n- **Rationale**: {en(cf['rationale'])}\n")
 
-    w("## 17. Come usarlo nell'app (suggerimento)\n")
-    w("| Schermata | Campi |\n|---|---|\n"
-      "| Card dell'alimento | `names`, `images.primary`, stato del mese da `seasonality.italy_macro_areas[zona]`, `ripening_and_storage.card_short_storage`, `perishability.label` |\n"
-      "| Lista della spesa | `buying_guide.shopping_list_preview`, `ripening_badge_label` |\n"
-      "| Conservazione | `home_storage`, `storage_instructions`, `estimated_shelf_life_days`, `storage_compatibility`, `ethylene_compatibility` |\n"
-      "| Nutrizione | `reference_portion`, `macros_per_100g`, `nutrition_claims_eu`, `vitamins`, `minerals`, `allergens_eu` |\n"
-      "| Sostenibilità | `environmental_footprint.sustainability_rating`, `greenhouse_comparison`, `metadata.sustainable_diet_summary` |\n"
-      "| Territorio | `notable_varieties`, `dop_igp_labels`, `traditional_products_pat`, `varieties_registered_italy` |\n"
-      "| Orto | `agricultural_calendar_italy` |\n"
-      "| Approfondimenti | `sources_by_topic.useful_links` |\n"
-      "| Aiuto \"?\" | `metadata.field_help`, `metadata.vocabulary`, `item.help_refs` → `metadata.glossary` |\n"
-      "| Fonti | `metadata.official_sources`, `metadata.source_conflicts` |\n")
+    w("## 17. How the app uses it\n")
+    w("| Screen | Fields |\n|---|---|\n"
+      "| Product card | `names`, `images.primary`, month state from `seasonality.italy_macro_areas[area]`, `ripening_and_storage.card_short_storage`, `perishability.label` |\n"
+      "| Shopping list | `buying_guide.shopping_list_preview`, `ripening_badge_label` |\n"
+      "| Storage | `home_storage`, `storage_instructions`, `estimated_shelf_life_days`, `storage_compatibility`, `ethylene_compatibility` |\n"
+      "| Nutrition | `reference_portion`, `macros_per_100g`, `nutrition_claims_eu`, `vitamins`, `minerals`, `allergens_eu` |\n"
+      "| Sustainability | `environmental_footprint.sustainability_rating`, `greenhouse_comparison`, `metadata.sustainable_diet_summary` |\n"
+      "| Territory | `notable_varieties`, `dop_igp_labels`, `traditional_products_pat`, `varieties_registered_italy` |\n"
+      "| Garden | `agricultural_calendar_italy` |\n"
+      "| Learn more | `sources_by_topic.useful_links` |\n"
+      "| \"?\" help | `metadata.field_help`, `metadata.vocabulary`, `item.help_refs` → `metadata.glossary` |\n"
+      "| Sources | `metadata.official_sources`, `metadata.source_conflicts` |\n")
     (DATA / "database_guide.md").write_text("\n".join(L), encoding="utf-8")
-    print("scritto data/database_guide.md")
+    print("wrote data/database_guide.md")
 
 
 if __name__ == "__main__":

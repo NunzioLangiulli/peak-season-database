@@ -1,208 +1,208 @@
-# Peak Season – Report Fase 1: costruzione, organizzazione e validazione del database
+# Peak Season – Phase 1 report: building, organising and validating the database
 
-Generato il 2026-11-12 da `scripts/make_report.py` · database v2.0.0 · 153 alimenti · schema `data/schema.json` (JSON Schema 2020-12).
+Generated on 2026-11-12 by `scripts/make_report.py` · database v2.0.0 · 153 products · schema `data/schema.json` (JSON Schema 2020-12).
 
-Il report spiega con quale metodo è stato costruito il database, come è organizzato (schede, metadati, fonti, glossario, bilinguismo) e come è stato controllato. Le immagini hanno un report a parte, dopo la tua revisione. La guida campo per campo è in `data/database_guide.md`.
+This report explains the method used to build the database, how it is organised (records, metadata, sources, glossary, bilingualism) and how it was checked. The field-by-field guide is in `data/database_guide.md`.
 
-## 1. In sintesi
+## 1. Summary
 
-| Voce | Valore | Note |
+| Item | Value | Notes |
 |---|---|---|
-| Alimenti | 153 | Verdura 72, Frutta 55, Erbe e spezie 10, Funghi 10, Cereali 6 |
-| Fonti catalogate | 46 | ognuna con descrizione, autorevolezza, contenuti e usi (§4) |
-| Fonti usate per alimento | media 21.0 | `sources_by_topic.sources_used` |
-| Casi di conflitto tra fonti documentati | 13 | con decisione e motivazione (§5) |
-| Voci di glossario (icone "?") | 44 | 35 campi collegati, 684 rimandi negli alimenti |
-| Testi bilingui {it, en} | 7105 | tutto ciò che l'utente legge esiste in italiano e in inglese (§3.4) |
-| Validazione schema | 0 errori sui dati | restano solo i file immagine eliminati durante la tua revisione (0 segnalazioni) |
-| Ricontrollo sistematico (dati) | 1 errori, 9 da controllare, 23 informativi | tutti spiegati (§6.3) |
-| Valori ancora da verificare | 655 | quasi tutti calendari agricoli di frutta, erbe e cereali (§7) |
-| Campi senza dato | 2785 | lacune vere, mappate in §7 |
-| Campi non pertinenti, motivati | 1749 | es. danno da freddo per chi non è sensibile |
+| Products | 153 | Vegetables 72, Fruit 55, Herbs and spices 10, Mushrooms 10, Cereals 6 |
+| Catalogued sources | 46 | each with description, authority, contents and uses (§4) |
+| Sources used per product | average 21.0 | `sources_by_topic.sources_used` |
+| Documented source conflicts | 13 | with decision and rationale (§5) |
+| Glossary entries ("?" icons) | 44 | 35 linked fields, 684 references in products |
+| Bilingual {it, en} texts | 7318 | everything the user reads exists in Italian and English (§3.4) |
+| Schema validation | 0 data errors | only image-file warnings remain (0) |
+| Systematic re-check (data) | 1 errors, 9 to review, 23 informational | all explained (§6.3) |
+| Values still to verify | 655 | almost all agricultural calendars of fruit, herbs and cereals (§7) |
+| Fields without data | 2785 | real gaps, mapped in §7 |
+| Non-applicable fields, with reason | 1855 | e.g. chilling injury for produce that is not sensitive |
 
-## 2. Come è stato costruito
+## 2. How it was built
 
-### 2.1 Principi
+### 2.1 Principles
 
-- **Nessun dato inventato.** Ogni valore viene da una fonte catalogata, indicata nel campo `source` o nel blocco `sources_by_topic`; dove una fonte manca il campo resta vuoto (null) ed è elencato in `data_completeness.missing_fields`.
-- **Fonti ufficiali e scientifiche prima di tutto**, con un ordine di priorità dichiarato per argomento (es. nutrizione: CREA → BDA-IEO → USDA FoodData Central).
-- **Tracciabilità per valore**: per i nutrienti la fonte è indicata valore per valore; per i dati post-raccolta il capitolo o la tabella HB66; per le impronte il numero di studi e l'intervallo.
-- **Approssimazioni dichiarate**: se una fonte non ha la voce esatta si usa la più vicina, marcata come approssimata; le stime (es. classe di respirazione da Q10) sono marcate come stimate e spiegate nel campo `basis`.
-- **Non pertinente ≠ mancante**: un campo che per definizione non si applica (es. danno da freddo per chi non lo soffre) è marcato N/A con motivazione, non conteggiato come lacuna.
-- **La bozza iniziale come punto di partenza, non come fonte**: i suoi 91 alimenti sono stati migrati nella struttura; ogni valore diverso dalle fonti è registrato come discrepanza, ogni valore non verificabile è tolto dall'app e conservato in `data/draft_legacy_values.json` (1092 valori). Copia della bozza in `data/_backup_bozza_2026-11-04/`.
+- **No invented data.** Every value comes from a catalogued source, given in the `source` field or in the `sources_by_topic` block; where no source exists the field stays empty (null) and is listed in `data_completeness.missing_fields`.
+- **Official and scientific sources first**, with a declared priority order per topic (e.g. nutrition: CREA → BDA-IEO → USDA FoodData Central).
+- **Per-value traceability**: for nutrients the source is given value by value; for postharvest data the HB66 chapter or table; for footprints the number of studies and the range.
+- **Declared approximations**: if a source lacks the exact entry the closest one is used and flagged as approximate; estimates (e.g. respiration class from Q10) are flagged as estimated and explained in the `basis` field.
+- **Not applicable ≠ missing**: a field that by definition does not apply (e.g. chilling injury for produce that does not suffer from it) is marked N/A with a reason and not counted as a gap.
+- **The initial draft as a starting point, not as a source**: its 91 products were migrated into the structure; every value differing from the sources is recorded as a discrepancy, every unverifiable value is removed from the app and preserved in `data/draft_legacy_values.json` (1092 values).
 
 ### 2.2 Pipeline
 
-Il database è prodotto da script Python eseguiti in un ordine fisso (`scripts/README.md`). Ogni script ha una docstring con fonte, metodo e uso.
+The database is produced by Python scripts run in a fixed order (`scripts/README.md`). Every script has a docstring with source, method and usage.
 
-| Fase | Cosa fa |
+| Phase | What it does |
 |---|---|
-| 1. Fonti e indice | scarica e mette in cache le fonti (`data/raw/`), costruisce la lista master con i codici di ogni fonte, migra la bozza |
-| 2. Nutrizione | CREA e BDA-IEO, USDA per i mancanti, %VNR e claim UE ricalcolati, riferimento LARN per le proteine |
-| 3. Stagionalità e botanica | voto tra i calendari italiani, mappa EUFIC e fonti nazionali EUFIC; EPPO, WFO, GBIF; note di coltivazione |
-| 4. Varietà e territori | verifica delle varietà su testi, Slow Food e Catalogo comune UE; DOP/IGP su eAmbrosia; codici UPOV; PAT MASAF |
-| 5. Conservazione | USDA HB66 (tabelle e capitoli), classi di Kader, FoodKeeper e guida UC Davis per la casa, gruppi di compatibilità |
-| 6. Composti, allergeni, sostenibilità | USDA carotenoidi e flavonoidi, Phenol-Explorer, Reg. UE 1169/2011, porzioni LARN, SU-EATABLE LIFE, AGRIBALYSE |
-| 7. Testi, immagini, fonti | testi IT/EN riallineati ai dati, immagini con licenza, registro delle fonti per alimento |
-| 8. Bilinguismo e aiuto | `localize_fields.py` (ultimo passo di trasformazione), `build_help.py` (vocabolario, glossario), `build_source_catalog.py` (catalogo fonti e conflitti) |
-| 9. Controlli e report | validazione JSON Schema, ricontrollo voce per voce, copertura del template, report |
+| 1. Sources and index | downloads and caches the sources (`data/raw/`), builds the master list with each source's codes, migrates the draft |
+| 2. Nutrition | CREA and BDA-IEO, USDA for missing items, recomputed %NRV and EU claims, LARN reference for protein |
+| 3. Seasonality and botany | vote across Italian calendars, EUFIC map and EUFIC national sources; EPPO, WFO, GBIF; growing notes |
+| 4. Varieties and territories | variety checks on texts, Slow Food and the EU Common Catalogue; PDO/PGI on eAmbrosia; UPOV codes; MASAF PAT |
+| 5. Storage | USDA HB66 (tables and chapters), Kader classes, FoodKeeper and UC Davis home guide, compatibility groups |
+| 6. Compounds, allergens, sustainability | USDA carotenoids and flavonoids, Phenol-Explorer, Reg. (EU) 1169/2011, LARN portions, SU-EATABLE LIFE, AGRIBALYSE |
+| 7. Texts, images, sources | IT/EN texts realigned with the data, licensed images, per-product source register |
+| 8. Bilingualism and help | `localize_fields.py` (last transformation step), `build_help.py` (vocabulary, glossary), `build_source_catalog.py` (source catalogue and conflicts) |
+| 9. Checks and reports | JSON Schema validation, item-by-item re-check, template coverage, reports |
 
-Le scelte che richiedono giudizio (citazioni dai capitoli HB66, mappature tra voci di fonti diverse, descrizioni delle fonti, glossario, conflitti) sono in file di configurazione curati a mano in `scripts/config/`, ciascuno con la citazione o la pagina della fonte: così ogni decisione è leggibile e modificabile senza toccare il codice.
+Choices that require judgement (quotes from HB66 chapters, mappings between entries of different sources, source descriptions, glossary, conflicts) live in hand-curated configuration files in `scripts/config/`, each with the quote or page of the source: every decision can be read and changed without touching the code.
 
-## 3. Come è organizzato
+## 3. How it is organised
 
-Il file `data/database.json` ha due parti: `metadata` (tutto ciò che vale per l'intero database) e `items` (una scheda per alimento).
+`data/database.json` has two parts: `metadata` (everything that applies to the whole database) and `items` (one record per product).
 
-### 3.1 La scheda di un alimento
+### 3.1 A product record
 
-| Blocco | Contenuto |
+| Block | Content |
 |---|---|
-| `id, names, category` | identità: id stabile, nomi IT/EN (comune, alternativi), categoria |
-| `botany` | nome scientifico, famiglia, genere, codici EPPO/GBIF/UPOV, parte della pianta usata |
-| `italian_varieties_and_territories` | varietà verificate (Catalogo comune UE, Slow Food, testi), DOP/IGP (eAmbrosia), PAT (MASAF), varietà iscritte in Italia |
-| `images` | galleria con autore, licenza e URL d'origine di ogni foto |
-| `seasonality` | stato mese per mese per 3 macro-aree italiane e 6 zone climatiche europee, con provenienza zona per zona |
-| `agricultural_calendar_italy` | semina, trapianto, raccolta per macro-area; parametri di coltivazione |
-| `buying_guide` | come sceglierlo, segni di qualità e di deterioramento |
-| `ripening_and_storage` | climaterico/non climaterico, etilene, respirazione e deperibilità, danno da freddo, conservazione professionale e domestica, compatibilità |
-| `nutrition_and_sustainability` | valori per 100 g con fonte per valore, %VNR, claim UE, composti bioattivi, allergeni, porzioni LARN, impronta di carbonio e idrica |
-| `sources_by_topic` | fonti usate per argomento e link utili |
-| `data_completeness` | campi mancanti, da verificare, non pertinenti, discrepanze con la bozza, note |
-| `help_refs` | voci del glossario pertinenti a quell'alimento (icone "?") |
+| `id, names, category` | identity: stable id, IT/EN names (common, alternative), category |
+| `botany` | scientific name, family, genus, EPPO/GBIF/UPOV codes, plant part used |
+| `italian_varieties_and_territories` | verified varieties (EU Common Catalogue, Slow Food, texts), PDO/PGI (eAmbrosia), PAT (MASAF), varieties registered in Italy |
+| `images` | gallery with author, licence and source URL for every photo |
+| `seasonality` | month-by-month state for 3 Italian macro-areas and 6 European climate zones, with zone-by-zone provenance |
+| `agricultural_calendar_italy` | sowing, transplanting, harvest by macro-area; growing parameters |
+| `buying_guide` | how to choose it, signs of quality and spoilage |
+| `ripening_and_storage` | climacteric/non-climacteric, ethylene, respiration and perishability, chilling injury, commercial and home storage, compatibility |
+| `nutrition_and_sustainability` | values per 100 g with a source per value, %NRV, EU claims, bioactive compounds, allergens, LARN portions, carbon and water footprint |
+| `sources_by_topic` | sources used by topic and useful links |
+| `data_completeness` | missing fields, fields to verify, non-applicable fields, discrepancies with the draft, notes |
+| `help_refs` | glossary entries relevant to that product ("?" icons) |
 
-### 3.2 I metadati
+### 3.2 Metadata
 
-| Campo | Contenuto |
+| Field | Content |
 |---|---|
-| `official_sources` | catalogo delle fonti: cos'è, perché è autorevole, cosa offre, per quali argomenti e alimenti è stata consultata |
-| `source_conflicts` | casi generali di valori discordanti tra fonti: perché, cosa si è deciso e perché |
-| `glossary` | spiegazioni brevi ma complete dei concetti, con fonti, per le icone "?" |
-| `vocabulary` | etichette IT/EN di tutti i valori codificati (es. `climaterico` → "Climaterico" / "Climacteric"), con il rimando al glossario |
-| `field_help` | quale voce del glossario spiega ogni campo |
-| legende e metodi | stati stagionali, zone EUFIC, macro-aree, metodo di stagionalità, post-raccolta, deperibilità, conservazione, impronte |
-| `sustainable_diet_summary` | sintesi EUFIC sulla dieta sostenibile |
+| `official_sources` | source catalogue: what it is, why it is authoritative, what it offers, for which topics and products it was consulted |
+| `source_conflicts` | general cases of disagreement between sources: why, what was decided and why |
+| `glossary` | short but complete explanations of concepts, with sources, for the "?" icons |
+| `vocabulary` | IT/EN labels of every coded value (e.g. `climaterico` → "Climaterico" / "Climacteric"), with the glossary link |
+| `field_help` | which glossary entry explains each field |
+| legends and methods | seasonal states, EUFIC zones, macro-areas, seasonality method, postharvest, perishability, storage, footprints |
+| `sustainable_diet_summary` | EUFIC summary on sustainable diets |
 
-### 3.3 Il sistema di aiuto (icone "?")
+### 3.3 The help system ("?" icons)
 
-Una spiegazione è scritta una volta sola, nel glossario, e raggiunta da più punti:
+An explanation is written once, in the glossary, and reached from several places:
 
-- **dal campo**: `metadata.field_help` collega 35 percorsi di campo (es. `ripening_and_storage.ripening_type`) alle voci che li spiegano;
-- **dal valore**: ogni valore di `metadata.vocabulary` (24 gruppi) può puntare a una voce (es. `climaterico` → voce *climacteric*);
-- **dall'alimento**: `item.help_refs` elenca le voci pertinenti per quell'alimento e i campi dove mostrarle, calcolate dal contenuto (allergeni, glutine, DOP, PAT, favismo per la fava, stime Q10, coltura in serra…);
-- **da una voce all'altra**: `see_also`; e **dalla fonte**: `official_sources[].used_for.glossary_entries`.
+- **from the field**: `metadata.field_help` links 35 field paths (e.g. `ripening_and_storage.ripening_type`) to the entries that explain them;
+- **from the value**: every value of `metadata.vocabulary` (24 groups) can point to an entry (e.g. `climaterico` → entry *climacteric*);
+- **from the product**: `item.help_refs` lists the entries relevant to that product and the fields where they are shown, computed from the content (allergens, gluten, PDO, PAT, favism for broad beans, Q10 estimates, greenhouse growing…);
+- **from one entry to another**: `see_also`; and **from the source**: `official_sources[].used_for.glossary_entries`.
 
-Ogni voce ha `term`, `short` (una riga per il tooltip) e `text` (spiegazione completa) in IT e EN, e le fonti con nome e URL risolti dal catalogo. L'app quindi non contiene testi di aiuto propri: legge tutto dal database.
+Every entry has `term`, `short` (one line for the tooltip) and `text` (full explanation) in IT and EN, and its sources with name and URL resolved from the catalogue. The app therefore holds no help texts of its own: it reads everything from the database.
 
-Voci: *Frutto Climaterico*, *Prodotto Non Climaterico*, *Etilene*, *Produzione di Etilene*, *Sensibilità all'Etilene*, *Tienilo Lontano da*, *Respirazione e Classe di Kader*, *Deperibilità*, *Q10 (Stima della Respirazione)*, *Danno da Freddo*, *Temperatura Minima Sicura*, *Punto di Congelamento*, *Sensibilità al Gelo*, *Condizioni Ottimali (Professionali)*, *Durata in Casa*, *Dove Conservarlo in Casa*, *Prodotti da Conservare Insieme*, *Stati della Stagionalità*, *Macro-aree Italiane*, *Zone Climatiche Europee*, *Stima dalla Zona Vicina (≈)*, *Semina, Trapianto e Raccolta*, *Parametri di Coltivazione*, *Parte Edibile*, *VNR (Valori Nutritivi di Riferimento)*, *Claim Nutrizionali UE*, *LARN*, *Porzione di Riferimento*, *Allergeni (Reg. UE 1169/2011)*, *Glutine*, *Carotenoidi*, *Polifenoli*, *Flavonoidi*, *Impronta di Carbonio*, *Impronta Idrica*, *Serra Riscaldata e Stagionalità*, *DOP e IGP*, *Prodotti Agroalimentari Tradizionali (PAT)*, *Presìdi Slow Food e Arca del Gusto*, *Codice UPOV e Catalogo Comune UE*, *Varietà Verificate*, *Nome Scientifico e Codici Botanici*, *Favismo*, *Esatto o Approssimato*.
+Entries: *Climacteric Fruit*, *Non-climacteric Produce*, *Ethylene*, *Ethylene Production*, *Ethylene Sensitivity*, *Keep It Away from*, *Respiration and Kader Class*, *Perishability*, *Q10 (Respiration Estimate)*, *Chilling Injury*, *Lowest Safe Temperature*, *Freezing Point*, *Freezing Susceptibility*, *Optimal (Commercial) Conditions*, *Home Storage Time*, *Where to Store It at Home*, *Produce to Store Together*, *Seasonality States*, *Italian Macro-areas*, *European Climate Zones*, *Estimate from Neighbouring Zone (≈)*, *Sowing, Transplanting and Harvest*, *Growing Parameters*, *Edible Portion*, *NRV (Nutrient Reference Values)*, *EU Nutrition Claims*, *LARN (Italian Reference Intakes)*, *Reference Portion*, *Allergens (EU Reg. 1169/2011)*, *Gluten*, *Carotenoids*, *Polyphenols*, *Flavonoids*, *Carbon Footprint*, *Water Footprint*, *Heated Greenhouses and Seasonality*, *PDO and PGI*, *Traditional Agri-food Products (PAT)*, *Slow Food Presidia and Ark of Taste*, *UPOV Code and EU Common Catalogue*, *Verified Varieties*, *Scientific Name and Botanical Codes*, *Favism*, *Exact or Approximate*.
 
-### 3.4 Bilinguismo
+### 3.4 Bilingualism
 
-L'app deve funzionare interamente in italiano o interamente in inglese. Convenzioni applicate e verificate dall'audit:
+The app must work entirely in Italian or entirely in English. Conventions applied and checked by the audit:
 
-- ogni testo per l'utente è un oggetto `{it, en}`: nomi, testi, etichette, consigli, legende, glossario, descrizioni delle fonti, motivazioni (`basis`, `derivation`, `method`, note delle varietà);
-- i valori codificati (categoria, stato stagionale, classi, luoghi di conservazione…) sono chiavi stabili tradotte da `metadata.vocabulary`, mai mostrate così come sono;
-- per nutrienti e composti restano le coppie `name`/`name_en`;
-- restano nella lingua originale solo i nomi propri: varietà, DOP/IGP, PAT, nomi scientifici, autori, licenze, nomi delle fonti, citazioni testuali delle fonti;
-- `data_completeness.notes` è un registro tecnico interno in italiano, non destinato all'app.
+- every user-facing text is an `{it, en}` object: names, texts, labels, advice, legends, glossary, source descriptions, rationales (`basis`, `derivation`, `method`, variety notes);
+- coded values (category, seasonal state, classes, storage locations…) are stable keys translated through `metadata.vocabulary`, never shown as they are;
+- nutrients and compounds keep `name`/`name_en` pairs;
+- only proper names stay in their original language: varieties, PDO/PGI, PAT, scientific names, authors, licences, source names, verbatim quotes from sources;
+- `data_completeness.notes` is an internal technical log in Italian, not used by the app.
 
-## 4. Fonti
+## 4. Sources
 
-Il catalogo completo, con descrizione, autorevolezza, contenuti e l'elenco di tutti gli alimenti per cui ogni fonte è stata consultata, è in testa al database (`metadata.official_sources`) ed è riportato nella guida. Riepilogo:
+The full catalogue, with description, authority, contents and the list of every product for which each source was consulted, sits at the top of the database (`metadata.official_sources`) and is reproduced in the guide. Summary:
 
-| Fonte | Alimenti | Usata per |
+| Source | Products | Used for |
 |---|---|---|
-| Regolamento (UE) n. 1169/2011 - Allegato XIII, Valori Nutritivi di Riferime | 153 | Allergeni, %VNR |
-| IEO SmartFood - Porzioni e frequenze (porzioni standard LARN-SINU) | 153 | Porzioni |
-| EPPO Global Database | 151 | Botanica |
-| Regolamento (CE) n. 1924/2006 - indicazioni nutrizionali e sulla salute | 146 | Claim UE |
+| Regolamento (UE) n. 1169/2011 - Allegato XIII, Valori Nutritivi di Riferime | 153 | Allergens, %NRV |
+| IEO SmartFood - Porzioni e frequenze (porzioni standard LARN-SINU) | 153 | Portions |
+| EPPO Global Database | 151 | Botany |
+| Regolamento (CE) n. 1924/2006 - indicazioni nutrizionali e sulla salute | 146 | EU Claims |
 | LARN - SINU (tabelle riassuntive, PDF locale) | 145 | LARN |
-| World Flora Online - Plant List | 143 | Botanica |
-| USDA FoodData Central - SR Legacy (2018-04) | 136 | Composti Bioattivi, Nutrizione, Testi |
-| USDA ARS Agricultural Handbook 66 (2016) | 133 | Danno da Freddo, Freezing_susceptibility, Plant_part_used, Post-raccolta, Conser |
-| SU-EATABLE LIFE - database delle impronte di carbonio e idrica (Petersson e | 129 | Impronta Ambientale |
-| Wikimedia Commons API | 124 | Immagini |
-| Pixabay API | 124 | Immagini |
-| BDA-IEO - Banca Dati di Composizione degli Alimenti (Istituto Europeo di On | 121 | Nutrizione, Testi |
-| USDA FSIS FoodKeeper | 120 | Conservazione in Casa, Testi |
-| MASAF - Elenco nazionale dei Prodotti Agroalimentari Tradizionali, XXVI rev | 118 | Testi, Prodotti Tradizionali |
-| EUFIC - Explore seasonal fruit and vegetables in Europe | 115 | Stagionalità Europea, Testi |
-| Orto da Coltivare (Matteo Cereda) - tabelle di semina PDF + schede | 110 | Calendario Agricolo, Plant_part_used, Stagionalità, Testi, Varietà |
-| CREA Alimenti e Nutrizione - Tabelle di composizione degli alimenti (rev. 2 | 109 | Nutrizione, Testi |
-| My-PersonalTrainer | 109 | Plant_part_used, Varietà, Verification_texts |
-| UC Davis / Kader - Storing Fresh Fruits and Vegetables for Better Taste (UC | 107 | Conservazione in Casa |
-| USDA Database for the Flavonoid Content of Selected Foods, Release 3.3 (201 | 97 | Composti Bioattivi |
-| Phenol-Explorer 3.6 - database del contenuto di polifenoli negli alimenti ( | 86 | Composti Bioattivi |
-| UC Davis Postharvest Research and Extension Center - Produce Fact Sheets | 80 | Post-raccolta, Testi |
-| EU Plant Variety Portal - Catalogo comune UE delle varieta' (agricole, orti | 76 | Codice UPOV, Varietà |
-| Bio Suisse - Calendario stagionale (Svizzera, PDF locale) | 71 | Stagionalità, Testi |
-| Altroconsumo - Calendario frutta e verdura | 65 | Buying_guide, Plant_part_used, Stagionalità, Testi, Varietà |
-| Unsplash API | 63 | Immagini |
-| WWF Italia - Il calendario della frutta e verdura di stagione (PDF locale) | 60 | Stagionalità, Testi |
-| Greenpeace Italia - Guida alla frutta e verdura di stagione (PDF locale) | 54 | Stagionalità, Testi |
-| eAmbrosia - registro UE delle indicazioni geografiche | 48 | DOP/IGP |
-| Fondazione Slow Food per la Biodiversità - Presìdi e Arca del Gusto | 34 | Stagionalità, Varietà |
-| GBIF Backbone Taxonomy (funghi) | 10 | Botanica |
-| AGRIBALYSE 3.1 (ADEME, Francia) - impatti ambientali degli alimenti | 7 | Impronta Ambientale |
-| Provincia di Cuneo - Schede dei funghi commestibili | 3 | Stagionalità |
-| Gesundheitsportal Österreichs - Saisonkalender (Ministero della salute aust | 2 | Stagionalità Europea |
-| Legge 16 dicembre 1985, n. 752 - Normativa quadro sui tartufi (art. 6, peri | 2 | Stagionalità |
-| iNaturalist (solo foto CC0 / CC BY / CC BY-SA) | 1 | Immagini |
-| Istituto Superiore di Sanità - Rapporti ISTISAN 09/47 (carenza di G6PD e fa | 1 | Note di Salute |
-| Regione Emilia-Romagna, BUR 2012 - Disciplinare IGP Amarene Brusche di Mode | 1 | Stagionalità |
-| Biblioteca civica Bertoliana (Vicenza) - Scheda botanica del lampascione | 1 | Stagionalità |
-| NaturaSì - Frutta e verdura di stagione (schede prodotto) | 1 | Stagionalità |
+| World Flora Online - Plant List | 143 | Botany |
+| USDA FoodData Central - SR Legacy (2018-04) | 136 | Bioactive Compounds, Nutrition, Texts |
+| USDA ARS Agricultural Handbook 66 (2016) | 133 | Chilling Injury, Freezing_susceptibility, Plant_part_used, Postharvest, Compatib |
+| SU-EATABLE LIFE - database delle impronte di carbonio e idrica (Petersson e | 129 | Environmental Footprint |
+| Wikimedia Commons API | 124 | Images |
+| Pixabay API | 124 | Images |
+| BDA-IEO - Banca Dati di Composizione degli Alimenti (Istituto Europeo di On | 121 | Nutrition, Texts |
+| USDA FSIS FoodKeeper | 120 | Home Storage, Texts |
+| MASAF - Elenco nazionale dei Prodotti Agroalimentari Tradizionali, XXVI rev | 118 | Texts, Traditional Products |
+| EUFIC - Explore seasonal fruit and vegetables in Europe | 115 | European Seasonality, Texts |
+| Orto da Coltivare (Matteo Cereda) - tabelle di semina PDF + schede | 110 | Growing Calendar, Plant_part_used, Seasonality, Texts, Varieties |
+| CREA Alimenti e Nutrizione - Tabelle di composizione degli alimenti (rev. 2 | 109 | Nutrition, Texts |
+| My-PersonalTrainer | 109 | Plant_part_used, Varieties, Verification_texts |
+| UC Davis / Kader - Storing Fresh Fruits and Vegetables for Better Taste (UC | 107 | Home Storage |
+| USDA Database for the Flavonoid Content of Selected Foods, Release 3.3 (201 | 97 | Bioactive Compounds |
+| Phenol-Explorer 3.6 - database del contenuto di polifenoli negli alimenti ( | 86 | Bioactive Compounds |
+| UC Davis Postharvest Research and Extension Center - Produce Fact Sheets | 80 | Postharvest, Texts |
+| EU Plant Variety Portal - Catalogo comune UE delle varieta' (agricole, orti | 76 | UPOV Code, Varieties |
+| Bio Suisse - Calendario stagionale (Svizzera, PDF locale) | 71 | Seasonality, Texts |
+| Altroconsumo - Calendario frutta e verdura | 65 | Buying_guide, Plant_part_used, Seasonality, Texts, Varieties |
+| Unsplash API | 63 | Images |
+| WWF Italia - Il calendario della frutta e verdura di stagione (PDF locale) | 60 | Seasonality, Texts |
+| Greenpeace Italia - Guida alla frutta e verdura di stagione (PDF locale) | 54 | Seasonality, Texts |
+| eAmbrosia - registro UE delle indicazioni geografiche | 48 | PDO/PGI |
+| Fondazione Slow Food per la Biodiversità - Presìdi e Arca del Gusto | 34 | Seasonality, Varieties |
+| GBIF Backbone Taxonomy (funghi) | 10 | Botany |
+| AGRIBALYSE 3.1 (ADEME, Francia) - impatti ambientali degli alimenti | 7 | Environmental Footprint |
+| Provincia di Cuneo - Schede dei funghi commestibili | 3 | Seasonality |
+| Gesundheitsportal Österreichs - Saisonkalender (Ministero della salute aust | 2 | European Seasonality |
+| Legge 16 dicembre 1985, n. 752 - Normativa quadro sui tartufi (art. 6, peri | 2 | Seasonality |
+| iNaturalist (solo foto CC0 / CC BY / CC BY-SA) | 1 | Images |
+| Istituto Superiore di Sanità - Rapporti ISTISAN 09/47 (carenza di G6PD e fa | 1 | Health Notes |
+| Regione Emilia-Romagna, BUR 2012 - Disciplinare IGP Amarene Brusche di Mode | 1 | Seasonality |
+| Biblioteca civica Bertoliana (Vicenza) - Scheda botanica del lampascione | 1 | Seasonality |
+| NaturaSì - Frutta e verdura di stagione (schede prodotto) | 1 | Seasonality |
 | ISMEA Mercati | 0 |  |
 | Servizi agricoli regionali (Veneto Agricoltura, ERSA FVG, ARSIAL) | 0 |  |
-| EUFIC - European national sources on seasonal fruit and vegetables | tutto il database |  |
-| EUFIC - Are seasonal fruit and vegetables better for the environment? | tutto il database |  |
+| EUFIC - European national sources on seasonal fruit and vegetables | whole database |  |
+| EUFIC - Are seasonal fruit and vegetables better for the environment? | whole database |  |
 | USDA ARS Image Gallery | 0 |  |
-| EEA - Biogeographical regions, Europe 2016 (Agenzia europea dell'ambiente) | tutto il database |  |
+| EEA - Biogeographical regions, Europe 2016 (Agenzia europea dell'ambiente) | whole database |  |
 
-Fonti valutate e non usate: ISMEA e calendari regionali per le epoche di raccolta della frutta (nessun dato strutturato per macro-area); USDA ARS Image Gallery (poche immagini pertinenti); calendario MAPA (Spagna), indicato da EUFIC ma non raggiungibile (pagine 404). My-PersonalTrainer è usato solo per testi e link, nessun valore numerico.
+Sources assessed but not used: ISMEA and regional calendars for fruit harvest periods (no structured data by macro-area); USDA ARS Image Gallery (few relevant images); MAPA calendar (Spain), cited by EUFIC but unreachable (404 pages). My-PersonalTrainer is used only for texts and links, never for numeric values.
 
-## 5. Conflitti tra fonti e decisioni
+## 5. Conflicts between sources and decisions
 
-I casi sono in `metadata.source_conflicts` (IT/EN). In breve:
+The cases are in `metadata.source_conflicts` (IT/EN). In short:
 
-- **Molti valori della bozza iniziale non coincidevano con le fonti ufficiali.** La bozza era stata compilata senza riferimenti puntuali e mescolava fonti e contesti diversi. → *Decisione:* Vale sempre la fonte ufficiale. Il valore della bozza è registrato come discrepanza nella scheda e, se non verificabile, è tolto dall'app ma conservato a parte. *Perché:* Nessun dato inventato e nessuna informazione persa.
-- **CREA, BDA-IEO e USDA danno valori diversi per lo stesso prodotto.** Campioni, varietà, Paesi e metodi diversi (es. carboidrati 'disponibili' in Europa e 'per differenza' negli USA). → *Decisione:* Ordine di priorità: CREA, poi BDA-IEO (anche per completare i nutrienti mancanti), USDA solo se mancano le prime due. La fonte è indicata per ogni valore. *Perché:* Le tabelle italiane descrivono i prodotti venduti in Italia.
-- **I calendari italiani non sempre coincidono sui mesi di stagione.** Considerano territori, varietà e coltivazioni (pieno campo, serra) diversi. → *Decisione:* Per ogni mese e macro-area si contano le fonti che lo indicano: con almeno metà dei voti il mese è di stagione, con meno è inizio o fine stagione; il picco sono i mesi centrali di un periodo di almeno tre mesi in cui tutte le fonti concordano. *Perché:* Il voto riduce il peso di una singola fonte e la regola è la stessa per tutti i prodotti.
-- **EUFIC dà i dati per Paese, non per zona climatica, e non elenca tutti i prodotti.** Ogni Paese ha la sua fonte nazionale e i Paesi stanno in più zone. → *Decisione:* Ogni Paese è assegnato alla zona prevalente; le zone mancanti sono colmate con fonti nazionali indicate da EUFIC o, per la zona mediterranea, con la stagionalità del Sud Italia. La provenienza è indicata zona per zona. *Perché:* Approssimazione dichiarata, utile per chi usa l'app fuori dall'Italia.
-- **Alcuni prodotti (tartufi, ovolo, pesca noce) non compaiono nei calendari di stagione italiani.** I calendari trattano frutta e verdura coltivate e non distinguono forme della stessa specie (pesca e pesca noce). → *Decisione:* Si usa la fonte più autorevole disponibile per quel prodotto: la legge sui periodi di raccolta per i tartufi, una scheda micologica istituzionale per l'ovolo, la stagionalità della pesca per la pesca noce. La fonte è indicata in seasonality.italy_source o nelle note. *Perché:* Meglio una stagionalità da fonte specifica e dichiarata che un vuoto.
-- **Per cetriolo, melanzana, peperoni e agrumi FoodKeeper indica il frigorifero, la guida UC Davis la temperatura ambiente.** FoodKeeper guarda alla sicurezza e alla durata, la guida UC Davis al gusto: questi prodotti soffrono il freddo e in frigo perdono qualità. → *Decisione:* Il 'dove' segue la guida UC Davis, le durate seguono FoodKeeper; l'etichetta breve riporta entrambe le opzioni e la scelta è spiegata nella scheda. *Perché:* Per un'app sulla stagionalità conta mantenere il sapore, senza nascondere l'alternativa.
-- **Le durate di HB66 (settimane o mesi) sono molto più lunghe di quelle di FoodKeeper (giorni).** HB66 si riferisce a celle professionali a temperatura e umidità ottimali; FoodKeeper a un frigorifero di casa. → *Decisione:* Sono due campi distinti: durata domestica e durata professionale. Una durata professionale non viene mai usata come durata domestica. *Perché:* Evita promesse irrealistiche all'utente.
-- **Soglia di danno da freddo e punto di congelamento sono spesso dati come intervalli.** Dipendono da varietà, maturazione e zuccheri disciolti. → *Decisione:* Si usa l'estremo più alto (il più prudente) e si conserva l'intervallo quando disponibile. Se il danno avviene in una fascia (drupacee 2-8 °C) non si indica una soglia unica. *Perché:* Un consiglio prudente non danneggia il prodotto.
-- **La tabella riassuntiva di HB66 contiene alcuni refusi (es. 1310 per il radicchio) e molti prodotti non sono misurati a 5 °C.** Errori di impaginazione del PDF; i prodotti sensibili al freddo non vengono studiati a basse temperature. → *Decisione:* Ordine: classe della tabella di Kader, poi valori dei capitoli, poi stima a 5 °C con i Q10 di HB66 (marcata come stimata). I valori palesemente errati non sono usati. *Perché:* Usare per prima la classificazione dell'autore di riferimento.
-- **Le impronte ambientali variano molto tra studi e banche dati.** Metodi, Paesi, rese e confini del sistema diversi (dal campo all'azienda, o fino al consumo). → *Decisione:* Si usa SU-EATABLE LIFE (mediana armonizzata) con numero di studi e intervallo; AGRIBALYSE solo per le erbe che mancano, con i confini dichiarati. *Perché:* Valori confrontabili tra prodotti e incertezza trasparente.
-- **Alcuni testi scritti fondendo più fonti citavano durate o nutrienti diversi dai dati strutturati.** I testi riprendevano fonti italiane divulgative, i dati vengono da banche dati ufficiali. → *Decisione:* I dati strutturati prevalgono: le etichette di conservazione e le liste 'ricco di / fonte di' sono state riallineate ai dati e ai claim UE. *Perché:* L'app non deve dire due cose diverse sullo stesso prodotto.
-- **Per alcuni prodotti una fonte non ha una voce esatta.** Le banche dati internazionali non coprono tutte le specialità italiane (es. cicoria da taglio, cime di rapa, valerianella). → *Decisione:* Si usa la voce più vicina, sempre marcata 'approssimata' e indicata nella scheda. *Perché:* Un dato approssimato dichiarato è più utile di un vuoto, purché trasparente.
-- **Il nome d'uso di una varietà può differire da quello registrato.** I registri usano la denominazione ufficiale (es. 'Spadona' per Spadonino, 'Detroit 2' per Detroit). → *Decisione:* Si mostra il nome d'uso e si riporta il nome registrato con il Paese di iscrizione. *Perché:* Leggibilità per l'utente e verificabilità sul registro.
+- **Many values in the initial draft did not match the official sources.** The draft had been compiled without specific references and mixed different sources and contexts. → *Decision:* The official source always prevails. The draft value is recorded as a discrepancy in the record and, if unverifiable, removed from the app but kept separately. *Why:* No invented data and no information lost.
+- **CREA, BDA-IEO and USDA give different values for the same product.** Different samples, varieties, countries and methods (e.g. 'available' carbohydrates in Europe and 'by difference' in the USA). → *Decision:* Order of priority: CREA, then BDA-IEO (also to fill missing nutrients), USDA only when the first two are missing. The source is given for every value. *Why:* Italian tables describe the products sold in Italy.
+- **Italian calendars do not always agree on in-season months.** They consider different areas, varieties and growing methods (open field, greenhouse). → *Decision:* For each month and macro-area the sources listing it are counted: with at least half of the votes the month is in season, with fewer it is early or end of season; the peak is the central months of a period of at least three months on which all sources agree. *Why:* Voting reduces the weight of any single source and the same rule applies to every product.
+- **EUFIC gives data by country, not by climate zone, and does not list every product.** Each country has its own national source and countries span several zones. → *Decision:* Each country is assigned to its main zone; missing zones are filled with national sources listed by EUFIC or, for the Mediterranean zone, with Southern Italian seasonality. The origin is given zone by zone. *Why:* A declared approximation, useful for people using the app outside Italy.
+- **Some produce (truffles, Caesar's mushroom, nectarine) are missing from Italian seasonal calendars.** Calendars cover cultivated produce and do not separate forms of the same species (peach and nectarine). → *Decision:* The most authoritative source available for that product is used: the harvest-period law for truffles, an institutional mushroom sheet for Caesar's mushroom, peach seasonality for nectarine. The source is stated in seasonality.italy_source or in the notes. *Why:* A declared, product-specific source is better than a gap.
+- **For cucumber, eggplant, peppers and citrus FoodKeeper says fridge, the UC Davis guide room temperature.** FoodKeeper focuses on safety and storage time, the UC Davis guide on taste: these products are chilling-sensitive and lose quality in the fridge. → *Decision:* The 'where' follows the UC Davis guide, durations follow FoodKeeper; the short label gives both options and the choice is explained in the record. *Why:* For a seasonality app keeping the flavour matters, without hiding the alternative.
+- **HB66 storage times (weeks or months) are much longer than FoodKeeper's (days).** HB66 refers to commercial cold stores at optimal temperature and humidity; FoodKeeper to a home fridge. → *Decision:* They are two separate fields: home and commercial storage time. A commercial time is never used as a home time. *Why:* It avoids unrealistic promises to the user.
+- **Chilling threshold and freezing point are often given as ranges.** They depend on variety, ripeness and dissolved sugars. → *Decision:* The highest end (the most cautious) is used and the range is kept when available. If damage occurs within a band (stone fruit 2-8 °C) no single threshold is given. *Why:* Cautious advice does not damage the produce.
+- **HB66's summary table contains some typos (e.g. 1310 for radicchio) and many products are not measured at 5 °C.** PDF layout errors; chilling-sensitive products are not studied at low temperatures. → *Decision:* Order: Kader table class, then chapter values, then an estimate at 5 °C with HB66 Q10 values (marked as estimated). Clearly wrong values are not used. *Why:* Use the reference author's classification first.
+- **Environmental footprints vary widely between studies and databases.** Different methods, countries, yields and system boundaries (field to farm gate, or up to consumption). → *Decision:* SU-EATABLE LIFE (harmonised median) is used with the number of studies and range; AGRIBALYSE only for the missing herbs, with its boundaries stated. *Why:* Values comparable between produce and transparent uncertainty.
+- **Some texts written by merging several sources quoted durations or nutrients different from the structured data.** The texts drew on Italian popular sources, the data come from official databases. → *Decision:* Structured data prevail: storage labels and 'rich in / source of' lists were realigned with the data and EU claims. *Why:* The app must not say two different things about the same product.
+- **For some produce a source has no exact entry.** International databases do not cover every Italian speciality (e.g. cutting chicory, turnip tops, corn salad). → *Decision:* The closest entry is used, always marked 'approximate' and stated in the record. *Why:* A declared approximate value is more useful than a gap, provided it is transparent.
+- **A variety's common name may differ from its registered name.** Registers use the official denomination (e.g. 'Spadona' for Spadonino, 'Detroit 2' for Detroit). → *Decision:* The common name is shown and the registered name is given with the country of registration. *Why:* Readability for the user and verifiability on the register.
 
-I singoli casi alimento per alimento restano registrati in `data_completeness.discrepancies` (1359 discrepanze tra la bozza e le fonti) e nei campi `basis` e `note`.
+Individual product-level cases remain recorded in `data_completeness.discrepancies` (1359 discrepancies between the draft and the sources) and in the `basis` and `note` fields.
 
-## 6. Come è stato validato
+## 6. How it was validated
 
-Quattro livelli di controllo, tutti rieseguibili.
+Four levels of checks, all re-runnable.
 
 ### 6.1 Schema
 
-`validate_db.py` verifica il database contro `data/schema.json` (tipi, campi obbligatori, valori ammessi, formato dei mesi e dei testi bilingui) e alcuni controlli di coerenza (id, somma acqua+macronutrienti, file immagine presenti). Esito: nessun errore sui dati; gli unici errori sono le immagini che stai eliminando, che spariranno con la sincronizzazione finale.
+`validate_db.py` checks the database against `data/schema.json` (types, required fields, allowed values, month and bilingual-text formats) plus some consistency checks (ids, water+macronutrient sum, image files present). Result: no data errors; the only remaining warnings concern image files.
 
-### 6.2 Verifiche incrociate sulle fonti
+### 6.2 Cross-checks against the sources
 
-- **Botanica**: nome scientifico confrontato tra EPPO, WFO e GBIF; genere coerente con nome scientifico e codice UPOV.
-- **Varietà**: mostrate solo se trovate in una fonte (testi delle fonti, Slow Food, Catalogo comune UE, con nome registrato e Paese).
-- **DOP/IGP**: ogni denominazione controllata sul registro UE eAmbrosia (stato e categoria).
-- **Nutrizione**: calorie ricalcolate dai macronutrienti, %VNR e claim UE ricalcolati dai valori, sale = sodio × 2,5.
-- **Post-raccolta**: valori dei capitoli HB66 trascritti con la citazione in `scripts/config/hb66_chapter_curated.json`; refusi evidenti della tabella riassuntiva esclusi.
+- **Botany**: scientific name compared across EPPO, WFO and GBIF; genus consistent with scientific name and UPOV code.
+- **Varieties**: shown only if found in a source (source texts, Slow Food, EU Common Catalogue, with registered name and country).
+- **PDO/PGI**: every designation checked on the EU eAmbrosia register (status and category).
+- **Nutrition**: energy recomputed from macronutrients, %NRV and EU claims recomputed from the values, salt = sodium × 2.5.
+- **Postharvest**: HB66 chapter values transcribed with their quote in `scripts/config/hb66_chapter_curated.json`; obvious typos in the summary table excluded.
 
-### 6.3 Ricontrollo sistematico voce per voce
+### 6.3 Systematic item-by-item re-check
 
-`audit_db.py` controlla ogni scheda: coerenza calorie/macronutrienti, %VNR, claim UE, porzioni e impronte per porzione; stati stagionali e mesi; raccolta rispetto alla stagionalità; intervalli min ≤ max; soglie di danno da freddo e punti di congelamento; durate domestiche rispetto a quelle professionali; luogo di conservazione rispetto alle etichette dei testi; etilene (produttori, "tenere lontano da"); classe di respirazione rispetto alla deperibilità; gruppo di compatibilità rispetto alle temperature; botanica; varietà; DOP/IGP; immagini e licenze; URL delle fonti; completezza dei testi IT/EN e assenza di testo italiano nei campi inglesi. Controlla inoltre i metadati: ogni voce del glossario bilingue e con fonti registrate, rimandi `see_also`, `field_help` e `help_refs` verso voci esistenti, ogni valore codificato presente nel vocabolario, ogni fonte descritta.
+`audit_db.py` checks every record: consistency of energy/macronutrients, %NRV, EU claims, portions and per-portion footprints; seasonal states and months; harvest versus seasonality; min ≤ max ranges; chilling-injury thresholds and freezing points; home storage times versus commercial ones; storage location versus text labels; ethylene (producers, "keep away from"); respiration class versus perishability; compatibility group versus temperatures; botany; varieties; PDO/PGI; images and licences; source URLs; completeness of IT/EN texts and no Italian text in English fields. It also checks the metadata: every glossary entry bilingual and with registered sources, `see_also`, `field_help` and `help_refs` pointing to existing entries, every coded value present in the vocabulary, every source described.
 
-Segnalazioni residue sui dati (spiegate, non sono errori):
+Remaining data warnings (explained, not errors; messages are the audit's original Italian output):
 
-| Livello | Alimento | Campo | Dettaglio |
+| Level | Product | Field | Detail |
 |---|---|---|---|
 | E | cavolo_nero_black_kale | macros_per_100g.sugars_g | zuccheri 0.99 > carboidrati 0.3 |
 | W | cipolla_invernale_winter_onion | storage_compatibility | gruppo 3 (13-18 °C) ma temperatura ottimale {'min': 0.0, 'max': 0.0} |
@@ -215,35 +215,35 @@ Segnalazioni residue sui dati (spiegate, non sono errori):
 | W | maracuja_passion_fruit | chilling_injury | temperatura ottimale {'min': 7.0, 'max': 10.0} sotto la soglia di danno 10 °C |
 | W | oliva_olive | chilling_injury | temperatura ottimale {'min': 5.0, 'max': 7.5} sotto la soglia di danno 7 °C |
 
-Spiegazione: il cavolo nero ha zuccheri > carboidrati per come USDA calcola i carboidrati (per differenza) → annotato; l'orzo supera di poco 105 g/100 g sommando acqua e macronutrienti per arrotondamenti della tabella CREA; le soglie "sotto la temperatura ottimale" derivano dall'estremo dell'intervallo minimo sicuro HB66; cipolla secca nel gruppo 3 e melone/avocado nel gruppo 1B sono come nella tabella di compatibilità HB66 (gruppi per lo stoccaggio misto di 7 giorni, non temperature ottimali); le differenze tra etichette e FoodKeeper per peperoncino, banana e melograno sono volute (guida UC Davis per il gusto).
+Explanation: in cavolo nero sugars > carbohydrates because of how USDA computes carbohydrates (by difference) → noted; barley slightly exceeds 105 g/100 g when summing water and macronutrients because of rounding in the CREA table; the "below optimal temperature" thresholds come from the end of HB66's lowest safe range; dry onion in group 3 and melon/avocado in group 1B are as in the HB66 compatibility table (groups for 7-day mixed storage, not optimal temperatures); the differences between labels and FoodKeeper for chilli pepper, banana and pomegranate are intentional (UC Davis guide, optimised for taste).
 
-### 6.4 Copertura del template e riproducibilità
+### 6.4 Template coverage and reproducibility
 
-`template_coverage.py` verifica, per ognuno dei 62 campi del modello JSON del prompt, quanti alimenti hanno un dato verificato: 16 campi sono completi per tutti i 153 alimenti (dettaglio in `data/template_coverage.json`). Infine il tratto finale della pipeline è stato rieseguito da un'istantanea precedente: il risultato coincide con il database consegnato (la riesecuzione ha anche fatto emergere e correggere una dipendenza d'ordine nel registro delle fonti).
+`template_coverage.py` checks, for each of the 62 fields of the original JSON template, how many products have verified data: 16 fields are complete for all 153 products (details in `data/template_coverage.json`). Finally, the last part of the pipeline was re-run from an earlier snapshot: the result matches the delivered database (the re-run also revealed and fixed an ordering dependency in the source register).
 
-## 7. Dati recuperati e lacune residue
+## 7. Recovered data and remaining gaps
 
-Recuperi dell'ultima fase, dalle fonti proposte:
+Data recovered in the last phase, from the proposed sources:
 
-- **Punto di congelamento** ("highest freezing point" di HB66, cioè la temperatura più alta a cui inizia a formarsi ghiaccio; se la fonte dà un intervallo si usa l'estremo più alto, il più prudente): 44 alimenti. Gli altri non hanno il valore nel capitolo HB66.
-- **Classe di respirazione**: 130 alimenti; 0 stimate a 5 °C dai valori misurati a temperatura più alta con i Q10 di HB66, marcate come stimate. Restano senza classe: cardo, zucca, castagna, rosmarino, mela cotogna (nessun valore misurato).
-- **Impronta di carbonio delle erbe aromatiche**: 7 da AGRIBALYSE 3.1 (ADEME), con confini del sistema dichiarati (fino al consumo, quindi non confrontabile 1:1 con SU-EATABLE LIFE). Impronta idrica non presa da AGRIBALYSE, perché misura la scarsità e non il volume.
-- **Stagionalità italiana per alimenti assenti dai calendari**: pesca noce dalla pesca (i calendari non le distinguono; lo confermano l'IGP "Pesca e Nettarina di Romagna" ed EUFIC); tartufo nero e bianco dalla Legge 752/1985, art. 6 (periodi di raccolta); ovolo dalla scheda della Provincia di Cuneo ("estate e inizio autunno"). Fonte in `seasonality.italy_source`.
-- **Decisioni sul perimetro (5 novembre)**: bietola da coste e da taglio unite in "Bietola" (stessa specie e stessa scheda CREA); pesca tabacchiera aggiunta come varietà della pesca (Arca del Gusto Slow Food); tartufo bianco aggiunto in deroga alla regola di ammissione (nessuna scheda CREA/BDA: nutrizione vuota e dichiarata). Dalla revisione sistematica degli esclusi (`data/excluded_candidates_report.md`) l'utente ha poi deciso di includere 44 alimenti (tutti tranne bergamotto, cappero, acetosa, corbezzolo e portulaca) anche con campi incompleti: sono stati costruiti con la stessa pipeline, su un database di prova, e poi uniti; dove mancano dati ufficiali il campo resta vuoto e dichiarato. Per 33 di loro la stagionalità italiana viene da fonti specifiche lette a mano (`config/italy_seasonality_curated.json`): periodi di raccolta di Orto da Coltivare, schede Slow Food, schede funghi della Provincia di Cuneo, disciplinare IGP delle amarene; taccola e mirabella riprendono pisello e susina (stessa specie). Per 4 la nutrizione viene da una voce USDA di un prodotto affine, dichiarata come approssimazione.
-- **Stime per le zone senza dato** (decisione del 6 novembre): molte zone EUFIC mancano (la pannonica comprende solo l'Ungheria). `seasonality.estimates` contiene, separate dai dati, le stime dalla zona vicina con il clima più simile (es. pannonica <- continentale), marcate nell'app con ≈ e disattivabili dalle Impostazioni; la stima parte sempre da un dato vero. Per i frutti esotici le zone senza dato sono "Non coltivato qui". Metodo in `metadata.seasonality_estimates_method`.
-- **Zone climatiche europee**: zona alpina da calendario del Ministero della salute austriaco, fonte nazionale indicata da EUFIC (2 alimenti); zona mediterranea derivata, dichiaratamente, dalla stagionalità di Sud e Isole (23 alimenti). Provenienza in `seasonality.eufic_zone_sources`.
+- **Freezing point** (HB66's "highest freezing point", the highest temperature at which ice starts to form; for a range the upper, most cautious end is used): 44 products. The others have no value in their HB66 chapter.
+- **Respiration class**: 130 products; 0 estimated at 5 °C from values measured at higher temperatures using HB66 Q10 values, flagged as estimated. Still without a class: cardoon, pumpkin, chestnut, rosemary, quince (no measured value).
+- **Carbon footprint of culinary herbs**: 7 from AGRIBALYSE 3.1 (ADEME), with declared system boundaries (up to consumption, so not directly comparable with SU-EATABLE LIFE). Water footprint not taken from AGRIBALYSE, because it measures scarcity, not volume.
+- **Italian seasonality for products missing from the calendars**: nectarine from peach (the calendars do not separate them; confirmed by the "Pesca e Nettarina di Romagna" PGI and EUFIC); black and white truffle from Law 752/1985, art. 6 (harvest periods); Caesar's mushroom from the Province of Cuneo mushroom sheet ("summer and early autumn"). Source in `seasonality.italy_source`.
+- **Scope decisions (5 November)**: chard and leaf beet merged into "Chard" (same species and same CREA record); flat peach (pesca tabacchiera) added as a peach variety (Slow Food Ark of Taste); white truffle added as an exception to the inclusion rule (no CREA/BDA record: nutrition empty and declared). After the systematic review of excluded candidates (`data/excluded_candidates_report.md`) 44 products were added (all except bergamot, caper, sorrel, strawberry tree and purslane) even with incomplete fields: they were built with the same pipeline on a test database and then merged; where official data are missing the field stays empty and declared. For 33 of them Italian seasonality comes from specific sources read by hand (`config/italy_seasonality_curated.json`): Orto da Coltivare harvest periods, Slow Food sheets, Province of Cuneo mushroom sheets, the sour cherry PGI specification; snow pea and mirabelle reuse pea and plum (same species). For 4 of them nutrition comes from a USDA entry of a related product, declared as an approximation.
+- **Estimates for zones without data** (decision of 6 November): many EUFIC zones are missing (the Pannonian zone covers Hungary only). `seasonality.estimates` holds, separate from the data, estimates from the neighbouring zone with the most similar climate (e.g. Pannonian <- Continental), marked with ≈ in the app and switchable off in Settings; an estimate always starts from real data. For exotic fruit, zones without data are "Not grown here". Method in `metadata.seasonality_estimates_method`.
+- **European climate zones**: Alpine zone from the Austrian Ministry of Health calendar, the national source cited by EUFIC (2 products); Mediterranean zone explicitly derived from South and Islands seasonality (23 products). Provenance in `seasonality.eufic_zone_sources`.
 
-Non recuperabili con fonti accessibili (lacune documentate):
+Not recoverable from accessible sources (documented gaps):
 
-- **Calendari agricoli di frutta, erbe e cereali per macro-area**: né ISMEA né i servizi regionali pubblicano dati strutturati per Nord/Centro/Sud; i valori della bozza restano "da verificare".
-- **Varietà locali (L. 194/2015)**: non esiste un elenco nazionale scaricabile, solo registri regionali eterogenei.
-- **Zone atlantica, continentale, boreale e pannonica mancanti**: riguardano soprattutto prodotti che lì non si coltivano (agrumi, cachi, nespola, fico d'India); restano vuote.
-- **Parametri agronomici di erbe e funghi (CREA-OF)**: non tentato in questa fase.
-- **Funghi spontanei e tartufo**: nessuna impronta ambientale (raccolta spontanea, nessuno studio LCA).
+- **Agricultural calendars of fruit, herbs and cereals by macro-area**: neither ISMEA nor regional services publish structured data for North/Centre/South; the draft values remain "to verify".
+- **Local varieties (Law 194/2015)**: there is no downloadable national list, only heterogeneous regional registers.
+- **Missing Atlantic, Continental, Boreal and Pannonian zones**: they mostly concern products not grown there (citrus, persimmon, loquat, prickly pear); they stay empty.
+- **Agronomic parameters of herbs and mushrooms (CREA-OF)**: not attempted in this phase.
+- **Wild mushrooms and truffles**: no environmental footprint (wild harvest, no LCA study).
 
-Mappa delle lacune (campi senza dato):
+Gap map (fields without data):
 
-| Campo | Alimenti | Quali (primi 10) |
+| Field | Products | Which (first 10) |
 |---|---|---|
 | `ripening_and_storage.postharvest_physiology.freezing_point_c` | 99 | aglio, agretti, alchechengi, amarena, ananas, anguria, asparago, asparago, avocado, banana … |
 | `seasonality.eufic_climatic_zones.pannonian` | 97 | agretti, alchechengi, amarena, ananas, anguria, arachide, arancia, asparago, avena, avocado … |
@@ -276,178 +276,178 @@ Mappa delle lacune (campi senza dato):
 | `seasonality.italy_macro_areas` | 14 | cardoncello, cavolo, daikon, fico, indivia, indivia, mela, mirtillo, ribes, sambuco … |
 | `ripening_and_storage.perishability` | 13 | agretti, alchechengi, carruba, cicerchia, cocco, erba, giuggiola, lampascioni, mela, nespola … |
 
-## 8. Avvertenze per l'uso nell'app
+## 8. Caveats for use in the app
 
-- **Fonti non italiane**: conservazione (USDA HB66, FoodKeeper, UC Davis), composti bioattivi (USDA, Phenol-Explorer) e alcuni micronutrienti vengono da fonti USA o internazionali; la nutrizione principale è CREA o BDA-IEO.
-- **Durate**: la durata domestica (FoodKeeper) e quella professionale (HB66) sono campi distinti; l'app deve mostrare all'utente la prima.
-- **Impronte ambientali**: mediane di letteratura con alta variabilità; le soglie basso/medio/alto sono una convenzione dell'app, dichiarata in `basis`.
-- **Polifenoli**: valori indicativi per 100 g di prodotto crudo. Phenol-Explorer: uso non commerciale, citare la fonte.
-- **Claim UE**: calcolati sul crudo per 100 g (Reg. CE 1924/2006); il claim "proteine" nei prodotti poco calorici è contestualizzato con i LARN.
-- **PAT**: collegamento per parole chiave; include anche prodotti trasformati.
-- **Testi**: riscritti fondendo più fonti e riallineati ai dati; alcune frasi descrittive (curiosità, usi in cucina) sono di conoscenza generale.
+- **Non-Italian sources**: storage (USDA HB66, FoodKeeper, UC Davis), bioactive compounds (USDA, Phenol-Explorer) and some micronutrients come from US or international sources; the main nutrition data are CREA or BDA-IEO.
+- **Storage times**: home storage time (FoodKeeper) and commercial storage time (HB66) are separate fields; the app must show users the former.
+- **Environmental footprints**: literature medians with high variability; the low/medium/high thresholds are an app convention, declared in `basis`.
+- **Polyphenols**: indicative values per 100 g of raw product. Phenol-Explorer: non-commercial use, cite the source.
+- **EU claims**: computed on raw product per 100 g (Reg. (EC) 1924/2006); the protein claim for low-energy produce is put into context with LARN.
+- **PAT**: linked by keywords; also includes processed products.
+- **Texts**: rewritten by merging several sources and realigned with the data; some descriptive sentences (curiosities, culinary uses) are general knowledge.
 
-## 9. Stato per alimento
+## 9. Status per product
 
-| Alimento | Categoria | Fonti | Voci di aiuto | Da verificare | Mancanti | N/A | Segnalazioni |
+| Product | Category | Sources | Help entries | To verify | Missing | N/A | Warnings |
 |---|---|---|---|---|---|---|---|
-| Avena | Cereali | 16 | 3 | 18 | 20 | 22 | 0 |
-| Farro | Cereali | 17 | 6 | 17 | 19 | 27 | 0 |
-| Grano Duro | Cereali | 18 | 5 | 17 | 19 | 24 | 0 |
-| Grano Saraceno | Cereali | 18 | 4 | 17 | 19 | 28 | 0 |
-| Orzo | Cereali | 19 | 4 | 18 | 19 | 23 | 1 |
-| Riso | Cereali | 19 | 5 | 18 | 20 | 23 | 0 |
-| Basilico | Erbe e spezie | 24 | 5 | 1 | 9 | 17 | 0 |
-| Erba Cipollina | Erbe e spezie | 16 | 2 | 0 | 28 | 14 | 0 |
-| Menta | Erbe e spezie | 23 | 4 | 17 | 20 | 21 | 0 |
-| Origano | Erbe e spezie | 18 | 3 | 20 | 18 | 37 | 0 |
-| Peperoncino Piccante | Erbe e spezie | 24 | 5 | 2 | 7 | 12 | 0 |
-| Prezzemolo | Erbe e spezie | 25 | 4 | 0 | 6 | 16 | 0 |
-| Rosmarino | Erbe e spezie | 22 | 4 | 18 | 19 | 22 | 0 |
-| Salvia | Erbe e spezie | 21 | 4 | 19 | 21 | 23 | 0 |
-| Timo | Erbe e spezie | 22 | 4 | 18 | 20 | 21 | 0 |
-| Zafferano | Erbe e spezie | 15 | 3 | 0 | 37 | 18 | 0 |
-| Albicocca | Frutta | 29 | 7 | 17 | 11 | 8 | 0 |
-| Alchechengi | Frutta | 12 | 1 | 0 | 42 | 8 | 0 |
-| Amarena | Frutta | 19 | 5 | 0 | 34 | 10 | 0 |
-| Ananas | Frutta | 21 | 4 | 0 | 8 | 31 | 0 |
-| Anguria (Cocomero) | Frutta | 27 | 6 | 0 | 3 | 4 | 0 |
-| Arancia | Frutta | 28 | 6 | 17 | 12 | 5 | 0 |
-| Avocado | Frutta | 23 | 5 | 17 | 4 | 22 | 1 |
-| Banana | Frutta | 22 | 4 | 6 | 6 | 22 | 0 |
-| Caco (Kaki) | Frutta | 24 | 5 | 19 | 18 | 13 | 0 |
-| Carruba | Frutta | 13 | 2 | 0 | 50 | 8 | 0 |
-| Castagna | Frutta | 21 | 6 | 24 | 23 | 9 | 0 |
-| Cedro | Frutta | 13 | 5 | 0 | 48 | 9 | 0 |
-| Chinotto | Frutta | 11 | 4 | 0 | 54 | 10 | 0 |
-| Ciliegia | Frutta | 29 | 7 | 17 | 12 | 7 | 0 |
-| Clementine | Frutta | 26 | 6 | 20 | 16 | 5 | 0 |
-| Cocco | Frutta | 16 | 3 | 0 | 43 | 8 | 0 |
-| Fico | Frutta | 26 | 5 | 19 | 15 | 8 | 0 |
-| Fico d'India | Frutta | 21 | 5 | 0 | 32 | 12 | 0 |
-| Fragola | Frutta | 28 | 6 | 17 | 11 | 7 | 0 |
-| Gelso (Mora di Gelso) | Frutta | 17 | 2 | 0 | 25 | 13 | 0 |
-| Giuggiola | Frutta | 15 | 2 | 0 | 48 | 8 | 0 |
-| Kiwi | Frutta | 27 | 5 | 17 | 16 | 12 | 0 |
-| Lampone | Frutta | 28 | 7 | 17 | 11 | 7 | 1 |
-| Lime | Frutta | 20 | 3 | 0 | 29 | 7 | 0 |
-| Limone | Frutta | 29 | 6 | 17 | 14 | 4 | 0 |
-| Litchi | Frutta | 19 | 3 | 0 | 29 | 12 | 0 |
-| Mandarino | Frutta | 28 | 7 | 18 | 16 | 5 | 0 |
-| Mandorla | Frutta | 17 | 5 | 0 | 31 | 11 | 0 |
-| Mango | Frutta | 23 | 5 | 17 | 18 | 10 | 0 |
-| Maracuja (Frutto della Passione) | Frutta | 19 | 3 | 0 | 9 | 30 | 1 |
-| Mela | Frutta | 29 | 5 | 18 | 11 | 5 | 0 |
-| Mela Cotogna | Frutta | 23 | 2 | 0 | 43 | 8 | 0 |
-| Melograno | Frutta | 25 | 6 | 17 | 14 | 11 | 0 |
-| Melone | Frutta | 27 | 7 | 0 | 2 | 3 | 1 |
-| Mirabella | Frutta | 15 | 3 | 0 | 33 | 10 | 0 |
-| Mirtillo | Frutta | 28 | 6 | 17 | 11 | 7 | 0 |
-| Mirtillo Rosso | Frutta | 17 | 4 | 0 | 36 | 11 | 0 |
-| Mora | Frutta | 26 | 4 | 17 | 11 | 7 | 0 |
-| Nespola | Frutta | 21 | 5 | 0 | 31 | 16 | 0 |
-| Nespola Comune | Frutta | 9 | 2 | 0 | 56 | 8 | 0 |
-| Nocciola | Frutta | 18 | 6 | 0 | 33 | 10 | 0 |
-| Noce | Frutta | 18 | 6 | 0 | 32 | 10 | 0 |
-| Oliva | Frutta | 17 | 5 | 0 | 30 | 15 | 1 |
-| Papaya | Frutta | 21 | 4 | 0 | 9 | 31 | 0 |
-| Pera | Frutta | 29 | 5 | 17 | 11 | 6 | 0 |
-| Pesca | Frutta | 29 | 7 | 18 | 12 | 5 | 0 |
-| Pesca Noce | Frutta | 23 | 6 | 0 | 26 | 5 | 0 |
-| Pistacchio | Frutta | 19 | 6 | 0 | 27 | 10 | 0 |
-| Pompelmo | Frutta | 26 | 5 | 0 | 26 | 7 | 0 |
-| Ribes Nero | Frutta | 19 | 2 | 0 | 25 | 12 | 0 |
-| Ribes Rosso | Frutta | 25 | 5 | 0 | 28 | 9 | 0 |
-| Sambuco (Bacche) | Frutta | 17 | 3 | 0 | 40 | 11 | 0 |
-| Susina (Prugna) | Frutta | 29 | 6 | 17 | 11 | 4 | 0 |
-| Uva Spina | Frutta | 16 | 2 | 0 | 38 | 12 | 0 |
-| Uva da Tavola | Frutta | 27 | 6 | 17 | 11 | 11 | 0 |
-| Cardoncello | Funghi | 13 | 4 | 0 | 35 | 15 | 0 |
-| Finferlo (Gallinaccio) | Funghi | 16 | 4 | 0 | 27 | 12 | 0 |
-| Fungo Champignon (Prataiolo) | Funghi | 20 | 4 | 12 | 14 | 16 | 0 |
-| Fungo Pleurotus (Orecchione) | Funghi | 19 | 4 | 15 | 16 | 16 | 0 |
-| Fungo Porcino | Funghi | 18 | 5 | 13 | 17 | 12 | 0 |
-| Ovolo Buono | Funghi | 14 | 3 | 0 | 28 | 13 | 0 |
-| Shiitake | Funghi | 13 | 3 | 0 | 34 | 15 | 0 |
-| Spugnola | Funghi | 14 | 3 | 0 | 28 | 12 | 0 |
-| Tartufo Bianco | Funghi | 9 | 4 | 0 | 44 | 21 | 0 |
-| Tartufo Nero | Funghi | 13 | 4 | 0 | 31 | 22 | 0 |
-| Aglio | Verdura | 30 | 6 | 0 | 2 | 14 | 0 |
-| Agretti (Barba di Frate) | Verdura | 14 | 2 | 0 | 32 | 10 | 0 |
-| Arachide | Verdura | 19 | 2 | 0 | 9 | 22 | 0 |
-| Asparago | Verdura | 29 | 5 | 0 | 1 | 5 | 0 |
-| Asparago Selvatico | Verdura | 15 | 4 | 0 | 33 | 11 | 0 |
-| Barbabietola Rossa | Verdura | 26 | 4 | 0 | 1 | 8 | 0 |
-| Bietola | Verdura | 25 | 5 | 1 | 4 | 7 | 0 |
-| Broccolo Romanesco | Verdura | 18 | 5 | 0 | 30 | 11 | 0 |
-| Carciofo | Verdura | 29 | 7 | 0 | 3 | 7 | 0 |
-| Cardo | Verdura | 18 | 5 | 11 | 13 | 7 | 0 |
-| Carota | Verdura | 29 | 7 | 0 | 0 | 7 | 0 |
-| Cavoletti di Bruxelles | Verdura | 23 | 3 | 0 | 0 | 7 | 0 |
-| Cavolfiore | Verdura | 28 | 6 | 0 | 1 | 6 | 0 |
-| Cavolo Broccolo | Verdura | 25 | 4 | 0 | 1 | 7 | 0 |
-| Cavolo Cappuccio | Verdura | 26 | 4 | 0 | 0 | 7 | 0 |
-| Cavolo Cinese (Pak Choi) | Verdura | 15 | 3 | 0 | 23 | 11 | 0 |
-| Cavolo Nero Toscano | Verdura | 25 | 5 | 1 | 3 | 6 | 1 |
-| Cavolo Rapa | Verdura | 20 | 4 | 0 | 2 | 10 | 0 |
-| Cavolo Rosso | Verdura | 23 | 4 | 0 | 22 | 7 | 0 |
-| Cavolo Verza | Verdura | 24 | 4 | 0 | 1 | 7 | 0 |
-| Cece | Verdura | 17 | 4 | 0 | 9 | 29 | 0 |
-| Cetriolo | Verdura | 27 | 6 | 0 | 2 | 6 | 0 |
-| Cicerchia | Verdura | 9 | 3 | 0 | 66 | 8 | 0 |
-| Cicoria da Cespo (Catalogna / Pan di Zucchero) | Verdura | 21 | 4 | 0 | 5 | 8 | 0 |
-| Cicoria da Taglio (Spadonino) | Verdura | 18 | 3 | 0 | 8 | 8 | 0 |
-| Cime di Rapa | Verdura | 23 | 4 | 1 | 9 | 12 | 0 |
-| Cipolla Estiva (Bianca/dorata) | Verdura | 26 | 6 | 0 | 0 | 7 | 0 |
-| Cipolla Invernale (Rossa/conservazione) | Verdura | 26 | 7 | 0 | 1 | 6 | 1 |
-| Cipollotto | Verdura | 20 | 5 | 0 | 26 | 12 | 0 |
-| Crescione | Verdura | 17 | 2 | 0 | 23 | 9 | 0 |
-| Daikon | Verdura | 15 | 3 | 0 | 32 | 17 | 0 |
-| Fagiolino (Tegolina / Cornetto) | Verdura | 27 | 6 | 0 | 0 | 5 | 1 |
-| Fagiolo | Verdura | 25 | 6 | 1 | 4 | 5 | 0 |
-| Fava | Verdura | 26 | 7 | 0 | 4 | 8 | 0 |
-| Finocchio | Verdura | 25 | 5 | 0 | 6 | 9 | 0 |
-| Gombo (Okra) | Verdura | 14 | 3 | 0 | 17 | 14 | 0 |
-| Indivia Belga | Verdura | 19 | 3 | 0 | 29 | 8 | 0 |
-| Indivia Riccia | Verdura | 18 | 3 | 0 | 30 | 9 | 0 |
-| Lampascioni | Verdura | 6 | 2 | 0 | 68 | 10 | 0 |
-| Lattuga da Cespo | Verdura | 28 | 7 | 0 | 0 | 6 | 0 |
-| Lattuga da Taglio | Verdura | 28 | 6 | 0 | 2 | 6 | 0 |
-| Lenticchia | Verdura | 19 | 4 | 0 | 9 | 28 | 0 |
-| Mais Dolce | Verdura | 21 | 6 | 0 | 3 | 9 | 0 |
-| Melanzana | Verdura | 29 | 8 | 0 | 0 | 2 | 0 |
-| Navone (Rutabaga) | Verdura | 12 | 3 | 0 | 36 | 15 | 0 |
-| Pastinaca | Verdura | 19 | 4 | 0 | 3 | 15 | 1 |
-| Patata | Verdura | 29 | 5 | 0 | 0 | 4 | 0 |
-| Patata Dolce (Batata) | Verdura | 17 | 4 | 0 | 24 | 11 | 0 |
-| Peperone Dolce | Verdura | 29 | 7 | 0 | 2 | 3 | 0 |
-| Pisello | Verdura | 26 | 5 | 0 | 2 | 8 | 0 |
-| Pomodoro | Verdura | 27 | 7 | 0 | 4 | 3 | 0 |
-| Porro | Verdura | 24 | 5 | 0 | 3 | 8 | 0 |
-| Puntarelle | Verdura | 16 | 4 | 0 | 17 | 12 | 0 |
-| Rabarbaro | Verdura | 14 | 1 | 0 | 26 | 9 | 0 |
-| Radicchio (Rosso di Treviso / Chioggia) | Verdura | 23 | 5 | 0 | 6 | 6 | 0 |
-| Rafano (Cren) | Verdura | 12 | 4 | 0 | 34 | 15 | 0 |
-| Rapa | Verdura | 21 | 5 | 0 | 2 | 10 | 0 |
-| Ravanello | Verdura | 27 | 4 | 0 | 1 | 9 | 0 |
-| Rucola | Verdura | 21 | 5 | 0 | 6 | 11 | 0 |
-| Salicornia | Verdura | 11 | 2 | 0 | 47 | 10 | 0 |
-| Scalogno | Verdura | 21 | 5 | 0 | 3 | 13 | 0 |
-| Scarola | Verdura | 19 | 3 | 0 | 29 | 9 | 0 |
-| Scorzonera | Verdura | 13 | 5 | 0 | 23 | 11 | 0 |
-| Sedano | Verdura | 28 | 7 | 0 | 0 | 7 | 0 |
-| Sedano Rapa | Verdura | 21 | 5 | 0 | 30 | 9 | 0 |
-| Spinacio | Verdura | 28 | 4 | 0 | 1 | 8 | 0 |
-| Taccola (Pisello Mangiatutto) | Verdura | 16 | 3 | 0 | 35 | 10 | 0 |
-| Topinambur (Carciofo di Gerusalemme) | Verdura | 17 | 4 | 2 | 5 | 17 | 0 |
-| Valerianella (Songino) | Verdura | 17 | 3 | 0 | 5 | 8 | 0 |
-| Zucca | Verdura | 28 | 6 | 1 | 1 | 5 | 0 |
-| Zucchina | Verdura | 27 | 5 | 0 | 1 | 5 | 0 |
-| Zucchina Spinosa (Chayote) | Verdura | 11 | 1 | 0 | 35 | 9 | 0 |
+| Barley | Cereals | 19 | 4 | 18 | 19 | 23 | 1 |
+| Buckwheat | Cereals | 18 | 4 | 17 | 19 | 28 | 0 |
+| Durum Wheat | Cereals | 18 | 5 | 17 | 19 | 24 | 0 |
+| Emmer Wheat (Farro) | Cereals | 17 | 6 | 17 | 19 | 27 | 0 |
+| Oat | Cereals | 16 | 3 | 18 | 20 | 22 | 0 |
+| Rice | Cereals | 19 | 5 | 18 | 20 | 23 | 0 |
+| Basil | Herbs and spices | 24 | 5 | 1 | 9 | 18 | 0 |
+| Chili Pepper | Herbs and spices | 24 | 5 | 2 | 7 | 12 | 0 |
+| Chives | Herbs and spices | 16 | 2 | 0 | 28 | 15 | 0 |
+| Mint | Herbs and spices | 23 | 4 | 17 | 20 | 22 | 0 |
+| Oregano | Herbs and spices | 18 | 3 | 20 | 18 | 37 | 0 |
+| Parsley | Herbs and spices | 25 | 4 | 0 | 6 | 17 | 0 |
+| Rosemary | Herbs and spices | 22 | 4 | 18 | 19 | 23 | 0 |
+| Saffron | Herbs and spices | 15 | 3 | 0 | 37 | 19 | 0 |
+| Sage | Herbs and spices | 21 | 4 | 19 | 21 | 24 | 0 |
+| Thyme | Herbs and spices | 22 | 4 | 18 | 20 | 22 | 0 |
+| Almond | Fruit | 17 | 5 | 0 | 31 | 12 | 0 |
+| Apple | Fruit | 29 | 5 | 18 | 11 | 5 | 0 |
+| Apricot | Fruit | 29 | 7 | 17 | 11 | 9 | 0 |
+| Avocado | Fruit | 23 | 5 | 17 | 4 | 22 | 1 |
+| Banana | Fruit | 22 | 4 | 6 | 6 | 22 | 0 |
+| Blackberry | Fruit | 26 | 4 | 17 | 11 | 8 | 0 |
+| Blackcurrant | Fruit | 19 | 2 | 0 | 25 | 13 | 0 |
+| Blueberry | Fruit | 28 | 6 | 17 | 11 | 8 | 0 |
+| Cape Gooseberry | Fruit | 12 | 1 | 0 | 42 | 9 | 0 |
+| Carob | Fruit | 13 | 2 | 0 | 50 | 9 | 0 |
+| Cherry | Fruit | 29 | 7 | 17 | 12 | 8 | 0 |
+| Chestnut | Fruit | 21 | 6 | 24 | 23 | 10 | 0 |
+| Chinotto | Fruit | 11 | 4 | 0 | 54 | 10 | 0 |
+| Citron | Fruit | 13 | 5 | 0 | 48 | 9 | 0 |
+| Clementine | Fruit | 26 | 6 | 20 | 16 | 5 | 0 |
+| Coconut | Fruit | 16 | 3 | 0 | 43 | 9 | 0 |
+| Elderberry | Fruit | 17 | 3 | 0 | 40 | 12 | 0 |
+| Fig | Fruit | 26 | 5 | 19 | 15 | 9 | 0 |
+| Gooseberry | Fruit | 16 | 2 | 0 | 38 | 13 | 0 |
+| Grapefruit | Fruit | 26 | 5 | 0 | 26 | 7 | 0 |
+| Hazelnut | Fruit | 18 | 6 | 0 | 33 | 11 | 0 |
+| Jujube | Fruit | 15 | 2 | 0 | 48 | 9 | 0 |
+| Kiwifruit | Fruit | 27 | 5 | 17 | 16 | 12 | 0 |
+| Lemon | Fruit | 29 | 6 | 17 | 14 | 4 | 0 |
+| Lime | Fruit | 20 | 3 | 0 | 29 | 7 | 0 |
+| Lingonberry | Fruit | 17 | 4 | 0 | 36 | 12 | 0 |
+| Loquat | Fruit | 21 | 5 | 0 | 31 | 17 | 0 |
+| Lychee | Fruit | 19 | 3 | 0 | 29 | 13 | 0 |
+| Mandarin | Fruit | 28 | 7 | 18 | 16 | 5 | 0 |
+| Mango | Fruit | 23 | 5 | 17 | 18 | 10 | 0 |
+| Medlar | Fruit | 9 | 2 | 0 | 56 | 9 | 0 |
+| Melon (Cantaloupe) | Fruit | 27 | 7 | 0 | 2 | 3 | 1 |
+| Mirabelle Plum | Fruit | 15 | 3 | 0 | 33 | 10 | 0 |
+| Mulberry | Fruit | 17 | 2 | 0 | 25 | 14 | 0 |
+| Nectarine | Fruit | 23 | 6 | 0 | 26 | 5 | 0 |
+| Olive | Fruit | 17 | 5 | 0 | 30 | 16 | 1 |
+| Orange | Fruit | 28 | 6 | 17 | 12 | 5 | 0 |
+| Papaya | Fruit | 21 | 4 | 0 | 9 | 31 | 0 |
+| Passion Fruit | Fruit | 19 | 3 | 0 | 9 | 31 | 1 |
+| Peach | Fruit | 29 | 7 | 18 | 12 | 5 | 0 |
+| Pear | Fruit | 29 | 5 | 17 | 11 | 6 | 0 |
+| Persimmon | Fruit | 24 | 5 | 19 | 18 | 13 | 0 |
+| Pineapple | Fruit | 21 | 4 | 0 | 8 | 31 | 0 |
+| Pistachio | Fruit | 19 | 6 | 0 | 27 | 11 | 0 |
+| Plum | Fruit | 29 | 6 | 17 | 11 | 4 | 0 |
+| Pomegranate | Fruit | 25 | 6 | 17 | 14 | 11 | 0 |
+| Prickly Pear | Fruit | 21 | 5 | 0 | 32 | 13 | 0 |
+| Quince | Fruit | 23 | 2 | 0 | 43 | 8 | 0 |
+| Raspberry | Fruit | 28 | 7 | 17 | 11 | 8 | 1 |
+| Redcurrant | Fruit | 25 | 5 | 0 | 28 | 10 | 0 |
+| Sour Cherry | Fruit | 19 | 5 | 0 | 34 | 11 | 0 |
+| Strawberry | Fruit | 28 | 6 | 17 | 11 | 8 | 0 |
+| Table Grape | Fruit | 27 | 6 | 17 | 11 | 12 | 0 |
+| Walnut | Fruit | 18 | 6 | 0 | 32 | 11 | 0 |
+| Watermelon | Fruit | 27 | 6 | 0 | 3 | 4 | 0 |
+| Black Truffle | Mushrooms | 13 | 4 | 0 | 31 | 23 | 0 |
+| Button Mushroom | Mushrooms | 20 | 4 | 12 | 14 | 17 | 0 |
+| Caesar's Mushroom | Mushrooms | 14 | 3 | 0 | 28 | 14 | 0 |
+| Chanterelle | Mushrooms | 16 | 4 | 0 | 27 | 13 | 0 |
+| King Oyster Mushroom | Mushrooms | 13 | 4 | 0 | 35 | 16 | 0 |
+| Morel | Mushrooms | 14 | 3 | 0 | 28 | 13 | 0 |
+| Oyster Mushroom | Mushrooms | 19 | 4 | 15 | 16 | 17 | 0 |
+| Porcini Mushroom | Mushrooms | 18 | 5 | 13 | 17 | 13 | 0 |
+| Shiitake | Mushrooms | 13 | 3 | 0 | 34 | 16 | 0 |
+| White Truffle | Mushrooms | 9 | 4 | 0 | 44 | 22 | 0 |
+| Artichoke | Vegetables | 29 | 7 | 0 | 3 | 8 | 0 |
+| Arugula (Rocket) | Vegetables | 21 | 5 | 0 | 6 | 12 | 0 |
+| Asparagus | Vegetables | 29 | 5 | 0 | 1 | 6 | 0 |
+| Beetroot | Vegetables | 26 | 4 | 0 | 1 | 9 | 0 |
+| Belgian Endive | Vegetables | 19 | 3 | 0 | 29 | 9 | 0 |
+| Bell Pepper | Vegetables | 29 | 7 | 0 | 2 | 3 | 0 |
+| Black Kale (Lacinato) | Vegetables | 25 | 5 | 1 | 3 | 7 | 1 |
+| Black Salsify | Vegetables | 13 | 5 | 0 | 23 | 12 | 0 |
+| Broad Bean (Fava Bean) | Vegetables | 26 | 7 | 0 | 4 | 9 | 0 |
+| Broccoli | Vegetables | 25 | 4 | 0 | 1 | 8 | 0 |
+| Brussels Sprouts | Vegetables | 23 | 3 | 0 | 0 | 8 | 0 |
+| Cabbage | Vegetables | 26 | 4 | 0 | 0 | 8 | 0 |
+| Cardoon | Vegetables | 18 | 5 | 11 | 13 | 8 | 0 |
+| Carrot | Vegetables | 29 | 7 | 0 | 0 | 8 | 0 |
+| Cauliflower | Vegetables | 28 | 6 | 0 | 1 | 7 | 0 |
+| Celeriac | Vegetables | 21 | 5 | 0 | 30 | 10 | 0 |
+| Celery | Vegetables | 28 | 7 | 0 | 0 | 8 | 0 |
+| Chard | Vegetables | 25 | 5 | 1 | 4 | 8 | 0 |
+| Chayote | Vegetables | 11 | 1 | 0 | 35 | 10 | 0 |
+| Chickpea | Vegetables | 17 | 4 | 0 | 9 | 29 | 0 |
+| Chicory | Vegetables | 21 | 4 | 0 | 5 | 9 | 0 |
+| Chinese Cabbage | Vegetables | 15 | 3 | 0 | 23 | 12 | 0 |
+| Common Bean | Vegetables | 25 | 6 | 1 | 4 | 6 | 0 |
+| Corn Salad (Lamb's Lettuce) | Vegetables | 17 | 3 | 0 | 5 | 9 | 0 |
+| Cucumber | Vegetables | 27 | 6 | 0 | 2 | 6 | 0 |
+| Curly Endive | Vegetables | 18 | 3 | 0 | 30 | 10 | 0 |
+| Cutting Chicory | Vegetables | 18 | 3 | 0 | 8 | 9 | 0 |
+| Daikon | Vegetables | 15 | 3 | 0 | 32 | 18 | 0 |
+| Eggplant (Aubergine) | Vegetables | 29 | 8 | 0 | 0 | 2 | 0 |
+| Escarole | Vegetables | 19 | 3 | 0 | 29 | 10 | 0 |
+| Fennel | Vegetables | 25 | 5 | 0 | 6 | 10 | 0 |
+| Garlic | Vegetables | 30 | 6 | 0 | 2 | 14 | 0 |
+| Grass Pea | Vegetables | 9 | 3 | 0 | 66 | 9 | 0 |
+| Green Bean (Snap Bean) | Vegetables | 27 | 6 | 0 | 0 | 6 | 1 |
+| Head Lettuce | Vegetables | 28 | 7 | 0 | 0 | 7 | 0 |
+| Horseradish | Vegetables | 12 | 4 | 0 | 34 | 16 | 0 |
+| Jerusalem Artichoke (Sunchoke) | Vegetables | 17 | 4 | 2 | 5 | 18 | 0 |
+| Kohlrabi | Vegetables | 20 | 4 | 0 | 2 | 11 | 0 |
+| Leaf Lettuce | Vegetables | 28 | 6 | 0 | 2 | 7 | 0 |
+| Leek | Vegetables | 24 | 5 | 0 | 3 | 9 | 0 |
+| Lentil | Vegetables | 19 | 4 | 0 | 9 | 28 | 0 |
+| Okra | Vegetables | 14 | 3 | 0 | 17 | 15 | 0 |
+| Parsnip | Vegetables | 19 | 4 | 0 | 3 | 16 | 1 |
+| Pea | Vegetables | 26 | 5 | 0 | 2 | 9 | 0 |
+| Peanut | Vegetables | 19 | 2 | 0 | 9 | 22 | 0 |
+| Potato | Vegetables | 29 | 5 | 0 | 0 | 4 | 0 |
+| Pumpkin (Winter Squash) | Vegetables | 28 | 6 | 1 | 1 | 5 | 0 |
+| Puntarelle | Vegetables | 16 | 4 | 0 | 17 | 13 | 0 |
+| Radicchio | Vegetables | 23 | 5 | 0 | 6 | 7 | 0 |
+| Radish | Vegetables | 27 | 4 | 0 | 1 | 10 | 0 |
+| Red Cabbage | Vegetables | 23 | 4 | 0 | 22 | 8 | 0 |
+| Rhubarb | Vegetables | 14 | 1 | 0 | 26 | 10 | 0 |
+| Romanesco | Vegetables | 18 | 5 | 0 | 30 | 12 | 0 |
+| Saltwort (Agretti) | Vegetables | 14 | 2 | 0 | 32 | 11 | 0 |
+| Samphire | Vegetables | 11 | 2 | 0 | 47 | 11 | 0 |
+| Savoy Cabbage | Vegetables | 24 | 4 | 0 | 1 | 8 | 0 |
+| Shallot | Vegetables | 21 | 5 | 0 | 3 | 13 | 0 |
+| Snow Pea | Vegetables | 16 | 3 | 0 | 35 | 11 | 0 |
+| Spinach | Vegetables | 28 | 4 | 0 | 1 | 9 | 0 |
+| Spring Onion | Vegetables | 20 | 5 | 0 | 26 | 13 | 0 |
+| Summer Onion | Vegetables | 26 | 6 | 0 | 0 | 7 | 0 |
+| Swede | Vegetables | 12 | 3 | 0 | 36 | 16 | 0 |
+| Sweet Corn | Vegetables | 21 | 6 | 0 | 3 | 10 | 0 |
+| Sweet Potato | Vegetables | 17 | 4 | 0 | 24 | 11 | 0 |
+| Tassel Hyacinth Bulbs | Vegetables | 6 | 2 | 0 | 68 | 11 | 0 |
+| Tomato | Vegetables | 27 | 7 | 0 | 4 | 3 | 0 |
+| Turnip | Vegetables | 21 | 5 | 0 | 2 | 11 | 0 |
+| Turnip Greens (Broccoli Rabe) | Vegetables | 23 | 4 | 1 | 9 | 13 | 0 |
+| Watercress | Vegetables | 17 | 2 | 0 | 23 | 10 | 0 |
+| Wild Asparagus | Vegetables | 15 | 4 | 0 | 33 | 12 | 0 |
+| Winter Onion | Vegetables | 26 | 7 | 0 | 1 | 6 | 1 |
+| Zucchini (Summer Squash) | Vegetables | 27 | 5 | 0 | 1 | 6 | 0 |
 
-## 10. Riproducibilità e file
+## 10. Reproducibility and files
 
-- `data/database.json` – il database; `data/schema.json` – lo schema; `data/database_guide.md` – la guida ai campi.
-- `data/draft_legacy_values.json` – valori della bozza tolti dall'app; `data/_backup_bozza_2026-11-04/` – la bozza originale.
-- `data/audit_findings.json`, `data/template_coverage.json` – esiti dei controlli.
-- `data/raw/` – copie delle fonti scaricate; `scripts/config/` – configurazioni curate con citazioni; `scripts/texts/` – testi IT/EN.
-- `scripts/` – la pipeline, ordine in `scripts/README.md`.
+- `data/database.json` – the database; `data/schema.json` – the schema; `data/database_guide.md` – the field guide.
+- `data/draft_legacy_values.json` – draft values removed from the app (the original draft itself is not published).
+- `data/audit_findings.json`, `data/template_coverage.json` – results of the checks.
+- `data/raw/` – copies of the downloaded sources (not published); `scripts/config/` – curated configurations with quotes; `scripts/texts/` – IT/EN texts.
+- `scripts/` – the pipeline, order in `scripts/README.md`.

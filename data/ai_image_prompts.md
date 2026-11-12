@@ -1,579 +1,579 @@
-# Prompt per immagini generate con AI
+# Prompts for AI-generated images
 
-Solo per i tipi di immagine per cui non abbiamo né una foto attuale valida né candidate. Stile comune a tutti i prompt: *Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.*
+Only for the image types that have neither a valid current photo nor candidates. Style shared by all prompts: *Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.*
 
-Le immagini generate andranno indicate come tali nei metadati (provider `ai_generated`, autore = modello usato).
+Generated images must be declared as such in the metadata (provider `ai_generated`, author = model used).
 
-## Asparago (Asparagus)
+## Asparagus (Asparago)
 
-- **Sfondo bianco o colorato**: `A few fresh asparagus (Asparagus officinalis) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh asparagus (Asparagus officinalis) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh asparagus (Asparagus officinalis) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh asparagus (Asparagus officinalis) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Carciofo (Artichoke)
+## Artichoke (Carciofo)
 
-- **Tavola botanica**: `Vintage botanical illustration plate of Cynara cardunculus var. scolymus (artichoke) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **Botanical plate**: `Vintage botanical illustration plate of Cynara cardunculus var. scolymus (artichoke) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
 
-## Barbabietola rossa (Beetroot)
+## Beetroot (Barbabietola rossa)
 
-- **Tavola botanica**: `Vintage botanical illustration plate of Beta vulgaris subsp. vulgaris conditiva (beetroot) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **Botanical plate**: `Vintage botanical illustration plate of Beta vulgaris subsp. vulgaris conditiva (beetroot) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
 
-## Bietola (Chard)
+## Chard (Bietola)
 
-- **Tavola botanica**: `Vintage botanical illustration plate of Beta vulgaris subsp. vulgaris (chard) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
-- **Tagliato / sezione**: `Fresh chard (Beta vulgaris subsp. vulgaris) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Botanical plate**: `Vintage botanical illustration plate of Beta vulgaris subsp. vulgaris (chard) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **Cut / cross-section**: `Fresh chard (Beta vulgaris subsp. vulgaris) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Cardo (Cardoon)
+## Cardoon (Cardo)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh cardoon (Cynara cardunculus var. altilis) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh cardoon (Cynara cardunculus var. altilis) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tavola botanica**: `Vintage botanical illustration plate of Cynara cardunculus var. altilis (cardoon) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
-- **Tagliato / sezione**: `Fresh cardoon (Cynara cardunculus var. altilis) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh cardoon (Cynara cardunculus var. altilis) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh cardoon (Cynara cardunculus var. altilis) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Botanical plate**: `Vintage botanical illustration plate of Cynara cardunculus var. altilis (cardoon) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **Cut / cross-section**: `Fresh cardoon (Cynara cardunculus var. altilis) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Cavoletti di Bruxelles (Brussels Sprouts)
+## Brussels Sprouts (Cavoletti di Bruxelles)
 
-- **Sfondo bianco o colorato**: `A few fresh brussels sprouts (Brassica oleracea var. gemmifera) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tavola botanica**: `Vintage botanical illustration plate of Brassica oleracea var. gemmifera (brussels sprouts) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
-- **Tagliato / sezione**: `Fresh brussels sprouts (Brassica oleracea var. gemmifera) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh brussels sprouts (Brassica oleracea var. gemmifera) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Botanical plate**: `Vintage botanical illustration plate of Brassica oleracea var. gemmifera (brussels sprouts) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **Cut / cross-section**: `Fresh brussels sprouts (Brassica oleracea var. gemmifera) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Cavolfiore (Cauliflower)
+## Cauliflower (Cavolfiore)
 
-- **Tavola botanica**: `Vintage botanical illustration plate of Brassica oleracea var. botrytis (cauliflower) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **Botanical plate**: `Vintage botanical illustration plate of Brassica oleracea var. botrytis (cauliflower) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
 
-## Cavolo broccolo (Broccoli)
+## Broccoli (Cavolo broccolo)
 
-- **Tavola botanica**: `Vintage botanical illustration plate of Brassica oleracea var. italica (broccoli) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **Botanical plate**: `Vintage botanical illustration plate of Brassica oleracea var. italica (broccoli) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
 
-## Cavolo cappuccio (Cabbage)
+## Cabbage (Cavolo cappuccio)
 
-- **Tavola botanica**: `Vintage botanical illustration plate of Brassica oleracea var. capitata (cabbage) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **Botanical plate**: `Vintage botanical illustration plate of Brassica oleracea var. capitata (cabbage) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
 
-## Cavolo nero toscano (Black Kale (Lacinato))
+## Lacinato) (Cavolo nero toscano (Black Kale)
 
-- **Tavola botanica**: `Vintage botanical illustration plate of Brassica oleracea var. acephala (black kale) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
-- **Tagliato / sezione**: `Fresh black kale (Brassica oleracea var. acephala) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Botanical plate**: `Vintage botanical illustration plate of Brassica oleracea var. acephala (black kale) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **Cut / cross-section**: `Fresh black kale (Brassica oleracea var. acephala) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Cavolo rapa (Kohlrabi)
+## Kohlrabi (Cavolo rapa)
 
-- **Tavola botanica**: `Vintage botanical illustration plate of Brassica oleracea var. gongylodes (kohlrabi) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **Botanical plate**: `Vintage botanical illustration plate of Brassica oleracea var. gongylodes (kohlrabi) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
 
-## Cavolo verza (Savoy Cabbage)
+## Savoy Cabbage (Cavolo verza)
 
-- **Sfondo bianco o colorato**: `A few fresh savoy cabbage (Brassica oleracea var. sabauda) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tavola botanica**: `Vintage botanical illustration plate of Brassica oleracea var. sabauda (savoy cabbage) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
-- **Tagliato / sezione**: `Fresh savoy cabbage (Brassica oleracea var. sabauda) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh savoy cabbage (Brassica oleracea var. sabauda) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Botanical plate**: `Vintage botanical illustration plate of Brassica oleracea var. sabauda (savoy cabbage) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **Cut / cross-section**: `Fresh savoy cabbage (Brassica oleracea var. sabauda) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Cece (Chickpea)
+## Chickpea (Cece)
 
-- **Pianta**: `The living plant of chickpea (Cicer arietinum) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh chickpea (Cicer arietinum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of chickpea (Cicer arietinum) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh chickpea (Cicer arietinum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Cicoria da cespo (Catalogna / Pan di Zucchero) (Chicory)
+## Chicory (Cicoria da cespo (Catalogna / Pan di Zucchero))
 
-- **Prodotto a tutto campo**: `Close-up of many fresh chicory (Cichorium intybus) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh chicory (Cichorium intybus) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Pianta**: `The living plant of chicory (Cichorium intybus) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh chicory (Cichorium intybus) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh chicory (Cichorium intybus) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh chicory (Cichorium intybus) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of chicory (Cichorium intybus) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh chicory (Cichorium intybus) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Cicoria da taglio (Spadonino) (Cutting Chicory)
+## Cutting Chicory (Cicoria da taglio (Spadonino))
 
-- **Prodotto a tutto campo**: `Close-up of many fresh cutting chicory (Cichorium intybus var. foliosum) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh cutting chicory (Cichorium intybus var. foliosum) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Pianta**: `The living plant of cutting chicory (Cichorium intybus var. foliosum) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh cutting chicory (Cichorium intybus var. foliosum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh cutting chicory (Cichorium intybus var. foliosum) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh cutting chicory (Cichorium intybus var. foliosum) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of cutting chicory (Cichorium intybus var. foliosum) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh cutting chicory (Cichorium intybus var. foliosum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Cime di rapa (Turnip Greens (Broccoli Rabe))
+## Broccoli Rabe) (Cime di rapa (Turnip Greens)
 
-- **Pianta**: `The living plant of turnip greens (Brassica rapa subsp. sylvestris) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh turnip greens (Brassica rapa subsp. sylvestris) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of turnip greens (Brassica rapa subsp. sylvestris) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh turnip greens (Brassica rapa subsp. sylvestris) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Cipolla estiva (bianca/dorata) (Summer Onion)
+## Summer Onion (Cipolla estiva (bianca/dorata))
 
-- **Prodotto a tutto campo**: `Close-up of many fresh summer onion (Allium cepa) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Pianta**: `The living plant of summer onion (Allium cepa) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh summer onion (Allium cepa) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of summer onion (Allium cepa) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Fagiolo (Common Bean)
+## Common Bean (Fagiolo)
 
-- **Tagliato / sezione**: `Fresh common bean (Phaseolus vulgaris) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh common bean (Phaseolus vulgaris) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Fava (Broad Bean (Fava Bean))
+## Fava Bean) (Fava (Broad Bean)
 
-- **Sfondo bianco o colorato**: `A few fresh broad bean (Vicia faba) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh broad bean (Vicia faba) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh broad bean (Vicia faba) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh broad bean (Vicia faba) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Finocchio (Fennel)
+## Fennel (Finocchio)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh fennel (Foeniculum vulgare dulce) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh fennel (Foeniculum vulgare dulce) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh fennel (Foeniculum vulgare dulce) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh fennel (Foeniculum vulgare dulce) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Lattuga da cespo (Head Lettuce)
+## Head Lettuce (Lattuga da cespo)
 
-- **Tagliato / sezione**: `Fresh head lettuce (Lactuca sativa capitata) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh head lettuce (Lactuca sativa capitata) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Lattuga da taglio (Leaf Lettuce)
+## Leaf Lettuce (Lattuga da taglio)
 
-- **Tagliato / sezione**: `Fresh leaf lettuce (Lactuca sativa crispa) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh leaf lettuce (Lactuca sativa crispa) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Lenticchia (Lentil)
+## Lentil (Lenticchia)
 
-- **Pianta**: `The living plant of lentil (Lens culinaris) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh lentil (Lens culinaris) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of lentil (Lens culinaris) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh lentil (Lens culinaris) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Pastinaca (Parsnip)
+## Parsnip (Pastinaca)
 
-- **Pianta**: `The living plant of parsnip (Pastinaca sativa) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh parsnip (Pastinaca sativa) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of parsnip (Pastinaca sativa) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh parsnip (Pastinaca sativa) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Porro (Leek)
+## Leek (Porro)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh leek (Allium ampeloprasum porrum) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh leek (Allium ampeloprasum porrum) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Pianta**: `The living plant of leek (Allium ampeloprasum porrum) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh leek (Allium ampeloprasum porrum) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh leek (Allium ampeloprasum porrum) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of leek (Allium ampeloprasum porrum) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Radicchio (Rosso di Treviso / Chioggia) (Radicchio)
+## Radicchio (Radicchio (Rosso di Treviso / Chioggia))
 
-- **Prodotto a tutto campo**: `Close-up of many fresh radicchio (Cichorium intybus intybus) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh radicchio (Cichorium intybus intybus) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Pianta**: `The living plant of radicchio (Cichorium intybus intybus) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh radicchio (Cichorium intybus intybus) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh radicchio (Cichorium intybus intybus) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh radicchio (Cichorium intybus intybus) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of radicchio (Cichorium intybus intybus) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh radicchio (Cichorium intybus intybus) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Rapa (Turnip)
+## Turnip (Rapa)
 
-- **Tagliato / sezione**: `Fresh turnip (Brassica rapa rapa) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh turnip (Brassica rapa rapa) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Ravanello (Radish)
+## Radish (Ravanello)
 
-- **Sfondo bianco o colorato**: `A few fresh radish (Raphanus sativus) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh radish (Raphanus sativus) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Rucola (Arugula (Rocket))
+## Rocket) (Rucola (Arugula)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh arugula (Eruca vesicaria) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh arugula (Eruca vesicaria) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Pianta**: `The living plant of arugula (Eruca vesicaria) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh arugula (Eruca vesicaria) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh arugula (Eruca vesicaria) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh arugula (Eruca vesicaria) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of arugula (Eruca vesicaria) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh arugula (Eruca vesicaria) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Scalogno (Shallot)
+## Shallot (Scalogno)
 
-- **Pianta**: `The living plant of shallot (Allium cepa aggregatum) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh shallot (Allium cepa aggregatum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of shallot (Allium cepa aggregatum) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh shallot (Allium cepa aggregatum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Sedano (Celery)
+## Celery (Sedano)
 
-- **Tavola botanica**: `Vintage botanical illustration plate of Apium graveolens dulce (celery) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
-- **Tagliato / sezione**: `Fresh celery (Apium graveolens dulce) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Botanical plate**: `Vintage botanical illustration plate of Apium graveolens dulce (celery) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **Cut / cross-section**: `Fresh celery (Apium graveolens dulce) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Spinacio (Spinach)
+## Spinach (Spinacio)
 
-- **Tagliato / sezione**: `Fresh spinach (Spinacia oleracea) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh spinach (Spinacia oleracea) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Topinambur (Carciofo di Gerusalemme) (Jerusalem Artichoke (Sunchoke))
+## Sunchoke) (Topinambur (Carciofo di Gerusalemme) (Jerusalem Artichoke)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh jerusalem artichoke (Helianthus tuberosus) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh jerusalem artichoke (Helianthus tuberosus) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh jerusalem artichoke (Helianthus tuberosus) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh jerusalem artichoke (Helianthus tuberosus) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh jerusalem artichoke (Helianthus tuberosus) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh jerusalem artichoke (Helianthus tuberosus) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Valerianella (Songino) (Corn Salad (Lamb's Lettuce))
+## Lamb's Lettuce) (Valerianella (Songino) (Corn Salad)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh corn salad (Valerianella locusta) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh corn salad (Valerianella locusta) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Pianta**: `The living plant of corn salad (Valerianella locusta) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh corn salad (Valerianella locusta) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh corn salad (Valerianella locusta) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh corn salad (Valerianella locusta) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of corn salad (Valerianella locusta) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh corn salad (Valerianella locusta) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Zucchina (Zucchini (Summer Squash))
+## Summer Squash) (Zucchina (Zucchini)
 
-- **Tavola botanica**: `Vintage botanical illustration plate of Cucurbita pepo (zucchini) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **Botanical plate**: `Vintage botanical illustration plate of Cucurbita pepo (zucchini) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
 
-## Anguria (Cocomero) (Watermelon)
+## Watermelon (Anguria (Cocomero))
 
-- **Sfondo bianco o colorato**: `A few fresh watermelon (Citrullus lanatus) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh watermelon (Citrullus lanatus) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Castagna (Chestnut)
+## Chestnut (Castagna)
 
-- **Tagliato / sezione**: `Fresh chestnut (Castanea sativa) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh chestnut (Castanea sativa) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Ciliegia (Cherry)
+## Cherry (Ciliegia)
 
-- **Tagliato / sezione**: `Fresh cherry (Prunus avium) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh cherry (Prunus avium) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
 ## Clementine (Clementine)
 
-- **Tavola botanica**: `Vintage botanical illustration plate of Citrus × clementina (clementine) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **Botanical plate**: `Vintage botanical illustration plate of Citrus × clementina (clementine) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
 
-## Lampone (Raspberry)
+## Raspberry (Lampone)
 
-- **Tagliato / sezione**: `Fresh raspberry (Rubus idaeus) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh raspberry (Rubus idaeus) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Mandarino (Mandarin)
+## Mandarin (Mandarino)
 
-- **Tavola botanica**: `Vintage botanical illustration plate of Citrus reticulata (mandarin) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **Botanical plate**: `Vintage botanical illustration plate of Citrus reticulata (mandarin) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
 
-## Melograno (Pomegranate)
+## Pomegranate (Melograno)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh pomegranate (Punica granatum) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh pomegranate (Punica granatum) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Mirtillo (Blueberry)
+## Blueberry (Mirtillo)
 
-- **Tagliato / sezione**: `Fresh blueberry (Vaccinium myrtillus / corymbosum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh blueberry (Vaccinium myrtillus / corymbosum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Mora (Blackberry)
+## Blackberry (Mora)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh blackberry (Rubus fruticosus) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh blackberry (Rubus fruticosus) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh blackberry (Rubus fruticosus) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh blackberry (Rubus fruticosus) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Pesca (Peach)
+## Peach (Pesca)
 
-- **Tavola botanica**: `Vintage botanical illustration plate of Prunus persica (peach) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **Botanical plate**: `Vintage botanical illustration plate of Prunus persica (peach) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
 
-## Uva da tavola (Table Grape)
+## Table Grape (Uva da tavola)
 
-- **Tagliato / sezione**: `Fresh table grape (Vitis vinifera) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh table grape (Vitis vinifera) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Rosmarino (Rosemary)
+## Rosemary (Rosmarino)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh rosemary (Salvia rosmarinus) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tavola botanica**: `Vintage botanical illustration plate of Salvia rosmarinus (rosemary) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **Full-frame product**: `Close-up of many fresh rosemary (Salvia rosmarinus) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Botanical plate**: `Vintage botanical illustration plate of Salvia rosmarinus (rosemary) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
 
-## Salvia (Sage)
+## Sage (Salvia)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh sage (Salvia officinalis) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh sage (Salvia officinalis) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh sage (Salvia officinalis) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh sage (Salvia officinalis) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Origano (Oregano)
+## Oregano (Origano)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh oregano (Origanum vulgare) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh oregano (Origanum vulgare) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh oregano (Origanum vulgare) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh oregano (Origanum vulgare) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Timo (Thyme)
+## Thyme (Timo)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh thyme (Thymus vulgaris) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh thyme (Thymus vulgaris) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Menta (Mint)
+## Mint (Menta)
 
-- **Sfondo bianco o colorato**: `A few fresh mint (Mentha spicata / piperita) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh mint (Mentha spicata / piperita) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Erba cipollina (Chives)
+## Chives (Erba cipollina)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh chives (Allium schoenoprasum) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh chives (Allium schoenoprasum) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Zafferano (Saffron)
+## Saffron (Zafferano)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh saffron (Crocus sativus) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh saffron (Crocus sativus) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh saffron (Crocus sativus) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh saffron (Crocus sativus) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Fungo Porcino (Porcini Mushroom)
+## Porcini Mushroom (Fungo Porcino)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh porcini mushroom (Boletus edulis) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh porcini mushroom (Boletus edulis) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Fungo Pleurotus (Orecchione) (Oyster Mushroom)
+## Oyster Mushroom (Fungo Pleurotus (Orecchione))
 
-- **Tagliato / sezione**: `Fresh oyster mushroom (Pleurotus ostreatus) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh oyster mushroom (Pleurotus ostreatus) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Mais dolce (Sweet Corn)
+## Sweet Corn (Mais dolce)
 
-- **Tagliato / sezione**: `Fresh sweet corn (Zea mays var. saccharata) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh sweet corn (Zea mays var. saccharata) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Farro (Emmer wheat (farro))
+## farro) (Farro (Emmer wheat)
 
-- **Sfondo bianco o colorato**: `A few fresh emmer wheat (Triticum dicoccum) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh emmer wheat (Triticum dicoccum) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Orzo (Barley)
+## Barley (Orzo)
 
-- **Sfondo bianco o colorato**: `A few fresh barley (Hordeum vulgare) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh barley (Hordeum vulgare) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Riso (Rice)
+## Rice (Riso)
 
-- **Sfondo bianco o colorato**: `A few fresh rice (Oryza sativa) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh rice (Oryza sativa) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Grano saraceno (Buckwheat)
+## Buckwheat (Grano saraceno)
 
-- **Sfondo bianco o colorato**: `A few fresh buckwheat (Fagopyrum esculentum) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh buckwheat (Fagopyrum esculentum) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Cavolo rosso (Red cabbage)
+## Red cabbage (Cavolo rosso)
 
-- **Sfondo bianco o colorato**: `A few fresh red cabbage (Brassica oleracea var. capitata f. rubra) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tavola botanica**: `Vintage botanical illustration plate of Brassica oleracea var. capitata f. rubra (red cabbage) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **White or coloured background**: `A few fresh red cabbage (Brassica oleracea var. capitata f. rubra) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Botanical plate**: `Vintage botanical illustration plate of Brassica oleracea var. capitata f. rubra (red cabbage) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
 
-## Sedano rapa (Celeriac)
+## Celeriac (Sedano rapa)
 
-- **Sfondo bianco o colorato**: `A few fresh celeriac (Apium graveolens var. rapaceum) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Pianta**: `The living plant of celeriac (Apium graveolens var. rapaceum) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh celeriac (Apium graveolens var. rapaceum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh celeriac (Apium graveolens var. rapaceum) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of celeriac (Apium graveolens var. rapaceum) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh celeriac (Apium graveolens var. rapaceum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Indivia belga (Belgian endive)
+## Belgian endive (Indivia belga)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh belgian endive (Cichorium intybus var. foliosum) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh belgian endive (Cichorium intybus var. foliosum) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Pianta**: `The living plant of belgian endive (Cichorium intybus var. foliosum) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh belgian endive (Cichorium intybus var. foliosum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh belgian endive (Cichorium intybus var. foliosum) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh belgian endive (Cichorium intybus var. foliosum) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of belgian endive (Cichorium intybus var. foliosum) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh belgian endive (Cichorium intybus var. foliosum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Scarola (Escarole)
+## Escarole (Scarola)
 
-- **Sfondo bianco o colorato**: `A few fresh escarole (Cichorium endivia var. latifolium) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Pianta**: `The living plant of escarole (Cichorium endivia var. latifolium) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh escarole (Cichorium endivia var. latifolium) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh escarole (Cichorium endivia var. latifolium) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of escarole (Cichorium endivia var. latifolium) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh escarole (Cichorium endivia var. latifolium) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Indivia riccia (Curly endive)
+## Curly endive (Indivia riccia)
 
-- **Sfondo bianco o colorato**: `A few fresh curly endive (Cichorium endivia var. crispum) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Pianta**: `The living plant of curly endive (Cichorium endivia var. crispum) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh curly endive (Cichorium endivia var. crispum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh curly endive (Cichorium endivia var. crispum) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of curly endive (Cichorium endivia var. crispum) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh curly endive (Cichorium endivia var. crispum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Cipollotto (Spring onion)
+## Spring onion (Cipollotto)
 
-- **Sfondo bianco o colorato**: `A few fresh spring onion (Allium cepa) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh spring onion (Allium cepa) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Agretti (barba di frate) (Saltwort (agretti))
+## agretti) (Agretti (barba di frate) (Saltwort)
 
-- **Sfondo bianco o colorato**: `A few fresh saltwort (Salsola soda) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh saltwort (Salsola soda) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh saltwort (Salsola soda) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh saltwort (Salsola soda) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Crescione (Watercress)
+## Watercress (Crescione)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh watercress (Nasturtium officinale) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh watercress (Nasturtium officinale) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh watercress (Nasturtium officinale) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh watercress (Nasturtium officinale) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh watercress (Nasturtium officinale) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh watercress (Nasturtium officinale) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Rabarbaro (Rhubarb)
+## Rhubarb (Rabarbaro)
 
-- **Sfondo bianco o colorato**: `A few fresh rhubarb (Rheum rhabarbarum) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Pianta**: `The living plant of rhubarb (Rheum rhabarbarum) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh rhubarb (Rheum rhabarbarum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh rhubarb (Rheum rhabarbarum) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of rhubarb (Rheum rhabarbarum) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh rhubarb (Rheum rhabarbarum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Rafano (cren) (Horseradish)
+## Horseradish (Rafano (cren))
 
-- **Prodotto a tutto campo**: `Close-up of many fresh horseradish (Armoracia rusticana) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh horseradish (Armoracia rusticana) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh horseradish (Armoracia rusticana) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh horseradish (Armoracia rusticana) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh horseradish (Armoracia rusticana) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh horseradish (Armoracia rusticana) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Scorzonera (Black salsify)
+## Black salsify (Scorzonera)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh black salsify (Scorzonera hispanica) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh black salsify (Scorzonera hispanica) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Pianta**: `The living plant of black salsify (Scorzonera hispanica) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh black salsify (Scorzonera hispanica) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh black salsify (Scorzonera hispanica) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh black salsify (Scorzonera hispanica) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of black salsify (Scorzonera hispanica) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh black salsify (Scorzonera hispanica) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Cavolo cinese (pak choi) (Chinese cabbage)
+## Chinese cabbage (Cavolo cinese (pak choi))
 
-- **Sfondo bianco o colorato**: `A few fresh chinese cabbage (Brassica rapa subsp. pekinensis) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Pianta**: `The living plant of chinese cabbage (Brassica rapa subsp. pekinensis) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tavola botanica**: `Vintage botanical illustration plate of Brassica rapa subsp. pekinensis (chinese cabbage) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
-- **Tagliato / sezione**: `Fresh chinese cabbage (Brassica rapa subsp. pekinensis) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh chinese cabbage (Brassica rapa subsp. pekinensis) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of chinese cabbage (Brassica rapa subsp. pekinensis) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Botanical plate**: `Vintage botanical illustration plate of Brassica rapa subsp. pekinensis (chinese cabbage) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **Cut / cross-section**: `Fresh chinese cabbage (Brassica rapa subsp. pekinensis) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Navone (rutabaga) (Swede)
+## Swede (Navone (rutabaga))
 
-- **Prodotto a tutto campo**: `Close-up of many fresh swede (Brassica napus subsp. rapifera) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh swede (Brassica napus subsp. rapifera) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Pianta**: `The living plant of swede (Brassica napus subsp. rapifera) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh swede (Brassica napus subsp. rapifera) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh swede (Brassica napus subsp. rapifera) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh swede (Brassica napus subsp. rapifera) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of swede (Brassica napus subsp. rapifera) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh swede (Brassica napus subsp. rapifera) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
 ## Daikon (Daikon)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh daikon (Raphanus sativus var. longipinnatus) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh daikon (Raphanus sativus var. longipinnatus) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Pianta**: `The living plant of daikon (Raphanus sativus var. longipinnatus) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh daikon (Raphanus sativus var. longipinnatus) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh daikon (Raphanus sativus var. longipinnatus) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh daikon (Raphanus sativus var. longipinnatus) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of daikon (Raphanus sativus var. longipinnatus) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh daikon (Raphanus sativus var. longipinnatus) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Taccola (pisello mangiatutto) (Snow pea)
+## Snow pea (Taccola (pisello mangiatutto))
 
-- **Pianta**: `The living plant of snow pea (Pisum sativum var. saccharatum) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh snow pea (Pisum sativum var. saccharatum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of snow pea (Pisum sativum var. saccharatum) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh snow pea (Pisum sativum var. saccharatum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Broccolo romanesco (Romanesco)
+## Romanesco (Broccolo romanesco)
 
-- **Sfondo bianco o colorato**: `A few fresh romanesco (Brassica oleracea var. botrytis) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tavola botanica**: `Vintage botanical illustration plate of Brassica oleracea var. botrytis (romanesco) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
-- **Tagliato / sezione**: `Fresh romanesco (Brassica oleracea var. botrytis) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh romanesco (Brassica oleracea var. botrytis) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Botanical plate**: `Vintage botanical illustration plate of Brassica oleracea var. botrytis (romanesco) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **Cut / cross-section**: `Fresh romanesco (Brassica oleracea var. botrytis) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
 ## Puntarelle (Puntarelle)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh puntarelle (Cichorium intybus) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh puntarelle (Cichorium intybus) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Pianta**: `The living plant of puntarelle (Cichorium intybus) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh puntarelle (Cichorium intybus) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh puntarelle (Cichorium intybus) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh puntarelle (Cichorium intybus) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living plant of puntarelle (Cichorium intybus) growing outdoors in a vegetable garden, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh puntarelle (Cichorium intybus) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Asparago selvatico (Wild asparagus)
+## Wild asparagus (Asparago selvatico)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh wild asparagus (Asparagus acutifolius) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh wild asparagus (Asparagus acutifolius) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh wild asparagus (Asparagus acutifolius) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh wild asparagus (Asparagus acutifolius) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh wild asparagus (Asparagus acutifolius) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh wild asparagus (Asparagus acutifolius) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Salicornia (Samphire)
+## Samphire (Salicornia)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh samphire (Salicornia europaea) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh samphire (Salicornia europaea) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh samphire (Salicornia europaea) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh samphire (Salicornia europaea) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh samphire (Salicornia europaea) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh samphire (Salicornia europaea) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Gombo (okra) (Okra)
+## Okra (Gombo (okra))
 
-- **Sfondo bianco o colorato**: `A few fresh okra (Abelmoschus esculentus) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh okra (Abelmoschus esculentus) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Zucchina spinosa (chayote) (Chayote)
+## Chayote (Zucchina spinosa (chayote))
 
-- **Sfondo bianco o colorato**: `A few fresh chayote (Sechium edule) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh chayote (Sechium edule) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh chayote (Sechium edule) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh chayote (Sechium edule) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Lampascioni (Tassel hyacinth bulbs)
+## Tassel hyacinth bulbs (Lampascioni)
 
-- **Sfondo bianco o colorato**: `A few fresh tassel hyacinth bulbs (Leopoldia comosa) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh tassel hyacinth bulbs (Leopoldia comosa) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh tassel hyacinth bulbs (Leopoldia comosa) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh tassel hyacinth bulbs (Leopoldia comosa) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Cicerchia (Grass pea)
+## Grass pea (Cicerchia)
 
-- **Sfondo bianco o colorato**: `A few fresh grass pea (Lathyrus sativus) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh grass pea (Lathyrus sativus) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh grass pea (Lathyrus sativus) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh grass pea (Lathyrus sativus) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Nespola (Loquat)
+## Loquat (Nespola)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh loquat (Eriobotrya japonica) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh loquat (Eriobotrya japonica) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh loquat (Eriobotrya japonica) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh loquat (Eriobotrya japonica) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Pompelmo (Grapefruit)
+## Grapefruit (Pompelmo)
 
-- **Tavola botanica**: `Vintage botanical illustration plate of Citrus × paradisi (grapefruit) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **Botanical plate**: `Vintage botanical illustration plate of Citrus × paradisi (grapefruit) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
 
-## Mela cotogna (Quince)
+## Quince (Mela cotogna)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh quince (Cydonia oblonga) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh quince (Cydonia oblonga) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh quince (Cydonia oblonga) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh quince (Cydonia oblonga) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh quince (Cydonia oblonga) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh quince (Cydonia oblonga) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Ribes rosso (Redcurrant)
+## Redcurrant (Ribes rosso)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh redcurrant (Ribes rubrum) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh redcurrant (Ribes rubrum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh redcurrant (Ribes rubrum) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh redcurrant (Ribes rubrum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Pesca noce (Nectarine)
+## Nectarine (Pesca noce)
 
-- **Pianta**: `The living tree of nectarine (Prunus persica var. nucipersica) growing outdoors in an orchard, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living tree of nectarine (Prunus persica var. nucipersica) growing outdoors in an orchard, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Fico d'India (Prickly pear)
+## Prickly pear (Fico d'India)
 
-- **Sfondo bianco o colorato**: `A few fresh prickly pear (Opuntia ficus-indica) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh prickly pear (Opuntia ficus-indica) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Litchi (Lychee)
+## Lychee (Litchi)
 
-- **Tagliato / sezione**: `Fresh lychee (Litchi chinensis) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh lychee (Litchi chinensis) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Maracuja (frutto della passione) (Passion fruit)
+## Passion fruit (Maracuja (frutto della passione))
 
-- **Prodotto a tutto campo**: `Close-up of many fresh passion fruit (Passiflora edulis) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh passion fruit (Passiflora edulis) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Amarena (Sour cherry)
+## Sour cherry (Amarena)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh sour cherry (Prunus cerasus) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh sour cherry (Prunus cerasus) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh sour cherry (Prunus cerasus) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh sour cherry (Prunus cerasus) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh sour cherry (Prunus cerasus) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh sour cherry (Prunus cerasus) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Nocciola (Hazelnut)
+## Hazelnut (Nocciola)
 
-- **Tagliato / sezione**: `Fresh hazelnut (Corylus avellana) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh hazelnut (Corylus avellana) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Mandorla (Almond)
+## Almond (Mandorla)
 
-- **Pianta**: `The living tree of almond (Prunus dulcis) growing outdoors in an orchard, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living tree of almond (Prunus dulcis) growing outdoors in an orchard, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Pistacchio (Pistachio)
+## Pistachio (Pistacchio)
 
-- **Tagliato / sezione**: `Fresh pistachio (Pistacia vera) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh pistachio (Pistacia vera) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Ribes nero (Blackcurrant)
+## Blackcurrant (Ribes nero)
 
-- **Sfondo bianco o colorato**: `A few fresh blackcurrant (Ribes nigrum) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh blackcurrant (Ribes nigrum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh blackcurrant (Ribes nigrum) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh blackcurrant (Ribes nigrum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Uva spina (Gooseberry)
+## Gooseberry (Uva spina)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh gooseberry (Ribes uva-crispa) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh gooseberry (Ribes uva-crispa) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh gooseberry (Ribes uva-crispa) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh gooseberry (Ribes uva-crispa) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh gooseberry (Ribes uva-crispa) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh gooseberry (Ribes uva-crispa) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Sambuco (bacche) (Elderberry)
+## Elderberry (Sambuco (bacche))
 
-- **Prodotto a tutto campo**: `Close-up of many fresh elderberry (Sambucus nigra) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh elderberry (Sambucus nigra) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh elderberry (Sambucus nigra) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh elderberry (Sambucus nigra) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh elderberry (Sambucus nigra) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh elderberry (Sambucus nigra) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Gelso (mora di gelso) (Mulberry)
+## Mulberry (Gelso (mora di gelso))
 
-- **Sfondo bianco o colorato**: `A few fresh mulberry (Morus nigra) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh mulberry (Morus nigra) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh mulberry (Morus nigra) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh mulberry (Morus nigra) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Cocco (Coconut)
+## Coconut (Cocco)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh coconut (Cocos nucifera) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh coconut (Cocos nucifera) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Carruba (Carob)
+## Carob (Carruba)
 
-- **Tagliato / sezione**: `Fresh carob (Ceratonia siliqua) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh carob (Ceratonia siliqua) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Giuggiola (Jujube)
+## Jujube (Giuggiola)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh jujube (Ziziphus jujuba) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh jujube (Ziziphus jujuba) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh jujube (Ziziphus jujuba) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh jujube (Ziziphus jujuba) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh jujube (Ziziphus jujuba) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh jujube (Ziziphus jujuba) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Nespola comune (Medlar)
+## Medlar (Nespola comune)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh medlar (Mespilus germanica) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh medlar (Mespilus germanica) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh medlar (Mespilus germanica) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh medlar (Mespilus germanica) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Mirabella (Mirabelle plum)
+## Mirabelle plum (Mirabella)
 
-- **Tagliato / sezione**: `Fresh mirabelle plum (Prunus domestica subsp. syriaca) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh mirabelle plum (Prunus domestica subsp. syriaca) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Cedro (Citron)
+## Citron (Cedro)
 
-- **Sfondo bianco o colorato**: `A few fresh citron (Citrus medica) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Pianta**: `The living tree of citron (Citrus medica) growing outdoors in an orchard, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh citron (Citrus medica) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh citron (Citrus medica) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living tree of citron (Citrus medica) growing outdoors in an orchard, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh citron (Citrus medica) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
 ## Chinotto (Chinotto)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh chinotto (Citrus myrtifolia) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh chinotto (Citrus myrtifolia) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Pianta**: `The living tree of chinotto (Citrus myrtifolia) growing outdoors in an orchard, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tavola botanica**: `Vintage botanical illustration plate of Citrus myrtifolia (chinotto) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
-- **Tagliato / sezione**: `Fresh chinotto (Citrus myrtifolia) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh chinotto (Citrus myrtifolia) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh chinotto (Citrus myrtifolia) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living tree of chinotto (Citrus myrtifolia) growing outdoors in an orchard, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Botanical plate**: `Vintage botanical illustration plate of Citrus myrtifolia (chinotto) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **Cut / cross-section**: `Fresh chinotto (Citrus myrtifolia) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Oliva (Olive)
+## Olive (Oliva)
 
-- **Tagliato / sezione**: `Fresh olive (Olea europaea) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh olive (Olea europaea) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Ovolo buono (Caesar's mushroom)
+## Caesar's mushroom (Ovolo buono)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh caesar's mushroom (Amanita caesarea) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh caesar's mushroom (Amanita caesarea) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh caesar's mushroom (Amanita caesarea) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh caesar's mushroom (Amanita caesarea) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh caesar's mushroom (Amanita caesarea) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh caesar's mushroom (Amanita caesarea) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Tartufo nero (Black truffle)
+## Black truffle (Tartufo nero)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh black truffle (Tuber melanosporum) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh black truffle (Tuber melanosporum) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Pianta**: `The living fungus of black truffle (Tuber melanosporum) growing outdoors in a forest floor, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh black truffle (Tuber melanosporum) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh black truffle (Tuber melanosporum) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living fungus of black truffle (Tuber melanosporum) growing outdoors in a forest floor, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Tartufo bianco (White truffle)
+## White truffle (Tartufo bianco)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh white truffle (Tuber magnatum) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Sfondo bianco o colorato**: `A few fresh white truffle (Tuber magnatum) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Pianta**: `The living fungus of white truffle (Tuber magnatum) growing outdoors in a forest floor, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh white truffle (Tuber magnatum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh white truffle (Tuber magnatum) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh white truffle (Tuber magnatum) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living fungus of white truffle (Tuber magnatum) growing outdoors in a forest floor, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh white truffle (Tuber magnatum) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Finferlo (gallinaccio) (Chanterelle)
+## Chanterelle (Finferlo (gallinaccio))
 
-- **Sfondo bianco o colorato**: `A few fresh chanterelle (Cantharellus cibarius) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh chanterelle (Cantharellus cibarius) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh chanterelle (Cantharellus cibarius) on a plain seamless pale coloured background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh chanterelle (Cantharellus cibarius) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Spugnola (Morel)
+## Morel (Spugnola)
 
-- **Tagliato / sezione**: `Fresh morel (Morchella esculenta) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh morel (Morchella esculenta) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
 ## Shiitake (Shiitake)
 
-- **Sfondo bianco o colorato**: `A few fresh shiitake (Lentinula edodes) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Pianta**: `The living fungus of shiitake (Lentinula edodes) growing outdoors in a forest floor, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tavola botanica**: `Vintage botanical illustration plate of Lentinula edodes (shiitake) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
-- **Tagliato / sezione**: `Fresh shiitake (Lentinula edodes) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **White or coloured background**: `A few fresh shiitake (Lentinula edodes) on a plain seamless white background, studio product photo, soft shadow. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Plant**: `The living fungus of shiitake (Lentinula edodes) growing outdoors in a forest floor, showing leaves and the edible part ready for harvest; professional nature photography, not only flowers. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Botanical plate**: `Vintage botanical illustration plate of Lentinula edodes (shiitake) in the style of 19th-century scientific engravings: whole plant with roots, leaves, flowers, fruit and seed details, numbered parts, on aged cream paper. Portrait format allowed.`
+- **Cut / cross-section**: `Fresh shiitake (Lentinula edodes) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
 
-## Cardoncello (King oyster mushroom)
+## King oyster mushroom (Cardoncello)
 
-- **Prodotto a tutto campo**: `Close-up of many fresh king oyster mushroom (Pleurotus eryngii) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
-- **Tagliato / sezione**: `Fresh king oyster mushroom (Pleurotus eryngii) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Full-frame product**: `Close-up of many fresh king oyster mushroom (Pleurotus eryngii) filling the entire frame edge to edge, no background visible. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`
+- **Cut / cross-section**: `Fresh king oyster mushroom (Pleurotus eryngii) cut in half showing the cross-section and inner structure, next to a whole one, on a plain light background. Photorealistic, natural vivid colours, soft diffuse daylight, sharp focus, high resolution, landscape 3:2 format. No plates, no bowls, no cooked food, no hands, no text, no labels, no logos, no watermark.`

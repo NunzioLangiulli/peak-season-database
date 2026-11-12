@@ -1,76 +1,76 @@
-# Alimenti non inclusi nel database
+# Products not included in the database
 
-Generato il 2026-11-12 da `scripts/make_excluded_report.py`.
+Generated on 2026-11-12 by `scripts/make_excluded_report.py`.
 
-**Regola di ammissione** usata per i nuovi alimenti: almeno 2 fonti stagionali o di conservazione e una scheda di composizione CREA o BDA-IEO. Serve a garantire che ogni scheda abbia stagionalità e valori nutrizionali da fonte. Il tartufo bianco è stato aggiunto in deroga (nutrizione vuota, stagionalità per legge).
+**Inclusion rule** for new products: at least 2 seasonality or storage sources and a CREA or BDA-IEO composition record. It ensures every record has sourced seasonality and nutrition values. White truffle was added as an exception (empty nutrition, seasonality set by law).
 
-**Come sono stati raccolti i candidati**: tutte le voci dei calendari usati (WWF, Greenpeace, Altroconsumo, Orto da Coltivare, Bio Suisse, EUFIC per 29 Paesi) che non corrispondono a un alimento del database, più i prodotti ortofrutticoli italiani DOP/IGP del registro eAmbrosia senza alimento corrispondente, più alcuni prodotti tipici italiani assenti da tutti i calendari (es. agretti, lampascioni, cicerchia). Le colonne sulle fonti sono calcolate cercando il nome nei dati grezzi già scaricati; rilevanza e proposta sono un mio giudizio, da confermare.
+**How candidates were collected**: every entry of the calendars used (WWF, Greenpeace, Altroconsumo, Orto da Coltivare, Bio Suisse, EUFIC for 29 countries) that does not match a product in the database, plus Italian PDO/PGI fruit and vegetable products from the eAmbrosia register with no matching product, plus some typical Italian products missing from every calendar (e.g. agretti, lampascioni, cicerchia). The source columns are computed by searching the name in the raw data already downloaded; relevance and proposal are a declared judgement, to be confirmed.
 
-**Limite**: un prodotto che non compare in nessuna di queste liste (es. molte varietà locali) non è stato considerato; per quelli si può partire dall'elenco PAT del MASAF, già collegato agli alimenti.
+**Limitation**: a product missing from all these lists (e.g. many local varieties) was not considered; for those, the MASAF PAT list, already linked to the products, is a starting point.
 
-**Decisione dell'utente (5 novembre 2026)**: inclusi tutti i candidati tranne bergamotto, cappero, acetosa, corbezzolo e portulaca, anche con campi incompleti (colonna Stato). Per quelli inclusi le colonne mostrano le fonti disponibili al momento dell'inclusione.
+**Owner decision (5 November 2026)**: all candidates included except bergamot, caper, sorrel, strawberry tree and purslane, even with incomplete fields (Status column). For included products the columns show the sources available at the time of inclusion.
 
-## Candidati
+## Candidates
 
-| Candidato | Stato | Calendari italiani | Altri calendari | Conservazione | CREA | BDA-IEO | DOP/IGP | Perché è fuori | Rilevanza | Proposta |
+| Candidate | Status | Italian calendars | Other calendars | Storage | CREA | BDA-IEO | PDO/PGI | Why it is out | Relevance | Proposal |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Agretti (barba di frate) | incluso il 2026-11-05 | Orto da Coltivare (sito) | – | – | Agretti, cotti, bolliti; Agretti, crudi | AGRETTI | – | 1 fonte stagionale/conservazione | alta – ortaggio primaverile tipicamente italiano | aggiungere se si trova una seconda fonte stagionale |
-| Broccolo romanesco | incluso il 2026-11-05 | WWF | EUFIC 1 Paesi | – | – | – | – | nessuna scheda CREA/BDA | alta – ortaggio invernale tipicamente italiano | aggiungere (deroga, nutrizione da cavolfiore o broccolo come approssimata) o come varietà |
-| Cipollotto | incluso il 2026-11-05 | Orto da Coltivare (sito) | Bio Suisse; EUFIC 18 Paesi | – | – | – | Cipollotto Nocerino | nessuna scheda CREA/BDA | alta – molto comune in Italia, IGP Cipollotto Nocerino | aggiungere (deroga: nutrizione dalle 'cipolline' CREA come approssimazione dichiarata) |
-| Finferlo (gallinaccio) | incluso il 2026-11-05 | – | EUFIC 3 Paesi | – | – | – | – | 1 fonte stagionale/conservazione; nessuna scheda CREA/BDA | alta – fungo spontaneo molto raccolto e venduto | aggiungere se si trova una fonte stagionale italiana |
-| Nocciola | incluso il 2026-11-05 | Orto da Coltivare (sito) | – | – | Nocciole, secche | NOCCIOLE, secche | Nocciola Romana; Nocciola di Giffoni; Nocciola del Piemonte / Nocciola Piemonte | 1 fonte stagionale/conservazione | alta – tre DOP/IGP italiane (Piemonte, Giffoni, Romana) | valutare l'estensione alla frutta secca |
-| Noce | incluso il 2026-11-05 | Orto da Coltivare (sito) | Bio Suisse | – | Noci; Noci pecan | NOCI PECAN; NOCI, fresche | – | requisiti soddisfatti: non era nella lista iniziale dei candidati | alta – frutta secca di stagione autunnale, molto consumata | valutare l'estensione alla frutta secca |
-| Puntarelle | incluso il 2026-11-05 | Orto da Coltivare (sito) | EUFIC 1 Paesi | – | – | – | – | nessuna scheda CREA/BDA | alta – tipiche del Lazio, inverno | come varietà della cicoria da cespo (catalogna) |
-| Amarena / visciola | incluso il 2026-11-05 | – | – | – | Amarene, fresche | AMARENE | Amarene Brusche di Modena | 0 fonte stagionale/conservazione | media – IGP Amarene Brusche di Modena; frutto da consumo fresco poco diffuso | valutare |
-| Asparago selvatico | incluso il 2026-11-05 | Orto da Coltivare (sito) | – | – | Asparagi di bosco, crudi; Asparagi di campo, cotti, bolliti | – | – | 1 fonte stagionale/conservazione | media – raccolta spontanea primaverile, CREA ha la voce | come varietà o nota dell'asparago |
-| Bergamotto | escluso su decisione dell'utente (2026-11-05) | Orto da Coltivare (sito) | – | – | – | – | – | 1 fonte stagionale/conservazione; nessuna scheda CREA/BDA | media – agrume tipico della Calabria, uso soprattutto aromatico | valutare |
-| Cappero | escluso su decisione dell'utente (2026-11-05) | Orto da Coltivare (sito) | – | – | – | CAPPERI SOTT’ACETO | Cappero delle Isole Eolie; Cappero di Pantelleria | 1 fonte stagionale/conservazione | media – DOP/IGP di Pantelleria e delle Eolie; consumo conservato | no (prodotto conservato) |
-| Cardoncello | incluso il 2026-11-05 | – | – | – | – | – | – | 0 fonte stagionale/conservazione; nessuna scheda CREA/BDA | media – fungo coltivato e spontaneo tipico della Puglia e Basilicata | valutare |
-| Cavolo cinese / pak choi | incluso il 2026-11-05 | Orto da Coltivare (sito) | Bio Suisse; EUFIC 16 Paesi | UC Davis, USDA HB66 | – | – | – | nessuna scheda CREA/BDA | media – sempre più presente nei supermercati e negli orti | valutare |
-| Cedro | incluso il 2026-11-05 | Orto da Coltivare (sito) | – | – | – | CEDRO, CANDITO | Cedro di Santa Maria del Cedro | 1 fonte stagionale/conservazione | media – DOP Cedro di Santa Maria del Cedro | valutare |
-| Cicerchia | incluso il 2026-11-05 | – | – | – | – | – | – | 0 fonte stagionale/conservazione; nessuna scheda CREA/BDA | media – legume tradizionale del Centro Italia | valutare |
-| Erba cipollina | incluso il 2026-11-05 | Orto da Coltivare (sito) | Bio Suisse | USDA HB66 | – | ERBA CIPOLLINA, fresca | – | requisiti soddisfatti: non era nella lista iniziale dei candidati | media – erba aromatica comune nell'orto | aggiungere se si trova una seconda fonte stagionale |
-| Gelso (mora di gelso) | incluso il 2026-11-05 | Orto da Coltivare (sito) | EUFIC 4 Paesi | – | – | – | – | nessuna scheda CREA/BDA | media – frutto tradizionale del Sud, poco commercializzato | valutare |
-| Giuggiola | incluso il 2026-11-05 | Orto da Coltivare (sito) | EUFIC 2 Paesi | UC Davis | – | – | – | nessuna scheda CREA/BDA | media – frutto tradizionale autunnale (Veneto, Sud) | valutare |
-| Lampascioni | incluso il 2026-11-05 | – | – | – | – | – | – | 0 fonte stagionale/conservazione; nessuna scheda CREA/BDA | media – tradizionali in Puglia e Basilicata | valutare |
-| Mandorla | incluso il 2026-11-05 | Orto da Coltivare (sito) | – | – | Mandorle dolci, secche | MANDORLE DOLCI, fresche; MANDORLE DOLCI, secche | – | 1 fonte stagionale/conservazione | media – frutta secca; la mandorla fresca ha una breve stagione estiva | valutare l'estensione alla frutta secca |
-| Oliva | incluso il 2026-11-05 | Orto da Coltivare (sito) | EUFIC 1 Paesi | UC Davis, USDA HB66 | Oliva Giarraffa; Oliva Nocellara del Belice | OLIVE, DA TAVOLA, conservate; OLIVE, NERE | Olive taggiasche liguri; Oliva di Gaeta; Oliva Ascolana del Piceno | requisiti soddisfatti: non era nella lista iniziale dei candidati | media – molte DOP; non si consuma fresca | no (solo trasformata) |
-| Patata dolce (batata) | incluso il 2026-11-05 | Orto da Coltivare (sito) | Bio Suisse; EUFIC 3 Paesi | UC Davis | – | – | – | nessuna scheda CREA/BDA | media – coltivata anche in Italia (Veneto, Puglia), consumo in crescita | valutare |
-| Pistacchio | incluso il 2026-11-05 | Orto da Coltivare (sito) | – | UC Davis | Pistacchi; Pistacchio di Bronte DOP | PISTACCHI, freschi; PISTACCHI, secchi | Pistacchio di Raffadali; Pistacchio Verde di Bronte | requisiti soddisfatti: non era nella lista iniziale dei candidati | media – DOP Pistacchio Verde di Bronte | valutare l'estensione alla frutta secca |
-| Rafano (cren) | incluso il 2026-11-05 | Orto da Coltivare (sito) | Bio Suisse; EUFIC 5 Paesi | USDA HB66 | – | – | – | nessuna scheda CREA/BDA | media – tradizionale in Basilicata (rafanata) e nel Nord-Est | valutare |
-| Taccola (pisello mangiatutto) | incluso il 2026-11-05 | – | Bio Suisse; EUFIC 6 Paesi | UC Davis | – | – | – | nessuna scheda CREA/BDA | media – comune negli orti; potrebbe stare come forma del pisello | come varietà del pisello |
-| Acetosa | escluso su decisione dell'utente (2026-11-05) | Orto da Coltivare (sito) | EUFIC 3 Paesi | – | – | – | – | nessuna scheda CREA/BDA | bassa – erba spontanea | no |
-| Alchechengi | incluso il 2026-11-05 | WWF, Altroconsumo, Orto da Coltivare (sito) | – | – | – | – | – | nessuna scheda CREA/BDA | bassa – frutto decorativo, consumo occasionale | no |
-| Carruba | incluso il 2026-11-05 | – | EUFIC 3 Paesi | – | Carrube | CARRUBE | – | 1 fonte stagionale/conservazione | bassa – consumo soprattutto come farina | no |
-| Chinotto | incluso il 2026-11-05 | – | – | – | – | – | – | 0 fonte stagionale/conservazione; nessuna scheda CREA/BDA | bassa – uso trasformato | no |
-| Cocco | incluso il 2026-11-05 | Altroconsumo, Orto da Coltivare (sito) | – | USDA HB66 | Cocco, essiccato; Cocco, fresco | – | – | requisiti soddisfatti: non era nella lista iniziale dei candidati | bassa – esotico, senza stagione in Italia | no |
-| Corbezzolo | escluso su decisione dell'utente (2026-11-05) | Orto da Coltivare (sito) | – | – | – | – | – | 1 fonte stagionale/conservazione; nessuna scheda CREA/BDA | bassa – frutto spontaneo | no |
-| Crescione | incluso il 2026-11-05 | Orto da Coltivare (sito) | EUFIC 6 Paesi | USDA HB66 | – | CRESCIONE | – | requisiti soddisfatti: non era nella lista iniziale dei candidati | bassa – poco diffuso in Italia | no |
-| Daikon | incluso il 2026-11-05 | – | EUFIC 3 Paesi | – | – | DAIKON | – | 1 fonte stagionale/conservazione | bassa – di nicchia | no |
-| Gombo (okra) | incluso il 2026-11-05 | Orto da Coltivare (sito) | EUFIC 4 Paesi | UC Davis, USDA HB66 | – | – | – | nessuna scheda CREA/BDA | bassa – di nicchia | no |
-| Mirabella / susina gialla | incluso il 2026-11-05 | – | Bio Suisse; EUFIC 5 Paesi | – | – | – | – | nessuna scheda CREA/BDA | bassa – rientra nelle susine | come varietà della susina |
-| Mirtillo rosso | incluso il 2026-11-05 | – | Bio Suisse; EUFIC 7 Paesi | USDA HB66 | – | – | – | nessuna scheda CREA/BDA | bassa – in Italia quasi solo essiccato o in succo | no |
-| Nespola comune (germanica) | incluso il 2026-11-05 | – | EUFIC 5 Paesi | – | – | – | – | 1 fonte stagionale/conservazione; nessuna scheda CREA/BDA | bassa – frutto antico, raro in commercio | no |
-| Portulaca | escluso su decisione dell'utente (2026-11-05) | Orto da Coltivare (sito) | Bio Suisse; EUFIC 3 Paesi | – | – | – | – | nessuna scheda CREA/BDA | bassa – erba spontanea | no |
-| Rabarbaro | incluso il 2026-11-05 | Orto da Coltivare (sito) | Bio Suisse; EUFIC 15 Paesi | USDA HB66 | – | – | – | nessuna scheda CREA/BDA | bassa – poco usato in cucina italiana | no |
-| Rapa / navone (rutabaga) | incluso il 2026-11-05 | – | EUFIC 11 Paesi | USDA HB66 | – | – | – | nessuna scheda CREA/BDA | bassa – di nicchia in Italia | no |
-| Ribes nero | incluso il 2026-11-05 | Orto da Coltivare (sito) | Bio Suisse; EUFIC 14 Paesi | – | – | RIBES NERO | – | requisiti soddisfatti: non era nella lista iniziale dei candidati | bassa – coltura soprattutto nordeuropea | no |
-| Salicornia | incluso il 2026-11-05 | Orto da Coltivare (sito) | EUFIC 3 Paesi | – | – | – | – | nessuna scheda CREA/BDA | bassa – di nicchia | no |
-| Sambuco | incluso il 2026-11-05 | – | Bio Suisse; EUFIC 5 Paesi | – | – | – | – | nessuna scheda CREA/BDA | bassa – uso soprattutto per fiori e sciroppi | no |
-| Scorzonera / scorzobianca | incluso il 2026-11-05 | Orto da Coltivare (sito) | Bio Suisse; EUFIC 9 Paesi | USDA HB66 | – | SCORZONERA | – | requisiti soddisfatti: non era nella lista iniziale dei candidati | bassa – ortaggio di nicchia | no |
-| Shiitake | incluso il 2026-11-05 | – | EUFIC 3 Paesi | – | – | – | – | 1 fonte stagionale/conservazione; nessuna scheda CREA/BDA | bassa – coltivato, senza stagionalità | no |
-| Spugnola | incluso il 2026-11-05 | – | EUFIC 2 Paesi | – | – | – | – | 1 fonte stagionale/conservazione; nessuna scheda CREA/BDA | bassa – fungo spontaneo primaverile di nicchia | no |
-| Uva spina | incluso il 2026-11-05 | – | Bio Suisse; EUFIC 15 Paesi | USDA HB66 | – | – | – | nessuna scheda CREA/BDA | bassa – coltura soprattutto nordeuropea | no |
-| Zafferano | incluso il 2026-11-05 | Orto da Coltivare (sito) | – | – | – | ZAFFERANO | Zafferano di Sardegna; Zafferano di San Gimignano; Zafferano dell'Aquila | 1 fonte stagionale/conservazione | bassa – spezia; tre DOP italiane | no (spezia secca) |
-| Zucchina spinosa (chayote) | incluso il 2026-11-05 | Orto da Coltivare (sito) | EUFIC 3 Paesi | – | – | – | – | nessuna scheda CREA/BDA | bassa – di nicchia | no |
+| Chanterelle (Finferlo (gallinaccio)) | included on 2026-11-05 | – | EUFIC 3 countries | – | – | – | – | 1 seasonality/storage source; no CREA/BDA record | high – wild mushroom, widely picked and sold | add if an Italian seasonal source is found |
+| Hazelnut (Nocciola) | included on 2026-11-05 | Orto da Coltivare (sito) | – | – | Nocciole, secche | NOCCIOLE, secche | Nocciola Romana; Nocciola di Giffoni; Nocciola del Piemonte / Nocciola Piemonte | 1 seasonality/storage source | high – three Italian PDO/PGI (Piemonte, Giffoni, Romana) | consider extending to nuts |
+| Puntarelle (catalogna chicory shoots) (Puntarelle) | included on 2026-11-05 | Orto da Coltivare (sito) | EUFIC 1 countries | – | – | – | – | no CREA/BDA record | high – typical of Lazio, winter | as a variety of head chicory (catalogna) |
+| Romanesco (Broccolo romanesco) | included on 2026-11-05 | WWF | EUFIC 1 countries | – | – | – | – | no CREA/BDA record | high – typically Italian winter vegetable | add (exception, nutrition from cauliflower or broccoli as an approximation) or as a variety |
+| Saltwort (agretti) (Agretti (barba di frate)) | included on 2026-11-05 | Orto da Coltivare (sito) | – | – | Agretti, cotti, bolliti; Agretti, crudi | AGRETTI | – | 1 seasonality/storage source | high – typically Italian spring vegetable | add if a second seasonal source is found |
+| Spring onion (Cipollotto) | included on 2026-11-05 | Orto da Coltivare (sito) | Bio Suisse; EUFIC 18 countries | – | – | – | Cipollotto Nocerino | no CREA/BDA record | high – very common in Italy, Cipollotto Nocerino PGI | add (exception: nutrition from CREA 'cipolline' as a declared approximation) |
+| Walnut (Noce) | included on 2026-11-05 | Orto da Coltivare (sito) | Bio Suisse | – | Noci; Noci pecan | NOCI PECAN; NOCI, fresche | – | requirements met: was not in the initial candidate list | high – autumn nut, widely eaten | consider extending to nuts |
+| Almond (Mandorla) | included on 2026-11-05 | Orto da Coltivare (sito) | – | – | Mandorle dolci, secche | MANDORLE DOLCI, fresche; MANDORLE DOLCI, secche | – | 1 seasonality/storage source | medium – nut; fresh almonds have a short summer season | consider extending to nuts |
+| Bergamot orange (Bergamotto) | excluded by owner decision (2026-11-05) | Orto da Coltivare (sito) | – | – | – | – | – | 1 seasonality/storage source; no CREA/BDA record | medium – citrus typical of Calabria, used mainly for flavouring | to evaluate |
+| Caper (Cappero) | excluded by owner decision (2026-11-05) | Orto da Coltivare (sito) | – | – | – | CAPPERI SOTT’ACETO | Cappero delle Isole Eolie; Cappero di Pantelleria | 1 seasonality/storage source | medium – PDO/PGI of Pantelleria and the Aeolian Islands; eaten preserved | no (preserved product) |
+| Chinese cabbage / pak choi (Cavolo cinese / pak choi) | included on 2026-11-05 | Orto da Coltivare (sito) | Bio Suisse; EUFIC 16 countries | UC Davis, USDA HB66 | – | – | – | no CREA/BDA record | medium – increasingly common in supermarkets and gardens | to evaluate |
+| Chives (Erba cipollina) | included on 2026-11-05 | Orto da Coltivare (sito) | Bio Suisse | USDA HB66 | – | ERBA CIPOLLINA, fresca | – | requirements met: was not in the initial candidate list | medium – common garden herb | add if a second seasonal source is found |
+| Citron (Cedro) | included on 2026-11-05 | Orto da Coltivare (sito) | – | – | – | CEDRO, CANDITO | Cedro di Santa Maria del Cedro | 1 seasonality/storage source | medium – Cedro di Santa Maria del Cedro PDO | to evaluate |
+| Grass pea (Cicerchia) | included on 2026-11-05 | – | – | – | – | – | – | 0 seasonality/storage source; no CREA/BDA record | medium – traditional legume of Central Italy | to evaluate |
+| Horseradish (Rafano (cren)) | included on 2026-11-05 | Orto da Coltivare (sito) | Bio Suisse; EUFIC 5 countries | USDA HB66 | – | – | – | no CREA/BDA record | medium – traditional in Basilicata (rafanata) and North-East Italy | to evaluate |
+| Jujube (Giuggiola) | included on 2026-11-05 | Orto da Coltivare (sito) | EUFIC 2 countries | UC Davis | – | – | – | no CREA/BDA record | medium – traditional autumn fruit (Veneto, South) | to evaluate |
+| King oyster mushroom (Cardoncello) | included on 2026-11-05 | – | – | – | – | – | – | 0 seasonality/storage source; no CREA/BDA record | medium – cultivated and wild mushroom typical of Apulia and Basilicata | to evaluate |
+| Mulberry (Gelso (mora di gelso)) | included on 2026-11-05 | Orto da Coltivare (sito) | EUFIC 4 countries | – | – | – | – | no CREA/BDA record | medium – traditional fruit of Southern Italy, rarely sold | to evaluate |
+| Olive (Oliva) | included on 2026-11-05 | Orto da Coltivare (sito) | EUFIC 1 countries | UC Davis, USDA HB66 | Oliva Giarraffa; Oliva Nocellara del Belice | OLIVE, DA TAVOLA, conservate; OLIVE, NERE | Olive taggiasche liguri; Oliva di Gaeta; Oliva Ascolana del Piceno | requirements met: was not in the initial candidate list | medium – many PDOs; not eaten fresh | no (processed only) |
+| Pistachio (Pistacchio) | included on 2026-11-05 | Orto da Coltivare (sito) | – | UC Davis | Pistacchi; Pistacchio di Bronte DOP | PISTACCHI, freschi; PISTACCHI, secchi | Pistacchio di Raffadali; Pistacchio Verde di Bronte | requirements met: was not in the initial candidate list | medium – Pistacchio Verde di Bronte PDO | consider extending to nuts |
+| Snow pea / mangetout (Taccola (pisello mangiatutto)) | included on 2026-11-05 | – | Bio Suisse; EUFIC 6 countries | UC Davis | – | – | – | no CREA/BDA record | medium – common in gardens; could be a form of pea | as a variety of pea |
+| Sour cherry (Amarena / visciola) | included on 2026-11-05 | – | – | – | Amarene, fresche | AMARENE | Amarene Brusche di Modena | 0 seasonality/storage source | medium – Amarene Brusche di Modena PGI; rarely eaten fresh | to evaluate |
+| Sweet potato (Patata dolce (batata)) | included on 2026-11-05 | Orto da Coltivare (sito) | Bio Suisse; EUFIC 3 countries | UC Davis | – | – | – | no CREA/BDA record | medium – also grown in Italy (Veneto, Apulia), growing consumption | to evaluate |
+| Tassel hyacinth bulbs (Lampascioni) | included on 2026-11-05 | – | – | – | – | – | – | 0 seasonality/storage source; no CREA/BDA record | medium – traditional in Apulia and Basilicata | to evaluate |
+| Wild asparagus (Asparago selvatico) | included on 2026-11-05 | Orto da Coltivare (sito) | – | – | Asparagi di bosco, crudi; Asparagi di campo, cotti, bolliti | – | – | 1 seasonality/storage source | medium – wild spring harvest, CREA has an entry | as a variety or note of asparagus |
+| Blackcurrant (Ribes nero) | included on 2026-11-05 | Orto da Coltivare (sito) | Bio Suisse; EUFIC 14 countries | – | – | RIBES NERO | – | requirements met: was not in the initial candidate list | low – mainly a Northern European crop | no |
+| Cape gooseberry (physalis) (Alchechengi) | included on 2026-11-05 | WWF, Altroconsumo, Orto da Coltivare (sito) | – | – | – | – | – | no CREA/BDA record | low – ornamental fruit, occasionally eaten | no |
+| Carob (Carruba) | included on 2026-11-05 | – | EUFIC 3 countries | – | Carrube | CARRUBE | – | 1 seasonality/storage source | low – eaten mainly as flour | no |
+| Chayote (Zucchina spinosa (chayote)) | included on 2026-11-05 | Orto da Coltivare (sito) | EUFIC 3 countries | – | – | – | – | no CREA/BDA record | low – niche | no |
+| Chinotto (myrtle-leaved orange) (Chinotto) | included on 2026-11-05 | – | – | – | – | – | – | 0 seasonality/storage source; no CREA/BDA record | low – used processed | no |
+| Coconut (Cocco) | included on 2026-11-05 | Altroconsumo, Orto da Coltivare (sito) | – | USDA HB66 | Cocco, essiccato; Cocco, fresco | – | – | requirements met: was not in the initial candidate list | low – exotic, no season in Italy | no |
+| Cranberry / lingonberry (Mirtillo rosso) | included on 2026-11-05 | – | Bio Suisse; EUFIC 7 countries | USDA HB66 | – | – | – | no CREA/BDA record | low – in Italy almost only dried or as juice | no |
+| Daikon / white radish (Daikon) | included on 2026-11-05 | – | EUFIC 3 countries | – | – | DAIKON | – | 1 seasonality/storage source | low – niche | no |
+| Elderberry (Sambuco) | included on 2026-11-05 | – | Bio Suisse; EUFIC 5 countries | – | – | – | – | no CREA/BDA record | low – used mainly for flowers and syrups | no |
+| Gooseberry (Uva spina) | included on 2026-11-05 | – | Bio Suisse; EUFIC 15 countries | USDA HB66 | – | – | – | no CREA/BDA record | low – mainly a Northern European crop | no |
+| Medlar (Nespola comune (germanica)) | included on 2026-11-05 | – | EUFIC 5 countries | – | – | – | – | 1 seasonality/storage source; no CREA/BDA record | low – heritage fruit, rarely sold | no |
+| Mirabelle plum (Mirabella / susina gialla) | included on 2026-11-05 | – | Bio Suisse; EUFIC 5 countries | – | – | – | – | no CREA/BDA record | low – falls under plums | as a variety of plum |
+| Morel (Spugnola) | included on 2026-11-05 | – | EUFIC 2 countries | – | – | – | – | 1 seasonality/storage source; no CREA/BDA record | low – niche wild spring mushroom | no |
+| Okra (Gombo (okra)) | included on 2026-11-05 | Orto da Coltivare (sito) | EUFIC 4 countries | UC Davis, USDA HB66 | – | – | – | no CREA/BDA record | low – niche | no |
+| Purslane (Portulaca) | excluded by owner decision (2026-11-05) | Orto da Coltivare (sito) | Bio Suisse; EUFIC 3 countries | – | – | – | – | no CREA/BDA record | low – wild herb | no |
+| Rhubarb (Rabarbaro) | included on 2026-11-05 | Orto da Coltivare (sito) | Bio Suisse; EUFIC 15 countries | USDA HB66 | – | – | – | no CREA/BDA record | low – rarely used in Italian cooking | no |
+| Saffron (Zafferano) | included on 2026-11-05 | Orto da Coltivare (sito) | – | – | – | ZAFFERANO | Zafferano di Sardegna; Zafferano di San Gimignano; Zafferano dell'Aquila | 1 seasonality/storage source | low – spice; three Italian PDOs | no (dried spice) |
+| Salsify / black salsify (Scorzonera / scorzobianca) | included on 2026-11-05 | Orto da Coltivare (sito) | Bio Suisse; EUFIC 9 countries | USDA HB66 | – | SCORZONERA | – | requirements met: was not in the initial candidate list | low – niche vegetable | no |
+| Samphire (Salicornia) | included on 2026-11-05 | Orto da Coltivare (sito) | EUFIC 3 countries | – | – | – | – | no CREA/BDA record | low – niche | no |
+| Shiitake (Shiitake) | included on 2026-11-05 | – | EUFIC 3 countries | – | – | – | – | 1 seasonality/storage source; no CREA/BDA record | low – cultivated, no seasonality | no |
+| Sorrel (Acetosa) | excluded by owner decision (2026-11-05) | Orto da Coltivare (sito) | EUFIC 3 countries | – | – | – | – | no CREA/BDA record | low – wild herb | no |
+| Strawberry tree fruit (Corbezzolo) | excluded by owner decision (2026-11-05) | Orto da Coltivare (sito) | – | – | – | – | – | 1 seasonality/storage source; no CREA/BDA record | low – wild fruit | no |
+| Swede / rutabaga (Rapa / navone (rutabaga)) | included on 2026-11-05 | – | EUFIC 11 countries | USDA HB66 | – | – | – | no CREA/BDA record | low – niche in Italy | no |
+| Watercress (Crescione) | included on 2026-11-05 | Orto da Coltivare (sito) | EUFIC 6 countries | USDA HB66 | – | CRESCIONE | – | requirements met: was not in the initial candidate list | low – uncommon in Italy | no |
 
-## Da valutare per primi
+## To evaluate first
 
-Candidati con rilevanza alta o che soddisfano già la regola: Cipollotto, Agretti (barba di frate), Noce, Nocciola, Pistacchio, Erba cipollina, Crescione, Ribes nero, Scorzonera / scorzobianca, Broccolo romanesco, Puntarelle, Cocco, Finferlo (gallinaccio), Oliva.
+Candidates with high relevance or that already meet the rule: Spring onion, Saltwort (agretti), Walnut, Hazelnut, Pistachio, Chives, Watercress, Blackcurrant, Salsify / black salsify, Romanesco, Puntarelle (catalogna chicory shoots), Coconut, Chanterelle, Olive.
 
-Note:
+Notes:
 
-- **Frutta secca** (noce, nocciola, mandorla, pistacchio): hanno schede CREA/BDA e DOP/IGP, ma i calendari stagionali non li riportano. Includerli è una scelta di perimetro dell'app (oggi: frutta e verdura fresca).
-- **Varietà o forme di alimenti già presenti** (puntarelle, taccole, mirabelle, asparago selvatico): conviene aggiungerle come varietà, come per la pesca tabacchiera, senza creare nuove schede.
-- **Broccolo romanesco**: nessuna scheda CREA/BDA specifica; si potrebbe usare cavolfiore o broccolo come approssimazione dichiarata.
-- **Funghi spontanei** (finferlo, spugnola, cardoncello): le leggi regionali sui funghi raramente danno periodi per specie; servirebbero schede micologiche istituzionali come per l'ovolo.
+- **Nuts** (walnut, hazelnut, almond, pistachio): they have CREA/BDA records and PDO/PGI, but the seasonal calendars do not list them. Including them is a scope choice for the app (today: fresh fruit and vegetables).
+- **Varieties or forms of products already present** (puntarelle, snow peas, mirabelles, wild asparagus): better added as varieties, as for the flat peach, without creating new records.
+- **Romanesco broccoli**: no specific CREA/BDA record; cauliflower or broccoli could be used as a declared approximation.
+- **Wild mushrooms** (chanterelle, morel, cardoncello): regional mushroom laws rarely give periods per species; institutional mycological sheets would be needed, as for Caesar's mushroom.

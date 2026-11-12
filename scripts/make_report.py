@@ -1,6 +1,6 @@
-"""Genera data/scraping_report.md: come il database è stato costruito, organizzato e validato.
-I numeri sono calcolati dal database, dall'audit e dalla copertura del template; i commenti sono testo fisso aggiornato a mano.
-Uso:  python scripts/make_report.py   (dopo validate_db.py, audit_db.py e template_coverage.py)
+"""Generates data/scraping_report.md: how the database was built, organised and validated.
+Numbers are computed from the database, the audit and the template coverage; the commentary is fixed text updated by hand.
+Usage:  python scripts/make_report.py   (after validate_db.py, audit_db.py and template_coverage.py)
 """
 import collections
 import json
@@ -9,20 +9,20 @@ from datetime import date
 
 from common import DATA, load_json
 
-CAT_IT = {"verdura": "Verdura", "frutta": "Frutta", "erbe_spezie": "Erbe e spezie", "funghi": "Funghi", "cereali": "Cereali"}
+CAT_EN = {"verdura": "Vegetables", "frutta": "Fruit", "erbe_spezie": "Herbs and spices", "funghi": "Mushrooms", "cereali": "Cereals"}
 BLOCKS = [
-    ("id, names, category", "identità: id stabile, nomi IT/EN (comune, alternativi), categoria"),
-    ("botany", "nome scientifico, famiglia, genere, codici EPPO/GBIF/UPOV, parte della pianta usata"),
-    ("italian_varieties_and_territories", "varietà verificate (Catalogo comune UE, Slow Food, testi), DOP/IGP (eAmbrosia), PAT (MASAF), varietà iscritte in Italia"),
-    ("images", "galleria con autore, licenza e URL d'origine di ogni foto"),
-    ("seasonality", "stato mese per mese per 3 macro-aree italiane e 6 zone climatiche europee, con provenienza zona per zona"),
-    ("agricultural_calendar_italy", "semina, trapianto, raccolta per macro-area; parametri di coltivazione"),
-    ("buying_guide", "come sceglierlo, segni di qualità e di deterioramento"),
-    ("ripening_and_storage", "climaterico/non climaterico, etilene, respirazione e deperibilità, danno da freddo, conservazione professionale e domestica, compatibilità"),
-    ("nutrition_and_sustainability", "valori per 100 g con fonte per valore, %VNR, claim UE, composti bioattivi, allergeni, porzioni LARN, impronta di carbonio e idrica"),
-    ("sources_by_topic", "fonti usate per argomento e link utili"),
-    ("data_completeness", "campi mancanti, da verificare, non pertinenti, discrepanze con la bozza, note"),
-    ("help_refs", "voci del glossario pertinenti a quell'alimento (icone \"?\")"),
+    ("id, names, category", "identity: stable id, IT/EN names (common, alternative), category"),
+    ("botany", "scientific name, family, genus, EPPO/GBIF/UPOV codes, plant part used"),
+    ("italian_varieties_and_territories", "verified varieties (EU Common Catalogue, Slow Food, texts), PDO/PGI (eAmbrosia), PAT (MASAF), varieties registered in Italy"),
+    ("images", "gallery with author, licence and source URL for every photo"),
+    ("seasonality", "month-by-month state for 3 Italian macro-areas and 6 European climate zones, with zone-by-zone provenance"),
+    ("agricultural_calendar_italy", "sowing, transplanting, harvest by macro-area; growing parameters"),
+    ("buying_guide", "how to choose it, signs of quality and spoilage"),
+    ("ripening_and_storage", "climacteric/non-climacteric, ethylene, respiration and perishability, chilling injury, commercial and home storage, compatibility"),
+    ("nutrition_and_sustainability", "values per 100 g with a source per value, %NRV, EU claims, bioactive compounds, allergens, LARN portions, carbon and water footprint"),
+    ("sources_by_topic", "sources used by topic and useful links"),
+    ("data_completeness", "missing fields, fields to verify, non-applicable fields, discrepancies with the draft, notes"),
+    ("help_refs", "glossary entries relevant to that product (\"?\" icons)"),
 ]
 
 
@@ -39,6 +39,11 @@ def count_bilingual(o):
     if isinstance(o, list):
         return sum(count_bilingual(v) for v in o)
     return 0
+
+
+def en(o):
+    """English side of an {it, en} text."""
+    return o.get("en") or o.get("it") if isinstance(o, dict) else o
 
 
 def main():
@@ -59,186 +64,185 @@ def main():
     img_err = sum(1 for a in audit if a["area"] == "immagini")
     sev = collections.Counter(a["severity"] for a in audit if a["area"] != "immagini")
 
-    # ------------------------------------------------------------------ intestazione
-    w("# Peak Season – Report Fase 1: costruzione, organizzazione e validazione del database\n")
-    w(f"Generato il {date.today().isoformat()} da `scripts/make_report.py` · database v{md['version']} · {N} alimenti · "
+    # ------------------------------------------------------------------ header
+    w("# Peak Season – Phase 1 report: building, organising and validating the database\n")
+    w(f"Generated on {date.today().isoformat()} by `scripts/make_report.py` · database v{md['version']} · {N} products · "
       f"schema `data/schema.json` (JSON Schema 2020-12).\n")
-    w("Il report spiega con quale metodo è stato costruito il database, come è organizzato (schede, metadati, fonti, glossario, "
-      "bilinguismo) e come è stato controllato. Le immagini hanno un report a parte, dopo la tua revisione. "
-      "La guida campo per campo è in `data/database_guide.md`.\n")
+    w("This report explains the method used to build the database, how it is organised (records, metadata, sources, glossary, "
+      "bilingualism) and how it was checked. The field-by-field guide is in `data/database_guide.md`.\n")
 
-    w("## 1. In sintesi\n")
+    w("## 1. Summary\n")
     w(table([
-        ["Alimenti", N, ", ".join(f"{CAT_IT[c]} {n}" for c, n in collections.Counter(i["category"] for i in items).most_common())],
-        ["Fonti catalogate", len(md["official_sources"]), "ognuna con descrizione, autorevolezza, contenuti e usi (§4)"],
-        ["Fonti usate per alimento", f"media {sum(len(i['sources_by_topic']['sources_used']) for i in items) / N:.1f}", "`sources_by_topic.sources_used`"],
-        ["Casi di conflitto tra fonti documentati", len(md["source_conflicts"]), "con decisione e motivazione (§5)"],
-        ["Voci di glossario (icone \"?\")", len(md["glossary"]), f"{len(md['field_help'])} campi collegati, {sum(len(i.get('help_refs', [])) for i in items)} rimandi negli alimenti"],
-        ["Testi bilingui {it, en}", count_bilingual(db), "tutto ciò che l'utente legge esiste in italiano e in inglese (§3.4)"],
-        ["Validazione schema", "0 errori sui dati", f"restano solo i file immagine eliminati durante la tua revisione ({img_err} segnalazioni)"],
-        ["Ricontrollo sistematico (dati)", f"{sev['E']} errori, {sev['W']} da controllare, {sev['I']} informativi", "tutti spiegati (§6.3)"],
-        ["Valori ancora da verificare", pend, "quasi tutti calendari agricoli di frutta, erbe e cereali (§7)"],
-        ["Campi senza dato", miss, "lacune vere, mappate in §7"],
-        ["Campi non pertinenti, motivati", na, "es. danno da freddo per chi non è sensibile"],
-    ], ["Voce", "Valore", "Note"]))
+        ["Products", N, ", ".join(f"{CAT_EN[c]} {n}" for c, n in collections.Counter(i["category"] for i in items).most_common())],
+        ["Catalogued sources", len(md["official_sources"]), "each with description, authority, contents and uses (§4)"],
+        ["Sources used per product", f"average {sum(len(i['sources_by_topic']['sources_used']) for i in items) / N:.1f}", "`sources_by_topic.sources_used`"],
+        ["Documented source conflicts", len(md["source_conflicts"]), "with decision and rationale (§5)"],
+        ["Glossary entries (\"?\" icons)", len(md["glossary"]), f"{len(md['field_help'])} linked fields, {sum(len(i.get('help_refs', [])) for i in items)} references in products"],
+        ["Bilingual {it, en} texts", count_bilingual(db), "everything the user reads exists in Italian and English (§3.4)"],
+        ["Schema validation", "0 data errors", f"only image-file warnings remain ({img_err})"],
+        ["Systematic re-check (data)", f"{sev['E']} errors, {sev['W']} to review, {sev['I']} informational", "all explained (§6.3)"],
+        ["Values still to verify", pend, "almost all agricultural calendars of fruit, herbs and cereals (§7)"],
+        ["Fields without data", miss, "real gaps, mapped in §7"],
+        ["Non-applicable fields, with reason", na, "e.g. chilling injury for produce that is not sensitive"],
+    ], ["Item", "Value", "Notes"]))
     w("")
 
-    # ------------------------------------------------------------------ 2. costruzione
-    w("## 2. Come è stato costruito\n")
-    w("### 2.1 Principi\n")
+    # ------------------------------------------------------------------ 2. building
+    w("## 2. How it was built\n")
+    w("### 2.1 Principles\n")
     for t in [
-        "**Nessun dato inventato.** Ogni valore viene da una fonte catalogata, indicata nel campo `source` o nel blocco `sources_by_topic`; dove una fonte manca il campo resta vuoto (null) ed è elencato in `data_completeness.missing_fields`.",
-        "**Fonti ufficiali e scientifiche prima di tutto**, con un ordine di priorità dichiarato per argomento (es. nutrizione: CREA → BDA-IEO → USDA FoodData Central).",
-        "**Tracciabilità per valore**: per i nutrienti la fonte è indicata valore per valore; per i dati post-raccolta il capitolo o la tabella HB66; per le impronte il numero di studi e l'intervallo.",
-        "**Approssimazioni dichiarate**: se una fonte non ha la voce esatta si usa la più vicina, marcata come approssimata; le stime (es. classe di respirazione da Q10) sono marcate come stimate e spiegate nel campo `basis`.",
-        "**Non pertinente ≠ mancante**: un campo che per definizione non si applica (es. danno da freddo per chi non lo soffre) è marcato N/A con motivazione, non conteggiato come lacuna.",
-        "**La bozza iniziale come punto di partenza, non come fonte**: i suoi 91 alimenti sono stati migrati nella struttura; ogni valore diverso dalle fonti è registrato come discrepanza, ogni valore non verificabile è tolto dall'app e conservato in `data/draft_legacy_values.json` "
-        f"({sum(len(v) for v in legacy['items'].values())} valori). Copia della bozza in `data/_backup_bozza_2026-11-04/`.",
+        "**No invented data.** Every value comes from a catalogued source, given in the `source` field or in the `sources_by_topic` block; where no source exists the field stays empty (null) and is listed in `data_completeness.missing_fields`.",
+        "**Official and scientific sources first**, with a declared priority order per topic (e.g. nutrition: CREA → BDA-IEO → USDA FoodData Central).",
+        "**Per-value traceability**: for nutrients the source is given value by value; for postharvest data the HB66 chapter or table; for footprints the number of studies and the range.",
+        "**Declared approximations**: if a source lacks the exact entry the closest one is used and flagged as approximate; estimates (e.g. respiration class from Q10) are flagged as estimated and explained in the `basis` field.",
+        "**Not applicable ≠ missing**: a field that by definition does not apply (e.g. chilling injury for produce that does not suffer from it) is marked N/A with a reason and not counted as a gap.",
+        "**The initial draft as a starting point, not as a source**: its 91 products were migrated into the structure; every value differing from the sources is recorded as a discrepancy, every unverifiable value is removed from the app and preserved in `data/draft_legacy_values.json` "
+        f"({sum(len(v) for v in legacy['items'].values())} values).",
     ]:
         w(f"- {t}")
     w("\n### 2.2 Pipeline\n")
-    w("Il database è prodotto da script Python eseguiti in un ordine fisso (`scripts/README.md`). Ogni script ha una docstring con fonte, metodo e uso.\n")
+    w("The database is produced by Python scripts run in a fixed order (`scripts/README.md`). Every script has a docstring with source, method and usage.\n")
     w(table([
-        ["1. Fonti e indice", "scarica e mette in cache le fonti (`data/raw/`), costruisce la lista master con i codici di ogni fonte, migra la bozza"],
-        ["2. Nutrizione", "CREA e BDA-IEO, USDA per i mancanti, %VNR e claim UE ricalcolati, riferimento LARN per le proteine"],
-        ["3. Stagionalità e botanica", "voto tra i calendari italiani, mappa EUFIC e fonti nazionali EUFIC; EPPO, WFO, GBIF; note di coltivazione"],
-        ["4. Varietà e territori", "verifica delle varietà su testi, Slow Food e Catalogo comune UE; DOP/IGP su eAmbrosia; codici UPOV; PAT MASAF"],
-        ["5. Conservazione", "USDA HB66 (tabelle e capitoli), classi di Kader, FoodKeeper e guida UC Davis per la casa, gruppi di compatibilità"],
-        ["6. Composti, allergeni, sostenibilità", "USDA carotenoidi e flavonoidi, Phenol-Explorer, Reg. UE 1169/2011, porzioni LARN, SU-EATABLE LIFE, AGRIBALYSE"],
-        ["7. Testi, immagini, fonti", "testi IT/EN riallineati ai dati, immagini con licenza, registro delle fonti per alimento"],
-        ["8. Bilinguismo e aiuto", "`localize_fields.py` (ultimo passo di trasformazione), `build_help.py` (vocabolario, glossario), `build_source_catalog.py` (catalogo fonti e conflitti)"],
-        ["9. Controlli e report", "validazione JSON Schema, ricontrollo voce per voce, copertura del template, report"],
-    ], ["Fase", "Cosa fa"]))
-    w("\nLe scelte che richiedono giudizio (citazioni dai capitoli HB66, mappature tra voci di fonti diverse, descrizioni delle fonti, "
-      "glossario, conflitti) sono in file di configurazione curati a mano in `scripts/config/`, ciascuno con la citazione o la pagina della fonte: "
-      "così ogni decisione è leggibile e modificabile senza toccare il codice.\n")
+        ["1. Sources and index", "downloads and caches the sources (`data/raw/`), builds the master list with each source's codes, migrates the draft"],
+        ["2. Nutrition", "CREA and BDA-IEO, USDA for missing items, recomputed %NRV and EU claims, LARN reference for protein"],
+        ["3. Seasonality and botany", "vote across Italian calendars, EUFIC map and EUFIC national sources; EPPO, WFO, GBIF; growing notes"],
+        ["4. Varieties and territories", "variety checks on texts, Slow Food and the EU Common Catalogue; PDO/PGI on eAmbrosia; UPOV codes; MASAF PAT"],
+        ["5. Storage", "USDA HB66 (tables and chapters), Kader classes, FoodKeeper and UC Davis home guide, compatibility groups"],
+        ["6. Compounds, allergens, sustainability", "USDA carotenoids and flavonoids, Phenol-Explorer, Reg. (EU) 1169/2011, LARN portions, SU-EATABLE LIFE, AGRIBALYSE"],
+        ["7. Texts, images, sources", "IT/EN texts realigned with the data, licensed images, per-product source register"],
+        ["8. Bilingualism and help", "`localize_fields.py` (last transformation step), `build_help.py` (vocabulary, glossary), `build_source_catalog.py` (source catalogue and conflicts)"],
+        ["9. Checks and reports", "JSON Schema validation, item-by-item re-check, template coverage, reports"],
+    ], ["Phase", "What it does"]))
+    w("\nChoices that require judgement (quotes from HB66 chapters, mappings between entries of different sources, source descriptions, "
+      "glossary, conflicts) live in hand-curated configuration files in `scripts/config/`, each with the quote or page of the source: "
+      "every decision can be read and changed without touching the code.\n")
 
-    # ------------------------------------------------------------------ 3. organizzazione
-    w("## 3. Come è organizzato\n")
-    w("Il file `data/database.json` ha due parti: `metadata` (tutto ciò che vale per l'intero database) e `items` (una scheda per alimento).\n")
-    w("### 3.1 La scheda di un alimento\n")
-    w(table([[f"`{a}`", b] for a, b in BLOCKS], ["Blocco", "Contenuto"]))
-    w("\n### 3.2 I metadati\n")
+    # ------------------------------------------------------------------ 3. organisation
+    w("## 3. How it is organised\n")
+    w("`data/database.json` has two parts: `metadata` (everything that applies to the whole database) and `items` (one record per product).\n")
+    w("### 3.1 A product record\n")
+    w(table([[f"`{a}`", b] for a, b in BLOCKS], ["Block", "Content"]))
+    w("\n### 3.2 Metadata\n")
     w(table([
-        ["`official_sources`", "catalogo delle fonti: cos'è, perché è autorevole, cosa offre, per quali argomenti e alimenti è stata consultata"],
-        ["`source_conflicts`", "casi generali di valori discordanti tra fonti: perché, cosa si è deciso e perché"],
-        ["`glossary`", "spiegazioni brevi ma complete dei concetti, con fonti, per le icone \"?\""],
-        ["`vocabulary`", "etichette IT/EN di tutti i valori codificati (es. `climaterico` → \"Climaterico\" / \"Climacteric\"), con il rimando al glossario"],
-        ["`field_help`", "quale voce del glossario spiega ogni campo"],
-        ["legende e metodi", "stati stagionali, zone EUFIC, macro-aree, metodo di stagionalità, post-raccolta, deperibilità, conservazione, impronte"],
-        ["`sustainable_diet_summary`", "sintesi EUFIC sulla dieta sostenibile"],
-    ], ["Campo", "Contenuto"]))
-    w("\n### 3.3 Il sistema di aiuto (icone \"?\")\n")
-    w("Una spiegazione è scritta una volta sola, nel glossario, e raggiunta da più punti:\n")
-    w(f"- **dal campo**: `metadata.field_help` collega {len(md['field_help'])} percorsi di campo (es. `ripening_and_storage.ripening_type`) alle voci che li spiegano;")
-    w(f"- **dal valore**: ogni valore di `metadata.vocabulary` ({len(md['vocabulary'])} gruppi) può puntare a una voce (es. `climaterico` → voce *climacteric*);")
-    w("- **dall'alimento**: `item.help_refs` elenca le voci pertinenti per quell'alimento e i campi dove mostrarle, calcolate dal contenuto (allergeni, glutine, DOP, PAT, favismo per la fava, stime Q10, coltura in serra…);")
-    w("- **da una voce all'altra**: `see_also`; e **dalla fonte**: `official_sources[].used_for.glossary_entries`.\n")
-    w("Ogni voce ha `term`, `short` (una riga per il tooltip) e `text` (spiegazione completa) in IT e EN, e le fonti con nome e URL risolti dal catalogo. "
-      "L'app quindi non contiene testi di aiuto propri: legge tutto dal database.\n")
-    w("Voci: " + ", ".join(f"*{g['term']['it']}*" for g in md["glossary"].values()) + ".\n")
-    w("### 3.4 Bilinguismo\n")
-    w("L'app deve funzionare interamente in italiano o interamente in inglese. Convenzioni applicate e verificate dall'audit:\n")
+        ["`official_sources`", "source catalogue: what it is, why it is authoritative, what it offers, for which topics and products it was consulted"],
+        ["`source_conflicts`", "general cases of disagreement between sources: why, what was decided and why"],
+        ["`glossary`", "short but complete explanations of concepts, with sources, for the \"?\" icons"],
+        ["`vocabulary`", "IT/EN labels of every coded value (e.g. `climaterico` → \"Climaterico\" / \"Climacteric\"), with the glossary link"],
+        ["`field_help`", "which glossary entry explains each field"],
+        ["legends and methods", "seasonal states, EUFIC zones, macro-areas, seasonality method, postharvest, perishability, storage, footprints"],
+        ["`sustainable_diet_summary`", "EUFIC summary on sustainable diets"],
+    ], ["Field", "Content"]))
+    w("\n### 3.3 The help system (\"?\" icons)\n")
+    w("An explanation is written once, in the glossary, and reached from several places:\n")
+    w(f"- **from the field**: `metadata.field_help` links {len(md['field_help'])} field paths (e.g. `ripening_and_storage.ripening_type`) to the entries that explain them;")
+    w(f"- **from the value**: every value of `metadata.vocabulary` ({len(md['vocabulary'])} groups) can point to an entry (e.g. `climaterico` → entry *climacteric*);")
+    w("- **from the product**: `item.help_refs` lists the entries relevant to that product and the fields where they are shown, computed from the content (allergens, gluten, PDO, PAT, favism for broad beans, Q10 estimates, greenhouse growing…);")
+    w("- **from one entry to another**: `see_also`; and **from the source**: `official_sources[].used_for.glossary_entries`.\n")
+    w("Every entry has `term`, `short` (one line for the tooltip) and `text` (full explanation) in IT and EN, and its sources with name and URL resolved from the catalogue. "
+      "The app therefore holds no help texts of its own: it reads everything from the database.\n")
+    w("Entries: " + ", ".join(f"*{en(g['term'])}*" for g in md["glossary"].values()) + ".\n")
+    w("### 3.4 Bilingualism\n")
+    w("The app must work entirely in Italian or entirely in English. Conventions applied and checked by the audit:\n")
     for t in [
-        "ogni testo per l'utente è un oggetto `{it, en}`: nomi, testi, etichette, consigli, legende, glossario, descrizioni delle fonti, motivazioni (`basis`, `derivation`, `method`, note delle varietà);",
-        "i valori codificati (categoria, stato stagionale, classi, luoghi di conservazione…) sono chiavi stabili tradotte da `metadata.vocabulary`, mai mostrate così come sono;",
-        "per nutrienti e composti restano le coppie `name`/`name_en`;",
-        "restano nella lingua originale solo i nomi propri: varietà, DOP/IGP, PAT, nomi scientifici, autori, licenze, nomi delle fonti, citazioni testuali delle fonti;",
-        "`data_completeness.notes` è un registro tecnico interno in italiano, non destinato all'app.",
+        "every user-facing text is an `{it, en}` object: names, texts, labels, advice, legends, glossary, source descriptions, rationales (`basis`, `derivation`, `method`, variety notes);",
+        "coded values (category, seasonal state, classes, storage locations…) are stable keys translated through `metadata.vocabulary`, never shown as they are;",
+        "nutrients and compounds keep `name`/`name_en` pairs;",
+        "only proper names stay in their original language: varieties, PDO/PGI, PAT, scientific names, authors, licences, source names, verbatim quotes from sources;",
+        "`data_completeness.notes` is an internal technical log in Italian, not used by the app.",
     ]:
         w(f"- {t}")
     w("")
 
-    # ------------------------------------------------------------------ 4. fonti
-    w("## 4. Fonti\n")
-    w("Il catalogo completo, con descrizione, autorevolezza, contenuti e l'elenco di tutti gli alimenti per cui ogni fonte è stata consultata, "
-      "è in testa al database (`metadata.official_sources`) ed è riportato nella guida. Riepilogo:\n")
+    # ------------------------------------------------------------------ 4. sources
+    w("## 4. Sources\n")
+    w("The full catalogue, with description, authority, contents and the list of every product for which each source was consulted, "
+      "sits at the top of the database (`metadata.official_sources`) and is reproduced in the guide. Summary:\n")
     rows = []
     for s in sorted(md["official_sources"], key=lambda s: -s["used_for"]["items_count"]):
         u = s["used_for"]
-        rows.append([s.get("name", s["key"])[:75], "tutto il database" if u["database_level"] and not u["items_count"] else u["items_count"],
-                     ", ".join(t["label"]["it"] for t in u["topics"])[:80]])
-    w(table(rows, ["Fonte", "Alimenti", "Usata per"]))
-    w("\nFonti valutate e non usate: ISMEA e calendari regionali per le epoche di raccolta della frutta (nessun dato strutturato per macro-area); "
-      "USDA ARS Image Gallery (poche immagini pertinenti); calendario MAPA (Spagna), indicato da EUFIC ma non raggiungibile (pagine 404). "
-      "My-PersonalTrainer è usato solo per testi e link, nessun valore numerico.\n")
+        rows.append([s.get("name", s["key"])[:75], "whole database" if u["database_level"] and not u["items_count"] else u["items_count"],
+                     ", ".join(en(t["label"]) for t in u["topics"])[:80]])
+    w(table(rows, ["Source", "Products", "Used for"]))
+    w("\nSources assessed but not used: ISMEA and regional calendars for fruit harvest periods (no structured data by macro-area); "
+      "USDA ARS Image Gallery (few relevant images); MAPA calendar (Spain), cited by EUFIC but unreachable (404 pages). "
+      "My-PersonalTrainer is used only for texts and links, never for numeric values.\n")
 
-    # ------------------------------------------------------------------ 5. conflitti
-    w("## 5. Conflitti tra fonti e decisioni\n")
-    w("I casi sono in `metadata.source_conflicts` (IT/EN). In breve:\n")
+    # ------------------------------------------------------------------ 5. conflicts
+    w("## 5. Conflicts between sources and decisions\n")
+    w("The cases are in `metadata.source_conflicts` (IT/EN). In short:\n")
     for c in md["source_conflicts"]:
-        w(f"- **{c['issue']['it']}** {c['why']['it']} → *Decisione:* {c['decision']['it']} *Perché:* {c['rationale']['it']}")
-    w("\nI singoli casi alimento per alimento restano registrati in `data_completeness.discrepancies` "
-      f"({disc} discrepanze tra la bozza e le fonti) e nei campi `basis` e `note`.\n")
+        w(f"- **{en(c['issue'])}** {en(c['why'])} → *Decision:* {en(c['decision'])} *Why:* {en(c['rationale'])}")
+    w("\nIndividual product-level cases remain recorded in `data_completeness.discrepancies` "
+      f"({disc} discrepancies between the draft and the sources) and in the `basis` and `note` fields.\n")
 
-    # ------------------------------------------------------------------ 6. validazione
-    w("## 6. Come è stato validato\n")
-    w("Quattro livelli di controllo, tutti rieseguibili.\n")
+    # ------------------------------------------------------------------ 6. validation
+    w("## 6. How it was validated\n")
+    w("Four levels of checks, all re-runnable.\n")
     w("### 6.1 Schema\n")
-    w("`validate_db.py` verifica il database contro `data/schema.json` (tipi, campi obbligatori, valori ammessi, formato dei mesi e dei testi "
-      "bilingui) e alcuni controlli di coerenza (id, somma acqua+macronutrienti, file immagine presenti). Esito: nessun errore sui dati; "
-      "gli unici errori sono le immagini che stai eliminando, che spariranno con la sincronizzazione finale.\n")
-    w("### 6.2 Verifiche incrociate sulle fonti\n")
+    w("`validate_db.py` checks the database against `data/schema.json` (types, required fields, allowed values, month and bilingual-text "
+      "formats) plus some consistency checks (ids, water+macronutrient sum, image files present). Result: no data errors; "
+      "the only remaining warnings concern image files.\n")
+    w("### 6.2 Cross-checks against the sources\n")
     for t in [
-        "**Botanica**: nome scientifico confrontato tra EPPO, WFO e GBIF; genere coerente con nome scientifico e codice UPOV.",
-        "**Varietà**: mostrate solo se trovate in una fonte (testi delle fonti, Slow Food, Catalogo comune UE, con nome registrato e Paese).",
-        "**DOP/IGP**: ogni denominazione controllata sul registro UE eAmbrosia (stato e categoria).",
-        "**Nutrizione**: calorie ricalcolate dai macronutrienti, %VNR e claim UE ricalcolati dai valori, sale = sodio × 2,5.",
-        "**Post-raccolta**: valori dei capitoli HB66 trascritti con la citazione in `scripts/config/hb66_chapter_curated.json`; refusi evidenti della tabella riassuntiva esclusi.",
+        "**Botany**: scientific name compared across EPPO, WFO and GBIF; genus consistent with scientific name and UPOV code.",
+        "**Varieties**: shown only if found in a source (source texts, Slow Food, EU Common Catalogue, with registered name and country).",
+        "**PDO/PGI**: every designation checked on the EU eAmbrosia register (status and category).",
+        "**Nutrition**: energy recomputed from macronutrients, %NRV and EU claims recomputed from the values, salt = sodium × 2.5.",
+        "**Postharvest**: HB66 chapter values transcribed with their quote in `scripts/config/hb66_chapter_curated.json`; obvious typos in the summary table excluded.",
     ]:
         w(f"- {t}")
-    w("\n### 6.3 Ricontrollo sistematico voce per voce\n")
-    w("`audit_db.py` controlla ogni scheda: coerenza calorie/macronutrienti, %VNR, claim UE, porzioni e impronte per porzione; stati stagionali e "
-      "mesi; raccolta rispetto alla stagionalità; intervalli min ≤ max; soglie di danno da freddo e punti di congelamento; durate domestiche "
-      "rispetto a quelle professionali; luogo di conservazione rispetto alle etichette dei testi; etilene (produttori, \"tenere lontano da\"); "
-      "classe di respirazione rispetto alla deperibilità; gruppo di compatibilità rispetto alle temperature; botanica; varietà; DOP/IGP; "
-      "immagini e licenze; URL delle fonti; completezza dei testi IT/EN e assenza di testo italiano nei campi inglesi. Controlla inoltre i "
-      "metadati: ogni voce del glossario bilingue e con fonti registrate, rimandi `see_also`, `field_help` e `help_refs` verso voci esistenti, "
-      "ogni valore codificato presente nel vocabolario, ogni fonte descritta.\n")
-    w("Segnalazioni residue sui dati (spiegate, non sono errori):\n")
+    w("\n### 6.3 Systematic item-by-item re-check\n")
+    w("`audit_db.py` checks every record: consistency of energy/macronutrients, %NRV, EU claims, portions and per-portion footprints; seasonal states and "
+      "months; harvest versus seasonality; min ≤ max ranges; chilling-injury thresholds and freezing points; home storage times "
+      "versus commercial ones; storage location versus text labels; ethylene (producers, \"keep away from\"); "
+      "respiration class versus perishability; compatibility group versus temperatures; botany; varieties; PDO/PGI; "
+      "images and licences; source URLs; completeness of IT/EN texts and no Italian text in English fields. It also checks the "
+      "metadata: every glossary entry bilingual and with registered sources, `see_also`, `field_help` and `help_refs` pointing to existing entries, "
+      "every coded value present in the vocabulary, every source described.\n")
+    w("Remaining data warnings (explained, not errors; messages are the audit's original Italian output):\n")
     rows = [[a["severity"], a["item"], a["field"], a["msg"][:110]] for a in audit if a["severity"] in ("E", "W") and a["area"] != "immagini"]
-    w(table(rows, ["Livello", "Alimento", "Campo", "Dettaglio"]))
-    w("\nSpiegazione: il cavolo nero ha zuccheri > carboidrati per come USDA calcola i carboidrati (per differenza) → annotato; l'orzo supera "
-      "di poco 105 g/100 g sommando acqua e macronutrienti per arrotondamenti della tabella CREA; le soglie \"sotto la temperatura ottimale\" "
-      "derivano dall'estremo dell'intervallo minimo sicuro HB66; cipolla secca nel gruppo 3 e melone/avocado nel gruppo 1B sono come nella "
-      "tabella di compatibilità HB66 (gruppi per lo stoccaggio misto di 7 giorni, non temperature ottimali); le differenze tra etichette e "
-      "FoodKeeper per peperoncino, banana e melograno sono volute (guida UC Davis per il gusto).\n")
-    w("### 6.4 Copertura del template e riproducibilità\n")
+    w(table(rows, ["Level", "Product", "Field", "Detail"]))
+    w("\nExplanation: in cavolo nero sugars > carbohydrates because of how USDA computes carbohydrates (by difference) → noted; barley slightly exceeds "
+      "105 g/100 g when summing water and macronutrients because of rounding in the CREA table; the \"below optimal temperature\" thresholds "
+      "come from the end of HB66's lowest safe range; dry onion in group 3 and melon/avocado in group 1B are as in the "
+      "HB66 compatibility table (groups for 7-day mixed storage, not optimal temperatures); the differences between labels and "
+      "FoodKeeper for chilli pepper, banana and pomegranate are intentional (UC Davis guide, optimised for taste).\n")
+    w("### 6.4 Template coverage and reproducibility\n")
     full = sum(1 for c in cov.values() if not c["draft"] and not c["missing"])
-    w(f"`template_coverage.py` verifica, per ognuno dei {len(cov)} campi del modello JSON del prompt, quanti alimenti hanno un dato verificato: "
-      f"{full} campi sono completi per tutti i {N} alimenti (dettaglio in `data/template_coverage.json`). "
-      "Infine il tratto finale della pipeline è stato rieseguito da un'istantanea precedente: il risultato coincide con il database consegnato "
-      "(la riesecuzione ha anche fatto emergere e correggere una dipendenza d'ordine nel registro delle fonti).\n")
+    w(f"`template_coverage.py` checks, for each of the {len(cov)} fields of the original JSON template, how many products have verified data: "
+      f"{full} fields are complete for all {N} products (details in `data/template_coverage.json`). "
+      "Finally, the last part of the pipeline was re-run from an earlier snapshot: the result matches the delivered database "
+      "(the re-run also revealed and fixed an ordering dependency in the source register).\n")
 
-    # ------------------------------------------------------------------ 7. recupero e lacune
-    w("## 7. Dati recuperati e lacune residue\n")
+    # ------------------------------------------------------------------ 7. recovered data and gaps
+    w("## 7. Recovered data and remaining gaps\n")
     ph = [i["ripening_and_storage"]["postharvest_physiology"] for i in items]
     fz = sum(1 for p in ph if p.get("freezing_point_c") is not None)
     rc = sum(1 for p in ph if p.get("respiration_rate_class"))
     q10 = sum(1 for i in items if "Q10" in json.dumps(i["ripening_and_storage"].get("perishability"), ensure_ascii=False))
     zsrc = collections.Counter(z.get("source") for i in items for z in (i["seasonality"].get("eufic_zone_sources") or {}).values())
     agb = sum(1 for i in items if ((i["nutrition_and_sustainability"].get("environmental_footprint") or {}).get("carbon_reference") or {}).get("source") == "agribalyse")
-    w("Recuperi dell'ultima fase, dalle fonti proposte:\n")
+    w("Data recovered in the last phase, from the proposed sources:\n")
     for t in [
-        f"**Punto di congelamento** (\"highest freezing point\" di HB66, cioè la temperatura più alta a cui inizia a formarsi ghiaccio; se la fonte dà un intervallo si usa l'estremo più alto, il più prudente): {fz} alimenti. Gli altri non hanno il valore nel capitolo HB66.",
-        f"**Classe di respirazione**: {rc} alimenti; {q10} stimate a 5 °C dai valori misurati a temperatura più alta con i Q10 di HB66, marcate come stimate. Restano senza classe: cardo, zucca, castagna, rosmarino, mela cotogna (nessun valore misurato).",
-        f"**Impronta di carbonio delle erbe aromatiche**: {agb} da AGRIBALYSE 3.1 (ADEME), con confini del sistema dichiarati (fino al consumo, quindi non confrontabile 1:1 con SU-EATABLE LIFE). Impronta idrica non presa da AGRIBALYSE, perché misura la scarsità e non il volume.",
-        "**Stagionalità italiana per alimenti assenti dai calendari**: pesca noce dalla pesca (i calendari non le distinguono; lo confermano l'IGP \"Pesca e Nettarina di Romagna\" ed EUFIC); tartufo nero e bianco dalla Legge 752/1985, art. 6 (periodi di raccolta); ovolo dalla scheda della Provincia di Cuneo (\"estate e inizio autunno\"). Fonte in `seasonality.italy_source`.",
-        "**Decisioni sul perimetro (5 novembre)**: bietola da coste e da taglio unite in \"Bietola\" (stessa specie e stessa scheda CREA); pesca tabacchiera aggiunta come varietà della pesca (Arca del Gusto Slow Food); tartufo bianco aggiunto in deroga alla regola di ammissione (nessuna scheda CREA/BDA: nutrizione vuota e dichiarata). Dalla revisione sistematica degli esclusi (`data/excluded_candidates_report.md`) l'utente ha poi deciso di includere 44 alimenti (tutti tranne bergamotto, cappero, acetosa, corbezzolo e portulaca) anche con campi incompleti: sono stati costruiti con la stessa pipeline, su un database di prova, e poi uniti; dove mancano dati ufficiali il campo resta vuoto e dichiarato. Per 33 di loro la stagionalità italiana viene da fonti specifiche lette a mano (`config/italy_seasonality_curated.json`): periodi di raccolta di Orto da Coltivare, schede Slow Food, schede funghi della Provincia di Cuneo, disciplinare IGP delle amarene; taccola e mirabella riprendono pisello e susina (stessa specie). Per 4 la nutrizione viene da una voce USDA di un prodotto affine, dichiarata come approssimazione.",
-        "**Stime per le zone senza dato** (decisione del 6 novembre): molte zone EUFIC mancano (la pannonica comprende solo l'Ungheria). `seasonality.estimates` contiene, separate dai dati, le stime dalla zona vicina con il clima più simile (es. pannonica <- continentale), marcate nell'app con ≈ e disattivabili dalle Impostazioni; la stima parte sempre da un dato vero. Per i frutti esotici le zone senza dato sono \"Non coltivato qui\". Metodo in `metadata.seasonality_estimates_method`.",
-        f"**Zone climatiche europee**: zona alpina da calendario del Ministero della salute austriaco, fonte nazionale indicata da EUFIC ({zsrc['austria_gesundheitsportal']} alimenti); zona mediterranea derivata, dichiaratamente, dalla stagionalità di Sud e Isole ({zsrc['derived_italy_sud_isole']} alimenti). Provenienza in `seasonality.eufic_zone_sources`.",
+        f"**Freezing point** (HB66's \"highest freezing point\", the highest temperature at which ice starts to form; for a range the upper, most cautious end is used): {fz} products. The others have no value in their HB66 chapter.",
+        f"**Respiration class**: {rc} products; {q10} estimated at 5 °C from values measured at higher temperatures using HB66 Q10 values, flagged as estimated. Still without a class: cardoon, pumpkin, chestnut, rosemary, quince (no measured value).",
+        f"**Carbon footprint of culinary herbs**: {agb} from AGRIBALYSE 3.1 (ADEME), with declared system boundaries (up to consumption, so not directly comparable with SU-EATABLE LIFE). Water footprint not taken from AGRIBALYSE, because it measures scarcity, not volume.",
+        "**Italian seasonality for products missing from the calendars**: nectarine from peach (the calendars do not separate them; confirmed by the \"Pesca e Nettarina di Romagna\" PGI and EUFIC); black and white truffle from Law 752/1985, art. 6 (harvest periods); Caesar's mushroom from the Province of Cuneo mushroom sheet (\"summer and early autumn\"). Source in `seasonality.italy_source`.",
+        "**Scope decisions (5 November)**: chard and leaf beet merged into \"Chard\" (same species and same CREA record); flat peach (pesca tabacchiera) added as a peach variety (Slow Food Ark of Taste); white truffle added as an exception to the inclusion rule (no CREA/BDA record: nutrition empty and declared). After the systematic review of excluded candidates (`data/excluded_candidates_report.md`) 44 products were added (all except bergamot, caper, sorrel, strawberry tree and purslane) even with incomplete fields: they were built with the same pipeline on a test database and then merged; where official data are missing the field stays empty and declared. For 33 of them Italian seasonality comes from specific sources read by hand (`config/italy_seasonality_curated.json`): Orto da Coltivare harvest periods, Slow Food sheets, Province of Cuneo mushroom sheets, the sour cherry PGI specification; snow pea and mirabelle reuse pea and plum (same species). For 4 of them nutrition comes from a USDA entry of a related product, declared as an approximation.",
+        "**Estimates for zones without data** (decision of 6 November): many EUFIC zones are missing (the Pannonian zone covers Hungary only). `seasonality.estimates` holds, separate from the data, estimates from the neighbouring zone with the most similar climate (e.g. Pannonian <- Continental), marked with ≈ in the app and switchable off in Settings; an estimate always starts from real data. For exotic fruit, zones without data are \"Not grown here\". Method in `metadata.seasonality_estimates_method`.",
+        f"**European climate zones**: Alpine zone from the Austrian Ministry of Health calendar, the national source cited by EUFIC ({zsrc['austria_gesundheitsportal']} products); Mediterranean zone explicitly derived from South and Islands seasonality ({zsrc['derived_italy_sud_isole']} products). Provenance in `seasonality.eufic_zone_sources`.",
     ]:
         w(f"- {t}")
-    w("\nNon recuperabili con fonti accessibili (lacune documentate):\n")
+    w("\nNot recoverable from accessible sources (documented gaps):\n")
     for t in [
-        "**Calendari agricoli di frutta, erbe e cereali per macro-area**: né ISMEA né i servizi regionali pubblicano dati strutturati per Nord/Centro/Sud; i valori della bozza restano \"da verificare\".",
-        "**Varietà locali (L. 194/2015)**: non esiste un elenco nazionale scaricabile, solo registri regionali eterogenei.",
-        "**Zone atlantica, continentale, boreale e pannonica mancanti**: riguardano soprattutto prodotti che lì non si coltivano (agrumi, cachi, nespola, fico d'India); restano vuote.",
-        "**Parametri agronomici di erbe e funghi (CREA-OF)**: non tentato in questa fase.",
-        "**Funghi spontanei e tartufo**: nessuna impronta ambientale (raccolta spontanea, nessuno studio LCA).",
+        "**Agricultural calendars of fruit, herbs and cereals by macro-area**: neither ISMEA nor regional services publish structured data for North/Centre/South; the draft values remain \"to verify\".",
+        "**Local varieties (Law 194/2015)**: there is no downloadable national list, only heterogeneous regional registers.",
+        "**Missing Atlantic, Continental, Boreal and Pannonian zones**: they mostly concern products not grown there (citrus, persimmon, loquat, prickly pear); they stay empty.",
+        "**Agronomic parameters of herbs and mushrooms (CREA-OF)**: not attempted in this phase.",
+        "**Wild mushrooms and truffles**: no environmental footprint (wild harvest, no LCA study).",
     ]:
         w(f"- {t}")
-    w("\nMappa delle lacune (campi senza dato):\n")
+    w("\nGap map (fields without data):\n")
     gap = collections.defaultdict(set)
     for i in items:
         for p in i["data_completeness"]["missing_fields"]:
@@ -247,44 +251,44 @@ def main():
             gap[key].add(i["id"])
     rows = [[f"`{k}`", len(u), ", ".join(x.split("_")[0] for x in sorted(u)[:10]) + (" …" if len(u) > 10 else "")]
             for k, u in sorted(gap.items(), key=lambda x: -len(x[1]))]
-    w(table(rows[:30], ["Campo", "Alimenti", "Quali (primi 10)"]))
+    w(table(rows[:30], ["Field", "Products", "Which (first 10)"]))
     w("")
 
-    # ------------------------------------------------------------------ 8. avvertenze
-    w("## 8. Avvertenze per l'uso nell'app\n")
+    # ------------------------------------------------------------------ 8. caveats
+    w("## 8. Caveats for use in the app\n")
     for t in [
-        "**Fonti non italiane**: conservazione (USDA HB66, FoodKeeper, UC Davis), composti bioattivi (USDA, Phenol-Explorer) e alcuni micronutrienti vengono da fonti USA o internazionali; la nutrizione principale è CREA o BDA-IEO.",
-        "**Durate**: la durata domestica (FoodKeeper) e quella professionale (HB66) sono campi distinti; l'app deve mostrare all'utente la prima.",
-        "**Impronte ambientali**: mediane di letteratura con alta variabilità; le soglie basso/medio/alto sono una convenzione dell'app, dichiarata in `basis`.",
-        "**Polifenoli**: valori indicativi per 100 g di prodotto crudo. Phenol-Explorer: uso non commerciale, citare la fonte.",
-        "**Claim UE**: calcolati sul crudo per 100 g (Reg. CE 1924/2006); il claim \"proteine\" nei prodotti poco calorici è contestualizzato con i LARN.",
-        "**PAT**: collegamento per parole chiave; include anche prodotti trasformati.",
-        "**Testi**: riscritti fondendo più fonti e riallineati ai dati; alcune frasi descrittive (curiosità, usi in cucina) sono di conoscenza generale.",
+        "**Non-Italian sources**: storage (USDA HB66, FoodKeeper, UC Davis), bioactive compounds (USDA, Phenol-Explorer) and some micronutrients come from US or international sources; the main nutrition data are CREA or BDA-IEO.",
+        "**Storage times**: home storage time (FoodKeeper) and commercial storage time (HB66) are separate fields; the app must show users the former.",
+        "**Environmental footprints**: literature medians with high variability; the low/medium/high thresholds are an app convention, declared in `basis`.",
+        "**Polyphenols**: indicative values per 100 g of raw product. Phenol-Explorer: non-commercial use, cite the source.",
+        "**EU claims**: computed on raw product per 100 g (Reg. (EC) 1924/2006); the protein claim for low-energy produce is put into context with LARN.",
+        "**PAT**: linked by keywords; also includes processed products.",
+        "**Texts**: rewritten by merging several sources and realigned with the data; some descriptive sentences (curiosities, culinary uses) are general knowledge.",
     ]:
         w(f"- {t}")
     w("")
 
-    # ------------------------------------------------------------------ 9. stato per alimento
-    w("## 9. Stato per alimento\n")
+    # ------------------------------------------------------------------ 9. status per product
+    w("## 9. Status per product\n")
     rows = []
-    for i in sorted(items, key=lambda x: (x["category"], x["names"]["it"])):
+    for i in sorted(items, key=lambda x: (x["category"], x["names"]["en"])):
         d = i["data_completeness"]
         ae = sum(1 for a in audit if a["item"] == i["id"] and a["severity"] in ("E", "W") and a["area"] != "immagini")
-        rows.append([i["names"]["it"], CAT_IT[i["category"]], len(i["sources_by_topic"]["sources_used"]), len(i.get("help_refs", [])),
+        rows.append([i["names"]["en"], CAT_EN[i["category"]], len(i["sources_by_topic"]["sources_used"]), len(i.get("help_refs", [])),
                      len(d["fields_pending_verification"]), len(d["missing_fields"]), len(d.get("not_applicable_fields", [])), ae])
-    w(table(rows, ["Alimento", "Categoria", "Fonti", "Voci di aiuto", "Da verificare", "Mancanti", "N/A", "Segnalazioni"]))
-    w("\n## 10. Riproducibilità e file\n")
+    w(table(rows, ["Product", "Category", "Sources", "Help entries", "To verify", "Missing", "N/A", "Warnings"]))
+    w("\n## 10. Reproducibility and files\n")
     for t in [
-        "`data/database.json` – il database; `data/schema.json` – lo schema; `data/database_guide.md` – la guida ai campi.",
-        "`data/draft_legacy_values.json` – valori della bozza tolti dall'app; `data/_backup_bozza_2026-11-04/` – la bozza originale.",
-        "`data/audit_findings.json`, `data/template_coverage.json` – esiti dei controlli.",
-        "`data/raw/` – copie delle fonti scaricate; `scripts/config/` – configurazioni curate con citazioni; `scripts/texts/` – testi IT/EN.",
-        "`scripts/` – la pipeline, ordine in `scripts/README.md`.",
+        "`data/database.json` – the database; `data/schema.json` – the schema; `data/database_guide.md` – the field guide.",
+        "`data/draft_legacy_values.json` – draft values removed from the app (the original draft itself is not published).",
+        "`data/audit_findings.json`, `data/template_coverage.json` – results of the checks.",
+        "`data/raw/` – copies of the downloaded sources (not published); `scripts/config/` – curated configurations with quotes; `scripts/texts/` – IT/EN texts.",
+        "`scripts/` – the pipeline, order in `scripts/README.md`.",
     ]:
         w(f"- {t}")
     w("")
     (DATA / "scraping_report.md").write_text("\n".join(L), encoding="utf-8")
-    print("scritto data/scraping_report.md:", len("\n".join(L)), "caratteri")
+    print("wrote data/scraping_report.md:", len("\n".join(L)), "characters")
 
 
 if __name__ == "__main__":
