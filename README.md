@@ -1,176 +1,176 @@
-# Peak Season – Database della frutta e verdura di stagione
+# Peak Season – Seasonal Fruit & Vegetable Database
 
-Un database aperto, bilingue (italiano/inglese) e **interamente basato su fonti verificabili**, che descrive **153 prodotti** freschi: quando sono di stagione in Italia e in Europa, come sceglierli, come conservarli, cosa contengono e quanto pesano sull'ambiente.
+An open, bilingual (Italian/English) database, **built entirely on verifiable sources**, describing **153 fresh products**: when they are in season in Italy and across Europe, how to choose them, how to store them, what they contain and what their environmental footprint is.
 
-È la fonte di verità dell'app **Peak Season** ([peak-season-app](https://github.com/NunzioLangiulli/peak-season-app)), ma è pensato per essere usato **anche senza l'app**: ogni regola che l'app applica è scritta dentro il database stesso.
+It is the single source of truth for the **Peak Season** app ([peak-season-app](https://github.com/NunzioLangiulli/peak-season-app)), but it is designed to be used **without the app as well**: every rule the app applies is written into the database itself.
 
 | | |
 |---|---|
-| Prodotti | 153 – 72 verdure, 55 frutti, 10 erbe e spezie, 10 funghi, 6 cereali/legumi freschi |
-| Fonti | 46 fonti ufficiali e scientifiche, elencate in `metadata.official_sources` |
-| Stagionalità | 3 macro-aree italiane + 6 zone climatiche europee (EUFIC/EEA, 29 Paesi) |
-| Lingue | ogni testo per l'utente è `{ "it": …, "en": … }` |
-| File | [`data/database.json`](data/database.json) (~10 MB), regole formali in [`data/schema.json`](data/schema.json) |
+| Products | 153 – 72 vegetables, 55 fruits, 10 herbs and spices, 10 mushrooms, 6 fresh cereals/pulses |
+| Sources | 46 official and scientific sources, listed in `metadata.official_sources` |
+| Seasonality | 3 Italian macro-areas + 6 European climate zones (EUFIC/EEA, 29 countries) |
+| Languages | every user-facing text is `{ "it": …, "en": … }` |
+| Files | [`data/database.json`](data/database.json) (~10 MB), formal rules in [`data/schema.json`](data/schema.json) |
 
 ---
 
-## 1. La ratio: perché esiste questo database
+## 1. Rationale: why this database exists
 
-Le informazioni sulla stagionalità che si trovano online sono spesso **in contraddizione tra loro**, copiate da un sito all'altro senza indicare la fonte, e non dicono quasi mai *per quale zona* valgono. Lo stesso vale per i consigli di conservazione e per i valori nutrizionali.
+Seasonality information found online is often **contradictory**, copied from one site to another without citing a source, and almost never says *which area* it applies to. The same goes for storage advice and nutritional values.
 
-L'obiettivo di Peak Season è opposto: **pochi prodotti, ma ogni dato tracciabile fino alla sua fonte**. Quando le fonti non sono d'accordo, il database non sceglie in silenzio: lo dichiara, spiega come ha deciso e conserva l'alternativa.
+Peak Season takes the opposite approach: **a limited number of products, but every value traceable back to its source**. When sources disagree, the database does not silently pick one: it says so, explains how the decision was made and keeps the alternative.
 
-## 2. Le regole di rigore
+## 2. Rules of rigour
 
-Queste regole valgono per ogni campo del database e sono state seguite in tutto il lavoro.
+These rules apply to every field of the database and were followed throughout the work.
 
-1. **Nessun dato inventato.** Ogni valore viene da una fonte citata. Se un dato non esiste, il campo resta `null` e viene elencato in `data_completeness.missing_fields`: una lacuna dichiarata è meglio di un numero plausibile.
-2. **`null` ≠ "non pertinente".** Un campo che non ha senso per un prodotto (per esempio la soglia di danno da freddo per chi non soffre il freddo, o la nutrizione di un tartufo) è elencato in `data_completeness.not_applicable_fields`, così è distinguibile da una vera lacuna.
-3. **La fonte ufficiale vince, ma niente viene buttato.** Il progetto è partito da una bozza di 91 prodotti con valori e link in gran parte non verificati. Ogni valore della bozza smentito da una fonte ufficiale è stato sostituito, e il vecchio valore è stato conservato come discrepanza in `data_completeness.notes`. I valori non verificabili sono stati tolti dalla scheda e archiviati in [`data/draft_legacy_values.json`](data/draft_legacy_values.json), con il motivo.
-4. **I conflitti tra fonti sono documentati.** I casi in cui fonti autorevoli si contraddicono (13 tipologie) sono descritti in `metadata.source_conflicts`, con la regola usata per risolverli.
-5. **Ogni scheda dice da dove viene.** I blocchi strutturati portano la fonte accanto al valore (`source`, `basis`, `source_food`, `derivation`); tutte le fonti di una scheda sono in `sources_by_topic.sources_used`, i link utili in `useful_links`.
-6. **Le stime sono marcate come stime.** Dove manca il dato di una zona, il database contiene una stima copiata dalla zona climatica più simile, tenuta separata dai dati veri (`seasonality.estimates`), con il metodo in `metadata.seasonality_estimates_method`. Non si fa mai una stima a partire da un'altra stima.
-7. **Banche dati, non letteratura sparsa.** Composti bioattivi, polifenoli e carotenoidi vengono solo da banche dati ufficiali (USDA, Phenol-Explorer), senza scegliere a mano singoli articoli scientifici.
-8. **Il database prima dell'app.** Ogni regola usata dall'app (colori degli stati, soglie, ordine dei calendari, nomi delle famiglie botaniche, codici dei Paesi, regole dei claim…) è scritta nel database, in `metadata`. Chi usa solo il JSON ha le stesse informazioni dell'app.
-9. **Tutto bilingue, senza mescolare le lingue.** I testi per l'utente sono `{it, en}`; i valori codificati (`"fridge"`, `"climacteric"`…) si traducono con `metadata.vocabulary`. I nomi propri e i nomi registrati (DOP/IGP, varietà) restano nella lingua originale. Le note interne di lavoro (`data_completeness.notes`) sono in italiano.
-10. **Convenzioni di forma.** Le etichette brevi hanno l'iniziale maiuscola a ogni parola ("In Frigorifero", "Non Climaterico"); le frasi e i nomi ufficiali no. La terminologia per l'utente è "prodotto/prodotti" (EN *produce/items*).
+1. **No invented data.** Every value comes from a cited source. If a value does not exist, the field stays `null` and is listed in `data_completeness.missing_fields`: a declared gap is better than a plausible-looking number.
+2. **`null` ≠ "not applicable".** A field that makes no sense for a product (e.g. the chilling-injury threshold for produce that is not chill-sensitive, or nutrition data for a truffle) is listed in `data_completeness.not_applicable_fields`, so it can be told apart from a real gap.
+3. **The official source wins, but nothing is thrown away.** The project started from a draft of 91 products whose values and links were largely unverified. Every draft value contradicted by an official source was replaced, and the old value was kept as a discrepancy in `data_completeness.notes`. Values that could not be verified were removed from the product record and archived, with the reason, in [`data/draft_legacy_values.json`](data/draft_legacy_values.json).
+4. **Conflicts between sources are documented.** Cases where authoritative sources contradict each other (13 types) are described in `metadata.source_conflicts`, together with the rule used to resolve them.
+5. **Every record says where it comes from.** Structured blocks carry their source next to the value (`source`, `basis`, `source_food`, `derivation`); all sources of a record are in `sources_by_topic.sources_used`, useful links in `useful_links`.
+6. **Estimates are flagged as estimates.** Where a zone has no data, the database holds an estimate copied from the most similar climate zone, kept separate from real data (`seasonality.estimates`), with the method in `metadata.seasonality_estimates_method`. An estimate is never derived from another estimate.
+7. **Databases, not scattered literature.** Bioactive compounds, polyphenols and carotenoids come only from official databases (USDA, Phenol-Explorer), never from hand-picked individual papers.
+8. **Database first, app second.** Every rule used by the app (state colours, thresholds, calendar order, botanical family names, country codes, claim rules…) is stored in the database under `metadata`. Anyone using the JSON alone has the same information as the app.
+9. **Fully bilingual, never mixed.** User-facing texts are `{it, en}`; coded values (`"fridge"`, `"climacteric"`…) are translated through `metadata.vocabulary`. Proper names and registered names (PDO/PGI, varieties) stay in their original language. Internal working notes (`data_completeness.notes`) are in Italian.
+10. **Style conventions.** Short labels use Title Case ("In the Fridge", "Non-Climacteric"); sentences and official names do not. User-facing terminology is "product/produce" (IT *prodotto/prodotti*).
 
-### Regola di ammissione di un prodotto
+### Inclusion rule
 
-Un prodotto entra nel database se ha **almeno 2 fonti** di stagionalità o conservazione **e** una scheda nutrizionale ufficiale (CREA o BDA-IEO). I candidati scartati e il motivo sono in [`data/excluded_candidates_report.md`](data/excluded_candidates_report.md). Alcune deroghe decise esplicitamente (per esempio il tartufo bianco, senza nutrizione ufficiale) sono documentate nelle note della scheda.
+A product enters the database if it has **at least 2 seasonality or storage sources** **and** an official nutrition record (CREA or BDA-IEO). Rejected candidates and the reasons are listed in [`data/excluded_candidates_report.md`](data/excluded_candidates_report.md) (Italian). A few explicit exceptions (e.g. white truffle, which has no official nutrition data) are documented in the record notes.
 
-## 3. Come vengono calcolati i dati principali
+## 3. How the main data are computed
 
-### Stagionalità – voto tra fonti
+### Seasonality – voting across sources
 
-Per ogni mese e ogni area si calcola un punteggio `s = voti / fonti disponibili`:
+For each month and each area a score `s = votes / available sources` is computed:
 
-- voto **1** se la fonte indica il mese "di stagione" (WWF, Greenpeace, Altroconsumo, EUFIC-Italia, raccolta di Orto da Coltivare);
-- voto **0,5** se la fonte indica "primizia" o "tardivo".
+- vote **1** if the source marks the month as "in season" (WWF, Greenpeace, Altroconsumo, EUFIC-Italy, Orto da Coltivare harvest tables);
+- vote **0.5** if the source marks it as "early" or "late".
 
-| Punteggio | Stato |
+| Score | State |
 |---|---|
-| `s ≥ 0,5` | **In Stagione** |
-| `0 < s < 0,5` | **Primizia** se precede la stagione, **Fine Stagione** se la segue |
-| `s = 0` | **Fuori Stagione** |
-| mesi interni di un periodo di almeno 3 mesi su cui **tutte** le fonti (almeno 2) concordano | **Picco** |
-| frutto esotico senza produzione italiana | **Non Applicabile** |
-| nessuna fonte | `null` (lacuna dichiarata) |
+| `s ≥ 0.5` | **In Season** |
+| `0 < s < 0.5` | **Early Season** if it precedes the season, **End of Season** if it follows it |
+| `s = 0` | **Out of Season** |
+| inner months of a run of at least 3 months on which **all** sources (at least 2) agree | **Peak Season** |
+| exotic fruit with no Italian production | **Not Applicable** |
+| no source | `null` (declared gap) |
 
-Per le zone europee si usa la quota dei Paesi della zona (EUFIC, 29 Paesi, assegnati alla regione biogeografica EEA prevalente) che segnalano il prodotto di stagione. Le zone che EUFIC non copre sono state completate da fonti nazionali: la zona alpina dal calendario del Ministero della Salute austriaco, quella mediterranea dal Sud e Isole italiano.
+For European zones the score is the share of the zone's countries (EUFIC, 29 countries, each assigned to its prevailing EEA biogeographical region) that report the product as in season. Zones not covered by EUFIC were completed from national sources: the Alpine zone from the Austrian Ministry of Health calendar, the Mediterranean zone from Southern Italy and the Islands.
 
-Per le **macro-aree italiane** (Nord, Centro, Sud e Isole; l'Abruzzo è nel Centro) la curva è stata rifinita con la raccolta in pieno campo, distinguendo tre casi: prodotti deperibili estivi, buchi brevi da chiudere e prodotti da conservazione naturale, per i quali raccolta e disponibilità sono diverse (`seasonality.availability_note`). Il metodo completo è in `metadata.seasonality_method` e `metadata.seasonality_curve_method`; la provenienza di ogni curva è in `seasonality.curve_basis`.
+For the **Italian macro-areas** (North, Centre, South and Islands; Abruzzo is counted in the Centre) the curve was refined using open-field harvest periods, distinguishing three cases: perishable summer produce, short gaps to be closed, and naturally stored produce, where harvest and availability differ (`seasonality.availability_note`). The full method is in `metadata.seasonality_method` and `metadata.seasonality_curve_method`; the provenance of each curve is in `seasonality.curve_basis`.
 
-### Conservazione e post-raccolta
+### Storage and postharvest
 
-- **Respirazione ed etilene**: classi di Kader (UC Davis, USDA Agricultural Handbook 66). Da qui vengono la **deperibilità** (6 livelli, `metadata.perishability_legend`) e l'elenco dei prodotti da **tenere lontani** (`keep_away_from`: produttori forti di etilene per i prodotti sensibili).
-- **Danno da freddo e gelo**: HB66, tabelle 1 e 2.
-- **Dove conservarlo in casa**: guida UC Davis/Kader *Storing Fresh Fruits and Vegetables for Better Taste* + USDA FoodKeeper per le durate domestiche.
-- **Conservazione compatibile**: gruppi di Thompson (HB66, tabella 1).
+- **Respiration and ethylene**: Kader classes (UC Davis, USDA Agricultural Handbook 66). These drive **perishability** (6 levels, `metadata.perishability_legend`) and the list of products to **keep away from** (`keep_away_from`: strong ethylene producers, for ethylene-sensitive produce).
+- **Chilling injury and freezing**: HB66, Tables 1 and 2.
+- **Where to store it at home**: UC Davis/Kader guide *Storing Fresh Fruits and Vegetables for Better Taste* + USDA FoodKeeper for home storage times.
+- **Compatible storage**: Thompson groups (HB66, Table 1).
 
-### Nutrizione
+### Nutrition
 
-- Composizione da **CREA** (tabelle 2019) e **BDA-IEO**; USDA FoodData Central solo per i prodotti che non compaiono nelle banche dati italiane.
-- **% VNR** sui Valori Nutritivi di Riferimento del Reg. UE 1169/2011 (Allegato XIII).
-- **Claim nutrizionali** calcolati con le soglie esatte del Reg. CE 1924/2006 (regole in `metadata.nutrition_claims_eu_rules`).
-- **Proteine**: oltre al claim UE, confronto con i LARN SINU 2014. Se 100 g coprono meno del 10% del fabbisogno, il claim resta (è legale) ma viene affiancato da una nota che lo contestualizza.
-- **Allergeni** (Reg. UE 1169/2011, Allegato II) e **porzioni** standard (LARN / IEO SmartFood).
+- Composition from **CREA** (2019 tables) and **BDA-IEO**; USDA FoodData Central only for products missing from the Italian databases.
+- **% NRV** against the Nutrient Reference Values of Regulation (EU) 1169/2011 (Annex XIII).
+- **Nutrition claims** computed with the exact thresholds of Regulation (EC) 1924/2006 (rules in `metadata.nutrition_claims_eu_rules`).
+- **Protein**: besides the EU claim, a comparison with the Italian LARN SINU 2014 reference intakes. If 100 g covers less than 10% of the requirement, the claim stays (it is legal) but comes with a note putting it into context.
+- **Allergens** (Regulation (EU) 1169/2011, Annex II) and standard **portions** (LARN / IEO SmartFood).
 
-### Sostenibilità
+### Sustainability
 
-Impronta di carbonio (kg CO₂eq/kg) e impronta idrica (L/kg) dal database **SU-EATABLE LIFE** (Petersson et al. 2021, CC BY 4.0), AGRIBALYSE 3.1 per le erbe aromatiche. Le soglie Bassa/Media/Alta sono una **convenzione dichiarata** del progetto (`metadata.environmental_footprint_method.levels`), non un dato delle fonti.
+Carbon footprint (kg CO₂eq/kg) and water footprint (L/kg) from the **SU-EATABLE LIFE** database (Petersson et al. 2021, CC BY 4.0), with AGRIBALYSE 3.1 for culinary herbs. The Low/Medium/High thresholds are a **declared project convention** (`metadata.environmental_footprint_method.levels`), not a value taken from the sources.
 
-### Varietà, territori e botanica
+### Varieties, territories and botany
 
-- **DOP e IGP** verificate sul registro UE eAmbrosia.
-- **Varietà** verificate su più fonti testuali e sul Catalogo comune UE delle varietà; codici di specie UPOV e numero di varietà iscritte in Italia.
-- **Prodotti Agroalimentari Tradizionali**: elenco MASAF (XXVI revisione, 2026); Presìdi e Arca del Gusto Slow Food.
-- **Botanica**: nome scientifico e famiglia verificati su EPPO, World Flora Online e GBIF (funghi).
+- **PDO and PGI** (DOP/IGP) verified against the EU eAmbrosia register.
+- **Varieties** verified across several text sources and the EU Common Catalogue of varieties; UPOV species codes and the number of varieties registered in Italy.
+- **Traditional Agri-food Products (PAT)**: MASAF list (26th revision, 2026); Slow Food Presidia and Ark of Taste.
+- **Botany**: scientific name and family verified on EPPO, World Flora Online and GBIF (mushrooms).
 
-### Immagini
+### Images
 
-Fino a 5 tipi di vista per prodotto (foto principale, sfondo neutro, pianta in campo, tavola botanica, sezione). Sono ammesse solo foto con licenza libera (Wikimedia Commons, USDA ARS, Unsplash, Pixabay, iNaturalist CC0/CC BY/CC BY-SA), orizzontali e di almeno 1000 px, senza piatti né scritte, scelte a mano tra almeno 2 candidate per tipo. Autore, licenza e pagina di origine di ogni foto sono in [`assets/images/_metadata.json`](assets/images/_metadata.json). I file delle foto non sono in questo repository: le versioni ottimizzate sono nel repository dell'app.
+Up to 5 view types per product (main photo, neutral background, plant in the field, botanical plate, cross-section). Only freely licensed photos are accepted (Wikimedia Commons, USDA ARS, Unsplash, Pixabay, iNaturalist CC0/CC BY/CC BY-SA), landscape and at least 1000 px wide, with no dishes or text, hand-picked from at least 2 candidates per type. Author, licence and source page of every photo are in [`assets/images/_metadata.json`](assets/images/_metadata.json). The image files are not in this repository: optimised versions are in the app repository.
 
-## 4. Struttura di una scheda
+## 4. Record structure
 
-Ogni prodotto segue lo stesso schema a blocchi (esempio completo, blocco per blocco, sul pomodoro in [`data/database_guide.md`](data/database_guide.md)):
+Every product follows the same block structure (a full block-by-block example on the tomato is in [`data/database_guide.md`](data/database_guide.md), Italian):
 
-| Blocco | Contenuto |
+| Block | Content |
 |---|---|
-| `id`, `names`, `category` | identificativo `nome_it_name_en`, nomi IT/EN e sinonimi, categoria |
-| `botany` | nome scientifico, famiglia, parte della pianta, classificazione |
-| `italian_varieties_and_territories` | varietà verificate, DOP/IGP, PAT, Slow Food |
-| `images` | foto con tipo di vista, autore e licenza |
-| `seasonality` | stati mese per mese per macro-aree italiane e zone EUFIC, stime separate |
-| `agricultural_calendar_italy` | semina, trapianto e raccolta per Nord/Centro/Sud |
-| `buying_guide` | come sceglierlo |
-| `ripening_and_storage` | climaterico, etilene, temperature, durate, dove conservarlo |
-| `nutrition_and_sustainability` | composizione per 100 g, VNR, claim, composti bioattivi, allergeni, impronte |
-| `sources_by_topic` | fonti per argomento e link utili |
-| `data_completeness` | lacune, campi non pertinenti, discrepanze con la bozza, note di lavoro |
-| `help_refs` | collegamenti al glossario per le icone "?" |
+| `id`, `names`, `category` | `italianname_englishname` identifier, IT/EN names and synonyms, category |
+| `botany` | scientific name, family, plant part used, classification |
+| `italian_varieties_and_territories` | verified varieties, PDO/PGI, PAT, Slow Food |
+| `images` | photos with view type, author and licence |
+| `seasonality` | month-by-month states for Italian macro-areas and EUFIC zones, estimates kept separate |
+| `agricultural_calendar_italy` | sowing, transplanting and harvest for North/Centre/South |
+| `buying_guide` | how to choose it |
+| `ripening_and_storage` | climacteric behaviour, ethylene, temperatures, storage times, where to store it |
+| `nutrition_and_sustainability` | composition per 100 g, NRV, claims, bioactive compounds, allergens, footprints |
+| `sources_by_topic` | sources by topic and useful links |
+| `data_completeness` | gaps, non-applicable fields, discrepancies with the draft, working notes |
+| `help_refs` | glossary links for the "?" help icons |
 
-Il blocco `metadata` contiene legende, metodi, glossario (44 voci), vocabolario dei valori codificati, testi di aiuto dei campi, catalogo delle fonti e le regole di visualizzazione usate dall'app.
+The `metadata` block contains legends, methods, the glossary (44 entries), the vocabulary of coded values, field help texts, the source catalogue and the display rules used by the app.
 
-**Corpus condiviso.** Le descrizioni ripetute in più prodotti sono salvate una volta sola in `shared_descriptions_corpus`, e le schede vi puntano con `{ "corpus_ref": …, "specific_addition": … }`. Chi legge il JSON direttamente deve sostituire il riferimento con il testo del corpus (lo fa `scripts/common.py → load_json`).
+**Shared corpus.** Descriptions repeated across several products are stored once in `shared_descriptions_corpus`, and records point to them with `{ "corpus_ref": …, "specific_addition": … }`. When reading the JSON directly, replace the reference with the corpus text (done by `scripts/common.py → load_json`).
 
-## 5. Contenuto del repository
+## 5. Repository contents
 
 ```
 data/
-  database.json              il database
-  schema.json                JSON Schema (tipi, valori ammessi, campi obbligatori)
-  database_guide.md          guida al database, blocco per blocco
-  scraping_report.md         report di affidabilità e lacune
-  audit_findings.json        esito del ricontrollo voce per voce
-  seasonality_audit.json     controllo delle curve stagionali
-  template_coverage.json     copertura dei campi del modello iniziale
-  items_index.json           codici e URL esatti di ogni prodotto su ogni fonte
-  draft_legacy_values.json   valori della bozza iniziale non verificabili, con il motivo
-  merged_items_archive.json  prodotti uniti ad altri
-  excluded_candidates_report.md  prodotti candidati non ammessi
-  ui_copy.json, ui_config.json   testi e icone dell'interfaccia dell'app
-scripts/                     pipeline Python che costruisce e verifica il database
-  config/                    tabelle curate a mano dalle fonti, con citazioni e pagine
-  texts/                     testi descrittivi IT/EN
-  README.md                  ordine di esecuzione della pipeline (fonte di verità)
-admin_studio/                dashboard locale per modificare testi, immagini, icone e fonti
-assets/images/_metadata.json crediti e licenze delle foto
+  database.json              the database
+  schema.json                JSON Schema (types, allowed values, required fields)
+  database_guide.md          block-by-block guide to the database (Italian)
+  scraping_report.md         reliability and gap report (Italian)
+  audit_findings.json        results of the item-by-item re-check
+  seasonality_audit.json     check of the seasonal curves
+  template_coverage.json     coverage of the original template fields
+  items_index.json           exact codes and URLs of every product on every source
+  draft_legacy_values.json   unverifiable values from the initial draft, with the reason
+  merged_items_archive.json  products merged into others
+  excluded_candidates_report.md  candidate products that were not admitted (Italian)
+  ui_copy.json, ui_config.json   app interface texts and icons
+scripts/                     Python pipeline that builds and checks the database
+  config/                    tables hand-curated from the sources, with quotes and page numbers
+  texts/                     IT/EN descriptive texts
+  README.md                  pipeline execution order (Italian, reference document)
+admin_studio/                local dashboard to edit texts, images, icons and sources
+assets/images/_metadata.json photo credits and licences
 ```
 
-## 6. La pipeline
+## 6. The pipeline
 
-Il database non è scritto a mano: è prodotto da circa 90 script Python, ognuno con un solo compito e una docstring che spiega le fonti usate. L'ordine di esecuzione è in [`scripts/README.md`](scripts/README.md). In sintesi:
+The database is not written by hand: it is produced by about 90 Python scripts, each with a single job and a docstring describing the sources it uses. The execution order is in [`scripts/README.md`](scripts/README.md). In short:
 
-1. **Fonti e indice** – download e cache delle fonti, lista master dei prodotti con i codici su ogni fonte.
-2. **Arricchimento** – nutrizione, stagionalità, botanica, varietà, conservazione, composti, allergeni, sostenibilità, testi, immagini.
-3. **Localizzazione e aiuto** – testi bilingui, vocabolario, glossario, catalogo delle fonti, regole per l'app.
-4. **Controlli** – validazione con JSON Schema (`validate_db.py`), ricontrollo voce per voce (`audit_db.py`), copertura del modello (`template_coverage.py`), report finali.
+1. **Sources and index** – download and caching of sources, master list of products with their codes on every source.
+2. **Enrichment** – nutrition, seasonality, botany, varieties, storage, compounds, allergens, sustainability, texts, images.
+3. **Localisation and help** – bilingual texts, vocabulary, glossary, source catalogue, rules for the app.
+4. **Checks** – JSON Schema validation (`validate_db.py`), item-by-item re-check (`audit_db.py`), template coverage (`template_coverage.py`), final reports.
 
-Le modifiche manuali (testi, foto, icone, link) passano dall'**Admin Studio** ([`admin_studio/README.md`](admin_studio/README.md)), che valida il database a ogni salvataggio e annulla la modifica se la validazione fallisce.
+Manual edits (texts, photos, icons, links) go through the **Admin Studio** ([`admin_studio/README.md`](admin_studio/README.md)), which validates the database on every save and rolls the change back if validation fails.
 
-### Requisiti
+### Requirements
 
 - Python 3.10+
 - `python -m pip install -r admin_studio/requirements.txt` (Pillow, jsonschema, requests)
-- Per rieseguire gli script di download servono chiavi API proprie (EPPO, Unsplash, Pixabay) in un file `.env`, che non è incluso.
+- Re-running the download scripts requires your own API keys (EPPO, Unsplash, Pixabay) in a `.env` file, which is not included.
 
-### Cosa non è incluso
+### What is not included
 
-Per rispetto delle licenze e per tenere leggero il repository, non sono pubblicati i dati grezzi scaricati dalle fonti (`data/raw/`), i PDF originali delle fonti e i loghi (`fonti_locali/`), le foto in alta risoluzione e la bozza iniziale. Il database contiene comunque tutti i valori estratti e i riferimenti per ritrovarli.
+To respect licences and keep the repository light, the following are not published: raw data downloaded from the sources (`data/raw/`), the original source PDFs and logos (`fonti_locali/`), high-resolution photos and the initial draft. The database still contains every extracted value and the references needed to find it again.
 
-## 7. Usare il database
+## 7. Using the database
 
 ```python
 import json
 db = json.load(open("data/database.json", encoding="utf-8"))
 corpus = db.get("shared_descriptions_corpus", {})
 
-pomodoro = next(i for i in db["items"] if i["id"] == "pomodoro_tomato")
-print(pomodoro["names"]["it"], pomodoro["seasonality"].keys())
+tomato = next(i for i in db["items"] if i["id"] == "pomodoro_tomato")
+print(tomato["names"]["en"], tomato["seasonality"].keys())
 ```
 
-Per avere i testi già espansi dal corpus condiviso:
+To get texts already expanded from the shared corpus:
 
 ```python
 import sys; sys.path.insert(0, "scripts")
@@ -178,25 +178,25 @@ from common import load_json
 db = load_json("data/database.json")
 ```
 
-## 8. Fonti e licenze
+## 8. Sources
 
-L'elenco completo delle 46 fonti, con URL, argomenti, modalità di accesso e note di licenza, è in `metadata.official_sources`; descrizione e autorevolezza di ciascuna sono nel catalogo delle fonti del database. Tra le principali:
+The full list of the 46 sources, with URL, topics, access method and licence notes, is in `metadata.official_sources`; the description and authority of each one are in the database's source catalogue. The main ones:
 
-- **Nutrizione:** CREA Alimenti e Nutrizione, BDA-IEO, USDA FoodData Central, LARN SINU 2014, Reg. CE 1924/2006 e Reg. UE 1169/2011
-- **Stagionalità:** EUFIC, WWF Italia, Greenpeace Italia, Altroconsumo, Orto da Coltivare, Bio Suisse, Gesundheitsportal (AT), EEA
-- **Conservazione:** UC Davis Postharvest Center, USDA Agricultural Handbook 66, USDA FoodKeeper
-- **Varietà e territori:** eAmbrosia (UE), EU Plant Variety Portal, UPOV, MASAF (PAT), Fondazione Slow Food
-- **Botanica:** EPPO, World Flora Online, GBIF
-- **Composti e ambiente:** USDA Flavonoid Database 3.3, Phenol-Explorer 3.6, SU-EATABLE LIFE, AGRIBALYSE 3.1
+- **Nutrition:** CREA Alimenti e Nutrizione, BDA-IEO, USDA FoodData Central, LARN SINU 2014, Regulation (EC) 1924/2006 and Regulation (EU) 1169/2011
+- **Seasonality:** EUFIC, WWF Italia, Greenpeace Italia, Altroconsumo, Orto da Coltivare, Bio Suisse, Gesundheitsportal (AT), EEA
+- **Storage:** UC Davis Postharvest Center, USDA Agricultural Handbook 66, USDA FoodKeeper
+- **Varieties and territories:** eAmbrosia (EU), EU Plant Variety Portal, UPOV, MASAF (PAT), Slow Food Foundation
+- **Botany:** EPPO, World Flora Online, GBIF
+- **Compounds and environment:** USDA Flavonoid Database 3.3, Phenol-Explorer 3.6, SU-EATABLE LIFE, AGRIBALYSE 3.1
 
-## 9. Licenza (open source)
+## 9. Licence (open source)
 
-- **Codice** (`scripts/`, `admin_studio/`): licenza [MIT](LICENSE).
-- **Database e documentazione** (`data/`): [Creative Commons Attribuzione 4.0 (CC BY 4.0)](data/LICENSE-CC-BY-4.0.txt). Puoi riusarli e modificarli liberamente, anche in altri progetti, citando *Peak Season – Nunzio Langiulli* e le fonti originali.
-- **Dati di terzi:** la licenza CC BY copre il lavoro originale del progetto, cioè struttura, selezione, regole, calcoli e testi. I singoli valori presi dalle fonti restano soggetti ai termini di ciascuna fonte, indicati in `metadata.official_sources`. In particolare i dati di Phenol-Explorer sono liberi solo per usi non commerciali, e le foto hanno la licenza indicata in `assets/images/_metadata.json`.
+- **Code** (`scripts/`, `admin_studio/`): [MIT](LICENSE).
+- **Database and documentation** (`data/`): [Creative Commons Attribution 4.0 (CC BY 4.0)](data/LICENSE-CC-BY-4.0.txt). You may freely reuse and adapt them, including in other projects, crediting *Peak Season – Nunzio Langiulli* and the original sources.
+- **Third-party data:** the CC BY licence covers the project's original work, that is structure, selection, rules, computations and texts. Individual values taken from the sources remain subject to each source's terms, listed in `metadata.official_sources`. In particular, Phenol-Explorer data are free for non-commercial use only, and each photo carries the licence stated in `assets/images/_metadata.json`.
 
-Il progetto nasce **senza scopo commerciale**.
+The project is **non-commercial**.
 
 ---
 
-*Le informazioni hanno scopo divulgativo e non sostituiscono il parere di un medico o di un nutrizionista.*
+*This information is for general educational purposes and is not a substitute for advice from a doctor or nutritionist.*
