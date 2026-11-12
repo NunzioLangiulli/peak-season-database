@@ -1,0 +1,413 @@
+{
+ "_doc": "Trascrizione di USDA ARS Agriculture Handbook 66 (2016), capitolo 'Chilling and Freezing Injury' (C.Y. Wang): Tab. 1 'Fresh produce susceptible to chilling injury when stored at low but nonfreezing temperatures' (pdf p. 73-74, numerate 63-64) e Tab. 2 'Susceptibility of fresh fruits and vegetables to freezing injury' (pdf p. 75, numerata 65). Testo grezzo: data/raw/usda_hb66.txt righe 7011-7457. match = exact (stesso prodotto) / approx (prodotto affine, dichiarato).",
+ "url": "https://www.ars.usda.gov/is/np/commercialstorage/commercialstorage.pdf",
+ "chilling": {
+  "asparago_asparagus": {
+   "row": "Asparagus",
+   "c": [
+    0,
+    2
+   ],
+   "sym_en": "Dull, gray-green, limp tips",
+   "sym_it": "Punte opache, grigio-verdi e afflosciate",
+   "match": "exact"
+  },
+  "avocado_avocado": {
+   "row": "Avocados",
+   "c": [
+    4.5,
+    13
+   ],
+   "sym_en": "Grayish-brown discoloration of flesh",
+   "sym_it": "Imbrunimento grigio-marrone della polpa",
+   "match": "exact"
+  },
+  "banana_banana": {
+   "row": "Bananas",
+   "c": [
+    11.5,
+    13
+   ],
+   "sym_en": "Dull color when ripened",
+   "sym_it": "Colore spento a maturazione",
+   "match": "exact"
+  },
+  "fagiolino_green_bean": {
+   "row": "Bean (snap)",
+   "c": [
+    7,
+    7
+   ],
+   "sym_en": "Pitting and russeting",
+   "sym_it": "Butteratura e rugginosità della buccia",
+   "match": "exact"
+  },
+  "cetriolo_cucumber": {
+   "row": "Cucumbers",
+   "c": [
+    7,
+    7
+   ],
+   "sym_en": "Pitting, water-soaked spots, decay",
+   "sym_it": "Butteratura, macchie acquose, marciume",
+   "match": "exact"
+  },
+  "melanzana_eggplant": {
+   "row": "Eggplants",
+   "c": [
+    7,
+    7
+   ],
+   "sym_en": "Surface scald, alternaria rot, blackening of seeds",
+   "sym_it": "Scottature superficiali, marciume da Alternaria, annerimento dei semi",
+   "match": "exact"
+  },
+  "pompelmo_grapefruit": {
+   "row": "Grapefruit",
+   "c": [
+    10,
+    10
+   ],
+   "sym_en": "Scald, pitting, watery breakdown",
+   "sym_it": "Scottature, butteratura, disfacimento acquoso",
+   "match": "exact"
+  },
+  "limone_lemon": {
+   "row": "Lemons",
+   "c": [
+    11,
+    13
+   ],
+   "sym_en": "Pitting, membranous staining, red blotch",
+   "sym_it": "Butteratura, imbrunimento delle membrane, macchie rossastre",
+   "match": "exact"
+  },
+  "lime_lime": {
+   "row": "Limes",
+   "c": [
+    7,
+    9
+   ],
+   "sym_en": "Pitting, turning tan with time",
+   "sym_it": "Butteratura, la buccia diventa bruno-chiara col tempo",
+   "match": "exact"
+  },
+  "litchi_lychee": {
+   "row": "Lychee",
+   "c": [
+    3,
+    3
+   ],
+   "sym_en": "Skin browning",
+   "sym_it": "Imbrunimento della buccia",
+   "match": "exact"
+  },
+  "mango_mango": {
+   "row": "Mangos",
+   "c": [
+    10,
+    13
+   ],
+   "sym_en": "Grayish scald-like discoloration of skin, uneven ripening",
+   "sym_it": "Macchie grigiastre simili a scottature sulla buccia, maturazione irregolare",
+   "match": "exact"
+  },
+  "melone_melon": {
+   "row": "Melons, Cantaloupe",
+   "c": [
+    2,
+    5
+   ],
+   "sym_en": "Pitting, surface decay",
+   "sym_it": "Butteratura, marciume superficiale",
+   "match": "approx",
+   "note": "riga Cantaloupe (melone retato); i meloni lisci tipo Honeydew/d'inverno hanno soglia 7-10 °C"
+  },
+  "arancia_orange": {
+   "row": "Oranges",
+   "c": [
+    3,
+    3
+   ],
+   "sym_en": "Pitting, brown stain",
+   "sym_it": "Butteratura, macchie brune",
+   "match": "exact"
+  },
+  "papaya_papaya": {
+   "row": "Papayas",
+   "c": [
+    7,
+    7
+   ],
+   "sym_en": "Pitting, failure to ripen, off flavors, decay",
+   "sym_it": "Butteratura, mancata maturazione, sapori anomali, marciume",
+   "match": "exact"
+  },
+  "maracuja_passion_fruit": {
+   "row": "Passion fruit",
+   "c": [
+    10,
+    10
+   ],
+   "sym_en": "Dark red discoloration on skin, loss of flavor, decay",
+   "sym_it": "Macchie rosso scuro sulla buccia, perdita di sapore, marciume",
+   "match": "exact"
+  },
+  "peperone_bell_pepper": {
+   "row": "Peppers, sweet",
+   "c": [
+    7,
+    7
+   ],
+   "sym_en": "Sheet pitting, alternaria rot on pods and calyxes, darkening of seeds",
+   "sym_it": "Butteratura estesa, marciume da Alternaria su frutto e calice, annerimento dei semi",
+   "match": "exact"
+  },
+  "ananas_pineapple": {
+   "row": "Pineapples",
+   "c": [
+    7,
+    10
+   ],
+   "sym_en": "Dull green when ripe, internal browning",
+   "sym_it": "Colore verde spento a maturazione, imbrunimento interno",
+   "match": "exact"
+  },
+  "melograno_pomegranate": {
+   "row": "Pomegranates",
+   "c": [
+    4.5,
+    4.5
+   ],
+   "sym_en": "Pitting, external and internal browning",
+   "sym_it": "Butteratura, imbrunimento esterno e interno",
+   "match": "exact"
+  },
+  "patata_potato": {
+   "row": "Potatoes",
+   "c": [
+    3,
+    3
+   ],
+   "sym_en": "Mahogany browning, sweetening",
+   "sym_it": "Imbrunimento color mogano, sapore dolciastro (amido trasformato in zuccheri)",
+   "match": "exact"
+  },
+  "zucca_pumpkin": {
+   "row": "Pumpkins and hardshell squash",
+   "c": [
+    10,
+    10
+   ],
+   "sym_en": "Decay, especially alternaria rot",
+   "sym_it": "Marciume, soprattutto da Alternaria",
+   "match": "exact"
+  },
+  "pomodoro_tomato": {
+   "row": "Tomatoes, Ripe",
+   "c": [
+    7,
+    10
+   ],
+   "sym_en": "Water soaking and softening, decay",
+   "sym_it": "Aspetto acquoso e rammollimento, marciume",
+   "match": "exact",
+   "note": "pomodori verdi maturi (mature-green): 13 °C, colore scarso a maturazione e marciume da Alternaria"
+  },
+  "anguria_watermelon": {
+   "row": "Watermelons",
+   "c": [
+    4.5,
+    4.5
+   ],
+   "sym_en": "Pitting, objectionable flavor",
+   "sym_it": "Butteratura, sapore sgradevole",
+   "match": "exact"
+  },
+  "gombo_okra": {
+   "row": "Okra",
+   "c": [
+    7,
+    7
+   ],
+   "sym_en": "Discoloration, water-soaked areas, pitting, decay",
+   "sym_it": "Scolorimento, aree imbibite d'acqua, butteratura, marciumi",
+   "match": "exact"
+  },
+  "oliva_olive": {
+   "row": "Olive, fresh",
+   "c": [
+    7,
+    7
+   ],
+   "sym_en": "Internal browning",
+   "sym_it": "Imbrunimento interno",
+   "match": "exact"
+  },
+  "cedro_citron": {
+   "row": "Lemons",
+   "c": [
+    11,
+    13
+   ],
+   "sym_en": "Pitting, membranous staining, red blotch",
+   "sym_it": "Butteratura, macchie sulle membrane, chiazze rossastre",
+   "match": "approx"
+  },
+  "chinotto_chinotto": {
+   "row": "Lemons",
+   "c": [
+    11,
+    13
+   ],
+   "sym_en": "Pitting, membranous staining, red blotch",
+   "sym_it": "Butteratura, macchie sulle membrane, chiazze rossastre",
+   "match": "approx"
+  },
+  "mirtillo_rosso_lingonberry": {
+   "row": "Cranberries",
+   "c": [
+    2,
+    2
+   ],
+   "sym_en": "Rubbery texture, red flesh",
+   "sym_it": "Consistenza gommosa, polpa arrossata",
+   "match": "approx"
+  },
+  "patata_dolce_sweet_potato": {
+   "row": "Sweet potatoes",
+   "c": [
+    13,
+    13
+   ],
+   "sym_en": "Decay, pitting, internal discoloration",
+   "sym_it": "Marciumi, butteratura, scolorimento interno",
+   "match": "exact"
+  }
+ },
+ "chilling_cultivar_dependent": {
+  "mela_apple": {
+   "row": "Apples - certain cultivars",
+   "c": [
+    2,
+    3
+   ],
+   "sym_en": "Internal browning, brown core, soggy breakdown, soft scald",
+   "sym_it": "Imbrunimento interno, cuore bruno, disfacimento acquoso, scottatura molle",
+   "note": "solo alcune cultivar: la maggior parte delle mele si conserva a -1/0 °C"
+  }
+ },
+ "freezing": {
+  "most": {
+   "rows": [
+    "Apricots",
+    "Asparagus",
+    "Avocados",
+    "Bananas",
+    "Beans, snap",
+    "Berries (except cranberries)",
+    "Cucumbers",
+    "Eggplants",
+    "Lemons",
+    "Lettuce",
+    "Limes",
+    "Okra",
+    "Peaches",
+    "Peppers, sweet",
+    "Plums",
+    "Potatoes",
+    "Squash, summer",
+    "Sweet potatoes",
+    "Tomatoes"
+   ],
+   "items": {
+    "albicocca_apricot": "exact",
+    "asparago_asparagus": "exact",
+    "avocado_avocado": "exact",
+    "banana_banana": "exact",
+    "fagiolino_green_bean": "exact",
+    "fragola_strawberry": "exact",
+    "lampone_raspberry": "exact",
+    "mirtillo_blueberry": "exact",
+    "mora_blackberry": "exact",
+    "ribes_redcurrant": "exact",
+    "cetriolo_cucumber": "exact",
+    "melanzana_eggplant": "exact",
+    "limone_lemon": "exact",
+    "lattuga_da_cespo_head_lettuce": "exact",
+    "lattuga_da_taglio_leaf_lettuce": "exact",
+    "lime_lime": "exact",
+    "pesca_peach": "exact",
+    "pesca_noce_nectarine": "approx",
+    "peperone_bell_pepper": "exact",
+    "susina_plum": "exact",
+    "patata_potato": "exact",
+    "zucchina_zucchini": "exact",
+    "pomodoro_tomato": "exact"
+   }
+  },
+  "moderate": {
+   "rows": [
+    "Apples",
+    "Broccoli",
+    "Carrots",
+    "Cauliflower",
+    "Celery",
+    "Cranberries",
+    "Grapefruit",
+    "Grapes",
+    "Onion (dry)",
+    "Oranges",
+    "Parsley",
+    "Pears",
+    "Peas",
+    "Radishes",
+    "Spinach",
+    "Squash, winter"
+   ],
+   "items": {
+    "mela_apple": "exact",
+    "broccolo_broccoli": "exact",
+    "carota_carrot": "exact",
+    "cavolfiore_cauliflower": "exact",
+    "sedano_celery": "exact",
+    "pompelmo_grapefruit": "exact",
+    "uva_table_grape": "exact",
+    "cipolla_estiva_summer_onion": "exact",
+    "cipolla_invernale_winter_onion": "exact",
+    "arancia_orange": "exact",
+    "prezzemolo_parsley": "exact",
+    "pera_pear": "exact",
+    "pisello_pea": "exact",
+    "ravanello_radish": "exact",
+    "spinacio_spinach": "exact",
+    "zucca_pumpkin": "exact"
+   }
+  },
+  "least": {
+   "rows": [
+    "Beets",
+    "Brussels sprouts",
+    "Cabbage, mature and savory",
+    "Dates",
+    "Kale",
+    "Kohlrabi",
+    "Parsnips",
+    "Rutabagas",
+    "Salsify",
+    "Turnips"
+   ],
+   "items": {
+    "barbabietola_beetroot": "exact",
+    "cavoletto_di_bruxelles_brussels_sprout": "exact",
+    "cavolo_cappuccio_cabbage": "exact",
+    "cavolo_verza_savoy_cabbage": "exact",
+    "cavolo_rosso_red_cabbage": "approx",
+    "cavolo_nero_black_kale": "exact",
+    "cavolo_rapa_kohlrabi": "exact",
+    "pastinaca_parsnip": "exact",
+    "rapa_turnip": "exact"
+   }
+  }
+ }
+}

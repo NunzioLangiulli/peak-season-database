@@ -1,0 +1,3286 @@
+{
+ "_doc": "Catalogo curato manualmente (2026-11-04). Mappa ogni alimento alle voci reali delle fonti. crea/bda = codici alimento (crudo/fresco); crea_q/bda_q = 'exact' | 'approx' (approssimazione dichiarata, da segnalare); ucd = slug UC Davis produce-facts-sheets; odc_row = nome riga nelle tabelle PDF Orto da Coltivare; wwf/gp/altro/bs = nome nel calendario WWF / Greenpeace / Altroconsumo / BioSuisse; eufic = chiavi della mappa EUFIC; kw = parole chiave per trovare le schede nelle sitemap (ODC, My-PersonalTrainer). I campi sci/part/cat/it/en sono indicati solo per gli alimenti NUOVI (per quelli della bozza si usano i valori della bozza).",
+ "items": [
+  {
+   "id": "aglio_garlic",
+   "crea": "005000",
+   "bda": "301",
+   "ucd": "garlic",
+   "odc_row": "Aglio",
+   "wwf": "Aglio",
+   "gp": "Aglio",
+   "altro": "Aglio",
+   "bs": "Aglio",
+   "eufic": [
+    "garlic",
+    "garlic (stored)"
+   ],
+   "kw": [
+    "aglio"
+   ]
+  },
+  {
+   "id": "asparago_asparagus",
+   "crea": "005050",
+   "bda": "305",
+   "ucd": "asparagus-green",
+   "odc_row": "Asparagi",
+   "wwf": "Asparago",
+   "gp": "Asparago",
+   "altro": "Asparago",
+   "bs": "Asparago",
+   "eufic": [
+    "asparagus",
+    "white asparagus"
+   ],
+   "kw": [
+    "asparag"
+   ],
+   "mypt_url": "/Tv/Ricette/Ingredienti/asparagi_verdi.html"
+  },
+  {
+   "id": "carciofo_artichoke",
+   "crea": "005120",
+   "bda": "310",
+   "ucd": "artichoke-globe",
+   "odc_row": "Carciofi",
+   "wwf": "Carciofo",
+   "gp": "Carciofo",
+   "altro": "Carciofo",
+   "bs": "Carciofo",
+   "eufic": [
+    "artichoke"
+   ],
+   "kw": [
+    "carciof"
+   ],
+   "eppo": "CYUSC"
+  },
+  {
+   "id": "carota_carrot",
+   "crea": "005150",
+   "bda": "312",
+   "ucd": "carrot",
+   "odc_row": "Carote",
+   "wwf": "Carota",
+   "gp": "Carota",
+   "altro": "Carota",
+   "bs": "Carota",
+   "eufic": [
+    "carrot",
+    "carrot (stored)"
+   ],
+   "kw": [
+    "carot"
+   ]
+  },
+  {
+   "id": "barbabietola_beetroot",
+   "crea": "005060",
+   "bda": "306",
+   "ucd": null,
+   "odc_row": "Barbabietole",
+   "wwf": "Barbabietola",
+   "gp": "Barbabietola",
+   "altro": "Barbabietola",
+   "bs": "Barbabietola",
+   "eufic": [
+    "beetroot",
+    "beetroot (stored)"
+   ],
+   "kw": [
+    "barbabietol"
+   ]
+  },
+  {
+   "id": "bietola_da_coste_swiss_chard",
+   "crea": "005080",
+   "bda": "307",
+   "ucd": null,
+   "odc_row": "Biete da coste",
+   "wwf": "Bietolacosta",
+   "gp": "Bietolacosta",
+   "altro": "Bietolacosta",
+   "bs": null,
+   "eufic": [
+    "swiss chard",
+    "chard"
+   ],
+   "kw": [
+    "bietol",
+    "biete",
+    "coste"
+   ],
+   "eppo": "BEAVV",
+   "mypt_url": "/alimentazione/l-ortaggio-che-abbassa-la-pressione-e-regola-la-glicemia-tutti-i-benefici-nutrizionali-delle-bietole-bieta.html"
+  },
+  {
+   "id": "bietola_da_taglio_leaf_beet",
+   "crea": "005080",
+   "crea_q": "approx",
+   "bda": "307",
+   "bda_q": "approx",
+   "ucd": null,
+   "odc_row": "Biete da taglio",
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "mangold"
+   ],
+   "kw": [
+    "bietol",
+    "biete"
+   ],
+   "eppo": "BEAVV",
+   "merged_into": "bietola_da_coste_swiss_chard"
+  },
+  {
+   "id": "cardo_cardoon",
+   "crea": "005140",
+   "bda": "311",
+   "ucd": null,
+   "odc_row": "Cardi",
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "cardoon"
+   ],
+   "kw": [
+    "cardi",
+    "cardo"
+   ]
+  },
+  {
+   "id": "cavoletto_di_bruxelles_brussels_sprout",
+   "crea": "005170",
+   "bda": "315",
+   "ucd": "brussels-sprouts",
+   "odc_row": "Cavoletti Bruxelles",
+   "wwf": "Broccoletti di Bruxelles",
+   "gp": null,
+   "altro": null,
+   "bs": "Cavoletti di Bruxelles",
+   "eufic": [
+    "brussels sprout"
+   ],
+   "kw": [
+    "cavolett",
+    "bruxelles"
+   ],
+   "mypt_url": "/alimentazione/cavoletti-di-bruxelles.html"
+  },
+  {
+   "id": "cavolfiore_cauliflower",
+   "crea": "005160",
+   "bda": "313",
+   "ucd": "cauliflower",
+   "odc_row": "Cavolfiori",
+   "wwf": "Cavolo",
+   "gp": "Cavolfiore",
+   "altro": "Cavoli",
+   "bs": "Cavolfiore",
+   "eufic": [
+    "cauliflower",
+    "cauliflower (stored)"
+   ],
+   "kw": [
+    "cavolfior"
+   ]
+  },
+  {
+   "id": "broccolo_broccoli",
+   "crea": "005110",
+   "bda": "309",
+   "ucd": "broccoli",
+   "odc_row": "Cavolo broccolo",
+   "wwf": null,
+   "gp": "Broccolo",
+   "altro": "Cavoli",
+   "bs": "Broccolo",
+   "eufic": [
+    "broccoli",
+    "broccoli (stored)"
+   ],
+   "kw": [
+    "broccol"
+   ],
+   "odc_url": "/ortaggi/coltivare-nellorto-il-cavolo-broccolo/"
+  },
+  {
+   "id": "cavolo_cappuccio_cabbage",
+   "crea": "005200",
+   "bda": "316",
+   "ucd": "cabbage",
+   "odc_row": "Cavolo cappuccio",
+   "wwf": "Cavolo Cappuccio",
+   "gp": "Cavolo cappuccio",
+   "altro": "Cavoli",
+   "bs": "Cavolo bianco",
+   "eufic": [
+    "white cabbage",
+    "white cabbage (stored)",
+    "cabbage",
+    "cabbage (stored)"
+   ],
+   "kw": [
+    "cappucci"
+   ],
+   "mypt_url": "/Tv/Ricette/Ingredienti/cavolo-cappuccio.html"
+  },
+  {
+   "id": "cavolo_nero_black_kale",
+   "crea": null,
+   "bda": null,
+   "ucd": null,
+   "odc_row": "Cavolo nero",
+   "wwf": "Cavolo Nero",
+   "gp": "Cavolo nero",
+   "altro": "Cavoli",
+   "bs": "Cavolo riccio",
+   "eufic": [
+    "cavolo nero",
+    "kale"
+   ],
+   "kw": [
+    "cavolo-nero",
+    "cavolo nero"
+   ]
+  },
+  {
+   "id": "cavolo_rapa_kohlrabi",
+   "crea": null,
+   "bda": null,
+   "ucd": null,
+   "odc_row": "Cavolo rapa",
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Cavolo rapa",
+   "eufic": [
+    "kohlrabi",
+    "kohlrabi (stored)"
+   ],
+   "kw": [
+    "cavolo-rapa",
+    "cavolo rapa"
+   ]
+  },
+  {
+   "id": "cavolo_verza_savoy_cabbage",
+   "crea": "005210",
+   "bda": null,
+   "ucd": null,
+   "odc_row": "Cavolo verza",
+   "wwf": "Cavolo Verza",
+   "gp": null,
+   "altro": "Cavoli",
+   "bs": "Verza",
+   "eufic": [
+    "savoy cabbage",
+    "savoy cabbage (stored)"
+   ],
+   "kw": [
+    "verza"
+   ]
+  },
+  {
+   "id": "cece_chickpea",
+   "crea": "004000",
+   "bda": "201",
+   "ucd": null,
+   "odc_row": "Ceci",
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "ceci"
+   ]
+  },
+  {
+   "id": "cetriolo_cucumber",
+   "crea": "005220",
+   "bda": "318",
+   "ucd": "cucumber",
+   "odc_row": "Cetrioli",
+   "wwf": "Cetriolo",
+   "gp": "Cetriolo",
+   "altro": "Cetriolo",
+   "bs": "Cetriolo",
+   "eufic": [
+    "cucumber",
+    "cucumber (stored)"
+   ],
+   "kw": [
+    "cetriol"
+   ]
+  },
+  {
+   "id": "cicoria_da_cespo_chicory",
+   "crea": "005240",
+   "crea_q": "approx",
+   "bda": "319",
+   "bda_q": "approx",
+   "ucd": null,
+   "odc_row": "Cicorie da cespo",
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Cicoria",
+   "eufic": [
+    "chicory",
+    "chicory (stored)"
+   ],
+   "kw": [
+    "cicori"
+   ],
+   "odc_url": null
+  },
+  {
+   "id": "cicoria_da_taglio_cutting_chicory",
+   "crea": "005230",
+   "bda": "320",
+   "ucd": null,
+   "odc_row": "Cicorie da taglio",
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "cicori"
+   ]
+  },
+  {
+   "id": "cima_di_rapa_turnip_greens",
+   "crea": "005090",
+   "bda": "308",
+   "ucd": null,
+   "odc_row": "Cime di rapa",
+   "wwf": "Cima di rapa",
+   "gp": "Cima di rapa",
+   "altro": "Cima di rapa",
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "cime-di-rapa",
+    "cima-di-rapa",
+    "cime di rapa"
+   ]
+  },
+  {
+   "id": "cipolla_estiva_summer_onion",
+   "crea": "005300",
+   "bda": "322",
+   "ucd": "onions-dry",
+   "odc_row": "Cipolle estive",
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Cipolla",
+   "eufic": [
+    "onion",
+    "red onion"
+   ],
+   "kw": [
+    "cipoll"
+   ]
+  },
+  {
+   "id": "cipolla_invernale_winter_onion",
+   "crea": "005300",
+   "bda": "322",
+   "ucd": "onions-dry",
+   "odc_row": "Cipolle invernali",
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Cipolla",
+   "eufic": [
+    "onion (stored)",
+    "red onion (stored)"
+   ],
+   "kw": [
+    "cipoll"
+   ]
+  },
+  {
+   "id": "fagiolo_bean",
+   "crea": "004110",
+   "bda": "100",
+   "ucd": null,
+   "odc_row": "Fagioli",
+   "wwf": null,
+   "gp": "Fagioli",
+   "altro": null,
+   "bs": "Fagioli",
+   "eufic": [
+    "bean",
+    "haricot bean",
+    "white bean",
+    "kidney bean"
+   ],
+   "kw": [
+    "fagioli"
+   ]
+  },
+  {
+   "id": "fagiolino_green_bean",
+   "crea": "004310",
+   "bda": "101",
+   "ucd": "bean-snap",
+   "odc_row": "Fagiolini",
+   "wwf": "Fagiolino",
+   "gp": "Fagiolini",
+   "altro": "Fagiolini",
+   "bs": null,
+   "eufic": [
+    "green bean",
+    "runner bean"
+   ],
+   "kw": [
+    "fagiolin"
+   ]
+  },
+  {
+   "id": "fava_broad_bean",
+   "crea": "004400",
+   "bda": "102",
+   "ucd": null,
+   "odc_row": "Fave",
+   "wwf": "Fava",
+   "gp": "Fave",
+   "altro": "Fave",
+   "bs": null,
+   "eufic": [
+    "broad bean"
+   ],
+   "kw": [
+    "fave"
+   ]
+  },
+  {
+   "id": "finocchio_fennel",
+   "crea": "005320",
+   "bda": "324",
+   "ucd": null,
+   "odc_row": "Finocchi",
+   "wwf": "Finocchio",
+   "gp": "Finocchio",
+   "altro": "Finocchio",
+   "bs": "Finocchio",
+   "eufic": [
+    "fennel",
+    "fennel (stored)"
+   ],
+   "kw": [
+    "finocch"
+   ],
+   "eppo": "FOEVD"
+  },
+  {
+   "id": "lattuga_da_cespo_head_lettuce",
+   "crea": "005420",
+   "bda": "332",
+   "ucd": "lettuce-crisphead",
+   "odc_row": "Lattuga da cespo",
+   "wwf": "Insalata",
+   "gp": "Insalata",
+   "altro": "Insalata",
+   "bs": "Lattuga a foglia di quercia, lattuga a cappuccio, lattuga comune",
+   "eufic": [
+    "lettuce",
+    "iceberg lettuce",
+    "romaine lettuce",
+    "batavia lettuce"
+   ],
+   "kw": [
+    "lattug"
+   ],
+   "eppo": "LACSC"
+  },
+  {
+   "id": "lattuga_da_taglio_leaf_lettuce",
+   "crea": "005430",
+   "bda": "333",
+   "ucd": "lettuce-romaine",
+   "odc_row": "Lattuga da taglio",
+   "wwf": "Insalata",
+   "gp": "Insalata",
+   "altro": "Insalata",
+   "bs": "Lollo",
+   "eufic": [
+    "lollo bionda lettuce",
+    "lollo rosso lettuce",
+    "oak leaf lettuce",
+    "red oak leaf lettuce"
+   ],
+   "kw": [
+    "lattug"
+   ],
+   "eppo": "LACSP"
+  },
+  {
+   "id": "lenticchia_lentil",
+   "crea": "004500",
+   "bda": "204",
+   "ucd": null,
+   "odc_row": "Lenticchie",
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "lenticch"
+   ],
+   "eppo": "LENCU",
+   "mypt_url": "/Tv/Ricette/Ingredienti/lenticchie_secche.html"
+  },
+  {
+   "id": "melanzana_eggplant",
+   "crea": "005500",
+   "bda": "334",
+   "ucd": "eggplant",
+   "odc_row": "Melanzane",
+   "wwf": "Melanzana",
+   "gp": "Melanzana",
+   "altro": "Melanzana",
+   "bs": "Melanzana",
+   "eufic": [
+    "aubergine",
+    "aubergine (stored)"
+   ],
+   "kw": [
+    "melanzan"
+   ]
+  },
+  {
+   "id": "pastinaca_parsnip",
+   "crea": null,
+   "bda": null,
+   "ucd": null,
+   "odc_row": "Pastinaca",
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Pastinaca",
+   "eufic": [
+    "parsnip",
+    "parsnip (stored)"
+   ],
+   "kw": [
+    "pastinac"
+   ]
+  },
+  {
+   "id": "patata_potato",
+   "crea": "006500",
+   "bda": "381",
+   "ucd": "potato",
+   "odc_row": "Patate",
+   "wwf": "Patata",
+   "gp": "Patata",
+   "altro": "Patata",
+   "bs": "Patate di conservazione farinose, linea blu",
+   "eufic": [
+    "potato",
+    "potato (stored)",
+    "new potato"
+   ],
+   "kw": [
+    "patat"
+   ]
+  },
+  {
+   "id": "peperone_bell_pepper",
+   "crea": "005600",
+   "bda": "336",
+   "ucd": "bell-pepper",
+   "odc_row": "Peperoni dolci",
+   "wwf": "Peperone",
+   "gp": "Peperone",
+   "altro": "Peperone",
+   "bs": "Peperone",
+   "eufic": [
+    "bell pepper",
+    "green bell pepper"
+   ],
+   "kw": [
+    "peperon"
+   ]
+  },
+  {
+   "id": "pisello_pea",
+   "crea": "004700",
+   "bda": "103",
+   "ucd": "peas-snow-and-snap-pod",
+   "ucd_q": "approx",
+   "odc_row": "Piselli",
+   "wwf": "Piselli",
+   "gp": "Piselli",
+   "altro": "Piselli",
+   "bs": "Piselli",
+   "eufic": [
+    "pea"
+   ],
+   "kw": [
+    "pisell"
+   ]
+  },
+  {
+   "id": "pomodoro_tomato",
+   "crea": "006610",
+   "bda": "390",
+   "ucd": "tomato",
+   "odc_row": "Pomodori",
+   "wwf": "Pomodoro",
+   "gp": "Pomodoro",
+   "altro": "Pomodoro",
+   "bs": "Pomodoro",
+   "eufic": [
+    "tomato",
+    "tomato (stored)"
+   ],
+   "kw": [
+    "pomodor"
+   ],
+   "mypt_url": null
+  },
+  {
+   "id": "porro_leek",
+   "crea": "005650",
+   "bda": "337",
+   "ucd": null,
+   "odc_row": "Porri",
+   "wwf": "Porro",
+   "gp": "Porro",
+   "altro": "Porro",
+   "bs": "Porro",
+   "eufic": [
+    "leek",
+    "leek (stored)"
+   ],
+   "kw": [
+    "porri",
+    "porro"
+   ],
+   "eppo": "ALLPO",
+   "mypt_url": "/alimentazione/tutti-i-benefici-nutrizionali-del-porro.html"
+  },
+  {
+   "id": "radicchio_radicchio",
+   "crea": "005440",
+   "bda": "339",
+   "ucd": "radicchio",
+   "odc_row": "Radicchio",
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Cicorino rosso",
+   "eufic": [
+    "radicchio",
+    "red chicory"
+   ],
+   "kw": [
+    "radicch"
+   ]
+  },
+  {
+   "id": "rapa_turnip",
+   "crea": "005660",
+   "bda": "341",
+   "ucd": null,
+   "odc_row": "Rape",
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "turnip",
+    "turnip (stored)"
+   ],
+   "kw": [
+    "rape",
+    "rapa"
+   ],
+   "mypt_url": null
+  },
+  {
+   "id": "ravanello_radish",
+   "crea": "005670",
+   "bda": "342",
+   "ucd": "radish",
+   "odc_row": "Rapanelli",
+   "wwf": "Ravanello",
+   "gp": "Ravanello",
+   "altro": "Ravanello",
+   "bs": "Ravanello",
+   "eufic": [
+    "radish",
+    "red radish",
+    "radish (stored)"
+   ],
+   "kw": [
+    "ravanell",
+    "rapanell"
+   ]
+  },
+  {
+   "id": "rucola_arugula",
+   "crea": "005460",
+   "bda": null,
+   "ucd": null,
+   "odc_row": "Rucola",
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Rucola",
+   "eufic": [
+    "rucola",
+    "arugula"
+   ],
+   "kw": [
+    "rucol"
+   ]
+  },
+  {
+   "id": "scalogno_shallot",
+   "crea": null,
+   "bda": "19067",
+   "ucd": null,
+   "odc_row": "Scalogno",
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "shallot"
+   ],
+   "kw": [
+    "scalogn"
+   ],
+   "eppo": "ALLAS"
+  },
+  {
+   "id": "sedano_celery",
+   "crea": "005680",
+   "bda": "343",
+   "ucd": "celery",
+   "odc_row": "Sedano",
+   "wwf": "Sedano",
+   "gp": "Sedano",
+   "altro": "Sedano",
+   "bs": "Sedano",
+   "eufic": [
+    "celery",
+    "celery (stored)"
+   ],
+   "kw": [
+    "sedano"
+   ],
+   "eppo": "APUGD",
+   "odc_url": "/ortaggi/il-sedano/"
+  },
+  {
+   "id": "spinacio_spinach",
+   "crea": "005700",
+   "bda": "345",
+   "ucd": "spinach",
+   "odc_row": "Spinaci",
+   "wwf": "Spinacio",
+   "gp": "Spinacio",
+   "altro": "Spinacio",
+   "bs": "Spinaci",
+   "eufic": [
+    "spinach"
+   ],
+   "kw": [
+    "spinac"
+   ]
+  },
+  {
+   "id": "topinambur_jerusalem_artichoke",
+   "crea": null,
+   "crea_note": "CREA ha solo 006596 'Topinambur, cotto, bollito' (non crudo)",
+   "bda": null,
+   "ucd": null,
+   "odc_row": "Topinambur",
+   "wwf": "Topinambur",
+   "gp": "Topinambur",
+   "altro": "Topinambur",
+   "bs": null,
+   "eufic": [
+    "jerusalem artichoke"
+   ],
+   "kw": [
+    "topinambur"
+   ]
+  },
+  {
+   "id": "valerianella_corn_salad",
+   "crea": null,
+   "bda": "19072",
+   "ucd": null,
+   "odc_row": "Valerianella",
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Lattuga d’agnello",
+   "eufic": [
+    "lamb's lettuce"
+   ],
+   "kw": [
+    "valerian",
+    "songino"
+   ],
+   "mypt_url": null
+  },
+  {
+   "id": "zucca_pumpkin",
+   "crea": "005720",
+   "bda": "347",
+   "ucd": "pumpkin-winter-squash",
+   "odc_row": "Zucca",
+   "wwf": "Zucca",
+   "gp": "Zucca",
+   "altro": "Zucca",
+   "bs": "Zucca",
+   "eufic": [
+    "pumpkin",
+    "pumpkin (stored)",
+    "squash",
+    "squash (stored)",
+    "butternut squash"
+   ],
+   "kw": [
+    "zucca"
+   ]
+  },
+  {
+   "id": "zucchina_zucchini",
+   "crea": "005730",
+   "bda": "349",
+   "ucd": "squash-soft-rind",
+   "odc_row": "Zucchina",
+   "wwf": "Zucchina",
+   "gp": "Zucchina",
+   "altro": "Zucchina",
+   "bs": "Zucchino",
+   "eufic": [
+    "courgette",
+    "courgette (stored)"
+   ],
+   "kw": [
+    "zucchin"
+   ]
+  },
+  {
+   "id": "arachide_peanut",
+   "crea": null,
+   "crea_note": "CREA ha solo 008500 'Arachidi, tostate'",
+   "bda": "501",
+   "ucd": null,
+   "odc_row": "Arachidi",
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "arachid"
+   ]
+  },
+  {
+   "id": "anguria_watermelon",
+   "crea": "007040",
+   "bda": "408",
+   "ucd": "watermelon",
+   "odc_row": "Angurie",
+   "wwf": "Anguria",
+   "gp": "Anguria",
+   "altro": "Anguria",
+   "bs": null,
+   "eufic": [
+    "watermelon",
+    "watermelon (stored)"
+   ],
+   "kw": [
+    "anguri",
+    "cocomer"
+   ]
+  },
+  {
+   "id": "melone_melon",
+   "crea": "007230",
+   "bda": "421",
+   "ucd": "cantaloupe",
+   "odc_row": "Meloni",
+   "wwf": "Melone",
+   "gp": "Melone",
+   "altro": "Melone",
+   "bs": null,
+   "eufic": [
+    "melon",
+    "muskmelon"
+   ],
+   "kw": [
+    "melon"
+   ],
+   "odc_url": "/ortaggi/il-melone/"
+  },
+  {
+   "id": "albicocca_apricot",
+   "crea": "007000",
+   "bda": "401",
+   "ucd": "apricot",
+   "odc_row": null,
+   "wwf": "Albicocca",
+   "gp": "Albicocca",
+   "altro": "Albicocca",
+   "bs": "Albicocche",
+   "eufic": [
+    "apricot"
+   ],
+   "kw": [
+    "albicocc"
+   ]
+  },
+  {
+   "id": "arancia_orange",
+   "crea": "008000",
+   "bda": "404",
+   "ucd": "orange",
+   "odc_row": null,
+   "wwf": "Arancia",
+   "gp": "Arancia",
+   "altro": "Arancia",
+   "bs": null,
+   "eufic": [
+    "orange",
+    "blood orange",
+    "citrus"
+   ],
+   "kw": [
+    "arance",
+    "arancio",
+    "arancia"
+   ],
+   "eppo": "CIDSI"
+  },
+  {
+   "id": "cachi_persimmon",
+   "crea": "007090",
+   "bda": "415",
+   "ucd": "persimmon",
+   "odc_row": null,
+   "wwf": "Cachi",
+   "gp": "Caco",
+   "altro": "Caco",
+   "bs": null,
+   "eufic": [
+    "persimmon"
+   ],
+   "kw": [
+    "cachi",
+    "kaki",
+    "caco"
+   ]
+  },
+  {
+   "id": "castagna_chestnut",
+   "crea": "008520",
+   "bda": "503",
+   "ucd": "chestnut",
+   "odc_row": null,
+   "wwf": "Castagna",
+   "gp": "Castagna",
+   "altro": "Castagna",
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "castagn"
+   ],
+   "mypt_url": "/nutrizione/castagne.html"
+  },
+  {
+   "id": "ciliegia_cherry",
+   "crea": "007710",
+   "bda": "407",
+   "ucd": "cherry",
+   "odc_row": null,
+   "wwf": "Ciliegia",
+   "gp": "Ciliegia",
+   "altro": "Ciliegia",
+   "bs": "Ciliegia",
+   "eufic": [
+    "cherry"
+   ],
+   "kw": [
+    "ciliegi"
+   ]
+  },
+  {
+   "id": "clementine_clementine",
+   "crea": "008020",
+   "bda": "416",
+   "ucd": "mandarin",
+   "ucd_q": "approx",
+   "odc_row": null,
+   "wwf": "Clementine",
+   "gp": "Clementine",
+   "altro": "Clementine",
+   "bs": null,
+   "eufic": [
+    "clementine"
+   ],
+   "kw": [
+    "clementin"
+   ],
+   "eppo": "CIDCL"
+  },
+  {
+   "id": "fico_fig",
+   "crea": "007050",
+   "bda": "409",
+   "ucd": "fig",
+   "odc_row": null,
+   "wwf": "Fico",
+   "gp": "Fico",
+   "altro": "Fico",
+   "bs": null,
+   "eufic": [
+    "fig"
+   ],
+   "kw": [
+    "fico",
+    "fichi"
+   ]
+  },
+  {
+   "id": "fragola_strawberry",
+   "crea": "007730",
+   "bda": "411",
+   "ucd": "strawberry",
+   "odc_row": null,
+   "wwf": "Fragole",
+   "gp": "Fragola",
+   "altro": "Fragola",
+   "bs": "Fragola",
+   "eufic": [
+    "strawberry"
+   ],
+   "kw": [
+    "fragol"
+   ]
+  },
+  {
+   "id": "kiwi_kiwifruit",
+   "crea": "007570",
+   "bda": "429",
+   "ucd": "kiwifruit",
+   "odc_row": null,
+   "wwf": "Kiwi",
+   "gp": "Kiwi",
+   "altro": "Kiwi",
+   "bs": "Kiwi",
+   "eufic": [
+    "kiwi"
+   ],
+   "kw": [
+    "kiwi"
+   ]
+  },
+  {
+   "id": "lampone_raspberry",
+   "crea": "007740",
+   "bda": "412",
+   "ucd": "bushberry",
+   "ucd_q": "approx",
+   "odc_row": null,
+   "wwf": "Lampone",
+   "gp": "Lampone",
+   "altro": "Lampone",
+   "bs": "Lampone",
+   "eufic": [
+    "raspberry"
+   ],
+   "kw": [
+    "lampon"
+   ]
+  },
+  {
+   "id": "limone_lemon",
+   "crea": "008030",
+   "bda": "413",
+   "ucd": "lemon",
+   "odc_row": null,
+   "wwf": "Limone",
+   "gp": "Limone",
+   "altro": "Limone",
+   "bs": null,
+   "eufic": [
+    "lemon"
+   ],
+   "kw": [
+    "limon"
+   ],
+   "eppo": "CIDLI",
+   "mypt_url": null
+  },
+  {
+   "id": "mandarino_mandarin",
+   "crea": "008060",
+   "bda": "417",
+   "ucd": "mandarin",
+   "odc_row": null,
+   "wwf": "Mandarino",
+   "gp": "Mandarino",
+   "altro": "Mandarino",
+   "bs": null,
+   "eufic": [
+    "mandarin",
+    "tangerine"
+   ],
+   "kw": [
+    "mandarin"
+   ]
+  },
+  {
+   "id": "mela_apple",
+   "crea": "007120",
+   "bda": "8807",
+   "ucd": "apple-golden-delicious",
+   "ucd_q": "approx",
+   "odc_row": null,
+   "wwf": "Mela",
+   "gp": "Mela",
+   "altro": "Mela",
+   "bs": "Mele varietà autunnali",
+   "eufic": [
+    "apple",
+    "apple (stored)",
+    "autumn apple ",
+    "summer apple ",
+    "winter apple"
+   ],
+   "kw": [
+    "mele",
+    "melo"
+   ]
+  },
+  {
+   "id": "melograno_pomegranate",
+   "crea": "007100",
+   "bda": "418",
+   "ucd": "pomegranate",
+   "odc_row": null,
+   "wwf": "Melograno",
+   "gp": "Melograno",
+   "altro": "Melograno",
+   "bs": null,
+   "eufic": [
+    "pomegranate"
+   ],
+   "kw": [
+    "melogran"
+   ]
+  },
+  {
+   "id": "mirtillo_blueberry",
+   "crea": "007760",
+   "bda": "500021",
+   "ucd": "bushberry",
+   "ucd_q": "approx",
+   "odc_row": null,
+   "wwf": "Mirtillo",
+   "gp": "Mirtillo",
+   "altro": "Mirtillo",
+   "bs": "Mirtillo",
+   "eufic": [
+    "blueberry",
+    "bilberry"
+   ],
+   "kw": [
+    "mirtill"
+   ]
+  },
+  {
+   "id": "mora_blackberry",
+   "crea": "007750",
+   "bda": null,
+   "ucd": "bushberry",
+   "ucd_q": "approx",
+   "odc_row": null,
+   "wwf": "Mora",
+   "gp": "Mora",
+   "altro": "Mora",
+   "bs": "Mora",
+   "eufic": [
+    "blackberry"
+   ],
+   "kw": [
+    "more",
+    "mora"
+   ]
+  },
+  {
+   "id": "pera_pear",
+   "crea": "007260",
+   "bda": "424",
+   "ucd": "pear-bartlett",
+   "ucd_q": "approx",
+   "odc_row": null,
+   "wwf": "Pera",
+   "gp": "Pera",
+   "altro": "Pera",
+   "bs": "Pere varietà autunnali",
+   "eufic": [
+    "pear",
+    "pear (stored)"
+   ],
+   "kw": [
+    "pere",
+    "pero"
+   ]
+  },
+  {
+   "id": "pesca_peach",
+   "crea": "007290",
+   "bda": "425",
+   "ucd": "peach",
+   "odc_row": null,
+   "wwf": "Pesca",
+   "gp": "Pesca",
+   "altro": "Pesca",
+   "bs": "Pesca",
+   "eufic": [
+    "peach",
+    "donut peach"
+   ],
+   "kw": [
+    "pesche",
+    "pesco"
+   ]
+  },
+  {
+   "id": "susina_plum",
+   "crea": "007340",
+   "bda": "427",
+   "ucd": "plum",
+   "odc_row": null,
+   "wwf": "Susina",
+   "gp": "Susina",
+   "altro": "Susina",
+   "bs": "Susine",
+   "eufic": [
+    "plum"
+   ],
+   "kw": [
+    "susin",
+    "prugn"
+   ]
+  },
+  {
+   "id": "uva_table_grape",
+   "crea": "007380",
+   "bda": "428",
+   "ucd": "grape",
+   "odc_row": null,
+   "wwf": "Uva",
+   "gp": "Uva",
+   "altro": "Uva",
+   "bs": "Uva",
+   "eufic": [
+    "grape"
+   ],
+   "kw": [
+    "uva",
+    "vite"
+   ]
+  },
+  {
+   "id": "banana_banana",
+   "crea": "007510",
+   "bda": "406",
+   "ucd": "banana",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": "Banana",
+   "bs": null,
+   "eufic": [
+    "banana"
+   ],
+   "kw": [
+    "banan"
+   ]
+  },
+  {
+   "id": "mango_mango",
+   "crea": "007590",
+   "bda": "805867",
+   "ucd": "mango",
+   "odc_row": null,
+   "wwf": "Mango",
+   "gp": null,
+   "altro": "Mango",
+   "bs": null,
+   "eufic": [
+    "mango"
+   ],
+   "kw": [
+    "mango"
+   ]
+  },
+  {
+   "id": "avocado_avocado",
+   "crea": "007490",
+   "bda": "999692",
+   "ucd": "avocado",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": "Avocado",
+   "bs": null,
+   "eufic": [
+    "avocado"
+   ],
+   "kw": [
+    "avocado"
+   ]
+  },
+  {
+   "id": "basilico_basil",
+   "crea": "006800",
+   "bda": "8001",
+   "ucd": "herbs-fresh-culinary",
+   "odc_row": "Basilico",
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Basilico",
+   "eufic": [],
+   "kw": [
+    "basilic"
+   ]
+  },
+  {
+   "id": "peperoncino_chili_pepper",
+   "crea": "006830",
+   "bda": "335",
+   "ucd": "chile-pepper",
+   "odc_row": "Peperoncini piccanti",
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "chili"
+   ],
+   "kw": [
+    "peperoncin"
+   ]
+  },
+  {
+   "id": "prezzemolo_parsley",
+   "crea": "006840",
+   "bda": "338",
+   "ucd": "herbs-fresh-culinary",
+   "odc_row": "Prezzemolo",
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Prezzemolo",
+   "eufic": [],
+   "kw": [
+    "prezzemol"
+   ],
+   "odc_url": "/erbe/il-prezzemolo/"
+  },
+  {
+   "id": "rosmarino_rosemary",
+   "crea": "006850",
+   "bda": "8013",
+   "ucd": "herbs-fresh-culinary",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "rosmarin"
+   ]
+  },
+  {
+   "id": "salvia_sage",
+   "crea": "006860",
+   "bda": "8015",
+   "ucd": "herbs-fresh-culinary",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "salvia"
+   ],
+   "odc_url": "/erbe/coltiva-la-salvia/"
+  },
+  {
+   "id": "origano_oregano",
+   "crea": null,
+   "bda": "8011",
+   "ucd": "herbs-fresh-culinary",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "origan"
+   ]
+  },
+  {
+   "id": "timo_thyme",
+   "crea": null,
+   "bda": "8017",
+   "ucd": "herbs-fresh-culinary",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "timo"
+   ]
+  },
+  {
+   "id": "menta_mint",
+   "crea": "006810",
+   "bda": "8008",
+   "ucd": "herbs-fresh-culinary",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "menta"
+   ]
+  },
+  {
+   "id": "fungo_porcino_porcini_mushroom",
+   "crea": "006030",
+   "bda": "328",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "boletus mushroom"
+   ],
+   "kw": [
+    "porcin"
+   ],
+   "mypt_url": "/alimentazione/funghi-porcini.html"
+  },
+  {
+   "id": "fungo_champignon_button_mushroom",
+   "crea": "006000",
+   "bda": "329",
+   "ucd": "mushroom",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "mushroom",
+    "portobello mushroom"
+   ],
+   "kw": [
+    "champignon",
+    "prataiol"
+   ],
+   "mypt_url": "/alimentazione/funghi-champignon.html"
+  },
+  {
+   "id": "fungo_pleurotus_oyster_mushroom",
+   "crea": "006010",
+   "bda": null,
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "oyster mushroom"
+   ],
+   "kw": [
+    "pleurot"
+   ]
+  },
+  {
+   "id": "mais_corn",
+   "crea": null,
+   "crea_q": null,
+   "crea_note": "CREA ha solo 'Mais, dolce, in scatola, sgocciolato' (000070), non usato: prodotto salato e trattato; nutrizione da BDA-IEO 50086 'MAIS DOLCE, crudo'",
+   "bda": "50086",
+   "bda_q": "exact",
+   "ucd": "corn-sweet",
+   "odc_row": "Mais",
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Mais dolce",
+   "eufic": [
+    "sweet corn"
+   ],
+   "kw": [
+    "mais"
+   ]
+  },
+  {
+   "id": "farro_emmer",
+   "crea": "000020",
+   "bda": "8603",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "farro"
+   ],
+   "eppo": "TRZDI",
+   "draft_id": "farro_spelt",
+   "override": {
+    "names": {
+     "it": "Farro",
+     "en": "Emmer wheat (farro)"
+    },
+    "scientific_name": "Triticum dicoccum",
+    "reason": "Scelta 2026-11-04: farro medio (T. dicoccum), il più comune in Italia e corrispondente a CREA 000020 'Farro perlato'. La bozza indicava 'Triticum dicoccum / spelta' e nome EN 'Spelt' (= T. spelta, specie diversa)."
+   }
+  },
+  {
+   "id": "orzo_barley",
+   "crea": "000090",
+   "bda": "4",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "orzo"
+   ],
+   "mypt_url": "/Tv/Ricette/Ingredienti/orzo_perlato.html"
+  },
+  {
+   "id": "grano_duro_durum_wheat",
+   "crea": "000030",
+   "bda": "1",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "grano"
+   ],
+   "odc_url": "/ortaggi/grano/"
+  },
+  {
+   "id": "riso_rice",
+   "crea": "000100",
+   "bda": "5",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "riso"
+   ]
+  },
+  {
+   "id": "avena_oat",
+   "crea": "003030",
+   "crea_q": "approx",
+   "crea_note": "CREA ha 'Fiocchi d'avena', non la granella",
+   "bda": "600009",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "avena"
+   ]
+  },
+  {
+   "id": "grano_saraceno_buckwheat",
+   "crea": "000050",
+   "bda": "8604",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "saracen"
+   ],
+   "mypt_url": "/nutrizione/grano-saraceno.html"
+  },
+  {
+   "id": "cavolo_rosso_red_cabbage",
+   "new": true,
+   "it": "Cavolo rosso",
+   "en": "Red cabbage",
+   "cat": "verdura",
+   "sci": "Brassica oleracea var. capitata f. rubra",
+   "part": "foglia",
+   "crea": "005190",
+   "bda": "317",
+   "ucd": "cabbage",
+   "ucd_q": "approx",
+   "odc_row": null,
+   "wwf": "Cavolo Rosso",
+   "gp": null,
+   "altro": "Cavoli",
+   "bs": "Cavolo rosso",
+   "eufic": [
+    "red cabbage",
+    "red cabbage (stored)"
+   ],
+   "kw": [
+    "cavolo-rosso",
+    "cavolo rosso"
+   ]
+  },
+  {
+   "id": "sedano_rapa_celeriac",
+   "new": true,
+   "it": "Sedano rapa",
+   "en": "Celeriac",
+   "cat": "verdura",
+   "sci": "Apium graveolens var. rapaceum",
+   "part": "radice",
+   "crea": "005690",
+   "bda": "344",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Sedano rapa",
+   "eufic": [
+    "celeriac",
+    "celeriac (stored)"
+   ],
+   "kw": [
+    "sedano-rapa",
+    "sedano rapa"
+   ],
+   "mypt_url": "/Tv/Ricette/Ingredienti/sedano_rapa.html"
+  },
+  {
+   "id": "indivia_belga_belgian_endive",
+   "new": true,
+   "it": "Indivia belga",
+   "en": "Belgian endive",
+   "cat": "verdura",
+   "sci": "Cichorium intybus var. foliosum",
+   "part": "foglia",
+   "crea": "005250",
+   "bda": "321",
+   "ucd": "belgian-endive-witloof-chicory",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "chicory"
+   ],
+   "kw": [
+    "insalata-belga",
+    "indivia belga",
+    "witloof"
+   ],
+   "mypt_url": "/Tv/Ricette/Ingredienti/insalata_belga.html"
+  },
+  {
+   "id": "scarola_escarole",
+   "new": true,
+   "it": "Scarola",
+   "en": "Escarole",
+   "cat": "verdura",
+   "sci": "Cichorium endivia var. latifolium",
+   "part": "foglia",
+   "crea": "005465",
+   "bda": "100181",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Indivia",
+   "eufic": [
+    "endive"
+   ],
+   "kw": [
+    "scarola"
+   ]
+  },
+  {
+   "id": "indivia_riccia_curly_endive",
+   "new": true,
+   "it": "Indivia riccia",
+   "en": "Curly endive",
+   "cat": "verdura",
+   "sci": "Cichorium endivia var. crispum",
+   "part": "foglia",
+   "crea": "005400",
+   "bda": "330",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Indivia",
+   "eufic": [
+    "curly endive",
+    "frisee lettuce"
+   ],
+   "kw": [
+    "indivia"
+   ]
+  },
+  {
+   "id": "nespola_loquat",
+   "new": true,
+   "it": "Nespola",
+   "en": "Loquat",
+   "cat": "frutta",
+   "sci": "Eriobotrya japonica",
+   "part": "frutto",
+   "crea": "007250",
+   "bda": "423",
+   "ucd": "loquat",
+   "odc_row": null,
+   "wwf": "Nespole",
+   "gp": "Nespola",
+   "altro": "Nespola",
+   "bs": null,
+   "eufic": [
+    "loquat"
+   ],
+   "kw": [
+    "nespol"
+   ],
+   "odc_url": "/frutti/nespolo-giapponese/"
+  },
+  {
+   "id": "pompelmo_grapefruit",
+   "new": true,
+   "it": "Pompelmo",
+   "en": "Grapefruit",
+   "cat": "frutta",
+   "sci": "Citrus × paradisi",
+   "part": "frutto",
+   "crea": "008070",
+   "bda": "426",
+   "ucd": "grapefruit",
+   "odc_row": null,
+   "wwf": "Pompelmo",
+   "gp": "Pompelmo",
+   "altro": "Pompelmo",
+   "bs": null,
+   "eufic": [
+    "grapefruit"
+   ],
+   "kw": [
+    "pompelm"
+   ],
+   "eppo": "CIDPA"
+  },
+  {
+   "id": "mela_cotogna_quince",
+   "new": true,
+   "it": "Mela cotogna",
+   "en": "Quince",
+   "cat": "frutta",
+   "sci": "Cydonia oblonga",
+   "part": "frutto",
+   "crea": "007220",
+   "bda": "420",
+   "ucd": "quince",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Mele cotogne",
+   "eufic": [
+    "quince",
+    "quince (stored)"
+   ],
+   "kw": [
+    "cotogn"
+   ],
+   "mypt_url": "/Tv/Ricette/Ingredienti/mele_cotogne.html"
+  },
+  {
+   "id": "ribes_redcurrant",
+   "new": true,
+   "it": "Ribes rosso",
+   "en": "Redcurrant",
+   "cat": "frutta",
+   "sci": "Ribes rubrum",
+   "part": "frutto",
+   "crea": "007770",
+   "bda": "500023",
+   "ucd": "bushberry",
+   "ucd_q": "approx",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Ribes",
+   "eufic": [
+    "redcurrant"
+   ],
+   "kw": [
+    "ribes"
+   ],
+   "odc_url": "/frutti/ribes-rosso/"
+  },
+  {
+   "id": "pesca_noce_nectarine",
+   "new": true,
+   "it": "Pesca noce",
+   "en": "Nectarine",
+   "cat": "frutta",
+   "sci": "Prunus persica var. nucipersica",
+   "part": "frutto",
+   "crea": "007330",
+   "bda": null,
+   "ucd": "peach",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Pesca noce",
+   "eufic": [
+    "nectarine"
+   ],
+   "kw": [
+    "nettarin",
+    "pesche noci",
+    "pesca noce"
+   ]
+  },
+  {
+   "id": "fico_d_india_prickly_pear",
+   "new": true,
+   "it": "Fico d'India",
+   "en": "Prickly pear",
+   "cat": "frutta",
+   "sci": "Opuntia ficus-indica",
+   "part": "frutto",
+   "crea": "007080",
+   "bda": "410",
+   "ucd": "cactus-prickly-pear",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "prickly pear"
+   ],
+   "kw": [
+    "fico-d-india",
+    "fichi d'india",
+    "fichi-d-india",
+    "fico d'india"
+   ],
+   "odc_url": "/frutti/fico-india/",
+   "mypt_url": "/alimentazione/conosci-le-proprieta-del-fico-d-india.html"
+  },
+  {
+   "id": "litchi_lychee",
+   "new": true,
+   "it": "Litchi",
+   "en": "Lychee",
+   "cat": "frutta",
+   "sci": "Litchi chinensis",
+   "part": "frutto",
+   "crea": "007580",
+   "bda": "8640",
+   "ucd": "lychee",
+   "odc_row": null,
+   "wwf": "Litchi",
+   "gp": null,
+   "altro": "Litchi",
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "litchi"
+   ]
+  },
+  {
+   "id": "lime_lime",
+   "new": true,
+   "it": "Lime",
+   "en": "Lime",
+   "cat": "frutta",
+   "sci": "Citrus × aurantiifolia",
+   "part": "frutto",
+   "crea": null,
+   "bda": "100182",
+   "ucd": "lime",
+   "odc_row": null,
+   "wwf": "Lime",
+   "gp": null,
+   "altro": "Lime",
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "lime"
+   ]
+  },
+  {
+   "id": "ananas_pineapple",
+   "new": true,
+   "it": "Ananas",
+   "en": "Pineapple",
+   "cat": "frutta",
+   "sci": "Ananas comosus",
+   "part": "frutto",
+   "crea": "007460",
+   "bda": "403",
+   "ucd": "pineapple",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": "Ananas",
+   "bs": null,
+   "eufic": [
+    "pineapple"
+   ],
+   "kw": [
+    "ananas"
+   ]
+  },
+  {
+   "id": "papaya_papaya",
+   "new": true,
+   "it": "Papaya",
+   "en": "Papaya",
+   "cat": "frutta",
+   "sci": "Carica papaya",
+   "part": "frutto",
+   "crea": "007600",
+   "bda": "805874",
+   "ucd": "papaya",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": "Papaya",
+   "bs": null,
+   "eufic": [
+    "papaya"
+   ],
+   "kw": [
+    "papaya",
+    "papaia"
+   ]
+  },
+  {
+   "id": "maracuja_passion_fruit",
+   "new": true,
+   "it": "Maracuja (frutto della passione)",
+   "en": "Passion fruit",
+   "cat": "frutta",
+   "sci": "Passiflora edulis",
+   "part": "frutto",
+   "crea": "007610",
+   "bda": "8649",
+   "ucd": "passion-fruit",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": "Passion fruit",
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "maracuja",
+    "passion",
+    "passiflora"
+   ],
+   "mypt_url": "/nutrizione/maracuja.html"
+  },
+  {
+   "id": "fungo_ovolo_caesars_mushroom",
+   "new": true,
+   "it": "Ovolo buono",
+   "en": "Caesar's mushroom",
+   "cat": "funghi",
+   "sci": "Amanita caesarea",
+   "part": "fungo_carpoforo",
+   "crea": "006020",
+   "bda": "327",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "emperor mushroom"
+   ],
+   "kw": [
+    "ovol"
+   ]
+  },
+  {
+   "id": "tartufo_nero_black_truffle",
+   "new": true,
+   "it": "Tartufo nero",
+   "en": "Black truffle",
+   "cat": "funghi",
+   "sci": "Tuber melanosporum",
+   "part": "fungo_carpoforo",
+   "crea": "006200",
+   "bda": "346",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "truffle (black)"
+   ],
+   "kw": [
+    "tartuf"
+   ]
+  },
+  {
+   "id": "tartufo_bianco_white_truffle",
+   "new": true,
+   "it": "Tartufo bianco",
+   "en": "White truffle",
+   "cat": "funghi",
+   "sci": "Tuber magnatum",
+   "part": "fungo_carpoforo",
+   "crea": null,
+   "bda": null,
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "truffle (white)"
+   ],
+   "kw": [
+    "tartuf"
+   ],
+   "eppo": "TUERMA",
+   "exception": "aggiunto in deroga alla regola di ammissione su decisione dell'utente (2026-11-05): nessuna scheda CREA/BDA"
+  },
+  {
+   "id": "cipollotto_spring_onion",
+   "new": true,
+   "it": "Cipollotto",
+   "en": "Spring onion",
+   "cat": "verdura",
+   "sci": "Allium cepa",
+   "part": "bulbo",
+   "crea": "005310",
+   "bda": "323",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Cipollotto",
+   "eufic": [
+    "spring onion",
+    "scallion"
+   ],
+   "kw": [
+    "cipollott"
+   ],
+   "crea_q": "approx",
+   "bda_q": "approx",
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "agretti_saltwort",
+   "new": true,
+   "it": "Agretti (barba di frate)",
+   "en": "Saltwort (agretti)",
+   "cat": "verdura",
+   "sci": "Salsola soda",
+   "part": "foglia",
+   "crea": "005010",
+   "bda": "302",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "agrett"
+   ],
+   "odc_url": "/ortaggi/agretti/",
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "amarena_sour_cherry",
+   "new": true,
+   "it": "Amarena",
+   "en": "Sour cherry",
+   "cat": "frutta",
+   "sci": "Prunus cerasus",
+   "part": "frutto",
+   "crea": "007700",
+   "bda": "402",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "amaren",
+    "viscio"
+   ],
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "noce_walnut",
+   "new": true,
+   "it": "Noce",
+   "en": "Walnut",
+   "cat": "frutta",
+   "sci": "Juglans regia",
+   "part": "seme",
+   "crea": "008560",
+   "bda": "509",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Noce",
+   "eufic": [],
+   "kw": [
+    "noci ",
+    "noce "
+   ],
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "nocciola_hazelnut",
+   "new": true,
+   "it": "Nocciola",
+   "en": "Hazelnut",
+   "cat": "frutta",
+   "sci": "Corylus avellana",
+   "part": "seme",
+   "crea": "008550",
+   "bda": "511",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "noccio"
+   ],
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "mandorla_almond",
+   "new": true,
+   "it": "Mandorla",
+   "en": "Almond",
+   "cat": "frutta",
+   "sci": "Prunus dulcis",
+   "part": "seme",
+   "crea": "008540",
+   "bda": "508",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "mandorl"
+   ],
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "pistacchio_pistachio",
+   "new": true,
+   "it": "Pistacchio",
+   "en": "Pistachio",
+   "cat": "frutta",
+   "sci": "Pistacia vera",
+   "part": "seme",
+   "crea": "008600",
+   "bda": "700606",
+   "ucd": "pistachio",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "pistacch"
+   ],
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "erba_cipollina_chives",
+   "new": true,
+   "it": "Erba cipollina",
+   "en": "Chives",
+   "cat": "erbe_spezie",
+   "sci": "Allium schoenoprasum",
+   "part": "foglia",
+   "crea": null,
+   "bda": "8006",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Erba cipollina",
+   "eufic": [],
+   "kw": [
+    "erba cipollina"
+   ],
+   "odc_url": "/erbe/erba-cipollina/",
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "crescione_watercress",
+   "new": true,
+   "it": "Crescione",
+   "en": "Watercress",
+   "cat": "verdura",
+   "sci": "Nasturtium officinale",
+   "part": "foglia",
+   "crea": null,
+   "bda": "400093",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "watercress",
+    "cress"
+   ],
+   "kw": [
+    "crescion"
+   ],
+   "odc_url": "/erbe/crescione/",
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "ribes_nero_blackcurrant",
+   "new": true,
+   "it": "Ribes nero",
+   "en": "Blackcurrant",
+   "cat": "frutta",
+   "sci": "Ribes nigrum",
+   "part": "frutto",
+   "crea": "007770",
+   "bda": "500025",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Ribes nero",
+   "eufic": [
+    "blackcurrant"
+   ],
+   "kw": [
+    "ribes nero"
+   ],
+   "crea_q": "approx",
+   "odc_url": "/frutti/ribes-nero/",
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "uva_spina_gooseberry",
+   "new": true,
+   "it": "Uva spina",
+   "en": "Gooseberry",
+   "cat": "frutta",
+   "sci": "Ribes uva-crispa",
+   "part": "frutto",
+   "crea": null,
+   "bda": null,
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Uva spina",
+   "eufic": [
+    "gooseberry"
+   ],
+   "kw": [
+    "uva spina"
+   ],
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "mirtillo_rosso_lingonberry",
+   "new": true,
+   "it": "Mirtillo rosso",
+   "en": "Lingonberry",
+   "cat": "frutta",
+   "sci": "Vaccinium vitis-idaea",
+   "part": "frutto",
+   "crea": null,
+   "bda": null,
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Mirtillo rosso",
+   "eufic": [
+    "lingonberry"
+   ],
+   "kw": [
+    "mirtillo rosso"
+   ],
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "sambuco_elderberry",
+   "new": true,
+   "it": "Sambuco (bacche)",
+   "en": "Elderberry",
+   "cat": "frutta",
+   "sci": "Sambucus nigra",
+   "part": "frutto",
+   "crea": null,
+   "bda": null,
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Sambuco",
+   "eufic": [
+    "elderberry"
+   ],
+   "kw": [
+    "sambuc"
+   ],
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "gelso_mulberry",
+   "new": true,
+   "it": "Gelso (mora di gelso)",
+   "en": "Mulberry",
+   "cat": "frutta",
+   "sci": "Morus nigra",
+   "part": "frutto",
+   "crea": null,
+   "bda": "100183",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "mulberry",
+    "white mulberry"
+   ],
+   "kw": [
+    "gelso",
+    "gelsi"
+   ],
+   "odc_url": "/frutti/gelso/",
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "rabarbaro_rhubarb",
+   "new": true,
+   "it": "Rabarbaro",
+   "en": "Rhubarb",
+   "cat": "verdura",
+   "sci": "Rheum rhabarbarum",
+   "part": "fusto_costa",
+   "crea": null,
+   "bda": null,
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Rabarbaro",
+   "eufic": [
+    "rhubarb"
+   ],
+   "kw": [
+    "rabarbar"
+   ],
+   "odc_url": "/ortaggi/rabarbaro/",
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "rafano_horseradish",
+   "new": true,
+   "it": "Rafano (cren)",
+   "en": "Horseradish",
+   "cat": "verdura",
+   "sci": "Armoracia rusticana",
+   "part": "radice",
+   "crea": null,
+   "bda": null,
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Rafano",
+   "eufic": [
+    "horseradish"
+   ],
+   "kw": [
+    "rafano",
+    "cren"
+   ],
+   "odc_url": "/ortaggi/rafano-cren/",
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "scorzonera_black_salsify",
+   "new": true,
+   "it": "Scorzonera",
+   "en": "Black salsify",
+   "cat": "verdura",
+   "sci": "Scorzonera hispanica",
+   "part": "radice",
+   "crea": null,
+   "bda": "500013",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Scorzonera",
+   "eufic": [
+    "salsify",
+    "salsify (stored)"
+   ],
+   "kw": [
+    "scorzon"
+   ],
+   "odc_url": "/ortaggi/scorzonera-scorzobianca/",
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "cavolo_cinese_chinese_cabbage",
+   "new": true,
+   "it": "Cavolo cinese (pak choi)",
+   "en": "Chinese cabbage",
+   "cat": "verdura",
+   "sci": "Brassica rapa subsp. pekinensis",
+   "part": "foglia",
+   "crea": null,
+   "bda": null,
+   "ucd": "napa-cabbage",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Cavolo cinese",
+   "eufic": [
+    "chinese cabbage",
+    "chinese cabbage (stored)",
+    "pak choi"
+   ],
+   "kw": [
+    "cavolo cinese",
+    "pak choi"
+   ],
+   "odc_url": "/ortaggi/pak-choi/",
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "patata_dolce_sweet_potato",
+   "new": true,
+   "it": "Patata dolce (batata)",
+   "en": "Sweet potato",
+   "cat": "verdura",
+   "sci": "Ipomoea batatas",
+   "part": "tubero",
+   "crea": null,
+   "bda": "50399",
+   "ucd": "sweet-potato",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Patata dolce",
+   "eufic": [
+    "sweet potato",
+    "sweet potato (stored)"
+   ],
+   "kw": [
+    "batat",
+    "patata dolce",
+    "patate americane"
+   ],
+   "odc_url": "/ortaggi/batata/",
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "navone_swede",
+   "new": true,
+   "it": "Navone (rutabaga)",
+   "en": "Swede",
+   "cat": "verdura",
+   "sci": "Brassica napus subsp. rapifera",
+   "part": "radice",
+   "crea": null,
+   "bda": null,
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "rutabaga",
+    "rutabaga (stored)",
+    "swede",
+    "swede (stored)"
+   ],
+   "kw": [
+    "navon",
+    "rutabag"
+   ],
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "daikon_daikon",
+   "new": true,
+   "it": "Daikon",
+   "en": "Daikon",
+   "cat": "verdura",
+   "sci": "Raphanus sativus var. longipinnatus",
+   "part": "radice",
+   "crea": null,
+   "bda": "8032",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "white radish"
+   ],
+   "kw": [
+    "daikon"
+   ],
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "taccola_snow_pea",
+   "new": true,
+   "it": "Taccola (pisello mangiatutto)",
+   "en": "Snow pea",
+   "cat": "verdura",
+   "sci": "Pisum sativum var. saccharatum",
+   "part": "frutto",
+   "crea": null,
+   "bda": null,
+   "ucd": "peas-snow-and-snap-pod",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Taccola",
+   "eufic": [
+    "snow pea",
+    "snap pea",
+    "mangetout"
+   ],
+   "kw": [
+    "taccol",
+    "mangiatutto"
+   ],
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "broccolo_romanesco_romanesco",
+   "new": true,
+   "it": "Broccolo romanesco",
+   "en": "Romanesco",
+   "cat": "verdura",
+   "sci": "Brassica oleracea var. botrytis",
+   "part": "infiorescenza_bocciolo",
+   "crea": null,
+   "bda": null,
+   "ucd": null,
+   "odc_row": null,
+   "wwf": "Broccolo Romanesco",
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "romanesco"
+   ],
+   "kw": [
+    "romanesc"
+   ],
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "puntarelle_puntarelle",
+   "new": true,
+   "it": "Puntarelle",
+   "en": "Puntarelle",
+   "cat": "verdura",
+   "sci": "Cichorium intybus",
+   "part": "fusto_costa",
+   "crea": null,
+   "bda": "100171",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "catalogna/puntarelle"
+   ],
+   "kw": [
+    "puntarell"
+   ],
+   "bda_q": "approx",
+   "odc_url": "/ortaggi/puntarelle/",
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "asparago_selvatico_wild_asparagus",
+   "new": true,
+   "it": "Asparago selvatico",
+   "en": "Wild asparagus",
+   "cat": "verdura",
+   "sci": "Asparagus acutifolius",
+   "part": "fusto_costa",
+   "crea": "005030",
+   "bda": "303",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "asparago selvatico",
+    "asparagi selvatici"
+   ],
+   "odc_url": "/erbe/asparago-selvatico/",
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "salicornia_samphire",
+   "new": true,
+   "it": "Salicornia",
+   "en": "Samphire",
+   "cat": "verdura",
+   "sci": "Salicornia europaea",
+   "part": "fusto_costa",
+   "crea": null,
+   "bda": null,
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "samphire"
+   ],
+   "kw": [
+    "salicorn"
+   ],
+   "odc_url": "/erbe/salicornia/",
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "gombo_okra",
+   "new": true,
+   "it": "Gombo (okra)",
+   "en": "Okra",
+   "cat": "verdura",
+   "sci": "Abelmoschus esculentus",
+   "part": "frutto",
+   "crea": null,
+   "bda": null,
+   "ucd": "okra",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "okra"
+   ],
+   "kw": [
+    "okra",
+    "gombo"
+   ],
+   "odc_url": "/ortaggi/okra-gombo/",
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "zucchina_spinosa_chayote",
+   "new": true,
+   "it": "Zucchina spinosa (chayote)",
+   "en": "Chayote",
+   "cat": "verdura",
+   "sci": "Sechium edule",
+   "part": "frutto",
+   "crea": null,
+   "bda": null,
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "chayote"
+   ],
+   "kw": [
+    "chayote",
+    "zucchina spinosa"
+   ],
+   "odc_url": "/ortaggi/chayote/",
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "alchechengi_cape_gooseberry",
+   "new": true,
+   "it": "Alchechengi",
+   "en": "Cape gooseberry",
+   "cat": "frutta",
+   "sci": "Physalis peruviana",
+   "part": "frutto",
+   "crea": null,
+   "bda": null,
+   "ucd": null,
+   "odc_row": null,
+   "wwf": "Alchechengi",
+   "gp": null,
+   "altro": "Alchechengi",
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "alchechengi",
+    "physalis"
+   ],
+   "odc_url": "/ortaggi/alchechengi-frutta/",
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "cocco_coconut",
+   "new": true,
+   "it": "Cocco",
+   "en": "Coconut",
+   "cat": "frutta",
+   "sci": "Cocos nucifera",
+   "part": "seme",
+   "crea": "007520",
+   "bda": "524",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": "Cocco",
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "cocco"
+   ],
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "carruba_carob",
+   "new": true,
+   "it": "Carruba",
+   "en": "Carob",
+   "cat": "frutta",
+   "sci": "Ceratonia siliqua",
+   "part": "frutto",
+   "crea": "008510",
+   "bda": "8801",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "carob"
+   ],
+   "kw": [
+    "carrub"
+   ],
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "giuggiola_jujube",
+   "new": true,
+   "it": "Giuggiola",
+   "en": "Jujube",
+   "cat": "frutta",
+   "sci": "Ziziphus jujuba",
+   "part": "frutto",
+   "crea": null,
+   "bda": null,
+   "ucd": "jujube",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "jujube"
+   ],
+   "kw": [
+    "giuggiol"
+   ],
+   "odc_url": "/frutti/giuggiolo/",
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "nespola_comune_medlar",
+   "new": true,
+   "it": "Nespola comune",
+   "en": "Medlar",
+   "cat": "frutta",
+   "sci": "Mespilus germanica",
+   "part": "frutto",
+   "crea": null,
+   "bda": null,
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "medlar"
+   ],
+   "kw": [
+    "nespolo comune"
+   ],
+   "odc_url": "/frutti/nespolo-comune/",
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "mirabella_mirabelle_plum",
+   "new": true,
+   "it": "Mirabella",
+   "en": "Mirabelle plum",
+   "cat": "frutta",
+   "sci": "Prunus domestica subsp. syriaca",
+   "part": "frutto",
+   "crea": null,
+   "bda": null,
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": "Mirabella",
+   "eufic": [
+    "mirabelle plum"
+   ],
+   "kw": [
+    "mirabell"
+   ],
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "finferlo_chanterelle",
+   "new": true,
+   "it": "Finferlo (gallinaccio)",
+   "en": "Chanterelle",
+   "cat": "funghi",
+   "sci": "Cantharellus cibarius",
+   "part": "fungo_carpoforo",
+   "crea": null,
+   "bda": "603554",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "chanterelle mushroom"
+   ],
+   "kw": [
+    "finferl",
+    "gallinacc"
+   ],
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "spugnola_morel",
+   "new": true,
+   "it": "Spugnola",
+   "en": "Morel",
+   "cat": "funghi",
+   "sci": "Morchella esculenta",
+   "part": "fungo_carpoforo",
+   "crea": null,
+   "bda": "603553",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "morel"
+   ],
+   "kw": [
+    "spugnol"
+   ],
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "shiitake_shiitake",
+   "new": true,
+   "it": "Shiitake",
+   "en": "Shiitake",
+   "cat": "funghi",
+   "sci": "Lentinula edodes",
+   "part": "fungo_carpoforo",
+   "crea": null,
+   "bda": null,
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "shiitake mushroom"
+   ],
+   "kw": [
+    "shiitake"
+   ],
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "cardoncello_king_oyster_mushroom",
+   "new": true,
+   "it": "Cardoncello",
+   "en": "King oyster mushroom",
+   "cat": "funghi",
+   "sci": "Pleurotus eryngii",
+   "part": "fungo_carpoforo",
+   "crea": null,
+   "bda": null,
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "cardoncell"
+   ],
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "lampascioni_tassel_hyacinth",
+   "new": true,
+   "it": "Lampascioni",
+   "en": "Tassel hyacinth bulbs",
+   "cat": "verdura",
+   "sci": "Leopoldia comosa",
+   "part": "bulbo",
+   "crea": null,
+   "bda": null,
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "lampascion"
+   ],
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "cicerchia_grass_pea",
+   "new": true,
+   "it": "Cicerchia",
+   "en": "Grass pea",
+   "cat": "verdura",
+   "sci": "Lathyrus sativus",
+   "part": "seme",
+   "crea": null,
+   "bda": null,
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "cicerch"
+   ],
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "cedro_citron",
+   "new": true,
+   "it": "Cedro",
+   "en": "Citron",
+   "cat": "frutta",
+   "sci": "Citrus medica",
+   "part": "frutto",
+   "crea": null,
+   "bda": null,
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "cedro"
+   ],
+   "odc_url": "/frutti/cedro/",
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "chinotto_chinotto",
+   "new": true,
+   "it": "Chinotto",
+   "en": "Chinotto",
+   "cat": "frutta",
+   "sci": "Citrus myrtifolia",
+   "part": "frutto",
+   "crea": null,
+   "bda": null,
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "chinott"
+   ],
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "oliva_olive",
+   "new": true,
+   "it": "Oliva",
+   "en": "Olive",
+   "cat": "frutta",
+   "sci": "Olea europaea",
+   "part": "frutto",
+   "crea": "008820",
+   "bda": "592",
+   "ucd": "olive",
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [
+    "olive"
+   ],
+   "kw": [
+    "olive da tavola",
+    "oliv"
+   ],
+   "crea_q": "approx",
+   "bda_q": "approx",
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  },
+  {
+   "id": "zafferano_saffron",
+   "new": true,
+   "it": "Zafferano",
+   "en": "Saffron",
+   "cat": "erbe_spezie",
+   "sci": "Crocus sativus",
+   "part": "fiore",
+   "crea": null,
+   "bda": "8019",
+   "ucd": null,
+   "odc_row": null,
+   "wwf": null,
+   "gp": null,
+   "altro": null,
+   "bs": null,
+   "eufic": [],
+   "kw": [
+    "zafferan"
+   ],
+   "odc_url": "/erbe/zafferano/",
+   "added": "2026-11-05: incluso su decisione dell'utente dalla revisione degli esclusi (data/excluded_candidates_report.md), anche con campi incompleti"
+  }
+ ],
+ "excluded_candidates": [
+  {
+   "it": "Alchechengi",
+   "sources": [
+    "WWF",
+    "Altroconsumo"
+   ],
+   "reason": "nessuna scheda di composizione in CREA né BDA-IEO"
+  },
+  {
+   "it": "Broccolo romanesco",
+   "sources": [
+    "WWF",
+    "EUFIC (romanesco, senza dati Italia)"
+   ],
+   "reason": "nessuna voce CREA/BDA specifica"
+  },
+  {
+   "it": "Cocco",
+   "sources": [
+    "Altroconsumo"
+   ],
+   "reason": "una sola fonte stagionale"
+  },
+  {
+   "it": "Rabarbaro",
+   "sources": [
+    "BioSuisse",
+    "EUFIC",
+    "ODC (pagina web)"
+   ],
+   "reason": "nessuna scheda di composizione in CREA né BDA-IEO"
+  },
+  {
+   "it": "Pak choi / Cavolo cinese",
+   "sources": [
+    "BioSuisse",
+    "EUFIC",
+    "UC Davis"
+   ],
+   "reason": "nessuna scheda di composizione in CREA né BDA-IEO"
+  },
+  {
+   "it": "Patata dolce",
+   "sources": [
+    "BioSuisse",
+    "EUFIC",
+    "UC Davis"
+   ],
+   "reason": "nessuna scheda di composizione in CREA né BDA-IEO"
+  },
+  {
+   "it": "Puntarelle / Catalogna",
+   "sources": [
+    "EUFIC",
+    "ODC (pagina web)"
+   ],
+   "reason": "nessuna voce CREA/BDA specifica (solo 'cicoria di campo')"
+  },
+  {
+   "it": "Finferli (gallinacci)",
+   "sources": [
+    "EUFIC",
+    "BDA-IEO"
+   ],
+   "reason": "una sola fonte stagionale/conservazione"
+  },
+  {
+   "it": "Olive",
+   "sources": [
+    "EUFIC",
+    "UC Davis",
+    "CREA"
+   ],
+   "reason": "non si consumano fresche (solo trasformate)"
+  },
+  {
+   "it": "Sambuco, uva spina, ribes nero, mirtillo rosso",
+   "sources": [
+    "BioSuisse",
+    "EUFIC"
+   ],
+   "reason": "nessuna scheda di composizione CREA; calendario solo svizzero/europeo"
+  }
+ ],
+ "_doc_excluded": "Revisione sistematica dei candidati esclusi: config/excluded_candidates_review.json e data/excluded_candidates_report.md (make_excluded_report.py)."
+}

@@ -1,0 +1,673 @@
+{
+  "_meta": {
+    "description": "Mappa delle icone dell'app, modificabile con l'Admin Studio (scheda Icone). icon = svg:<cartella>/<nome> (app/assets/icons) oppure material:<nome> (Material Symbols Rounded). target database = scritta anche nel database da build_app_support_metadata.py.",
+    "updated": "2026-11-12"
+  },
+  "icon_slots": [
+    {
+      "slot": "seasonality.state.primizie",
+      "group": "Stati stagionali (indicatore a 3 punti e calendario)",
+      "description": "Stato \"Primizia\"",
+      "icon": "svg:season/primizie",
+      "target": "database"
+    },
+    {
+      "slot": "seasonality.state.in_season",
+      "group": "Stati stagionali (indicatore a 3 punti e calendario)",
+      "description": "Stato \"Di Stagione\"",
+      "icon": "svg:season/in_season",
+      "target": "database"
+    },
+    {
+      "slot": "seasonality.state.peak_season",
+      "group": "Stati stagionali (indicatore a 3 punti e calendario)",
+      "description": "Stato \"Piena Stagione\"",
+      "icon": "svg:season/peak_season",
+      "target": "database"
+    },
+    {
+      "slot": "seasonality.state.end_of_season",
+      "group": "Stati stagionali (indicatore a 3 punti e calendario)",
+      "description": "Stato \"Fine Stagione\"",
+      "icon": "svg:season/end_of_season",
+      "target": "database"
+    },
+    {
+      "slot": "seasonality.state.out_of_season",
+      "group": "Stati stagionali (indicatore a 3 punti e calendario)",
+      "description": "Stato \"Fuori Stagione\"",
+      "icon": "material:remove",
+      "target": "database"
+    },
+    {
+      "slot": "seasonality.state.not_applicable",
+      "group": "Stati stagionali (indicatore a 3 punti e calendario)",
+      "description": "Stato \"Non Coltivato nella Zona\"",
+      "icon": "material:public",
+      "target": "database"
+    },
+    {
+      "slot": "category.verdura",
+      "group": "Categorie (filtri)",
+      "description": "Categoria \"Verdura\"",
+      "icon": "material:grass",
+      "target": "database"
+    },
+    {
+      "slot": "category.frutta",
+      "group": "Categorie (filtri)",
+      "description": "Categoria \"Frutta\"",
+      "icon": "svg:season/apple",
+      "target": "database"
+    },
+    {
+      "slot": "category.erbe_spezie",
+      "group": "Categorie (filtri)",
+      "description": "Categoria \"Erbe e Spezie\"",
+      "icon": "material:local_florist",
+      "target": "database"
+    },
+    {
+      "slot": "category.funghi",
+      "group": "Categorie (filtri)",
+      "description": "Categoria \"Funghi\"",
+      "icon": "material:forest",
+      "target": "database"
+    },
+    {
+      "slot": "category.cereali",
+      "group": "Categorie (filtri)",
+      "description": "Categoria \"Cereali\"",
+      "icon": "material:grain",
+      "target": "database"
+    },
+    {
+      "slot": "seasonality.estimates.not_grown",
+      "group": "Stime e dati mancanti",
+      "description": "\"Non Coltivato Qui\"",
+      "icon": "material:public",
+      "target": "database"
+    },
+    {
+      "slot": "seasonality.estimates.unknown",
+      "group": "Stime e dati mancanti",
+      "description": "\"Dato Non Disponibile\"",
+      "icon": "material:question_mark",
+      "target": "database"
+    },
+    {
+      "slot": "zone.mediterranean",
+      "group": "Zone climatiche (mappa e filtri)",
+      "description": "Zona Mediterranea",
+      "icon": "svg:zones/palm_tree",
+      "target": "database"
+    },
+    {
+      "slot": "zone.continental",
+      "group": "Zone climatiche (mappa e filtri)",
+      "description": "Zona Continentale",
+      "icon": "svg:zones/leaf",
+      "target": "database"
+    },
+    {
+      "slot": "zone.atlantic",
+      "group": "Zone climatiche (mappa e filtri)",
+      "description": "Zona Atlantica",
+      "icon": "svg:zones/water_drop",
+      "target": "database"
+    },
+    {
+      "slot": "zone.boreal",
+      "group": "Zone climatiche (mappa e filtri)",
+      "description": "Zona Boreale",
+      "icon": "svg:zones/fir_tree",
+      "target": "database"
+    },
+    {
+      "slot": "zone.mountain",
+      "group": "Zone climatiche (mappa e filtri)",
+      "description": "Zona Alpina / Montana",
+      "icon": "svg:zones/mountain",
+      "target": "database"
+    },
+    {
+      "slot": "zone.pannonian",
+      "group": "Zone climatiche (mappa e filtri)",
+      "description": "Zona Pannonica",
+      "icon": "svg:zones/wheat",
+      "target": "database"
+    },
+    {
+      "slot": "storage.frigorifero",
+      "group": "Conservazione",
+      "description": "Dove conservarlo: frigorifero",
+      "icon": "svg:ui/fridge",
+      "target": "app"
+    },
+    {
+      "slot": "storage.temperatura_ambiente",
+      "group": "Conservazione",
+      "description": "Dove conservarlo: temperatura ambiente",
+      "icon": "svg:ui/room_temp",
+      "target": "app"
+    },
+    {
+      "slot": "storage.dispensa",
+      "group": "Conservazione",
+      "description": "Dove conservarlo: dispensa",
+      "icon": "svg:ui/pantry",
+      "target": "app"
+    },
+    {
+      "slot": "nav.home",
+      "group": "Barra di navigazione",
+      "description": "Scheda Home (non selezionata)",
+      "icon": "material:eco",
+      "target": "app"
+    },
+    {
+      "slot": "nav.shopping",
+      "group": "Barra di navigazione",
+      "description": "Scheda Lista Spesa",
+      "icon": "material:checklist",
+      "target": "app"
+    },
+    {
+      "slot": "nav.settings",
+      "group": "Barra di navigazione",
+      "description": "Scheda Impostazioni",
+      "icon": "material:settings",
+      "target": "app"
+    },
+    {
+      "slot": "storage.freezer",
+      "group": "Conservazione",
+      "description": "Durata in freezer (riquadro \"Quanto Dura in Casa\")",
+      "icon": "svg:ui/chilling",
+      "target": "app"
+    },
+    {
+      "slot": "storage.ripening_type",
+      "group": "Conservazione",
+      "description": "Etichetta Climaterico / Non Climaterico",
+      "icon": "svg:ui/ripening",
+      "target": "app"
+    },
+    {
+      "slot": "storage.ethylene_alert",
+      "group": "Conservazione",
+      "description": "Riquadro \"Da Tenere Separati\" (etilene) in Come Conservarli",
+      "icon": "svg:ui/ethylene",
+      "target": "app"
+    },
+    {
+      "slot": "storage.chilling_injury",
+      "group": "Conservazione",
+      "description": "Avviso danni da freddo (\"Non metterlo in frigo\")",
+      "icon": "svg:ui/chilling",
+      "target": "app"
+    },
+    {
+      "slot": "storage.ideal_temperature",
+      "group": "Conservazione",
+      "description": "Chip della temperatura ideale in frigo",
+      "icon": "material:thermostat",
+      "target": "app"
+    },
+    {
+      "slot": "home.shopping_mode",
+      "group": "Schermata Home",
+      "description": "Pulsante Modalità Spesa (carrello in alto)",
+      "icon": "svg:ui/shopping_mode",
+      "target": "app"
+    },
+    {
+      "slot": "home.advanced_filters",
+      "group": "Schermata Home",
+      "description": "Pulsante Filtri Avanzati",
+      "icon": "material:tune",
+      "target": "app"
+    },
+    {
+      "slot": "home.search",
+      "group": "Schermata Home",
+      "description": "Pulsante e barra di ricerca",
+      "icon": "material:search",
+      "target": "app"
+    },
+    {
+      "slot": "home.no_results",
+      "group": "Schermata Home",
+      "description": "Messaggio \"Nessun Prodotto Trovato\"",
+      "icon": "material:search_off",
+      "target": "app"
+    },
+    {
+      "slot": "home.hidden_visible",
+      "group": "Schermata Home",
+      "description": "Chip \"Nascosti Visibili\"",
+      "icon": "material:visibility",
+      "target": "app"
+    },
+    {
+      "slot": "home.view.grid",
+      "group": "Schermata Home",
+      "description": "Vista Griglia",
+      "icon": "material:grid_view",
+      "target": "app"
+    },
+    {
+      "slot": "home.view.list",
+      "group": "Schermata Home",
+      "description": "Vista Lista",
+      "icon": "material:view_agenda",
+      "target": "app"
+    },
+    {
+      "slot": "home.view.calendar",
+      "group": "Schermata Home",
+      "description": "Vista Calendario 12 Mesi",
+      "icon": "material:calendar_view_month",
+      "target": "app"
+    },
+    {
+      "slot": "action.shopping_list.add",
+      "group": "Azioni sul prodotto",
+      "description": "Aggiungi alla Lista Spesa (non ancora in lista)",
+      "icon": "material:playlist_add",
+      "target": "app"
+    },
+    {
+      "slot": "action.shopping_list.active",
+      "group": "Azioni sul prodotto",
+      "description": "Già nella Lista Spesa (e filtro Solo Lista Spesa)",
+      "icon": "material:playlist_add_check",
+      "target": "app"
+    },
+    {
+      "slot": "action.favorite.add",
+      "group": "Azioni sul prodotto",
+      "description": "Aggiungi ai Preferiti (non ancora preferito)",
+      "icon": "material:favorite_border",
+      "target": "app"
+    },
+    {
+      "slot": "action.favorite.active",
+      "group": "Azioni sul prodotto",
+      "description": "Preferito (e filtro Solo Preferiti)",
+      "icon": "material:favorite",
+      "target": "app"
+    },
+    {
+      "slot": "action.dislike.add",
+      "group": "Azioni sul prodotto",
+      "description": "Non lo Mangio (non ancora nascosto)",
+      "icon": "material:do_not_disturb_on",
+      "target": "app"
+    },
+    {
+      "slot": "action.dislike.active",
+      "group": "Azioni sul prodotto",
+      "description": "Nascosto (\"Non lo Mangio\" attivo), anche sul badge della card",
+      "icon": "material:do_not_disturb_on",
+      "target": "app"
+    },
+    {
+      "slot": "action.open_detail",
+      "group": "Azioni sul prodotto",
+      "description": "Voce \"Apri la scheda\" nel menu del prodotto",
+      "icon": "material:open_in_full",
+      "target": "app"
+    },
+    {
+      "slot": "filters.dop_only",
+      "group": "Filtri avanzati",
+      "description": "Interruttore Solo Prodotti DOP/IGP",
+      "icon": "svg:ui/dop_igp",
+      "target": "app"
+    },
+    {
+      "slot": "filters.show_hidden",
+      "group": "Filtri avanzati",
+      "description": "Interruttore Mostra i Nascosti",
+      "icon": "material:visibility",
+      "target": "app"
+    },
+    {
+      "slot": "detail.section.calendar",
+      "group": "Scheda prodotto",
+      "description": "Titolo sezione Calendario Stagionale",
+      "icon": "svg:ui/calendar",
+      "target": "app"
+    },
+    {
+      "slot": "detail.section.varieties",
+      "group": "Scheda prodotto",
+      "description": "Titolo sezione Varietà e Territori",
+      "icon": "svg:ui/varieties",
+      "target": "app"
+    },
+    {
+      "slot": "detail.section.buy_store",
+      "group": "Scheda prodotto",
+      "description": "Titolo sezione Acquisto, Maturazione e Conservazione",
+      "icon": "material:shopping_basket",
+      "target": "app"
+    },
+    {
+      "slot": "detail.section.nutrition",
+      "group": "Scheda prodotto",
+      "description": "Titolo sezione Nutrizione",
+      "icon": "svg:ui/nutrition",
+      "target": "app"
+    },
+    {
+      "slot": "detail.section.sustainability",
+      "group": "Scheda prodotto",
+      "description": "Titolo sezione Sostenibilità",
+      "icon": "svg:ui/sustainability",
+      "target": "app"
+    },
+    {
+      "slot": "detail.section.garden",
+      "group": "Scheda prodotto",
+      "description": "Titolo sezione Calendario dell'Orto",
+      "icon": "svg:ui/garden",
+      "target": "app"
+    },
+    {
+      "slot": "detail.section.curiosities",
+      "group": "Scheda prodotto",
+      "description": "Titolo sezione Informazioni Aggiuntive",
+      "icon": "svg:ui/info",
+      "target": "app"
+    },
+    {
+      "slot": "detail.section.recipes",
+      "group": "Scheda prodotto",
+      "description": "Titolo sezione Ricette e Note",
+      "icon": "svg:ui/recipes",
+      "target": "app"
+    },
+    {
+      "slot": "detail.section.links",
+      "group": "Scheda prodotto",
+      "description": "Titolo sezione Fonti e Link Utili",
+      "icon": "material:link",
+      "target": "app"
+    },
+    {
+      "slot": "detail.availability_note",
+      "group": "Scheda prodotto",
+      "description": "Nota sotto il calendario dei prodotti a lunga conservazione",
+      "icon": "material:info",
+      "target": "app"
+    },
+    {
+      "slot": "detail.dop_igp",
+      "group": "Scheda prodotto",
+      "description": "Chip DOP/IGP accanto alle denominazioni",
+      "icon": "svg:ui/dop_igp",
+      "target": "app"
+    },
+    {
+      "slot": "detail.carbon_footprint",
+      "group": "Scheda prodotto",
+      "description": "Riquadro Impronta di Carbonio",
+      "icon": "svg:ui/carbon",
+      "target": "app"
+    },
+    {
+      "slot": "detail.water_footprint",
+      "group": "Scheda prodotto",
+      "description": "Riquadro Impronta Idrica",
+      "icon": "svg:ui/water",
+      "target": "app"
+    },
+    {
+      "slot": "detail.beef_comparison",
+      "group": "Scheda prodotto",
+      "description": "Riga \"Volte Meno della Carne Bovina\"",
+      "icon": "svg:ui/cow",
+      "target": "app"
+    },
+    {
+      "slot": "detail.zero_waste",
+      "group": "Scheda prodotto",
+      "description": "Sottotitolo Antispreco",
+      "icon": "svg:ui/zero_waste",
+      "target": "app"
+    },
+    {
+      "slot": "shopping.done_shopping",
+      "group": "Lista della spesa",
+      "description": "Riquadro \"Hai Finito la Spesa?\"",
+      "icon": "svg:ui/fridge",
+      "target": "app"
+    },
+    {
+      "slot": "shopping.how_to_choose",
+      "group": "Lista della spesa",
+      "description": "Anteprima \"Come Sceglierlo al Meglio\"",
+      "icon": "svg:ui/choose",
+      "target": "app"
+    },
+    {
+      "slot": "shopping.weight_calculator",
+      "group": "Lista della spesa",
+      "description": "Calcolo \"Quanto Comprarne\" (peso lordo)",
+      "icon": "svg:ui/scale",
+      "target": "app"
+    },
+    {
+      "slot": "shopping.add_item",
+      "group": "Lista della spesa",
+      "description": "Pulsante per aggiungere un prodotto alla lista",
+      "icon": "material:add_circle",
+      "target": "app"
+    },
+    {
+      "slot": "shopping.in_cart",
+      "group": "Lista della spesa",
+      "description": "Riga \"Nel Carrello\"",
+      "icon": "material:shopping_cart_checkout",
+      "target": "app"
+    },
+    {
+      "slot": "shopping.clear_completed",
+      "group": "Lista della spesa",
+      "description": "Menu: togli i prodotti già presi",
+      "icon": "material:playlist_remove",
+      "target": "app"
+    },
+    {
+      "slot": "shopping.clear_list",
+      "group": "Lista della spesa",
+      "description": "Menu: svuota la lista",
+      "icon": "material:delete_sweep",
+      "target": "app"
+    },
+    {
+      "slot": "settings.notifications",
+      "group": "Impostazioni",
+      "description": "Sezione Notifiche",
+      "icon": "svg:ui/notifications",
+      "target": "app"
+    },
+    {
+      "slot": "settings.shopping_mode",
+      "group": "Impostazioni",
+      "description": "Opzioni della Modalità Spesa",
+      "icon": "svg:ui/shopping_mode",
+      "target": "app"
+    },
+    {
+      "slot": "settings.theme.light",
+      "group": "Impostazioni",
+      "description": "Tema Chiaro",
+      "icon": "material:light_mode",
+      "target": "app"
+    },
+    {
+      "slot": "settings.theme.dark",
+      "group": "Impostazioni",
+      "description": "Tema Scuro",
+      "icon": "material:dark_mode",
+      "target": "app"
+    },
+    {
+      "slot": "settings.theme.system",
+      "group": "Impostazioni",
+      "description": "Tema di Sistema",
+      "icon": "material:brightness_auto",
+      "target": "app"
+    },
+    {
+      "slot": "settings.detail_sections",
+      "group": "Impostazioni",
+      "description": "Voce \"Sezioni della Scheda Prodotto\"",
+      "icon": "material:view_agenda",
+      "target": "app"
+    },
+    {
+      "slot": "settings.sustainable_diet",
+      "group": "Impostazioni",
+      "description": "Voce \"More Sustainable Diet\" (EUFIC)",
+      "icon": "material:eco",
+      "target": "app"
+    },
+    {
+      "slot": "settings.database",
+      "group": "Impostazioni",
+      "description": "Riga della versione del database",
+      "icon": "material:storage",
+      "target": "app"
+    },
+    {
+      "slot": "home.category_other",
+      "group": "Schermata Home",
+      "description": "Pulsante Altro (erbe e spezie, funghi, cereali) nella barra delle categorie",
+      "icon": "material:local_florist",
+      "target": "app"
+    },
+    {
+      "slot": "home.list_card_how_to_choose",
+      "group": "Schermata Home",
+      "description": "Icona davanti alla descrizione \"Come Sceglierlo\" nelle card della vista Lista",
+      "icon": "svg:ui/choose",
+      "target": "app"
+    },
+    {
+      "slot": "detail.how_to_choose",
+      "group": "Scheda prodotto",
+      "description": "Sottotitolo \"Come Sceglierlo al Meglio\"",
+      "icon": "svg:ui/choose",
+      "target": "app"
+    },
+    {
+      "slot": "detail.keep_longer",
+      "group": "Scheda prodotto",
+      "description": "Sottotitolo \"Per Conservarlo più a Lungo\" (prodotti non climaterici)",
+      "icon": "material:timer",
+      "target": "app"
+    },
+    {
+      "slot": "sources.law",
+      "group": "Fonti",
+      "description": "Leggi e regolamenti UE citati come fonte (al posto del logo)",
+      "icon": "material:gavel",
+      "target": "app"
+    },
+    {
+      "slot": "sources.generic",
+      "group": "Fonti",
+      "description": "Fonte senza logo (es. link aggiunti a mano)",
+      "icon": "material:link",
+      "target": "app"
+    },
+    {
+      "slot": "detail.ripening",
+      "group": "Scheda prodotto",
+      "description": "Titoletto Maturazione",
+      "icon": "svg:ui/ripening",
+      "target": "app"
+    },
+    {
+      "slot": "detail.speed_up",
+      "group": "Scheda prodotto",
+      "description": "Titoletto Per Farlo Maturare",
+      "icon": "svg:ui/speed_up",
+      "target": "app"
+    },
+    {
+      "slot": "detail.slow_down",
+      "group": "Scheda prodotto",
+      "description": "Titoletto Per Rallentare la Maturazione o il Deperimento",
+      "icon": "material:timer",
+      "target": "app"
+    },
+    {
+      "slot": "detail.perishability",
+      "group": "Scheda prodotto",
+      "description": "Titoletto Deperibilità",
+      "icon": "svg:ui/perishability",
+      "target": "app"
+    },
+    {
+      "slot": "detail.where_to_store",
+      "group": "Scheda prodotto",
+      "description": "Titoletto Dove Conservarlo",
+      "icon": "material:inventory_2",
+      "target": "app"
+    },
+    {
+      "slot": "detail.how_long",
+      "group": "Scheda prodotto",
+      "description": "Titoletto Quanto Dura in Casa",
+      "icon": "material:schedule",
+      "target": "app"
+    },
+    {
+      "slot": "detail.keep_away_from",
+      "group": "Scheda prodotto",
+      "description": "Titoletto Tienilo Lontano da (etilene)",
+      "icon": "svg:ui/ethylene",
+      "target": "app"
+    },
+    {
+      "slot": "detail.notable_varieties",
+      "group": "Scheda prodotto",
+      "description": "Titoletto Varietà Note",
+      "icon": "material:label",
+      "target": "app"
+    },
+    {
+      "slot": "detail.pat",
+      "group": "Scheda prodotto",
+      "description": "Titoletto PAT (prodotti agroalimentari tradizionali)",
+      "icon": "svg:ui/pat",
+      "target": "app"
+    },
+    {
+      "slot": "detail.nutrition_claims",
+      "group": "Scheda prodotto",
+      "description": "Titoletto Indicazioni Nutrizionali UE",
+      "icon": "material:verified",
+      "target": "app"
+    },
+    {
+      "slot": "detail.vitamins_minerals",
+      "group": "Scheda prodotto",
+      "description": "Titoletto Vitamine e Minerali",
+      "icon": "material:science",
+      "target": "app"
+    },
+    {
+      "slot": "detail.curiosities",
+      "group": "Scheda prodotto",
+      "description": "Titoletto Benefici e Curiosità",
+      "icon": "material:tips_and_updates",
+      "target": "app"
+    }
+  ]
+}

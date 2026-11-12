@@ -1,0 +1,38 @@
+# Repository "database" di Peak Season.
+# L'app Flutter (app/) ha un repository Git separato.
+/app/
+
+# Chiavi API: mai su Git
+.env
+.env.*
+
+# Materiale di terzi o troppo pesante, che resta solo sul computer
+/data/raw/
+/fonti_locali/
+/assets/images/*.jpg
+/assets/images/*.jpeg
+/assets/images/*.png
+/assets/images/_manual/
+/assets/images/_review.html
+/assets/images/_originals/
+/assets/images/_candidates/
+/assets/images/_removed/
+
+# Copie di sicurezza (lo storico ora lo tiene Git)
+/data/_snapshots/
+/data/_backup*/
+
+# Bozze grafiche dell'interfaccia
+/schemi_interfaccia/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Sistema operativo / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

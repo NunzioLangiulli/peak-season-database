@@ -1,0 +1,1405 @@
+{
+  "cipollotto_spring_onion": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Bulbo bianco sodo, foglie verdi turgide senza punte secche.",
+      "Firm white bulb, turgid green leaves with no dry tips."
+    ],
+    "ds": [
+      "Scegli cipollotti con il bulbo bianco, sodo e lucido e le foglie verde brillante, turgide, senza punte secche o ingiallite. Le radici devono essere chiare e senza muffa.",
+      "Choose spring onions with a firm, glossy white bulb and bright green, turgid leaves with no dry or yellow tips. Roots should be pale and free of mould."
+    ],
+    "cs": [
+      "Frigo · pochi giorni",
+      "Fridge · a few days"
+    ],
+    "si": [
+      "Conservalo in frigorifero, nel cassetto delle verdure, in un sacchetto forato, e consumalo in pochi giorni. In condizioni professionali (0 °C, umidità alta) dura 3-4 settimane.",
+      "Keep it in the fridge crisper drawer in a perforated bag and use within a few days. Professionally (0 °C, high humidity) it keeps 3-4 weeks."
+    ],
+    "hb": [
+      "Ha un sapore di cipolla più delicato e si mangia anche crudo; per 100 g è ad alto contenuto di fibre e senza grassi.",
+      "It has a milder onion flavour and can be eaten raw; per 100 g it is high in fibre and fat-free."
+    ],
+    "wr": [
+      "Usa anche le foglie verdi, tritate come un'erba aromatica in frittate, insalate e minestre.",
+      "Use the green leaves too, chopped like a herb in omelettes, salads and soups."
+    ]
+  },
+  "agretti_saltwort": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "ortodacoltivare",
+      "crea"
+    ],
+    "sl": [
+      "Mazzetti verde brillante, steli teneri e turgidi.",
+      "Bright green bunches with tender, turgid stems."
+    ],
+    "ds": [
+      "Gli agretti (barba di frate) devono essere verde brillante, con steli sottili, teneri e turgidi, senza parti gialle, molli o legnose. Si trovano soprattutto in primavera e vanno lavati bene perché trattengono terra.",
+      "Agretti (saltwort) should be bright green, with thin, tender, turgid stems and no yellow, soft or woody parts. They are mostly found in spring and need careful washing as they hold soil."
+    ],
+    "cs": [
+      "Frigo · 1-4 giorni",
+      "Fridge · 1-4 days"
+    ],
+    "si": [
+      "Conservali in frigorifero, non lavati, in un sacchetto o avvolti in carta umida, e consumali entro pochi giorni: si disidratano in fretta.",
+      "Keep them unwashed in the fridge in a bag or wrapped in damp paper and use within a few days: they dry out quickly."
+    ],
+    "hb": [
+      "Poveri di calorie, per 100 g sono ricchi di vitamina A, vitamina C, folati, potassio e fibre e sono fonte di calcio.",
+      "Low in calories, per 100 g they are high in vitamin A, vitamin C, folate, potassium and fibre and a source of calcium."
+    ],
+    "wr": [
+      "Si eliminano solo le radici: il resto si lessa in pochi minuti. Gli avanzi arricchiscono frittate e sughi.",
+      "Only the roots are removed: the rest boils in a few minutes. Leftovers enrich omelettes and sauces."
+    ]
+  },
+  "amarena_sour_cherry": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "crea",
+      "usda_hb66"
+    ],
+    "sl": [
+      "Frutti rosso scuro, lucidi, sodi, con il picciolo verde.",
+      "Dark red, glossy, firm fruits with green stems."
+    ],
+    "ds": [
+      "Le amarene devono essere rosso scuro e lucide, sode e con il picciolo verde e fresco. Hanno un gusto acidulo e si usano soprattutto per sciroppi, confetture e dolci.",
+      "Sour cherries should be dark red and glossy, firm, with a fresh green stem. They taste tart and are mostly used for syrups, jams and desserts."
+    ],
+    "cs": [
+      "Frigo · 2-3 giorni",
+      "Fridge · 2-3 days"
+    ],
+    "si": [
+      "Conservale in frigorifero, non lavate e con il picciolo, e consumale in 2-3 giorni. Lavale solo al momento dell'uso.",
+      "Keep them unwashed with stems in the fridge and use within 2-3 days. Wash them only just before use."
+    ],
+    "hb": [
+      "Senza grassi e fonte di fibre per 100 g, si consumano soprattutto trasformate per il sapore acidulo.",
+      "Fat-free and a source of fibre per 100 g, they are mostly eaten processed because of their tartness."
+    ],
+    "wr": [
+      "I frutti troppo maturi vanno in confetture e sciroppi; i noccioli si eliminano a fine cottura.",
+      "Overripe fruits go into jams and syrups; stones can be removed after cooking."
+    ]
+  },
+  "noce_walnut": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "crea",
+      "usda_hb66"
+    ],
+    "sl": [
+      "Guscio integro e pesante, gheriglio chiaro e croccante.",
+      "Intact, heavy shell, pale and crunchy kernel."
+    ],
+    "ds": [
+      "Scegli noci con il guscio integro, senza crepe né macchie, e pesanti in proporzione alla dimensione. Il gheriglio deve essere chiaro, croccante e senza odore di rancido. Le noci fresche di stagione arrivano in autunno.",
+      "Choose walnuts with an intact shell, without cracks or stains, heavy for their size. The kernel should be pale, crunchy and free of rancid smell. Fresh-season walnuts arrive in autumn."
+    ],
+    "cs": [
+      "Luogo fresco e asciutto, nel guscio",
+      "Cool, dry place, in the shell"
+    ],
+    "si": [
+      "Conservale nel guscio in un luogo fresco, asciutto e buio; sgusciate vanno in un barattolo chiuso in frigorifero perché irrancidiscono. In condizioni professionali si conservano molti mesi a 0-10 °C.",
+      "Keep them in the shell in a cool, dry, dark place; shelled walnuts go in a closed jar in the fridge as they turn rancid. Professionally they keep many months at 0-10 °C."
+    ],
+    "hb": [
+      "Per 100 g sono ricche di vitamina E, tiamina, vitamina B6, folati, potassio, fosforo, magnesio, zinco, rame e manganese e fonte di fibre, calcio e ferro, ma molto caloriche: la porzione è di 30 g. Contengono frutta a guscio (allergene).",
+      "Per 100 g they are high in vitamin E, thiamin, vitamin B6, folate, potassium, phosphorus, magnesium, zinc, copper and manganese and a source of fibre, calcium and iron, but very energy-dense: a portion is 30 g. They are tree nuts (allergen)."
+    ],
+    "wr": [
+      "I gherigli rotti vanno in pesti, salse e dolci; i gusci si possono usare come pacciamatura nell'orto.",
+      "Broken kernels go into pestos, sauces and cakes; shells can be used as garden mulch."
+    ]
+  },
+  "nocciola_hazelnut": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "crea",
+      "usda_hb66"
+    ],
+    "sl": [
+      "Guscio integro e lucido, seme pieno, senza odore di rancido.",
+      "Intact, glossy shell, full kernel, no rancid smell."
+    ],
+    "ds": [
+      "Scegli nocciole con il guscio integro, lucido e uniforme, che non suonino vuote se agitate. Sgusciate devono essere croccanti e senza odore di rancido. L'Italia ha tre nocciole DOP/IGP (Piemonte, Giffoni, Romana).",
+      "Choose hazelnuts with an intact, glossy, even shell that does not rattle empty when shaken. Shelled ones should be crunchy and free of rancid smell. Italy has three PDO/PGI hazelnuts (Piedmont, Giffoni, Romana)."
+    ],
+    "cs": [
+      "Luogo fresco e asciutto, nel guscio",
+      "Cool, dry place, in the shell"
+    ],
+    "si": [
+      "Conservale nel guscio in un luogo fresco, asciutto e buio; sgusciate o tostate in un barattolo chiuso, meglio in frigorifero. In condizioni professionali si conservano a lungo.",
+      "Keep them in the shell in a cool, dry, dark place; shelled or toasted in a closed jar, preferably in the fridge. Professionally they keep for a long time."
+    ],
+    "hb": [
+      "Per 100 g sono ricche di fibre, vitamina E, tiamina, vitamina B6, folati, fosforo, magnesio, rame e manganese e fonte di vitamina K, niacina, potassio, calcio, ferro e zinco, ma molto caloriche: la porzione è di 30 g. Contengono frutta a guscio (allergene).",
+      "Per 100 g they are high in fibre, vitamin E, thiamin, vitamin B6, folate, phosphorus, magnesium, copper and manganese and a source of vitamin K, niacin, potassium, calcium, iron and zinc, but very energy-dense: a portion is 30 g. They are tree nuts (allergen)."
+    ],
+    "wr": [
+      "Le nocciole un po' secche tornano croccanti tostate qualche minuto in forno; vanno bene in creme e dolci.",
+      "Slightly stale hazelnuts become crunchy again after a few minutes toasting in the oven; use them in spreads and cakes."
+    ]
+  },
+  "mandorla_almond": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "crea",
+      "usda_hb66"
+    ],
+    "sl": [
+      "Mandorle intere, sode, di colore uniforme e profumo dolce.",
+      "Whole, firm almonds with even colour and sweet smell."
+    ],
+    "ds": [
+      "Scegli mandorle intere, sode e di colore uniforme, senza macchie o fori e senza odore di rancido. A inizio estate si trovano anche le mandorle fresche, con il guscio verde.",
+      "Choose whole, firm almonds of even colour, without spots or holes and without a rancid smell. In early summer fresh green almonds are also available."
+    ],
+    "cs": [
+      "Luogo fresco e asciutto, chiuse",
+      "Cool, dry place, sealed"
+    ],
+    "si": [
+      "Conservale in un barattolo chiuso in un luogo fresco, asciutto e buio; sgusciate durano di più in frigorifero. Le mandorle fresche vanno in frigo e consumate in pochi giorni.",
+      "Keep them in a closed jar in a cool, dry, dark place; shelled almonds last longer in the fridge. Fresh green almonds go in the fridge and should be eaten within a few days."
+    ],
+    "hb": [
+      "Per 100 g sono ricche di vitamina E, calcio, potassio, fosforo, magnesio, rame, manganese e fibre, ma molto caloriche: la porzione è di 30 g. Contengono frutta a guscio (allergene).",
+      "Per 100 g they are high in vitamin E, calcium, potassium, phosphorus, magnesium, copper, manganese and fibre but very energy-dense: a portion is 30 g. They are tree nuts (allergen)."
+    ],
+    "wr": [
+      "Le pellicine si tolgono sbollentandole; le mandorle tritate sostituiscono parte della farina nei dolci.",
+      "Skins slip off after blanching; ground almonds can replace part of the flour in cakes."
+    ]
+  },
+  "pistacchio_pistachio": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "crea",
+      "usda_hb66"
+    ],
+    "sl": [
+      "Guscio socchiuso e integro, seme verde brillante.",
+      "Intact, partly open shell, bright green kernel."
+    ],
+    "ds": [
+      "Scegli pistacchi con il guscio integro e socchiuso e il seme verde brillante: più è verde, più è pregiato (il Pistacchio Verde di Bronte è DOP). Evita semi scuri o con odore di rancido.",
+      "Choose pistachios with an intact, partly open shell and a bright green kernel: the greener, the finer (Pistacchio Verde di Bronte is PDO). Avoid dark kernels or a rancid smell."
+    ],
+    "cs": [
+      "Luogo fresco e asciutto, chiusi",
+      "Cool, dry place, sealed"
+    ],
+    "si": [
+      "Conservali in un barattolo chiuso in un luogo fresco, asciutto e buio, o in frigorifero se sgusciati.",
+      "Keep them in a closed jar in a cool, dry, dark place, or in the fridge if shelled."
+    ],
+    "hb": [
+      "Per 100 g sono ricchi di fibre, vitamina E, vitamina K, tiamina, vitamina B6, potassio, fosforo, magnesio, ferro, rame e manganese e fonte di folati, calcio e zinco, ma molto calorici: la porzione è di 30 g. Contengono frutta a guscio (allergene).",
+      "Per 100 g they are high in fibre, vitamin E, vitamin K, thiamin, vitamin B6, potassium, phosphorus, magnesium, iron, copper and manganese and a source of folate, calcium and zinc, but very energy-dense: a portion is 30 g. They are tree nuts (allergen)."
+    ],
+    "wr": [
+      "I pistacchi un po' secchi si tritano per pesti, impanature e dolci.",
+      "Slightly stale pistachios can be ground for pestos, coatings and desserts."
+    ]
+  },
+  "erba_cipollina_chives": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "ortodacoltivare",
+      "bda_ieo"
+    ],
+    "sl": [
+      "Steli verde intenso, sottili e turgidi.",
+      "Deep green, thin, turgid stems."
+    ],
+    "ds": [
+      "Scegli mazzetti di steli sottili, verde intenso e turgidi, senza punte gialle o molli. Il profumo deve essere fresco, simile a una cipolla delicata.",
+      "Choose bunches of thin, deep green, turgid stems with no yellow or soft tips. The smell should be fresh, like a mild onion."
+    ],
+    "cs": [
+      "Frigo, in carta umida · pochi giorni",
+      "Fridge, in damp paper · a few days"
+    ],
+    "si": [
+      "Conservala in frigorifero avvolta in carta umida o in un contenitore chiuso e usala in pochi giorni. Si può anche congelare già tagliata.",
+      "Keep it in the fridge wrapped in damp paper or in a closed container and use within a few days. It can also be frozen once chopped."
+    ],
+    "hb": [
+      "Si usa a crudo, aggiunta all'ultimo momento; per 100 g è ricca di vitamina C e folati, ma se ne mangiano piccole quantità.",
+      "It is used raw, added at the last moment; per 100 g it is high in vitamin C and folate, but only small amounts are eaten."
+    ],
+    "wr": [
+      "Taglia gli steli con le forbici: quelli avanzati si congelano a rondelle in un barattolo.",
+      "Snip the stems with scissors: leftovers can be frozen chopped in a jar."
+    ]
+  },
+  "crescione_watercress": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "bda_ieo"
+    ],
+    "sl": [
+      "Foglie verde scuro, croccanti, steli sodi.",
+      "Dark green, crisp leaves, firm stems."
+    ],
+    "ds": [
+      "Il crescione deve avere foglie verde scuro, croccanti e lucide, senza parti gialle o viscide, e steli sodi. Ha un sapore piccante, simile alla rucola.",
+      "Watercress should have dark green, crisp, glossy leaves with no yellow or slimy parts, and firm stems. It tastes peppery, like rocket."
+    ],
+    "cs": [
+      "Frigo · 1-4 giorni",
+      "Fridge · 1-4 days"
+    ],
+    "si": [
+      "Conservalo in frigorifero con gli steli in un bicchiere d'acqua coperto da un sacchetto, oppure avvolto in carta umida, e consumalo in pochi giorni.",
+      "Keep it in the fridge with the stems in a glass of water covered with a bag, or wrapped in damp paper, and use within a few days."
+    ],
+    "hb": [
+      "Povero di calorie, per 100 g è ricco di vitamina C e fonte di vitamina B6, calcio e ferro.",
+      "Low in calories, per 100 g it is high in vitamin C and a source of vitamin B6, calcium and iron."
+    ],
+    "wr": [
+      "Le foglie un po' appassite vanno in minestre e vellutate.",
+      "Slightly wilted leaves go into soups and creamy soups."
+    ]
+  },
+  "ribes_nero_blackcurrant": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "bda_ieo"
+    ],
+    "sl": [
+      "Grappoli con bacche nere, lucide e sode.",
+      "Bunches with black, glossy, firm berries."
+    ],
+    "ds": [
+      "Scegli grappoli con bacche nere, lucide, sode e asciutte, senza muffe o succo sul fondo della confezione. Il ribes nero ha un gusto aromatico e acidulo.",
+      "Choose bunches with black, glossy, firm, dry berries, with no mould or juice at the bottom of the pack. Blackcurrants taste aromatic and tart."
+    ],
+    "cs": [
+      "Frigo · 3-6 giorni",
+      "Fridge · 3-6 days"
+    ],
+    "si": [
+      "Conservalo in frigorifero, non lavato e sui suoi rametti, e consumalo in pochi giorni. Si congela bene.",
+      "Keep it unwashed on the stems in the fridge and use within a few days. It freezes well."
+    ],
+    "hb": [
+      "Per 100 g è ricco di vitamina C, vitamina K e fibre e fonte di potassio e manganese.",
+      "Per 100 g it is high in vitamin C, vitamin K and fibre and a source of potassium and manganese."
+    ],
+    "wr": [
+      "Le bacche molto mature diventano confetture, sciroppi e gelatine.",
+      "Very ripe berries make jams, syrups and jellies."
+    ]
+  },
+  "uva_spina_gooseberry": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "usda_foodkeeper"
+    ],
+    "sl": [
+      "Bacche sode, lucide, senza ammaccature.",
+      "Firm, glossy berries with no bruises."
+    ],
+    "ds": [
+      "Scegli bacche sode, lucide e intere, verdi, gialle o rossastre secondo la varietà, senza ammaccature né muffe. Hanno un sapore da acidulo a dolce.",
+      "Choose firm, glossy, whole berries, green, yellow or reddish depending on the variety, with no bruises or mould. They taste from tart to sweet."
+    ],
+    "cs": [
+      "Frigo · 1 settimana",
+      "Fridge · 1 week"
+    ],
+    "si": [
+      "Conservala in frigorifero, non lavata, e consumala entro una settimana. Si può congelare.",
+      "Keep it unwashed in the fridge and use within a week. It can be frozen."
+    ],
+    "hb": [
+      "Per 100 g è ricca di vitamina C e fibre e povera di grassi.",
+      "Per 100 g it is high in vitamin C and fibre and low in fat."
+    ],
+    "wr": [
+      "Le bacche più acerbe sono ottime in composte e salse per carni.",
+      "The tarter berries are great in compotes and sauces for meat."
+    ]
+  },
+  "mirtillo_rosso_lingonberry": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "biosuisse"
+    ],
+    "sl": [
+      "Bacche rosso vivo, sode e lucide.",
+      "Bright red, firm, glossy berries."
+    ],
+    "ds": [
+      "Scegli bacche rosso vivo, sode e lucide, senza parti molli o muffe. Il mirtillo rosso è molto acidulo e si consuma soprattutto in salse, confetture e succhi.",
+      "Choose bright red, firm, glossy berries with no soft parts or mould. Lingonberries are very tart and mostly eaten in sauces, jams and juices."
+    ],
+    "cs": [
+      "Frigo · 1-2 settimane",
+      "Fridge · 1-2 weeks"
+    ],
+    "si": [
+      "Conservalo in frigorifero, non lavato, e consumalo in 1-2 settimane; non tenerlo sotto i 2 °C, che lo rende gommoso. Si congela bene.",
+      "Keep it unwashed in the fridge and use within 1-2 weeks; do not store it below 2 °C, which makes it rubbery. It freezes well."
+    ],
+    "hb": [
+      "Valori della voce USDA del cranberry (Vaccinium macrocarpon), specie affine, come approssimazione: per 100 g è ricco di fibre e fonte di vitamina C.",
+      "Values for the USDA cranberry entry (Vaccinium macrocarpon), a related species, as an approximation: per 100 g it is high in fibre and a source of vitamin C."
+    ],
+    "wr": [
+      "Le bacche avanzate si cuociono con poco zucchero in una salsa da abbinare a carni e formaggi.",
+      "Leftover berries can be cooked with a little sugar into a sauce for meat and cheese."
+    ]
+  },
+  "sambuco_elderberry": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "usda_fdc"
+    ],
+    "sl": [
+      "Grappoli con bacche nero-violacee, lucide e mature.",
+      "Bunches with glossy, fully ripe purple-black berries."
+    ],
+    "ds": [
+      "Scegli grappoli con bacche nero-violacee, lucide e tutte mature. Le bacche di sambuco si consumano solo cotte: crude, come foglie, rametti e bacche acerbe, possono causare disturbi.",
+      "Choose bunches with glossy, fully ripe purple-black berries. Elderberries are eaten only cooked: raw berries, like leaves, stems and unripe berries, can cause digestive upset."
+    ],
+    "cs": [
+      "Frigo · 3-6 giorni",
+      "Fridge · 3-6 days"
+    ],
+    "si": [
+      "Conservale in frigorifero sui grappoli e usale in pochi giorni; sgranate si congelano.",
+      "Keep them in the fridge on the bunches and use within a few days; once stripped they can be frozen."
+    ],
+    "hb": [
+      "Per 100 g sono ricche di vitamina C e fibre e fonte di vitamina B6. Vanno sempre cotte.",
+      "Per 100 g they are high in vitamin C and fibre and a source of vitamin B6. Always cook them."
+    ],
+    "wr": [
+      "Si sgranano con una forchetta e diventano sciroppi, confetture e salse; scarta i rametti.",
+      "Strip them with a fork and make syrups, jams and sauces; discard the stems."
+    ]
+  },
+  "gelso_mulberry": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "ortodacoltivare",
+      "bda_ieo"
+    ],
+    "sl": [
+      "More lucide, intere, sode, senza succo che cola.",
+      "Glossy, whole, firm berries with no leaking juice."
+    ],
+    "ds": [
+      "Le more di gelso (nere, rosse o bianche secondo la varietà) devono essere intere, lucide e sode, senza succo che cola né muffe. Sono molto delicate e si trovano soprattutto nei mercati locali in estate.",
+      "Mulberries (black, red or white depending on the variety) should be whole, glossy and firm, with no leaking juice or mould. They are very delicate and mostly found at local markets in summer."
+    ],
+    "cs": [
+      "Frigo · pochi giorni",
+      "Fridge · a few days"
+    ],
+    "si": [
+      "Conservale in frigorifero in un solo strato, non lavate, e consumale entro pochi giorni. Si congelano bene.",
+      "Keep them unwashed in the fridge in a single layer and use within a few days. They freeze well."
+    ],
+    "hb": [
+      "Povere di calorie, per 100 g sono ricche di manganese e fibre e fonte di folati.",
+      "Low in calories, per 100 g they are high in manganese and fibre and a source of folate."
+    ],
+    "wr": [
+      "Le more schiacciate vanno in confetture, sorbetti e granite.",
+      "Crushed berries go into jams, sorbets and granitas."
+    ]
+  },
+  "rabarbaro_rhubarb": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "ortodacoltivare"
+    ],
+    "sl": [
+      "Coste sode, lucide, croccanti, senza foglie appassite.",
+      "Firm, glossy, crisp stalks with no wilted leaves."
+    ],
+    "ds": [
+      "Scegli coste di rabarbaro sode, lucide e croccanti, rosse o verdi secondo la varietà, che si spezzino di netto. Si mangiano solo le coste: le foglie non sono commestibili.",
+      "Choose firm, glossy, crisp rhubarb stalks, red or green depending on the variety, that snap cleanly. Only the stalks are eaten: the leaves are not edible."
+    ],
+    "cs": [
+      "Frigo · pochi giorni",
+      "Fridge · a few days"
+    ],
+    "si": [
+      "Elimina le foglie e conserva le coste in frigorifero avvolte in un sacchetto; consumale in pochi giorni. In condizioni professionali (0 °C) dura 2-4 settimane.",
+      "Remove the leaves and keep the stalks in the fridge in a bag; use within a few days. Professionally (0 °C) it keeps 2-4 weeks."
+    ],
+    "hb": [
+      "Povero di calorie, per 100 g è ricco di vitamina K e fibre. Si consuma cotto, in genere con zucchero per la sua acidità.",
+      "Low in calories, per 100 g it is high in vitamin K and fibre. It is eaten cooked, usually with sugar because of its tartness."
+    ],
+    "wr": [
+      "Le coste a pezzi si congelano crude; scarta sempre le foglie.",
+      "Chopped stalks can be frozen raw; always discard the leaves."
+    ]
+  },
+  "rafano_horseradish": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "ortodacoltivare"
+    ],
+    "sl": [
+      "Radice soda, pesante, senza parti molli o germogli.",
+      "Firm, heavy root with no soft parts or sprouts."
+    ],
+    "ds": [
+      "Scegli radici sode e pesanti, con la buccia chiara e integra, senza parti molli, muffe o germogli. Il rafano (cren) è molto piccante quando viene grattugiato.",
+      "Choose firm, heavy roots with a pale, intact skin and no soft parts, mould or sprouts. Horseradish is very pungent when grated."
+    ],
+    "cs": [
+      "Frigo, in sacchetto · settimane",
+      "Fridge, in a bag · weeks"
+    ],
+    "si": [
+      "Conservalo in frigorifero in un sacchetto e grattugialo al momento: perde piccantezza in fretta. In condizioni professionali (0 °C, umidità alta) dura 10-12 mesi.",
+      "Keep it in the fridge in a bag and grate it just before use: it loses pungency quickly. Professionally (0 °C, high humidity) it keeps 10-12 months."
+    ],
+    "hb": [
+      "Le tabelle di composizione ufficiali non riportano i valori nutrizionali di questo alimento.",
+      "Official food composition tables do not give nutrition values for this food."
+    ],
+    "wr": [
+      "La radice avanzata si grattugia e si conserva in un vasetto con aceto.",
+      "Leftover root can be grated and kept in a jar with vinegar."
+    ]
+  },
+  "scorzonera_black_salsify": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "ortodacoltivare"
+    ],
+    "sl": [
+      "Radici lunghe, diritte e sode, senza spaccature.",
+      "Long, straight, firm roots with no cracks."
+    ],
+    "ds": [
+      "Scegli radici lunghe, diritte e sode, senza spaccature o parti molli. La scorzonera ha la buccia nera, la scorzobianca chiara; la polpa è bianca e si annerisce all'aria.",
+      "Choose long, straight, firm roots with no cracks or soft parts. Black salsify has a black skin, salsify a pale one; the flesh is white and darkens in air."
+    ],
+    "cs": [
+      "Frigo, in sacchetto · 1-2 settimane",
+      "Fridge, in a bag · 1-2 weeks"
+    ],
+    "si": [
+      "Conservala in frigorifero in un sacchetto. Una volta pelata mettila subito in acqua e limone perché annerisce. In condizioni professionali (0 °C) dura 2-4 mesi.",
+      "Keep it in the fridge in a bag. Once peeled put it straight into water with lemon as it darkens. Professionally (0 °C) it keeps 2-4 months."
+    ],
+    "hb": [
+      "Per 100 g è ricca di fibre e fonte di folati e potassio.",
+      "Per 100 g it is high in fibre and a source of folate and potassium."
+    ],
+    "wr": [
+      "Si cuoce con la buccia e si pela dopo, per perdere meno polpa.",
+      "Cook it with the skin on and peel afterwards to lose less flesh."
+    ]
+  },
+  "cavolo_cinese_chinese_cabbage": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "ortodacoltivare"
+    ],
+    "sl": [
+      "Cespo compatto, foglie croccanti, coste bianche sode.",
+      "Compact head, crisp leaves, firm white ribs."
+    ],
+    "ds": [
+      "Scegli cespi compatti e pesanti, con foglie croccanti e coste bianche e sode, senza macchie scure o foglie appassite. Il pak choi ha foglie più scure e coste carnose.",
+      "Choose compact, heavy heads with crisp leaves and firm white ribs, with no dark spots or wilted leaves. Pak choi has darker leaves and fleshy ribs."
+    ],
+    "cs": [
+      "Frigo · 1-2 settimane",
+      "Fridge · 1-2 weeks"
+    ],
+    "si": [
+      "Conservalo in frigorifero nel cassetto delle verdure, avvolto in un sacchetto, e consumalo in 1-2 settimane.",
+      "Keep it in the fridge crisper drawer in a bag and use within 1-2 weeks."
+    ],
+    "hb": [
+      "Povero di calorie, per 100 g è ricco di vitamina C, vitamina K, folati e fibre e fonte di vitamina B6.",
+      "Low in calories, per 100 g it is high in vitamin C, vitamin K, folate and fibre and a source of vitamin B6."
+    ],
+    "wr": [
+      "Le foglie esterne vanno in brodi e saltati; le coste si cuociono qualche minuto in più.",
+      "Outer leaves go into stocks and stir-fries; ribs need a few minutes longer."
+    ]
+  },
+  "patata_dolce_sweet_potato": {
+    "pl": "temperatura_ambiente",
+    "rt": "non_climaterico",
+    "src": [
+      "uc_davis",
+      "usda_hb66"
+    ],
+    "sl": [
+      "Tuberi sodi, buccia liscia, senza germogli o macchie.",
+      "Firm tubers with smooth skin, no sprouts or spots."
+    ],
+    "ds": [
+      "Scegli patate dolci sode e pesanti, con la buccia liscia e integra, senza germogli, parti molli o macchie scure. La polpa può essere arancione, bianca o viola.",
+      "Choose firm, heavy sweet potatoes with smooth, intact skin and no sprouts, soft parts or dark spots. The flesh may be orange, white or purple."
+    ],
+    "cs": [
+      "Dispensa fresca",
+      "Cool pantry"
+    ],
+    "si": [
+      "Conservala in un luogo fresco, asciutto e ventilato, non in frigorifero: sotto i 13 °C subisce danni da freddo (marciumi, butteratura, scolorimento interno).",
+      "Keep it in a cool, dry, ventilated place, not in the fridge: below 13 °C it suffers chilling injury (decay, pitting, internal discoloration)."
+    ],
+    "hb": [
+      "Per 100 g è ricca di vitamina E e fonte di vitamina C, tiamina, potassio e fibre; quella a polpa arancione è ricca di carotenoidi.",
+      "Per 100 g it is high in vitamin E and a source of vitamin C, thiamin, potassium and fibre; orange-fleshed ones are rich in carotenoids."
+    ],
+    "wr": [
+      "Cotta con la buccia, ben lavata, si spreca meno; gli avanzi diventano purè e vellutate.",
+      "Cooked in its well-washed skin there is less waste; leftovers make mash and soups."
+    ]
+  },
+  "navone_swede": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66"
+    ],
+    "sl": [
+      "Radice soda e pesante, buccia liscia.",
+      "Firm, heavy root with smooth skin."
+    ],
+    "ds": [
+      "Scegli navoni sodi e pesanti, con la buccia liscia giallo-violacea, senza spaccature o parti molli. La polpa è gialla e dolciastra.",
+      "Choose firm, heavy swedes with smooth yellow-purple skin and no cracks or soft parts. The flesh is yellow and sweetish."
+    ],
+    "cs": [
+      "Frigo, in sacchetto · settimane",
+      "Fridge, in a bag · weeks"
+    ],
+    "si": [
+      "Conservalo in frigorifero in un sacchetto o in un luogo fresco e buio. In condizioni professionali (0 °C, umidità alta) dura 4-6 mesi.",
+      "Keep it in the fridge in a bag or in a cool, dark place. Professionally (0 °C, high humidity) it keeps 4-6 months."
+    ],
+    "hb": [
+      "Povero di calorie, per 100 g è ricco di vitamina C e fibre e fonte di potassio.",
+      "Low in calories, per 100 g it is high in vitamin C and fibre and a source of potassium."
+    ],
+    "wr": [
+      "Si usa come la rapa: in minestre, purè e al forno con le altre radici.",
+      "Use it like turnip: in soups, mash and roasted with other roots."
+    ]
+  },
+  "daikon_daikon": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "bda_ieo"
+    ],
+    "sl": [
+      "Radice bianca, liscia, soda, pesante.",
+      "White, smooth, firm, heavy root."
+    ],
+    "ds": [
+      "Scegli daikon bianchi, lisci e sodi, pesanti per la loro dimensione, senza spaccature o parti spugnose. Se ci sono le foglie devono essere verdi e fresche.",
+      "Choose white, smooth, firm daikon, heavy for their size, with no cracks or spongy parts. Any leaves should be green and fresh."
+    ],
+    "cs": [
+      "Frigo · 10-14 giorni",
+      "Fridge · 10-14 days"
+    ],
+    "si": [
+      "Togli le foglie e conservalo in frigorifero in un sacchetto; dura 10-14 giorni. In condizioni professionali (0 °C) si conserva 2-4 mesi.",
+      "Remove the leaves and keep it in the fridge in a bag; it keeps 10-14 days. Professionally (0 °C) it keeps 2-4 months."
+    ],
+    "hb": [
+      "Povero di calorie, per 100 g è ricco di vitamina C e fibre e fonte di folati.",
+      "Low in calories, per 100 g it is high in vitamin C and fibre and a source of folate."
+    ],
+    "wr": [
+      "Si mangia crudo o cotto; le foglie si cucinano come quelle della rapa.",
+      "Eat it raw or cooked; the leaves can be cooked like turnip greens."
+    ]
+  },
+  "taccola_snow_pea": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "uc_davis",
+      "usda_hb66"
+    ],
+    "sl": [
+      "Baccelli piatti, verde brillante, croccanti.",
+      "Flat, bright green, crisp pods."
+    ],
+    "ds": [
+      "Scegli taccole con i baccelli piatti, verde brillante, croccanti e lucidi, che si spezzino di netto, senza macchie o semi già grossi.",
+      "Choose snow peas with flat, bright green, crisp, glossy pods that snap cleanly, with no spots or large seeds."
+    ],
+    "cs": [
+      "Frigo · 3-5 giorni",
+      "Fridge · 3-5 days"
+    ],
+    "si": [
+      "Conservale in frigorifero in un sacchetto forato e consumale in 3-5 giorni. Sono sensibili all'etilene: tienile lontane dalla frutta che matura.",
+      "Keep them in the fridge in a perforated bag and use within 3-5 days. They are ethylene-sensitive: keep them away from ripening fruit."
+    ],
+    "hb": [
+      "Si mangia tutto il baccello; per 100 g sono ricche di vitamina C, vitamina K, fibre e proteine e fonte di folati.",
+      "The whole pod is eaten; per 100 g they are high in vitamin C, vitamin K, fibre and protein and a source of folate."
+    ],
+    "wr": [
+      "Basta togliere il filo laterale: si cuociono in pochi minuti, anche saltate.",
+      "Just remove the side string: they cook in minutes, also stir-fried."
+    ]
+  },
+  "broccolo_romanesco_romanesco": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "wwf"
+    ],
+    "sl": [
+      "Infiorescenza compatta verde chiaro, punte sode.",
+      "Compact, light green head with firm spires."
+    ],
+    "ds": [
+      "Scegli broccoli romaneschi con l'infiorescenza compatta e pesante, verde chiaro e uniforme, con le tipiche punte a spirale sode e senza macchie scure. Le foglie devono essere fresche.",
+      "Choose Romanesco with a compact, heavy, evenly light green head and firm spiral spires with no dark spots. The leaves should be fresh."
+    ],
+    "cs": [
+      "Frigo · 3-5 giorni",
+      "Fridge · 3-5 days"
+    ],
+    "si": [
+      "Conservalo in frigorifero in un sacchetto forato e consumalo in 3-5 giorni. È sensibile all'etilene: tienilo lontano dalla frutta che matura.",
+      "Keep it in the fridge in a perforated bag and use within 3-5 days. It is ethylene-sensitive: keep it away from ripening fruit."
+    ],
+    "hb": [
+      "È un tipo di cavolfiore tipico del Lazio; le tabelle non lo distinguono, quindi i valori sono quelli del cavolfiore (USDA), come approssimazione: povero di calorie, per 100 g è ricco di vitamina C, fibre e proteine e fonte di vitamina K e folati.",
+      "It is a type of cauliflower typical of Lazio; tables do not list it separately, so values are those of cauliflower (USDA), as an approximation: low in calories, per 100 g it is high in vitamin C, fibre and protein and a source of vitamin K and folate."
+    ],
+    "wr": [
+      "Il torsolo e le foglie tenere si cuociono con le cimette o vanno in minestre.",
+      "The core and tender leaves can be cooked with the florets or used in soups."
+    ]
+  },
+  "puntarelle_puntarelle": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "ortodacoltivare",
+      "bda_ieo"
+    ],
+    "sl": [
+      "Germogli bianchi, sodi e croccanti.",
+      "White, firm, crisp shoots."
+    ],
+    "ds": [
+      "Le puntarelle sono i germogli della cicoria catalogna. Scegli cespi con germogli bianchi, sodi e croccanti, senza parti scure o molli. Si trovano in inverno, soprattutto nel Lazio.",
+      "Puntarelle are the shoots of catalogna chicory. Choose heads with white, firm, crisp shoots and no dark or soft parts. They are found in winter, especially in Lazio."
+    ],
+    "cs": [
+      "Frigo · 1-4 giorni",
+      "Fridge · 1-4 days"
+    ],
+    "si": [
+      "Conservale in frigorifero in un sacchetto e consumale in pochi giorni. Tagliate a listarelle, si tengono in acqua fredda per renderle ricce e meno amare.",
+      "Keep them in the fridge in a bag and use within a few days. Cut into strips, they are soaked in cold water to curl them and make them less bitter."
+    ],
+    "hb": [
+      "Povere di calorie, per 100 g sono ricche di folati e fibre e fonte di vitamina C, vitamina E e potassio (valori della cicoria catalogna).",
+      "Low in calories, per 100 g they are high in folate and fibre and a source of vitamin C, vitamin E and potassium (values for catalogna chicory)."
+    ],
+    "wr": [
+      "Le foglie esterne della catalogna si ripassano in padella.",
+      "The outer catalogna leaves can be sautéed."
+    ]
+  },
+  "asparago_selvatico_wild_asparagus": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "crea",
+      "ortodacoltivare"
+    ],
+    "sl": [
+      "Turioni sottili, verde scuro, teneri.",
+      "Thin, dark green, tender spears."
+    ],
+    "ds": [
+      "L'asparago selvatico ha turioni sottili, verde scuro e dal sapore amarognolo. Scegli mazzetti con punte chiuse e turgide e steli che si spezzino facilmente. Si raccoglie in primavera; la raccolta è regolata dalle leggi regionali.",
+      "Wild asparagus has thin, dark green, slightly bitter spears. Choose bunches with closed, turgid tips and stems that snap easily. It is gathered in spring; picking is regulated by regional laws."
+    ],
+    "cs": [
+      "Frigo, in carta umida · 3-4 giorni",
+      "Fridge, in damp paper · 3-4 days"
+    ],
+    "si": [
+      "Conservalo in frigorifero avvolto in carta umida o in piedi in un bicchiere d'acqua, e consumalo in 3-4 giorni.",
+      "Keep it in the fridge wrapped in damp paper or upright in a glass of water and use within 3-4 days."
+    ],
+    "hb": [
+      "Povero di calorie, per 100 g è ricco di folati, riboflavina, fibre e proteine e fonte di vitamina A e vitamina C.",
+      "Low in calories, per 100 g it is high in folate, riboflavin, fibre and protein and a source of vitamin A and vitamin C."
+    ],
+    "wr": [
+      "Si usa solo la parte tenera: si spezza da sola dove finisce la parte fibrosa, ottimo in frittate e risotti.",
+      "Only the tender part is used: it snaps where the fibrous part begins; great in omelettes and risottos."
+    ]
+  },
+  "salicornia_samphire": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "ortodacoltivare",
+      "eufic_map"
+    ],
+    "sl": [
+      "Rametti verde brillante, turgidi e croccanti.",
+      "Bright green, turgid, crisp sprigs."
+    ],
+    "ds": [
+      "Scegli rametti di salicornia verde brillante, turgidi e croccanti, senza parti molli o scure. Cresce in ambienti salmastri e ha un sapore salato.",
+      "Choose bright green, turgid, crisp samphire sprigs with no soft or dark parts. It grows in salt marshes and tastes salty."
+    ],
+    "cs": [
+      "Frigo · pochi giorni",
+      "Fridge · a few days"
+    ],
+    "si": [
+      "Conservala in frigorifero in un contenitore chiuso, avvolta in carta umida, e consumala in pochi giorni.",
+      "Keep it in the fridge in a closed container, wrapped in damp paper, and use within a few days."
+    ],
+    "hb": [
+      "Le tabelle di composizione ufficiali non riportano i valori nutrizionali di questo alimento.",
+      "Official food composition tables do not give nutrition values for this food."
+    ],
+    "wr": [
+      "Si sbollenta pochi secondi e si usa al posto del sale in insalate e piatti di pesce.",
+      "Blanch it for a few seconds and use it instead of salt in salads and fish dishes."
+    ]
+  },
+  "gombo_okra": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "uc_davis",
+      "usda_hb66"
+    ],
+    "sl": [
+      "Baccelli piccoli, verde vivo, teneri.",
+      "Small, bright green, tender pods."
+    ],
+    "ds": [
+      "Scegli baccelli piccoli (5-10 cm), verde vivo, teneri e senza macchie scure: quelli grandi sono fibrosi.",
+      "Choose small (5-10 cm), bright green, tender pods with no dark spots: large ones are fibrous."
+    ],
+    "cs": [
+      "Frigo, zona meno fredda · pochi giorni",
+      "Fridge, warmest part · a few days"
+    ],
+    "si": [
+      "Conservalo in un sacchetto di carta nella parte meno fredda del frigorifero e consumalo in pochi giorni: sotto i 7 °C subisce danni da freddo (scolorimento, butteratura, marciumi).",
+      "Keep it in a paper bag in the warmest part of the fridge and use within a few days: below 7 °C it suffers chilling injury (discoloration, pitting, decay)."
+    ],
+    "hb": [
+      "Povero di calorie, per 100 g è ricco di vitamina K, folati, manganese e fibre e fonte di vitamina C e magnesio.",
+      "Low in calories, per 100 g it is high in vitamin K, folate, manganese and fibre and a source of vitamin C and magnesium."
+    ],
+    "wr": [
+      "Cotto intero resta meno mucillaginoso; si usa in stufati e minestre.",
+      "Cooked whole it is less slimy; it is used in stews and soups."
+    ]
+  },
+  "zucchina_spinosa_chayote": {
+    "pl": "temperatura_ambiente",
+    "rt": "non_climaterico",
+    "src": [
+      "ortodacoltivare",
+      "usda_fdc"
+    ],
+    "sl": [
+      "Frutto sodo, verde chiaro, senza macchie.",
+      "Firm, light green fruit with no spots."
+    ],
+    "ds": [
+      "Scegli frutti sodi, verde chiaro e uniformi, senza macchie o parti molli. La zucchina spinosa (chayote) ha un sapore delicato, tra zucchina e cetriolo.",
+      "Choose firm, evenly light green fruits with no spots or soft parts. Chayote has a mild taste, between courgette and cucumber."
+    ],
+    "cs": [
+      "Luogo fresco · pochi giorni",
+      "Cool place · a few days"
+    ],
+    "si": [
+      "Conservala in un luogo fresco o nella parte meno fredda del frigorifero e consumala in pochi giorni.",
+      "Keep it in a cool place or the warmest part of the fridge and use within a few days."
+    ],
+    "hb": [
+      "Molto povera di calorie, per 100 g è ricca di folati e fibre.",
+      "Very low in calories, per 100 g it is high in folate and fibre."
+    ],
+    "wr": [
+      "Si cucina come la zucchina; anche il seme interno è commestibile.",
+      "Cook it like courgette; the inner seed is edible too."
+    ]
+  },
+  "alchechengi_cape_gooseberry": {
+    "pl": "temperatura_ambiente",
+    "rt": "climaterico",
+    "src": [
+      "wwf",
+      "altroconsumo"
+    ],
+    "sl": [
+      "Bacche arancioni, sode, nel calice secco intatto.",
+      "Orange, firm berries inside an intact dry husk."
+    ],
+    "ds": [
+      "Scegli alchechengi con bacche arancio brillante, sode e lucide, avvolte in un calice secco e integro. Il calice non si mangia.",
+      "Choose cape gooseberries with bright orange, firm, glossy berries in an intact dry husk. The husk is not eaten."
+    ],
+    "cs": [
+      "Temperatura ambiente, nel calice",
+      "Room temperature, in the husk"
+    ],
+    "si": [
+      "Conservali nel loro calice in un luogo fresco e asciutto, o in frigorifero per qualche giorno in più.",
+      "Keep them in their husk in a cool, dry place, or in the fridge for a few extra days."
+    ],
+    "hb": [
+      "Per 100 g sono fonte di proteine e niacina e poveri di grassi.",
+      "Per 100 g they are a source of protein and niacin and low in fat."
+    ],
+    "wr": [
+      "Con il calice aperto all'indietro sono una decorazione naturale per dolci.",
+      "With the husk folded back they make a natural decoration for desserts."
+    ]
+  },
+  "cocco_coconut": {
+    "pl": "temperatura_ambiente",
+    "rt": "non_climaterico",
+    "src": [
+      "crea",
+      "usda_hb66"
+    ],
+    "sl": [
+      "Noce pesante, con acqua che si sente agitandola.",
+      "Heavy nut with water you can hear when shaken."
+    ],
+    "ds": [
+      "Scegli noci di cocco pesanti, senza crepe né muffe, in cui si senta l'acqua agitandole. I tre 'occhi' devono essere asciutti e sodi.",
+      "Choose heavy coconuts without cracks or mould, in which you can hear the water when shaken. The three 'eyes' should be dry and firm."
+    ],
+    "cs": [
+      "Intero al fresco; aperto in frigo",
+      "Whole in a cool place; opened in fridge"
+    ],
+    "si": [
+      "La noce intera si conserva in un luogo fresco; la polpa aperta va in frigorifero coperta d'acqua e consumata in pochi giorni.",
+      "Keep the whole nut in a cool place; opened flesh goes in the fridge covered with water and should be eaten within a few days."
+    ],
+    "hb": [
+      "Per 100 g la polpa è ricca di fibre, rame e manganese ma molto calorica e ricca di grassi saturi. Il cocco non è tra gli allergeni della frutta a guscio.",
+      "Per 100 g the flesh is high in fibre, copper and manganese but very energy-dense and rich in saturated fat. Coconut is not among the tree-nut allergens."
+    ],
+    "wr": [
+      "L'acqua di cocco si beve; la polpa avanzata si grattugia e si congela.",
+      "Drink the coconut water; leftover flesh can be grated and frozen."
+    ]
+  },
+  "carruba_carob": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "crea",
+      "bda_ieo"
+    ],
+    "sl": [
+      "Baccelli scuri, lucidi, secchi e integri.",
+      "Dark, glossy, dry, intact pods."
+    ],
+    "ds": [
+      "Scegli carrube con baccelli marrone scuro, lucidi, secchi e integri, senza muffe. Si mangiano anche crude e hanno un sapore dolce, simile al cacao.",
+      "Choose carob pods that are dark brown, glossy, dry and intact, with no mould. They can be eaten raw and taste sweet, like cocoa."
+    ],
+    "cs": [
+      "Luogo fresco e asciutto",
+      "Cool, dry place"
+    ],
+    "si": [
+      "Conservale in un luogo fresco, asciutto e buio, in un contenitore chiuso.",
+      "Keep them in a closed container in a cool, dry, dark place."
+    ],
+    "hb": [
+      "Per 100 g sono ricche di fibre, potassio, calcio, riboflavina e rame e povere di grassi.",
+      "Per 100 g they are high in fibre, potassium, calcium, riboflavin and copper and low in fat."
+    ],
+    "wr": [
+      "I baccelli si macinano in farina da usare in dolci e bevande al posto del cacao; i semi sono duri e si scartano.",
+      "Pods can be ground into flour for cakes and drinks instead of cocoa; the hard seeds are discarded."
+    ]
+  },
+  "giuggiola_jujube": {
+    "pl": "temperatura_ambiente",
+    "rt": "non_climaterico",
+    "src": [
+      "uc_davis",
+      "ortodacoltivare"
+    ],
+    "sl": [
+      "Frutti sodi, buccia lucida da verde a rossiccia.",
+      "Firm fruits with glossy skin from green to reddish."
+    ],
+    "ds": [
+      "Scegli giuggiole sode, con la buccia lucida e senza ammaccature: verdi screziate di rosso sono croccanti, tutte rosso-brune sono più dolci e farinose. Si trovano in autunno.",
+      "Choose firm jujubes with glossy, unbruised skin: green mottled with red they are crunchy, fully red-brown they are sweeter and mealier. They are found in autumn."
+    ],
+    "cs": [
+      "Temperatura ambiente · pochi giorni",
+      "Room temperature · a few days"
+    ],
+    "si": [
+      "Conservale a temperatura ambiente per pochi giorni o in frigorifero per qualche giorno in più; lasciate all'aria si raggrinziscono.",
+      "Keep them at room temperature for a few days or in the fridge a few days longer; left in the air they shrivel."
+    ],
+    "hb": [
+      "Per 100 g sono ricche di vitamina C e senza grassi.",
+      "Per 100 g they are high in vitamin C and fat-free."
+    ],
+    "wr": [
+      "Le giuggiole raggrinzite si usano in confetture e nel tradizionale 'brodo di giuggiole'.",
+      "Shrivelled jujubes are used in jams and the traditional 'brodo di giuggiole' liqueur."
+    ]
+  },
+  "nespola_comune_medlar": {
+    "pl": "temperatura_ambiente",
+    "rt": "climaterico",
+    "src": [
+      "ortodacoltivare",
+      "eufic_map"
+    ],
+    "sl": [
+      "Frutti bruni, morbidi solo dopo l'ammezzimento.",
+      "Brown fruits, soft only after bletting."
+    ],
+    "ds": [
+      "La nespola comune si raccoglie in autunno ancora dura e si mangia solo dopo l'ammezzimento, quando la polpa diventa bruna e morbida. Scegli frutti integri, senza muffe.",
+      "The medlar is picked in autumn while still hard and eaten only after bletting, when the flesh turns brown and soft. Choose intact fruits with no mould."
+    ],
+    "cs": [
+      "Ammezzire su paglia · poi subito",
+      "Blet on straw · then eat soon"
+    ],
+    "si": [
+      "Lascia ammezzire i frutti in un luogo fresco e asciutto, su paglia o carta, per alcune settimane; quando sono morbidi consumali subito.",
+      "Let the fruits blet in a cool, dry place, on straw or paper, for a few weeks; once soft eat them straight away."
+    ],
+    "hb": [
+      "Le tabelle di composizione ufficiali non riportano i valori nutrizionali di questo alimento.",
+      "Official food composition tables do not give nutrition values for this food."
+    ],
+    "wr": [
+      "La polpa ammezzita si passa al setaccio per gelatine e confetture.",
+      "Bletted flesh can be sieved for jellies and jams."
+    ]
+  },
+  "mirabella_mirabelle_plum": {
+    "pl": "temperatura_ambiente",
+    "rt": "climaterico",
+    "src": [
+      "biosuisse",
+      "usda_hb66"
+    ],
+    "sl": [
+      "Piccole susine gialle, profumate, appena cedevoli.",
+      "Small, fragrant yellow plums, slightly yielding."
+    ],
+    "ds": [
+      "Le mirabelle sono piccole susine gialle, spesso punteggiate di rosso. Scegli frutti profumati, integri e appena cedevoli al tatto.",
+      "Mirabelles are small yellow plums, often speckled with red. Choose fragrant, intact fruits that yield slightly to the touch."
+    ],
+    "cs": [
+      "Fuori frigo a maturare, poi frigo",
+      "Ripen out of fridge, then fridge"
+    ],
+    "si": [
+      "Falle maturare a temperatura ambiente per 1-2 giorni, poi conservale in frigorifero e consumale in 3-5 giorni.",
+      "Ripen them at room temperature for 1-2 days, then keep them in the fridge and eat within 3-5 days."
+    ],
+    "hb": [
+      "Valori della voce USDA delle susine, come approssimazione: per 100 g è ricca di fibre e senza grassi.",
+      "Values for the USDA plum entry, as an approximation: per 100 g it is high in fibre and fat-free."
+    ],
+    "wr": [
+      "Le mirabelle molto mature diventano confetture, crostate e distillati.",
+      "Very ripe mirabelles make jams, tarts and spirits."
+    ]
+  },
+  "finferlo_chanterelle": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "bda_ieo",
+      "usda_hb66"
+    ],
+    "sl": [
+      "Funghi giallo-arancio, sodi, asciutti, senza larve.",
+      "Yellow-orange, firm, dry mushrooms with no larvae."
+    ],
+    "ds": [
+      "Scegli finferli giallo-arancio, sodi e asciutti, con il profumo fruttato, senza parti molli, viscide o con larve. Comprali solo da venditori autorizzati: i funghi spontanei devono essere controllati da un micologo.",
+      "Choose yellow-orange, firm, dry chanterelles with a fruity smell and no soft, slimy or wormy parts. Buy only from authorised sellers: wild mushrooms must be checked by a mycologist."
+    ],
+    "cs": [
+      "Frigo, in carta · 3-7 giorni",
+      "Fridge, in paper · 3-7 days"
+    ],
+    "si": [
+      "Conservali in frigorifero in un sacchetto di carta o in un contenitore non chiuso, senza lavarli, e consumali in pochi giorni. Puliscili con un pennello.",
+      "Keep them unwashed in the fridge in a paper bag or an open container and use within a few days. Clean them with a brush."
+    ],
+    "hb": [
+      "Poveri di calorie, per 100 g sono ricchi di vitamina D, niacina, ferro, fibre e proteine.",
+      "Low in calories, per 100 g they are high in vitamin D, niacin, iron, fibre and protein."
+    ],
+    "wr": [
+      "I finferli si cuociono sempre; quelli avanzati si trifolano e si congelano.",
+      "Always cook chanterelles; leftovers can be sautéed and frozen."
+    ]
+  },
+  "spugnola_morel": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "bda_ieo",
+      "usda_hb66"
+    ],
+    "sl": [
+      "Cappello alveolato, sodo, asciutto, senza larve.",
+      "Honeycomb cap, firm, dry, no larvae."
+    ],
+    "ds": [
+      "Le spugnole hanno il cappello alveolato e si trovano in primavera. Scegline di sode e asciutte, senza parti molli o larve, e comprale solo da venditori autorizzati: si confondono con specie tossiche.",
+      "Morels have a honeycomb cap and are found in spring. Choose firm, dry ones with no soft parts or larvae, and buy only from authorised sellers: they can be confused with toxic species."
+    ],
+    "cs": [
+      "Frigo, in carta · 3-7 giorni",
+      "Fridge, in paper · 3-7 days"
+    ],
+    "si": [
+      "Conservale in frigorifero in un sacchetto di carta e consumale in pochi giorni. Si mangiano solo ben cotte: crude sono tossiche.",
+      "Keep them in the fridge in a paper bag and use within a few days. Eat them only well cooked: raw morels are toxic."
+    ],
+    "hb": [
+      "Povere di calorie, per 100 g sono ricche di vitamina D, fibre e proteine. Vanno sempre cotte a fondo.",
+      "Low in calories, per 100 g they are high in vitamin D, fibre and protein. Always cook them thoroughly."
+    ],
+    "wr": [
+      "Le spugnole si possono essiccare e reidratare in acqua tiepida.",
+      "Morels can be dried and rehydrated in warm water."
+    ]
+  },
+  "shiitake_shiitake": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_fdc",
+      "usda_hb66"
+    ],
+    "sl": [
+      "Cappello sodo e bombato, lamelle chiare.",
+      "Firm, domed cap, pale gills."
+    ],
+    "ds": [
+      "Scegli shiitake con il cappello sodo, bombato e asciutto e le lamelle chiare e integre, senza parti molli o viscide.",
+      "Choose shiitake with a firm, domed, dry cap and pale, intact gills, with no soft or slimy parts."
+    ],
+    "cs": [
+      "Frigo, in carta · 3-7 giorni",
+      "Fridge, in paper · 3-7 days"
+    ],
+    "si": [
+      "Conservali in frigorifero in un sacchetto di carta, senza lavarli, e consumali in pochi giorni.",
+      "Keep them unwashed in the fridge in a paper bag and use within a few days."
+    ],
+    "hb": [
+      "Poveri di calorie, per 100 g sono ricchi di fibre e proteine e fonte di riboflavina, niacina, vitamina B6, potassio e fosforo.",
+      "Low in calories, per 100 g they are high in fibre and protein and a source of riboflavin, niacin, vitamin B6, potassium and phosphorus."
+    ],
+    "wr": [
+      "I gambi sono duri: usali per insaporire brodi.",
+      "The stems are tough: use them to flavour stocks."
+    ]
+  },
+  "cardoncello_king_oyster_mushroom": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66"
+    ],
+    "sl": [
+      "Gambo bianco e sodo, cappello asciutto.",
+      "Firm white stem, dry cap."
+    ],
+    "ds": [
+      "Il cardoncello è un fungo tipico di Puglia e Basilicata, coltivato e spontaneo. Scegline con il gambo bianco e sodo e il cappello asciutto, senza parti molli.",
+      "Cardoncello is a mushroom typical of Apulia and Basilicata, cultivated and wild. Choose ones with a firm white stem and a dry cap, with no soft parts."
+    ],
+    "cs": [
+      "Frigo, in carta · 3-7 giorni",
+      "Fridge, in paper · 3-7 days"
+    ],
+    "si": [
+      "Conservalo in frigorifero in un sacchetto di carta e consumalo in pochi giorni.",
+      "Keep it in the fridge in a paper bag and use within a few days."
+    ],
+    "hb": [
+      "Valori della voce USDA del fungo ostrica (Pleurotus ostreatus), dello stesso genere, come approssimazione: povero di calorie, per 100 g è ricco di niacina, fibre e proteine e fonte di riboflavina, folati, potassio, fosforo e rame.",
+      "Values for the USDA oyster mushroom entry (Pleurotus ostreatus), same genus, as an approximation: low in calories, per 100 g it is high in niacin, fibre and protein and a source of riboflavin, folate, potassium, phosphorus and copper."
+    ],
+    "wr": [
+      "Si mangia anche il gambo, carnoso e saporito, ottimo alla griglia.",
+      "The fleshy, tasty stem is eaten too; great grilled."
+    ]
+  },
+  "lampascioni_tassel_hyacinth": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "masaf_pat"
+    ],
+    "sl": [
+      "Bulbi sodi, pesanti, senza germogli.",
+      "Firm, heavy bulbs with no sprouts."
+    ],
+    "ds": [
+      "I lampascioni sono i bulbi di una pianta spontanea, tipici di Puglia e Basilicata. Scegli bulbi sodi e pesanti, senza germogli o parti molli. Hanno un sapore amarognolo.",
+      "Lampascioni are the bulbs of a wild plant, typical of Apulia and Basilicata. Choose firm, heavy bulbs with no sprouts or soft parts. They taste slightly bitter."
+    ],
+    "cs": [
+      "Luogo fresco e asciutto",
+      "Cool, dry place"
+    ],
+    "si": [
+      "Conservali in un luogo fresco, asciutto e buio, come le cipolle.",
+      "Keep them in a cool, dry, dark place, like onions."
+    ],
+    "hb": [
+      "Le tabelle di composizione ufficiali non riportano i valori nutrizionali di questo alimento.",
+      "Official food composition tables do not give nutrition values for this food."
+    ],
+    "wr": [
+      "Per togliere l'amaro si lasciano in acqua fredda, cambiandola più volte, prima di cuocerli.",
+      "To remove bitterness soak them in cold water, changing it several times, before cooking."
+    ]
+  },
+  "cicerchia_grass_pea": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "masaf_pat"
+    ],
+    "sl": [
+      "Semi secchi, integri, di colore uniforme.",
+      "Dry, intact seeds of even colour."
+    ],
+    "ds": [
+      "La cicerchia è un legume tradizionale del Centro Italia, venduto secco. Scegli semi integri, di colore uniforme, senza fori o polvere.",
+      "Grass pea is a traditional legume of central Italy, sold dried. Choose intact seeds of even colour, with no holes or dust."
+    ],
+    "cs": [
+      "Dispensa, in barattolo chiuso",
+      "Pantry, in a closed jar"
+    ],
+    "si": [
+      "Conservala in un barattolo chiuso in un luogo fresco e asciutto. Prima della cottura va tenuta in ammollo a lungo, cambiando l'acqua.",
+      "Keep it in a closed jar in a cool, dry place. Before cooking soak it for a long time, changing the water."
+    ],
+    "hb": [
+      "Va consumata con moderazione e dopo un lungo ammollo: un consumo eccessivo e prolungato è associato a una malattia neurologica (latirismo). Le tabelle di composizione ufficiali non riportano i valori nutrizionali di questo alimento.",
+      "Eat it in moderation and after long soaking: excessive, prolonged consumption is linked to a neurological disease (lathyrism). Official food composition tables do not give nutrition values for this food."
+    ],
+    "wr": [
+      "Si usa in zuppe e passati, come i ceci.",
+      "It is used in soups and purées, like chickpeas."
+    ]
+  },
+  "cedro_citron": {
+    "pl": "temperatura_ambiente",
+    "rt": "non_climaterico",
+    "src": [
+      "ortodacoltivare",
+      "usda_hb66"
+    ],
+    "sl": [
+      "Frutto grande, pesante, buccia spessa e profumata.",
+      "Large, heavy fruit with thick, fragrant peel."
+    ],
+    "ds": [
+      "Il cedro è un grande agrume dalla buccia spessa e rugosa e dalla polpa scarsa e acida; in Italia c'è il Cedro di Santa Maria del Cedro DOP. Scegli frutti pesanti, profumati, senza macchie molli.",
+      "Citron is a large citrus with thick, wrinkled peel and little, sour flesh; Italy has the PDO Cedro di Santa Maria del Cedro. Choose heavy, fragrant fruits with no soft spots."
+    ],
+    "cs": [
+      "Temperatura ambiente · 10 giorni",
+      "Room temperature · 10 days"
+    ],
+    "si": [
+      "Conservalo a temperatura ambiente per circa 10 giorni, o in frigorifero più a lungo; non tenerlo sotto gli 11-13 °C troppo a lungo perché soffre il freddo.",
+      "Keep it at room temperature for about 10 days, or longer in the fridge; avoid long storage below 11-13 °C as it is chilling-sensitive."
+    ],
+    "hb": [
+      "Le tabelle di composizione ufficiali non riportano i valori nutrizionali di questo alimento.",
+      "Official food composition tables do not give nutrition values for this food."
+    ],
+    "wr": [
+      "Si usa soprattutto la buccia: candita, in liquori e nei dolci.",
+      "Mainly the peel is used: candied, in liqueurs and in desserts."
+    ]
+  },
+  "chinotto_chinotto": {
+    "pl": "temperatura_ambiente",
+    "rt": "non_climaterico",
+    "src": [
+      "masaf_pat"
+    ],
+    "sl": [
+      "Piccoli frutti arancioni, sodi, profumati.",
+      "Small, firm, fragrant orange fruits."
+    ],
+    "ds": [
+      "Il chinotto è un piccolo agrume amaro, tipico della Liguria (Presidio Slow Food a Savona). Scegli frutti sodi, arancioni e profumati.",
+      "Chinotto is a small bitter citrus typical of Liguria. Choose firm, orange, fragrant fruits."
+    ],
+    "cs": [
+      "Temperatura ambiente · 10 giorni",
+      "Room temperature · 10 days"
+    ],
+    "si": [
+      "Conservalo in un luogo fresco per circa 10 giorni, o in frigorifero più a lungo.",
+      "Keep it in a cool place for about 10 days, or longer in the fridge."
+    ],
+    "hb": [
+      "Le tabelle di composizione ufficiali non riportano i valori nutrizionali di questo alimento.",
+      "Official food composition tables do not give nutrition values for this food."
+    ],
+    "wr": [
+      "È troppo amaro per mangiarlo crudo: si usa candito, sciroppato o per bevande.",
+      "It is too bitter to eat raw: it is used candied, in syrup or for drinks."
+    ]
+  },
+  "oliva_olive": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "crea",
+      "usda_hb66"
+    ],
+    "sl": [
+      "Olive sode, integre, di colore uniforme.",
+      "Firm, intact olives of even colour."
+    ],
+    "ds": [
+      "Le olive fresche sono amare e non si mangiano crude: vanno addolcite e conservate (in salamoia, al forno, sotto sale). Scegli olive sode e integre; per le olive da tavola segui l'etichetta. In Italia ci sono diverse olive DOP/IGP.",
+      "Fresh olives are bitter and cannot be eaten raw: they must be cured and preserved (in brine, baked, salted). Choose firm, intact olives; for table olives follow the label. Italy has several PDO/PGI olives."
+    ],
+    "cs": [
+      "Da tavola aperte: frigo",
+      "Opened table olives: fridge"
+    ],
+    "si": [
+      "Le olive fresche vanno lavorate subito; quelle da tavola aperte si conservano in frigorifero nel loro liquido. Le olive fresche soffrono il freddo sotto i 7 °C.",
+      "Fresh olives should be processed straight away; opened table olives keep in the fridge in their liquid. Fresh olives suffer chilling injury below 7 °C."
+    ],
+    "hb": [
+      "Valori delle olive da tavola: per 100 g sono fonte di vitamina E, potassio e fibre, ma possono essere ricche di sale.",
+      "Values for table olives: per 100 g they are a source of vitamin E, potassium and fibre, but can be salty."
+    ],
+    "wr": [
+      "Le olive avanzate vanno in sughi, pane e paté.",
+      "Leftover olives go into sauces, bread and tapenades."
+    ]
+  },
+  "zafferano_saffron": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "masaf_pat",
+      "bda_ieo"
+    ],
+    "sl": [
+      "Stimmi interi, rosso intenso, profumo forte.",
+      "Whole, deep red stigmas, strong aroma."
+    ],
+    "ds": [
+      "Lo zafferano si ricava dagli stimmi del fiore di Crocus sativus, raccolti a mano in autunno. Scegli stimmi interi, rosso intenso e profumati; in Italia ci sono tre zafferani DOP (L'Aquila, San Gimignano, Sardegna).",
+      "Saffron comes from the stigmas of the Crocus sativus flower, hand-picked in autumn. Choose whole, deep red, fragrant stigmas; Italy has three PDO saffrons (L'Aquila, San Gimignano, Sardinia)."
+    ],
+    "cs": [
+      "Dispensa, al buio e chiuso",
+      "Pantry, dark and sealed"
+    ],
+    "si": [
+      "Conservalo in un contenitore ermetico, al buio e lontano da calore e umidità.",
+      "Keep it in an airtight container, in the dark, away from heat and moisture."
+    ],
+    "hb": [
+      "Se ne usano pochi milligrammi per piatto, quindi il suo apporto nutrizionale è trascurabile.",
+      "Only a few milligrams are used per dish, so its nutritional contribution is negligible."
+    ],
+    "wr": [
+      "Gli stimmi si mettono in infusione in poca acqua tiepida prima di aggiungerli al piatto.",
+      "Steep the stigmas in a little warm water before adding them to the dish."
+    ]
+  }
+}

@@ -1,0 +1,314 @@
+{
+ "_doc": "USDA Agriculture Handbook 66 (2016), capitolo 'Respiratory Metabolism', Table 1 'Respiration rates of various perishable commodities' (classificazione di Kader, mg CO2/kg/h a 5 °C), PDF pag. 78 (pag. stampata 68). Classi: very_low <5, low 5-10, moderate 10-20, high 20-40, very_high 40-60, extremely_high >60. 'approx' = alimento non citato ma rientrante nella voce (es. 'citrus', 'nuts', 'lettuce', 'pepper', 'mushroom').",
+ "page": 78,
+ "items": {
+  "arachide_peanut": [
+   "very_low",
+   "approx",
+   "nuts"
+  ],
+  "mela_apple": [
+   "low",
+   "exact",
+   "apple"
+  ],
+  "arancia_orange": [
+   "low",
+   "approx",
+   "citrus"
+  ],
+  "limone_lemon": [
+   "low",
+   "approx",
+   "citrus"
+  ],
+  "lime_lime": [
+   "low",
+   "approx",
+   "citrus"
+  ],
+  "mandarino_mandarin": [
+   "low",
+   "approx",
+   "citrus"
+  ],
+  "clementine_clementine": [
+   "low",
+   "approx",
+   "citrus"
+  ],
+  "pompelmo_grapefruit": [
+   "low",
+   "approx",
+   "citrus"
+  ],
+  "uva_table_grape": [
+   "low",
+   "exact",
+   "grape"
+  ],
+  "kiwi_kiwifruit": [
+   "low",
+   "exact",
+   "kiwifruit"
+  ],
+  "cipolla_estiva_summer_onion": [
+   "low",
+   "approx",
+   "onion"
+  ],
+  "cipolla_invernale_winter_onion": [
+   "low",
+   "exact",
+   "onion"
+  ],
+  "patata_potato": [
+   "low",
+   "exact",
+   "potato"
+  ],
+  "albicocca_apricot": [
+   "moderate",
+   "exact",
+   "apricot"
+  ],
+  "banana_banana": [
+   "moderate",
+   "exact",
+   "banana"
+  ],
+  "ciliegia_cherry": [
+   "moderate",
+   "exact",
+   "cherry"
+  ],
+  "pesca_peach": [
+   "moderate",
+   "exact",
+   "peach"
+  ],
+  "pesca_noce_nectarine": [
+   "moderate",
+   "exact",
+   "nectarine"
+  ],
+  "pera_pear": [
+   "moderate",
+   "exact",
+   "pear"
+  ],
+  "susina_plum": [
+   "moderate",
+   "exact",
+   "plum"
+  ],
+  "fico_fig": [
+   "moderate",
+   "exact",
+   "fig"
+  ],
+  "cavolo_cappuccio_cabbage": [
+   "moderate",
+   "exact",
+   "cabbage"
+  ],
+  "cavolo_verza_savoy_cabbage": [
+   "moderate",
+   "approx",
+   "cabbage"
+  ],
+  "cavolo_rosso_red_cabbage": [
+   "moderate",
+   "approx",
+   "cabbage"
+  ],
+  "carota_carrot": [
+   "moderate",
+   "exact",
+   "carrot"
+  ],
+  "lattuga_da_cespo_head_lettuce": [
+   "moderate",
+   "exact",
+   "lettuce"
+  ],
+  "lattuga_da_taglio_leaf_lettuce": [
+   "moderate",
+   "approx",
+   "lettuce"
+  ],
+  "peperone_bell_pepper": [
+   "moderate",
+   "exact",
+   "pepper"
+  ],
+  "peperoncino_chili_pepper": [
+   "moderate",
+   "approx",
+   "pepper"
+  ],
+  "pomodoro_tomato": [
+   "moderate",
+   "exact",
+   "tomato"
+  ],
+  "fragola_strawberry": [
+   "high",
+   "exact",
+   "strawberry"
+  ],
+  "mora_blackberry": [
+   "high",
+   "exact",
+   "blackberry"
+  ],
+  "lampone_raspberry": [
+   "high",
+   "exact",
+   "raspberry"
+  ],
+  "cavolfiore_cauliflower": [
+   "high",
+   "exact",
+   "cauliflower"
+  ],
+  "avocado_avocado": [
+   "high",
+   "exact",
+   "avocado"
+  ],
+  "carciofo_artichoke": [
+   "very_high",
+   "exact",
+   "artichoke"
+  ],
+  "fagiolino_green_bean": [
+   "very_high",
+   "exact",
+   "snap bean"
+  ],
+  "cavoletto_di_bruxelles_brussels_sprout": [
+   "very_high",
+   "exact",
+   "Brussels sprouts"
+  ],
+  "asparago_asparagus": [
+   "extremely_high",
+   "exact",
+   "asparagus"
+  ],
+  "broccolo_broccoli": [
+   "extremely_high",
+   "exact",
+   "broccoli"
+  ],
+  "fungo_champignon_button_mushroom": [
+   "extremely_high",
+   "exact",
+   "mushroom"
+  ],
+  "fungo_pleurotus_oyster_mushroom": [
+   "extremely_high",
+   "approx",
+   "mushroom"
+  ],
+  "fungo_porcino_porcini_mushroom": [
+   "extremely_high",
+   "approx",
+   "mushroom"
+  ],
+  "fungo_ovolo_caesars_mushroom": [
+   "extremely_high",
+   "approx",
+   "mushroom"
+  ],
+  "pisello_pea": [
+   "extremely_high",
+   "exact",
+   "pea"
+  ],
+  "spinacio_spinach": [
+   "extremely_high",
+   "exact",
+   "spinach"
+  ],
+  "mais_corn": [
+   "extremely_high",
+   "exact",
+   "sweet corn"
+  ],
+  "noce_walnut": [
+   "very_low",
+   "approx",
+   "nuts"
+  ],
+  "nocciola_hazelnut": [
+   "very_low",
+   "approx",
+   "nuts"
+  ],
+  "mandorla_almond": [
+   "very_low",
+   "approx",
+   "nuts"
+  ],
+  "pistacchio_pistachio": [
+   "very_low",
+   "approx",
+   "nuts"
+  ],
+  "patata_dolce_sweet_potato": [
+   "low",
+   "exact",
+   "sweet potato"
+  ],
+  "cedro_citron": [
+   "low",
+   "approx",
+   "citrus"
+  ],
+  "chinotto_chinotto": [
+   "low",
+   "approx",
+   "citrus"
+  ],
+  "amarena_sour_cherry": [
+   "moderate",
+   "approx",
+   "cherry"
+  ],
+  "mirabella_mirabelle_plum": [
+   "moderate",
+   "approx",
+   "plum"
+  ],
+  "gelso_mulberry": [
+   "high",
+   "approx",
+   "blackberry"
+  ],
+  "sambuco_elderberry": [
+   "high",
+   "approx",
+   "blackberry"
+  ]
+ },
+ "_doc_q10": "Stima per prodotti sensibili al freddo misurati solo a temperature >= 10 °C: il tasso viene riportato a 5 °C con i Q10 tipici di USDA HB66 'Respiratory Metabolism' (0-10 °C: 2,5-4,0; 10-20 °C: 2,0-2,5; PDF p. 78), usando il valore minimo di ogni fascia, cioè la stima più prudente (tasso più alto). Classe marcata come stimata.",
+ "q10_estimates": {
+  "cetriolo_cucumber": {
+   "rate": 26,
+   "temp": 10,
+   "source": "USDA HB66 Table 1 (Cucumber, 10 °C)"
+  },
+  "melanzana_eggplant": {
+   "rate": 69,
+   "temp": 12.5,
+   "source": "USDA HB66 cap. Eggplant p. 332 (American eggplant 60-78 a 12,5 °C)"
+  },
+  "fico_d_india_prickly_pear": {
+   "rate": 31.5,
+   "temp": 20,
+   "source": "USDA HB66 cap. Prickly Pear p. 521 (27-36 a 20 °C)"
+  }
+ }
+}

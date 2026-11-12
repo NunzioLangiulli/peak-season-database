@@ -1,0 +1,526 @@
+{
+  "_doc": "Registro delle fonti (copiato in metadata.official_sources). Numerazione = prompt Fase 1; 'agg.' = fonti aggiunte in accordo con l'utente.",
+  "sources": [
+    {
+      "key": "bda_ieo",
+      "number": "1",
+      "name": "BDA-IEO - Banca Dati di Composizione degli Alimenti (Istituto Europeo di Oncologia)",
+      "url": "https://bda.ieo.it/",
+      "topics": [
+        "nutrition"
+      ],
+      "access": "API interna POST /api/BDA/FoodComponents",
+      "license_note": "Vedi condizioni d'uso: https://bda.ieo.it/?page_id=146"
+    },
+    {
+      "key": "crea",
+      "number": "2",
+      "name": "CREA Alimenti e Nutrizione - Tabelle di composizione degli alimenti (rev. 2019)",
+      "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/ricerca-per-alimento",
+      "topics": [
+        "nutrition",
+        "edible_portion"
+      ],
+      "access": "HTML statico",
+      "license_note": null
+    },
+    {
+      "key": "my_personaltrainer",
+      "number": "3/6",
+      "name": "My-PersonalTrainer",
+      "url": "https://www.my-personaltrainer.it/frutta-verdura-di-stagione.htm",
+      "topics": [
+        "health_benefits",
+        "storage",
+        "seasonality"
+      ],
+      "access": "HTML",
+      "license_note": "Testi protetti: usati solo come fonte di fatti, rielaborati"
+    },
+    {
+      "key": "reg_1924_2006",
+      "number": "4",
+      "name": "Regolamento (CE) n. 1924/2006 - indicazioni nutrizionali e sulla salute",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32006R1924",
+      "topics": [
+        "nutrition_claims"
+      ],
+      "access": "testo normativo",
+      "license_note": null
+    },
+    {
+      "key": "reg_1169_2011",
+      "number": "4b",
+      "name": "Regolamento (UE) n. 1169/2011 - Allegato XIII, Valori Nutritivi di Riferimento",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32011R1169",
+      "topics": [
+        "nutrition_claims",
+        "percent_nrv"
+      ],
+      "access": "testo normativo",
+      "license_note": null
+    },
+    {
+      "key": "larn_sinu",
+      "number": "4",
+      "name": "LARN - SINU (tabelle riassuntive, PDF locale)",
+      "url": "https://sinu.it/tabelle-larn-2014/",
+      "topics": [
+        "reference_intakes"
+      ],
+      "access": "fonti_locali/Tabelle-riassuntive_SINU.pdf",
+      "license_note": null
+    },
+    {
+      "key": "altroconsumo",
+      "number": "5",
+      "name": "Altroconsumo - Calendario frutta e verdura",
+      "url": "https://www.altroconsumo.it/alimentazione/fare-la-spesa/consigli/calendario-frutta-verdura",
+      "topics": [
+        "seasonality",
+        "buying_guide",
+        "storage"
+      ],
+      "access": "HTML, una scheda per alimento",
+      "license_note": "Testi protetti: usati solo come fonte di fatti, rielaborati"
+    },
+    {
+      "key": "greenpeace",
+      "number": "7",
+      "name": "Greenpeace Italia - Guida alla frutta e verdura di stagione (PDF locale)",
+      "url": "https://www.greenpeace.org/italy/",
+      "topics": [
+        "seasonality",
+        "waste_reduction"
+      ],
+      "access": "fonti_locali/calendario-frutta-e-verdura-di-stagione_greenpeace.pdf",
+      "license_note": null
+    },
+    {
+      "key": "wwf",
+      "number": "7b",
+      "name": "WWF Italia - Il calendario della frutta e verdura di stagione (PDF locale)",
+      "url": "https://www.wwf.it/ecotips",
+      "topics": [
+        "seasonality"
+      ],
+      "access": "fonti_locali/Calendario-della-Frutta-e-Verdura-di-Stagione.pdf",
+      "license_note": null
+    },
+    {
+      "key": "biosuisse",
+      "number": "agg.",
+      "name": "Bio Suisse - Calendario stagionale (Svizzera, PDF locale)",
+      "url": "https://bio-suisse.ch/calendariostagionale",
+      "topics": [
+        "seasonality_mountain_reference"
+      ],
+      "access": "fonti_locali/BioSuisse-calendariostagionale-2026-11-01.pdf",
+      "license_note": null
+    },
+    {
+      "key": "uc_davis",
+      "number": "8",
+      "name": "UC Davis Postharvest Research and Extension Center - Produce Fact Sheets",
+      "url": "https://postharvest.ucdavis.edu/produce-facts-sheets",
+      "topics": [
+        "postharvest",
+        "ethylene",
+        "chilling_injury"
+      ],
+      "access": "solo browser (Cloudflare)",
+      "license_note": null
+    },
+    {
+      "key": "usda_hb66",
+      "number": "9",
+      "name": "USDA ARS Agricultural Handbook 66 (2016)",
+      "url": "https://www.ars.usda.gov/is/np/commercialstorage/commercialstorage.pdf",
+      "topics": [
+        "postharvest",
+        "ethylene",
+        "storage_compatibility"
+      ],
+      "access": "PDF",
+      "license_note": "Pubblicazione governativa USA"
+    },
+    {
+      "key": "ortodacoltivare",
+      "number": "10",
+      "name": "Orto da Coltivare (Matteo Cereda) - tabelle di semina PDF + schede",
+      "url": "https://www.ortodacoltivare.it/calendario/calendario-delle-raccolte/",
+      "topics": [
+        "agricultural_calendar",
+        "agronomic_params"
+      ],
+      "access": "fonti_locali/odc-tabella-*.pdf + HTML",
+      "license_note": "Dati rielaborati graficamente nell'app (decisione utente)"
+    },
+    {
+      "key": "ismea",
+      "number": "11",
+      "name": "ISMEA Mercati",
+      "url": "https://www.ismeamercati.it/",
+      "topics": [
+        "harvest_periods",
+        "varieties"
+      ],
+      "access": "HTML per filiera",
+      "license_note": null
+    },
+    {
+      "key": "regional",
+      "number": "12",
+      "name": "Servizi agricoli regionali (Veneto Agricoltura, ERSA FVG, ARSIAL)",
+      "url": "https://www.arsial.it/",
+      "topics": [
+        "varieties",
+        "harvest_periods"
+      ],
+      "access": "HTML",
+      "license_note": null
+    },
+    {
+      "key": "eufic_map",
+      "number": "13",
+      "name": "EUFIC - Explore seasonal fruit and vegetables in Europe",
+      "url": "https://www.eufic.org/en/explore-seasonal-fruit-and-vegetables-in-europe",
+      "topics": [
+        "seasonality_europe"
+      ],
+      "access": "dati: https://www.eufic.org/en/global/ajax-map",
+      "license_note": null
+    },
+    {
+      "key": "eufic_national",
+      "number": "14",
+      "name": "EUFIC - European national sources on seasonal fruit and vegetables",
+      "url": "https://www.eufic.org/en/page/european-national-sources-to-find-information-on-seasonal-fruit-and-vegetables",
+      "topics": [
+        "seasonality_europe"
+      ],
+      "access": "HTML",
+      "license_note": null
+    },
+    {
+      "key": "eufic_article",
+      "number": "15",
+      "name": "EUFIC - Are seasonal fruit and vegetables better for the environment?",
+      "url": "https://www.eufic.org/en/healthy-living/article/are-seasonal-fruit-and-vegetables-better-for-the-environment",
+      "topics": [
+        "sustainability"
+      ],
+      "access": "HTML",
+      "license_note": null
+    },
+    {
+      "key": "eppo",
+      "number": "16",
+      "name": "EPPO Global Database",
+      "url": "https://gd.eppo.int/",
+      "topics": [
+        "botany"
+      ],
+      "access": "API v2 (token in .env)",
+      "license_note": null
+    },
+    {
+      "key": "wfo",
+      "number": "17",
+      "name": "World Flora Online - Plant List",
+      "url": "https://list.worldfloraonline.org/",
+      "topics": [
+        "botany"
+      ],
+      "access": "API matching_rest.php",
+      "license_note": "CC BY"
+    },
+    {
+      "key": "gbif",
+      "number": "agg.",
+      "name": "GBIF Backbone Taxonomy (funghi)",
+      "url": "https://www.gbif.org/",
+      "topics": [
+        "botany"
+      ],
+      "access": "API species/match",
+      "license_note": "CC BY"
+    },
+    {
+      "key": "eambrosia",
+      "number": "agg.",
+      "name": "eAmbrosia - registro UE delle indicazioni geografiche",
+      "url": "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/",
+      "topics": [
+        "dop_igp"
+      ],
+      "access": "API pubblica POST /eambrosia-public-api/api/gi-applications/filter (scripts/fetch_eambrosia.py)",
+      "license_note": null
+    },
+    {
+      "key": "wikimedia",
+      "number": "18",
+      "name": "Wikimedia Commons API",
+      "url": "https://commons.wikimedia.org/w/api.php",
+      "topics": [
+        "images"
+      ],
+      "access": "API",
+      "license_note": "Solo PD, CC0, CC BY, CC BY-SA"
+    },
+    {
+      "key": "usda_ars_images",
+      "number": "19",
+      "name": "USDA ARS Image Gallery",
+      "url": "https://www.ars.usda.gov/oc/images/image-gallery/",
+      "topics": [
+        "images"
+      ],
+      "access": "HTML",
+      "license_note": "Pubblico dominio"
+    },
+    {
+      "key": "inaturalist",
+      "number": "agg.",
+      "name": "iNaturalist (solo foto CC0 / CC BY / CC BY-SA)",
+      "url": "https://www.inaturalist.org/",
+      "topics": [
+        "images_plant_in_field"
+      ],
+      "access": "API v1",
+      "license_note": "Escluse licenze NC"
+    },
+    {
+      "key": "usda_fdc",
+      "number": "agg.",
+      "name": "USDA FoodData Central - SR Legacy (2018-04)",
+      "url": "https://fdc.nal.usda.gov/",
+      "topics": [
+        "nutrition",
+        "bioactive_compounds"
+      ],
+      "access": "CSV ufficiale + API (fonte non italiana, usata solo dove mancano CREA/BDA o per i carotenoidi)",
+      "license_note": "Dominio pubblico USA (CC0)"
+    },
+    {
+      "key": "usda_foodkeeper",
+      "number": "agg.",
+      "name": "USDA FSIS FoodKeeper",
+      "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app",
+      "topics": [
+        "home_storage"
+      ],
+      "access": "JSON https://www.fsis.usda.gov/shared/data/EN/foodkeeper.json letto col browser",
+      "license_note": "Dominio pubblico USA"
+    },
+    {
+      "key": "slow_food",
+      "number": "agg.",
+      "name": "Fondazione Slow Food per la Biodiversità - Presìdi e Arca del Gusto",
+      "url": "https://www.fondazioneslowfood.com/it/",
+      "topics": [
+        "varieties"
+      ],
+      "access": "sitemap XML dei Presìdi e dell'Arca del Gusto",
+      "license_note": null
+    },
+    {
+      "key": "unsplash",
+      "number": "agg.",
+      "name": "Unsplash API",
+      "url": "https://unsplash.com/",
+      "topics": [
+        "images"
+      ],
+      "access": "API (licenza Unsplash)",
+      "license_note": "Unsplash License"
+    },
+    {
+      "key": "pixabay",
+      "number": "agg.",
+      "name": "Pixabay API",
+      "url": "https://pixabay.com/",
+      "topics": [
+        "images"
+      ],
+      "access": "API",
+      "license_note": "Pixabay Content License"
+    },
+    {
+      "key": "usda_flavonoids",
+      "number": "agg.",
+      "name": "USDA Database for the Flavonoid Content of Selected Foods, Release 3.3 (2018)",
+      "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/flavonoids/",
+      "topics": [
+        "bioactive_compounds"
+      ],
+      "access": "database Access Flav_R03-3.accdb esportato in CSV",
+      "license_note": "Dominio pubblico USA"
+    },
+    {
+      "key": "phenol_explorer",
+      "number": "agg.",
+      "name": "Phenol-Explorer 3.6 - database del contenuto di polifenoli negli alimenti (INRA)",
+      "url": "http://phenol-explorer.eu/",
+      "topics": [
+        "bioactive_compounds"
+      ],
+      "access": "composition-data.xlsx (download ufficiale)",
+      "license_note": "Gratuito; uso commerciale solo con permesso degli autori e citazione (Rothwell et al., Database 2013)"
+    },
+    {
+      "key": "eu_plant_variety_portal",
+      "number": "agg.",
+      "name": "EU Plant Variety Portal - Catalogo comune UE delle varieta' (agricole, ortive, frutticole)",
+      "url": "https://ec.europa.eu/food/plant-variety-portal/",
+      "topics": [
+        "varieties"
+      ],
+      "access": "ricerca per denominazione dal browser (POST del modulo)",
+      "license_note": "Commissione europea, riuso consentito con citazione"
+    },
+    {
+      "key": "ieo_smartfood_portions",
+      "number": "agg.",
+      "name": "IEO SmartFood - Porzioni e frequenze (porzioni standard LARN-SINU)",
+      "url": "https://www.smartfood.ieo.it/media/p02bkul0/smartfood-tab-porzioni-e-frequenze-completa.pdf",
+      "topics": [
+        "reference_portion"
+      ],
+      "access": "PDF (copia in data/raw/porzioni/)",
+      "license_note": null
+    },
+    {
+      "key": "su_eatable_life",
+      "number": "agg.",
+      "name": "SU-EATABLE LIFE - database delle impronte di carbonio e idrica (Petersson et al. 2021)",
+      "url": "https://doi.org/10.1038/s41597-021-00909-8",
+      "topics": [
+        "environmental_footprint"
+      ],
+      "access": "xlsx figshare 13271111",
+      "license_note": "CC BY 4.0"
+    },
+    {
+      "key": "masaf_pat",
+      "number": "agg.",
+      "name": "MASAF - Elenco nazionale dei Prodotti Agroalimentari Tradizionali, XXVI revisione (2026)",
+      "url": "https://www.masaf.gov.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/24151",
+      "topics": [
+        "traditional_products"
+      ],
+      "access": "tabella xlsx per Regione e categoria",
+      "license_note": null
+    },
+    {
+      "key": "agribalyse",
+      "number": "agg.",
+      "name": "AGRIBALYSE 3.1 (ADEME, Francia) - impatti ambientali degli alimenti",
+      "url": "https://data.ademe.fr/datasets/agribalyse-31-synthese",
+      "topics": [
+        "environmental_footprint"
+      ],
+      "access": "CSV ufficiale (data.ademe.fr)",
+      "license_note": "Licence Ouverte / Etalab"
+    },
+    {
+      "key": "austria_gesundheitsportal",
+      "number": "agg.",
+      "name": "Gesundheitsportal Österreichs - Saisonkalender (Ministero della salute austriaco)",
+      "url": "https://www.gesundheit.gv.at/leben/ernaehrung/saisonkalender.html",
+      "topics": [
+        "seasonality_europe"
+      ],
+      "access": "pagina web letta dal browser",
+      "license_note": null
+    },
+    {
+      "key": "uc_davis_storing_guide",
+      "number": "agg.",
+      "name": "UC Davis / Kader - Storing Fresh Fruits and Vegetables for Better Taste (UC ANR Pub. 21590)",
+      "url": "https://homeorchard.ucanr.edu/files/115275.pdf",
+      "topics": [
+        "home_storage"
+      ],
+      "access": "PDF (copia in data/raw/ucdavis_storing/)",
+      "license_note": null
+    },
+    {
+      "key": "iss_istisan_09_47",
+      "number": "agg.",
+      "name": "Istituto Superiore di Sanità - Rapporti ISTISAN 09/47 (carenza di G6PD e favismo)",
+      "url": "https://www.iss.it/documents/20126/45616/0947web.pdf",
+      "topics": [
+        "health_notes"
+      ],
+      "access": "PDF",
+      "license_note": null
+    },
+    {
+      "key": "legge_752_1985",
+      "number": "agg.",
+      "name": "Legge 16 dicembre 1985, n. 752 - Normativa quadro sui tartufi (art. 6, periodi di raccolta)",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1985-12-16;752~art6",
+      "topics": [
+        "seasonality"
+      ],
+      "access": "Normattiva (copia in data/raw/national_calendars/)",
+      "license_note": "Testo normativo pubblico"
+    },
+    {
+      "key": "provincia_cuneo_funghi",
+      "number": "agg.",
+      "name": "Provincia di Cuneo - Schede dei funghi commestibili",
+      "url": "https://natura.provincia.cuneo.it/funghi/commestibili/amanita-caesarea/",
+      "topics": [
+        "seasonality"
+      ],
+      "access": "pagina web (copia in data/raw/national_calendars/)",
+      "license_note": null
+    },
+    {
+      "key": "bur_emilia_romagna_amarene",
+      "number": "agg.",
+      "name": "Regione Emilia-Romagna, BUR 2012 - Disciplinare IGP Amarene Brusche di Modena (richiesta di modifica)",
+      "url": "https://bur.regione.emilia-romagna.it/area-bollettini/bollettini-pubblicati/2012/marzo-periodico-parte-seconda-1a-quindicina/richiesta-di-modifica-del-disciplinare-della-denominazione-amarene-brusche-di-modena/allegato.pdf",
+      "topics": [
+        "seasonality"
+      ],
+      "access": "PDF (copia in data/raw/seasonality_sources/)",
+      "license_note": "Atto pubblico"
+    },
+    {
+      "key": "biblioteca_bertoliana",
+      "number": "agg.",
+      "name": "Biblioteca civica Bertoliana (Vicenza) - Scheda botanica del lampascione",
+      "url": "https://www.bibliotecabertoliana.it/file/4959-lampascione.pdf",
+      "topics": [
+        "seasonality"
+      ],
+      "access": "PDF (copia in data/raw/seasonality_sources/)",
+      "license_note": null
+    },
+    {
+      "key": "naturasi",
+      "number": "agg.",
+      "name": "NaturaSì - Frutta e verdura di stagione (schede prodotto)",
+      "url": "https://www.naturasi.it/frutta-verdura-di-stagione/cipollotto",
+      "topics": [
+        "seasonality"
+      ],
+      "access": "pagina web letta col browser (estratto in data/raw/seasonality_sources/)",
+      "license_note": null
+    },
+    {
+      "key": "eea_biogeo",
+      "number": "agg.",
+      "name": "EEA - Biogeographical regions, Europe 2016 (Agenzia europea dell'ambiente)",
+      "url": "https://www.eea.europa.eu/",
+      "topics": [
+        "seasonality_europe"
+      ],
+      "access": "servizio ArcGIS EEA, strato semplificato in data/raw/eea_biogeo/ (scripts/build_europe_map.py)",
+      "license_note": "CC BY 4.0"
+    }
+  ]
+}

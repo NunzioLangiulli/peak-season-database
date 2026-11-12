@@ -1,0 +1,403 @@
+{
+  "cavolo_nero_black_kale": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "greenpeace",
+      "usda_hb66"
+    ],
+    "sl": [
+      "Foglie lunghe, bollose e verde-nerastro intenso, turgide, senza ingiallimenti né appassimenti.",
+      "Long, blistered, deep blackish-green leaves, crisp, with no yellowing or wilting."
+    ],
+    "ds": [
+      "Scegli foglie fresche, turgide e pulite, di colore verde scuro intenso e con la tipica superficie bollosa. Evita mazzi con foglie gialle, molli o con macchie. Le foglie raccolte dopo le prime gelate sono considerate più dolci.",
+      "Choose fresh, crisp, clean leaves with an intense dark green colour and the typical blistered surface. Avoid bunches with yellow, soft or spotted leaves. Leaves picked after the first frosts are considered sweeter."
+    ],
+    "cs": [
+      "Frigo · fino a 5 giorni",
+      "Fridge · up to 5 days"
+    ],
+    "si": [
+      "Conservalo in frigorifero non lavato, in un sacchetto bucherellato, fino a 5 giorni. Come tutte le verdure a foglia va tenuto il più freddo possibile (vicino a 0 °C) con umidità alta, e lontano dalla frutta che produce etilene.",
+      "Keep it unwashed in a perforated bag in the fridge for up to 5 days. Like all leafy greens it should be kept as cold as possible (near 0 °C) with high humidity, and away from ethylene-producing fruit."
+    ],
+    "hb": [
+      "Della famiglia delle Brassicacee, non forma una testa centrale: si mangiano le foglie, e la pianta può superare il mezzo metro. Secondo Greenpeace è ricco di vitamine, folato e minerali come potassio, ferro e calcio (nelle tabelle CREA e BDA-IEO manca una scheda specifica). È l'ingrediente della ribollita toscana.",
+      "A member of the cabbage family that forms no central head: the leaves are eaten, and the plant can grow over half a metre tall. According to Greenpeace it is rich in vitamins, folate and minerals such as potassium, iron and calcium (CREA and BDA-IEO have no specific entry). It is a key ingredient of Tuscan ribollita."
+    ],
+    "wr": [
+      "Non buttare le coste centrali: tritate, vanno in frittate e minestre. Le foglie condite con olio e cotte in forno diventano chips croccanti. Cotture brevi ne preservano meglio le proprietà.",
+      "Don't throw away the central ribs: chopped, they go into omelettes and soups. Leaves tossed in oil and baked become crispy chips. Short cooking better preserves their nutrients."
+    ]
+  },
+  "cavolo_rapa_kohlrabi": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66"
+    ],
+    "sl": [
+      "Ingrossamento giovane e sodo, liscio e non legnoso; foglie e piccioli teneri e turgidi.",
+      "Young, firm, smooth swollen stem, not woody; tender, crisp leaves and stalks."
+    ],
+    "ds": [
+      "Scegli cavoli rapa giovani e di media grandezza, sodi e lisci: quelli troppo maturi diventano legnosi e duri. I piccioli delle foglie sono un buon indice di qualità: devono essere succosi e teneri.",
+      "Choose young, medium-sized kohlrabi that are firm and smooth: over-mature ones become woody and tough. The leaf stalks are a good quality indicator: they should be juicy and tender."
+    ],
+    "cs": [
+      "Frigo · 2-4 settimane",
+      "Fridge · 2-4 weeks"
+    ],
+    "si": [
+      "Togli le foglie (si conservano a parte, pochi giorni) e tieni il bulbo in frigorifero in un sacchetto forato. Con le foglie dura 2-4 settimane; senza foglie, a 0 °C e umidità molto alta, fino a 2-3 mesi in condizioni professionali.",
+      "Remove the leaves (they keep separately for a few days) and store the bulb in a perforated bag in the fridge. With leaves it lasts 2-4 weeks; topped, at 0 °C and very high humidity, up to 2-3 months professionally."
+    ],
+    "hb": [
+      "Ha un sapore dolce e croccante, a metà tra rapa e broccolo, ed è ottimo anche crudo a fettine sottili. Le tabelle CREA e BDA-IEO non riportano una scheda specifica.",
+      "It has a sweet, crunchy taste between turnip and broccoli and is excellent raw in thin slices. CREA and BDA-IEO tables have no specific entry."
+    ],
+    "wr": [
+      "Le foglie giovani si cucinano come gli spinaci; la buccia più dura, se pelata spessa, va nel brodo vegetale.",
+      "Young leaves cook like spinach; the tougher peel, if peeled thickly, goes into vegetable stock."
+    ]
+  },
+  "cavolo_verza_savoy_cabbage": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Testa soda e pesante, foglie bollose verde intenso, croccanti e senza macchie.",
+      "Firm, heavy head with crinkly, deep green, crisp, unblemished leaves."
+    ],
+    "ds": [
+      "La verza deve essere soda e pesante rispetto alla grandezza, con foglie esterne croccanti, verde intenso e ben increspate. Evita teste con foglie ingiallite, flosce o forate. Le foglie interne sono più chiare e tenere.",
+      "The Savoy cabbage should be firm and heavy for its size, with crisp, deep green, well-crinkled outer leaves. Avoid heads with yellowed, limp or holed leaves. Inner leaves are paler and more tender."
+    ],
+    "cs": [
+      "Frigo · fino a 1 settimana",
+      "Fridge · up to 1 week"
+    ],
+    "si": [
+      "Conservala intera nel cassetto del frigorifero in un sacchetto bucherellato; una volta tagliata, consumala entro pochi giorni. In condizioni professionali (0 °C, umidità 98-100%) dura 3-4 settimane. È sensibile all'etilene: tienila lontana dalla frutta.",
+      "Keep it whole in the fridge crisper in a perforated bag; once cut, use within a few days. Professionally (0 °C, 98-100% humidity) it lasts 3-4 weeks. It is sensitive to ethylene: keep it away from fruit."
+    ],
+    "hb": [
+      "Povera di calorie e ricca di fibre, è il cavolo tipico della cucina del Nord Italia (cassoeula, pizzoccheri, minestre). Con la cottura perde parte della vitamina C: cotture brevi la preservano meglio.",
+      "Low in calories and high in fibre, it is the typical cabbage of Northern Italian cooking (cassoeula, pizzoccheri, soups). Cooking reduces its vitamin C: short cooking preserves more of it."
+    ],
+    "wr": [
+      "Le foglie esterne più spesse, sbollentate, sono perfette per involtini ripieni; il torsolo affettato sottile va in minestra.",
+      "The thicker outer leaves, blanched, are perfect for stuffed rolls; the thinly sliced core goes into soups."
+    ]
+  },
+  "cece_chickpea": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "crea"
+    ],
+    "sl": [
+      "Ceci secchi interi, di colore e grandezza uniformi, senza fori, polvere o muffe.",
+      "Whole dried chickpeas, even in colour and size, with no holes, dust or mould."
+    ],
+    "ds": [
+      "Scegli semi interi, asciutti e uniformi per colore e dimensione; i fori indicano la presenza di insetti (tonchio), polvere e semi rotti un prodotto vecchio o mal conservato. Controlla la data di confezionamento: i legumi molto vecchi restano duri anche dopo lunga cottura.",
+      "Choose whole, dry seeds of even colour and size; holes indicate insects (weevils), while dust and broken seeds suggest old or poorly stored produce. Check the packing date: very old pulses stay hard even after long cooking."
+    ],
+    "cs": [
+      "Dispensa · fino a 1 anno",
+      "Pantry · up to 1 year"
+    ],
+    "si": [
+      "Conserva i ceci secchi in un contenitore ermetico, in un luogo fresco, asciutto e buio. Una volta cotti, tienili in frigorifero nella loro acqua e consumali entro 3-4 giorni, oppure congelali.",
+      "Store dried chickpeas in an airtight container in a cool, dry, dark place. Once cooked, keep them in the fridge in their liquid and eat within 3-4 days, or freeze them."
+    ],
+    "hb": [
+      "Valori per i ceci secchi: per 100 g sono ricchi di vitamina B6, folati, potassio, fosforo, magnesio, ferro, zinco e rame e fonte di vitamina E, tiamina, niacina e calcio e ad alto contenuto di proteine e fibre. Abbinati ai cereali forniscono proteine di buona qualità.",
+      "Values for dried chickpeas: per 100 g they are high in vitamin B6, folate, potassium, phosphorus, magnesium, iron, zinc and copper and a source of vitamin E, thiamin, niacin and calcium, and high in protein and fibre. Combined with grains they provide good-quality protein."
+    ],
+    "wr": [
+      "L'acqua di cottura (aquafaba) si monta come l'albume per dolci e maionesi vegetali; i ceci avanzati diventano hummus o farinate.",
+      "The cooking water (aquafaba) whips like egg white for desserts and vegan mayonnaise; leftover chickpeas become hummus or fritters."
+    ]
+  },
+  "cetriolo_cucumber": {
+    "pl": "temperatura_ambiente",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "uc_davis",
+      "crea"
+    ],
+    "sl": [
+      "Frutto sodo, verde intenso e lucido, senza macchie o parti molli; semi teneri.",
+      "Firm, glossy deep green fruit, no spots or soft parts; tender seeds."
+    ],
+    "ds": [
+      "Il cetriolo deve essere sodo per tutta la lunghezza, di colore verde intenso e uniforme, con buccia lucida e senza macchie, zone gialle o ammaccature. Le estremità non devono cedere alla pressione. Frutti troppo grossi possono avere semi duri e sapore amaro.",
+      "The cucumber should be firm along its whole length, deep and evenly green, with glossy skin free of spots, yellow areas or bruises. The ends should not give when pressed. Very large fruits may have hard seeds and a bitter taste."
+    ],
+    "cs": [
+      "Ambiente · in frigo max 1-3 giorni",
+      "Room temp · fridge max 1-3 days"
+    ],
+    "si": [
+      "Meglio fuori frigo, in un luogo fresco: la guida UC Davis lo indica tra i prodotti da tenere a temperatura ambiente e in frigorifero al massimo 1-3 giorni se lo usi subito dopo (USDA FoodKeeper indica 4-6 giorni in frigo, ma il freddo ne peggiora la qualità). È sensibile al freddo: l'ideale sarebbe 10-12,5 °C, sotto i 10 °C per più di 2-3 giorni compaiono danni. Tienilo lontano dalla frutta: l'etilene lo fa ingiallire.",
+      "Best kept out of the fridge in a cool place: the UC Davis guide lists it among room-temperature produce, with at most 1-3 days in the fridge if used soon after (USDA FoodKeeper gives 4-6 days in the fridge, but cold lowers its quality). It is cold-sensitive: ideally 10-12.5 °C, and below 10 °C for more than 2-3 days damage appears. Keep it away from fruit: ethylene makes it turn yellow."
+    ],
+    "cn": [
+      "Sotto i 10 °C per più di 2-3 giorni: buccia con zone acquose e infossate (pitting), che poi marciscono rapidamente una volta tornato a temperatura ambiente.",
+      "Below 10 °C for more than 2-3 days: water-soaked, sunken areas on the skin (pitting) that decay quickly once back at room temperature."
+    ],
+    "hb": [
+      "È composto quasi solo da acqua ed è tra le verdure meno caloriche; contiene vitamina C e potassio. È molto rinfrescante e la buccia, ben lavata, fornisce la maggior parte della fibra.",
+      "It is almost all water and among the lowest-calorie vegetables; it contains vitamin C and potassium. It is very refreshing, and the well-washed skin provides most of the fibre."
+    ],
+    "wr": [
+      "Mangia la buccia, se il cetriolo è di buona qualità; i pezzi avanzati si mettono sott'aceto in poche ore o vanno in acqua aromatizzata e gazpacho.",
+      "Eat the skin if the cucumber is good quality; leftover pieces can be quick-pickled in a few hours or added to infused water and gazpacho."
+    ]
+  },
+  "cicoria_da_cespo_chicory": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Cespo pulito, croccante e compatto, foglie verdi brillanti senza imbrunimenti.",
+      "Clean, crisp, compact head with bright green leaves and no browning."
+    ],
+    "ds": [
+      "Scegli cespi puliti, croccanti e ben chiusi, con foglie di colore brillante e senza margini secchi o bruni. Le foglie giovani e tenere sono preferibili a quelle esterne più dure e amare. Il tipo (catalogna, pan di zucchero) cambia forma e grado di amaro.",
+      "Choose clean, crisp, tightly closed heads with brightly coloured leaves and no dry or brown edges. Young tender leaves are preferable to the tougher, more bitter outer ones. The type (catalogna, sugarloaf) changes shape and bitterness."
+    ],
+    "cs": [
+      "Frigo · 3-5 giorni",
+      "Fridge · 3-5 days"
+    ],
+    "si": [
+      "Conservala in frigorifero non lavata, in un sacchetto forato, e consumala in pochi giorni. Anche a 0 °C e umidità 95-100% queste insalate non si conservano oltre 2-3 settimane. Non temono il freddo ma vanno protette dal congelamento.",
+      "Keep it unwashed in a perforated bag in the fridge and use within a few days. Even at 0 °C and 95-100% humidity these greens do not keep beyond 2-3 weeks. They tolerate cold but must be protected from freezing."
+    ],
+    "hb": [
+      "Valori della cicoria di campo: per 100 g è fonte di vitamina A, vitamina E e vitamina C, con pochissime calorie. Il gusto amaro è tipico delle cicorie ed è più marcato nelle foglie esterne.",
+      "Values for wild chicory: per 100 g it is a source of vitamin A, vitamin E and vitamin C, with very few calories. The bitter taste is typical of chicories and stronger in the outer leaves."
+    ],
+    "wr": [
+      "Le foglie esterne più amare sono ottime ripassate in padella con aglio, olio e peperoncino o nelle minestre.",
+      "The bitterer outer leaves are great sautéed with garlic, oil and chilli or in soups."
+    ]
+  },
+  "cicoria_da_taglio_cutting_chicory": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Foglie tenere e croccanti, verdi brillanti, pulite, senza ingiallimenti.",
+      "Tender, crisp, bright green, clean leaves with no yellowing."
+    ],
+    "ds": [
+      "Scegli foglie giovani, tenere e croccanti, di colore verde brillante e uniforme, pulite e senza parti gialle, brune o viscide. Le foglie più piccole sono le meno amare.",
+      "Choose young, tender, crisp leaves of even bright green colour, clean and with no yellow, brown or slimy parts. Smaller leaves are the least bitter."
+    ],
+    "cs": [
+      "Frigo · 3-5 giorni",
+      "Fridge · 3-5 days"
+    ],
+    "si": [
+      "Conservala in frigorifero non lavata, in un contenitore o sacchetto con carta assorbente, e consumala entro pochi giorni. Va tenuta fredda (vicino a 0 °C) e umida, ma senza ristagni d'acqua.",
+      "Keep it unwashed in the fridge in a container or bag with paper towel and use within a few days. Keep it cold (near 0 °C) and humid, but without standing water."
+    ],
+    "hb": [
+      "Per 100 g è fonte di vitamina A, vitamina E e calcio, con pochissime calorie. Si mangia cruda in insalata o cotta.",
+      "Per 100 g it is a source of vitamin A, vitamin E and calcium, with very few calories. It is eaten raw in salads or cooked."
+    ],
+    "wr": [
+      "Si consuma praticamente tutta; le foglie meno belle si cuociono in padella o vanno in minestre e ripieni.",
+      "Practically all of it is eaten; less attractive leaves can be sautéed or added to soups and fillings."
+    ]
+  },
+  "cima_di_rapa_turnip_greens": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Steli sodi e sottili, cimette chiuse senza parti gialle, foglie verdi e consistenti.",
+      "Firm, thin stems, closed florets with no yellow, sturdy green leaves."
+    ],
+    "ds": [
+      "Le cime di rapa migliori hanno steli sottili e sodi, infiorescenze ben chiuse senza fiori gialli aperti e foglie verdi, consistenti e pulite. Steli spessi e legnosi o foglie appassite indicano un prodotto vecchio.",
+      "The best turnip greens have thin, firm stems, tightly closed florets with no open yellow flowers and green, sturdy, clean leaves. Thick, woody stems or wilted leaves indicate old produce."
+    ],
+    "cs": [
+      "Frigo · fino a 5 giorni",
+      "Fridge · up to 5 days"
+    ],
+    "si": [
+      "Conservale in frigorifero non lavate, in un sacchetto bucherellato, fino a 5 giorni. Come le altre verdure a foglia vanno tenute vicino a 0 °C con umidità alta e lontano dalla frutta che produce etilene, che le fa ingiallire.",
+      "Keep them unwashed in a perforated bag in the fridge for up to 5 days. Like other leafy greens they should be kept near 0 °C with high humidity and away from ethylene-producing fruit, which yellows them."
+    ],
+    "hb": [
+      "Per 100 g sono ricche di vitamina C (oltre il fabbisogno giornaliero) e folati e fonte di vitamina A, vitamina E, vitamina B6 e potassio, con molte fibre. Sono il condimento classico delle orecchiette pugliesi.",
+      "Per 100 g they are high in vitamin C (more than the daily requirement) and folate and a source of vitamin A, vitamin E, vitamin B6 and potassium, with plenty of fibre. They are the classic dressing for Apulian orecchiette."
+    ],
+    "wr": [
+      "Usa anche le foglie grandi: scottate e frullate diventano una crema per la pasta. Gli steli più duri, pelati, si cuociono qualche minuto in più.",
+      "Use the large leaves too: blanched and blended they make a pasta sauce. Tougher stems, peeled, just need a few more minutes of cooking."
+    ]
+  },
+  "cipolla_estiva_summer_onion": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Bulbo sodo e compatto, tunica asciutta e integra, senza germogli, macchie o parti molli.",
+      "Firm, compact bulb with dry, intact skin, no sprouts, spots or soft parts."
+    ],
+    "ds": [
+      "Scegli bulbi maturi, sodi e compatti, con forma e colore della tunica tipici della varietà. Devono essere privi di ammaccature, muffe, germogli e radici. Il collo deve essere ben chiuso e asciutto: se è umido o molle la cipolla si conserva poco.",
+      "Choose mature bulbs that are firm and compact, with skin shape and colour typical of the variety. They should be free of bruises, mould, sprouts and roots. The neck should be tight and dry: a damp or soft neck means poor keeping."
+    ],
+    "cs": [
+      "Fresco, asciutto, buio · settimane",
+      "Cool, dry, dark · weeks"
+    ],
+    "si": [
+      "Conserva le cipolle intere in un luogo fresco, asciutto, buio e ventilato, in cesti o reti, non nei sacchetti di plastica. L'umidità alta fa spuntare le radici e il calore i germogli. Le cipolle tagliate vanno in frigorifero, chiuse, e si consumano in 2-3 giorni.",
+      "Store whole onions in a cool, dry, dark, ventilated place, in baskets or nets, not plastic bags. High humidity triggers rooting and warmth triggers sprouting. Cut onions go in the fridge, covered, and should be used within 2-3 days."
+    ],
+    "hb": [
+      "Povera di calorie, è la base di gran parte della cucina italiana. Le cipolle estive (bianche e dorate) sono più delicate e meno adatte a lunghe conservazioni rispetto a quelle invernali.",
+      "Low in calories, it is the base of much Italian cooking. Summer onions (white and golden) are milder and less suited to long storage than winter onions."
+    ],
+    "wr": [
+      "Le bucce dorate pulite danno colore e sapore a brodi e risotti; le parti verdi dei germogli si usano come erba cipollina.",
+      "Clean golden skins add colour and flavour to stocks and risottos; green sprout tops can be used like chives."
+    ]
+  },
+  "cipolla_invernale_winter_onion": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Bulbo sodo e pesante, tuniche secche e fruscianti, collo chiuso, senza germogli.",
+      "Firm, heavy bulb with dry, rustling skins, a closed neck and no sprouts."
+    ],
+    "ds": [
+      "Le cipolle da conservazione devono essere ben mature e asciutte, con più strati di tunica secca e integra e il collo chiuso. Scarta i bulbi con parti molli, muffa nera sotto la tunica o germogli verdi. Forma e colore (rossa, dorata, bianca) dipendono dalla varietà.",
+      "Storage onions should be fully mature and dry, with several layers of intact dry skin and a closed neck. Reject bulbs with soft spots, black mould under the skin or green sprouts. Shape and colour (red, golden, white) depend on the variety."
+    ],
+    "cs": [
+      "Fresco, asciutto, buio · mesi",
+      "Cool, dry, dark · months"
+    ],
+    "si": [
+      "In un luogo fresco, asciutto, buio e ben ventilato si conservano per mesi. In condizioni professionali, a 0 °C e umidità 65-75%, durano 6-9 mesi. Evita il frigorifero per i bulbi interi (troppo umido) e non tenerle vicino alle patate.",
+      "In a cool, dry, dark, well-ventilated place they keep for months. Professionally, at 0 °C and 65-75% humidity, they last 6-9 months. Avoid the fridge for whole bulbs (too humid) and don't store them next to potatoes."
+    ],
+    "hb": [
+      "Povera di calorie e versatile, cruda o cotta. Le varietà rosse devono il colore alle antocianine; la Cipolla Rossa di Tropea Calabria è IGP.",
+      "Low in calories and versatile, raw or cooked. Red varieties owe their colour to anthocyanins; Cipolla Rossa di Tropea Calabria is a PGI."
+    ],
+    "wr": [
+      "Le bucce secche pulite colorano naturalmente brodi e risotti. Le cipolle che iniziano a germogliare si cucinano subito, in soffritti o confetture.",
+      "Clean dry skins naturally colour stocks and risottos. Onions that start sprouting should be cooked right away, in soffritto or onion jam."
+    ]
+  },
+  "fagiolo_bean": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "greenpeace",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Freschi: baccelli turgidi e pieni, semi lucidi; secchi: semi interi, uniformi, senza fori.",
+      "Fresh: plump, firm pods with shiny beans; dried: whole, even beans with no holes."
+    ],
+    "ds": [
+      "Per i fagioli da sgranare freschi scegli baccelli turgidi, pieni e senza macchie, con i semi ben formati e lucidi. Per quelli secchi, semi interi, uniformi per colore e dimensione e senza fori di insetti. In Italia esistono moltissime varietà locali oltre a borlotti e cannellini.",
+      "For fresh shelling beans choose plump, full, unblemished pods with well-formed, shiny beans. For dried beans, whole seeds of even colour and size with no insect holes. Italy has many local varieties besides borlotti and cannellini."
+    ],
+    "cs": [
+      "Freschi: frigo · 3-5 giorni",
+      "Fresh: fridge · 3-5 days"
+    ],
+    "si": [
+      "I fagioli freschi nel baccello vanno in frigorifero e si consumano in pochi giorni, oppure si sgranano e si congelano. I baccelli sono sensibili al freddo: sotto i 5 °C possono scolorirsi. I fagioli secchi si conservano per mesi in un contenitore ermetico al fresco e al buio.",
+      "Fresh beans in the pod go in the fridge and should be used within a few days, or shelled and frozen. Pods are cold-sensitive: below 5 °C they can discolour. Dried beans keep for months in an airtight container in a cool, dark place."
+    ],
+    "cn": [
+      "Sotto i 5 °C i baccelli diventano opachi e scoloriti; a temperature poco più alte compare una ruggine bruna sulla superficie.",
+      "Below 5 °C pods turn dull and discoloured; at slightly higher temperatures brown russeting appears on the surface."
+    ],
+    "hb": [
+      "Valori dei borlotti freschi: per 100 g sono ricchi di folati e potassio e fonte di fosforo, ferro, tiamina e niacina, con buone proteine e fibre. Come tutti i legumi arricchiscono il terreno di azoto.",
+      "Values for fresh borlotti beans: per 100 g they are high in folate and potassium and a source of phosphorus, iron, thiamin and niacin, with good protein and fibre. Like all legumes they enrich the soil with nitrogen."
+    ],
+    "wr": [
+      "L'acqua di cottura dei fagioli secchi addensa zuppe e minestre; i fagioli avanzati diventano creme da spalmare o polpette.",
+      "The cooking water of dried beans thickens soups; leftover beans become spreads or patties."
+    ]
+  },
+  "fagiolino_green_bean": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Baccello dritto, sodo e di colore vivo, che si spezza con uno schiocco; senza macchie.",
+      "Straight, firm, brightly coloured pod that snaps cleanly; no spots."
+    ],
+    "ds": [
+      "Scegli fagiolini ben formati e dritti, di colore vivo e brillante, teneri ma sodi, senza macchie né fili. Si devono spezzare di netto: se si piegano sono vecchi. Il diametro del baccello indica la maturità meglio della lunghezza: semi troppo in rilievo significano un baccello più fibroso.",
+      "Choose well-formed, straight beans with a bright, lively colour, tender but firm, with no spots or strings. They should snap cleanly: if they bend they are old. Pod diameter indicates maturity better than length: very prominent seeds mean a more fibrous pod."
+    ],
+    "cs": [
+      "Frigo (cassetto) · fino a 5 giorni",
+      "Fridge (crisper) · up to 5 days"
+    ],
+    "si": [
+      "Conservali non lavati nel cassetto del frigorifero, in un sacchetto forato, fino a 5 giorni; si possono anche sbollentare e congelare. L'ideale sarebbe 5-7,5 °C: sotto i 5 °C possono comparire danni da freddo. L'etilene li fa scolorire: tienili lontano dalla frutta.",
+      "Keep them unwashed in the fridge crisper in a perforated bag for up to 5 days; they can also be blanched and frozen. Ideally 5-7.5 °C: below 5 °C chilling injury can appear. Ethylene makes them lose colour: keep them away from fruit."
+    ],
+    "cn": [
+      "Sotto i 5 °C il baccello diventa opaco e scolorito; a 5-7 °C per tempi lunghi compare una ruggine bruna superficiale.",
+      "Below 5 °C the pod turns dull and discoloured; at 5-7 °C for long periods a brown surface russeting appears."
+    ],
+    "hb": [
+      "Per 100 g sono ricchi di folati, con poche calorie e buone fibre; contengono anche caroteni e vitamina C. Si mangiano con tutto il baccello.",
+      "Per 100 g they are high in folate, with few calories and good fibre; they also contain carotenes and vitamin C. The whole pod is eaten."
+    ],
+    "wr": [
+      "Spunta solo l'attacco del picciolo, non anche la punta. I fagiolini avanzati diventano frittate, insalate di patate o pesto di verdure.",
+      "Trim only the stem end, not the tip. Leftover green beans become omelettes, potato salads or vegetable pesto."
+    ]
+  }
+}

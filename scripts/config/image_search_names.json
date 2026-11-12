@@ -1,0 +1,338 @@
+{
+ "_doc": "Nomi inglesi alternativi per la ricerca di immagini (find_image_candidates.py, prune_candidates.py) quando il nome del database dà pochi risultati.",
+ "cavolo_nero_black_kale": [
+  "lacinato kale",
+  "tuscan kale",
+  "kale"
+ ],
+ "cicoria_da_cespo_chicory": [
+  "sugarloaf chicory",
+  "catalogna chicory",
+  "chicory leaves"
+ ],
+ "cicoria_da_taglio_cutting_chicory": [
+  "chicory leaves",
+  "dandelion greens"
+ ],
+ "cipolla_estiva_summer_onion": [
+  "onion",
+  "fresh onions",
+  "red onion"
+ ],
+ "cipolla_invernale_winter_onion": [
+  "onion",
+  "yellow onion"
+ ],
+ "cima_di_rapa_turnip_greens": [
+  "broccoli rabe",
+  "rapini",
+  "turnip greens"
+ ],
+ "lattuga_da_cespo_head_lettuce": [
+  "lettuce",
+  "butterhead lettuce",
+  "romaine lettuce"
+ ],
+ "lattuga_da_taglio_leaf_lettuce": [
+  "lettuce leaves",
+  "lollo rosso",
+  "oak leaf lettuce"
+ ],
+ "indivia_riccia_curly_endive": [
+  "frisee",
+  "curly endive",
+  "endive"
+ ],
+ "indivia_belga_belgian_endive": [
+  "belgian endive",
+  "witloof",
+  "chicory endive"
+ ],
+ "scarola_escarole": [
+  "escarole",
+  "endive"
+ ],
+ "radicchio_radicchio": [
+  "radicchio",
+  "red chicory"
+ ],
+ "valerianella_corn_salad": [
+  "lamb's lettuce",
+  "corn salad",
+  "mache"
+ ],
+ "rucola_arugula": [
+  "arugula",
+  "rocket"
+ ],
+ "sedano_rapa_celeriac": [
+  "celeriac",
+  "celery root"
+ ],
+ "topinambur_jerusalem_artichoke": [
+  "jerusalem artichoke",
+  "sunchoke"
+ ],
+ "cavolo_rosso_red_cabbage": [
+  "red cabbage",
+  "purple cabbage"
+ ],
+ "peperone_bell_pepper": [
+  "bell pepper",
+  "paprika",
+  "peppers"
+ ],
+ "peperoncino_chili_pepper": [
+  "chili",
+  "chilli",
+  "hot pepper"
+ ],
+ "fagiolo_bean": [
+  "beans",
+  "borlotti beans"
+ ],
+ "fagiolino_green_bean": [
+  "green beans",
+  "string beans"
+ ],
+ "fava_broad_bean": [
+  "broad beans",
+  "fava beans"
+ ],
+ "fungo_porcino_porcini_mushroom": [
+  "porcini",
+  "cep",
+  "boletus"
+ ],
+ "fungo_champignon_button_mushroom": [
+  "mushrooms",
+  "champignon"
+ ],
+ "fungo_pleurotus_oyster_mushroom": [
+  "oyster mushrooms"
+ ],
+ "fungo_ovolo_caesars_mushroom": [
+  "amanita caesarea"
+ ],
+ "tartufo_nero_black_truffle": [
+  "truffle",
+  "black truffle"
+ ],
+ "tartufo_bianco_white_truffle": [
+  "white truffle",
+  "truffle"
+ ],
+ "clementine_clementine": [
+  "clementines",
+  "mandarin"
+ ],
+ "mela_cotogna_quince": [
+  "quince"
+ ],
+ "fico_d_india_prickly_pear": [
+  "prickly pear",
+  "cactus fruit",
+  "opuntia"
+ ],
+ "uva_table_grape": [
+  "grapes",
+  "white grapes",
+  "red grapes"
+ ],
+ "kiwi_kiwifruit": [
+  "kiwi"
+ ],
+ "nespola_loquat": [
+  "loquat"
+ ],
+ "cachi_persimmon": [
+  "persimmon",
+  "kaki"
+ ],
+ "pompelmo_grapefruit": [
+  "grapefruit",
+  "pink grapefruit"
+ ],
+ "rapa_turnip": [
+  "turnips",
+  "turnip"
+ ],
+ "scalogno_shallot": [
+  "shallots",
+  "shallot"
+ ],
+ "cavoletto_di_bruxelles_brussels_sprout": [
+  "brussels sprouts"
+ ],
+ "grano_duro_durum_wheat": [
+  "wheat",
+  "durum wheat"
+ ],
+ "farro_emmer": [
+  "spelt",
+  "emmer",
+  "farro"
+ ],
+ "grano_saraceno_buckwheat": [
+  "buckwheat"
+ ],
+ "orzo_barley": [
+  "barley"
+ ],
+ "riso_rice": [
+  "rice",
+  "rice paddy"
+ ],
+ "avena_oat": [
+  "oats",
+  "oat"
+ ],
+ "mais_corn": [
+  "corn",
+  "sweet corn",
+  "corn on the cob"
+ ],
+ "lime_lime": [
+  "limes",
+  "lime"
+ ],
+ "susina_plum": [
+  "plums"
+ ],
+ "pesca_noce_nectarine": [
+  "nectarines"
+ ],
+ "ciliegia_cherry": [
+  "cherries"
+ ],
+ "albicocca_apricot": [
+  "apricots"
+ ],
+ "arachide_peanut": [
+  "peanuts"
+ ],
+ "lenticchia_lentil": [
+  "lentils"
+ ],
+ "cece_chickpea": [
+  "chickpeas"
+ ],
+ "pisello_pea": [
+  "peas",
+  "green peas"
+ ],
+ "agretti_saltwort": [
+  "agretti",
+  "salsola"
+ ],
+ "mirtillo_rosso_lingonberry": [
+  "lingonberries",
+  "cranberry"
+ ],
+ "patata_dolce_sweet_potato": [
+  "sweet potatoes"
+ ],
+ "navone_swede": [
+  "rutabaga"
+ ],
+ "taccola_snow_pea": [
+  "snow peas",
+  "mangetout"
+ ],
+ "broccolo_romanesco_romanesco": [
+  "romanesco broccoli"
+ ],
+ "puntarelle_puntarelle": [
+  "catalogna chicory"
+ ],
+ "lampascioni_tassel_hyacinth": [
+  "lampascioni",
+  "muscari comosum"
+ ],
+ "zucchina_spinosa_chayote": [
+  "chayote squash"
+ ],
+ "alchechengi_cape_gooseberry": [
+  "physalis"
+ ],
+ "cicerchia_grass_pea": [
+  "lathyrus"
+ ],
+ "cedro_citron": [
+  "citron"
+ ],
+ "chinotto_chinotto": [
+  "chinotto orange"
+ ],
+ "nespola_comune_medlar": [
+  "medlar fruit"
+ ],
+ "mirabella_mirabelle_plum": [
+  "mirabelle"
+ ],
+ "cardoncello_king_oyster_mushroom": [
+  "king oyster",
+  "eryngii"
+ ],
+ "gelso_mulberry": [
+  "mulberries"
+ ],
+ "sambuco_elderberry": [
+  "elderberries"
+ ],
+ "ribes_nero_blackcurrant": [
+  "black currant",
+  "blackcurrants"
+ ],
+ "daikon_daikon": [
+  "white radish"
+ ],
+ "carruba_carob": [
+  "carob pods"
+ ],
+ "giuggiola_jujube": [
+  "jujube fruit"
+ ],
+ "spugnola_morel": [
+  "morel mushroom",
+  "morels"
+ ],
+ "finferlo_chanterelle": [
+  "chanterelles"
+ ],
+ "cipollotto_spring_onion": [
+  "spring onions",
+  "scallions",
+  "green onions"
+ ],
+ "noce_walnut": [
+  "walnuts"
+ ],
+ "nocciola_hazelnut": [
+  "hazelnuts"
+ ],
+ "mandorla_almond": [
+  "almonds"
+ ],
+ "pistacchio_pistachio": [
+  "pistachios"
+ ],
+ "oliva_olive": [
+  "olives"
+ ],
+ "zafferano_saffron": [
+  "saffron crocus"
+ ],
+ "erba_cipollina_chives": [
+  "chive"
+ ],
+ "uva_spina_gooseberry": [
+  "gooseberries"
+ ],
+ "cocco_coconut": [
+  "coconuts"
+ ],
+ "shiitake_shiitake": [
+  "shiitake mushroom"
+ ]
+}

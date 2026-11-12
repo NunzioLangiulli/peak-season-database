@@ -1,0 +1,465 @@
+{
+ "_doc": "Codice di specie UPOV (UPOV code) usato dal Catalogo comune UE / EU Plant Variety Portal (lista 'UPOV species' del portale, letta il 2026-11-05). register: VEG = specie ortive (Dir. 2002/55/CE), AGR = specie agricole (Dir. 2002/53/CE), FRU = specie da frutto (Dir. 2008/90/CE). null = specie non regolamentata nel catalogo UE (erbe aromatiche, funghi, frutti tropicali, vite, ecc.). 'approx' = gruppo/specie piu' vicina.",
+ "items": {
+  "aglio_garlic": [
+   "ALLIU_SAT",
+   "Allium sativum L.",
+   "VEG",
+   "exact"
+  ],
+  "asparago_asparagus": [
+   "ASPAR_OFF",
+   "Asparagus officinalis L.",
+   "VEG",
+   "exact"
+  ],
+  "carciofo_artichoke": [
+   "CYNAR_CAR",
+   "Cynara cardunculus L.",
+   "VEG",
+   "exact"
+  ],
+  "cardo_cardoon": [
+   "CYNAR_CAR",
+   "Cynara cardunculus L.",
+   "VEG",
+   "exact"
+  ],
+  "carota_carrot": [
+   "DAUCU_CAR",
+   "Daucus carota L.",
+   "VEG",
+   "exact"
+  ],
+  "barbabietola_beetroot": [
+   "BETAA_VUL_GVC",
+   "Beta vulgaris Garden Beet Group",
+   "VEG",
+   "exact"
+  ],
+  "bietola_da_coste_swiss_chard": [
+   "BETAA_VUL_GVF",
+   "Beta vulgaris Leaf Beet Group",
+   "VEG",
+   "exact"
+  ],
+  "cavoletto_di_bruxelles_brussels_sprout": [
+   "BRASS_OLE_GGM",
+   "Brassica oleracea L. (Brussels Sprouts Group)",
+   "VEG",
+   "exact"
+  ],
+  "cavolfiore_cauliflower": [
+   "BRASS_OLE_GBB",
+   "Brassica oleracea L. (Cauliflower Group)",
+   "VEG",
+   "exact"
+  ],
+  "broccolo_broccoli": [
+   "BRASS_OLE_GBC",
+   "Brassica oleracea L. (Broccoli Group)",
+   "VEG",
+   "exact"
+  ],
+  "cavolo_cappuccio_cabbage": [
+   "BRASS_OLE_GCA",
+   "Brassica oleracea L. (White Cabbage Group)",
+   "VEG",
+   "exact"
+  ],
+  "cavolo_rosso_red_cabbage": [
+   "BRASS_OLE_GCR",
+   "Brassica oleracea L. (Red Cabbage Group)",
+   "VEG",
+   "exact"
+  ],
+  "cavolo_verza_savoy_cabbage": [
+   "BRASS_OLE_GCS",
+   "Brassica oleracea L. (Savoy Cabbage Group)",
+   "VEG",
+   "exact"
+  ],
+  "cavolo_nero_black_kale": [
+   "BRASS_OLE_GAS",
+   "Brassica oleracea L. (Curly kale Group)",
+   "VEG",
+   "exact",
+   "la varieta' 'Nero di Toscana' e' iscritta in Italia in questo gruppo"
+  ],
+  "cavolo_rapa_kohlrabi": [
+   "BRASS_OLE_GGO",
+   "Brassica oleracea L. (Kohlrabi Group)",
+   "VEG",
+   "exact"
+  ],
+  "cetriolo_cucumber": [
+   "CUCUM_SAT",
+   "Cucumis sativus L.",
+   "VEG",
+   "exact"
+  ],
+  "cicoria_da_cespo_chicory": [
+   "CICHO_INT_FOL",
+   "Cichorium intybus L. (Leaf Chicory Group)",
+   "VEG",
+   "exact"
+  ],
+  "cicoria_da_taglio_cutting_chicory": [
+   "CICHO_INT_FOL",
+   "Cichorium intybus L. (Leaf Chicory Group)",
+   "VEG",
+   "exact"
+  ],
+  "radicchio_radicchio": [
+   "CICHO_INT_FOL",
+   "Cichorium intybus L. (Leaf Chicory Group)",
+   "VEG",
+   "exact"
+  ],
+  "indivia_belga_belgian_endive": [
+   "CICHO_INT_1WIT",
+   "Cichorium intybus L. (Witloof Chicory Group)",
+   "VEG",
+   "exact"
+  ],
+  "scarola_escarole": [
+   "CICHO_END",
+   "Cichorium endivia L.",
+   "VEG",
+   "exact"
+  ],
+  "indivia_riccia_curly_endive": [
+   "CICHO_END",
+   "Cichorium endivia L.",
+   "VEG",
+   "exact"
+  ],
+  "cipolla_estiva_summer_onion": [
+   "ALLIU_CEP_CEP",
+   "Allium cepa L. var. cepa",
+   "VEG",
+   "exact"
+  ],
+  "cipolla_invernale_winter_onion": [
+   "ALLIU_CEP_CEP",
+   "Allium cepa L. var. cepa",
+   "VEG",
+   "exact"
+  ],
+  "scalogno_shallot": [
+   "ALLIU_CEP_AGG",
+   "Allium cepa L. var. aggregatum G. Don",
+   "VEG",
+   "exact"
+  ],
+  "porro_leek": [
+   "ALLIU_POR",
+   "Allium porrum L.",
+   "VEG",
+   "exact"
+  ],
+  "fagiolo_bean": [
+   "PHASE_VUL",
+   "Phaseolus vulgaris L.",
+   "VEG",
+   "exact"
+  ],
+  "fagiolino_green_bean": [
+   "PHASE_VUL",
+   "Phaseolus vulgaris L.",
+   "VEG",
+   "exact"
+  ],
+  "fava_broad_bean": [
+   "VICIA_FAB_MAJ",
+   "Vicia faba L. var. major Harz",
+   "VEG",
+   "exact"
+  ],
+  "pisello_pea": [
+   "PISUM_SAT",
+   "Pisum sativum L.",
+   "VEG",
+   "exact"
+  ],
+  "finocchio_fennel": [
+   "FOENI_VUL",
+   "Foeniculum vulgare Mill.",
+   "VEG",
+   "exact"
+  ],
+  "lattuga_da_cespo_head_lettuce": [
+   "LACTU_SAT",
+   "Lactuca sativa L.",
+   "VEG",
+   "exact"
+  ],
+  "lattuga_da_taglio_leaf_lettuce": [
+   "LACTU_SAT",
+   "Lactuca sativa L.",
+   "VEG",
+   "exact"
+  ],
+  "melanzana_eggplant": [
+   "SOLAN_MEL",
+   "Solanum melongena L.",
+   "VEG",
+   "exact"
+  ],
+  "pomodoro_tomato": [
+   "SOLAN_LYC",
+   "Solanum lycopersicum L.",
+   "VEG",
+   "exact"
+  ],
+  "patata_potato": [
+   "SOLAN_TUB",
+   "Solanum tuberosum L.",
+   "AGR",
+   "exact"
+  ],
+  "peperone_bell_pepper": [
+   "CAPSI_ANN",
+   "Capsicum annuum L.",
+   "VEG",
+   "exact"
+  ],
+  "peperoncino_chili_pepper": [
+   "CAPSI_ANN",
+   "Capsicum annuum L.",
+   "VEG",
+   "exact"
+  ],
+  "rapa_turnip": [
+   "BRASS_RAP_RAP",
+   "Brassica rapa L. var. rapa (L.) Thell.",
+   "VEG",
+   "exact"
+  ],
+  "ravanello_radish": [
+   "RAPHA_SAT_SAT",
+   "Raphanus sativus L. var. sativus",
+   "VEG",
+   "exact"
+  ],
+  "sedano_celery": [
+   "APIUM_GRA_DUL",
+   "Apium graveolens L. var. dulce (Mill.) Pers.",
+   "VEG",
+   "exact"
+  ],
+  "sedano_rapa_celeriac": [
+   "APIUM_GRA_RAP",
+   "Apium graveolens L. var. rapaceum (Mill.) Gaud.",
+   "VEG",
+   "exact"
+  ],
+  "spinacio_spinach": [
+   "SPINA_OLE",
+   "Spinacia oleracea L.",
+   "VEG",
+   "exact"
+  ],
+  "valerianella_corn_salad": [
+   "VLRNL_LOC",
+   "Valerianella locusta (L.) Laterr.",
+   "VEG",
+   "exact"
+  ],
+  "zucca_pumpkin": [
+   "CUCUR_MOS",
+   "Cucurbita moschata Duchesne",
+   "VEG",
+   "exact"
+  ],
+  "zucchina_zucchini": [
+   "CUCUR_PEP",
+   "Cucurbita pepo L.",
+   "VEG",
+   "exact"
+  ],
+  "anguria_watermelon": [
+   "CTRLS_LAN",
+   "Citrullus lanatus (Thunb.) Matsum. & Nakai",
+   "VEG",
+   "exact"
+  ],
+  "melone_melon": [
+   "CUCUM_MEL",
+   "Cucumis melo L.",
+   "VEG",
+   "exact"
+  ],
+  "prezzemolo_parsley": [
+   "PETRO_CRI",
+   "Petroselinum crispum (Mill.) Nyman ex A. W. Hill",
+   "VEG",
+   "exact"
+  ],
+  "mais_corn": [
+   "ZEAAA_MAY_GSW",
+   "Zea mays L. subsp. mays (Sweet Corn Group)",
+   "VEG",
+   "exact"
+  ],
+  "arachide_peanut": [
+   "ARACH_HYP",
+   "Arachis hypogaea L.",
+   "AGR",
+   "exact"
+  ],
+  "orzo_barley": [
+   "HORDE_VUL",
+   "Hordeum vulgare L.",
+   "AGR",
+   "exact"
+  ],
+  "grano_duro_durum_wheat": [
+   "TRITI_TUR_DUR",
+   "Triticum durum Desf.",
+   "AGR",
+   "exact"
+  ],
+  "riso_rice": [
+   "ORYZA_SAT",
+   "Oryza sativa L.",
+   "AGR",
+   "exact"
+  ],
+  "avena_oat": [
+   "AVENA_SAT",
+   "Avena sativa L.",
+   "AGR",
+   "exact"
+  ],
+  "albicocca_apricot": [
+   "PRUNU_ARM",
+   "Prunus armeniaca L.",
+   "FRU",
+   "exact"
+  ],
+  "ciliegia_cherry": [
+   "PRUNU_AVI",
+   "Prunus avium (L.) L.",
+   "FRU",
+   "exact"
+  ],
+  "pesca_peach": [
+   "PRUNU_PER",
+   "Prunus persica (L.) Batsch",
+   "FRU",
+   "exact"
+  ],
+  "pesca_noce_nectarine": [
+   "PRUNU_PER_NUC",
+   "Prunus persica (L.) Batsch var. nucipersica (Suckow) C. K. Schneid.",
+   "FRU",
+   "exact"
+  ],
+  "susina_plum": [
+   "PRUNU_DOM",
+   "Prunus domestica L.",
+   "FRU",
+   "exact",
+   "le susine cino-giapponesi sono Prunus salicina (PRUNU_SAL)"
+  ],
+  "mela_apple": [
+   "MALUS_DOM",
+   "Malus domestica (Suckow) Borkh.",
+   "FRU",
+   "exact"
+  ],
+  "pera_pear": [
+   "PYRUS_COM",
+   "Pyrus communis L.",
+   "FRU",
+   "exact"
+  ],
+  "mela_cotogna_quince": [
+   "CYDON_OBL",
+   "Cydonia oblonga Mill.",
+   "FRU",
+   "exact"
+  ],
+  "fico_fig": [
+   "FICUS_CAR",
+   "Ficus carica L.",
+   "FRU",
+   "exact"
+  ],
+  "castagna_chestnut": [
+   "CASTA_SAT",
+   "Castanea sativa Mill.",
+   "FRU",
+   "exact"
+  ],
+  "fragola_strawberry": [
+   "FRAGA_ANA",
+   "Fragaria x ananassa Duch.",
+   "FRU",
+   "exact"
+  ],
+  "lampone_raspberry": [
+   "RUBUS_IDA",
+   "Rubus idaeus L.",
+   "FRU",
+   "exact"
+  ],
+  "mora_blackberry": [
+   "RUBUS_EUB",
+   "Rubus L. subg. Rubus",
+   "FRU",
+   "approx"
+  ],
+  "mirtillo_blueberry": [
+   "VACCI_COR",
+   "Vaccinium corymbosum L.",
+   "FRU",
+   "exact",
+   "il mirtillo nero selvatico e' Vaccinium myrtillus (VACCI_MYR)"
+  ],
+  "ribes_redcurrant": [
+   "RIBES_RUB",
+   "Ribes rubrum L.",
+   "FRU",
+   "exact"
+  ],
+  "arancia_orange": [
+   "CITRU_SIN",
+   "Citrus sinensis (L.) Osbeck",
+   "FRU",
+   "exact"
+  ],
+  "limone_lemon": [
+   "CITRU_LIM",
+   "Citrus x limon (L.) Osbeck",
+   "FRU",
+   "exact"
+  ],
+  "mandarino_mandarin": [
+   "CITRU_RET",
+   "Citrus reticulata Blanco",
+   "FRU",
+   "exact",
+   "il mandarino mediterraneo (es. 'Avana') e' iscritto come Citrus deliciosa (CITRU_DEL)"
+  ],
+  "clementine_clementine": [
+   "CITRU_CLE",
+   "Citrus clementina hort. ex Tanaka",
+   "FRU",
+   "exact"
+  ],
+  "pompelmo_grapefruit": [
+   "CITRU_PAR",
+   "Citrus x paradisi Macfad.",
+   "FRU",
+   "exact"
+  ],
+  "lime_lime": [
+   "CITRU_AUR",
+   "Citrus aurantiifolia (Christm.) Swingle",
+   "FRU",
+   "exact"
+  ]
+ }
+}

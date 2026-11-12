@@ -1,0 +1,412 @@
+{
+  "fava_broad_bean": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "crea"
+    ],
+    "sl": [
+      "Baccelli turgidi, verde vivo e brillante, senza macchie, con i semi in rilievo.",
+      "Plump, bright lively green pods, unblemished, with the beans showing through."
+    ],
+    "ds": [
+      "Scegli baccelli sodi e turgidi, di colore verde vivo e brillante, senza macchie scure, che si aprono facilmente; i semi devono essere ben formati e in rilievo. Baccelli molli o anneriti indicano fave vecchie, con semi più duri e farinosi.",
+      "Choose firm, plump pods of a bright, lively green, with no dark spots, that open easily; the beans should be well formed and visible through the pod. Soft or blackened pods mean old beans, harder and mealier."
+    ],
+    "cs": [
+      "Frigo (cassetto) · max 5 giorni",
+      "Fridge (crisper) · max 5 days"
+    ],
+    "si": [
+      "Conservale nel baccello nel cassetto del frigorifero e consumale entro 5 giorni; sgranate e sbollentate si congelano bene. I valori di conservazione professionale sono riferiti ai fagioli in baccello (5-7,5 °C, umidità alta).",
+      "Keep them in the pod in the fridge crisper and use within 5 days; shelled and blanched they freeze well. Professional storage values refer to pod beans (5-7.5 °C, high humidity)."
+    ],
+    "hb": [
+      "Per 100 g le fave fresche sono ricche di folati e vitamina C e forniscono proteine vegetali e fibre. Attenzione: chi ha carenza dell'enzima G6PD (favismo) non deve consumarle.",
+      "Per 100 g fresh broad beans are high in folate and vitamin C and provide plant protein and fibre. Caution: people with G6PD enzyme deficiency (favism) must not eat them."
+    ],
+    "wr": [
+      "I baccelli più teneri si mangiano: tagliati a pezzi si cuociono in umido o si friggono. La pellicina dei semi, se dura, si toglie dopo una breve sbollentatura.",
+      "The most tender pods are edible: cut into pieces they can be stewed or fried. The skin of the beans, if tough, slips off after a quick blanch."
+    ]
+  },
+  "finocchio_fennel": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Grumolo bianco brillante, sodo, pesante e croccante, senza crepe né annerimenti.",
+      "Bright white, firm, heavy, crisp bulb with no cracks or darkening."
+    ],
+    "ds": [
+      "Il finocchio fresco ha guaine bianche brillanti, turgide e croccanti, ben serrate, senza spaccature, annerimenti o germogli; più è pesante, più è fresco. I finocchi tondeggianti sono ideali crudi, quelli allungati sono più fibrosi e adatti alla cottura.",
+      "Fresh fennel has bright white, turgid, crisp, tightly packed layers with no cracks, darkening or shoots; the heavier it is, the fresher. Round bulbs are ideal raw, elongated ones are more fibrous and better cooked."
+    ],
+    "cs": [
+      "Frigo (cassetto)",
+      "Fridge (crisper)"
+    ],
+    "si": [
+      "Conservalo in frigorifero in un sacchetto forato per 5-6 giorni; taglia le barbe e conservale a parte. In condizioni professionali (0 °C, umidità 90-95%) dura circa 2 settimane. Tienilo lontano dalla frutta che produce etilene.",
+      "Keep it in a perforated bag in the fridge for 5-6 days; cut off the fronds and store them separately. Professionally (0 °C, 90-95% humidity) it lasts about 2 weeks. Keep it away from ethylene-producing fruit."
+    ],
+    "hb": [
+      "Molto povero di calorie e ricco d'acqua, per 100 g è fonte di vitamina C, folati e potassio. Il caratteristico aroma di anice viene dall'anetolo.",
+      "Very low in calories and rich in water, per 100 g it is a source of vitamin C, folate and potassium. Its characteristic aniseed aroma comes from anethole."
+    ],
+    "wr": [
+      "Le barbe verdi profumano insalate, pesce e salse; gambi e guaine esterne più dure vanno in brodi, vellutate o infusi.",
+      "The green fronds flavour salads, fish and sauces; stalks and tougher outer layers go into stocks, soups or infusions."
+    ]
+  },
+  "lattuga_da_cespo_head_lettuce": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Cespo intero, compatto e pulito, foglie croccanti verde brillante; non umido né maleodorante.",
+      "Whole, compact, clean head with crisp, bright green leaves; not damp or smelly."
+    ],
+    "ds": [
+      "Scegli cespi interi, sodi e compatti, puliti, con foglie croccanti e turgide di colore verde brillante, senza imbrunimenti. Evita cespi umidi, con odori sgradevoli o con lo stelo fiorale allungato. Il taglio alla base deve essere chiaro, non arrossato.",
+      "Choose whole, firm, compact, clean heads with crisp, turgid, bright green leaves and no browning. Avoid damp heads, unpleasant smells or an elongated flower stalk. The base cut should be pale, not reddish."
+    ],
+    "cs": [
+      "Frigo · 1-2 settimane",
+      "Fridge · 1-2 weeks"
+    ],
+    "si": [
+      "In casa conservala in frigorifero, intera e non lavata, in un sacchetto o contenitore con carta assorbente, al massimo 3 giorni. In condizioni professionali va tenuta il più vicino possibile a 0 °C con umidità 98-100%. È molto sensibile all'etilene (macchie brune sulle nervature): tienila lontana da mele, pere e banane.",
+      "At home keep it whole and unwashed in the fridge in a bag or container with paper towel, for 3 days at most. Professionally it should be kept as close to 0 °C as possible with 98-100% humidity. It is very sensitive to ethylene (brown spots on the veins): keep it away from apples, pears and bananas."
+    ],
+    "hb": [
+      "Ricca d'acqua e povera di calorie, per 100 g è ricca di vitamina C e folati e fonte di vitamina A e potassio. Le foglie esterne, più verdi, contengono più caroteni di quelle interne.",
+      "Watery and low in calories, per 100 g it is high in vitamin C and folate and a source of vitamin A and potassium. The greener outer leaves contain more carotenes than the inner ones."
+    ],
+    "wr": [
+      "Le foglie esterne un po' dure non vanno buttate: stufate con olio o frullate in vellutata. La lattuga appassita torna croccante in acqua fredda per 15 minuti.",
+      "Don't discard slightly tough outer leaves: braise them in oil or blend into soup. Wilted lettuce crisps up again in cold water for 15 minutes."
+    ]
+  },
+  "lattuga_da_taglio_leaf_lettuce": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "uc_davis",
+      "crea"
+    ],
+    "sl": [
+      "Foglie turgide, croccanti e brillanti, senza margini secchi, molli o ingialliti.",
+      "Turgid, crisp, bright leaves with no dry, soft or yellowed edges."
+    ],
+    "ds": [
+      "Scegli foglie fresche, croccanti e pulite, dal colore brillante tipico della varietà (verde o rossastro), senza bordi bruciati, parti viscide o ingiallimenti. Evita confezioni con condensa o odore sgradevole.",
+      "Choose fresh, crisp, clean leaves with the bright colour typical of the variety (green or reddish), with no burnt edges, slimy parts or yellowing. Avoid packs with condensation or an off smell."
+    ],
+    "cs": [
+      "Frigo · 2-3 giorni",
+      "Fridge · 2-3 days"
+    ],
+    "si": [
+      "Si conserva meno della lattuga a cespo: in frigorifero, non lavata, in un contenitore con carta assorbente, per 2-3 giorni al massimo. Va tenuta vicino a 0 °C e con umidità alta; è molto sensibile all'etilene, che provoca ingiallimento e macchie brune.",
+      "It keeps less well than head lettuce: in the fridge, unwashed, in a container with paper towel, for 2-3 days at most. Keep it near 0 °C with high humidity; it is very sensitive to ethylene, which causes yellowing and brown spots."
+    ],
+    "hb": [
+      "Povera di calorie, per 100 g è ricca di vitamina C e fonte di vitamina A e folati. Si raccoglie a più riprese, tagliando le foglie e lasciando ricrescere la pianta.",
+      "Low in calories, per 100 g it is high in vitamin C and a source of vitamin A and folate. It is harvested repeatedly by cutting the leaves and letting the plant regrow."
+    ],
+    "wr": [
+      "Si consuma tutta; le foglie un po' appassite si rinfrescano in acqua fredda o si usano cotte in minestre e risotti.",
+      "All of it is eaten; slightly wilted leaves can be refreshed in cold water or used cooked in soups and risottos."
+    ]
+  },
+  "lenticchia_lentil": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "crea"
+    ],
+    "sl": [
+      "Lenticchie secche intere, di colore uniforme, senza polvere, semi rotti o fori.",
+      "Whole dried lentils of even colour, with no dust, broken seeds or holes."
+    ],
+    "ds": [
+      "Scegli lenticchie intere, lisce e di colore uniforme; polvere, semi spezzati o forati indicano un prodotto vecchio o attaccato dagli insetti. In Italia sono tutelate, tra le altre, la Lenticchia di Castelluccio di Norcia IGP e quella di Altamura IGP.",
+      "Choose whole, smooth lentils of even colour; dust, broken or holed seeds indicate old or insect-damaged produce. Protected Italian lentils include Lenticchia di Castelluccio di Norcia PGI and Lenticchia di Altamura PGI."
+    ],
+    "cs": [
+      "Dispensa · fino a 1 anno",
+      "Pantry · up to 1 year"
+    ],
+    "si": [
+      "Conservale in un contenitore ermetico, al fresco, all'asciutto e al buio. Quelle cotte vanno in frigorifero e si consumano entro 3-4 giorni, oppure si congelano.",
+      "Store them in an airtight container in a cool, dry, dark place. Cooked lentils go in the fridge and should be eaten within 3-4 days, or frozen."
+    ],
+    "hb": [
+      "Valori per le lenticchie secche: per 100 g sono ricche di tiamina, vitamina B6, folati, potassio, fosforo, ferro e rame e fonte di magnesio, zinco e selenio, con molte proteine e fibre. La vitamina C (ad esempio un po' di limone o di verdure crude) aiuta l'assorbimento del ferro vegetale.",
+      "Values for dried lentils: per 100 g they are high in thiamin, vitamin B6, folate, potassium, phosphorus, iron and copper and a source of magnesium, zinc and selenium, with plenty of protein and fibre. Vitamin C (for example a little lemon or raw vegetables) helps absorb plant iron."
+    ],
+    "wr": [
+      "Il brodo di cottura è una buona base per zuppe; le lenticchie avanzate diventano polpette, creme o ragù vegetale.",
+      "The cooking broth makes a good soup base; leftover lentils become patties, spreads or a vegetable ragù."
+    ]
+  },
+  "melanzana_eggplant": {
+    "pl": "temperatura_ambiente",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Buccia tesa e lucida, polpa soda, calice verde e fresco; niente ammaccature o parti molli.",
+      "Taut, glossy skin, firm flesh and a fresh green calyx; no bruises or soft spots."
+    ],
+    "ds": [
+      "La melanzana deve essere turgida e lucida, del colore tipico della varietà, con polpa soda che riprende forma alla pressione e calice verde e fresco. Evita frutti opachi, raggrinziti, con macchie brune o parti molli: indicano un prodotto vecchio o danneggiato dal freddo.",
+      "The aubergine should be turgid and glossy, with the colour typical of the variety, firm flesh that springs back when pressed and a fresh green calyx. Avoid dull, wrinkled fruit with brown spots or soft parts: they indicate old or chill-damaged produce."
+    ],
+    "cs": [
+      "Ambiente · in frigo max 1-3 giorni",
+      "Room temp · fridge max 1-3 days"
+    ],
+    "si": [
+      "Meglio fuori frigo, in un luogo fresco: la guida UC Davis la indica tra i prodotti da tenere a temperatura ambiente e in frigorifero al massimo 1-3 giorni se la usi subito dopo (USDA FoodKeeper indica 4-7 giorni in frigo). È sensibile al freddo: l'ideale sarebbe 10-12 °C, mentre dopo 6-8 giorni a 5 °C compaiono danni. È anche sensibile all'etilene (cade il calice, la buccia scurisce).",
+      "Best kept out of the fridge in a cool place: the UC Davis guide lists it among room-temperature produce, with at most 1-3 days in the fridge if used soon after (USDA FoodKeeper gives 4-7 days in the fridge). It is cold-sensitive: ideally 10-12 °C, while after 6-8 days at 5 °C damage appears. It is also sensitive to ethylene (the calyx drops, the skin darkens)."
+    ],
+    "cn": [
+      "Dopo 6-8 giorni a 5 °C: buccia butterata e macchie brune (scottatura), poi imbrunimento di polpa e semi.",
+      "After 6-8 days at 5 °C: pitted skin and brown spots (scald), followed by browning of flesh and seeds."
+    ],
+    "hb": [
+      "Molto ricca d'acqua e povera di calorie, fornisce fibre e un po' di vitamina C, che però diminuisce con la cottura. Il colore viola della buccia è dovuto alle antocianine.",
+      "Very watery and low in calories, it provides fibre and some vitamin C, which decreases with cooking. The purple skin colour comes from anthocyanins."
+    ],
+    "wr": [
+      "La buccia si mangia: tagliata a striscioline e fritta o cotta al forno diventa croccante. Le melanzane un po' molli sono perfette per caponate, creme e polpette.",
+      "The skin is edible: cut into strips and fried or baked it turns crispy. Slightly soft aubergines are perfect for caponata, dips and patties."
+    ]
+  },
+  "pastinaca_parsnip": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66"
+    ],
+    "sl": [
+      "Radice soda, liscia e pulita, color avorio, senza radichette, macchie o parti molli.",
+      "Firm, smooth, clean, ivory root with no rootlets, spots or soft parts."
+    ],
+    "ds": [
+      "Una pastinaca di qualità è soda, pulita e piuttosto liscia, non profondamente solcata e senza radichette secondarie. Le radici di dimensione media sono meno fibrose; evita quelle molli o con macchie scure.",
+      "A good parsnip is firm, clean and fairly smooth, not deeply ridged and without secondary rootlets. Medium-sized roots are less fibrous; avoid soft ones or those with dark spots."
+    ],
+    "cs": [
+      "Frigo · 2-3 settimane",
+      "Fridge · 2-3 weeks"
+    ],
+    "si": [
+      "Conservala in frigorifero in un sacchetto forato: si mantiene diverse settimane. In condizioni professionali (0-1 °C, umidità 98%) le radici sane durano 4-6 mesi. Non teme il freddo; tienila lontana dalla frutta che produce etilene, che può renderla amara.",
+      "Keep it in a perforated bag in the fridge: it lasts several weeks. Professionally (0-1 °C, 98% humidity) healthy roots keep 4-6 months. It tolerates cold; keep it away from ethylene-producing fruit, which can make it bitter."
+    ],
+    "hb": [
+      "Radice dolce e aromatica, simile a una carota chiara, molto usata nel Nord Europa e in passato anche in Italia. Le tabelle CREA e BDA-IEO non riportano una scheda specifica.",
+      "A sweet, aromatic root resembling a pale carrot, widely used in Northern Europe and historically in Italy too. CREA and BDA-IEO tables have no specific entry."
+    ],
+    "wr": [
+      "Le bucce lavate, condite con olio e cotte in forno, diventano chips; la pastinaca avanzata arricchisce purè e vellutate.",
+      "Washed peelings tossed in oil and baked become crisps; leftover parsnip enriches mash and soups."
+    ]
+  },
+  "patata_potato": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Tuberi sodi e integri, senza germogli, parti verdi, rughe o terra incrostata.",
+      "Firm, intact tubers with no sprouts, green patches, wrinkles or caked soil."
+    ],
+    "ds": [
+      "Scegli patate sode, turgide e di forma regolare, con buccia integra e colore uniforme, senza germogli, zone verdi, lesioni o terra incrostata. Le parti verdi contengono solanina, una sostanza amara e tossica in quantità elevate: vanno eliminate abbondantemente.",
+      "Choose firm, turgid, regularly shaped potatoes with intact skin and even colour, without sprouts, green areas, injuries or caked soil. Green parts contain solanine, a bitter substance that is toxic in large amounts: cut them away generously."
+    ],
+    "cs": [
+      "Fresco e buio · fino a 2 settimane",
+      "Cool and dark · up to 2 weeks"
+    ],
+    "si": [
+      "Conservale in un luogo fresco, buio, asciutto e ventilato (non in frigorifero) fino a due settimane, in sacchi di carta o cassette e lontano dalle cipolle. La luce le fa inverdire. Sotto i 4 °C l'amido si trasforma in zuccheri: la patata diventa dolciastra e scurisce in frittura.",
+      "Store them in a cool, dark, dry, ventilated place (not the fridge) for up to two weeks, in paper sacks or crates and away from onions. Light turns them green. Below 4 °C starch turns into sugars: the potato becomes sweetish and darkens when fried."
+    ],
+    "cn": [
+      "Sotto i 3-4 °C aumentano gli zuccheri (sapore dolciastro, frittura scura); a 1-2 °C può comparire un imbrunimento interno color mogano.",
+      "Below 3-4 °C sugars increase (sweetish taste, dark frying); at 1-2 °C an internal mahogany browning can develop."
+    ],
+    "hb": [
+      "È ricca di carboidrati complessi e per 100 g è ricca di vitamina B6 e fonte di vitamina C, niacina, folati, potassio e rame. Cotta e raffreddata sviluppa amido resistente, che si comporta come una fibra.",
+      "It is rich in complex carbohydrates and per 100 g high in vitamin B6 and a source of vitamin C, niacin, folate, potassium and copper. Cooked and cooled it develops resistant starch, which behaves like fibre."
+    ],
+    "wr": [
+      "Le patate novelle si mangiano con la buccia; le bucce delle altre, ben lavate, si friggono o si cuociono in forno come chips. Le patate lesse avanzate diventano gnocchi, crocchette o purè.",
+      "New potatoes are eaten with their skins; the peel of other potatoes, well washed, can be fried or baked into crisps. Leftover boiled potatoes become gnocchi, croquettes or mash."
+    ]
+  },
+  "peperone_bell_pepper": {
+    "pl": "temperatura_ambiente",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Peperone sodo, pesante e carnoso, buccia lucida e tesa, picciolo verde e fresco.",
+      "Firm, heavy, fleshy pepper with taut, glossy skin and a fresh green stem."
+    ],
+    "ds": [
+      "Scegli peperoni duri, sodi e carnosi, di forma regolare e con colore brillante e uniforme tipico della varietà; il picciolo deve essere verde e fresco. Evita frutti con zone acquose, avvallamenti o macchie: sono segni di danni da freddo o di invecchiamento.",
+      "Choose hard, firm, fleshy peppers of regular shape with the bright, even colour typical of the variety; the stem should be green and fresh. Avoid fruit with water-soaked areas, dents or spots: these are signs of chilling injury or ageing."
+    ],
+    "cs": [
+      "Ambiente · in frigo max 1-3 giorni",
+      "Room temp · fridge max 1-3 days"
+    ],
+    "si": [
+      "Meglio fuori frigo, in un luogo fresco: la guida UC Davis lo indica tra i prodotti da tenere a temperatura ambiente e in frigorifero al massimo 1-3 giorni se lo usi subito dopo (USDA FoodKeeper indica 4-14 giorni nel cassetto del frigo). L'ideale professionale è 7 °C con umidità 90-95%, che permette 2-3 settimane; sotto i 7 °C è sensibile ai danni da freddo. Non matura dopo la raccolta.",
+      "Best kept out of the fridge in a cool place: the UC Davis guide lists it among room-temperature produce, with at most 1-3 days in the fridge if used soon after (USDA FoodKeeper gives 4-14 days in the crisper). The professional ideal is 7 °C with 90-95% humidity, allowing 2-3 weeks; below 7 °C it is prone to chilling injury. It does not ripen after harvest."
+    ],
+    "cn": [
+      "Sotto i 7 °C: buccia butterata, aree acquose, marciumi (soprattutto Alternaria) e scurimento della cavità dei semi.",
+      "Below 7 °C: pitted skin, water-soaked areas, decay (especially Alternaria) and darkening of the seed cavity."
+    ],
+    "hb": [
+      "Per 100 g è ricchissimo di vitamina C (quasi il doppio del fabbisogno giornaliero) e fonte di vitamina A e vitamina B6. I peperoni rossi e gialli sono semplicemente frutti più maturi di quelli verdi.",
+      "Per 100 g it is extremely high in vitamin C (almost twice the daily requirement) and a source of vitamin A and vitamin B6. Red and yellow peppers are simply riper fruit than green ones."
+    ],
+    "wr": [
+      "Arrostito intero si spella facilmente senza sprecare polpa. Le parti avanzate vanno in salse, frittate e peperonate; si congelano anche crudi a listarelle.",
+      "Roasted whole it peels easily with no waste of flesh. Leftover pieces go into sauces, omelettes and stews; they also freeze raw in strips."
+    ]
+  },
+  "pisello_pea": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "greenpeace",
+      "uc_davis",
+      "crea"
+    ],
+    "sl": [
+      "Baccelli verde brillante, lucidi e pieni, che scricchiolano leggermente al tatto.",
+      "Bright green, glossy, well-filled pods that squeak slightly when squeezed."
+    ],
+    "ds": [
+      "I piselli freschi hanno baccelli di colore verde brillante, lucidi e turgidi, che al tatto scricchiolano leggermente; i semi devono riempire il baccello senza essere duri. Baccelli gialli, secchi o con parti scure indicano un prodotto vecchio.",
+      "Fresh peas have bright green, glossy, turgid pods that squeak slightly when handled; the peas should fill the pod without being hard. Yellow, dry or dark-spotted pods indicate old produce."
+    ],
+    "cs": [
+      "Frigo · pochi giorni · o freezer",
+      "Fridge · a few days · or freezer"
+    ],
+    "si": [
+      "Sgranali il prima possibile e conservali in frigorifero, consumandoli in pochi giorni: dopo la raccolta gli zuccheri si trasformano rapidamente in amido. Se non li usi subito, congelali. A 0 °C e umidità alta si mantengono meglio; sono moderatamente sensibili all'etilene.",
+      "Shell them as soon as possible, keep them in the fridge and use within a few days: after harvest the sugars quickly turn to starch. If you won't use them soon, freeze them. They keep best at 0 °C and high humidity; they are moderately sensitive to ethylene."
+    ],
+    "hb": [
+      "Sono legumi che si possono mangiare anche crudi. Per 100 g sono ricchi di vitamina C e folati e fonte di tiamina e niacina, con proteine vegetali e fibre.",
+      "They are legumes that can also be eaten raw. Per 100 g they are high in vitamin C and folate and a source of thiamin and niacin, with plant protein and fibre."
+    ],
+    "wr": [
+      "Anche i baccelli si usano: lavati e cotti danno un brodo o una vellutata dal sapore dolce (poi si filtrano le parti fibrose).",
+      "The pods can be used too: washed and cooked they make a sweet-tasting stock or soup (strain out the fibrous parts)."
+    ]
+  },
+  "pomodoro_tomato": {
+    "pl": "temperatura_ambiente",
+    "rt": "climaterico",
+    "src": [
+      "altroconsumo",
+      "greenpeace",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Pomodoro sodo, colore uniforme e brillante, senza macchie, crepe o raggrinzimenti; profumo intenso.",
+      "Firm tomato with even, bright colour, no spots, cracks or wrinkles; intense aroma."
+    ],
+    "ds": [
+      "Scegli pomodori sodi e turgidi, con buccia lucida di colore uniforme, senza macchie, screpolature, ammaccature o raggrinzimenti. Un profumo intenso vicino al picciolo è indice di buona maturazione. I pomodori ancora verdi o invaiati continuano a maturare dopo l'acquisto.",
+      "Choose firm, turgid tomatoes with glossy skin of even colour, free of spots, cracks, bruises or wrinkles. A strong aroma near the stem indicates good ripeness. Green or turning tomatoes keep ripening after purchase."
+    ],
+    "cs": [
+      "Ambiente se acerbo · frigo se maturo",
+      "Room temp if unripe · fridge if ripe"
+    ],
+    "si": [
+      "I pomodori non ancora maturi vanno tenuti a temperatura ambiente (circa 19-21 °C), lontano dal sole, finché maturano. Quelli maturi si possono tenere qualche giorno a temperatura ambiente oppure nella parte bassa del frigorifero fino a 4 giorni, togliendoli un po' prima di mangiarli per recuperare l'aroma. Sotto i 10 °C i pomodori verdi subiscono danni e non maturano più bene.",
+      "Unripe tomatoes should be kept at room temperature (about 19-21 °C), out of the sun, until they ripen. Ripe ones can stay a few days at room temperature or in the lower part of the fridge for up to 4 days; take them out a while before eating to recover the aroma. Below 10 °C green tomatoes are damaged and no longer ripen properly."
+    ],
+    "cn": [
+      "Sotto i 10 °C i frutti ancora verdi maturano in modo irregolare, perdono sapore e possono presentare macchie acquose e marciumi.",
+      "Below 10 °C green fruit ripen unevenly, lose flavour and may develop water-soaked spots and decay."
+    ],
+    "hb": [
+      "Per 100 g è ricco di vitamina A (come caroteni) e di vitamina C, con pochissime calorie. Il colore rosso è dovuto al licopene, che si assorbe meglio quando il pomodoro è cotto con un po' d'olio.",
+      "Per 100 g it is high in vitamin A (as carotenes) and vitamin C, with very few calories. Its red colour comes from lycopene, which is better absorbed when the tomato is cooked with a little oil."
+    ],
+    "wr": [
+      "Mangialo con la buccia, ricca di fibre. I pomodori troppo maturi sono perfetti per sughi veloci, passate e gazpacho; le bucce e i semi avanzati insaporiscono brodi.",
+      "Eat the skin, which is rich in fibre. Over-ripe tomatoes are perfect for quick sauces, passata and gazpacho; leftover skins and seeds flavour stocks."
+    ]
+  },
+  "porro_leek": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Fusto bianco, dritto, sodo e liscio; foglie verde scuro, piatte e lucide; base tagliata piatta.",
+      "White, straight, firm, smooth stem; flat, glossy dark green leaves; flat cut base."
+    ],
+    "ds": [
+      "Il porro di qualità è sodo e liscio, senza macchie, con un lungo fusto bianco e foglie verde scuro piatte e lucide. La base tagliata deve essere piatta: una base arrotondata può indicare una lunga conservazione. Evita porri con foglie gialle o appassite.",
+      "A good leek is firm and smooth, unblemished, with a long white stem and flat, glossy dark green leaves. The cut base should be flat: a rounded base may indicate long storage. Avoid leeks with yellow or wilted leaves."
+    ],
+    "cs": [
+      "Frigo · fino a 1 settimana",
+      "Fridge · up to 1 week"
+    ],
+    "si": [
+      "In casa conservalo in frigorifero, avvolto in un sacchetto, fino a una settimana. In condizioni professionali (0 °C, umidità 95-100%) dura 2-3 mesi; l'umidità alta evita che appassisca. Non teme il freddo.",
+      "At home keep it wrapped in a bag in the fridge for up to a week. Professionally (0 °C, 95-100% humidity) it lasts 2-3 months; high humidity prevents wilting. It tolerates cold."
+    ],
+    "hb": [
+      "Ha un sapore più delicato della cipolla e poche calorie; per 100 g è ricco di vitamina B6 e folati e fornisce fibre.",
+      "It has a milder taste than onion and few calories; per 100 g it is high in vitamin B6 and folate and provides fibre."
+    ],
+    "wr": [
+      "La parte verde, spesso scartata, è ottima stufata, nei minestroni e nei brodi; lavala bene perché trattiene terra tra le foglie.",
+      "The green part, often discarded, is excellent braised, in minestrone and in stocks; wash it well as it traps soil between the leaves."
+    ]
+  }
+}

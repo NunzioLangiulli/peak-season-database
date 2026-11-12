@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Peak Season · Admin Studio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=block">
+<link rel="stylesheet" href="/static/studio.css">
+</head>
+<body>
+<header>
+  <h1>Peak Season <span>Admin Studio</span></h1>
+  <nav id="tabs">
+    <button data-t="ui" class="on">Testi App</button>
+    <button data-t="corpus">Corpus Condiviso</button>
+    <button data-t="items">Descrizioni Prodotti</button>
+    <button data-t="images">Immagini</button>
+    <button data-t="icons">Icone</button>
+    <button data-t="logos">Loghi</button>
+    <button data-t="links">Link</button>
+  </nav>
+  <input type="search" id="q" placeholder="Cerca…" autofocus>
+  <span id="dirty"></span>
+  <span id="csv"><button class="btn" id="exp">Esporta CSV</button><button class="btn" id="imp">Importa CSV</button><input type="file" id="file" accept=".csv,text/csv" hidden></span>
+  <button class="btn primary" id="save" disabled>Salva Modifiche</button>
+</header>
+<div id="layout">
+  <main id="main"></main>
+  <aside id="build">
+    <h2>Build &amp; Deploy</h2>
+    <div id="status">Controllo…</div>
+    <div class="actions">
+      <button class="btn" id="sync">Sincronizza App</button>
+      <button class="btn primary" id="apk">Compila APK Android</button>
+      <button class="btn" id="apkdir">Apri Cartella APK</button>
+    </div>
+    <details id="howto"><summary>Come provare le modifiche</summary><div id="howto_text"></div></details>
+    <pre id="log" hidden></pre>
+  </aside>
+</div>
+<div id="modal" hidden><div class="card"><h3 id="m_title"></h3><div id="m_body"></div><button class="btn primary" id="m_ok">Ho Capito</button></div></div>
+<div id="msg"></div>
+<script src="/static/core.js"></script>
+<script src="/static/copy.js"></script>
+<script src="/static/images.js"></script>
+<script src="/static/icons.js"></script>
+<script src="/static/sources.js"></script>
+<script src="/static/build.js"></script>
+</body>
+</html>

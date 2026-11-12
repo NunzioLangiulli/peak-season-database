@@ -1,0 +1,290 @@
+{
+ "_doc_allergens": "Reg. (UE) 1169/2011, Allegato II 'Sostanze o prodotti che provocano allergie o intolleranze' (testo consolidato 01.01.2018, letto su EUR-Lex il 2026-11-05: https://eur-lex.europa.eu/legal-content/IT/TXT/HTML/?uri=CELEX:02011R1169-20180101). Si applicano all'alimento come tale; le castagne non rientrano nella 'frutta a guscio' dell'allegato (elenco chiuso: mandorle, nocciole, noci, anacardi, pecan, noci del Brasile, pistacchi, macadamia).",
+ "annex_ii": {
+  "1": [
+   "Cereali contenenti glutine",
+   "Cereals containing gluten",
+   "grano (tra cui farro e grano khorasan), segale, orzo, avena o i loro ceppi ibridati e prodotti derivati"
+  ],
+  "5": [
+   "Arachidi e prodotti a base di arachidi",
+   "Peanuts and products thereof",
+   "Arachidi e prodotti a base di arachidi."
+  ],
+  "9": [
+   "Sedano e prodotti a base di sedano",
+   "Celery and products thereof",
+   "Sedano e prodotti a base di sedano."
+  ],
+  "8": [
+   "Frutta a guscio",
+   "Nuts",
+   "mandorle, nocciole, noci, noci di acagiù, di pecan, del Brasile, pistacchi, noci macadamia o noci del Queensland, e i loro prodotti"
+  ]
+ },
+ "allergens": {
+  "grano_duro_durum_wheat": [
+   "1"
+  ],
+  "farro_emmer": [
+   "1"
+  ],
+  "orzo_barley": [
+   "1"
+  ],
+  "avena_oat": [
+   "1"
+  ],
+  "arachide_peanut": [
+   "5"
+  ],
+  "sedano_celery": [
+   "9"
+  ],
+  "sedano_rapa_celeriac": [
+   "9"
+  ],
+  "noce_walnut": [
+   "8"
+  ],
+  "nocciola_hazelnut": [
+   "8"
+  ],
+  "mandorla_almond": [
+   "8"
+  ],
+  "pistacchio_pistachio": [
+   "8"
+  ]
+ },
+ "allergen_notes": {
+  "sedano_rapa_celeriac": [
+   "Il sedano rapa è la stessa specie del sedano (Apium graveolens var. rapaceum).",
+   "Celeriac is the same species as celery (Apium graveolens var. rapaceum)."
+  ],
+  "avena_oat": [
+   "L'avena è nell'elenco dei cereali con glutine; può essere usata in prodotti 'senza glutine' solo se specificamente prodotta e controllata.",
+   "Oats are on the list of cereals containing gluten; they can be used in 'gluten-free' products only if specially produced and tested."
+  ],
+  "cocco_coconut": [
+   "Il cocco non rientra nella frutta a guscio dell'Allegato II (elenco chiuso).",
+   "Coconut is not among the nuts listed in Annex II (closed list)."
+  ]
+ },
+ "_doc_portions": "Porzioni standard per adulti da IEO SmartFood, 'Porzioni e frequenze' (tabella completa, https://www.smartfood.ieo.it/media/p02bkul0/smartfood-tab-porzioni-e-frequenze-completa.pdf, copia in data/raw/porzioni/), basata sulle porzioni standard LARN-SINU. group -> [grammi, nome IT, nome EN, frequenza IT, frequenza EN].",
+ "groups": {
+  "verdure": [
+   200,
+   "Verdure e ortaggi",
+   "Vegetables",
+   "1-2 porzioni a pasto",
+   "1-2 portions per meal"
+  ],
+  "insalate": [
+   80,
+   "Insalate a foglia",
+   "Leafy salads",
+   "1-2 porzioni a pasto",
+   "1-2 portions per meal"
+  ],
+  "frutta": [
+   150,
+   "Frutta fresca",
+   "Fresh fruit",
+   "2-3 porzioni al giorno",
+   "2-3 portions a day"
+  ],
+  "legumi_freschi": [
+   150,
+   "Legumi freschi o surgelati",
+   "Fresh or frozen legumes",
+   "3-4 o più porzioni a settimana",
+   "3-4 or more portions a week"
+  ],
+  "legumi_secchi": [
+   50,
+   "Legumi secchi",
+   "Dried legumes",
+   "3-4 o più porzioni a settimana",
+   "3-4 or more portions a week"
+  ],
+  "cereali": [
+   80,
+   "Pasta, riso, mais, farro, orzo e altri cereali",
+   "Pasta, rice, corn, farro, barley and other grains",
+   "1-2 porzioni a pasto",
+   "1-2 portions per meal"
+  ],
+  "frutta_guscio": [
+   30,
+   "Frutta secca a guscio e semi oleosi",
+   "Nuts and oilseeds",
+   "1 porzione al giorno",
+   "1 portion a day"
+  ],
+  "tuberi": [
+   200,
+   "Patate e altri tuberi",
+   "Potatoes and other tubers",
+   "1-2 porzioni a settimana",
+   "1-2 portions a week"
+  ],
+  "aromi": [
+   null,
+   "Erbe aromatiche e spezie",
+   "Herbs and spices",
+   "a piacere, ogni giorno",
+   "as desired, every day"
+  ]
+ },
+ "equivalents": {
+  "pomodoro_tomato": [
+   "2-3 pomodori",
+   "2-3 tomatoes"
+  ],
+  "carota_carrot": [
+   "3-4 carote",
+   "3-4 carrots"
+  ],
+  "peperone_bell_pepper": [
+   "1 peperone",
+   "1 pepper"
+  ],
+  "finocchio_fennel": [
+   "1 finocchio",
+   "1 fennel bulb"
+  ],
+  "carciofo_artichoke": [
+   "2 carciofi",
+   "2 artichokes"
+  ],
+  "zucchina_zucchini": [
+   "2-3 zucchine",
+   "2-3 zucchini"
+  ],
+  "ravanello_radish": [
+   "7-10 ravanelli",
+   "7-10 radishes"
+  ],
+  "cipolla_estiva_summer_onion": [
+   "1-2 cipolle",
+   "1-2 onions"
+  ],
+  "cipolla_invernale_winter_onion": [
+   "1-2 cipolle",
+   "1-2 onions"
+  ],
+  "patata_potato": [
+   "2 patate piccole",
+   "2 small potatoes"
+  ],
+  "_cooked_leafy": [
+   "½ piatto di verdura cotta",
+   "½ plate of cooked vegetables"
+  ],
+  "_salad": [
+   "1 scodella grande",
+   "1 large bowl"
+  ],
+  "_fruit": [
+   "1 frutto medio o 2-3 frutti piccoli",
+   "1 medium fruit or 2-3 small fruits"
+  ],
+  "_legumi_freschi": [
+   "½ piatto, 7-8 cucchiai",
+   "½ plate, 7-8 tablespoons"
+  ],
+  "_legumi_secchi": [
+   "3-4 cucchiai",
+   "3-4 tablespoons"
+  ],
+  "_cereali": [
+   "4 cucchiai di riso o 6-8 cucchiai di farina",
+   "4 tablespoons of rice or 6-8 tablespoons of flour"
+  ],
+  "_frutta_guscio": [
+   "15-20 mandorle/nocciole (per le arachidi: una manciata)",
+   "15-20 almonds/hazelnuts (for peanuts: a handful)"
+  ]
+ },
+ "item_group": {
+  "insalate": [
+   "lattuga_da_cespo_head_lettuce",
+   "lattuga_da_taglio_leaf_lettuce",
+   "rucola_arugula",
+   "valerianella_corn_salad",
+   "radicchio_radicchio",
+   "indivia_riccia_curly_endive",
+   "indivia_belga_belgian_endive",
+   "crescione_watercress"
+  ],
+  "legumi_freschi": [
+   "fava_broad_bean",
+   "pisello_pea",
+   "fagiolo_bean"
+  ],
+  "legumi_secchi": [
+   "cece_chickpea",
+   "lenticchia_lentil",
+   "cicerchia_grass_pea"
+  ],
+  "cereali": [
+   "farro_emmer",
+   "orzo_barley",
+   "grano_duro_durum_wheat",
+   "riso_rice",
+   "avena_oat",
+   "grano_saraceno_buckwheat"
+  ],
+  "frutta_guscio": [
+   "arachide_peanut",
+   "noce_walnut",
+   "nocciola_hazelnut",
+   "mandorla_almond",
+   "pistacchio_pistachio"
+  ],
+  "tuberi": [
+   "patata_potato",
+   "topinambur_jerusalem_artichoke",
+   "patata_dolce_sweet_potato"
+  ],
+  "aromi": [
+   "basilico_basil",
+   "prezzemolo_parsley",
+   "rosmarino_rosemary",
+   "salvia_sage",
+   "origano_oregano",
+   "timo_thyme",
+   "menta_mint",
+   "aglio_garlic",
+   "scalogno_shallot",
+   "peperoncino_chili_pepper",
+   "tartufo_nero_black_truffle",
+   "tartufo_bianco_white_truffle",
+   "erba_cipollina_chives",
+   "rafano_horseradish",
+   "zafferano_saffron",
+   "oliva_olive"
+  ],
+  "_approx": [
+   "fungo_porcino_porcini_mushroom",
+   "fungo_champignon_button_mushroom",
+   "fungo_pleurotus_oyster_mushroom",
+   "fungo_ovolo_caesars_mushroom",
+   "castagna_chestnut",
+   "mais_corn",
+   "topinambur_jerusalem_artichoke",
+   "cicerchia_grass_pea",
+   "spugnola_morel",
+   "rafano_horseradish",
+   "cardoncello_king_oyster_mushroom",
+   "finferlo_chanterelle",
+   "lampascioni_tassel_hyacinth",
+   "shiitake_shiitake",
+   "carruba_carob",
+   "oliva_olive",
+   "agretti_saltwort",
+   "cocco_coconut"
+  ]
+ }
+}

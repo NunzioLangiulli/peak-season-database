@@ -1,0 +1,484 @@
+{
+  "nespola_loquat": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Nespole arancio, turgide e profumate, senza parti annerite o ammaccature.",
+      "Orange, plump, fragrant loquats with no blackened parts or bruises."
+    ],
+    "ds": [
+      "Scegli frutti di colore arancione uniforme, turgidi e senza parti annerite o ammaccature: la buccia sottile si segna facilmente. Vanno consumate ben mature, quando sono dolci e leggermente acidule; si ammorbidiscono rapidamente.",
+      "Choose fruit of even orange colour, plump and free of blackened parts or bruises: the thin skin marks easily. They should be eaten fully ripe, when sweet and slightly tart; they soften quickly."
+    ],
+    "cs": [
+      "Frigo (cassetto)",
+      "Fridge (crisper)"
+    ],
+    "si": [
+      "Conservale nel cassetto del frigorifero fino a 6 giorni, in un solo strato. In condizioni professionali si mantengono 3-4 settimane a 0 °C e 2 settimane a 10 °C, con umidità oltre il 90%. Non temono il freddo.",
+      "Keep them in the fridge crisper for up to 6 days, in a single layer. Professionally they keep 3-4 weeks at 0 °C and 2 weeks at 10 °C, with humidity above 90%. They tolerate cold."
+    ],
+    "hb": [
+      "È la nespola del Giappone, che matura in primavera (diversa dal nespolo comune europeo, che si raccoglie in autunno). Per 100 g è fonte di vitamina A (caroteni) e contiene fibre solubili e potassio.",
+      "This is the Japanese loquat, which ripens in spring (different from the European medlar, harvested in autumn). Per 100 g it is a source of vitamin A (carotenes) and contains soluble fibre and potassium."
+    ],
+    "wr": [
+      "Le nespole molto mature diventano confetture, sciroppi e dolci; i noccioli vanno eliminati e non consumati.",
+      "Very ripe loquats become jams, syrups and desserts; the stones should be removed and not eaten."
+    ]
+  },
+  "pompelmo_grapefruit": {
+    "pl": "temperatura_ambiente",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Frutto pesante, sodo e pieno, buccia gialla o rosata turgida, senza parti molli.",
+      "Heavy, firm, full fruit with turgid yellow or pinkish peel, no soft spots."
+    ],
+    "ds": [
+      "Scegli pompelmi pesanti per la loro grandezza (più succosi), sodi e pieni, con buccia turgida di colore giallo o rosato secondo la varietà, senza parti molli o macchie. Non matura dopo la raccolta.",
+      "Choose grapefruit that are heavy for their size (juicier), firm and full, with turgid yellow or pinkish peel depending on the variety, and no soft parts or spots. It does not ripen after harvest."
+    ],
+    "cs": [
+      "Ambiente 1 sett. · frigo 2 sett. e mezzo",
+      "Room temp 1 week · fridge 2.5 weeks"
+    ],
+    "si": [
+      "Si conserva una settimana a temperatura ambiente in un luogo fresco, oppure fino a due settimane e mezzo in frigorifero. L'ideale professionale è 12-15 °C: a 5 °C o meno può comparire butteratura della buccia.",
+      "It keeps a week at room temperature in a cool place, or up to two and a half weeks in the fridge. The professional ideal is 12-15 °C: at 5 °C or below peel pitting can appear."
+    ],
+    "cn": [
+      "A 5 °C o meno: butterature (pitting) della buccia.",
+      "At 5 °C or below: pitting of the peel."
+    ],
+    "hb": [
+      "Per 100 g è ricco di vitamina C; le varietà a polpa rosa contengono anche carotenoidi. Attenzione: il pompelmo interagisce con diversi farmaci; in caso di terapie chiedi al medico o al farmacista.",
+      "Per 100 g it is high in vitamin C; pink-fleshed varieties also contain carotenoids. Caution: grapefruit interacts with many medicines; if you are on medication, ask your doctor or pharmacist."
+    ],
+    "wr": [
+      "La buccia non trattata si candisce o aromatizza dolci e infusi; il succo avanzato va in sorbetti e condimenti.",
+      "Untreated peel can be candied or used to flavour desserts and infusions; leftover juice goes into sorbets and dressings."
+    ]
+  },
+  "mela_cotogna_quince": {
+    "pl": "luogo_fresco_buio",
+    "rt": "climaterico",
+    "src": [
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Frutto sodo, giallo dorato e molto profumato, buccia integra senza ammaccature né macchie.",
+      "Firm, golden yellow, very fragrant fruit with intact skin, no bruises or spots."
+    ],
+    "ds": [
+      "Scegli mele cotogne sode, di colore giallo dorato (la peluria chiara è normale), molto profumate e senza ammaccature o macchie scure: la polpa si annerisce facilmente se urtata. Sono frutti climaterici che si raccolgono duri e vengono quasi sempre consumati cotti.",
+      "Choose firm quinces of golden yellow colour (pale fuzz is normal), very fragrant and without bruises or dark spots: the flesh darkens easily when knocked. They are climacteric fruits picked hard and almost always eaten cooked."
+    ],
+    "cs": [
+      "Fresco e arieggiato · alcune settimane",
+      "Cool, airy place · several weeks"
+    ],
+    "si": [
+      "Conservale in un luogo fresco e ben arieggiato, separate dagli altri frutti perché il loro profumo intenso si trasmette. In condizioni professionali si mantengono 2-3 mesi a -0,5/0 °C con umidità di circa il 90%. Prima dell'uso possono completare la maturazione a temperatura ambiente.",
+      "Keep them in a cool, well-ventilated place, apart from other fruit as their strong scent transfers. Professionally they keep 2-3 months at -0.5/0 °C with about 90% humidity. Before use they can finish ripening at room temperature."
+    ],
+    "hb": [
+      "Per 100 g è fonte di vitamina C ed è molto ricca di pectina: per questo è ideale per gelatine e cotognata.",
+      "Per 100 g it is a source of vitamin C and is very rich in pectin, which makes it ideal for jellies and quince paste."
+    ],
+    "wr": [
+      "Bucce e torsoli bolliti rilasciano pectina da usare per addensare altre confetture; la buccia profuma anche la biancheria negli armadi.",
+      "Boiled peels and cores release pectin to set other jams; the peel also scents linen in cupboards."
+    ]
+  },
+  "ribes_redcurrant": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Grappoli con bacche sode, lucide e rosso brillante, senza bacche molli, rotte o ammuffite.",
+      "Clusters of firm, glossy, bright red berries with no soft, burst or mouldy berries."
+    ],
+    "ds": [
+      "Scegli grappolini con bacche sode, lucide e di colore uniforme lungo tutto il grappolo, senza bacche schiacciate, rotte o ammuffite.",
+      "Choose small clusters with firm, glossy berries of even colour along the whole cluster, without crushed, burst or mouldy berries."
+    ],
+    "cs": [
+      "Frigo · pochi giorni · o freezer",
+      "Fridge · a few days · or freezer"
+    ],
+    "si": [
+      "Conservalo in frigorifero sul grappolo, non lavato, e consumalo in pochi giorni; si congela bene. Non teme il freddo: l'ideale professionale è -0,5/0 °C con umidità del 95%.",
+      "Keep it in the fridge on the stem, unwashed, and use within a few days; it freezes well. It tolerates cold: the professional ideal is -0.5/0 °C with 95% humidity."
+    ],
+    "hb": [
+      "Per 100 g è ricchissimo di vitamina C (più del doppio del fabbisogno giornaliero) e fonte di potassio, con un gusto acidulo.",
+      "Per 100 g it is extremely high in vitamin C (more than twice the daily requirement) and a source of potassium, with a tart flavour."
+    ],
+    "wr": [
+      "Le bacche un po' mature diventano gelatine, salse per carni e decorazioni per dolci; si sgranano facilmente con una forchetta.",
+      "Slightly overripe berries become jellies, sauces for meat and dessert decorations; they are easy to strip with a fork."
+    ]
+  },
+  "pesca_noce_nectarine": {
+    "pl": "temperatura_ambiente",
+    "rt": "climaterico",
+    "src": [
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Pesca noce soda e profumata, buccia liscia e lucida, colore di fondo giallo; niente macchie.",
+      "Firm, fragrant nectarine with smooth, glossy skin and yellow ground colour; no spots."
+    ],
+    "ds": [
+      "Scegli pesche noci sode, profumate, con buccia liscia e lucida, senza ammaccature o lesioni; il colore di fondo deve essere giallo o crema, non verde. Rispetto alle pesche hanno in genere un sapore più acidulo.",
+      "Choose firm, fragrant nectarines with smooth, glossy skin, without bruises or blemishes; the ground colour should be yellow or cream, not green. They are generally tarter than peaches."
+    ],
+    "cs": [
+      "Ambiente finché matura · frigo max 3 gg",
+      "Room temp until ripe · fridge max 3 days"
+    ],
+    "si": [
+      "Come le pesche: lasciale maturare a temperatura ambiente, poi conservale in frigorifero al massimo 3 giorni. Tra 2 e 8 °C molte varietà sviluppano più in fretta i danni da freddo (polpa farinosa). Professionalmente si conservano a -1/0 °C.",
+      "As with peaches: let them ripen at room temperature, then keep them in the fridge for 3 days at most. Between 2 and 8 °C many varieties develop chilling injury (mealy flesh) faster. Professionally they are stored at -1/0 °C."
+    ],
+    "cn": [
+      "Polpa farinosa e asciutta, imbrunimento interno e perdita di sapore, più rapidi tra 2 e 8 °C.",
+      "Mealy, dry flesh, internal browning and loss of flavour, faster between 2 and 8 °C."
+    ],
+    "hb": [
+      "È una pesca a buccia liscia (stessa specie). Contiene fibre, potassio e, nelle varietà a polpa gialla, caroteni.",
+      "It is a smooth-skinned peach (same species). It contains fibre, potassium and, in yellow-fleshed varieties, carotenes."
+    ],
+    "wr": [
+      "Si mangia con la buccia, ben lavata; i frutti troppo maturi vanno in frullati, confetture e dolci al forno.",
+      "Eat it with the skin, well washed; over-ripe fruit goes into smoothies, jams and baked desserts."
+    ]
+  },
+  "fico_d_india_prickly_pear": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "uc_davis",
+      "crea"
+    ],
+    "sl": [
+      "Frutti maturi, colore tipico della varietà, sodi ma non duri, buccia integra senza macchie.",
+      "Ripe fruit of typical colour, firm but not hard, intact skin with no spots."
+    ],
+    "ds": [
+      "I fichi d'India vanno raccolti quasi maturi per avere colore e sapore tipici: scegli frutti di colore pieno (giallo, rosso o bianco secondo la varietà), sodi ma non duri, senza ammaccature, macchie scure o muffe. Maneggiali con i guanti: le piccole spine (glochidi) si staccano facilmente. Sono DOP il Ficodindia dell'Etna e il Ficodindia di San Cono.",
+      "Prickly pears should be picked nearly ripe to have their typical colour and flavour: choose fruit of full colour (yellow, red or white depending on the variety), firm but not hard, without bruises, dark spots or mould. Handle them with gloves: the tiny spines (glochids) come off easily. Ficodindia dell'Etna and Ficodindia di San Cono are PDOs."
+    ],
+    "cs": [
+      "Frigo (zona meno fredda) · 1-2 sett.",
+      "Fridge (warmest part) · 1-2 weeks"
+    ],
+    "si": [
+      "Si conservano 2-5 settimane a 5-8 °C con umidità alta in condizioni professionali; in casa tienili nella parte meno fredda del frigorifero. Sono particolarmente sensibili al freddo sotto i 5 °C (alcune varietà sotto i 10 °C).",
+      "Professionally they keep 2-5 weeks at 5-8 °C with high humidity; at home keep them in the warmest part of the fridge. They are particularly sensitive to cold below 5 °C (some varieties below 10 °C)."
+    ],
+    "cn": [
+      "Sotto i 5 °C: butterature, bronzatura della buccia e macchie scure.",
+      "Below 5 °C: pitting, bronzing of the skin and dark patches."
+    ],
+    "hb": [
+      "Per 100 g è fonte di vitamina C e magnesio. Contiene molti semi, ricchi di fibra.",
+      "Per 100 g it is a source of vitamin C and magnesium. It contains many fibre-rich seeds."
+    ],
+    "wr": [
+      "La polpa dei frutti molto maturi diventa sorbetto, marmellata o mostarda; la buccia, pulita dalle spine, si usa in alcune ricette tradizionali siciliane fritta o in agrodolce.",
+      "Flesh of very ripe fruit becomes sorbet, jam or mostarda; the peel, cleaned of spines, is used fried or sweet-and-sour in some traditional Sicilian recipes."
+    ]
+  },
+  "litchi_lychee": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Buccia rosa-rossa brillante e rigida, senza imbrunimenti o muffe; profumo delicato, non alcolico.",
+      "Bright pink-red, rigid skin with no browning or mould; delicate, not alcoholic, aroma."
+    ],
+    "ds": [
+      "Scegli litchi con buccia di colore rosa o rosso acceso, rigida e senza imbrunimenti, macchie o muffe, e con un profumo delicato: un odore alcolico indica fermentazione. La buccia scura è segno di disidratazione.",
+      "Choose lychees with bright pink or red, rigid skin, free of browning, spots or mould, and a delicate aroma: an alcoholic smell means fermentation. Dark skin is a sign of dehydration."
+    ],
+    "cs": [
+      "Frigo · 1 settimana",
+      "Fridge · 1 week"
+    ],
+    "si": [
+      "Si conservano circa una settimana in frigorifero (in un sacchetto, per non disidratarsi) o 4 giorni a temperatura ambiente. In condizioni professionali, a 2-5 °C e umidità 90-95%, durano 3-5 settimane; a 20 °C solo 3-5 giorni.",
+      "They keep about a week in the fridge (in a bag, so they don't dry out) or 4 days at room temperature. Professionally, at 2-5 °C and 90-95% humidity, they last 3-5 weeks; at 20 °C only 3-5 days."
+    ],
+    "cn": [
+      "Hanno bassa sensibilità al freddo: l'imbrunimento della buccia in conservazione è dovuto soprattutto alla disidratazione.",
+      "They have low sensitivity to cold: skin browning during storage is mostly due to dehydration."
+    ],
+    "hb": [
+      "Poco calorico, per 100 g è ricco di vitamina C. È un frutto d'importazione o di produzioni limitate in Sicilia.",
+      "Low in calories, per 100 g it is high in vitamin C. It is imported or comes from limited crops in Sicily."
+    ],
+    "wr": [
+      "I litchi un po' molli si usano in macedonie, sorbetti e salse agrodolci per carne e pesce.",
+      "Slightly soft lychees can be used in fruit salads, sorbets and sweet-and-sour sauces for meat and fish."
+    ]
+  },
+  "lime_lime": {
+    "pl": "temperatura_ambiente",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "bda_ieo"
+    ],
+    "sl": [
+      "Lime sodo e turgido, verde intenso, buccia liscia senza macchie, spaccature o muffe.",
+      "Firm, turgid, deep green lime with smooth skin and no spots, splits or mould."
+    ],
+    "ds": [
+      "Scegli lime ovali, sodi e turgidi, con buccia liscia di colore verde intenso, senza muffe, spaccature o macchie. Ingiallendo perde in aspetto ma non in succo.",
+      "Choose oval, firm, turgid limes with smooth, deep green skin, free of mould, splits or blemishes. As it yellows it loses appearance but not juice."
+    ],
+    "cs": [
+      "Ambiente 10 gg · frigo fino a 3 sett.",
+      "Room 10 days · fridge up to 3 wks"
+    ],
+    "si": [
+      "Si conserva fino a due settimane in frigorifero, meglio in un sacchetto per non farlo disidratare. In condizioni ottimali (10 °C, umidità 95%) dura fino a 8 settimane. L'etilene gli fa perdere il colore verde.",
+      "It keeps up to two weeks in the fridge, best in a bag so it doesn't dry out. Under optimal conditions (10 °C, 95% humidity) it lasts up to 8 weeks. Ethylene makes it lose its green colour."
+    ],
+    "hb": [
+      "Contiene vitamina C ed è usato soprattutto per succo e scorza, in cucina e nei cocktail. Le tabelle CREA non riportano una scheda specifica (dati BDA-IEO).",
+      "It contains vitamin C and is used mainly for its juice and zest, in cooking and cocktails. CREA tables have no specific entry (BDA-IEO data)."
+    ],
+    "wr": [
+      "La scorza si grattugia e si congela; le bucce spremute aromatizzano acqua, sale e zucchero.",
+      "The zest can be grated and frozen; squeezed peels flavour water, salt and sugar."
+    ]
+  },
+  "ananas_pineapple": {
+    "pl": "temperatura_ambiente",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Ananas profumato alla base, ciuffo verde e fresco, \"occhi\" piatti; niente parti molli o scure.",
+      "Pineapple fragrant at the base, fresh green crown, flat \"eyes\"; no soft or dark parts."
+    ],
+    "ds": [
+      "Scegli ananas di buona dimensione, con \"occhi\" (i singoli frutticini) piatti, foglie del ciuffo verde scuro e fresche e un profumo dolce e intenso alla base. Il colore giallo della buccia non sempre indica la dolcezza; evita frutti con parti molli, scure o odore fermentato. Non matura dopo la raccolta: diventa solo più morbido.",
+      "Choose good-sized pineapples with flat \"eyes\" (the individual fruitlets), fresh dark green crown leaves and a sweet, intense aroma at the base. Yellow skin does not always indicate sweetness; avoid fruit with soft or dark parts or a fermented smell. It does not ripen after harvest: it only softens."
+    ],
+    "cs": [
+      "Intero: ambiente · tagliato: frigo 8 gg",
+      "Whole: room temp · cut: fridge 8 days"
+    ],
+    "si": [
+      "Intero si conserva a temperatura ambiente qualche giorno; tagliato va in frigorifero in un contenitore chiuso e si consuma entro una settimana. Professionalmente si conserva a 7-12 °C per 14-20 giorni: temperature più basse provocano danni da freddo.",
+      "Whole, it keeps a few days at room temperature; cut, it goes in the fridge in a closed container and should be eaten within a week. Professionally it is stored at 7-12 °C for 14-20 days: lower temperatures cause chilling injury."
+    ],
+    "cn": [
+      "Con il freddo: ciuffo appassito e scolorito, buccia che non ingiallisce o si opacizza e imbrunimento interno della polpa.",
+      "With cold: wilted, discoloured crown, skin that fails to yellow or turns dull, and internal flesh browning."
+    ],
+    "hb": [
+      "Per 100 g è fonte di vitamina C e manganese. Contiene bromelina, un enzima che scioglie le proteine: per questo l'ananas fresco non si abbina alle gelatine.",
+      "Per 100 g it is a source of vitamin C and manganese. It contains bromelain, an enzyme that breaks down proteins, which is why fresh pineapple doesn't set in gelatine."
+    ],
+    "wr": [
+      "Bucce e torsolo bolliti con spezie danno una bevanda aromatica (tepache se fermentata); il torsolo affettato sottile si mangia o va nei frullati.",
+      "Peels and core boiled with spices make an aromatic drink (tepache if fermented); the thinly sliced core can be eaten or blended into smoothies."
+    ]
+  },
+  "papaya_papaya": {
+    "pl": "temperatura_ambiente",
+    "rt": "climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Papaya gialla e cedevole al tatto, buccia liscia senza macchie; niente odore sgradevole.",
+      "Yellow papaya yielding to the touch, smooth unblemished skin; no unpleasant smell."
+    ],
+    "ds": [
+      "Scegli papaye di buona forma, con buccia liscia e senza macchie o ammaccature; quando la buccia è gialla e cede leggermente al tatto la papaya è matura. Se è ancora verde maturerà a temperatura ambiente.",
+      "Choose well-shaped papayas with smooth skin and no spots or bruises; when the skin is yellow and yields slightly to the touch it is ripe. If still green it will ripen at room temperature."
+    ],
+    "cs": [
+      "Ambiente finché matura · poi frigo",
+      "Room temp until ripe · then fridge"
+    ],
+    "si": [
+      "Lasciala maturare a temperatura ambiente; quando è matura conservala in frigorifero e consumala in pochi giorni (Altroconsumo indica fino a due settimane). Professionalmente si conserva a 7-13 °C: sotto i 10 °C la papaya acerba può subire danni da freddo.",
+      "Let it ripen at room temperature; once ripe, keep it in the fridge and eat within a few days (Altroconsumo suggests up to two weeks). Professionally it is stored at 7-13 °C: below 10 °C unripe papaya can suffer chilling injury."
+    ],
+    "cn": [
+      "Scottature della buccia, noduli duri nella polpa e zone acquose; il frutto può non maturare più.",
+      "Skin scald, hard lumps in the flesh and water-soaked areas; the fruit may fail to ripen."
+    ],
+    "hb": [
+      "Per 100 g è ricca di vitamina C e vitamina A (caroteni). È un frutto tropicale d'importazione.",
+      "Per 100 g it is high in vitamin C and vitamin A (carotenes). It is an imported tropical fruit."
+    ],
+    "wr": [
+      "I semi hanno un sapore piccante simile al pepe e, essiccati, si usano come spezia; la polpa troppo matura va in frullati e sorbetti.",
+      "The seeds have a peppery taste and, dried, can be used as a spice; over-ripe flesh goes into smoothies and sorbets."
+    ]
+  },
+  "maracuja_passion_fruit": {
+    "pl": "frigorifero",
+    "rt": "climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Frutto pesante con buccia rugosa ma non raggrinzita (più dolce) o liscia (più acido); niente muffe.",
+      "Heavy fruit with wrinkly but not shrivelled skin (sweeter) or smooth skin (tarter); no mould."
+    ],
+    "ds": [
+      "Scegli frutti pesanti per la loro grandezza, senza macchie o muffe: se la buccia è liscia il frutto è più acido, se è rugosa ma non raggrinzita è più maturo e dolce.",
+      "Choose fruit that is heavy for its size, without spots or mould: smooth skin means a tarter fruit, while wrinkly but not shrivelled skin means a riper, sweeter one."
+    ],
+    "cs": [
+      "Frigo (cassetto) · fino a 1 settimana",
+      "Fridge (crisper) · up to 1 week"
+    ],
+    "si": [
+      "Conservalo nel cassetto del frigorifero o nell'anta fino a una settimana. Il maracuja giallo è sensibile al freddo e si conserva meglio a 7-10 °C (circa 2 settimane), mentre quello viola tollera temperature più basse. Produce moltissimo etilene: tienilo lontano da verdure a foglia e frutta da conservare.",
+      "Keep it in the fridge crisper or door for up to a week. Yellow passion fruit is cold-sensitive and keeps best at 7-10 °C (about 2 weeks), while the purple type tolerates lower temperatures. It produces a great deal of ethylene: keep it away from leafy greens and fruit you want to store."
+    ],
+    "cn": [
+      "Sul maracuja giallo: scolorimento e butterature della buccia, zone acquose, maturazione irregolare e più marciumi.",
+      "On yellow passion fruit: skin discoloration and pitting, water-soaked areas, uneven ripening and more decay."
+    ],
+    "hb": [
+      "Per 100 g è fonte di vitamina A, vitamina C, niacina e manganese ed è ricco di fibre grazie ai semi edibili. È un frutto tropicale d'importazione.",
+      "Per 100 g it is a source of vitamin A, vitamin C, niacin and manganese and is high in fibre thanks to its edible seeds. It is an imported tropical fruit."
+    ],
+    "wr": [
+      "La polpa con i semi si congela in cubetti per bevande e dolci; i frutti un po' raggrinziti sono più dolci, non da buttare.",
+      "The pulp with seeds can be frozen in cubes for drinks and desserts; slightly wrinkled fruit is sweeter, not to be thrown away."
+    ]
+  },
+  "fungo_ovolo_caesars_mushroom": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "crea"
+    ],
+    "sl": [
+      "Solo da venditori con certificazione micologica: cappello arancio vivo, sodo, lamelle gialle.",
+      "Only from sellers with mycological certification: bright orange, firm cap, yellow gills."
+    ],
+    "ds": [
+      "L'ovolo buono si riconosce dal cappello arancio-rosso, dalle lamelle e dal gambo gialli e dalla volva bianca a sacco; da giovane è racchiuso in un \"uovo\" bianco. Può essere confuso con specie velenose, anche mortali, del genere Amanita: acquistalo solo se controllato da un ispettorato micologico. Scegli esemplari sodi, asciutti e integri.",
+      "Caesar's mushroom is recognised by its orange-red cap, yellow gills and stem and white sac-like volva; when young it is enclosed in a white \"egg\". It can be confused with poisonous, even deadly, Amanita species: buy it only if checked by a mycological inspection service. Choose firm, dry, intact specimens."
+    ],
+    "cs": [
+      "Frigo · 1-2 giorni",
+      "Fridge · 1-2 days"
+    ],
+    "si": [
+      "È molto deperibile: conservalo in frigorifero in un sacchetto di carta o in un panno e consumalo entro 1-2 giorni. Non lavarlo in acqua: pulisci con un panno.",
+      "It is very perishable: keep it in the fridge in a paper bag or cloth and eat within 1-2 days. Don't wash it in water: clean it with a cloth."
+    ],
+    "hb": [
+      "Considerato uno dei funghi più pregiati, si consuma tradizionalmente anche crudo in insalata, purché fresco e certificato. Per 100 g è ricco di vitamina D e fonte di riboflavina, niacina, folati e potassio.",
+      "Considered one of the finest mushrooms, it is traditionally also eaten raw in salads, provided it is fresh and certified. Per 100 g it is high in vitamin D and a source of riboflavin, niacin, folate and potassium."
+    ],
+    "wr": [
+      "Usa anche il gambo; i pezzi meno belli si cuociono in padella o vanno in risotti.",
+      "Use the stem too; less attractive pieces can be sautéed or added to risottos."
+    ]
+  },
+  "tartufo_nero_black_truffle": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Tartufo sodo e compatto, profumo intenso, superficie integra senza parti molli o muffe.",
+      "Firm, compact truffle with intense aroma and intact surface, no soft parts or mould."
+    ],
+    "ds": [
+      "Scegli tartufi sodi e compatti al tatto, con un profumo intenso e gradevole e superficie integra, senza parti molli, fori o muffe. La polpa (gleba) del tartufo nero pregiato è nero-violacea con venature bianche.",
+      "Choose truffles that feel firm and compact, with an intense, pleasant aroma and an intact surface, without soft parts, holes or mould. The flesh (gleba) of the black Périgord truffle is purplish-black with white veins."
+    ],
+    "cs": [
+      "Frigo, in carta assorbente · pochi giorni",
+      "Fridge, in paper towel · a few days"
+    ],
+    "si": [
+      "Avvolgilo in carta assorbente (da cambiare ogni giorno), mettilo in un barattolo chiuso in frigorifero e consumalo in pochi giorni: perde profumo rapidamente. Professionalmente si conserva a 0 °C con umidità del 90-95% per 20-30 giorni, un po' meno a 5 °C.",
+      "Wrap it in paper towel (changed daily), put it in a closed jar in the fridge and use within a few days: it quickly loses aroma. Professionally it keeps 20-30 days at 0 °C and 90-95% humidity, slightly less at 5 °C."
+    ],
+    "hb": [
+      "Si usa in quantità minime per il suo aroma intenso. È un fungo ipogeo che cresce sottoterra in simbiosi con le radici di querce, noccioli e altri alberi.",
+      "It is used in tiny amounts for its intense aroma. It is an underground fungus growing in symbiosis with the roots of oaks, hazels and other trees."
+    ],
+    "wr": [
+      "Conservandolo in un barattolo con uova intere o riso, questi ne assorbono il profumo; i ritagli si mettono in burro o olio.",
+      "Stored in a jar with whole eggs or rice, these absorb its aroma; trimmings can go into butter or oil."
+    ]
+  },
+  "tartufo_bianco_white_truffle": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66"
+    ],
+    "sl": [
+      "Tartufo sodo, integro e molto profumato, senza parti molli, fori o muffe.",
+      "Firm, intact, highly aromatic truffle with no soft parts, holes or mould."
+    ],
+    "ds": [
+      "Il tartufo bianco si giudica soprattutto dal profumo, che deve essere forte. Contano poi la dimensione (più è grande, più è pregiato), la forma regolare, il colore uniforme e l'integrità: niente parti molli, fori o muffe. Una polpa imbrunita all'interno indica un tartufo troppo maturo.",
+      "White truffle is judged above all by its aroma, which should be strong. Size also matters (the bigger, the more prized), along with regular shape, even colour and soundness: no soft parts, holes or mould. Browned flesh inside means an overripe truffle."
+    ],
+    "cs": [
+      "Frigo, in carta assorbente · pochi giorni",
+      "Fridge, in paper towel · a few days"
+    ],
+    "si": [
+      "Avvolgilo in carta assorbente (da cambiare ogni giorno), mettilo in un barattolo chiuso in frigorifero e consumalo il prima possibile: perde profumo rapidamente. Professionalmente si conserva a 0 °C con umidità del 90-95% per 20-30 giorni; il suo aroma può impregnare gli altri alimenti.",
+      "Wrap it in paper towel (changed daily), put it in a closed jar in the fridge and use it as soon as possible: it quickly loses aroma. Professionally it keeps 20-30 days at 0 °C and 90-95% humidity; its aroma can taint other foods."
+    ],
+    "hb": [
+      "È il tartufo più pregiato: si usa crudo, affettato sottile, in quantità minime per il suo aroma intenso. È un fungo ipogeo che cresce sottoterra in simbiosi con le radici di alcuni alberi. La raccolta è consentita per legge solo da ottobre a dicembre.",
+      "It is the most prized truffle: it is eaten raw, thinly shaved, in tiny amounts for its intense aroma. It is an underground fungus growing in symbiosis with the roots of certain trees. By law it may only be harvested from October to December."
+    ],
+    "wr": [
+      "Conservandolo in un barattolo con uova intere o riso, questi ne assorbono il profumo; i ritagli si mettono in burro o olio.",
+      "Stored in a jar with whole eggs or rice, these absorb its aroma; trimmings can go into butter or oil."
+    ]
+  }
+}

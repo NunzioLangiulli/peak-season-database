@@ -1,0 +1,398 @@
+{
+  "avocado_avocado": {
+    "pl": "temperatura_ambiente",
+    "rt": "climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Buccia integra senza annerimenti; per mangiarlo subito deve cedere un po' alla pressione.",
+      "Intact skin with no blackening; to eat now it should yield slightly to pressure."
+    ],
+    "ds": [
+      "Scegli avocado con buccia integra, senza ferite, macchie o annerimenti. Matura solo dopo la raccolta: se cede leggermente alla pressione del dito senza rompere la buccia è pronto; se è duro maturerà in qualche giorno. Nella varietà Hass la buccia rugosa vira dal verde al viola scuro maturando.",
+      "Choose avocados with intact skin, free of wounds, spots or blackening. It ripens only after harvest: if it yields slightly to finger pressure without breaking the skin it is ready; if hard it will ripen in a few days. In the Hass variety the bumpy skin turns from green to dark purple as it ripens."
+    ],
+    "cs": [
+      "Fuori frigo · max 3 gg da maturo",
+      "Out of the fridge · max 3 days ripe"
+    ],
+    "si": [
+      "Lascialo maturare a temperatura ambiente (in un sacchetto di carta con una mela matura più in fretta) e consumalo entro 3 giorni da quando è maturo; un avocado maturo si può tenere 1-2 giorni in frigorifero. L'avocado acerbo soffre il freddo sotto i 5 °C. Produce moltissimo etilene: tienilo lontano da verdure a foglia e frutta da conservare.",
+      "Let it ripen at room temperature (faster in a paper bag with an apple) and eat within 3 days of ripening; a ripe avocado can be kept 1-2 days in the fridge. Unripe avocado is damaged below 5 °C. It produces a great deal of ethylene: keep it away from leafy greens and fruit you want to store."
+    ],
+    "cn": [
+      "Freddo sull'avocado acerbo: imbrunimento grigio-bruno della polpa e macchie scure sulla buccia; il frutto non matura in modo uniforme.",
+      "Cold on unripe avocado: grey-brown flesh discoloration and dark skin patches; the fruit fails to ripen evenly."
+    ],
+    "hb": [
+      "È un frutto ricco di grassi, soprattutto monoinsaturi, e quindi più calorico della media. Per 100 g è ricco di vitamina E e fonte di vitamina K, vitamina C, vitamina B6, potassio e rame.",
+      "It is a fatty fruit, mainly monounsaturated, and therefore higher in calories than average. Per 100 g it is high in vitamin E and a source of vitamin K, vitamin C, vitamin B6, potassium and copper."
+    ],
+    "wr": [
+      "Se ne usi metà, conserva l'altra con il nocciolo, qualche goccia di limone e coperta, in frigo. L'avocado troppo maturo diventa guacamole, salse o creme dolci.",
+      "If you use half, keep the other half with the stone, a few drops of lemon and covered, in the fridge. Over-ripe avocado becomes guacamole, dips or sweet creams."
+    ]
+  },
+  "basilico_basil": {
+    "pl": "temperatura_ambiente",
+    "rt": "non_climaterico",
+    "src": [
+      "uc_davis",
+      "crea"
+    ],
+    "sl": [
+      "Foglie integre, turgide e verde brillante, senza macchie nere; profumo intenso.",
+      "Intact, turgid, bright green leaves with no black spots; strong aroma."
+    ],
+    "ds": [
+      "Scegli mazzetti o piantine con foglie turgide, integre e di colore verde brillante, senza macchie nere, buchi o parti appassite, e con un profumo intenso. Le foglie annerite sono spesso segno di freddo.",
+      "Choose bunches or potted plants with turgid, intact, bright green leaves, no black spots, holes or wilted parts, and a strong aroma. Blackened leaves are often a sign of cold damage."
+    ],
+    "cs": [
+      "Ambiente, steli in acqua · 2-3 gg",
+      "Room temp, stems in water · 2-3 days"
+    ],
+    "si": [
+      "Non metterlo in frigorifero: il basilico è sensibile al freddo e va tenuto sopra i 10 °C. Tieni i rametti in un bicchiere d'acqua a temperatura ambiente, lontano dal sole diretto, oppure coltivalo in vaso. Per conservarlo a lungo congelalo nell'olio o fai il pesto.",
+      "Don't refrigerate it: basil is cold-sensitive and should be kept above 10 °C. Stand the sprigs in a glass of water at room temperature, out of direct sun, or grow it in a pot. For longer storage freeze it in oil or make pesto."
+    ],
+    "cn": [
+      "Sotto i 10 °C le foglie anneriscono e si afflosciano rapidamente.",
+      "Below 10 °C the leaves blacken and wilt quickly."
+    ],
+    "hb": [
+      "Si usa in piccole quantità, ma per 100 g è ricco di vitamina A, vitamina C, calcio e ferro e fonte di riboflavina, folati e potassio. L'aroma deriva dagli oli essenziali, che si perdono con la cottura prolungata: aggiungilo a fine cottura. Il Basilico Genovese è DOP.",
+      "It is used in small amounts, but per 100 g it is high in vitamin A, vitamin C, calcium and iron and a source of riboflavin, folate and potassium. Its aroma comes from essential oils, which are lost with long cooking: add it at the end. Basilico Genovese is a PDO."
+    ],
+    "wr": [
+      "I gambi sono molto aromatici: frullali nell'olio o nel pesto. Le foglie in eccesso si congelano tritate in olio nei cubetti per il ghiaccio.",
+      "The stems are very aromatic: blend them into oil or pesto. Surplus leaves can be frozen chopped in oil in ice cube trays."
+    ]
+  },
+  "peperoncino_chili_pepper": {
+    "pl": "temperatura_ambiente",
+    "rt": "non_climaterico",
+    "src": [
+      "uc_davis",
+      "crea"
+    ],
+    "sl": [
+      "Peperoncini sodi, buccia lucida e tesa, colore vivo, picciolo verde e fresco.",
+      "Firm chillies with taut, glossy skin, bright colour and a fresh green stem."
+    ],
+    "ds": [
+      "Scegli peperoncini sodi, con buccia lucida, tesa e di colore vivo, senza parti molli, raggrinzite o macchie, e con il picciolo verde. La piccantezza dipende dalla varietà più che dal colore.",
+      "Choose firm chillies with glossy, taut, brightly coloured skin, no soft, wrinkled or spotted parts, and a green stem. Heat depends on the variety more than on colour."
+    ],
+    "cs": [
+      "Ambiente · in frigo max 1-3 giorni",
+      "Room temp · fridge max 1-3 days"
+    ],
+    "si": [
+      "Freschi, meglio in un luogo fresco fuori frigo: la guida UC Davis indica i peperoni tra i prodotti da tenere a temperatura ambiente, con al massimo 1-3 giorni in frigorifero (USDA FoodKeeper indica circa una settimana in frigo, tenendoli asciutti). Sono meno sensibili al freddo dei peperoni dolci, ma sotto i 7 °C possono comparire danni. Per conservarli a lungo si essiccano interi, si congelano o si mettono sott'olio dopo un passaggio in aceto.",
+      "Fresh, best kept in a cool place out of the fridge: the UC Davis guide lists peppers among room-temperature produce, with at most 1-3 days in the fridge (USDA FoodKeeper gives about a week in the fridge, kept dry). They are less cold-sensitive than sweet peppers, but damage can appear below 7 °C. For long storage dry them whole, freeze them, or preserve them in oil after a dip in vinegar."
+    ],
+    "cn": [
+      "Sotto i 7 °C: buccia butterata e aree acquose, meno marcate che nel peperone dolce.",
+      "Below 7 °C: pitted skin and water-soaked areas, less marked than in sweet peppers."
+    ],
+    "hb": [
+      "Si consuma in piccole quantità, ma per 100 g è ricchissimo di vitamina C e vitamina A e fonte di vitamine del gruppo B. La piccantezza è dovuta alla capsaicina, concentrata nei semi e nelle membrane interne.",
+      "It is eaten in small amounts, but per 100 g it is very high in vitamin C and vitamin A and a source of B vitamins. The heat comes from capsaicin, concentrated in the seeds and inner membranes."
+    ],
+    "wr": [
+      "Quelli in eccesso si essiccano appesi a filo, si tritano in olio piccante o si congelano interi.",
+      "Surplus chillies can be dried on a string, chopped into chilli oil or frozen whole."
+    ]
+  },
+  "prezzemolo_parsley": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Mazzetto verde intenso e fresco, steli turgidi, senza foglie gialle, marce o steli fiorali.",
+      "Fresh, deep green bunch with crisp stems, no yellow or rotting leaves or flower stalks."
+    ],
+    "ds": [
+      "La qualità del prezzemolo si giudica da freschezza e colore verde intenso: evita mazzetti con foglie ingiallite, appassite o marce e con lo stelo fiorale. Il prezzemolo riccio e quello a foglia piatta hanno usi simili, il secondo è più aromatico.",
+      "Parsley quality is judged by freshness and deep green colour: avoid bunches with yellowed, wilted or rotting leaves and with a flower stalk. Curly and flat-leaf parsley are used similarly; the latter is more aromatic."
+    ],
+    "cs": [
+      "Frigo · 1 settimana",
+      "Fridge · 1 week"
+    ],
+    "si": [
+      "Conservalo in frigorifero con gli steli in un bicchiere d'acqua coperto da un sacchetto, oppure avvolto in carta umida: dura circa una settimana. In condizioni ottimali (0 °C, umidità 95-100%) si mantiene 1-2 mesi, mentre a temperatura ambiente solo 3 giorni. Si può anche congelare tritato.",
+      "Keep it in the fridge with the stems in a glass of water under a bag, or wrapped in damp paper: it lasts about a week. Under optimal conditions (0 °C, 95-100% humidity) it keeps 1-2 months, while at room temperature only 3 days. It can also be frozen chopped."
+    ],
+    "hb": [
+      "Si usa in piccole quantità, ma per 100 g è ricco di vitamina A, vitamina C, folati, potassio e ferro e fonte di riboflavina e calcio.",
+      "It is used in small amounts, but per 100 g it is high in vitamin A, vitamin C, folate, potassium and iron and a source of riboflavin and calcium."
+    ],
+    "wr": [
+      "I gambi hanno molto sapore: tritati vanno nei soffritti, interi nei brodi e nei mazzetti aromatici.",
+      "The stems are full of flavour: chopped they go into soffritto, whole into stocks and herb bundles."
+    ]
+  },
+  "rosmarino_rosemary": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "uc_davis",
+      "crea"
+    ],
+    "sl": [
+      "Rametti con aghi verde scuro, lucidi e flessibili, senza parti secche, nere o ingiallite.",
+      "Sprigs with glossy, flexible dark green needles, no dry, black or yellowed parts."
+    ],
+    "ds": [
+      "Scegli rametti freschi con aghi verde scuro lucidi sopra e chiari sotto, flessibili e profumati, senza parti secche, annerite o ingiallite.",
+      "Choose fresh sprigs with needles that are glossy dark green on top and paler underneath, flexible and fragrant, without dry, blackened or yellowed parts."
+    ],
+    "cs": [
+      "Frigo · 1-2 settimane",
+      "Fridge · 1-2 weeks"
+    ],
+    "si": [
+      "Conservalo in frigorifero avvolto in carta leggermente umida dentro un sacchetto: dura una o due settimane. Come la maggior parte delle erbe fresche si mantiene meglio vicino a 0 °C con umidità alta. Si essicca facilmente appendendo i rametti in un luogo asciutto e ventilato.",
+      "Keep it in the fridge wrapped in slightly damp paper inside a bag: it lasts one to two weeks. Like most fresh herbs it keeps best near 0 °C with high humidity. It dries easily by hanging the sprigs in a dry, airy place."
+    ],
+    "hb": [
+      "Si usa in piccole quantità, ma per 100 g è ricco di ferro, calcio e vitamina C e fonte di riboflavina. È ricco di oli essenziali e composti fenolici che ne determinano il profumo.",
+      "It is used in small amounts, but per 100 g it is high in iron, calcium and vitamin C and a source of riboflavin. It is rich in essential oils and phenolic compounds that give its aroma."
+    ],
+    "wr": [
+      "I rametti spogliati degli aghi diventano spiedini aromatici; quelli in eccesso si essiccano o aromatizzano olio e sale.",
+      "Stripped sprigs make aromatic skewers; surplus sprigs can be dried or used to flavour oil and salt."
+    ]
+  },
+  "salvia_sage": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "uc_davis",
+      "crea"
+    ],
+    "sl": [
+      "Foglie spesse e vellutate, verde-grigio argenteo, profumate, senza macchie nere o appassimenti.",
+      "Thick, velvety, silvery grey-green, fragrant leaves with no black spots or wilting."
+    ],
+    "ds": [
+      "Scegli foglie integre, spesse e vellutate, di colore verde-grigio uniforme e molto profumate, senza macchie scure, muffe o parti appassite.",
+      "Choose intact, thick, velvety leaves of even grey-green colour and strong fragrance, without dark spots, mould or wilted parts."
+    ],
+    "cs": [
+      "Frigo · 1-2 settimane",
+      "Fridge · 1-2 weeks"
+    ],
+    "si": [
+      "Conservala in frigorifero avvolta in carta leggermente umida in un sacchetto, per una o due settimane. Si conserva bene anche essiccata o congelata.",
+      "Keep it in the fridge wrapped in slightly damp paper in a bag, for one to two weeks. It also keeps well dried or frozen."
+    ],
+    "hb": [
+      "Si usa in piccole quantità, ma per 100 g è ricca di niacina, vitamina B6, calcio e ferro e fonte di vitamina A, riboflavina, potassio e zinco. Il profumo deriva dagli oli essenziali.",
+      "It is used in small amounts, but per 100 g it is high in niacin, vitamin B6, calcium and iron and a source of vitamin A, riboflavin, potassium and zinc. Its aroma comes from essential oils."
+    ],
+    "wr": [
+      "Le foglie grandi in eccesso sono ottime pastellate e fritte; le altre si essiccano o si congelano per burro e salse.",
+      "Surplus large leaves are excellent battered and fried; the rest can be dried or frozen for butter and sauces."
+    ]
+  },
+  "origano_oregano": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "uc_davis",
+      "bda_ieo"
+    ],
+    "sl": [
+      "Fresco: foglie verdi e profumate senza muffe; secco: rametti integri, verdi e aromatici.",
+      "Fresh: green, fragrant, mould-free leaves; dried: intact, green, aromatic sprigs."
+    ],
+    "ds": [
+      "L'origano si usa soprattutto essiccato: scegli rametti o foglie di colore verde, non grigio, e dal profumo intenso. Se fresco, le foglie devono essere turgide, senza muffe o parti scure.",
+      "Oregano is mostly used dried: choose sprigs or leaves that are green, not grey, with a strong aroma. If fresh, leaves should be turgid, without mould or dark parts."
+    ],
+    "cs": [
+      "Secco: dispensa · mesi",
+      "Dried: pantry · months"
+    ],
+    "si": [
+      "Fresco si conserva in frigorifero pochi giorni, avvolto in carta umida. Secco va tenuto in un barattolo chiuso, al buio e all'asciutto: conserva l'aroma per diversi mesi.",
+      "Fresh, it keeps a few days in the fridge wrapped in damp paper. Dried, keep it in a closed jar in a dark, dry place: it holds its aroma for several months."
+    ],
+    "hb": [
+      "Valori dell'origano fresco (BDA-IEO): per 100 g è ricco di folati, vitamina B6, ferro, vitamina C, niacina e calcio. Si usa in piccole quantità; l'aroma tipico è dovuto al carvacrolo.",
+      "Values for fresh oregano (BDA-IEO): per 100 g it is high in folate, vitamin B6, iron, vitamin C, niacin and calcium. It is used in small amounts; its typical aroma comes from carvacrol."
+    ],
+    "wr": [
+      "I rametti secchi rimasti dopo aver sbriciolato le foglie aromatizzano la brace o l'olio.",
+      "Dry stems left after crumbling the leaves can flavour barbecue embers or oil."
+    ]
+  },
+  "timo_thyme": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "uc_davis",
+      "bda_ieo"
+    ],
+    "sl": [
+      "Rametti flessibili con foglioline verdi e profumate, senza parti secche, nere o ammuffite.",
+      "Flexible sprigs with small, green, fragrant leaves, no dry, black or mouldy parts."
+    ],
+    "ds": [
+      "Scegli rametti freschi e flessibili, con foglioline fitte di colore verde-grigio e un profumo intenso, senza parti secche, annerite o ammuffite.",
+      "Choose fresh, flexible sprigs with dense grey-green leaves and a strong aroma, without dry, blackened or mouldy parts."
+    ],
+    "cs": [
+      "Frigo · 1-2 settimane",
+      "Fridge · 1-2 weeks"
+    ],
+    "si": [
+      "Conservalo in frigorifero in carta leggermente umida dentro un sacchetto per una o due settimane; si essicca facilmente e secco mantiene bene l'aroma.",
+      "Keep it in the fridge in slightly damp paper inside a bag for one to two weeks; it dries easily and keeps its aroma well when dried."
+    ],
+    "hb": [
+      "Valori del timo fresco (BDA-IEO): per 100 g è ricco di calcio e ferro e fonte di riboflavina, vitamina B6, folati e zinco. Si usa in piccole quantità; l'aroma deriva dal timolo.",
+      "Values for fresh thyme (BDA-IEO): per 100 g it is high in calcium and iron and a source of riboflavin, vitamin B6, folate and zinc. It is used in small amounts; its aroma comes from thymol."
+    ],
+    "wr": [
+      "I rametti in eccesso aromatizzano aceto e olio o si essiccano per tisane e arrosti.",
+      "Surplus sprigs can flavour vinegar and oil or be dried for herbal teas and roasts."
+    ]
+  },
+  "menta_mint": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "uc_davis",
+      "crea"
+    ],
+    "sl": [
+      "Foglie verde brillante, turgide e molto profumate, senza macchie, buchi o parti appassite.",
+      "Bright green, turgid, very fragrant leaves with no spots, holes or wilted parts."
+    ],
+    "ds": [
+      "Scegli mazzetti con foglie turgide, verde brillante e molto profumate, senza macchie scure, buchi o parti appassite, e con steli sodi.",
+      "Choose bunches with turgid, bright green, very fragrant leaves, without dark spots, holes or wilted parts, and with firm stems."
+    ],
+    "cs": [
+      "Frigo · circa 1 settimana",
+      "Fridge · about 1 week"
+    ],
+    "si": [
+      "Conservala in frigorifero con gli steli in un bicchiere d'acqua coperta da un sacchetto, oppure avvolta in carta umida: dura circa una settimana. La menta è tra le erbe sensibili all'etilene: tienila lontana dalla frutta matura.",
+      "Keep it in the fridge with the stems in a glass of water under a bag, or wrapped in damp paper: it lasts about a week. Mint is among the herbs sensitive to ethylene: keep it away from ripe fruit."
+    ],
+    "hb": [
+      "Si usa in piccole quantità, ma per 100 g è ricca di vitamina E, vitamina C, folati e ferro e fonte di vitamina A, riboflavina e calcio. La sensazione di freschezza è data dal mentolo.",
+      "It is used in small amounts, but per 100 g it is high in vitamin E, vitamin C, folate and iron and a source of vitamin A, riboflavin and calcium. Its cooling sensation comes from menthol."
+    ],
+    "wr": [
+      "I rametti in eccesso si mettono in infusione in acqua fredda o tisane, o si congelano in cubetti di ghiaccio.",
+      "Surplus sprigs can be infused in cold water or herbal teas, or frozen in ice cubes."
+    ]
+  },
+  "fungo_porcino_porcini_mushroom": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "crea"
+    ],
+    "sl": [
+      "Cappello sodo e carnoso, gambo pieno e sodo, pori chiari; niente larve, parti molli o viscide.",
+      "Firm, fleshy cap, solid firm stem, pale pores; no larvae, soft or slimy parts."
+    ],
+    "ds": [
+      "Scegli porcini sodi e carnosi, con cappello asciutto e gambo pieno e compatto; i pori sotto il cappello devono essere bianchi o giallo chiaro (i pori verdi o molli indicano un fungo vecchio). Controlla al taglio l'assenza di larve. I funghi spontanei vanno acquistati solo se certificati da un ispettorato micologico.",
+      "Choose firm, fleshy porcini with a dry cap and a solid, compact stem; the pores under the cap should be white or pale yellow (green or soft pores mean an old mushroom). Check for larvae when cut. Wild mushrooms should only be bought if certified by a mycological inspection service."
+    ],
+    "cs": [
+      "Frigo · 2-3 giorni",
+      "Fridge · 2-3 days"
+    ],
+    "si": [
+      "Sono molto deperibili: conservali in frigorifero in un sacchetto di carta o in un panno (non nella plastica) e consumali entro 2-3 giorni. Non lavarli in acqua: pulisci con un panno o un coltellino. Per conservarli più a lungo si essiccano o si congelano.",
+      "They are highly perishable: keep them in the fridge in a paper bag or cloth (not plastic) and eat within 2-3 days. Don't wash them in water: clean them with a cloth or small knife. For longer storage dry or freeze them."
+    ],
+    "hb": [
+      "Per 100 g sono ricchi di vitamina D e tiamina e fonte di riboflavina, niacina, folati e fosforo, con poche calorie. Vanno sempre consumati cotti.",
+      "Per 100 g they are high in vitamin D and thiamin and a source of riboflavin, niacin, folate and phosphorus, with few calories. They should always be eaten cooked."
+    ],
+    "wr": [
+      "I ritagli e i gambi più duri, essiccati e frullati, diventano una polvere da usare in risotti, sughi e brodi.",
+      "Trimmings and tougher stems, dried and ground, become a powder for risottos, sauces and stocks."
+    ]
+  },
+  "fungo_champignon_button_mushroom": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Cappello sodo, liscio e chiuso (velo intatto), colore uniforme, senza macchie né parti viscide.",
+      "Firm, smooth, closed cap (intact veil), even colour, no spots or slimy parts."
+    ],
+    "ds": [
+      "Un cappello uniforme, ben arrotondato, liscio e lucido, con il velo sotto il cappello ancora chiuso, indica un fungo fresco e di qualità. Evita funghi con lamelle scoperte e scure, macchie, ammaccature o superficie viscida.",
+      "A uniform, well-rounded, smooth and glossy cap with the veil underneath still closed indicates a fresh, good-quality mushroom. Avoid mushrooms with exposed dark gills, spots, bruises or a slimy surface."
+    ],
+    "cs": [
+      "Frigo · 3-5 giorni",
+      "Fridge · 3-5 days"
+    ],
+    "si": [
+      "Conservali in frigorifero nella loro vaschetta o in un sacchetto di carta e consumali in 3-5 giorni; la plastica chiusa trattiene umidità e li rende viscidi. A 0-1 °C e umidità 95% durano 7-9 giorni; già a 2 °C la durata scende a 3-5 giorni per l'imbrunimento. Non temono il freddo ma gelano sotto -0,6 °C.",
+      "Keep them in the fridge in their tray or a paper bag and use within 3-5 days; sealed plastic traps moisture and makes them slimy. At 0-1 °C and 95% humidity they last 7-9 days; already at 2 °C life drops to 3-5 days due to browning. They tolerate cold but freeze below -0.6 °C."
+    ],
+    "hb": [
+      "Molto poco calorici, per 100 g sono fonte di niacina, folati, potassio e rame. Sono funghi coltivati e si possono mangiare anche crudi, affettati sottili.",
+      "Very low in calories, per 100 g they are a source of niacin, folate, potassium and copper. They are cultivated mushrooms and can also be eaten raw, thinly sliced."
+    ],
+    "wr": [
+      "I gambi si cucinano insieme ai cappelli o si frullano in salse e vellutate; i funghi un po' scuriti vanno bene cotti.",
+      "Stems cook together with the caps or can be blended into sauces and soups; slightly browned mushrooms are fine cooked."
+    ]
+  },
+  "fungo_pleurotus_oyster_mushroom": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Cappelli a ventaglio carnosi e integri, lamelle chiare e turgide, senza parti secche o viscide.",
+      "Fleshy, intact fan-shaped caps with pale, firm gills, no dry or slimy parts."
+    ],
+    "ds": [
+      "Scegli cespi o cappelli carnosi e integri, di colore uniforme (grigio, nocciola o crema secondo la varietà), con lamelle bianche e turgide, senza bordi secchi o rotti e senza parti molli o viscide.",
+      "Choose fleshy, intact clusters or caps of even colour (grey, hazel or cream depending on the variety), with white, firm gills, no dry or broken edges and no soft or slimy parts."
+    ],
+    "cs": [
+      "Frigo · 3-5 giorni",
+      "Fridge · 3-5 days"
+    ],
+    "si": [
+      "Conservali in frigorifero in un sacchetto di carta o nella vaschetta aperta e consumali in pochi giorni; evita la plastica chiusa. Si mantengono meglio a 0-1 °C con umidità alta (dati riferiti ai funghi coltivati).",
+      "Keep them in the fridge in a paper bag or open tray and use within a few days; avoid sealed plastic. They keep best at 0-1 °C with high humidity (data for cultivated mushrooms)."
+    ],
+    "hb": [
+      "Sono funghi coltivati su substrati vegetali, poveri di calorie e con una consistenza carnosa che li rende adatti alla griglia e alla piastra.",
+      "They are mushrooms cultivated on plant substrates, low in calories and with a meaty texture well suited to grilling."
+    ],
+    "wr": [
+      "La base dura del cespo si trita in sughi e ripieni; i pleurotus grigliati interi sono un ottimo secondo piatto vegetale.",
+      "The tough base of the cluster can be chopped into sauces and fillings; whole grilled oyster mushrooms make a great vegetarian main."
+    ]
+  }
+}

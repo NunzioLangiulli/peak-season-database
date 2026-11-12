@@ -1,0 +1,439 @@
+{
+ "_doc": "Corrispondenze per enrich_polyphenols.py. usda_ndb_fallback: codice NDB della USDA Flavonoid Database 3.3 quando il codice FDC dell'alimento (enrich_bioactives.FDC) non e' presente nella banca dati dei flavonoidi ('approx' = voce simile). phenol_explorer: nome dell'alimento in Phenol-Explorer 3.6 (solo crudo/fresco; 'approx' = voce simile).",
+ "usda_ndb_fallback": {
+  "arachide_peanut": [
+   "16089",
+   "approx"
+  ],
+  "cachi_persimmon": [
+   "97088",
+   "exact"
+  ],
+  "clementine_clementine": [
+   "09218",
+   "approx"
+  ],
+  "uva_table_grape": [
+   "99047",
+   "exact"
+  ],
+  "peperoncino_chili_pepper": [
+   "11670",
+   "approx"
+  ],
+  "salvia_sage": [
+   "99116",
+   "exact"
+  ],
+  "origano_oregano": [
+   "99115",
+   "approx"
+  ],
+  "menta_mint": [
+   "02064",
+   "approx"
+  ],
+  "orzo_barley": [
+   "20004",
+   "approx"
+  ],
+  "pompelmo_grapefruit": [
+   "99347",
+   "exact"
+  ],
+  "ribes_redcurrant": [
+   "99044",
+   "exact"
+  ],
+  "scarola_escarole": [
+   "11213",
+   "exact"
+  ],
+  "indivia_riccia_curly_endive": [
+   "11213",
+   "approx"
+  ]
+ },
+ "phenol_explorer": {
+  "aglio_garlic": [
+   "Garlic, fresh",
+   "exact"
+  ],
+  "asparago_asparagus": [
+   "Asparagus, raw",
+   "exact"
+  ],
+  "carciofo_artichoke": [
+   "Globe artichoke, heads, raw",
+   "exact"
+  ],
+  "carota_carrot": [
+   "Carrot, raw",
+   "exact"
+  ],
+  "barbabietola_beetroot": [
+   "Red beetroot, raw",
+   "exact"
+  ],
+  "bietola_da_coste_swiss_chard": [
+   "Swiss chard leaves [White], raw",
+   "approx"
+  ],
+  "cavoletto_di_bruxelles_brussels_sprout": [
+   "Brussel sprouts, raw",
+   "exact"
+  ],
+  "cavolfiore_cauliflower": [
+   "Cauliflower, raw",
+   "exact"
+  ],
+  "broccolo_broccoli": [
+   "Broccoli, raw",
+   "exact"
+  ],
+  "cavolo_cappuccio_cabbage": [
+   "Common cabbage [White], raw",
+   "exact"
+  ],
+  "cavolo_nero_black_kale": [
+   "Black cabbage, raw",
+   "exact"
+  ],
+  "cavolo_rapa_kohlrabi": [
+   "Kohlrabi, raw",
+   "exact"
+  ],
+  "cavolo_verza_savoy_cabbage": [
+   "Savoy cabbage, raw",
+   "exact"
+  ],
+  "cece_chickpea": [
+   "Chickpea, whole, raw",
+   "exact"
+  ],
+  "cetriolo_cucumber": [
+   "Cucumber, raw",
+   "exact"
+  ],
+  "cicoria_da_cespo_chicory": [
+   "Chicory [Green], raw",
+   "exact"
+  ],
+  "cicoria_da_taglio_cutting_chicory": [
+   "Chicory [Green], raw",
+   "approx"
+  ],
+  "cima_di_rapa_turnip_greens": [
+   "Wild turnip tops, fresh",
+   "approx"
+  ],
+  "cipolla_estiva_summer_onion": [
+   "Onion [White], raw",
+   "approx"
+  ],
+  "cipolla_invernale_winter_onion": [
+   "Onion [Yellow], raw",
+   "approx"
+  ],
+  "fagiolo_bean": [
+   "Common bean [Others], whole, raw",
+   "approx"
+  ],
+  "fagiolino_green_bean": [
+   "Green bean, raw",
+   "exact"
+  ],
+  "fava_broad_bean": [
+   "Broad bean seed, whole, raw",
+   "approx"
+  ],
+  "finocchio_fennel": [
+   "Fennel",
+   "exact"
+  ],
+  "lattuga_da_cespo_head_lettuce": [
+   "Lettuce [Green], raw",
+   "exact"
+  ],
+  "lattuga_da_taglio_leaf_lettuce": [
+   "Lettuce [Green], raw",
+   "approx"
+  ],
+  "lenticchia_lentil": [
+   "Lentils, whole, raw",
+   "exact"
+  ],
+  "melanzana_eggplant": [
+   "Eggplant [Purple], whole, raw",
+   "exact"
+  ],
+  "pastinaca_parsnip": [
+   "Parsnip, raw",
+   "exact"
+  ],
+  "patata_potato": [
+   "Potato, raw",
+   "exact"
+  ],
+  "peperone_bell_pepper": [
+   "Sweet pepper [Red], raw",
+   "approx"
+  ],
+  "pisello_pea": [
+   "Fresh pea, raw",
+   "exact"
+  ],
+  "pomodoro_tomato": [
+   "Tomato, whole, raw",
+   "exact"
+  ],
+  "radicchio_radicchio": [
+   "Chicory [Red], raw",
+   "exact"
+  ],
+  "rapa_turnip": [
+   "Turnip root, raw",
+   "exact"
+  ],
+  "ravanello_radish": [
+   "Radish, raw",
+   "exact"
+  ],
+  "rucola_arugula": [
+   "Arugula, raw",
+   "exact"
+  ],
+  "scalogno_shallot": [
+   "Shallot, raw",
+   "exact"
+  ],
+  "sedano_celery": [
+   "Celery stalks, raw",
+   "exact"
+  ],
+  "spinacio_spinach": [
+   "Spinach, raw",
+   "exact"
+  ],
+  "zucca_pumpkin": [
+   "Pumpkin, raw",
+   "exact"
+  ],
+  "zucchina_zucchini": [
+   "Zucchini, raw",
+   "exact"
+  ],
+  "arachide_peanut": [
+   "Peanut",
+   "exact"
+  ],
+  "anguria_watermelon": [
+   "Watermelon",
+   "exact"
+  ],
+  "melone_melon": [
+   "Cantaloupe",
+   "approx"
+  ],
+  "albicocca_apricot": [
+   "Apricot, raw",
+   "exact"
+  ],
+  "arancia_orange": [
+   "Orange [Blond]",
+   "exact"
+  ],
+  "cachi_persimmon": [
+   "Persimmon, fresh",
+   "exact"
+  ],
+  "castagna_chestnut": [
+   "Chestnut, raw",
+   "exact"
+  ],
+  "ciliegia_cherry": [
+   "Sweet cherry, raw",
+   "exact"
+  ],
+  "clementine_clementine": [
+   "Tangerine",
+   "approx"
+  ],
+  "fico_fig": [
+   "Fig, whole, fresh",
+   "exact"
+  ],
+  "fragola_strawberry": [
+   "Strawberry, raw",
+   "exact"
+  ],
+  "kiwi_kiwifruit": [
+   "Kiwi",
+   "exact"
+  ],
+  "lampone_raspberry": [
+   "Red raspberry, raw",
+   "exact"
+  ],
+  "limone_lemon": [
+   "Lemon",
+   "exact"
+  ],
+  "mandarino_mandarin": [
+   "Tangerine",
+   "exact"
+  ],
+  "mela_apple": [
+   "Apple [Dessert], whole, raw",
+   "exact"
+  ],
+  "melograno_pomegranate": [
+   "Pomegranate",
+   "exact"
+  ],
+  "mirtillo_blueberry": [
+   "Highbush blueberry, raw",
+   "exact"
+  ],
+  "mora_blackberry": [
+   "Blackberry, raw",
+   "exact"
+  ],
+  "pera_pear": [
+   "Pear, whole",
+   "exact"
+  ],
+  "pesca_peach": [
+   "Peach, whole",
+   "exact"
+  ],
+  "susina_plum": [
+   "Plum, fresh",
+   "exact"
+  ],
+  "uva_table_grape": [
+   "Grape [Green]",
+   "approx"
+  ],
+  "banana_banana": [
+   "Banana, raw",
+   "exact"
+  ],
+  "mango_mango": [
+   "Mango",
+   "exact"
+  ],
+  "avocado_avocado": [
+   "Avocado, raw",
+   "exact"
+  ],
+  "basilico_basil": [
+   "Sweet basil, fresh",
+   "exact"
+  ],
+  "peperoncino_chili_pepper": [
+   "Chilli pepper [Red], raw",
+   "exact"
+  ],
+  "prezzemolo_parsley": [
+   "Parsley, fresh",
+   "exact"
+  ],
+  "rosmarino_rosemary": [
+   "Rosemary, fresh",
+   "exact"
+  ],
+  "salvia_sage": [
+   "Common sage, fresh",
+   "exact"
+  ],
+  "origano_oregano": [
+   "Oregano, dried (wild marjoram)",
+   "exact"
+  ],
+  "timo_thyme": [
+   "Common thyme, fresh",
+   "exact"
+  ],
+  "menta_mint": [
+   "Peppermint, fresh",
+   "approx"
+  ],
+  "orzo_barley": [
+   "Barley, whole grain flour",
+   "approx"
+  ],
+  "grano_duro_durum_wheat": [
+   "Hard wheat, whole grain flour",
+   "approx"
+  ],
+  "riso_rice": [
+   "Rice, refined",
+   "exact"
+  ],
+  "avena_oat": [
+   "Oat, rolled",
+   "approx"
+  ],
+  "grano_saraceno_buckwheat": [
+   "Buckwheat, whole grain flour",
+   "approx"
+  ],
+  "cavolo_rosso_red_cabbage": [
+   "Common cabbage [Red], raw",
+   "exact"
+  ],
+  "sedano_rapa_celeriac": [
+   "Celeriac, raw",
+   "exact"
+  ],
+  "scarola_escarole": [
+   "Endive [Escarole], raw",
+   "exact"
+  ],
+  "indivia_riccia_curly_endive": [
+   "Endive [Curly], raw",
+   "exact"
+  ],
+  "nespola_loquat": [
+   "Loquat",
+   "exact"
+  ],
+  "pompelmo_grapefruit": [
+   "Grapefruit",
+   "exact"
+  ],
+  "mela_cotogna_quince": [
+   "Quince, peeled, raw",
+   "approx"
+  ],
+  "ribes_redcurrant": [
+   "Redcurrant, raw",
+   "exact"
+  ],
+  "pesca_noce_nectarine": [
+   "Nectarine, whole",
+   "exact"
+  ],
+  "litchi_lychee": [
+   "Lichee",
+   "exact"
+  ],
+  "lime_lime": [
+   "Lime",
+   "exact"
+  ],
+  "ananas_pineapple": [
+   "Pineapple",
+   "exact"
+  ],
+  "papaya_papaya": [
+   "Papaya",
+   "exact"
+  ],
+  "maracuja_passion_fruit": [
+   "Passion fruit",
+   "exact"
+  ]
+ }
+}

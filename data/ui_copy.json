@@ -1,0 +1,2164 @@
+{
+  "_meta": {
+    "description": "Testi dell'interfaccia dell'app Peak Season (IT/EN). Li legge CopyService all'avvio; si modificano con scripts/copy_editor.py. I segnaposto tra graffe, es. {n}, vanno lasciati invariati. Chiavi uniche nel formato schermata.elemento.",
+    "updated": "2026-11-12"
+  },
+  "strings": [
+    {
+      "screen": "common",
+      "key": "common.tab_shopping",
+      "element_description": "General: tab shopping",
+      "it": "Lista Spesa",
+      "en": "Shopping"
+    },
+    {
+      "screen": "common",
+      "key": "common.tab_settings",
+      "element_description": "General: tab settings",
+      "it": "Impostazioni",
+      "en": "Settings"
+    },
+    {
+      "screen": "common",
+      "key": "common.close",
+      "element_description": "General: close",
+      "it": "Chiudi",
+      "en": "Close"
+    },
+    {
+      "screen": "common",
+      "key": "common.cancel",
+      "element_description": "General: cancel",
+      "it": "Annulla",
+      "en": "Cancel"
+    },
+    {
+      "screen": "common",
+      "key": "common.reset",
+      "element_description": "General: reset",
+      "it": "Azzera",
+      "en": "Reset"
+    },
+    {
+      "screen": "common",
+      "key": "common.app_title",
+      "element_description": "General: app name (title bar, about)",
+      "it": "Peak Season",
+      "en": "Peak Season"
+    },
+    {
+      "screen": "common",
+      "key": "common.tab_peak_season",
+      "element_description": "General: first bottom-bar tab",
+      "it": "Peak Season",
+      "en": "Peak Season"
+    },
+    {
+      "screen": "common",
+      "key": "common.month.1",
+      "element_description": "General: month name (January)",
+      "it": "Gennaio",
+      "en": "January"
+    },
+    {
+      "screen": "common",
+      "key": "common.month.2",
+      "element_description": "General: month name (February)",
+      "it": "Febbraio",
+      "en": "February"
+    },
+    {
+      "screen": "common",
+      "key": "common.month.3",
+      "element_description": "General: month name (March)",
+      "it": "Marzo",
+      "en": "March"
+    },
+    {
+      "screen": "common",
+      "key": "common.month.4",
+      "element_description": "General: month name (April)",
+      "it": "Aprile",
+      "en": "April"
+    },
+    {
+      "screen": "common",
+      "key": "common.month.5",
+      "element_description": "General: month name (May)",
+      "it": "Maggio",
+      "en": "May"
+    },
+    {
+      "screen": "common",
+      "key": "common.month.6",
+      "element_description": "General: month name (June)",
+      "it": "Giugno",
+      "en": "June"
+    },
+    {
+      "screen": "common",
+      "key": "common.month.7",
+      "element_description": "General: month name (July)",
+      "it": "Luglio",
+      "en": "July"
+    },
+    {
+      "screen": "common",
+      "key": "common.month.8",
+      "element_description": "General: month name (August)",
+      "it": "Agosto",
+      "en": "August"
+    },
+    {
+      "screen": "common",
+      "key": "common.month.9",
+      "element_description": "General: month name (September)",
+      "it": "Settembre",
+      "en": "September"
+    },
+    {
+      "screen": "common",
+      "key": "common.month.10",
+      "element_description": "General: month name (October)",
+      "it": "Ottobre",
+      "en": "October"
+    },
+    {
+      "screen": "common",
+      "key": "common.month.11",
+      "element_description": "General: month name (November)",
+      "it": "Novembre",
+      "en": "November"
+    },
+    {
+      "screen": "common",
+      "key": "common.month.12",
+      "element_description": "General: month name (December)",
+      "it": "Dicembre",
+      "en": "December"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_short.1",
+      "element_description": "General: 3-letter month (calendars, month slider) (January)",
+      "it": "GEN",
+      "en": "JAN"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_short.2",
+      "element_description": "General: 3-letter month (calendars, month slider) (February)",
+      "it": "FEB",
+      "en": "FEB"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_short.3",
+      "element_description": "General: 3-letter month (calendars, month slider) (March)",
+      "it": "MAR",
+      "en": "MAR"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_short.4",
+      "element_description": "General: 3-letter month (calendars, month slider) (April)",
+      "it": "APR",
+      "en": "APR"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_short.5",
+      "element_description": "General: 3-letter month (calendars, month slider) (May)",
+      "it": "MAG",
+      "en": "MAY"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_short.6",
+      "element_description": "General: 3-letter month (calendars, month slider) (June)",
+      "it": "GIU",
+      "en": "JUN"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_short.7",
+      "element_description": "General: 3-letter month (calendars, month slider) (July)",
+      "it": "LUG",
+      "en": "JUL"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_short.8",
+      "element_description": "General: 3-letter month (calendars, month slider) (August)",
+      "it": "AGO",
+      "en": "AUG"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_short.9",
+      "element_description": "General: 3-letter month (calendars, month slider) (September)",
+      "it": "SET",
+      "en": "SEP"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_short.10",
+      "element_description": "General: 3-letter month (calendars, month slider) (October)",
+      "it": "OTT",
+      "en": "OCT"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_short.11",
+      "element_description": "General: 3-letter month (calendars, month slider) (November)",
+      "it": "NOV",
+      "en": "NOV"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_short.12",
+      "element_description": "General: 3-letter month (calendars, month slider) (December)",
+      "it": "DIC",
+      "en": "DEC"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_initial.1",
+      "element_description": "General: month initial (12-month calendar) (January)",
+      "it": "G",
+      "en": "J"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_initial.2",
+      "element_description": "General: month initial (12-month calendar) (February)",
+      "it": "F",
+      "en": "F"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_initial.3",
+      "element_description": "General: month initial (12-month calendar) (March)",
+      "it": "M",
+      "en": "M"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_initial.4",
+      "element_description": "General: month initial (12-month calendar) (April)",
+      "it": "A",
+      "en": "A"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_initial.5",
+      "element_description": "General: month initial (12-month calendar) (May)",
+      "it": "M",
+      "en": "M"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_initial.6",
+      "element_description": "General: month initial (12-month calendar) (June)",
+      "it": "G",
+      "en": "J"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_initial.7",
+      "element_description": "General: month initial (12-month calendar) (July)",
+      "it": "L",
+      "en": "J"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_initial.8",
+      "element_description": "General: month initial (12-month calendar) (August)",
+      "it": "A",
+      "en": "A"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_initial.9",
+      "element_description": "General: month initial (12-month calendar) (September)",
+      "it": "S",
+      "en": "S"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_initial.10",
+      "element_description": "General: month initial (12-month calendar) (October)",
+      "it": "O",
+      "en": "O"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_initial.11",
+      "element_description": "General: month initial (12-month calendar) (November)",
+      "it": "N",
+      "en": "N"
+    },
+    {
+      "screen": "common",
+      "key": "common.month_initial.12",
+      "element_description": "General: month initial (12-month calendar) (December)",
+      "it": "D",
+      "en": "D"
+    },
+    {
+      "screen": "home",
+      "key": "home.filter_all",
+      "element_description": "Home screen: filter all",
+      "it": "Tutti",
+      "en": "All"
+    },
+    {
+      "screen": "home",
+      "key": "home.fruit",
+      "element_description": "Home screen: fruit",
+      "it": "Frutta",
+      "en": "Fruit"
+    },
+    {
+      "screen": "home",
+      "key": "home.vegetables",
+      "element_description": "Home screen: vegetables",
+      "it": "Verdura",
+      "en": "Veg"
+    },
+    {
+      "screen": "home",
+      "key": "home.shopping_filter",
+      "element_description": "Home screen: shopping filter",
+      "it": "Solo Lista Spesa",
+      "en": "Shopping List Only"
+    },
+    {
+      "screen": "home",
+      "key": "home.favorites_filter",
+      "element_description": "Home screen: favorites filter",
+      "it": "Solo Preferiti",
+      "en": "Favourites Only"
+    },
+    {
+      "screen": "home",
+      "key": "home.advanced_filters",
+      "element_description": "Home screen: advanced filters",
+      "it": "Filtri Avanzati",
+      "en": "Advanced Filters"
+    },
+    {
+      "screen": "home",
+      "key": "home.search_hint",
+      "element_description": "Home screen: search hint",
+      "it": "Cerca frutta, verdura, erbe…",
+      "en": "Search fruit, vegetables, herbs…"
+    },
+    {
+      "screen": "home",
+      "key": "home.search",
+      "element_description": "Home screen: search",
+      "it": "Cerca",
+      "en": "Search"
+    },
+    {
+      "screen": "home",
+      "key": "home.today",
+      "element_description": "Home screen: today",
+      "it": "Oggi",
+      "en": "Today"
+    },
+    {
+      "screen": "home",
+      "key": "home.view_mode_label.grid",
+      "element_description": "Home screen: view mode label (grid)",
+      "it": "Vista Griglia",
+      "en": "Grid View"
+    },
+    {
+      "screen": "home",
+      "key": "home.view_mode_label.list",
+      "element_description": "Home screen: view mode label (list)",
+      "it": "Vista Lista",
+      "en": "List View"
+    },
+    {
+      "screen": "home",
+      "key": "home.view_mode_label.calendar",
+      "element_description": "Home screen: view mode label (calendar)",
+      "it": "Calendario 12 Mesi",
+      "en": "12-Month Calendar"
+    },
+    {
+      "screen": "home",
+      "key": "home.change_view",
+      "element_description": "Home screen: change view",
+      "it": "Cambia Vista",
+      "en": "Change View"
+    },
+    {
+      "screen": "home",
+      "key": "home.pulse",
+      "element_description": "Home screen: pulse — placeholders: {peak}, {inSeason}",
+      "it": "{peak} al picco della stagione · {inSeason} di stagione",
+      "en": "{peak} at their seasonal peak · {inSeason} in season"
+    },
+    {
+      "screen": "home",
+      "key": "home.legend",
+      "element_description": "Home screen: legend",
+      "it": "Legenda",
+      "en": "Legend"
+    },
+    {
+      "screen": "home",
+      "key": "home.no_results",
+      "element_description": "Home screen: no results",
+      "it": "Nessun Prodotto Trovato",
+      "en": "No Items Found"
+    },
+    {
+      "screen": "home",
+      "key": "home.no_results_hint",
+      "element_description": "Home screen: no results hint",
+      "it": "Prova a cambiare mese o a togliere qualche filtro.",
+      "en": "Try another month or remove some filters."
+    },
+    {
+      "screen": "home",
+      "key": "home.clear_filters",
+      "element_description": "Home screen: clear filters",
+      "it": "Togli i Filtri",
+      "en": "Clear Filters"
+    },
+    {
+      "screen": "home",
+      "key": "home.hidden_visible",
+      "element_description": "Home screen: hidden visible",
+      "it": "Nascosti Visibili",
+      "en": "Hidden Shown"
+    },
+    {
+      "screen": "home",
+      "key": "home.no_data_section",
+      "element_description": "Home screen: no data section — placeholders: {n}",
+      "it": "Senza Dati per Questa Zona ({n})",
+      "en": "No Data for This Zone ({n})"
+    },
+    {
+      "screen": "home",
+      "key": "home.no_data_section_hint",
+      "element_description": "Home screen: no data section hint",
+      "it": "Nessuna fonte riporta la loro stagionalità per la zona che hai scelto: non vuol dire che siano fuori stagione.",
+      "en": "No source gives their seasonality for the zone you chose: it does not mean they are out of season."
+    },
+    {
+      "screen": "home",
+      "key": "home.include_no_data",
+      "element_description": "Home screen: include no data",
+      "it": "Includi Prodotti Senza Dati",
+      "en": "Include Items Without Data"
+    },
+    {
+      "screen": "home",
+      "key": "home.include_no_data_sub",
+      "element_description": "Home screen: include no data sub",
+      "it": "Li mostra nella lista principale, in fondo, con i pallini grigi \"?\".",
+      "en": "Shows them in the main list, at the bottom, with the grey \"?\" dots."
+    },
+    {
+      "screen": "home",
+      "key": "home.no_data_chip",
+      "element_description": "Home screen: no data chip",
+      "it": "Senza Dati Inclusi",
+      "en": "Without Data Included"
+    },
+    {
+      "screen": "home",
+      "key": "home.reference_calendar",
+      "element_description": "Home screen: reference calendar — placeholders: {zone}",
+      "it": "Calendario di Riferimento: {zone}",
+      "en": "Reference Calendar: {zone}"
+    },
+    {
+      "screen": "home",
+      "key": "home.reference_note",
+      "element_description": "Home screen: reference note",
+      "it": "Non è la tua zona: indicazione generale.",
+      "en": "Not your zone: general guidance."
+    },
+    {
+      "screen": "home",
+      "key": "home.italy_national",
+      "element_description": "Home screen: italy national",
+      "it": "Italia",
+      "en": "Italy"
+    },
+    {
+      "screen": "home",
+      "key": "home.results_count",
+      "element_description": "Home screen: results count — placeholders: {n}",
+      "it": "Mostra {n} Prodotti",
+      "en": "Show {n} Items"
+    },
+    {
+      "screen": "home",
+      "key": "home.unknown_title",
+      "element_description": "Home screen: unknown title",
+      "it": "Dati Non Disponibili",
+      "en": "No Data Available"
+    },
+    {
+      "screen": "home",
+      "key": "home.unknown_description",
+      "element_description": "Home screen: unknown description",
+      "it": "Il pallino grigio con il punto interrogativo significa che nessuna delle fonti consultate (EUFIC e calendari regionali) riporta la stagionalità di questo prodotto per la zona climatica che hai scelto, e non esiste una zona vicina da cui stimarla. NON vuol dire che sia fuori stagione: il dato semplicemente manca. Puoi provare un'altra zona o area italiana nelle Impostazioni.",
+      "en": "The grey dot with a question mark means that none of the sources consulted (EUFIC and regional calendars) gives the seasonality of this item for the climate zone you chose, and there is no neighbouring zone to estimate it from. It does NOT mean it is out of season: the data is simply missing. You can try another zone or Italian area in Settings."
+    },
+    {
+      "screen": "home",
+      "key": "home.unknown_short",
+      "element_description": "Home screen: unknown short",
+      "it": "Nessuna fonte per la tua zona: non vuol dire \"fuori stagione\".",
+      "en": "No source for your zone: it does not mean \"out of season\"."
+    },
+    {
+      "screen": "home",
+      "key": "home.approx_note",
+      "element_description": "Home screen: approx note",
+      "it": "≈ stima dalla zona vicina (manca il dato della tua zona)",
+      "en": "≈ estimate from a neighbouring zone (no data for your zone)"
+    },
+    {
+      "screen": "home",
+      "key": "home.filter_all_chip",
+      "element_description": "Home screen: 'all categories' chip",
+      "it": "ALL",
+      "en": "ALL"
+    },
+    {
+      "screen": "home",
+      "key": "home.dop_only_chip",
+      "element_description": "Home screen: active PDO/PGI filter chip, and the PDO/PGI chip on the product page",
+      "it": "DOP/IGP",
+      "en": "PDO/PGI"
+    },
+    {
+      "screen": "home",
+      "key": "home.category_other",
+      "element_description": "Home screen: quick category button grouping herbs and spices, mushrooms and grains",
+      "it": "Altro",
+      "en": "Other"
+    },
+    {
+      "screen": "home",
+      "key": "home.tag_carbon",
+      "element_description": "Home screen: active-filter tag for the carbon footprint level — placeholders: {level}",
+      "it": "CO₂ {level}",
+      "en": "CO₂ {level}"
+    },
+    {
+      "screen": "home",
+      "key": "home.tag_water",
+      "element_description": "Home screen: active-filter tag for the water footprint level — placeholders: {level}",
+      "it": "Acqua {level}",
+      "en": "Water {level}"
+    },
+    {
+      "screen": "filters",
+      "key": "filters.categories_title",
+      "element_description": "Advanced filters sheet: categories title",
+      "it": "Categorie",
+      "en": "Categories"
+    },
+    {
+      "screen": "filters",
+      "key": "filters.season_states_title",
+      "element_description": "Advanced filters sheet: season states title — placeholders: {month}",
+      "it": "Stato Stagionale a {month}",
+      "en": "Season Status in {month}"
+    },
+    {
+      "screen": "filters",
+      "key": "filters.quality_title",
+      "element_description": "Advanced filters sheet: quality title",
+      "it": "Qualità e Territorio",
+      "en": "Quality and Origin"
+    },
+    {
+      "screen": "filters",
+      "key": "filters.dop_only",
+      "element_description": "Advanced filters sheet: dop only",
+      "it": "Solo Prodotti DOP/IGP",
+      "en": "PDO/PGI Products Only"
+    },
+    {
+      "screen": "filters",
+      "key": "filters.dop_only_sub",
+      "element_description": "Advanced filters sheet: dop only sub",
+      "it": "Prodotti con almeno una denominazione verificata sul registro UE",
+      "en": "Items with at least one designation verified on the EU register"
+    },
+    {
+      "screen": "filters",
+      "key": "filters.hidden_title",
+      "element_description": "Advanced filters sheet: hidden title",
+      "it": "Prodotti Nascosti",
+      "en": "Hidden Items"
+    },
+    {
+      "screen": "filters",
+      "key": "filters.show_hidden",
+      "element_description": "Advanced filters sheet: show hidden",
+      "it": "Mostra Temporaneamente i Nascosti",
+      "en": "Temporarily Show Hidden Items"
+    },
+    {
+      "screen": "filters",
+      "key": "filters.show_hidden_sub",
+      "element_description": "Advanced filters sheet: show hidden sub — placeholders: {n}",
+      "it": "{n} prodotti segnati \"Non lo mangio\". Restano segnati.",
+      "en": "{n} items marked \"I don't eat it\". They stay marked."
+    },
+    {
+      "screen": "filters",
+      "key": "filters.category.verdura",
+      "element_description": "Advanced filters sheet: category (verdura)",
+      "it": "Verdura",
+      "en": "Vegetables"
+    },
+    {
+      "screen": "filters",
+      "key": "filters.category.frutta",
+      "element_description": "Advanced filters sheet: category (frutta)",
+      "it": "Frutta",
+      "en": "Fruit"
+    },
+    {
+      "screen": "filters",
+      "key": "filters.category.erbe_spezie",
+      "element_description": "Advanced filters sheet: category (erbe spezie)",
+      "it": "Erbe e Spezie",
+      "en": "Herbs and Spices"
+    },
+    {
+      "screen": "filters",
+      "key": "filters.category.funghi",
+      "element_description": "Advanced filters sheet: category (funghi)",
+      "it": "Funghi",
+      "en": "Mushrooms"
+    },
+    {
+      "screen": "filters",
+      "key": "filters.category.cereali",
+      "element_description": "Advanced filters sheet: category (cereali)",
+      "it": "Cereali",
+      "en": "Grains"
+    },
+    {
+      "screen": "filters",
+      "key": "filters.state.primizie",
+      "element_description": "Advanced filters sheet: state (primizie)",
+      "it": "Primizia",
+      "en": "Early Season"
+    },
+    {
+      "screen": "filters",
+      "key": "filters.state.in_season",
+      "element_description": "Advanced filters sheet: state (in season)",
+      "it": "Di Stagione",
+      "en": "In Season"
+    },
+    {
+      "screen": "filters",
+      "key": "filters.state.peak_season",
+      "element_description": "Advanced filters sheet: state (peak season)",
+      "it": "Picco di Stagione",
+      "en": "Peak Season"
+    },
+    {
+      "screen": "filters",
+      "key": "filters.state.end_of_season",
+      "element_description": "Advanced filters sheet: state (end of season)",
+      "it": "Fine Stagione",
+      "en": "End of Season"
+    },
+    {
+      "screen": "filters",
+      "key": "filters.state.out_of_season",
+      "element_description": "Advanced filters sheet: state (out of season)",
+      "it": "Fuori Stagione",
+      "en": "Out of Season"
+    },
+    {
+      "screen": "filters",
+      "key": "filters.state.not_applicable",
+      "element_description": "Advanced filters sheet: state (not applicable)",
+      "it": "Non Coltivato Qui",
+      "en": "Not Grown Locally"
+    },
+    {
+      "screen": "filters",
+      "key": "filters.state.unknown",
+      "element_description": "Advanced filters sheet: state (unknown)",
+      "it": "Dati Non Disponibili",
+      "en": "No Data"
+    },
+    {
+      "screen": "actions",
+      "key": "actions.add_to_list",
+      "element_description": "Product actions (cards, menus, snackbars): add to list",
+      "it": "Aggiungi alla Lista Spesa",
+      "en": "Add to Shopping List"
+    },
+    {
+      "screen": "actions",
+      "key": "actions.remove_from_list",
+      "element_description": "Product actions (cards, menus, snackbars): remove from list",
+      "it": "Togli dalla Lista Spesa",
+      "en": "Remove from Shopping List"
+    },
+    {
+      "screen": "actions",
+      "key": "actions.add_favorite",
+      "element_description": "Product actions (cards, menus, snackbars): add favorite",
+      "it": "Aggiungi ai Preferiti",
+      "en": "Add to Favourites"
+    },
+    {
+      "screen": "actions",
+      "key": "actions.remove_favorite",
+      "element_description": "Product actions (cards, menus, snackbars): remove favorite",
+      "it": "Togli dai Preferiti",
+      "en": "Remove from Favourites"
+    },
+    {
+      "screen": "actions",
+      "key": "actions.dislike",
+      "element_description": "Product actions (cards, menus, snackbars): dislike",
+      "it": "Non lo Mangio",
+      "en": "I Don't Eat It"
+    },
+    {
+      "screen": "actions",
+      "key": "actions.undislike",
+      "element_description": "Product actions (cards, menus, snackbars): undislike",
+      "it": "Lo Mangio di Nuovo",
+      "en": "Show It Again"
+    },
+    {
+      "screen": "actions",
+      "key": "actions.favorite",
+      "element_description": "Product actions (cards, menus, snackbars): favorite",
+      "it": "Preferito",
+      "en": "Favourite"
+    },
+    {
+      "screen": "actions",
+      "key": "actions.in_list",
+      "element_description": "Product actions (cards, menus, snackbars): in list",
+      "it": "In Lista",
+      "en": "In List"
+    },
+    {
+      "screen": "actions",
+      "key": "actions.added_to_list",
+      "element_description": "Product actions (cards, menus, snackbars): added to list",
+      "it": "Aggiunto alla Lista Spesa",
+      "en": "Added to Shopping List"
+    },
+    {
+      "screen": "actions",
+      "key": "actions.removed_from_list",
+      "element_description": "Product actions (cards, menus, snackbars): removed from list",
+      "it": "Tolto dalla Lista Spesa",
+      "en": "Removed from Shopping List"
+    },
+    {
+      "screen": "actions",
+      "key": "actions.hidden_snack",
+      "element_description": "Product actions (cards, menus, snackbars): hidden snack — placeholders: {name}",
+      "it": "{name} nascosto dalla schermata principale",
+      "en": "{name} hidden from the home screen"
+    },
+    {
+      "screen": "actions",
+      "key": "actions.undo",
+      "element_description": "Product actions (cards, menus, snackbars): undo",
+      "it": "Annulla",
+      "en": "Undo"
+    },
+    {
+      "screen": "shopping_list",
+      "key": "shopping_list.shopping_title",
+      "element_description": "Shopping list: shopping title",
+      "it": "Lista della Spesa",
+      "en": "Shopping List"
+    },
+    {
+      "screen": "shopping_list",
+      "key": "shopping_list.shopping_empty",
+      "element_description": "Shopping list: shopping empty",
+      "it": "La lista è vuota",
+      "en": "Your list is empty"
+    },
+    {
+      "screen": "shopping_list",
+      "key": "shopping_list.shopping_empty_hint",
+      "element_description": "Shopping list: shopping empty hint",
+      "it": "Tocca l'icona {icon} su un prodotto per aggiungerlo.",
+      "en": "Tap the {icon} icon on an item to add it."
+    },
+    {
+      "screen": "shopping_list",
+      "key": "shopping_list.clear_list",
+      "element_description": "Shopping list: clear list",
+      "it": "Svuota Lista",
+      "en": "Clear List"
+    },
+    {
+      "screen": "shopping_list",
+      "key": "shopping_list.clear_list_confirm",
+      "element_description": "Shopping list: clear list confirm",
+      "it": "Vuoi togliere tutti i prodotti dalla lista?",
+      "en": "Remove every item from the list?"
+    },
+    {
+      "screen": "shopping_list",
+      "key": "shopping_list.what_to_look_for",
+      "element_description": "Shopping list: what to look for",
+      "it": "Come Sceglierlo al Meglio",
+      "en": "How to Pick the Best One"
+    },
+    {
+      "screen": "shopping_list",
+      "key": "shopping_list.in_cart_header",
+      "element_description": "Shopping list: in cart header — placeholders: {n}",
+      "it": "Nel Carrello ({n})",
+      "en": "In the Cart ({n})"
+    },
+    {
+      "screen": "shopping_list",
+      "key": "shopping_list.clear_completed",
+      "element_description": "Shopping list: clear completed",
+      "it": "Togli dalla Lista i Prodotti Già Presi",
+      "en": "Remove Items Already Picked Up"
+    },
+    {
+      "screen": "shopping_list",
+      "key": "shopping_list.add_food_hint",
+      "element_description": "Shopping list: add food hint",
+      "it": "Aggiungi un prodotto…",
+      "en": "Add an item…"
+    },
+    {
+      "screen": "shopping_list",
+      "key": "shopping_list.done_shopping_title",
+      "element_description": "Shopping list: done shopping title",
+      "it": "Hai Finito la Spesa?",
+      "en": "Done Shopping?"
+    },
+    {
+      "screen": "shopping_list",
+      "key": "shopping_list.done_shopping_sub",
+      "element_description": "Shopping list: done shopping sub",
+      "it": "Vedi come conservare questi prodotti a casa",
+      "en": "See how to store these items at home"
+    },
+    {
+      "screen": "shopping_list",
+      "key": "shopping_list.gross_weight_calc",
+      "element_description": "Shopping list: gross weight calc",
+      "it": "Quanto Comprarne",
+      "en": "How Much to Buy"
+    },
+    {
+      "screen": "shopping_list",
+      "key": "shopping_list.net_weight",
+      "element_description": "Shopping list: net weight",
+      "it": "Netto",
+      "en": "Net"
+    },
+    {
+      "screen": "shopping_list",
+      "key": "shopping_list.gross_to_buy",
+      "element_description": "Shopping list: gross to buy",
+      "it": "Peso da comprare al banco:",
+      "en": "Weight to buy:"
+    },
+    {
+      "screen": "shopping_list",
+      "key": "shopping_list.edible_yield",
+      "element_description": "Shopping list: edible yield — placeholders: {pct}",
+      "it": "Resa edibile: {pct}%",
+      "en": "Edible yield: {pct}%"
+    },
+    {
+      "screen": "shopping_list",
+      "key": "shopping_list.storage_tips_button",
+      "element_description": "Shopping list: storage tips button",
+      "it": "Come Conservarli",
+      "en": "How to Store Them"
+    },
+    {
+      "screen": "shopping_list",
+      "key": "shopping_list.shopping_count.one",
+      "element_description": "Shopping list: header counter, one product",
+      "it": "1 prodotto",
+      "en": "1 item"
+    },
+    {
+      "screen": "shopping_list",
+      "key": "shopping_list.shopping_count.other",
+      "element_description": "Shopping list: header counter, several products — placeholders: {n}",
+      "it": "{n} prodotti",
+      "en": "{n} items"
+    },
+    {
+      "screen": "shopping_list",
+      "key": "shopping_list.shopping_counter",
+      "element_description": "Shopping list: counter under the title — placeholders: {items} (= the shopping count text), {inCart}",
+      "it": "{items} da comprare · {inCart} nel carrello",
+      "en": "{items} to buy · {inCart} in the cart"
+    },
+    {
+      "screen": "storage_tips",
+      "key": "storage_tips.storage_tips_title",
+      "element_description": "How to store them page: storage tips title",
+      "it": "Come Conservarli",
+      "en": "How to Store Them"
+    },
+    {
+      "screen": "storage_tips",
+      "key": "storage_tips.storage_tips_intro",
+      "element_description": "How to store them page: storage tips intro",
+      "it": "I consigli per i prodotti della tua lista. Cerca qui sotto per tutti gli altri.",
+      "en": "Tips for the items on your list. Search below for any other item."
+    },
+    {
+      "screen": "storage_tips",
+      "key": "storage_tips.storage_tips_search",
+      "element_description": "How to store them page: storage tips search",
+      "it": "Cerca frutta, verdura, erbe…",
+      "en": "Search fruit, vegetables, herbs…"
+    },
+    {
+      "screen": "storage_tips",
+      "key": "storage_tips.storage_tips_empty_list",
+      "element_description": "How to store them page: storage tips empty list",
+      "it": "La lista è vuota: cerca un prodotto per vedere come conservarlo.",
+      "en": "Your list is empty: search an item to see how to store it."
+    },
+    {
+      "screen": "storage_tips",
+      "key": "storage_tips.storage_guide_intro",
+      "element_description": "How to store them page: storage guide intro",
+      "it": "Sei tornato a casa con le buste della spesa: ecco dove mettere ogni cosa perché duri il più possibile.",
+      "en": "Back home with your shopping bags: here is where to put each item so it lasts as long as possible."
+    },
+    {
+      "screen": "storage_tips",
+      "key": "storage_tips.storage_search_all",
+      "element_description": "How to store them page: storage search all",
+      "it": "Cerca i Consigli per Qualsiasi Prodotto",
+      "en": "Search Tips for Any Item"
+    },
+    {
+      "screen": "storage_tips",
+      "key": "storage_tips.storage_search_all_sub",
+      "element_description": "How to store them page: storage search all sub",
+      "it": "Hai preso qualcosa che non era in lista? Cercalo qui.",
+      "en": "Bought something that was not on your list? Look it up here."
+    },
+    {
+      "screen": "storage_tips",
+      "key": "storage_tips.ethylene_alert_title",
+      "element_description": "How to store them page: ethylene alert title",
+      "it": "Da Tenere Separati",
+      "en": "Keep Apart"
+    },
+    {
+      "screen": "storage_tips",
+      "key": "storage_tips.ethylene_alert_intro",
+      "element_description": "How to store them page: ethylene alert intro",
+      "it": "Alcuni frutti rilasciano molto etilene, un gas che fa maturare e invecchiare in fretta i prodotti sensibili. Conservali in cassetti o sacchetti diversi:",
+      "en": "Some fruits give off a lot of ethylene, a gas that makes sensitive produce ripen and age fast. Store them in separate drawers or bags:"
+    },
+    {
+      "screen": "storage_tips",
+      "key": "storage_tips.ethylene_releases",
+      "element_description": "How to store them page: ethylene releases",
+      "it": "rilascia etilene → tieni lontani:",
+      "en": "gives off ethylene → keep away:"
+    },
+    {
+      "screen": "storage_tips",
+      "key": "storage_tips.storage_group.frigorifero",
+      "element_description": "How to store them page: storage group (frigorifero)",
+      "it": "In Frigorifero",
+      "en": "In the Fridge"
+    },
+    {
+      "screen": "storage_tips",
+      "key": "storage_tips.storage_group.temperatura_ambiente",
+      "element_description": "How to store them page: storage group (temperatura_ambiente)",
+      "it": "Fuori Frigo, a Temperatura Ambiente",
+      "en": "Out of the Fridge, at Room Temperature"
+    },
+    {
+      "screen": "storage_tips",
+      "key": "storage_tips.storage_group.luogo_fresco_buio",
+      "element_description": "How to store them page: storage group (luogo_fresco_buio)",
+      "it": "In Dispensa, al Fresco e al Buio",
+      "en": "In the Pantry, Cool and Dark"
+    },
+    {
+      "screen": "storage_tips",
+      "key": "storage_tips.storage_group.other",
+      "element_description": "How to store them page: storage group (other)",
+      "it": "Altro",
+      "en": "Other"
+    },
+    {
+      "screen": "storage_tips",
+      "key": "storage_tips.ideal_temp",
+      "element_description": "How to store them page: ideal temp — placeholders: {range}",
+      "it": "Ideale {range} °C",
+      "en": "Ideal {range} °C"
+    },
+    {
+      "screen": "storage_tips",
+      "key": "storage_tips.chilling_alert",
+      "element_description": "How to store them page: chilling alert",
+      "it": "Non metterlo in frigo: soffre il freddo.",
+      "en": "Keep it out of the fridge: it suffers from cold."
+    },
+    {
+      "screen": "storage_tips",
+      "key": "storage_tips.from_your_list",
+      "element_description": "How to store them page: from your list",
+      "it": "Dalla Tua Lista",
+      "en": "From Your List"
+    },
+    {
+      "screen": "storage_tips",
+      "key": "storage_tips.other_foods",
+      "element_description": "How to store them page: other foods",
+      "it": "Altri Prodotti",
+      "en": "Other Items"
+    },
+    {
+      "screen": "storage_tips",
+      "key": "storage_tips.open_full_sheet",
+      "element_description": "How to store them page: open full sheet",
+      "it": "Scheda Completa",
+      "en": "Full Details"
+    },
+    {
+      "screen": "storage_tips",
+      "key": "storage_tips.chilling_alert_with_temp",
+      "element_description": "How to store them page: chilling alert — placeholders: {temp}",
+      "it": "Non metterlo in frigo: sotto i {temp} °C subisce danni da freddo.",
+      "en": "Keep it out of the fridge: below {temp} °C it suffers chilling injury."
+    },
+    {
+      "screen": "notifications",
+      "key": "notifications.notif_season_title",
+      "element_description": "Notifications: notif season title — placeholders: {month}",
+      "it": "Di Stagione a {month}",
+      "en": "In Season in {month}"
+    },
+    {
+      "screen": "notifications",
+      "key": "notifications.notif_list_title",
+      "element_description": "Notifications: notif list title — placeholders: {inSeason}, {total}",
+      "it": "La Tua Lista: {inSeason} su {total} di Stagione",
+      "en": "Your List: {inSeason} of {total} in Season"
+    },
+    {
+      "screen": "notifications",
+      "key": "notifications.notif_close",
+      "element_description": "Notifications: notif close",
+      "it": "Chiudi",
+      "en": "Close"
+    },
+    {
+      "screen": "notifications",
+      "key": "notifications.notif_storage_title",
+      "element_description": "Notifications: notif storage title",
+      "it": "Spesa Fatta?",
+      "en": "Done Shopping?"
+    },
+    {
+      "screen": "notifications",
+      "key": "notifications.notif_storage_body",
+      "element_description": "Notifications: notif storage body",
+      "it": "Tocca per vedere come conservare al meglio quello che hai comprato.",
+      "en": "Tap to see how best to store what you bought."
+    },
+    {
+      "screen": "notifications",
+      "key": "notifications.notif_peak_title",
+      "element_description": "Notifications: notif peak title — placeholders: {month}",
+      "it": "A {month} Entrano nel Picco della Stagione",
+      "en": "Reaching Their Seasonal Peak in {month}"
+    },
+    {
+      "screen": "notifications",
+      "key": "notifications.notif_channel_shopping",
+      "element_description": "Notifications: notif channel shopping",
+      "it": "Modalità Spesa",
+      "en": "Shopping Mode"
+    },
+    {
+      "screen": "notifications",
+      "key": "notifications.notif_channel_peak",
+      "element_description": "Notifications: notif channel peak",
+      "it": "Picco di Stagione",
+      "en": "Peak Season"
+    },
+    {
+      "screen": "notifications",
+      "key": "notifications.notif_channel_tips",
+      "element_description": "Notifications: notif channel tips",
+      "it": "Consigli Dopo la Spesa",
+      "en": "After-Shopping Tips"
+    },
+    {
+      "screen": "notifications",
+      "key": "notifications.line_list",
+      "element_description": "Notifications: line list",
+      "it": "Lista",
+      "en": "List"
+    },
+    {
+      "screen": "notifications",
+      "key": "notifications.line_more",
+      "element_description": "Notifications: line more",
+      "it": "e altri",
+      "en": "and more"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.storage",
+      "element_description": "Product detail page: storage",
+      "it": "Conservazione",
+      "en": "Storage"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.ripening",
+      "element_description": "Product detail page: ripening",
+      "it": "Maturazione",
+      "en": "Ripening"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.season_calendar",
+      "element_description": "Product detail page: season calendar",
+      "it": "Calendario Stagionale",
+      "en": "Seasonal Calendar"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.photo",
+      "element_description": "Product detail page: photo",
+      "it": "Foto",
+      "en": "Photo"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.learn_more",
+      "element_description": "Product detail page: learn more",
+      "it": "Scopri di Più",
+      "en": "Learn More"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.sources",
+      "element_description": "Product detail page: sources",
+      "it": "Fonti",
+      "en": "Sources"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.see_also",
+      "element_description": "Product detail page: see also",
+      "it": "Vedi anche:",
+      "en": "See also:"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.family_count",
+      "element_description": "Product detail page: family count — placeholders: {n}, {month}",
+      "it": "{n} prodotti della stessa famiglia botanica, ordinati per stagionalità a {month}",
+      "en": "{n} items of the same botanical family, sorted by seasonality in {month}"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.sec_varieties",
+      "element_description": "Product detail page: sec varieties",
+      "it": "Varietà e Territori",
+      "en": "Varieties and Origins"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.sec_buy_store",
+      "element_description": "Product detail page: sec buy store",
+      "it": "Acquisto, Maturazione e Conservazione",
+      "en": "Buying, Ripening and Storage"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.sec_nutrition",
+      "element_description": "Product detail page: sec nutrition",
+      "it": "Valori Nutrizionali",
+      "en": "Nutrition Facts"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.sec_sustainability",
+      "element_description": "Product detail page: sec sustainability",
+      "it": "Sostenibilità",
+      "en": "Sustainability"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.sec_garden",
+      "element_description": "Product detail page: sec garden",
+      "it": "Calendario dell'Orto",
+      "en": "Growing Calendar"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.sec_curiosities",
+      "element_description": "Product detail page: sec curiosities",
+      "it": "Informazioni Aggiuntive",
+      "en": "More Information"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.sec_links",
+      "element_description": "Product detail page: sec links",
+      "it": "Fonti e Link Utili",
+      "en": "Sources and Useful Links"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.sec_recipes",
+      "element_description": "Product detail page: sec recipes",
+      "it": "Ricette e Note",
+      "en": "Recipes and Notes"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.recipes_soon",
+      "element_description": "Product detail page: recipes soon",
+      "it": "Note e ricette arriveranno presto.",
+      "en": "Notes and recipes coming soon."
+    },
+    {
+      "screen": "detail",
+      "key": "detail.notable_varieties",
+      "element_description": "Product detail page: notable varieties",
+      "it": "Varietà Note",
+      "en": "Notable Varieties"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.pat_count",
+      "element_description": "Product detail page: pat count — placeholders: {n}, {regions}",
+      "it": "{n} prodotti agroalimentari tradizionali (PAT) in {regions} regioni",
+      "en": "{n} traditional food products (PAT) in {regions} regions"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.ripening_speed_up",
+      "element_description": "Product detail page: ripening speed up",
+      "it": "Per Farlo Maturare",
+      "en": "To Ripen It"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.ripening_slow_down",
+      "element_description": "Product detail page: ripening slow down",
+      "it": "Per Rallentare la Maturazione o il Deperimento",
+      "en": "To Slow Ripening or Spoilage"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.where_to_store",
+      "element_description": "Product detail page: where to store",
+      "it": "Dove Conservarlo",
+      "en": "Where to Store It"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.how_long",
+      "element_description": "Product detail page: how long",
+      "it": "Quanto Dura in Casa",
+      "en": "How Long It Keeps at Home"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.room_temp",
+      "element_description": "Product detail page: room temp",
+      "it": "Ambiente",
+      "en": "Room temp."
+    },
+    {
+      "screen": "detail",
+      "key": "detail.fridge",
+      "element_description": "Product detail page: fridge",
+      "it": "Frigo",
+      "en": "Fridge"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.freezer",
+      "element_description": "Product detail page: freezer",
+      "it": "Freezer",
+      "en": "Freezer"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.days",
+      "element_description": "Product detail page: days — placeholders: {v}",
+      "it": "{v} gg",
+      "en": "{v} Days"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.months",
+      "element_description": "Product detail page: months — placeholders: {v}",
+      "it": "{v} Mesi",
+      "en": "{v} Months"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.until_ripe",
+      "element_description": "Product detail page: until ripe",
+      "it": "Fino a Maturazione",
+      "en": "Until Ripe"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.perishability",
+      "element_description": "Product detail page: perishability",
+      "it": "Deperibilità",
+      "en": "Perishability"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.keep_away_from",
+      "element_description": "Product detail page: keep away from",
+      "it": "Tienilo Lontano da",
+      "en": "Keep It Away from"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.per100g",
+      "element_description": "Product detail page: per100g",
+      "it": "Per 100 g di Parte Edibile",
+      "en": "Per 100 g Edible Portion"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.carbs",
+      "element_description": "Product detail page: carbs",
+      "it": "Carboidrati",
+      "en": "Carbs"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.sugars",
+      "element_description": "Product detail page: sugars",
+      "it": "Zuccheri",
+      "en": "Sugars"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.proteins",
+      "element_description": "Product detail page: proteins",
+      "it": "Proteine",
+      "en": "Protein"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.fats",
+      "element_description": "Product detail page: fats",
+      "it": "Grassi",
+      "en": "Fat"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.fiber",
+      "element_description": "Product detail page: fiber",
+      "it": "Fibre",
+      "en": "Fibre"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.nutrition_claims",
+      "element_description": "Product detail page: nutrition claims",
+      "it": "Indicazioni Nutrizionali UE",
+      "en": "EU Nutrition Claims"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.vitamins_minerals",
+      "element_description": "Product detail page: vitamins minerals",
+      "it": "Vitamine e Minerali (% VNR)",
+      "en": "Vitamins and Minerals (% NRV)"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.carbon_footprint",
+      "element_description": "Product detail page: carbon footprint",
+      "it": "Impronta di Carbonio",
+      "en": "Carbon Footprint"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.water_footprint",
+      "element_description": "Product detail page: water footprint",
+      "it": "Impronta Idrica",
+      "en": "Water Footprint"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.times_lower_beef",
+      "element_description": "Product detail page: times lower beef — placeholders: {c}",
+      "it": "{c} Volte Meno della Carne Bovina",
+      "en": "{c} Times Lower Than Beef"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.sowing",
+      "element_description": "Product detail page: sowing",
+      "it": "Semina / Trapianto",
+      "en": "Sowing / Transplant"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.harvest",
+      "element_description": "Product detail page: harvest",
+      "it": "Raccolta",
+      "en": "Harvest"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.anti_waste",
+      "element_description": "Product detail page: anti waste",
+      "it": "Antispreco",
+      "en": "Zero Waste"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.curiosities",
+      "element_description": "Product detail page: curiosities",
+      "it": "Benefici e Curiosità",
+      "en": "Benefits and Curiosities"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.dop_igp",
+      "element_description": "Product detail page: PDO/PGI block title",
+      "it": "DOP / IGP",
+      "en": "PDO / PGI"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.curve_basis_title",
+      "element_description": "Product detail page: label above the technical note on how the seasonality curve was built (Sources section)",
+      "it": "Come Calcoliamo la Stagionalità",
+      "en": "How We Work Out the Season"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.keep_longer",
+      "element_description": "Product detail page: storage tip for non-climacteric produce (moved from ripening)",
+      "it": "Per Conservarlo più a Lungo",
+      "en": "To Keep It Longer"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.language",
+      "element_description": "Settings: language",
+      "it": "Lingua",
+      "en": "Language"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.theme",
+      "element_description": "Settings: theme",
+      "it": "Tema",
+      "en": "Theme"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.theme_light",
+      "element_description": "Settings: theme light",
+      "it": "Chiaro",
+      "en": "Light"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.theme_dark",
+      "element_description": "Settings: theme dark",
+      "it": "Scuro",
+      "en": "Dark"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.theme_system",
+      "element_description": "Settings: theme system",
+      "it": "Sistema",
+      "en": "System"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.frost_title",
+      "element_description": "Settings: frost title",
+      "it": "Effetto Vetro Satinato",
+      "en": "Frosted Glass Effect"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.frost_sub",
+      "element_description": "Settings: frost sub",
+      "it": "Quanto sono trasparenti card, barre e pannelli sopra lo sfondo.",
+      "en": "How see-through cards, bars and panels are over the background."
+    },
+    {
+      "screen": "settings",
+      "key": "settings.frost_none",
+      "element_description": "Settings: frost none",
+      "it": "Pieno",
+      "en": "Solid"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.frost_strong",
+      "element_description": "Settings: frost strong",
+      "it": "Trasparente",
+      "en": "See-through"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.palette_title",
+      "element_description": "Settings: palette title",
+      "it": "Sfumature dello Sfondo",
+      "en": "Background Tints"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.palette_name.green",
+      "element_description": "Settings: palette name (green)",
+      "it": "Verde",
+      "en": "Green"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.palette_name.green_teal",
+      "element_description": "Settings: palette name (green teal)",
+      "it": "Verde e Acqua",
+      "en": "Green and Teal"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.palette_name.green_amber",
+      "element_description": "Settings: palette name (green amber)",
+      "it": "Verde e Ambra",
+      "en": "Green and Amber"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.palette_name.none",
+      "element_description": "Settings: palette name (none)",
+      "it": "Nessuna",
+      "en": "None"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.zone_arctic",
+      "element_description": "Settings: zone arctic",
+      "it": "Artica (non usata)",
+      "en": "Arctic (not used)"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.map_note",
+      "element_description": "Settings: map note",
+      "it": "Regioni biogeografiche europee (EEA, Copenaghen 2016, CC BY 4.0), le stesse della mappa EUFIC; confini degli Stati: Natural Earth. Le regioni Anatolica, del Mar Nero, Steppica e Macaronesica sono assegnate alla zona più simile.",
+      "en": "European biogeographical regions (EEA, Copenhagen 2016, CC BY 4.0), the same as the EUFIC map; country borders: Natural Earth. The Anatolian, Black Sea, Steppic and Macaronesian regions are assigned to the most similar zone."
+    },
+    {
+      "screen": "settings",
+      "key": "settings.climate_zone",
+      "element_description": "Settings: climate zone",
+      "it": "Zona Climatica (EUFIC)",
+      "en": "Climate Zone (EUFIC)"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.climate_zone_sub",
+      "element_description": "Settings: climate zone sub",
+      "it": "La stagionalità cambia con il clima: scegli la zona in cui fai la spesa.",
+      "en": "Seasonality depends on climate: pick the zone where you shop."
+    },
+    {
+      "screen": "settings",
+      "key": "settings.zone.mediterranean",
+      "element_description": "Settings: zone (mediterranean)",
+      "it": "Mediterranea",
+      "en": "Mediterranean"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.zone.continental",
+      "element_description": "Settings: zone (continental)",
+      "it": "Continentale",
+      "en": "Continental"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.zone.atlantic",
+      "element_description": "Settings: zone (atlantic)",
+      "it": "Atlantica",
+      "en": "Atlantic"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.zone.boreal",
+      "element_description": "Settings: zone (boreal)",
+      "it": "Boreale",
+      "en": "Boreal"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.zone.mountain",
+      "element_description": "Settings: zone (mountain)",
+      "it": "Alpina",
+      "en": "Alpine"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.zone.pannonian",
+      "element_description": "Settings: zone (pannonian)",
+      "it": "Pannonica",
+      "en": "Pannonian"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.macro_area",
+      "element_description": "Settings: macro area",
+      "it": "Area Italiana (Km 0)",
+      "en": "Italian Area (Local)"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.macro_area_sub",
+      "element_description": "Settings: macro area sub",
+      "it": "Calendari regionali più precisi di quello mediterraneo generico.",
+      "en": "Regional calendars, more precise than the generic Mediterranean one."
+    },
+    {
+      "screen": "settings",
+      "key": "settings.area.nord",
+      "element_description": "Settings: area (nord)",
+      "it": "Nord Italia",
+      "en": "Northern Italy"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.area.centro",
+      "element_description": "Settings: area (centro)",
+      "it": "Centro Italia",
+      "en": "Central Italy"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.area.sud_isole",
+      "element_description": "Settings: area (sud isole)",
+      "it": "Sud e Isole",
+      "en": "South and Islands"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.area.eufic_mediterranean",
+      "element_description": "Settings: area (eufic mediterranean)",
+      "it": "Mediterranea Generica (EUFIC)",
+      "en": "Generic Mediterranean (EUFIC)"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.approx_setting",
+      "element_description": "Settings: approx setting",
+      "it": "Stima dalla Zona Vicina (≈)",
+      "en": "Estimate from Neighbouring Zone (≈)"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.approx_setting_sub",
+      "element_description": "Settings: approx setting sub",
+      "it": "Se manca il dato della tua zona mostra la stima del database, copiata dalla zona con il clima più simile e segnata con ≈.",
+      "en": "When your zone has no data, show the database estimate, copied from the zone with the most similar climate and marked with ≈."
+    },
+    {
+      "screen": "settings",
+      "key": "settings.notifications",
+      "element_description": "Settings: notifications",
+      "it": "Notifiche",
+      "en": "Notifications"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.peak_notif",
+      "element_description": "Settings: peak notif",
+      "it": "Avvisi \"Picco di Stagione\"",
+      "en": "\"Peak Season\" Alerts"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.peak_notif_sub",
+      "element_description": "Settings: peak notif sub",
+      "it": "Il primo di ogni mese, alle 9, ti dice cosa entra nel picco della stagione.",
+      "en": "On the 1st of each month at 9am, find out what reaches its seasonal peak."
+    },
+    {
+      "screen": "settings",
+      "key": "settings.peak_notif_mode.off",
+      "element_description": "Settings: peak notif mode (off)",
+      "it": "Nessuna Notifica",
+      "en": "No Notifications"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.peak_notif_mode.favorites",
+      "element_description": "Settings: peak notif mode (favorites)",
+      "it": "Solo i Miei Preferiti",
+      "en": "My Favourites Only"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.peak_notif_mode.all_except_disliked",
+      "element_description": "Settings: peak notif mode (all except disliked)",
+      "it": "Tutti, Tranne Quelli che Non Mangio",
+      "en": "All, Except the Ones I Don't Eat"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.shopping_mode_title",
+      "element_description": "Settings: shopping mode title",
+      "it": "Modalità Spesa",
+      "en": "Shopping Mode"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.shopping_mode_sub",
+      "element_description": "Settings: shopping mode sub",
+      "it": "Una notifica fissa, visibile anche dalla schermata di blocco, con la frutta e la verdura di stagione. Si attiva con l'icona del carrello in alto, nella Home oppure nella Lista della Spesa.",
+      "en": "A pinned notification, visible on the lock screen too, with the fruit and veg in season. Turn it on with the cart icon at the top, in Home or in the Shopping List."
+    },
+    {
+      "screen": "settings",
+      "key": "settings.shopping_mode_list_option",
+      "element_description": "Settings: shopping mode list option",
+      "it": "Se ho una lista della spesa, nella notifica:",
+      "en": "If I have a shopping list, the notification:"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.shopping_mode_list_mode.highlight",
+      "element_description": "Settings: shopping mode list mode (highlight)",
+      "it": "Evidenzia i prodotti della tua lista della spesa tra quelli di stagione",
+      "en": "Highlights the items on your shopping list among the seasonal ones"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.shopping_mode_list_mode.only_list",
+      "element_description": "Settings: shopping mode list mode (only list)",
+      "it": "Mostra solo i prodotti della tua lista della spesa",
+      "en": "Shows only the items on your shopping list"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.storage_tips_when",
+      "element_description": "Settings: storage tips when",
+      "it": "Quando Riceverla",
+      "en": "When to Receive It"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.storage_tips_now",
+      "element_description": "Settings: storage tips now",
+      "it": "Subito",
+      "en": "Right Away"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.storage_tips_later",
+      "element_description": "Settings: storage tips later",
+      "it": "Dopo un Ritardo",
+      "en": "After a Delay"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.storage_tips_delay_note",
+      "element_description": "Settings: storage tips delay note",
+      "it": "Con un ritardo, Android può anticiparla o posticiparla di qualche minuto per risparmiare batteria.",
+      "en": "With a delay, Android may shift it by a few minutes to save battery."
+    },
+    {
+      "screen": "settings",
+      "key": "settings.storage_after_shopping",
+      "element_description": "Settings: storage after shopping",
+      "it": "Dopo la Spesa, Consigli di Conservazione",
+      "en": "After Shopping, Storage Tips"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.storage_after_shopping_sub",
+      "element_description": "Settings: storage after shopping sub",
+      "it": "Quando chiudi la notifica della spesa ne ricevi un'altra che apre i consigli per conservare ciò che hai comprato.",
+      "en": "When you close the shopping notification you get another one that opens tips on storing what you bought."
+    },
+    {
+      "screen": "settings",
+      "key": "settings.shopping_mode_on",
+      "element_description": "Settings: shopping mode on",
+      "it": "Modalità Spesa Attiva",
+      "en": "Shopping Mode On"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.shopping_mode_off",
+      "element_description": "Settings: shopping mode off",
+      "it": "Sono a Fare la Spesa",
+      "en": "I'm Out Shopping"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.shopping_mode_activated",
+      "element_description": "Settings: shopping mode activated",
+      "it": "Notifica fissa attiva: la vedi anche dalla schermata di blocco.",
+      "en": "Pinned notification on: you can see it on the lock screen too."
+    },
+    {
+      "screen": "settings",
+      "key": "settings.notif_permission_denied",
+      "element_description": "Settings: notif permission denied",
+      "it": "Le notifiche di Peak Season sono disattivate nelle impostazioni del telefono.",
+      "en": "Peak Season notifications are turned off in the phone settings."
+    },
+    {
+      "screen": "settings",
+      "key": "settings.notif_unsupported",
+      "element_description": "Settings: notif unsupported",
+      "it": "Le notifiche funzionano nell'app installata (Android/iOS), non nell'anteprima web.",
+      "en": "Notifications work in the installed app (Android/iOS), not in the web preview."
+    },
+    {
+      "screen": "settings",
+      "key": "settings.about",
+      "element_description": "Settings: about",
+      "it": "Informazioni",
+      "en": "About"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.sustainable_diet_sub",
+      "element_description": "Settings: sustainable diet sub",
+      "it": "Perché Mangiare di Stagione (EUFIC)",
+      "en": "Why Eat Seasonally (EUFIC)"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.key_points",
+      "element_description": "Settings: key points",
+      "it": "Punti Chiave",
+      "en": "Key Points"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.source",
+      "element_description": "Settings: source",
+      "it": "Fonte",
+      "en": "Source"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.database_version",
+      "element_description": "Settings: database version — placeholders: {v}, {n}",
+      "it": "Database v{v} · {n} Prodotti",
+      "en": "Database v{v} · {n} Items"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.section_mode.open",
+      "element_description": "Settings: section mode (open)",
+      "it": "Aperta",
+      "en": "Open"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.section_mode.collapsed",
+      "element_description": "Settings: section mode (collapsed)",
+      "it": "Chiusa",
+      "en": "Collapsed"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.section_mode.hidden",
+      "element_description": "Settings: section mode (hidden)",
+      "it": "Nascosta",
+      "en": "Hidden"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.sec_food_page",
+      "element_description": "Settings: sec food page",
+      "it": "Scheda Prodotto",
+      "en": "Product Page"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.detail_sections",
+      "element_description": "Settings: detail sections",
+      "it": "Sezioni della Scheda Prodotto",
+      "en": "Product Page Sections"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.detail_sections_sub",
+      "element_description": "Settings: detail sections sub",
+      "it": "Ordine dei blocchi e come appaiono: aperti, chiusi (li apri tu quando servono) o nascosti.",
+      "en": "Order of the blocks and how they appear: open, collapsed (you open them when needed) or hidden."
+    },
+    {
+      "screen": "settings",
+      "key": "settings.detail_sections_hint",
+      "element_description": "Settings: detail sections hint",
+      "it": "Tieni premuto e trascina un blocco per cambiarne la posizione.",
+      "en": "Press and drag a block to move it."
+    },
+    {
+      "screen": "settings",
+      "key": "settings.restore_defaults",
+      "element_description": "Settings: restore defaults",
+      "it": "Ripristina",
+      "en": "Restore Defaults"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.minutes_short",
+      "element_description": "Settings: delay chip of the storage-tips notification — placeholders: {m}",
+      "it": "{m} min",
+      "en": "{m} min"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.sustainable_diet",
+      "element_description": "Settings: title of the EUFIC 'More Sustainable Diet' card",
+      "it": "More Sustainable Diet",
+      "en": "More Sustainable Diet"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.austria",
+      "element_description": "Settings: country name in the climate-zone list (Austria)",
+      "it": "Austria",
+      "en": "Austria"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.belgium",
+      "element_description": "Settings: country name in the climate-zone list (Belgium)",
+      "it": "Belgio",
+      "en": "Belgium"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.bulgaria",
+      "element_description": "Settings: country name in the climate-zone list (Bulgaria)",
+      "it": "Bulgaria",
+      "en": "Bulgaria"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.croatia",
+      "element_description": "Settings: country name in the climate-zone list (Croatia)",
+      "it": "Croazia",
+      "en": "Croatia"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.cyprus",
+      "element_description": "Settings: country name in the climate-zone list (Cyprus)",
+      "it": "Cipro",
+      "en": "Cyprus"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.czech_republic",
+      "element_description": "Settings: country name in the climate-zone list (Czech Republic)",
+      "it": "Repubblica Ceca",
+      "en": "Czech Republic"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.denmark",
+      "element_description": "Settings: country name in the climate-zone list (Denmark)",
+      "it": "Danimarca",
+      "en": "Denmark"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.estonia",
+      "element_description": "Settings: country name in the climate-zone list (Estonia)",
+      "it": "Estonia",
+      "en": "Estonia"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.finland",
+      "element_description": "Settings: country name in the climate-zone list (Finland)",
+      "it": "Finlandia",
+      "en": "Finland"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.france",
+      "element_description": "Settings: country name in the climate-zone list (France)",
+      "it": "Francia",
+      "en": "France"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.germany",
+      "element_description": "Settings: country name in the climate-zone list (Germany)",
+      "it": "Germania",
+      "en": "Germany"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.greece",
+      "element_description": "Settings: country name in the climate-zone list (Greece)",
+      "it": "Grecia",
+      "en": "Greece"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.hungary",
+      "element_description": "Settings: country name in the climate-zone list (Hungary)",
+      "it": "Ungheria",
+      "en": "Hungary"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.ireland",
+      "element_description": "Settings: country name in the climate-zone list (Ireland)",
+      "it": "Irlanda",
+      "en": "Ireland"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.italy",
+      "element_description": "Settings: country name in the climate-zone list (Italy)",
+      "it": "Italia",
+      "en": "Italy"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.latvia",
+      "element_description": "Settings: country name in the climate-zone list (Latvia)",
+      "it": "Lettonia",
+      "en": "Latvia"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.lithuania",
+      "element_description": "Settings: country name in the climate-zone list (Lithuania)",
+      "it": "Lituania",
+      "en": "Lithuania"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.luxembourg",
+      "element_description": "Settings: country name in the climate-zone list (Luxembourg)",
+      "it": "Lussemburgo",
+      "en": "Luxembourg"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.malta",
+      "element_description": "Settings: country name in the climate-zone list (Malta)",
+      "it": "Malta",
+      "en": "Malta"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.netherlands",
+      "element_description": "Settings: country name in the climate-zone list (Netherlands)",
+      "it": "Paesi Bassi",
+      "en": "Netherlands"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.poland",
+      "element_description": "Settings: country name in the climate-zone list (Poland)",
+      "it": "Polonia",
+      "en": "Poland"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.portugal",
+      "element_description": "Settings: country name in the climate-zone list (Portugal)",
+      "it": "Portogallo",
+      "en": "Portugal"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.romania",
+      "element_description": "Settings: country name in the climate-zone list (Romania)",
+      "it": "Romania",
+      "en": "Romania"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.slovakia",
+      "element_description": "Settings: country name in the climate-zone list (Slovakia)",
+      "it": "Slovacchia",
+      "en": "Slovakia"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.spain",
+      "element_description": "Settings: country name in the climate-zone list (Spain)",
+      "it": "Spagna",
+      "en": "Spain"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.sweden",
+      "element_description": "Settings: country name in the climate-zone list (Sweden)",
+      "it": "Svezia",
+      "en": "Sweden"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.switzerland",
+      "element_description": "Settings: country name in the climate-zone list (Switzerland)",
+      "it": "Svizzera",
+      "en": "Switzerland"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.country.united_kingdom",
+      "element_description": "Settings: country name in the climate-zone list (United Kingdom)",
+      "it": "Regno Unito",
+      "en": "United Kingdom"
+    }
+  ]
+}

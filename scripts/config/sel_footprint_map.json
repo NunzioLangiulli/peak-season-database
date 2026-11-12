@@ -1,0 +1,631 @@
+{
+ "_doc": "Corrispondenze con SU-EATABLE LIFE (Petersson et al. 2021, Sci Data 8:127; CC BY 4.0). Per ogni alimento: [voce carbonio, voce acqua, corrispondenza]. 'item:NOME' = voce del foglio 'for users'; 'typ:NOME' = valore della tipologia; null = nessuna voce adatta. Voci di pieno campo (openfield) per i prodotti di stagione; '(I)' = importato (frutti tropicali). greenhouse: voce in serra riscaldata '(G)' o non riscaldata '(g)' da mostrare come confronto 'fuori stagione'.",
+ "items": {
+  "aglio_garlic": [
+   "item:GARLIC",
+   "item:GARLIC",
+   "exact"
+  ],
+  "asparago_asparagus": [
+   "item:ASPARAGUS",
+   "item:ASPARAGUS*",
+   "exact"
+  ],
+  "carciofo_artichoke": [
+   "item:ARTICHOKE",
+   "item:ARTICHOKE",
+   "exact"
+  ],
+  "cardo_cardoon": [
+   "item:ARTICHOKE",
+   "item:ARTICHOKE",
+   "approx"
+  ],
+  "carota_carrot": [
+   "item:CARROT",
+   "item:CARROT",
+   "exact"
+  ],
+  "barbabietola_beetroot": [
+   "item:BEETROOT",
+   "item:CARROT",
+   "approx"
+  ],
+  "bietola_da_coste_swiss_chard": [
+   "item:SPINACH",
+   "item:SPINACH",
+   "approx"
+  ],
+  "cavoletto_di_bruxelles_brussels_sprout": [
+   "item:CABAGGE",
+   "item:BRUSSEL SPROUT",
+   "approx"
+  ],
+  "cavolfiore_cauliflower": [
+   "item:CAULIFLOWER",
+   "item:CAULIFLOWER",
+   "exact"
+  ],
+  "broccolo_broccoli": [
+   "item:BROCCOLI",
+   "item:BROCCOLI",
+   "exact"
+  ],
+  "cavolo_cappuccio_cabbage": [
+   "item:CABAGGE",
+   "item:CABAGGE",
+   "exact"
+  ],
+  "cavolo_rosso_red_cabbage": [
+   "item:CABAGGE",
+   "item:CABAGGE",
+   "exact"
+  ],
+  "cavolo_verza_savoy_cabbage": [
+   "item:CABAGGE",
+   "item:CABAGGE",
+   "exact"
+  ],
+  "cavolo_nero_black_kale": [
+   "item:CABAGGE",
+   "item:CABAGGE",
+   "approx"
+  ],
+  "cavolo_rapa_kohlrabi": [
+   "item:CABAGGE",
+   "item:CABAGGE",
+   "approx"
+  ],
+  "cece_chickpea": [
+   "item:CHICKPEA",
+   "item:CHICKPEA",
+   "exact"
+  ],
+  "cetriolo_cucumber": [
+   "item:CUCUMBER",
+   "item:CUCUMBER",
+   "exact",
+   "item:CUCUMBER (G)"
+  ],
+  "cicoria_da_cespo_chicory": [
+   "item:LETTUCE",
+   "item:LETTUCE",
+   "approx"
+  ],
+  "cicoria_da_taglio_cutting_chicory": [
+   "item:LETTUCE",
+   "item:LETTUCE",
+   "approx"
+  ],
+  "radicchio_radicchio": [
+   "item:LETTUCE",
+   "item:LETTUCE",
+   "approx"
+  ],
+  "scarola_escarole": [
+   "item:LETTUCE",
+   "item:LETTUCE",
+   "approx"
+  ],
+  "indivia_riccia_curly_endive": [
+   "item:LETTUCE",
+   "item:LETTUCE",
+   "approx"
+  ],
+  "indivia_belga_belgian_endive": [
+   "item:LETTUCE",
+   "item:LETTUCE",
+   "approx"
+  ],
+  "rucola_arugula": [
+   "item:LETTUCE",
+   "item:LETTUCE",
+   "approx"
+  ],
+  "valerianella_corn_salad": [
+   "item:LETTUCE",
+   "item:LETTUCE",
+   "approx"
+  ],
+  "lattuga_da_cespo_head_lettuce": [
+   "item:LETTUCE",
+   "item:LETTUCE",
+   "exact",
+   "item:LETTUCE (G)"
+  ],
+  "lattuga_da_taglio_leaf_lettuce": [
+   "item:LETTUCE",
+   "item:LETTUCE",
+   "exact",
+   "item:LETTUCE (G)"
+  ],
+  "cima_di_rapa_turnip_greens": [
+   "item:SPINACH",
+   "item:SPINACH",
+   "approx"
+  ],
+  "spinacio_spinach": [
+   "item:SPINACH",
+   "item:SPINACH",
+   "exact"
+  ],
+  "cipolla_estiva_summer_onion": [
+   "item:ONION",
+   "item:ONION",
+   "exact"
+  ],
+  "cipolla_invernale_winter_onion": [
+   "item:ONION",
+   "item:ONION",
+   "exact"
+  ],
+  "scalogno_shallot": [
+   "item:ONION",
+   "item:SHALLOT",
+   "approx"
+  ],
+  "porro_leek": [
+   "item:ONION",
+   "item:ONION",
+   "approx"
+  ],
+  "fagiolo_bean": [
+   "item:BEAN",
+   "item:BEAN (fresh)",
+   "approx"
+  ],
+  "fagiolino_green_bean": [
+   "item:GREEN BEAN (fresh)",
+   "item:STRING BEAN",
+   "exact",
+   "item:GREEN BEAN (fresh) (g)*"
+  ],
+  "fava_broad_bean": [
+   "item:BEAN",
+   "item:BEAN (fresh)",
+   "approx"
+  ],
+  "pisello_pea": [
+   "item:PEA",
+   "item:PEA (fresh)",
+   "exact"
+  ],
+  "finocchio_fennel": [
+   "item:FENNEL",
+   "typ:VEGETABLES",
+   "approx"
+  ],
+  "lenticchia_lentil": [
+   "item:LENTIL",
+   "item:LENTIL",
+   "exact"
+  ],
+  "melanzana_eggplant": [
+   "item:EGGPLANT",
+   "item:EGGPLANT",
+   "exact",
+   "item:EGGPLANT (g)"
+  ],
+  "pastinaca_parsnip": [
+   "item:CARROT",
+   "item:CARROT",
+   "approx"
+  ],
+  "patata_potato": [
+   "item:POTATO",
+   "item:POTATO",
+   "exact"
+  ],
+  "topinambur_jerusalem_artichoke": [
+   "item:POTATO",
+   "item:POTATO",
+   "approx"
+  ],
+  "peperone_bell_pepper": [
+   "item:PEPPER",
+   "item:PEPPER",
+   "exact",
+   "item:PEPPER (G)"
+  ],
+  "peperoncino_chili_pepper": [
+   "item:PEPPER",
+   "item:CHILLY FRESH",
+   "approx"
+  ],
+  "pomodoro_tomato": [
+   "item:TOMATO",
+   "item:TOMATO",
+   "exact",
+   "item:TOMATO (G)"
+  ],
+  "rapa_turnip": [
+   "item:TURNIP",
+   "item:TURNIP",
+   "exact"
+  ],
+  "ravanello_radish": [
+   "item:RADISH",
+   "item:TURNIP",
+   "approx"
+  ],
+  "sedano_celery": [
+   "item:CELERY",
+   "typ:VEGETABLES",
+   "approx"
+  ],
+  "sedano_rapa_celeriac": [
+   "item:CELERY",
+   "typ:VEGETABLES",
+   "approx"
+  ],
+  "zucca_pumpkin": [
+   "item:PUMPKIN",
+   "item:PUMPKIN",
+   "exact"
+  ],
+  "zucchina_zucchini": [
+   "item:ZUCCHINI",
+   "item:ZUCCHINI",
+   "exact",
+   "item:ZUCCHINI (g)"
+  ],
+  "mais_corn": [
+   "typ:VEGETABLES OPENFIELD",
+   "item:MAIZE GREEN",
+   "approx"
+  ],
+  "arachide_peanut": [
+   "item:PEANUT",
+   "item:PEANUT",
+   "exact"
+  ],
+  "castagna_chestnut": [
+   "item:CHESTNUT",
+   "item:CHESTNUT",
+   "exact"
+  ],
+  "anguria_watermelon": [
+   "item:WATERMELON",
+   "item:WATERMELON",
+   "exact"
+  ],
+  "melone_melon": [
+   "item:MELON",
+   "typ:FRUIT",
+   "exact",
+   "item:MELON (g)*"
+  ],
+  "albicocca_apricot": [
+   "item:APRICOT",
+   "item:APRICOT",
+   "exact"
+  ],
+  "arancia_orange": [
+   "item:ORANGE",
+   "item:ORANGE",
+   "exact"
+  ],
+  "limone_lemon": [
+   "item:LEMON",
+   "item:LEMON",
+   "exact"
+  ],
+  "lime_lime": [
+   "item:LIME",
+   "item:LIME",
+   "exact"
+  ],
+  "mandarino_mandarin": [
+   "item:MANDARIN",
+   "item:MANDARIN",
+   "exact"
+  ],
+  "clementine_clementine": [
+   "item:CLEMENTINE",
+   "item:CLEMENTINE",
+   "exact"
+  ],
+  "pompelmo_grapefruit": [
+   "typ:FRUIT OPENFIELD",
+   "item:CITRUS",
+   "approx"
+  ],
+  "cachi_persimmon": [
+   "typ:FRUIT OPENFIELD",
+   "typ:FRUIT",
+   "approx"
+  ],
+  "ciliegia_cherry": [
+   "item:CHERRY",
+   "item:CHERRY SWEET",
+   "exact"
+  ],
+  "fico_fig": [
+   "item:FIG",
+   "item:FIG",
+   "exact"
+  ],
+  "fico_d_india_prickly_pear": [
+   "typ:FRUIT OPENFIELD",
+   "typ:FRUIT",
+   "approx"
+  ],
+  "fragola_strawberry": [
+   "item:STRAWBERRY",
+   "item:STRAWBERRY",
+   "exact",
+   "item:STRAWBERRY (G)"
+  ],
+  "lampone_raspberry": [
+   "item:RASPBERRY",
+   "item:RASPBERRY",
+   "exact",
+   "item:RASPBERRY (G)"
+  ],
+  "mora_blackberry": [
+   "item:BLACKBERRY",
+   "item:BLACKBERRY",
+   "exact"
+  ],
+  "mirtillo_blueberry": [
+   "item:BLUEBERRY",
+   "item:BLUEBERRY",
+   "exact"
+  ],
+  "ribes_redcurrant": [
+   "item:CURRANT",
+   "item:CURRANT",
+   "exact"
+  ],
+  "kiwi_kiwifruit": [
+   "item:KIWI",
+   "item:KIWI",
+   "exact"
+  ],
+  "mela_apple": [
+   "item:APPLE",
+   "item:APPLE",
+   "exact"
+  ],
+  "mela_cotogna_quince": [
+   "typ:FRUIT OPENFIELD",
+   "typ:FRUIT",
+   "approx"
+  ],
+  "pera_pear": [
+   "item:PEAR",
+   "item:PEAR",
+   "exact"
+  ],
+  "nespola_loquat": [
+   "typ:FRUIT OPENFIELD",
+   "typ:FRUIT",
+   "approx"
+  ],
+  "pesca_peach": [
+   "item:PEACH",
+   "item:PEACH",
+   "exact"
+  ],
+  "pesca_noce_nectarine": [
+   "item:PEACH",
+   "item:PEACH",
+   "approx"
+  ],
+  "susina_plum": [
+   "item:PLUM",
+   "item:PLUM",
+   "exact"
+  ],
+  "melograno_pomegranate": [
+   "item:POMEGRANATE",
+   "typ:FRUIT",
+   "exact"
+  ],
+  "uva_table_grape": [
+   "item:GRAPES",
+   "item:GRAPES",
+   "exact"
+  ],
+  "banana_banana": [
+   "item:BANANA (I)",
+   "item:BANANA",
+   "exact"
+  ],
+  "avocado_avocado": [
+   "item:AVOCADO (I)",
+   "item:AVOCADO",
+   "exact"
+  ],
+  "ananas_pineapple": [
+   "item:PINEAPPLE (I)",
+   "item:PINEAPPLE",
+   "exact"
+  ],
+  "mango_mango": [
+   "typ:FRUIT IMPORTED",
+   "item:MANGO",
+   "approx"
+  ],
+  "papaya_papaya": [
+   "typ:FRUIT IMPORTED",
+   "item:PAPAYA",
+   "approx"
+  ],
+  "maracuja_passion_fruit": [
+   "typ:FRUIT IMPORTED",
+   "typ:FRUIT",
+   "approx"
+  ],
+  "litchi_lychee": [
+   "typ:FRUIT IMPORTED",
+   "typ:FRUIT",
+   "approx"
+  ],
+  "menta_mint": [
+   null,
+   "item:PEPPERMINT",
+   "approx"
+  ],
+  "fungo_champignon_button_mushroom": [
+   "item:MUSHROOM*",
+   null,
+   "exact"
+  ],
+  "fungo_pleurotus_oyster_mushroom": [
+   "item:MUSHROOM*",
+   null,
+   "approx"
+  ],
+  "farro_emmer": [
+   "item:WHEAT",
+   "item:WHEAT",
+   "approx"
+  ],
+  "grano_duro_durum_wheat": [
+   "item:WHEAT",
+   "item:WHEAT",
+   "exact"
+  ],
+  "orzo_barley": [
+   "item:BARLEY",
+   "item:BARLEY",
+   "exact"
+  ],
+  "riso_rice": [
+   "item:RICE*",
+   "item:RICE",
+   "exact"
+  ],
+  "avena_oat": [
+   "item:OAT",
+   "item:OAT",
+   "exact"
+  ],
+  "grano_saraceno_buckwheat": [
+   "typ:GRAINS",
+   "typ:GRAINS",
+   "approx"
+  ],
+  "noce_walnut": [
+   "item:WALNUT",
+   "item:WALNUT SHELLED",
+   "exact"
+  ],
+  "nocciola_hazelnut": [
+   "item:HAZELNUT",
+   "item:HAZELNUT SHELLED",
+   "exact"
+  ],
+  "mandorla_almond": [
+   "item:ALMOND",
+   "item:ALMOND SHELLED",
+   "exact"
+  ],
+  "pistacchio_pistachio": [
+   "item:PISTACHIO",
+   "item:PISTACHIO",
+   "exact"
+  ],
+  "cocco_coconut": [
+   "item:COCONUT (I)",
+   "item:COCONUT",
+   "exact"
+  ],
+  "patata_dolce_sweet_potato": [
+   "item:SWEET POTATO",
+   "item:SWEET POTATO",
+   "exact"
+  ],
+  "gombo_okra": [
+   null,
+   "item:OKRA",
+   "exact"
+  ],
+  "amarena_sour_cherry": [
+   "item:CHERRY",
+   "item:CHERRY SOUR",
+   "approx"
+  ],
+  "ribes_nero_blackcurrant": [
+   "item:CURRANT",
+   "item:CURRANT",
+   "exact"
+  ],
+  "uva_spina_gooseberry": [
+   "item:GOOSEBERRY",
+   "item:GOOSEBERRY",
+   "exact"
+  ],
+  "mirtillo_rosso_lingonberry": [
+   "item:CRANBERRY",
+   "item:CRANBERRY",
+   "approx"
+  ],
+  "gelso_mulberry": [
+   null,
+   "item:MULBERRY",
+   "exact"
+  ],
+  "navone_swede": [
+   "item:SWEDE",
+   null,
+   "exact"
+  ],
+  "daikon_daikon": [
+   "item:RADISH",
+   null,
+   "approx"
+  ],
+  "taccola_snow_pea": [
+   "item:PEA",
+   "item:PEA (fresh)",
+   "approx"
+  ],
+  "broccolo_romanesco_romanesco": [
+   "item:CAULIFLOWER",
+   "item:CAULIFLOWER",
+   "approx"
+  ],
+  "cipollotto_spring_onion": [
+   "item:ONION",
+   "item:ONION",
+   "approx"
+  ],
+  "shiitake_shiitake": [
+   "item:MUSHROOM*",
+   null,
+   "approx"
+  ],
+  "cardoncello_king_oyster_mushroom": [
+   "item:MUSHROOM*",
+   null,
+   "approx"
+  ],
+  "cedro_citron": [
+   "item:LEMON",
+   "item:LEMON",
+   "approx"
+  ],
+  "chinotto_chinotto": [
+   "item:LEMON",
+   "item:LEMON",
+   "approx"
+  ],
+  "mirabella_mirabelle_plum": [
+   "item:PLUM",
+   "item:PLUM",
+   "approx"
+  ],
+  "oliva_olive": [
+   "item:OLIVES",
+   "item:OLIVES*",
+   "exact"
+  ],
+  "zafferano_saffron": [
+   null,
+   "item:SAFFRON",
+   "exact"
+  ]
+ }
+}

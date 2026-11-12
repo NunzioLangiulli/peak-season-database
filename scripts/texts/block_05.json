@@ -1,0 +1,426 @@
+{
+  "anguria_watermelon": {
+    "pl": "temperatura_ambiente",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "greenpeace",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Frutto pesante e simmetrico, buccia integra, macchia d'appoggio gialla; suono sordo battendo.",
+      "Heavy, symmetrical fruit, intact rind, yellow ground spot; dull sound when tapped."
+    ],
+    "ds": [
+      "Scegli angurie ben formate, simmetriche e pesanti per la loro grandezza, con buccia integra, senza cicatrici, scottature o ammaccature. La zona di appoggio sul terreno deve essere giallo-crema: se è bianca il frutto è stato raccolto troppo presto. Battendo con le nocche il suono deve essere sordo; secondo Greenpeace sono preferibili i frutti più scuri e opachi. Non matura dopo la raccolta.",
+      "Choose well-formed, symmetrical watermelons that are heavy for their size, with an intact rind free of scars, sunburn or bruises. The ground spot should be creamy yellow: if it is white the fruit was picked too early. Tapped with the knuckles it should sound dull; Greenpeace suggests darker, matte fruit. It does not ripen after harvest."
+    ],
+    "cs": [
+      "Intera: ambiente fresco · a fette: frigo",
+      "Whole: cool room · cut: fridge"
+    ],
+    "si": [
+      "Intera si conserva fuori dal frigorifero, in un luogo fresco (l'ideale è 10-15 °C) per circa due settimane; sotto i 10 °C per più di qualche giorno subisce danni da freddo. Una volta tagliata, copri la polpa o mettila a pezzi in un contenitore chiuso in frigorifero e consumala in pochi giorni. Tienila lontana dalla frutta che produce etilene, che ne ammorbidisce la polpa.",
+      "Whole, keep it out of the fridge in a cool place (ideally 10-15 °C) for about two weeks; below 10 °C for more than a few days it suffers chilling injury. Once cut, cover the flesh or put pieces in a closed container in the fridge and eat within a few days. Keep it away from ethylene-producing fruit, which softens the flesh."
+    ],
+    "cn": [
+      "Sotto i 10 °C per più di qualche giorno: macchie brune sulla buccia, butterature, perdita di colore e sapore della polpa.",
+      "Below 10 °C for more than a few days: brown staining of the rind, pitting, and loss of flesh colour and flavour."
+    ],
+    "hb": [
+      "È composta per oltre il 90% d'acqua ed è molto dissetante e poco calorica. Contiene carotenoidi (licopene e beta-carotene) e citrullina, un aminoacido che prende il nome proprio dal genere Citrullus.",
+      "It is over 90% water, very thirst-quenching and low in calories. It contains carotenoids (lycopene and beta-carotene) and citrulline, an amino acid named after the genus Citrullus."
+    ],
+    "wr": [
+      "La parte bianca della buccia è commestibile: si usa sott'aceto, in agrodolce o candita. I semi tostati sono uno snack.",
+      "The white part of the rind is edible: use it pickled, sweet-and-sour or candied. Roasted seeds make a snack."
+    ]
+  },
+  "melone_melon": {
+    "pl": "temperatura_ambiente",
+    "rt": "climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Profumo intenso e fruttato, buccia del colore tipico, leggermente cedevole; niente ammaccature.",
+      "Strong fruity aroma, typical rind colour, slightly yielding; no bruises."
+    ],
+    "ds": [
+      "Un melone maturo ha il colore tipico della varietà, un profumo gradevole e fruttato vicino al peduncolo e la buccia leggermente cedevole all'estremità opposta, senza ammaccature né parti molli. Nei meloni retati la rete deve essere ben in rilievo e uniforme. Il melone continua a maturare dopo la raccolta, ma non diventa più dolce.",
+      "A ripe melon has the colour typical of its variety, a pleasant fruity aroma near the stem and a slightly yielding rind at the blossom end, with no bruises or soft spots. In netted melons the netting should be raised and even. Melon keeps ripening after harvest but does not become sweeter."
+    ],
+    "cs": [
+      "Ambiente finché matura · poi frigo 3 gg",
+      "Room temp until ripe · then fridge 3 days"
+    ],
+    "si": [
+      "Se non è ancora maturo lascialo a temperatura ambiente; quando è maturo mettilo in frigorifero e consumalo entro 3 giorni, coprendo bene la polpa tagliata perché assorbe e trasmette odori. In condizioni professionali (2-7 °C, umidità 95%) dura 10-14 giorni. Produce molto etilene: tienilo lontano da verdure a foglia, broccoli e cetrioli.",
+      "If not yet ripe leave it at room temperature; once ripe put it in the fridge and eat within 3 days, covering cut flesh well as it absorbs and gives off odours. Professionally (2-7 °C, 95% humidity) it lasts 10-14 days. It produces a lot of ethylene: keep it away from leafy greens, broccoli and cucumbers."
+    ],
+    "cn": [
+      "I meloni non completamente maturi possono subire danni sotto i 2 °C: zone acquose, imbrunimento della buccia e marciumi.",
+      "Not fully ripe melons can be damaged below 2 °C: water-soaked areas, rind browning and decay."
+    ],
+    "hb": [
+      "Molto dissetante, per 100 g è ricco di vitamina C e fonte di vitamina A (caroteni, nelle varietà a polpa arancio) e potassio.",
+      "Very refreshing, per 100 g it is high in vitamin C and a source of vitamin A (carotenes, in orange-fleshed varieties) and potassium."
+    ],
+    "wr": [
+      "I semi lavati, asciugati e tostati con poco sale sono uno snack; la polpa troppo matura diventa sorbetto, frullato o confettura.",
+      "Washed, dried seeds roasted with a little salt make a snack; over-ripe flesh becomes sorbet, smoothie or jam."
+    ]
+  },
+  "albicocca_apricot": {
+    "pl": "frigorifero",
+    "rt": "climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Buccia liscia e vellutata, arancio intenso, profumo dolce; morbida ma non molle.",
+      "Smooth, velvety, deep orange skin, sweet aroma; soft but not mushy."
+    ],
+    "ds": [
+      "Scegli albicocche dal colore arancio uniforme (anche con sfumature rosse), buccia liscia e vellutata, profumo dolce e consistenza morbida ma non molle, senza ammaccature. I frutti con zone verdi sono stati raccolti troppo presto e matureranno male. Continuano a maturare dopo la raccolta.",
+      "Choose apricots with an even orange colour (red blush is fine), smooth velvety skin, a sweet scent and a soft but not mushy texture, without bruises. Fruit with green areas was picked too early and will ripen poorly. They keep ripening after harvest."
+    ],
+    "cs": [
+      "Frigo · 3-4 giorni",
+      "Fridge · 3-4 days"
+    ],
+    "si": [
+      "Se sono ancora sode lasciale a temperatura ambiente finché maturano; quelle mature vanno in frigorifero e si consumano in 3-4 giorni. Professionalmente si conservano 1-2 settimane a -0,5/0 °C: tra 2 e 8 °C (temperatura del frigo domestico) le varietà sensibili sviluppano prima danni da freddo, quindi non tenerle a lungo in frigo.",
+      "If still firm, leave them at room temperature until ripe; ripe ones go in the fridge and should be eaten within 3-4 days. Professionally they keep 1-2 weeks at -0.5/0 °C: between 2 and 8 °C (home fridge temperature) sensitive varieties develop chilling injury sooner, so don't keep them in the fridge for long."
+    ],
+    "cn": [
+      "Polpa gelatinosa o farinosa (gel breakdown), imbrunimento interno e perdita di sapore, più rapidi a 5 °C che a 0 °C.",
+      "Jelly-like or mealy flesh (gel breakdown), internal browning and loss of flavour, faster at 5 °C than at 0 °C."
+    ],
+    "hb": [
+      "Per 100 g è ricca di vitamina A (caroteni, che danno il colore) e fonte di vitamina C e potassio. Le albicocche disidratate concentrano zuccheri e calorie.",
+      "Per 100 g it is high in vitamin A (carotenes, which give the colour) and a source of vitamin C and potassium. Dried apricots concentrate sugars and calories."
+    ],
+    "wr": [
+      "Le albicocche troppo mature sono perfette per confetture, composte e dolci al forno, oppure si essiccano o congelano a metà.",
+      "Over-ripe apricots are perfect for jams, compotes and baked desserts, or can be dried or frozen in halves."
+    ]
+  },
+  "arancia_orange": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "greenpeace",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Frutto sodo e pesante, buccia tesa e di colore intenso uniforme, senza parti molli o muffe.",
+      "Firm, heavy fruit with taut skin of intense, even colour; no soft spots or mould."
+    ],
+    "ds": [
+      "Scegli arance mature, sode e pesanti per la loro grandezza (segno di succosità), con buccia piuttosto liscia e colore intenso e uniforme tipico della varietà, senza parti molli, ammaccature o muffe. Non maturano dopo la raccolta: il colore della buccia non sempre indica la maturazione. In Italia sono IGP l'Arancia Rossa di Sicilia e l'Arancia del Gargano.",
+      "Choose ripe, firm oranges that feel heavy for their size (a sign of juiciness), with fairly smooth skin and the intense, even colour typical of the variety, free of soft spots, bruises or mould. They don't ripen after harvest: skin colour does not always indicate ripeness. Italian PGIs include Arancia Rossa di Sicilia and Arancia del Gargano."
+    ],
+    "cs": [
+      "Fresco · 1 sett. · frigo 2 sett. e mezzo",
+      "Cool place · 1 week · fridge 2.5 weeks"
+    ],
+    "si": [
+      "Si conservano circa una settimana in un luogo fresco e ventilato, o due settimane e mezzo in frigorifero, senza schiacciarle e controllando che non ci siano frutti ammuffiti. L'ideale professionale è 3-8 °C: alcune varietà soffrono il freddo sotto i 3-5 °C.",
+      "They keep about a week in a cool, ventilated place, or two and a half weeks in the fridge, without squashing them and checking for mouldy fruit. The professional ideal is 3-8 °C: some varieties suffer from cold below 3-5 °C."
+    ],
+    "cn": [
+      "Sotto i 3-5 °C alcune varietà sviluppano butterature e macchie brune sulla buccia.",
+      "Below 3-5 °C some varieties develop pitting and brown spots on the peel."
+    ],
+    "hb": [
+      "Per 100 g è ricca di vitamina C e fonte di folati; contiene anche potassio e fibre. Le arance rosse devono il colore alle antocianine, che si formano con le escursioni termiche tra giorno e notte.",
+      "Per 100 g it is high in vitamin C and a source of folate; it also contains potassium and fibre. Blood oranges owe their colour to anthocyanins, which develop with day-night temperature swings."
+    ],
+    "wr": [
+      "La buccia delle arance non trattate diventa marmellata, scorzette candite o aroma per dolci (grattugiata e congelata).",
+      "The peel of untreated oranges becomes marmalade, candied peel or flavouring for desserts (grated and frozen)."
+    ]
+  },
+  "cachi_persimmon": {
+    "pl": "temperatura_ambiente",
+    "rt": "climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Buccia arancio brillante e uniforme, senza righe nere né ammaccature; profumo gradevole.",
+      "Bright, even orange skin with no black streaks or bruises; pleasant aroma."
+    ],
+    "ds": [
+      "Scegli cachi di colore arancio brillante e uniforme, senza righe nere, spaccature o ammaccature e con il calice integro. Le varietà tradizionali (astringenti) si mangiano solo quando la polpa è molto morbida e gelatinosa; i cachi-mela (non astringenti, tipo Fuyu) si mangiano sodi.",
+      "Choose persimmons with bright, even orange skin, free of black streaks, cracks or bruises and with an intact calyx. Traditional (astringent) varieties are eaten only when the flesh is very soft and jelly-like; non-astringent 'apple' persimmons (Fuyu type) are eaten firm."
+    ],
+    "cs": [
+      "Ambiente finché maturo · poi frigo",
+      "Room temp until ripe · then fridge"
+    ],
+    "si": [
+      "Lasciali maturare a temperatura ambiente; quando sono morbidi mettili in frigorifero e consumali entro 3 giorni. Sono molto sensibili all'etilene: per accelerare la maturazione chiudili in un sacchetto di carta con una mela o una banana. Le varietà non astringenti possono soffrire il freddo tra 5 e 15 °C.",
+      "Let them ripen at room temperature; once soft put them in the fridge and eat within 3 days. They are very sensitive to ethylene: to speed up ripening close them in a paper bag with an apple or banana. Non-astringent varieties can suffer chilling injury between 5 and 15 °C."
+    ],
+    "hb": [
+      "Per 100 g è fonte di vitamina A (caroteni), vitamina C e manganese. È più calorico di altri frutti perché ricco di zuccheri. L'astringenza dei frutti acerbi è dovuta ai tannini, che scompaiono con la maturazione.",
+      "Per 100 g it is a source of vitamin A (carotenes), vitamin C and manganese. It is higher in calories than many fruits because it is rich in sugars. The astringency of unripe fruit is due to tannins, which disappear as it ripens."
+    ],
+    "wr": [
+      "I cachi molto maturi si frullano in creme, budini o gelati senza aggiungere zucchero; si congelano interi e si mangiano come un sorbetto.",
+      "Very ripe persimmons can be blended into creams, puddings or ice cream without added sugar; frozen whole they can be eaten like sorbet."
+    ]
+  },
+  "castagna_chestnut": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "uc_davis",
+      "crea"
+    ],
+    "sl": [
+      "Buccia lucida, integra e tesa, senza buchi né annerimenti; frutto sodo e pesante.",
+      "Glossy, intact, taut shell with no holes or blackening; firm, heavy nut."
+    ],
+    "ds": [
+      "Scegli castagne con buccia lucida, integra e ben tesa, senza buchi (indice di larve) o parti annerite; al tatto devono essere sode e non cedere sotto la pressione del dito. Quelle leggere o con buccia raggrinzita sono vecchie o secche.",
+      "Choose chestnuts with a glossy, intact, taut shell, without holes (a sign of larvae) or blackened parts; they should feel firm and not give under finger pressure. Light ones or those with wrinkled shells are old or dried out."
+    ],
+    "cs": [
+      "Frigo · fino a 1 mese",
+      "Fridge · up to 1 month"
+    ],
+    "si": [
+      "Conservale in frigorifero, nel ripiano più basso, in un sacchetto di carta o di tela: si mantengono fino a un mese. L'ideale professionale è tra -1 e 0 °C con umidità alta. Si possono anche congelare crude o cotte.",
+      "Keep them in the fridge on the lowest shelf in a paper or cloth bag: they last up to a month. The professional ideal is between -1 and 0 °C with high humidity. They can also be frozen raw or cooked."
+    ],
+    "hb": [
+      "A differenza della frutta secca è ricca di amido e povera di grassi. Per 100 g è ricca di folati e rame e fonte di riboflavina, vitamina B6, potassio, zinco e manganese. Non contiene glutine.",
+      "Unlike nuts, it is rich in starch and low in fat. Per 100 g it is high in folate and copper and a source of riboflavin, vitamin B6, potassium, zinc and manganese. It is gluten-free."
+    ],
+    "wr": [
+      "Le castagne cotte avanzate diventano purè, vellutate, ripieni o creme dolci; le bucce sono ottime per il compost o per accendere il fuoco.",
+      "Leftover cooked chestnuts become purée, soups, stuffings or sweet spreads; the shells are good for compost or kindling."
+    ]
+  },
+  "ciliegia_cherry": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Ciliegie lucide e sode, colore intenso, picciolo verde e attaccato; niente parti molli o marce.",
+      "Glossy, firm cherries of intense colour with green, attached stems; no soft or rotten parts."
+    ],
+    "ds": [
+      "Le ciliegie migliori sono lucide e brillanti, sode, di colore intenso tipico della varietà (rosso scuro, rosso o giallo con sfumature rosse) e con il picciolo verde, fresco e attaccato: un picciolo secco o scuro indica un frutto raccolto da tempo. Non maturano dopo la raccolta.",
+      "The best cherries are shiny and bright, firm, with the intense colour typical of their variety (dark red, red or yellow with a red blush) and a green, fresh, attached stem: a dry or dark stem means the fruit was picked long ago. They don't ripen after harvest."
+    ],
+    "cs": [
+      "Frigo (cassetto) · max 2 giorni",
+      "Fridge (crisper) · max 2 days"
+    ],
+    "si": [
+      "Conservale non lavate e con il picciolo nel cassetto del frigorifero e consumale entro 2 giorni; lavale solo prima di mangiarle. In condizioni professionali (-1/0 °C, umidità oltre il 95%) mantengono la qualità 2-4 settimane. Non temono il freddo.",
+      "Keep them unwashed, stems on, in the fridge crisper and eat within 2 days; wash them only before eating. Professionally (-1/0 °C, humidity above 95%) they keep quality for 2-4 weeks. They tolerate cold."
+    ],
+    "hb": [
+      "Poco caloriche, contengono fibre, potassio e polifenoli (antociani, che danno il colore). In Italia sono IGP, tra le altre, la Ciliegia di Marostica e la Ciliegia di Vignola.",
+      "Low in calories, they contain fibre, potassium and polyphenols (anthocyanins, which give the colour). Italian PGIs include Ciliegia di Marostica and Ciliegia di Vignola."
+    ],
+    "wr": [
+      "Le ciliegie un po' sfatte sono ottime per confetture, clafoutis e sciroppi; si congelano snocciolate.",
+      "Slightly soft cherries are great for jams, clafoutis and syrups; they freeze well pitted."
+    ]
+  },
+  "clementine_clementine": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Frutto sodo e pieno, buccia arancio intenso, liscia e senza macchie o parti molli.",
+      "Firm, full fruit with deep orange, smooth peel, no spots or soft parts."
+    ],
+    "ds": [
+      "Scegli clementine di colore arancio intenso, sode, piene e pesanti, con buccia turgida e senza macchie o parti molli; la buccia deve staccarsi facilmente. Non maturano dopo la raccolta. La Clementina di Calabria IGP e quella del Golfo di Taranto IGP sono tutelate.",
+      "Choose deep orange clementines that are firm, full and heavy, with turgid peel and no spots or soft parts; the peel should come away easily. They don't ripen after harvest. Clementine di Calabria PGI and del Golfo di Taranto PGI are protected."
+    ],
+    "cs": [
+      "Ambiente 1 sett. · frigo 2 sett. e mezzo",
+      "Room temp 1 week · fridge 2.5 weeks"
+    ],
+    "si": [
+      "Si conservano circa una settimana a temperatura ambiente in un luogo fresco, oppure due settimane e mezzo in frigorifero. L'ideale professionale è 5-8 °C: sotto i 5 °C possono comparire danni da freddo.",
+      "They keep about a week at room temperature in a cool place, or two and a half weeks in the fridge. The professional ideal is 5-8 °C: below 5 °C chilling injury may occur."
+    ],
+    "cn": [
+      "Sotto i 5 °C: macchie e butterature sulla buccia, che possono diventare marroni.",
+      "Below 5 °C: spots and pitting on the peel, which can turn brown."
+    ],
+    "hb": [
+      "Per 100 g sono ricche di vitamina C; contengono anche caroteni, folati e potassio, con poche calorie. Senza semi e facili da sbucciare, sono un ibrido tra mandarino e arancia.",
+      "Per 100 g they are high in vitamin C; they also contain carotenes, folate and potassium, with few calories. Seedless and easy to peel, they are a mandarin-orange hybrid."
+    ],
+    "wr": [
+      "La buccia non trattata, essiccata, aromatizza tisane, tè e dolci; grattugiata si congela per gli impasti.",
+      "Untreated peel, dried, flavours herbal teas, tea and desserts; grated, it can be frozen for baking."
+    ]
+  },
+  "fico_fig": {
+    "pl": "frigorifero",
+    "rt": "climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Fichi interi, morbidi ma non sfatti, senza spaccature, ammaccature o perdite di liquido.",
+      "Whole figs, soft but not mushy, with no splits, bruises or leaking juice."
+    ],
+    "ds": [
+      "Scegli fichi interi, senza spaccature o ammaccature, dal profumo gradevole e senza perdite di liquido. Il colore della buccia e una polpa morbida ma non sfatta indicano la giusta maturazione: i fichi troppo maturi fermentano e hanno odore acido.",
+      "Choose whole figs without splits or bruises, with a pleasant aroma and no leaking juice. Skin colour and soft but not mushy flesh indicate proper ripeness: over-ripe figs ferment and smell sour."
+    ],
+    "cs": [
+      "Frigo (ripiano meno freddo) · max 3 gg",
+      "Fridge (warmest shelf) · max 3 days"
+    ],
+    "si": [
+      "Sono molto deperibili: conservali nel ripiano meno freddo del frigorifero, in un solo strato perché non si schiaccino, e consumali entro 3 giorni. Professionalmente si conservano a -1/0 °C con umidità 90-95%, raffreddati subito dopo la raccolta.",
+      "They are very perishable: keep them on the warmest fridge shelf in a single layer so they don't get crushed, and eat within 3 days. Professionally they are stored at -1/0 °C with 90-95% humidity, cooled right after harvest."
+    ],
+    "hb": [
+      "Molto zuccherini e quindi più calorici di altri frutti, per 100 g sono ricchi di rame e forniscono fibre e potassio. Botanicamente il fico è un'infruttescenza che racchiude centinaia di piccoli fiori.",
+      "Very sweet and therefore higher in calories than many fruits, per 100 g they are high in copper and provide fibre and potassium. Botanically the fig is a structure enclosing hundreds of tiny flowers."
+    ],
+    "wr": [
+      "I fichi troppo maturi diventano confetture, salse per formaggi o si essiccano in forno; si congelano anche interi.",
+      "Over-ripe figs become jams, sauces for cheese or can be oven-dried; they also freeze whole."
+    ]
+  },
+  "fragola_strawberry": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "greenpeace",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Fragole lucide e rosse fino al calice, sode e profumate; niente muffa o parti molli.",
+      "Glossy strawberries red right up to the calyx, firm and fragrant; no mould or soft parts."
+    ],
+    "ds": [
+      "Scegli fragole di colore rosso uniforme fino al calice, lucide, sode e profumate, senza parti molli, opache o ammuffite. Non maturano dopo la raccolta: gli zuccheri non aumentano, quindi quelle con zone bianche resteranno poco dolci. Controlla il fondo della confezione.",
+      "Choose strawberries evenly red up to the calyx, glossy, firm and fragrant, with no soft, dull or mouldy parts. They don't ripen after harvest: sugars don't increase, so those with white areas will stay less sweet. Check the bottom of the punnet."
+    ],
+    "cs": [
+      "Frigo · max 3 giorni",
+      "Fridge · max 3 days"
+    ],
+    "si": [
+      "Elimina subito i frutti danneggiati, poi conservale non lavate e con il calice in frigorifero, in un contenitore aperto o foderato di carta assorbente (non ermetico), e consumale entro 3 giorni. Lavale solo prima di mangiarle. In condizioni professionali (0 °C, umidità 90-95%) durano fino a 7 giorni.",
+      "Remove damaged fruit right away, then keep them unwashed, calyx on, in the fridge in an open or paper-lined container (not airtight), and eat within 3 days. Wash them only before eating. Professionally (0 °C, 90-95% humidity) they last up to 7 days."
+    ],
+    "hb": [
+      "Composte per circa il 90% d'acqua e povere di zuccheri, per 100 g sono ricche di vitamina C e fonte di manganese; contengono anche folati, potassio e fibre.",
+      "About 90% water and low in sugars, per 100 g they are high in vitamin C and a source of manganese; they also contain folate, potassium and fibre."
+    ],
+    "wr": [
+      "Le fragole un po' sfatte sono perfette per frullati, salse, sorbetti e confetture; i piccioli lavati aromatizzano l'acqua.",
+      "Slightly soft strawberries are perfect for smoothies, sauces, sorbets and jams; washed calyxes flavour water."
+    ]
+  },
+  "kiwi_kiwifruit": {
+    "pl": "frigorifero",
+    "rt": "climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "uc_davis",
+      "crea"
+    ],
+    "sl": [
+      "Kiwi integro e pulito, buccia non raggrinzita; sodo se da conservare, cedevole se da mangiare.",
+      "Intact, clean kiwi with unwrinkled skin; firm for storing, slightly yielding to eat."
+    ],
+    "ds": [
+      "Scegli frutti integri, puliti e turgidi, senza grinze, ammaccature, parti molli o odore alcolico. Il kiwi si raccoglie sodo e matura dopo: è pronto quando cede leggermente alla pressione del pollice. Il Kiwi Latina IGP è tutelato.",
+      "Choose intact, clean, turgid fruit, free of wrinkles, bruises, soft spots or an alcoholic smell. Kiwis are picked firm and ripen afterwards: they are ready when they yield slightly to thumb pressure. Kiwi Latina PGI is protected."
+    ],
+    "cs": [
+      "Frigo · max 5 gg (sodi: più a lungo)",
+      "Fridge · max 5 days (firm: longer)"
+    ],
+    "si": [
+      "I kiwi sodi si conservano a lungo in frigorifero; quelli maturi vanno consumati entro 5 giorni. Per farli maturare lasciali a temperatura ambiente, magari in un sacchetto con una mela. Sono estremamente sensibili all'etilene: anche tracce li ammorbidiscono, quindi non tenerli vicino alla frutta matura se li vuoi conservare.",
+      "Firm kiwis keep a long time in the fridge; ripe ones should be eaten within 5 days. To ripen them, leave them at room temperature, ideally in a bag with an apple. They are extremely sensitive to ethylene: even traces soften them, so keep them away from ripe fruit if you want to store them."
+    ],
+    "cn": [
+      "La varietà Hayward può essere sensibile vicino a 0 °C: anello di tessuto granuloso e acquoso sotto la buccia.",
+      "The Hayward variety can be sensitive near 0 °C: a ring of granular, water-soaked tissue under the skin."
+    ],
+    "hb": [
+      "Per 100 g è ricco di vitamina C (oltre il fabbisogno giornaliero) e vitamina K e fonte di potassio. Contiene actinidina, un enzima che scioglie le proteine: per questo non si abbina bene a latte e gelatine.",
+      "Per 100 g it is high in vitamin C (more than the daily requirement) and vitamin K and a source of potassium. It contains actinidin, an enzyme that breaks down proteins: that's why it doesn't pair well with milk or gelatine."
+    ],
+    "wr": [
+      "La buccia si può mangiare se ben lavata e spazzolata e aumenta l'apporto di fibra; i kiwi troppo maturi vanno in frullati e marmellate.",
+      "The skin can be eaten if well washed and brushed, adding fibre; over-ripe kiwis go into smoothies and jams."
+    ]
+  },
+  "lampone_raspberry": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Lamponi asciutti e integri, colore uniforme, senza muffa né acqua sul fondo della vaschetta.",
+      "Dry, intact raspberries of even colour, no mould or liquid at the bottom of the punnet."
+    ],
+    "ds": [
+      "Scegli lamponi turgidi, di colore uniforme, integri, senza muffe, scottature o succo sul fondo della confezione. Sono tra i frutti più delicati: controlla bene la vaschetta. Non maturano dopo la raccolta.",
+      "Choose turgid raspberries of even colour, intact, free of mould, sunscald or juice at the bottom of the pack. They are among the most delicate fruits: check the punnet carefully. They don't ripen after harvest."
+    ],
+    "cs": [
+      "Frigo · 1-2 giorni · o freezer",
+      "Fridge · 1-2 days · or freezer"
+    ],
+    "si": [
+      "Conservali in frigorifero non lavati, in un solo strato, e consumali entro 24-48 ore; oppure congelali stesi su un vassoio e poi in un sacchetto. Professionalmente si conservano 2-5 giorni a -0,5/0 °C con umidità oltre il 90%. L'etilene favorisce la muffa grigia (Botrytis).",
+      "Keep them unwashed in the fridge in a single layer and eat within 24-48 hours; or freeze them spread on a tray and then in a bag. Professionally they keep 2-5 days at -0.5/0 °C with humidity above 90%. Ethylene promotes grey mould (Botrytis)."
+    ],
+    "hb": [
+      "Poco calorici e ricchi di fibre, per 100 g sono ricchi di vitamina C e fonte di folati, rame e manganese; contengono molti polifenoli.",
+      "Low in calories and high in fibre, per 100 g they are high in vitamin C and a source of folate, copper and manganese; they are rich in polyphenols."
+    ],
+    "wr": [
+      "Quelli molto maturi si congelano subito per frullati, salse e dolci, oppure diventano confettura.",
+      "Very ripe ones should be frozen at once for smoothies, sauces and desserts, or made into jam."
+    ]
+  }
+}

@@ -1,0 +1,475 @@
+{
+ "cipollotto_spring_onion": {
+  "hb66": [
+   "Onion",
+   "Onion",
+   "approx"
+  ],
+  "fdc": null,
+  "fdc_id": [
+   170005,
+   "exact",
+   "Onions, spring or scallions (includes tops and bulb), raw"
+  ]
+ },
+ "agretti_saltwort": {
+  "hb66": null,
+  "fdc": null
+ },
+ "amarena_sour_cherry": {
+  "hb66": [
+   "Cherry (Sweet)",
+   "Cherry (Sweet)",
+   "approx"
+  ],
+  "fdc": null,
+  "fdc_id": [
+   173954,
+   "exact",
+   "Cherries, sour, red, raw"
+  ]
+ },
+ "noce_walnut": {
+  "hb66": [
+   "Walnut",
+   null,
+   "exact"
+  ],
+  "fdc": null,
+  "fdc_id": [
+   170187,
+   "exact",
+   "Nuts, walnuts, english"
+  ]
+ },
+ "nocciola_hazelnut": {
+  "hb66": [
+   "Hazelnut",
+   null,
+   "exact"
+  ],
+  "fdc": null,
+  "fdc_id": [
+   170581,
+   "exact",
+   "Nuts, hazelnuts or filberts"
+  ]
+ },
+ "mandorla_almond": {
+  "hb66": [
+   "Almond",
+   null,
+   "exact"
+  ],
+  "fdc": null,
+  "fdc_id": [
+   170567,
+   "exact",
+   "Nuts, almonds"
+  ]
+ },
+ "pistacchio_pistachio": {
+  "hb66": [
+   "Pistachio",
+   null,
+   "exact"
+  ],
+  "fdc": null,
+  "fdc_id": [
+   170184,
+   "exact",
+   "Nuts, pistachio nuts, raw"
+  ]
+ },
+ "erba_cipollina_chives": {
+  "hb66": [
+   null,
+   "Chive",
+   "exact"
+  ],
+  "fdc": null,
+  "fdc_id": [
+   169994,
+   "exact",
+   "Chives, raw"
+  ]
+ },
+ "crescione_watercress": {
+  "hb66": [
+   null,
+   "Watercress",
+   "exact"
+  ],
+  "fdc": null,
+  "fdc_id": [
+   170068,
+   "exact",
+   "Watercress, raw"
+  ]
+ },
+ "ribes_nero_blackcurrant": {
+  "hb66": [
+   "Currant, Gooseberry, and Elderberry",
+   "Currant, Black",
+   "exact"
+  ],
+  "fdc": null,
+  "fdc_id": [
+   173963,
+   "exact",
+   "Currants, european black, raw"
+  ]
+ },
+ "uva_spina_gooseberry": {
+  "hb66": [
+   "Currant, Gooseberry, and Elderberry",
+   "Gooseberry",
+   "exact"
+  ],
+  "fdc": "Gooseberries, raw",
+  "fdc_id": [
+   173030,
+   "exact",
+   "Gooseberries, raw"
+  ]
+ },
+ "mirtillo_rosso_lingonberry": {
+  "hb66": [
+   "Cranberry",
+   "Cranberry",
+   "approx"
+  ],
+  "fdc": "Cranberries, raw",
+  "fdc_id": [
+   171722,
+   "approx",
+   "Cranberries, raw"
+  ],
+  "fdc_q": "approx"
+ },
+ "sambuco_elderberry": {
+  "hb66": [
+   "Currant, Gooseberry, and Elderberry",
+   null,
+   "exact"
+  ],
+  "fdc": "Elderberries, raw",
+  "fdc_id": [
+   171727,
+   "exact",
+   "Elderberries, raw"
+  ]
+ },
+ "gelso_mulberry": {
+  "hb66": null,
+  "fdc": null,
+  "fdc_id": [
+   169913,
+   "exact",
+   "Mulberries, raw"
+  ]
+ },
+ "rabarbaro_rhubarb": {
+  "hb66": [
+   "Rhubarb",
+   "Rhubarb",
+   "exact"
+  ],
+  "fdc": "Rhubarb, raw",
+  "fdc_id": [
+   167758,
+   "exact",
+   "Rhubarb, raw"
+  ]
+ },
+ "rafano_horseradish": {
+  "hb66": [
+   "Horseradish",
+   "Horseradish",
+   "exact"
+  ],
+  "fdc": null,
+  "fdc_id": [
+   173472,
+   "approx",
+   "Horseradish, prepared"
+  ]
+ },
+ "scorzonera_black_salsify": {
+  "hb66": [
+   "Salsify",
+   "Salsify",
+   "exact"
+  ],
+  "fdc": null,
+  "fdc_id": [
+   169277,
+   "approx",
+   "Salsify, (vegetable oyster), raw"
+  ]
+ },
+ "cavolo_cinese_chinese_cabbage": {
+  "hb66": [
+   "Chinese Cabbage",
+   "Chinese Cabbage",
+   "exact"
+  ],
+  "fdc": "Cabbage, chinese (pe-tsai), raw",
+  "fdc_id": [
+   169979,
+   "exact",
+   "Cabbage, chinese (pe-tsai), raw"
+  ]
+ },
+ "patata_dolce_sweet_potato": {
+  "hb66": [
+   "Sweetpotato",
+   null,
+   "exact"
+  ],
+  "fdc": null,
+  "fdc_id": [
+   168482,
+   "exact",
+   "Sweet potato, raw, unprepared"
+  ]
+ },
+ "navone_swede": {
+  "hb66": [
+   "Rutabaga",
+   "Rutabaga",
+   "exact"
+  ],
+  "fdc": "Rutabagas, raw",
+  "fdc_id": [
+   168454,
+   "exact",
+   "Rutabagas, raw"
+  ]
+ },
+ "daikon_daikon": {
+  "hb66": [
+   "Radish",
+   "Radish (Topped)",
+   "approx"
+  ],
+  "fdc": null,
+  "fdc_id": [
+   168451,
+   "exact",
+   "Radishes, oriental, raw"
+  ]
+ },
+ "taccola_snow_pea": {
+  "hb66": [
+   null,
+   "Pea (Edible Pod)",
+   "exact"
+  ],
+  "fdc": "Peas, edible-podded, raw",
+  "fdc_id": [
+   170010,
+   "exact",
+   "Peas, edible-podded, raw"
+  ]
+ },
+ "broccolo_romanesco_romanesco": {
+  "hb66": [
+   "Cauliflower",
+   "Cauliflower",
+   "approx"
+  ],
+  "fdc": "Cauliflower, raw",
+  "fdc_id": [
+   169986,
+   "approx",
+   "Cauliflower, raw"
+  ],
+  "fdc_q": "approx"
+ },
+ "puntarelle_puntarelle": {
+  "hb66": [
+   "Endive and Escarole",
+   "Endive/Escarole",
+   "approx"
+  ],
+  "fdc": null,
+  "fdc_id": [
+   169992,
+   "approx",
+   "Chicory greens, raw"
+  ]
+ },
+ "asparago_selvatico_wild_asparagus": {
+  "hb66": [
+   "Asparagus",
+   "Asparagus",
+   "approx"
+  ],
+  "fdc": null,
+  "fdc_id": [
+   168389,
+   "approx",
+   "Asparagus, raw"
+  ]
+ },
+ "salicornia_samphire": {
+  "hb66": null,
+  "fdc": null
+ },
+ "gombo_okra": {
+  "hb66": [
+   "Okra",
+   "Okra",
+   "exact"
+  ],
+  "fdc": "Okra, raw",
+  "fdc_id": [
+   169260,
+   "exact",
+   "Okra, raw"
+  ]
+ },
+ "zucchina_spinosa_chayote": {
+  "hb66": null,
+  "fdc": "Chayote, fruit, raw",
+  "fdc_id": [
+   170402,
+   "exact",
+   "Chayote, fruit, raw"
+  ]
+ },
+ "alchechengi_cape_gooseberry": {
+  "hb66": null,
+  "fdc": "Groundcherries, (cape-gooseberries or poha), raw",
+  "fdc_id": [
+   173043,
+   "exact",
+   "Groundcherries, (cape-gooseberries or poha), raw"
+  ]
+ },
+ "cocco_coconut": {
+  "hb66": [
+   "Coconut",
+   "Coconut",
+   "exact"
+  ],
+  "fdc": null,
+  "fdc_id": [
+   170169,
+   "exact",
+   "Nuts, coconut meat, raw"
+  ]
+ },
+ "carruba_carob": {
+  "hb66": null,
+  "fdc": null
+ },
+ "giuggiola_jujube": {
+  "hb66": null,
+  "fdc": "Jujube, raw",
+  "fdc_id": [
+   168151,
+   "exact",
+   "Jujube, raw"
+  ]
+ },
+ "nespola_comune_medlar": {
+  "hb66": null,
+  "fdc": null
+ },
+ "mirabella_mirabelle_plum": {
+  "hb66": [
+   "Plum and Fresh Prune",
+   "Plum (ripe)",
+   "approx"
+  ],
+  "fdc": "Plums, raw",
+  "fdc_q": "approx"
+ },
+ "finferlo_chanterelle": {
+  "hb66": [
+   "Mushroom",
+   "Mushroom",
+   "approx"
+  ],
+  "fdc": null,
+  "fdc_id": [
+   168422,
+   "exact",
+   "Mushrooms, chanterelle, raw"
+  ]
+ },
+ "spugnola_morel": {
+  "hb66": [
+   "Mushroom",
+   "Mushroom",
+   "approx"
+  ],
+  "fdc": null,
+  "fdc_id": [
+   168423,
+   "exact",
+   "Mushrooms, morel, raw"
+  ]
+ },
+ "shiitake_shiitake": {
+  "hb66": [
+   "Mushroom",
+   "Mushroom",
+   "approx"
+  ],
+  "fdc": "Mushrooms, shiitake, raw",
+  "fdc_id": [
+   169242,
+   "exact",
+   "Mushrooms, shiitake, raw"
+  ]
+ },
+ "cardoncello_king_oyster_mushroom": {
+  "hb66": [
+   "Mushroom",
+   "Mushroom",
+   "approx"
+  ],
+  "fdc": "Mushrooms, oyster, raw",
+  "fdc_q": "approx"
+ },
+ "lampascioni_tassel_hyacinth": {
+  "hb66": null,
+  "fdc": null
+ },
+ "cicerchia_grass_pea": {
+  "hb66": null,
+  "fdc": null
+ },
+ "cedro_citron": {
+  "hb66": [
+   "Lemon",
+   "Lemon",
+   "approx"
+  ],
+  "fdc": null
+ },
+ "chinotto_chinotto": {
+  "hb66": null,
+  "fdc": null
+ },
+ "oliva_olive": {
+  "hb66": [
+   "Olive",
+   "Olive",
+   "exact"
+  ],
+  "fdc": null
+ },
+ "zafferano_saffron": {
+  "hb66": null,
+  "fdc": null,
+  "fdc_id": [
+   170934,
+   "exact",
+   "Spices, saffron"
+  ]
+ }
+}

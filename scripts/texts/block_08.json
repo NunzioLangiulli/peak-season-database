@@ -1,0 +1,385 @@
+{
+  "mais_corn": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "uc_davis",
+      "bda_ieo",
+      "usda_fdc"
+    ],
+    "sl": [
+      "Pannocchia con brattee verdi, fresche e aderenti; chicchi pieni, lucidi e teneri.",
+      "Cob with fresh, tight green husks; plump, glossy, tender kernels."
+    ],
+    "ds": [
+      "Il mais dolce di qualità ha brattee verdi, fresche e ben aderenti e chicchi uniformi per colore (giallo, bianco o bicolore), pieni, teneri e lucidi, senza danni da insetti. Premendo un chicco deve uscire un succo lattiginoso. La barba scura e asciutta va bene; brattee secche e gialle indicano una pannocchia vecchia.",
+      "Good sweet corn has fresh, tight green husks and kernels of even colour (yellow, white or bicolour) that are plump, tender and glossy, with no insect damage. Pressing a kernel should release a milky juice. Dark, dry silk is fine; dry, yellow husks mean an old cob."
+    ],
+    "cs": [
+      "Frigo · 1-2 giorni",
+      "Fridge · 1-2 days"
+    ],
+    "si": [
+      "Conservalo in frigorifero con le brattee e consumalo al più presto: dopo la raccolta gli zuccheri si trasformano rapidamente in amido, circa 4 volte più in fretta a 10 °C che a 0 °C, e il mais perde dolcezza e tenerezza. Si conserva bene sgranato, sbollentato e congelato.",
+      "Keep it in the fridge with its husks and eat it as soon as possible: after harvest sugars quickly turn into starch, about 4 times faster at 10 °C than at 0 °C, and the corn loses sweetness and tenderness. It keeps well shelled, blanched and frozen."
+    ],
+    "hb": [
+      "La pannocchia fresca è per tre quarti acqua e ha molte meno calorie della granella secca usata per farine e polenta. Contiene luteina e zeaxantina, i pigmenti gialli del chicco, ed è naturalmente priva di glutine.",
+      "Fresh sweet corn is three-quarters water and has far fewer calories than the dry grain used for flour and polenta. It contains lutein and zeaxanthin, the yellow pigments of the kernel, and is naturally gluten-free."
+    ],
+    "wr": [
+      "I tutoli sgranati e le brattee interne bolliti danno un brodo dolce per zuppe e risotti; i chicchi avanzati vanno in insalate, frittate e vellutate.",
+      "Stripped cobs and inner husks, boiled, make a sweet stock for soups and risottos; leftover kernels go into salads, fritters and soups."
+    ]
+  },
+  "farro_emmer": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "crea"
+    ],
+    "sl": [
+      "Chicchi interi, uniformi e asciutti, color ambra, senza polvere, impurità o odore di stantio.",
+      "Whole, even, dry amber grains with no dust, debris or stale smell."
+    ],
+    "ds": [
+      "Scegli farro con chicchi interi e uniformi, asciutti e di colore ambrato, senza polvere, chicchi rotti, impurità o insetti. Il farro perlato cuoce più in fretta, quello decorticato o integrale conserva più fibra. Il Farro della Garfagnana IGP e il Farro di Monteleone di Spoleto DOP sono tutelati.",
+      "Choose farro with whole, even, dry, amber grains, without dust, broken grains, debris or insects. Pearled farro cooks faster; hulled or wholegrain farro keeps more fibre. Farro della Garfagnana PGI and Farro di Monteleone di Spoleto PDO are protected."
+    ],
+    "cs": [
+      "Dispensa · fino a 1 anno",
+      "Pantry · up to 1 year"
+    ],
+    "si": [
+      "Conservalo in un contenitore ermetico, in un luogo fresco, asciutto e buio, lontano da fonti di calore e umidità. Il farro integrale, più ricco di grassi del germe, si conserva meno a lungo di quello perlato.",
+      "Store it in an airtight container in a cool, dry, dark place, away from heat and humidity. Wholegrain farro, richer in germ fats, keeps less long than pearled farro."
+    ],
+    "hb": [
+      "Valori del farro perlato crudo: per 100 g è ricco di tiamina, niacina, fosforo, rame e manganese e fonte di vitamina B6, folati, potassio, magnesio, zinco e selenio. Contiene glutine.",
+      "Values for raw pearled farro: per 100 g it is high in thiamin, niacin, phosphorus, copper and manganese and a source of vitamin B6, folate, potassium, magnesium, zinc and selenium. It contains gluten."
+    ],
+    "wr": [
+      "L'acqua di cottura è ricca di amido e si usa per zuppe e minestre; il farro cotto avanzato diventa insalata, polpette o ripieno per verdure.",
+      "The starchy cooking water can be used for soups; leftover cooked farro becomes salads, patties or vegetable stuffing."
+    ]
+  },
+  "orzo_barley": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "crea"
+    ],
+    "sl": [
+      "Chicchi interi e uniformi, chiari (perlato) o nocciola (decorticato), senza polvere né odori.",
+      "Whole, even grains, pale (pearled) or hazel (hulled), with no dust or odours."
+    ],
+    "ds": [
+      "Scegli orzo con chicchi interi, uniformi e asciutti, senza polvere, chicchi rotti o odore di stantio. L'orzo perlato cuoce più in fretta; quello decorticato mantiene più fibre.",
+      "Choose barley with whole, even, dry grains, without dust, broken grains or a stale smell. Pearled barley cooks faster; hulled barley keeps more fibre."
+    ],
+    "cs": [
+      "Dispensa · fino a 1 anno",
+      "Pantry · up to 1 year"
+    ],
+    "si": [
+      "Conservalo in un contenitore ermetico, al fresco, all'asciutto e al buio. L'orzo cotto va in frigorifero e si consuma entro 3-4 giorni.",
+      "Store it in an airtight container in a cool, dry, dark place. Cooked barley goes in the fridge and should be eaten within 3-4 days."
+    ],
+    "hb": [
+      "Valori dell'orzo perlato crudo: per 100 g è ricco di manganese e fonte di rame, fosforo, niacina e vitamina B6. È noto per le fibre solubili (beta-glucani). Contiene glutine.",
+      "Values for raw pearled barley: per 100 g it is high in manganese and a source of copper, phosphorus, niacin and vitamin B6. It is known for its soluble fibre (beta-glucans). It contains gluten."
+    ],
+    "wr": [
+      "L'orzo cotto avanzato diventa insalata, \"orzotto\" o si aggiunge a zuppe; tostato e macinato si usa come bevanda.",
+      "Leftover cooked barley becomes salads, barley risotto or goes into soups; roasted and ground it makes a coffee-like drink."
+    ]
+  },
+  "grano_duro_durum_wheat": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "crea"
+    ],
+    "sl": [
+      "Chicchi interi, duri e ambrati, senza polvere, insetti o chicchi rotti.",
+      "Whole, hard, amber grains with no dust, insects or broken kernels."
+    ],
+    "ds": [
+      "Il grano duro ha chicchi allungati, duri e di aspetto vitreo e ambrato. Scegli chicchi interi, asciutti, senza polvere o insetti. In cucina si usa soprattutto come semola per pasta e pane o come grano cotto.",
+      "Durum wheat has elongated, hard, glassy amber kernels. Choose whole, dry kernels with no dust or insects. In cooking it is mostly used as semolina for pasta and bread, or as cooked wheat berries."
+    ],
+    "cs": [
+      "Dispensa · fino a 1 anno",
+      "Pantry · up to 1 year"
+    ],
+    "si": [
+      "Conserva chicchi e semola in contenitori ermetici, in un luogo fresco, asciutto e buio, al riparo da umidità e insetti.",
+      "Store kernels and semolina in airtight containers in a cool, dry, dark place, protected from moisture and insects."
+    ],
+    "hb": [
+      "Valori del frumento duro: per 100 g è ricco di tiamina, niacina, vitamina B6, fosforo, magnesio, rame e manganese e fonte di folati, potassio, ferro e zinco. È il cereale della pasta italiana. Contiene glutine.",
+      "Values for durum wheat: per 100 g it is high in thiamin, niacin, vitamin B6, phosphorus, magnesium, copper and manganese and a source of folate, potassium, iron and zinc. It is the grain of Italian pasta. It contains gluten."
+    ],
+    "wr": [
+      "La semola avanzata serve da spolvero per stendere pizza e pasta; il pane raffermo di grano duro diventa pangrattato.",
+      "Leftover semolina is great for dusting when rolling pizza and pasta; stale durum wheat bread becomes breadcrumbs."
+    ]
+  },
+  "riso_rice": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "crea"
+    ],
+    "sl": [
+      "Chicchi interi e uniformi, senza chicchi rotti, gessosi o macchiati; confezione integra.",
+      "Whole, even grains with no broken, chalky or stained grains; intact pack."
+    ],
+    "ds": [
+      "Scegli riso con chicchi interi e uniformi, senza grani rotti, gessosi (bianchi e opachi) o macchiati e senza polvere. La varietà (Carnaroli, Arborio, Vialone Nano, Baldo…) determina la tenuta in cottura. Sono tutelati il Riso di Baraggia Biellese e Vercellese DOP e il Riso Nano Vialone Veronese IGP.",
+      "Choose rice with whole, even grains, with no broken, chalky (white and opaque) or stained grains and no dust. The variety (Carnaroli, Arborio, Vialone Nano, Baldo…) determines how it holds up in cooking. Riso di Baraggia Biellese e Vercellese PDO and Riso Nano Vialone Veronese PGI are protected."
+    ],
+    "cs": [
+      "Dispensa · fino a 1 anno",
+      "Pantry · up to 1 year"
+    ],
+    "si": [
+      "Conservalo in un contenitore ermetico, al fresco, all'asciutto e al buio. Il riso integrale irrancidisce prima. Il riso cotto va raffreddato rapidamente, tenuto in frigorifero e consumato entro 1-2 giorni.",
+      "Store it in an airtight container in a cool, dry, dark place. Brown rice goes rancid sooner. Cooked rice should be cooled quickly, refrigerated and eaten within 1-2 days."
+    ],
+    "hb": [
+      "Valori del riso brillato crudo: per 100 g è ricco di manganese e fonte di rame e selenio. È naturalmente privo di glutine e molto digeribile.",
+      "Values for raw white rice: per 100 g it is high in manganese and a source of copper and selenium. It is naturally gluten-free and very digestible."
+    ],
+    "wr": [
+      "Il riso cotto avanzato diventa arancini, supplì, frittate di riso o torte salate.",
+      "Leftover cooked rice becomes arancini, supplì, rice omelettes or savoury pies."
+    ]
+  },
+  "avena_oat": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "crea",
+      "bda_ieo"
+    ],
+    "sl": [
+      "Fiocchi o chicchi interi, chiari e uniformi, profumo fresco di nocciola, senza odore rancido.",
+      "Whole, pale, even flakes or grains, fresh nutty smell, no rancid odour."
+    ],
+    "ds": [
+      "Scegli fiocchi o chicchi d'avena uniformi, asciutti e dal profumo fresco; un odore rancido indica che i grassi si sono ossidati. Chi è celiaco deve scegliere avena certificata senza glutine.",
+      "Choose even, dry oat flakes or grains with a fresh smell; a rancid smell means the fats have oxidised. People with coeliac disease should choose certified gluten-free oats."
+    ],
+    "cs": [
+      "Dispensa · 6-12 mesi",
+      "Pantry · 6-12 months"
+    ],
+    "si": [
+      "Conservala in un contenitore ermetico in un luogo fresco, asciutto e buio; essendo più ricca di grassi di altri cereali tende a irrancidire, quindi controllane il profumo.",
+      "Store it in an airtight container in a cool, dry, dark place; being fattier than other grains it tends to go rancid, so check its smell."
+    ],
+    "hb": [
+      "Valori dei fiocchi d'avena (CREA): per 100 g sono ricchi di tiamina, fosforo, magnesio, ferro, zinco, rame e manganese e fonte di folati e potassio. Sono noti per le fibre solubili (beta-glucani).",
+      "Values for rolled oats (CREA): per 100 g they are high in thiamin, phosphorus, magnesium, iron, zinc, copper and manganese and a source of folate and potassium. They are known for their soluble fibre (beta-glucans)."
+    ],
+    "wr": [
+      "Frullando fiocchi e acqua e filtrando si ottiene una bevanda d'avena; il residuo si usa in biscotti, pane e polpette.",
+      "Blending oats with water and straining gives an oat drink; the pulp can go into biscuits, bread and patties."
+    ]
+  },
+  "grano_saraceno_buckwheat": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "crea"
+    ],
+    "sl": [
+      "Chicchi a piramide interi, grigio-bruni e lucidi, senza polvere né semi rotti.",
+      "Whole pyramid-shaped grains, glossy grey-brown, with no dust or broken seeds."
+    ],
+    "ds": [
+      "Scegli chicchi interi a forma di piccola piramide, di colore uniforme grigio-bruno (o più chiaro se decorticati), senza polvere, chicchi rotti o odore di stantio. Non è un vero cereale ma un seme di una Poligonacea.",
+      "Choose whole grains shaped like small pyramids, of even grey-brown colour (paler if hulled), without dust, broken grains or a stale smell. It is not a true cereal but the seed of a plant in the knotweed family."
+    ],
+    "cs": [
+      "Dispensa · fino a 1 anno",
+      "Pantry · up to 1 year"
+    ],
+    "si": [
+      "Conservalo in un contenitore ermetico, al fresco, all'asciutto e al buio; la farina di grano saraceno si conserva meno a lungo dei chicchi.",
+      "Store it in an airtight container in a cool, dry, dark place; buckwheat flour keeps less long than the grains."
+    ],
+    "hb": [
+      "Valori del grano saraceno crudo: per 100 g è ricco di tiamina, fosforo, rame e manganese e fonte di niacina, vitamina B6, potassio, ferro, zinco e selenio. È naturalmente privo di glutine e tipico di pizzoccheri e polenta taragna.",
+      "Values for raw buckwheat: per 100 g it is high in thiamin, phosphorus, copper and manganese and a source of niacin, vitamin B6, potassium, iron, zinc and selenium. It is naturally gluten-free and typical of pizzoccheri and polenta taragna."
+    ],
+    "wr": [
+      "I chicchi tostati in padella diventano una granella croccante per insalate e yogurt; quelli cotti avanzati vanno in polpette e zuppe.",
+      "Grains toasted in a pan become a crunchy topping for salads and yogurt; leftover cooked grains go into patties and soups."
+    ]
+  },
+  "cavolo_rosso_red_cabbage": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Testa soda e pesante, foglie viola intenso croccanti e lucide, senza macchie o parti molli.",
+      "Firm, heavy head with crisp, glossy deep purple leaves, no spots or soft parts."
+    ],
+    "ds": [
+      "Come per il cavolo cappuccio, la testa deve essere soda e pesante per la sua grandezza, con foglie croccanti, ben serrate e di colore viola intenso e uniforme. Evita teste con foglie esterne appassite, macchie o spaccature.",
+      "As with white cabbage, the head should be firm and heavy for its size, with crisp, tightly packed leaves of an intense, even purple. Avoid heads with wilted outer leaves, spots or splits."
+    ],
+    "cs": [
+      "Frigo · 1-2 settimane",
+      "Fridge · 1-2 weeks"
+    ],
+    "si": [
+      "Intero si conserva nel cassetto del frigorifero in un sacchetto forato per una o due settimane; tagliato, avvolgi la parte esposta e consumalo in pochi giorni. Come gli altri cavoli cappuccio va tenuto a 0 °C con umidità molto alta ed è sensibile all'etilene.",
+      "Whole, it keeps in the fridge crisper in a perforated bag for one to two weeks; once cut, wrap the exposed side and use within a few days. Like other head cabbages it should be kept at 0 °C with very high humidity and is sensitive to ethylene."
+    ],
+    "hb": [
+      "Per 100 g è ricco di vitamina C e fonte di folati, con poche calorie. Il colore viola è dovuto alle antocianine, che cambiano colore con l'acidità: diventa più rosso con aceto o limone, bluastro con acqua calcarea.",
+      "Per 100 g it is high in vitamin C and a source of folate, with few calories. Its purple colour comes from anthocyanins, which change with acidity: it turns redder with vinegar or lemon and bluish in hard water."
+    ],
+    "wr": [
+      "Le foglie esterne si usano per involtini o si stufano; il torsolo affettato sottile va in insalata. Il cavolo rosso crudo affettato si conserva bene in agrodolce.",
+      "Outer leaves can be used for rolls or braised; the thinly sliced core goes into salads. Raw sliced red cabbage keeps well pickled."
+    ]
+  },
+  "sedano_rapa_celeriac": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Radice soda e pesante, polpa compatta; niente parti molli o spugnose.",
+      "Firm, heavy root with compact flesh; no soft or spongy parts."
+    ],
+    "ds": [
+      "Le caratteristiche principali di qualità sono una consistenza soda e una polpa tenera: evita radici molli o spugnose, che risultano leggere per la loro dimensione. Le radichette e la terra sulla superficie sono normali e si eliminano pelandolo.",
+      "The main quality traits are firm texture and tender flesh: avoid soft or spongy roots, which feel light for their size. Rootlets and soil on the surface are normal and are removed when peeling."
+    ],
+    "cs": [
+      "Frigo · alcune settimane",
+      "Fridge · several weeks"
+    ],
+    "si": [
+      "Conservalo in frigorifero in un sacchetto forato: si mantiene diverse settimane. In condizioni professionali (0-2 °C, umidità 97-98%) dura 6-8 mesi, ma meno di 4 mesi sopra i 3 °C; l'umidità alta evita che si disidrati. Una volta tagliato, copri la superficie e usalo in pochi giorni.",
+      "Keep it in a perforated bag in the fridge: it lasts several weeks. Professionally (0-2 °C, 97-98% humidity) it keeps 6-8 months, but less than 4 months above 3 °C; high humidity prevents it from drying out. Once cut, cover the surface and use within a few days."
+    ],
+    "hb": [
+      "Per 100 g è fonte di folati e potassio, con poche calorie e buone fibre. Ha il profumo del sedano e si mangia crudo grattugiato o cotto in purè e vellutate.",
+      "Per 100 g it is a source of folate and potassium, with few calories and good fibre. It has the aroma of celery and is eaten raw, grated, or cooked in mash and soups."
+    ],
+    "wr": [
+      "La buccia spessa, ben lavata, insaporisce brodi e fondi; i ritagli vanno in vellutate e purè.",
+      "The thick peel, well washed, flavours stocks and broths; trimmings go into soups and mash."
+    ]
+  },
+  "indivia_belga_belgian_endive": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "uc_davis",
+      "crea"
+    ],
+    "sl": [
+      "Germogli compatti e sodi, foglie bianco perla ben serrate con punte giallo chiaro, non verdi.",
+      "Compact, firm shoots with tight pearly-white leaves and pale yellow tips, not green."
+    ],
+    "ds": [
+      "Scegli cespi (chiamati \"chicons\") compatti e turgidi, con le foglie esterne ben sovrapposte, di aspetto bianco perlaceo e con margini giallo chiaro. Le punte verdi indicano esposizione alla luce e un gusto più amaro; evita foglie aperte o con margini scuri.",
+      "Choose compact, turgid heads (\"chicons\") with tightly overlapping outer leaves, pearly white with pale yellow margins. Green tips indicate exposure to light and a more bitter taste; avoid open leaves or those with dark margins."
+    ],
+    "cs": [
+      "Frigo, al buio · 1-2 settimane",
+      "Fridge, in the dark · 1-2 weeks"
+    ],
+    "si": [
+      "Conservala in frigorifero, al buio (avvolta in carta o nella sua confezione), per una o due settimane: la luce la fa inverdire e diventare amara. In condizioni ottimali (0 °C, umidità 95-100%) dura più a lungo; a 5 °C la durata scende a 1-2 settimane. È moderatamente sensibile all'etilene.",
+      "Keep it in the fridge in the dark (wrapped in paper or its packaging) for one to two weeks: light turns it green and bitter. Under optimal conditions (0 °C, 95-100% humidity) it lasts longer; at 5 °C life drops to 1-2 weeks. It is moderately sensitive to ethylene."
+    ],
+    "hb": [
+      "Povera di calorie e croccante, per 100 g è fonte di vitamina E. Si ottiene facendo germogliare al buio le radici di cicoria: per questo è bianca.",
+      "Low in calories and crunchy, per 100 g it is a source of vitamin E. It is produced by forcing chicory roots in the dark, which is why it is white."
+    ],
+    "wr": [
+      "Le foglie esterne meno belle si cuociono brasate o gratinate; il cuore amaro si elimina solo se serve.",
+      "Less attractive outer leaves can be braised or gratinated; remove the bitter core only if needed."
+    ]
+  },
+  "scarola_escarole": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Cespo pulito, croccante e brillante, foglie larghe senza imbrunimenti né parti appassite.",
+      "Clean, crisp, bright head with broad leaves and no browning or wilting."
+    ],
+    "ds": [
+      "Scegli cespi puliti, croccanti e di colore brillante, con foglie larghe e turgide e cuore chiaro, senza margini bruni o parti appassite. Le foglie interne, più chiare, sono le più tenere e meno amare.",
+      "Choose clean, crisp, brightly coloured heads with broad, turgid leaves and a pale heart, without brown edges or wilted parts. The paler inner leaves are the most tender and least bitter."
+    ],
+    "cs": [
+      "Frigo · 3-5 giorni",
+      "Fridge · 3-5 days"
+    ],
+    "si": [
+      "Conservala in frigorifero non lavata, in un sacchetto forato, per pochi giorni. Anche in condizioni ottimali (0 °C, umidità 95-100%) non si conserva oltre 2-3 settimane. Non teme il freddo, ma gela già a -0,1 °C.",
+      "Keep it unwashed in a perforated bag in the fridge for a few days. Even under optimal conditions (0 °C, 95-100% humidity) it does not keep beyond 2-3 weeks. It tolerates cold but freezes at -0.1 °C."
+    ],
+    "hb": [
+      "Per 100 g è ricca di folati, con pochissime calorie. Si mangia cruda o cotta ed è la base della pizza di scarola napoletana.",
+      "Per 100 g it is high in folate, with very few calories. It is eaten raw or cooked and is the base of Neapolitan escarole pie."
+    ],
+    "wr": [
+      "Le foglie esterne più dure sono perfette cotte: ripassate in padella, in minestra o come ripieno.",
+      "The tougher outer leaves are perfect cooked: sautéed, in soup or as a filling."
+    ]
+  },
+  "indivia_riccia_curly_endive": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Cespo croccante e pulito, foglie frastagliate verdi con cuore chiaro, senza margini bruni.",
+      "Crisp, clean head with frilly green leaves and a pale heart, no brown edges."
+    ],
+    "ds": [
+      "Scegli cespi freschi e croccanti, con foglie frastagliate di colore verde brillante e cuore giallo chiaro, senza parti brune, appassite o viscide. Le foglie interne sono più tenere e meno amare.",
+      "Choose fresh, crisp heads with frilly bright green leaves and a pale yellow heart, without brown, wilted or slimy parts. The inner leaves are more tender and less bitter."
+    ],
+    "cs": [
+      "Frigo · 3-5 giorni",
+      "Fridge · 3-5 days"
+    ],
+    "si": [
+      "Conservala in frigorifero non lavata, in un sacchetto forato, per pochi giorni; anche in condizioni ottimali (0 °C, umidità 95-100%) non supera le 2-3 settimane. Va protetta dal gelo.",
+      "Keep it unwashed in a perforated bag in the fridge for a few days; even under optimal conditions (0 °C, 95-100% humidity) it does not exceed 2-3 weeks. Protect it from freezing."
+    ],
+    "hb": [
+      "Per 100 g è ricca di folati e vitamina C e fonte di vitamina A, riboflavina e potassio, con pochissime calorie.",
+      "Per 100 g it is high in folate and vitamin C and a source of vitamin A, riboflavin and potassium, with very few calories."
+    ],
+    "wr": [
+      "Le foglie esterne verde scuro, più amare, sono ottime cotte in padella o in minestre di legumi.",
+      "The darker, bitterer outer leaves are excellent cooked in a pan or in bean soups."
+    ]
+  }
+}

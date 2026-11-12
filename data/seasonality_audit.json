@@ -1,0 +1,2638 @@
+{
+  "items": {
+    "aglio_garlic": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {
+        "nord": [
+          [
+            2,
+            3
+          ]
+        ],
+        "centro": [
+          [
+            2,
+            3
+          ]
+        ],
+        "sud_isole": [
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            4,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            4,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      }
+    },
+    "asparago_asparagus": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            3
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            6
+          ]
+        }
+      }
+    },
+    "carciofo_artichoke": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            11,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            11,
+            12
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            11,
+            12
+          ]
+        }
+      }
+    },
+    "carota_carrot": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            11,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            12
+          ]
+        }
+      }
+    },
+    "barbabietola_beetroot": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {
+        "centro": [
+          [
+            3,
+            4
+          ]
+        ],
+        "sud_isole": [
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            11,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            11,
+            12
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            11,
+            12
+          ]
+        }
+      }
+    },
+    "bietola_da_coste_swiss_chard": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            12
+          ]
+        }
+      }
+    },
+    "cardo_cardoon": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "cavoletto_di_bruxelles_brussels_sprout": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3
+          ]
+        }
+      }
+    },
+    "cavolfiore_cauliflower": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            11,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            12
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            7,
+            8
+          ]
+        }
+      }
+    },
+    "broccolo_broccoli": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            11,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            12
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            7,
+            8
+          ]
+        }
+      }
+    },
+    "cavolo_cappuccio_cabbage": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            11,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            12
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            7,
+            8
+          ]
+        }
+      }
+    },
+    "cavolo_nero_black_kale": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            3,
+            4,
+            5
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            3,
+            4
+          ]
+        }
+      }
+    },
+    "cavolo_rapa_kohlrabi": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "cavolo_verza_savoy_cabbage": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            3,
+            4
+          ]
+        }
+      }
+    },
+    "cece_chickpea": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "cetriolo_cucumber": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "cicoria_da_cespo_chicory": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "cicoria_da_taglio_cutting_chicory": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    "cima_di_rapa_turnip_greens": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    "cipolla_estiva_summer_onion": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            9,
+            10
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            9,
+            10
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            9,
+            10
+          ]
+        }
+      }
+    },
+    "cipolla_invernale_winter_onion": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "fagiolo_bean": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "fagiolino_green_bean": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "fava_broad_bean": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            4
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            7
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            7
+          ]
+        }
+      }
+    },
+    "finocchio_fennel": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            8,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            8
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            3,
+            4,
+            5,
+            10
+          ]
+        }
+      }
+    },
+    "lattuga_da_cespo_head_lettuce": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            11,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            12
+          ]
+        }
+      }
+    },
+    "lattuga_da_taglio_leaf_lettuce": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      }
+    },
+    "lenticchia_lentil": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "melanzana_eggplant": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "pastinaca_parsnip": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "patata_potato": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            10,
+            11,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            10,
+            11,
+            12
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            10,
+            11,
+            12
+          ]
+        }
+      }
+    },
+    "peperone_bell_pepper": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "pisello_pea": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            9,
+            10
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            9,
+            10
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      }
+    },
+    "pomodoro_tomato": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "porro_leek": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            11,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3
+          ]
+        }
+      }
+    },
+    "radicchio_radicchio": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "rapa_turnip": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3
+          ]
+        }
+      }
+    },
+    "ravanello_radish": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    "rucola_arugula": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    "scalogno_shallot": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "sedano_celery": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            12
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      }
+    },
+    "spinacio_spinach": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            7,
+            8
+          ]
+        }
+      }
+    },
+    "topinambur_jerusalem_artichoke": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            2,
+            3
+          ]
+        }
+      }
+    },
+    "valerianella_corn_salad": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            8
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            8
+          ]
+        }
+      }
+    },
+    "zucca_pumpkin": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            11,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            12
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3
+          ]
+        }
+      }
+    },
+    "zucchina_zucchini": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "arachide_peanut": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "anguria_watermelon": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "melone_melon": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            5
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            5
+          ]
+        }
+      }
+    },
+    "albicocca_apricot": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            8
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            8
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [
+            5
+          ],
+          "season_not_harvest": [
+            8
+          ]
+        }
+      }
+    },
+    "arancia_orange": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            10
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            10
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [
+            5
+          ],
+          "season_not_harvest": []
+        }
+      }
+    },
+    "cachi_persimmon": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "castagna_chestnut": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [
+            9
+          ],
+          "season_not_harvest": []
+        },
+        "centro": {
+          "harvest_not_in_season": [
+            9
+          ],
+          "season_not_harvest": []
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [
+            9
+          ],
+          "season_not_harvest": []
+        }
+      }
+    },
+    "ciliegia_cherry": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            7
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            7
+          ]
+        }
+      }
+    },
+    "clementine_clementine": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            10
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            10
+          ]
+        }
+      }
+    },
+    "fico_fig": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            10,
+            11
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            10,
+            11
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            11
+          ]
+        }
+      }
+    },
+    "fragola_strawberry": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "kiwi_kiwifruit": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            12
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            12
+          ]
+        }
+      }
+    },
+    "lampone_raspberry": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "limone_lemon": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "mandarino_mandarin": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [
+            3
+          ],
+          "season_not_harvest": []
+        },
+        "centro": {
+          "harvest_not_in_season": [
+            3
+          ],
+          "season_not_harvest": []
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [
+            3,
+            4
+          ],
+          "season_not_harvest": []
+        }
+      }
+    },
+    "mela_apple": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [
+            5
+          ],
+          "season_not_harvest": []
+        },
+        "centro": {
+          "harvest_not_in_season": [
+            5
+          ],
+          "season_not_harvest": []
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [
+            5
+          ],
+          "season_not_harvest": []
+        }
+      }
+    },
+    "melograno_pomegranate": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [
+            12
+          ],
+          "season_not_harvest": []
+        },
+        "centro": {
+          "harvest_not_in_season": [
+            12
+          ],
+          "season_not_harvest": []
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [
+            9,
+            12
+          ],
+          "season_not_harvest": []
+        }
+      }
+    },
+    "mirtillo_blueberry": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "mora_blackberry": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "pera_pear": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {
+        "nord": [
+          [
+            6,
+            7
+          ]
+        ],
+        "centro": [
+          [
+            6,
+            7
+          ]
+        ],
+        "sud_isole": [
+          [
+            6,
+            7
+          ]
+        ]
+      },
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            4,
+            5
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            4,
+            5
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [
+            7
+          ],
+          "season_not_harvest": [
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      }
+    },
+    "pesca_peach": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "sud_isole": {
+          "harvest_not_in_season": [
+            5,
+            10
+          ],
+          "season_not_harvest": []
+        }
+      }
+    },
+    "susina_plum": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "uva_table_grape": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            7,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            7,
+            12
+          ]
+        }
+      }
+    },
+    "banana_banana": {
+      "peak_italy": false,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "mango_mango": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [
+            11
+          ],
+          "season_not_harvest": []
+        },
+        "centro": {
+          "harvest_not_in_season": [
+            11
+          ],
+          "season_not_harvest": []
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [
+            11
+          ],
+          "season_not_harvest": []
+        }
+      }
+    },
+    "avocado_avocado": {
+      "peak_italy": false,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [
+            1,
+            2,
+            3,
+            4,
+            10,
+            11,
+            12
+          ],
+          "season_not_harvest": []
+        },
+        "centro": {
+          "harvest_not_in_season": [
+            1,
+            2,
+            3,
+            4,
+            10,
+            11,
+            12
+          ],
+          "season_not_harvest": []
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [
+            1,
+            2,
+            3,
+            4,
+            10,
+            11,
+            12
+          ],
+          "season_not_harvest": []
+        }
+      }
+    },
+    "basilico_basil": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "peperoncino_chili_pepper": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "prezzemolo_parsley": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {
+        "sud_isole": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "harvest_mismatch": {}
+    },
+    "rosmarino_rosemary": {
+      "peak_italy": false,
+      "peak_eufic": false,
+      "flat_italy": true,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "salvia_sage": {
+      "peak_italy": false,
+      "peak_eufic": false,
+      "flat_italy": true,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "origano_oregano": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [
+            1,
+            11,
+            12
+          ],
+          "season_not_harvest": [
+            5
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [
+            1,
+            11,
+            12
+          ],
+          "season_not_harvest": [
+            4,
+            5
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [
+            1,
+            12
+          ],
+          "season_not_harvest": [
+            3,
+            4
+          ]
+        }
+      }
+    },
+    "timo_thyme": {
+      "peak_italy": false,
+      "peak_eufic": false,
+      "flat_italy": true,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "menta_mint": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "erba_cipollina_chives": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "zafferano_saffron": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "fungo_porcino_porcini_mushroom": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [
+            6
+          ],
+          "season_not_harvest": [
+            8
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [
+            5
+          ],
+          "season_not_harvest": [
+            7,
+            8
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            6,
+            7,
+            8
+          ]
+        }
+      }
+    },
+    "fungo_champignon_button_mushroom": {
+      "peak_italy": false,
+      "peak_eufic": true,
+      "flat_italy": true,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "fungo_pleurotus_oyster_mushroom": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [
+            1,
+            2,
+            12
+          ],
+          "season_not_harvest": [
+            7,
+            8,
+            9
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [
+            1,
+            2,
+            12
+          ],
+          "season_not_harvest": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [
+            1,
+            2,
+            3
+          ],
+          "season_not_harvest": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      }
+    },
+    "mais_corn": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "farro_emmer": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      }
+    },
+    "orzo_barley": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      }
+    },
+    "grano_duro_durum_wheat": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      }
+    },
+    "riso_rice": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            11,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            11,
+            12
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            11,
+            12
+          ]
+        }
+      }
+    },
+    "avena_oat": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      }
+    },
+    "grano_saraceno_buckwheat": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            11,
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            11,
+            12
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            10,
+            11,
+            12
+          ]
+        }
+      }
+    },
+    "cavolo_rosso_red_cabbage": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "sedano_rapa_celeriac": {
+      "peak_italy": false,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "indivia_belga_belgian_endive": {
+      "peak_italy": false,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "scarola_escarole": {
+      "peak_italy": false,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "indivia_riccia_curly_endive": {
+      "peak_italy": false,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "cipollotto_spring_onion": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "agretti_saltwort": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "crescione_watercress": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {
+        "nord": [
+          [
+            7,
+            8
+          ]
+        ],
+        "centro": [
+          [
+            7,
+            8
+          ]
+        ],
+        "sud_isole": [
+          [
+            7,
+            8
+          ]
+        ]
+      },
+      "harvest_mismatch": {}
+    },
+    "rabarbaro_rhubarb": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {
+        "nord": [
+          [
+            7,
+            8
+          ]
+        ],
+        "centro": [
+          [
+            7,
+            8
+          ]
+        ],
+        "sud_isole": [
+          [
+            7,
+            8
+          ]
+        ]
+      },
+      "harvest_mismatch": {}
+    },
+    "rafano_horseradish": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "scorzonera_black_salsify": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "cavolo_cinese_chinese_cabbage": {
+      "peak_italy": false,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "patata_dolce_sweet_potato": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "navone_swede": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "daikon_daikon": {
+      "peak_italy": false,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "taccola_snow_pea": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "broccolo_romanesco_romanesco": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "puntarelle_puntarelle": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "asparago_selvatico_wild_asparagus": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "salicornia_samphire": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "gombo_okra": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "zucchina_spinosa_chayote": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "lampascioni_tassel_hyacinth": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "cicerchia_grass_pea": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "nespola_loquat": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "pompelmo_grapefruit": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "mela_cotogna_quince": {
+      "peak_italy": false,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "ribes_redcurrant": {
+      "peak_italy": false,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "pesca_noce_nectarine": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "fico_d_india_prickly_pear": {
+      "peak_italy": false,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "litchi_lychee": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "lime_lime": {
+      "peak_italy": false,
+      "peak_eufic": false,
+      "flat_italy": true,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "ananas_pineapple": {
+      "peak_italy": false,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "papaya_papaya": {
+      "peak_italy": false,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "maracuja_passion_fruit": {
+      "peak_italy": false,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "amarena_sour_cherry": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "noce_walnut": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "nocciola_hazelnut": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            10
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            10
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            10
+          ]
+        }
+      }
+    },
+    "mandorla_almond": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "pistacchio_pistachio": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "ribes_nero_blackcurrant": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "uva_spina_gooseberry": {
+      "peak_italy": false,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "mirtillo_rosso_lingonberry": {
+      "peak_italy": false,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "sambuco_elderberry": {
+      "peak_italy": false,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "gelso_mulberry": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "alchechengi_cape_gooseberry": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [
+            10
+          ],
+          "season_not_harvest": []
+        },
+        "centro": {
+          "harvest_not_in_season": [
+            10
+          ],
+          "season_not_harvest": []
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [
+            10
+          ],
+          "season_not_harvest": []
+        }
+      }
+    },
+    "cocco_coconut": {
+      "peak_italy": false,
+      "peak_eufic": false,
+      "flat_italy": true,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "carruba_carob": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "giuggiola_jujube": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "nespola_comune_medlar": {
+      "peak_italy": true,
+      "peak_eufic": true,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {
+        "nord": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            12
+          ]
+        },
+        "centro": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            12
+          ]
+        },
+        "sud_isole": {
+          "harvest_not_in_season": [],
+          "season_not_harvest": [
+            12
+          ]
+        }
+      }
+    },
+    "mirabella_mirabelle_plum": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "cedro_citron": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "chinotto_chinotto": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "oliva_olive": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "fungo_ovolo_caesars_mushroom": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "tartufo_nero_black_truffle": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "tartufo_bianco_white_truffle": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "finferlo_chanterelle": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "spugnola_morel": {
+      "peak_italy": true,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "shiitake_shiitake": {
+      "peak_italy": false,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    },
+    "cardoncello_king_oyster_mushroom": {
+      "peak_italy": false,
+      "peak_eufic": false,
+      "flat_italy": false,
+      "gaps": {},
+      "harvest_mismatch": {}
+    }
+  },
+  "summary": {
+    "items": 153,
+    "with_peak_italy": 128,
+    "with_peak_eufic": 70,
+    "flat_italy": 6,
+    "flat_everywhere": 5,
+    "with_gaps": 6,
+    "with_harvest_mismatch": 58
+  }
+}

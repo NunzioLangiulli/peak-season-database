@@ -1,0 +1,428 @@
+{
+  "limone_lemon": {
+    "pl": "temperatura_ambiente",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Limone pesante e sodo, giallo intenso e uniforme, senza muffe, parti secche o molli.",
+      "Heavy, firm lemon of intense, even yellow, with no mould, dry or soft spots."
+    ],
+    "ds": [
+      "Scegli limoni pesanti per la loro grandezza, sodi e turgidi, con buccia di colore giallo intenso e uniforme, senza muffe, macchie, zone secche o danni da gelo. Una buccia sottile e liscia di solito indica più succo. Sono tutelati, tra gli altri, il Limone di Sorrento IGP, il Limone Costa d'Amalfi IGP e il Limone di Siracusa IGP.",
+      "Choose lemons that are heavy for their size, firm and turgid, with intense, even yellow peel, free of mould, spots, dry areas or frost damage. Thin, smooth peel usually means more juice. Protected Italian lemons include Limone di Sorrento PGI, Limone Costa d'Amalfi PGI and Limone di Siracusa PGI."
+    ],
+    "cs": [
+      "Ambiente 10 gg · frigo fino a 3 sett.",
+      "Room 10 days · fridge up to 3 wks"
+    ],
+    "si": [
+      "In casa si conservano fino a due settimane in frigorifero, meglio nel cassetto e in un sacchetto per non farli disidratare; fuori dal frigo durano circa una settimana in un luogo fresco. L'ideale professionale è 12-14 °C: sotto i 10 °C per lunghi periodi la buccia può danneggiarsi.",
+      "At home they keep up to two weeks in the fridge, best in the crisper inside a bag so they don't dry out; outside the fridge they last about a week in a cool place. The professional ideal is 12-14 °C: below 10 °C for long periods the peel can be damaged."
+    ],
+    "cn": [
+      "Sotto i 10 °C per lunghi periodi: butterature della buccia (\"peteca\"), macchie e alterazione interna.",
+      "Below 10 °C for long periods: peel pitting (\"peteca\"), staining and internal discoloration."
+    ],
+    "hb": [
+      "Per 100 g è ricco di vitamina C e fonte di rame. Il succo aiuta ad assorbire il ferro dei vegetali e impedisce l'annerimento di frutta e verdura tagliate.",
+      "Per 100 g it is high in vitamin C and a source of copper. Its juice helps absorb plant iron and stops cut fruit and vegetables from browning."
+    ],
+    "wr": [
+      "La scorza dei limoni non trattati si grattugia e si congela; le bucce spremute aromatizzano acqua, zucchero e liquori o, bollite, sgrassano le superfici.",
+      "Zest of untreated lemons can be grated and frozen; squeezed peels flavour water, sugar and liqueurs or, boiled, make a degreasing cleaner."
+    ]
+  },
+  "mandarino_mandarin": {
+    "pl": "temperatura_ambiente",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Mandarini interi e sodi, buccia arancio intenso e turgida, senza macchie o parti molli.",
+      "Whole, firm mandarins with deep orange, turgid peel and no spots or soft parts."
+    ],
+    "ds": [
+      "Scegli frutti interi, sani e puliti, con buccia turgida di colore arancio intenso e senza macchie; devono essere sodi e pesanti e la buccia deve staccarsi facilmente. Non maturano dopo la raccolta.",
+      "Choose whole, sound, clean fruit with turgid, deep orange peel free of blemishes; they should be firm and heavy and the peel should come away easily. They don't ripen after harvest."
+    ],
+    "cs": [
+      "Ambiente 10 gg · frigo fino a 3 sett.",
+      "Room 10 days · fridge up to 3 wks"
+    ],
+    "si": [
+      "Si conservano circa due settimane in frigorifero (o qualche giorno in un luogo fresco). L'ideale professionale è 5-8 °C con umidità del 95%, fino a 4 settimane: sotto i 5 °C possono comparire danni da freddo sulla buccia.",
+      "They keep about two weeks in the fridge (or a few days in a cool place). The professional ideal is 5-8 °C with 95% humidity, up to 4 weeks: below 5 °C chilling injury may appear on the peel."
+    ],
+    "cn": [
+      "Sotto i 5 °C: butterature e macchie brune sulla buccia.",
+      "Below 5 °C: pitting and brown spots on the peel."
+    ],
+    "hb": [
+      "Poco calorico perché ricco d'acqua, per 100 g è ricco di vitamina C e fonte di folati; contiene anche caroteni e potassio. Ha più semi della clementina.",
+      "Low in calories because it is so watery, per 100 g it is high in vitamin C and a source of folate; it also contains carotenes and potassium. It has more seeds than the clementine."
+    ],
+    "wr": [
+      "Le bucce non trattate, essiccate, profumano tè, tisane, dolci e liquori casalinghi.",
+      "Untreated peels, dried, flavour tea, herbal teas, desserts and homemade liqueurs."
+    ]
+  },
+  "mela_apple": {
+    "pl": "frigorifero",
+    "rt": "climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "uc_davis",
+      "crea"
+    ],
+    "sl": [
+      "Mela soda, lucida e intera, colore tipico della varietà, senza ammaccature, macchie o annerimenti.",
+      "Firm, glossy, whole apple in its variety's colour, no bruises, spots or blackening."
+    ],
+    "ds": [
+      "Scegli mele sode, lucide e integre, con il colore tipico della varietà, senza ammaccature, ticchiolatura (macchie scure) o annerimenti e con il picciolo integro. Una mela che cede alla pressione o ha la buccia raggrinzita è vecchia o farinosa. In Italia sono tutelate, tra le altre, la Mela Alto Adige IGP, la Mela Val di Non DOP e la Melannurca Campana IGP.",
+      "Choose firm, glossy, intact apples with their variety's typical colour, free of bruises, scab (dark spots) or blackening and with the stem intact. An apple that gives under pressure or has wrinkled skin is old or mealy. Protected Italian apples include Mela Alto Adige PGI, Mela Val di Non PDO and Melannurca Campana PGI."
+    ],
+    "cs": [
+      "Frigo · 4-6 settimane",
+      "Fridge · 4-6 weeks"
+    ],
+    "si": [
+      "In casa conservale in frigorifero, nel cassetto, fino a 10 giorni (a temperatura ambiente maturano e si ammorbidiscono molto più in fretta). In condizioni professionali a circa 0 °C durano mesi. Producono molto etilene: tienile separate da verdure a foglia, broccoli, carote, kiwi e cachi, che altrimenti ingialliscono o si ammorbidiscono.",
+      "At home keep them in the fridge crisper for up to 10 days (at room temperature they ripen and soften much faster). Under professional conditions at about 0 °C they last for months. They produce a lot of ethylene: keep them apart from leafy greens, broccoli, carrots, kiwis and persimmons, which would otherwise yellow or soften."
+    ],
+    "hb": [
+      "Ricca di fibre (soprattutto pectina) e povera di calorie, per 100 g è fonte di tiamina. Gran parte dei polifenoli si trova nella buccia: meglio mangiarla ben lavata.",
+      "High in fibre (especially pectin) and low in calories, per 100 g it is a source of thiamin. Much of its polyphenol content is in the skin: best eaten well washed."
+    ],
+    "wr": [
+      "Torsoli e bucce bolliti danno una pectina naturale per addensare le confetture; le mele un po' farinose sono perfette cotte, in torte, composte e strudel.",
+      "Boiled cores and peels give a natural pectin to set jams; slightly mealy apples are perfect cooked, in cakes, compotes and strudel."
+    ]
+  },
+  "melograno_pomegranate": {
+    "pl": "temperatura_ambiente",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Frutto pesante, buccia ben colorata, integra e soda, senza spaccature, raggrinzimenti o scottature.",
+      "Heavy fruit with well-coloured, intact, firm skin; no cracks, shrivelling or sunburn."
+    ],
+    "ds": [
+      "Scegli melograni pesanti per la loro grandezza, con buccia fresca, integra e ben colorata, senza spaccature, raggrinzimenti, scottature solari o macchie. Un frutto pesante ha arilli più succosi. Non matura dopo la raccolta.",
+      "Choose pomegranates that are heavy for their size, with fresh, intact, well-coloured skin free of cracks, shrivelling, sunburn or spots. A heavy fruit has juicier arils. It does not ripen after harvest."
+    ],
+    "cs": [
+      "Ambiente 2-5 gg · frigo 1-3 mesi",
+      "Room 2-5 days · fridge 1-3 months"
+    ],
+    "si": [
+      "Conservalo intero nel cassetto del frigorifero fino a due settimane, oppure in un luogo fresco per qualche giorno; gli arilli sgranati si conservano in frigo 3-4 giorni o si congelano. L'ideale professionale è 5 °C (fino a 2 mesi): sotto i 5 °C è sensibile al freddo. Si disidrata facilmente.",
+      "Keep it whole in the fridge crisper for up to two weeks, or in a cool place for a few days; shelled arils keep 3-4 days in the fridge or can be frozen. The professional ideal is 5 °C (up to 2 months): below 5 °C it is chilling-sensitive. It dries out easily."
+    ],
+    "cn": [
+      "Sotto i 5 °C: butterature e imbrunimento della buccia e maggiore suscettibilità ai marciumi.",
+      "Below 5 °C: pitting and browning of the rind and greater susceptibility to decay."
+    ],
+    "hb": [
+      "Per 100 g è fonte di vitamina K, vitamina B6, folati e rame e contiene molti polifenoli, concentrati nel succo e negli arilli.",
+      "Per 100 g it is a source of vitamin K, vitamin B6, folate and copper and contains plenty of polyphenols, concentrated in the juice and arils."
+    ],
+    "wr": [
+      "Gli arilli si congelano sgranati per insalate, risotti e dolci tutto l'anno; il succo dei frutti un po' vecchi diventa sciroppo o glassa.",
+      "Arils freeze well for salads, risottos and desserts all year round; juice from slightly old fruit becomes syrup or glaze."
+    ]
+  },
+  "mirtillo_blueberry": {
+    "pl": "frigorifero",
+    "rt": "climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "uc_davis",
+      "crea"
+    ],
+    "sl": [
+      "Bacche sode, blu scuro uniforme con pruina; niente muffa, foglie o succo nella vaschetta.",
+      "Firm berries of even dark blue with bloom; no mould, leaves or juice in the punnet."
+    ],
+    "ds": [
+      "Scegli mirtilli sodi e turgidi, completamente blu (poco o nessun rosso vicino al picciolo), ricoperti dalla tipica patina chiara (pruina), senza foglie, impurità, muffe o succo sul fondo della confezione.",
+      "Choose firm, turgid blueberries that are fully blue (little or no red at the stem end), covered with the typical pale bloom, with no leaves, debris, mould or juice at the bottom of the pack."
+    ],
+    "cs": [
+      "Frigo · 1-2 settimane",
+      "Fridge · 1-2 weeks"
+    ],
+    "si": [
+      "Conservali in frigorifero non lavati e consumali entro un paio di giorni, oppure congelali. In condizioni professionali (-0,5/0 °C, umidità oltre il 90%) durano fino a 2 settimane. L'etilene favorisce la muffa grigia.",
+      "Keep them unwashed in the fridge and eat within a couple of days, or freeze them. Professionally (-0.5/0 °C, humidity above 90%) they last up to 2 weeks. Ethylene promotes grey mould."
+    ],
+    "hb": [
+      "Poco calorici, per 100 g sono fonte di vitamina K, vitamina C e manganese e contengono molti polifenoli (antociani, che danno il colore blu).",
+      "Low in calories, per 100 g they are a source of vitamin K, vitamin C and manganese and are rich in polyphenols (anthocyanins, which give the blue colour)."
+    ],
+    "wr": [
+      "Quelli morbidi si congelano o diventano sciroppi, salse per yogurt e confetture.",
+      "Soft ones can be frozen or turned into syrups, yogurt sauces and jams."
+    ]
+  },
+  "mora_blackberry": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "More nere lucide e turgide, senza calice né parti rosse; niente muffa o succo nella vaschetta.",
+      "Glossy, plump black berries without caps or red parts; no mould or juice in the punnet."
+    ],
+    "ds": [
+      "Le more mature sono completamente nere, lucide, turgide e di forma regolare, senza calice, parti rosse, muffe o scottature. Le more con zone rosse sono acerbe e non matureranno.",
+      "Ripe blackberries are fully black, glossy, plump and regularly shaped, with no cap, red parts, mould or sunscald. Berries with red areas are unripe and will not ripen further."
+    ],
+    "cs": [
+      "Frigo · 1 giorno · o freezer",
+      "Fridge · 1 day · or freezer"
+    ],
+    "si": [
+      "Sono molto deperibili: conservale in frigorifero non lavate e consumale in giornata, oppure congelale stese su un vassoio. Professionalmente si conservano 2-14 giorni (secondo la varietà) a -0,5/0 °C. L'etilene favorisce la muffa grigia.",
+      "They are highly perishable: keep them unwashed in the fridge and eat the same day, or freeze them spread on a tray. Professionally they keep 2-14 days (depending on variety) at -0.5/0 °C. Ethylene promotes grey mould."
+    ],
+    "hb": [
+      "Poco caloriche e ricche di fibre, per 100 g sono fonte di vitamina C e contengono molti polifenoli.",
+      "Low in calories and high in fibre, per 100 g they are a source of vitamin C and are rich in polyphenols."
+    ],
+    "wr": [
+      "Le more troppo mature si cuociono brevemente in una salsa per dolci e yogurt o diventano confettura.",
+      "Over-ripe blackberries can be cooked briefly into a sauce for desserts and yogurt or made into jam."
+    ]
+  },
+  "pera_pear": {
+    "pl": "frigorifero",
+    "rt": "climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Pera intera con peduncolo intatto, senza annerimenti o ammaccature; matura se cede al collo.",
+      "Whole pear with intact stem, no blackening or bruises; ripe when it yields at the neck."
+    ],
+    "ds": [
+      "Scegli pere integre, con il peduncolo intatto e senza annerimenti o ammaccature. Le pere si raccolgono sode e maturano dopo: sono pronte quando cedono leggermente alla pressione vicino al picciolo. Una pera matura ha polpa succosa e fondente e l'aroma tipico della varietà. Sono tutelate la Pera dell'Emilia-Romagna IGP e la Pera mantovana IGP.",
+      "Choose intact pears with the stem on and no blackening or bruises. Pears are picked firm and ripen afterwards: they are ready when they yield slightly to pressure near the stem. A ripe pear has juicy, melting flesh and its variety's typical aroma. Protected Italian pears include Pera dell'Emilia-Romagna PGI and Pera mantovana PGI."
+    ],
+    "cs": [
+      "Frigo (cassetto) · fino a 1 settimana",
+      "Fridge (crisper) · up to 1 week"
+    ],
+    "si": [
+      "Se sono ancora sode lasciale maturare a temperatura ambiente; quelle mature vanno nel cassetto del frigorifero e si consumano entro una settimana. Professionalmente si conservano a -1 °C, temperatura alla quale durano molto più che a 0 °C.",
+      "If still firm, let them ripen at room temperature; ripe ones go in the fridge crisper and should be eaten within a week. Professionally they are stored at -1 °C, where they last much longer than at 0 °C."
+    ],
+    "hb": [
+      "Ricca d'acqua e di fibre, contiene potassio e poche calorie. È spesso tra i primi frutti proposti nello svezzamento perché poco allergizzante.",
+      "Rich in water and fibre, it contains potassium and few calories. It is often among the first fruits offered when weaning because it is rarely allergenic."
+    ],
+    "wr": [
+      "Le pere troppo sode o un po' rovinate sono ottime cotte al vino o al forno, in torte e composte; le bucce aromatizzano infusi.",
+      "Pears that are too hard or slightly damaged are excellent poached in wine or baked, in cakes and compotes; peels flavour infusions."
+    ]
+  },
+  "pesca_peach": {
+    "pl": "temperatura_ambiente",
+    "rt": "climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Pesca soda e profumata, colore di fondo giallo o crema senza verde; niente macchie o lesioni.",
+      "Firm, fragrant peach with yellow or cream ground colour, no green; no spots or injuries."
+    ],
+    "ds": [
+      "Scegli pesche sane, sode e profumate, senza macchie, ammaccature o lesioni. Il colore di fondo (non il rosso) indica la maturazione: deve essere giallo o crema, non verde. Le pesche continuano ad ammorbidirsi dopo la raccolta, ma non diventano più dolci. La Pesca di Verona IGP e la Pesca di Leonforte IGP sono tutelate.",
+      "Choose sound, firm, fragrant peaches without spots, bruises or injuries. The ground colour (not the red blush) shows ripeness: it should be yellow or cream, not green. Peaches keep softening after harvest but do not get sweeter. Pesca di Verona PGI and Pesca di Leonforte PGI are protected."
+    ],
+    "cs": [
+      "Ambiente finché matura · frigo max 3 gg",
+      "Room temp until ripe · fridge max 3 days"
+    ],
+    "si": [
+      "Lasciale a temperatura ambiente finché sono mature, poi mettile nel cassetto del frigorifero e consumale entro 3 giorni. Il frigorifero domestico (2-7 °C) è proprio la fascia in cui molte varietà sviluppano prima i danni da freddo: non tenerle in frigo a lungo. Professionalmente si conservano a -1/0 °C.",
+      "Leave them at room temperature until ripe, then put them in the fridge crisper and eat within 3 days. The home fridge (2-7 °C) is exactly the range where many varieties develop chilling injury fastest: don't keep them refrigerated for long. Professionally they are stored at -1/0 °C."
+    ],
+    "cn": [
+      "Polpa farinosa e asciutta, imbrunimento interno e perdita di sapore (\"internal breakdown\"), più rapidi tra 2 e 7 °C.",
+      "Mealy, dry flesh, internal browning and loss of flavour (\"internal breakdown\"), fastest between 2 and 7 °C."
+    ],
+    "hb": [
+      "Dolce ma non particolarmente zuccherina, contiene fibre, potassio e caroteni (soprattutto nelle varietà a polpa gialla).",
+      "Sweet but not especially sugary, it contains fibre, potassium and carotenes (especially in yellow-fleshed varieties)."
+    ],
+    "wr": [
+      "Le pesche troppo mature sono ottime grigliate, al forno, in frullati, confetture o sciroppate; la buccia si può mangiare ben lavata.",
+      "Over-ripe peaches are great grilled, baked, in smoothies, jams or preserved in syrup; the skin can be eaten well washed."
+    ]
+  },
+  "susina_plum": {
+    "pl": "temperatura_ambiente",
+    "rt": "climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Susine sode ma elastiche, colore tipico senza parti verdi, pruina intatta, senza lesioni.",
+      "Firm but springy plums, typical colour with no green, intact bloom, no blemishes."
+    ],
+    "ds": [
+      "Scegli susine sane e pulite, del colore tipico della varietà e senza parti verdi, sode ma leggermente elastiche, senza segni di parassiti o lesioni. La patina chiara (pruina) intatta indica che il frutto è stato maneggiato poco.",
+      "Choose sound, clean plums with their variety's typical colour and no green parts, firm but slightly springy, with no pest marks or injuries. An intact pale bloom shows the fruit has been handled little."
+    ],
+    "cs": [
+      "Ambiente finché matura · frigo max 3 gg",
+      "Room temp until ripe · fridge max 3 days"
+    ],
+    "si": [
+      "Lasciale maturare a temperatura ambiente, poi conservale in frigorifero al massimo 3 giorni. Molte varietà soffrono il freddo a 5 °C: evita di tenerle a lungo nel frigo domestico. Professionalmente si conservano a -1/0 °C con umidità 90-95%.",
+      "Let them ripen at room temperature, then keep them in the fridge for 3 days at most. Many varieties suffer chilling injury at 5 °C: avoid keeping them long in a home fridge. Professionally they are stored at -1/0 °C with 90-95% humidity."
+    ],
+    "cn": [
+      "A circa 5 °C: polpa traslucida o farinosa e imbrunimento interno (internal breakdown).",
+      "At about 5 °C: translucent or mealy flesh and internal browning (internal breakdown)."
+    ],
+    "hb": [
+      "È composta soprattutto da acqua e contiene fibre, potassio e antociani; le prugne secche concentrano zuccheri, fibre e sorbitolo, da cui il noto effetto lassativo.",
+      "It is mostly water and contains fibre, potassium and anthocyanins; prunes concentrate sugars, fibre and sorbitol, hence their well-known laxative effect."
+    ],
+    "wr": [
+      "Le susine mature avanzate sono perfette per crostate, confetture e composte o essiccate in forno.",
+      "Leftover ripe plums are perfect for tarts, jams and compotes, or dried in the oven."
+    ]
+  },
+  "uva_table_grape": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Acini turgidi e ben attaccati, raspo verde e flessibile, senza macchie, muffe o acini caduti.",
+      "Plump berries firmly attached, green flexible stem, no spots, mould or loose berries."
+    ],
+    "ds": [
+      "Scegli grappoli con acini turgidi, gonfi e ben attaccati al raspo, senza macchie, muffe o acini schiacciati. Il raspo deve essere verde e flessibile: se è secco e marrone l'uva è stata raccolta da tempo. Non matura dopo la raccolta. L'Uva da tavola di Canicattì IGP e di Mazzarrone IGP sono tutelate.",
+      "Choose bunches with plump, swollen berries firmly attached to the stem, free of spots, mould or crushed berries. The stem should be green and flexible: if dry and brown the grapes were picked long ago. Grapes don't ripen after harvest. Uva da tavola di Canicattì PGI and di Mazzarrone PGI are protected."
+    ],
+    "cs": [
+      "Frigo · max 1 settimana",
+      "Fridge · max 1 week"
+    ],
+    "si": [
+      "Conservala in frigorifero non lavata, in un sacchetto forato o in un contenitore aperto, al massimo una settimana; lavala solo prima di mangiarla. Professionalmente si conserva a -1/0 °C con umidità 90-95%. Non teme il freddo.",
+      "Keep it unwashed in the fridge in a perforated bag or open container for a week at most; wash it only before eating. Professionally it is stored at -1/0 °C with 90-95% humidity. It tolerates cold."
+    ],
+    "hb": [
+      "Ricca di zuccheri, per 100 g è fonte di rame e contiene potassio e vitamina C. Le varietà nere e rosse sono particolarmente ricche di polifenoli, concentrati nella buccia.",
+      "Rich in sugars, per 100 g it is a source of copper and contains potassium and vitamin C. Black and red varieties are especially rich in polyphenols, concentrated in the skin."
+    ],
+    "wr": [
+      "Gli acini staccati si congelano e diventano cubetti per bevande o snack; quelli un po' appassiti sono ottimi in focacce, schiacciate e salse per carne.",
+      "Loose berries can be frozen into drink ice cubes or snacks; slightly shrivelled ones are great in focaccia, schiacciata and sauces for meat."
+    ]
+  },
+  "banana_banana": {
+    "pl": "temperatura_ambiente",
+    "rt": "climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Banane gialle o con punte verdi, buccia senza ammaccature; cedono un po' ma non si spappolano.",
+      "Yellow or green-tipped bananas, unbruised skin; slightly yielding but not mushy."
+    ],
+    "ds": [
+      "Scegli banane pulite, senza cicatrici, ammaccature o lesioni, di colore giallo (o con punte ancora verdi, se vuoi consumarle più avanti). Alla pressione di un dito devono cedere leggermente senza spappolarsi. Le macchie marroni indicano una banana molto matura e più dolce.",
+      "Choose clean bananas without scars, bruises or injuries, yellow in colour (or with green tips if you want to eat them later). They should yield slightly to finger pressure without turning mushy. Brown speckles indicate a very ripe, sweeter banana."
+    ],
+    "cs": [
+      "Fuori frigo · fino a 5 giorni",
+      "Out of the fridge · up to 5 days"
+    ],
+    "si": [
+      "Conservale fuori dal frigorifero, a temperatura ambiente e lontane dal sole, fino a 5 giorni. Sotto i 13 °C subiscono danni da freddo: la buccia annerisce e la polpa non matura bene. Producono etilene e ne sono sensibili: tienile separate dalle verdure a foglia; per farle maturare più in fretta chiudile in un sacchetto di carta.",
+      "Keep them out of the fridge at room temperature and away from sunlight, for up to 5 days. Below 13 °C they suffer chilling injury: the skin blackens and the flesh doesn't ripen properly. They produce ethylene and are sensitive to it: keep them away from leafy greens; to ripen them faster, close them in a paper bag."
+    ],
+    "cn": [
+      "Sotto i 13 °C: buccia che diventa grigia o nera, polpa che matura male e con sapore scadente.",
+      "Below 13 °C: skin turns grey or black, flesh ripens poorly with a dull flavour."
+    ],
+    "hb": [
+      "Più calorica della media dei frutti per il contenuto di zuccheri e amido, per 100 g è fonte di vitamina C, vitamina B6, potassio e manganese. Non è coltivata in Italia su scala commerciale: è un frutto d'importazione.",
+      "Higher in calories than average fruit due to its sugar and starch content, per 100 g it is a source of vitamin C, vitamin B6, potassium and manganese. It is not grown commercially in Italy: it is an imported fruit."
+    ],
+    "wr": [
+      "Le banane molto mature sono perfette per banana bread, pancake e frullati, o si congelano sbucciate per gelati istantanei.",
+      "Very ripe bananas are perfect for banana bread, pancakes and smoothies, or can be frozen peeled for instant ice cream."
+    ]
+  },
+  "mango_mango": {
+    "pl": "temperatura_ambiente",
+    "rt": "climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Mango senza macchie, buccia che cede alla pressione senza rompersi; profumo dolce al picciolo.",
+      "Unblemished mango whose skin yields to pressure without breaking; sweet aroma at the stem."
+    ],
+    "ds": [
+      "Scegli manghi senza macchie, ammaccature o parti molli, con il colore e la forma tipici della varietà. È maturo quando la buccia cede alla pressione del dito senza rompersi e il profumo vicino al picciolo è dolce. Il colore rosso non indica la dolcezza.",
+      "Choose mangoes without spots, bruises or soft parts, with their variety's typical colour and shape. It is ripe when the skin yields to finger pressure without breaking and the aroma near the stem is sweet. Red colour does not indicate sweetness."
+    ],
+    "cs": [
+      "Fuori frigo · 4-5 giorni",
+      "Out of the fridge · 4-5 days"
+    ],
+    "si": [
+      "Conservalo fuori dal frigorifero fino a 4-5 giorni, lasciandolo maturare a temperatura ambiente. Il mango acerbo soffre il freddo sotto i 10 °C; quello maturo si può tenere in frigo qualche giorno (7-8 °C). Si può raffreddare per pochi minuti prima di tagliarlo.",
+      "Keep it out of the fridge for up to 4-5 days, letting it ripen at room temperature. Unripe mango is damaged below 10 °C; ripe mango can be kept in the fridge a few days (7-8 °C). It can be chilled for a few minutes before cutting."
+    ],
+    "cn": [
+      "Sotto i 10 °C (soprattutto se appena maturo): buccia grigiastra con macchie, maturazione irregolare e scarso sapore.",
+      "Below 10 °C (especially just mature): greyish, blotchy skin, uneven ripening and poor flavour."
+    ],
+    "hb": [
+      "Per 100 g è ricco di vitamina A (caroteni) e vitamina C e fonte di folati e manganese. Arriva in gran parte d'importazione, ma piccole produzioni esistono anche in Sicilia.",
+      "Per 100 g it is high in vitamin A (carotenes) and vitamin C and a source of folate and manganese. It is largely imported, though small crops also exist in Sicily."
+    ],
+    "wr": [
+      "Raschia la polpa rimasta attaccata al nocciolo con un cucchiaio per frullati, salse e dolci; il mango troppo maturo diventa chutney o sorbetto.",
+      "Scrape the flesh left on the stone with a spoon for smoothies, sauces and desserts; over-ripe mango becomes chutney or sorbet."
+    ]
+  }
+}

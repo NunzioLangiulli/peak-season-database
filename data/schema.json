@@ -1,0 +1,491 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://peakseason.app/schema/database-2.0.json",
+  "title": "Peak Season - Database alimenti stagionali (v2)",
+  "description": "Schema definitivo Fase 1. Deviazioni concordate dallo schema del prompt: vitamine/minerali come oggetti con quantità; note di coltivazione per Nord/Centro/Sud; stagionalità EUFIC anche per Paese; campi nulli ammessi solo se elencati in data_completeness.missing_fields (controllo in validate_db.py).",
+  "type": "object",
+  "required": ["metadata", "items"],
+  "additionalProperties": false,
+  "properties": {
+    "metadata": { "$ref": "#/$defs/Metadata" },
+    "shared_descriptions_corpus": {
+      "description": "Testi descrittivi comuni a più prodotti, scritti una volta sola (scripts/corpus.py). Chiave parlante (campo__parole_chiave) -> {it, en}. Nei prodotti: {corpus_ref} oppure {corpus_ref, specific_addition}; testo completo = corpus + ' ' + aggiunta.",
+      "type": "object", "propertyNames": { "pattern": "^[a-z0-9_]+$" }, "additionalProperties": { "$ref": "#/$defs/BilingualText" } },
+    "items": { "type": "array", "items": { "$ref": "#/$defs/Item" } }
+  },
+  "$defs": {
+    "BilingualText": {
+      "type": "object", "required": ["it", "en"], "additionalProperties": false,
+      "properties": { "it": { "type": "string", "minLength": 1 }, "en": { "type": "string", "minLength": 1 } }
+    },
+    "CorpusRef": {
+      "description": "Riferimento a shared_descriptions_corpus, con eventuale aggiunta specifica del prodotto (validate_db.py controlla che la chiave esista)",
+      "type": "object", "required": ["corpus_ref"], "additionalProperties": false,
+      "properties": { "corpus_ref": { "type": "string", "pattern": "^[a-z0-9_]+$" }, "specific_addition": { "$ref": "#/$defs/BilingualText" } }
+    },
+    "Bilingual": { "anyOf": [ { "$ref": "#/$defs/BilingualText" }, { "$ref": "#/$defs/CorpusRef" } ] },
+    "BilingualOrNull": { "anyOf": [ { "$ref": "#/$defs/Bilingual" }, { "type": "null" } ] },
+    "BilingualList": {
+      "type": "object", "required": ["it", "en"], "additionalProperties": false,
+      "properties": {
+        "it": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "en": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+      }
+    },
+    "SeasonState": { "enum": ["primizie", "in_season", "peak_season", "end_of_season", "out_of_season", "not_applicable"] },
+    "Months12": {
+      "description": "Esattamente 12 valori, da Gennaio a Dicembre.",
+      "type": "array", "minItems": 12, "maxItems": 12, "items": { "$ref": "#/$defs/SeasonState" }
+    },
+    "Months12OrNull": { "anyOf": [ { "$ref": "#/$defs/Months12" }, { "type": "null" } ] },
+    "MonthNumbers": {
+      "type": "array", "uniqueItems": true, "items": { "type": "integer", "minimum": 1, "maximum": 12 }
+    },
+    "MonthNumbersOrNull": { "anyOf": [ { "$ref": "#/$defs/MonthNumbers" }, { "type": "null" } ] },
+    "RateClass": { "enum": ["very_low", "low", "moderate", "high", "very_high", "extremely_high"] },
+    "RateClassOrNull": { "anyOf": [ { "$ref": "#/$defs/RateClass" }, { "type": "null" } ] },
+    "NumOrNull": { "type": ["number", "null"] },
+    "RangeNum": {
+      "anyOf": [
+        { "type": "object", "required": ["min", "max"], "additionalProperties": false,
+          "properties": { "min": { "type": "number" }, "max": { "type": "number" } } },
+        { "type": "null" }
+      ]
+    },
+    "DayRange": {
+      "anyOf": [
+        { "type": "array", "minItems": 2, "maxItems": 2, "items": { "type": "number", "minimum": 0 } },
+        { "type": "null" }
+      ]
+    },
+    "Url": { "type": "string", "pattern": "^https?://" },
+    "UrlOrNull": { "anyOf": [ { "$ref": "#/$defs/Url" }, { "type": "null" } ] },
+    "ItemId": { "type": "string", "pattern": "^[a-z0-9]+(_[a-z0-9]+)+$" },
+    "Nutrient": {
+      "type": "object", "required": ["name", "amount", "unit"], "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 1, "description": "Nome IT (es. 'Vitamina C')" },
+        "name_en": { "type": ["string", "null"] },
+        "key": { "type": "string", "pattern": "^[a-z0-9_]+$", "description": "Chiave stabile del micronutriente (vitamin_c, folate, potassium...), usata in metadata.nutrition_claims_eu_rules" },
+        "amount": { "type": "number", "minimum": 0 },
+        "unit": { "enum": ["g", "mg", "µg"] },
+        "percent_nrv": { "type": ["number", "null"], "description": "% del Valore Nutritivo di Riferimento (Reg. UE 1169/2011 All. XIII) per 100 g" },
+        "source": { "type": ["string", "null"], "description": "crea | bda_ieo | user_draft | ..." },
+        "group": { "type": ["string", "null"], "description": "solo composti bioattivi: carotenoidi | flavonoidi | acidi_fenolici | altri_polifenoli | polifenoli_totali" },
+        "main_compounds": { "type": ["string", "null"], "description": "solo composti bioattivi: composti principali della classe (IT)" },
+        "main_compounds_en": { "type": ["string", "null"] },
+        "method": { "$ref": "#/$defs/BilingualOrNull", "description": "metodo di misura (IT/EN)" },
+        "source_food": { "type": ["string", "null"], "description": "voce della banca dati usata (con 'approx' se simile)" }
+      }
+    },
+    "AgriZone": {
+      "type": "object", "required": ["sowing_or_transplant_months", "harvest_months"], "additionalProperties": false,
+      "properties": {
+        "sowing_or_transplant_months": { "$ref": "#/$defs/MonthNumbersOrNull" },
+        "harvest_months": { "$ref": "#/$defs/MonthNumbersOrNull" },
+        "seedbed_sowing_months": { "$ref": "#/$defs/MonthNumbersOrNull" },
+        "direct_sowing_months": { "$ref": "#/$defs/MonthNumbersOrNull" },
+        "transplant_months": { "$ref": "#/$defs/MonthNumbersOrNull" },
+        "cultivation_notes": { "$ref": "#/$defs/BilingualOrNull" }
+      }
+    },
+    "ImageDetail": {
+      "type": "object", "required": ["filename", "author", "license", "source_url", "view_type"], "additionalProperties": false,
+      "properties": {
+        "filename": { "type": "string", "pattern": "^[a-z0-9_]+_[0-9]{2}\\.jpg$" },
+        "author": { "type": "string", "minLength": 1 },
+        "license": { "type": "string", "minLength": 1 },
+        "license_url": { "$ref": "#/$defs/UrlOrNull" },
+        "source_url": { "$ref": "#/$defs/Url" },
+        "provider": { "type": ["string", "null"], "description": "wikimedia_commons | usda_ars | inaturalist | unsplash | pexels | pixabay | user" },
+        "width": { "type": ["integer", "null"] },
+        "height": { "type": ["integer", "null"] },
+        "view_type": { "enum": ["full_frame", "isolated_background", "plant_in_field", "botanical_plate", "cut_section", "other"], "description": "full_frame = il prodotto riempie l'inquadratura (foto principale); isolated_background = sfondo bianco o colorato; plant_in_field = pianta; botanical_plate = tavola botanica; cut_section = tagliato; other = altro" },
+        "flags": { "type": "array", "items": { "enum": ["dish", "wrong_item"] }, "description": "Problemi noti: dish = piatto o ciotola; wrong_item = soggetto sbagliato" },
+        "variety": { "$ref": "#/$defs/BilingualOrNull" }
+      }
+    },
+    "Metadata": {
+      "type": "object",
+      "required": ["app_title", "version", "generated", "schema_version", "sustainable_diet_summary", "official_sources",
+                   "seasonality_states_legend", "eufic_climatic_zones_legend", "italy_macro_areas_legend"],
+      "properties": {
+        "app_title": { "type": "string" },
+        "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+        "generated": { "type": "string", "format": "date" },
+        "schema_version": { "type": "string" },
+        "sustainable_diet_summary": {
+          "type": "object", "required": ["it", "en", "source_url", "status"],
+          "properties": {
+            "it": { "type": ["string", "null"] }, "en": { "type": ["string", "null"] },
+            "key_points": { "anyOf": [ { "$ref": "#/$defs/BilingualList" }, { "type": "null" } ] },
+            "source_url": { "$ref": "#/$defs/Url" },
+            "status": { "enum": ["from_user_draft_unverified", "verified_from_source", "missing"] }
+          }
+        },
+        "official_sources": {
+          "type": "array",
+          "items": {
+            "type": "object", "required": ["key", "name", "url", "topics"],
+            "properties": {
+              "key": { "type": "string" }, "number": { "type": ["string", "null"] }, "name": { "type": "string" },
+              "url": { "$ref": "#/$defs/Url" }, "topics": { "type": "array", "items": { "type": "string" } },
+              "access": { "type": ["string", "null"] }, "license_note": { "type": ["string", "null"] }
+            }
+          }
+        },
+        "seasonality_states_legend": {
+          "type": "object", "required": ["primizie", "in_season", "peak_season", "end_of_season", "out_of_season", "not_applicable"],
+          "additionalProperties": {
+            "type": "object", "required": ["it", "en", "color_hex"],
+            "properties": { "it": { "type": "string" }, "en": { "type": "string" },
+                            "color_hex": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" }, "ui_label": { "$ref": "#/$defs/BilingualOrNull" } }
+          }
+        },
+        "eufic_climatic_zones_legend": { "type": "object" },
+        "italy_macro_areas_legend": { "type": "object" },
+        "generation_log": { "type": "array" }
+      }
+    },
+    "Item": {
+      "type": "object",
+      "required": ["id", "names", "category", "botany", "italian_varieties_and_territories", "images", "seasonality",
+                   "agricultural_calendar_italy", "buying_guide", "ripening_and_storage", "nutrition_and_sustainability",
+                   "sources_by_topic", "data_completeness"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/ItemId" },
+        "names": {
+          "type": "object", "required": ["it", "en"], "additionalProperties": false,
+          "properties": {
+            "it": { "type": "string", "minLength": 1 }, "en": { "type": "string", "minLength": 1 },
+            "synonyms": { "anyOf": [ { "$ref": "#/$defs/BilingualList" }, { "type": "null" } ] }
+          }
+        },
+        "category": { "enum": ["verdura", "frutta", "erbe_spezie", "funghi", "cereali"] },
+        "botany": {
+          "type": "object", "required": ["scientific_name", "eppo_code", "family", "genus", "plant_part_used"], "additionalProperties": false,
+          "properties": {
+            "scientific_name": { "type": "string", "minLength": 3 },
+            "eppo_code": { "type": ["string", "null"], "pattern": "^[0-9A-Z]{5,6}$" },
+            "eppo_preferred_name": { "type": ["string", "null"] },
+            "wfo_id": { "type": ["string", "null"], "pattern": "^wfo-[0-9]{10}$" },
+            "gbif_key": { "type": ["integer", "null"] },
+            "family": { "type": ["string", "null"] },
+            "genus": { "type": ["string", "null"] },
+            "plant_part_used": { "enum": ["frutto", "foglia", "radice", "tubero", "infiorescenza_bocciolo", "bulbo", "fusto_costa", "seme", "fiore", "fungo_carpoforo"] },
+            "upov_code": { "type": ["string", "null"], "description": "Codice di specie UPOV del Catalogo comune UE (EU Plant Variety Portal)" },
+            "upov_name": { "type": ["string", "null"] },
+            "upov_register": { "enum": ["VEG", "AGR", "FRU", null], "description": "VEG ortive (Dir. 2002/55/CE), AGR agricole (2002/53/CE), FRU frutticole (2008/90/CE)" },
+            "upov_match": { "enum": ["exact", "approx", null] },
+            "upov_note": { "$ref": "#/$defs/BilingualOrNull" },
+            "varieties_registered_italy": { "type": ["object", "null"], "description": "Numero di varietà iscritte (Registered) nel registro nazionale italiano per il codice UPOV (EU Plant Variety Portal)" }
+          }
+        },
+        "italian_varieties_and_territories": {
+          "type": "object", "required": ["notable_varieties", "has_dop_igp", "dop_igp_labels"], "additionalProperties": false,
+          "properties": {
+            "notable_varieties": { "type": ["array", "null"], "items": { "type": "string" } },
+            "has_dop_igp": { "type": ["boolean", "null"] },
+            "dop_igp_labels": { "type": ["array", "null"], "items": { "type": "string" } },
+            "eambrosia_verified": { "type": ["boolean", "null"] },
+            "varieties_verification": {
+              "type": "array", "description": "esito della verifica di ogni varietà della bozza (le non verificate sono in draft_legacy_values.json)",
+              "items": { "type": "object", "required": ["name", "verified", "sources"], "additionalProperties": false,
+                         "properties": { "name": { "type": "string" }, "verified": { "type": "boolean" }, "note": { "$ref": "#/$defs/BilingualOrNull" },
+                                         "sources": { "type": "array", "items": { "type": "object", "required": ["source_key"],
+                                                      "properties": { "source_key": { "type": "string" }, "url": { "type": ["string", "null"] },
+                                                                      "list": { "type": "string" }, "registered_name": { "type": "string" } } } } } }
+            }
+          }
+        },
+        "images": {
+          "type": "object", "required": ["primary", "gallery", "image_details"], "additionalProperties": false,
+          "properties": {
+            "primary": { "type": ["string", "null"] },
+            "gallery": { "type": "array", "items": { "type": "string" } },
+            "image_details": { "type": "array", "items": { "$ref": "#/$defs/ImageDetail" } }
+          }
+        },
+        "seasonality": {
+          "type": "object", "required": ["eufic_climatic_zones", "italy_macro_areas"], "additionalProperties": false,
+          "properties": {
+            "eufic_zone_sources": { "type": "object", "description": "Provenienza di ogni zona: EUFIC, calendario nazionale indicato da EUFIC o derivazione dichiarata" },
+            "estimates": { "type": "object", "description": "Stime per le zone senza dato (estimate_zone_gaps.py): mostrate nell'app con ≈ e disattivabili. Non sostituiscono i dati.", "additionalProperties": false,
+              "properties": {
+                "eufic_climatic_zones": { "type": "object", "additionalProperties": { "type": "object", "required": ["months", "from"], "additionalProperties": false, "properties": { "months": { "$ref": "#/$defs/Months12OrNull" }, "from": { "type": "string" } } } },
+                "italy_macro_areas": { "type": "object", "additionalProperties": { "type": "object", "required": ["months", "from"], "additionalProperties": false, "properties": { "months": { "$ref": "#/$defs/Months12OrNull" }, "from": { "type": "string" } } } },
+                "not_grown": { "type": "array", "items": { "enum": ["mediterranean", "continental", "atlantic", "boreal", "mountain", "pannonian"] }, "description": "Zone senza dato per un frutto esotico: 'Non coltivato qui'" } } },
+            "italy_source": { "type": "object", "description": "Solo per gli alimenti assenti dai calendari di stagione: fonte specifica della stagionalità italiana (es. Legge 752/1985 per i tartufi)", "required": ["source"], "additionalProperties": false, "properties": { "source": { "type": "string" }, "url": { "type": ["string", "null"] } } },
+            "eufic_climatic_zones": {
+              "type": "object", "additionalProperties": false,
+              "required": ["mediterranean", "continental", "atlantic", "boreal", "mountain", "pannonian"],
+              "properties": {
+                "mediterranean": { "$ref": "#/$defs/Months12OrNull" }, "continental": { "$ref": "#/$defs/Months12OrNull" },
+                "atlantic": { "$ref": "#/$defs/Months12OrNull" }, "boreal": { "$ref": "#/$defs/Months12OrNull" },
+                "mountain": { "$ref": "#/$defs/Months12OrNull" }, "pannonian": { "$ref": "#/$defs/Months12OrNull" }
+              }
+            },
+            "eufic_by_country": {
+              "description": "Dati grezzi EUFIC: Paese -> 12 booleani (true = di stagione).",
+              "type": "object",
+              "additionalProperties": { "type": "array", "minItems": 12, "maxItems": 12, "items": { "type": "boolean" } }
+            },
+            "italy_macro_areas": {
+              "type": "object", "required": ["nord", "centro", "sud_isole"], "additionalProperties": false,
+              "properties": {
+                "nord": { "$ref": "#/$defs/Months12OrNull" }, "centro": { "$ref": "#/$defs/Months12OrNull" },
+                "sud_isole": { "$ref": "#/$defs/Months12OrNull" }
+              }
+            },
+            "italy_national": { "$ref": "#/$defs/Months12OrNull" },
+            "derivation_notes": { "$ref": "#/$defs/BilingualOrNull" },
+            "curve_basis": { "$ref": "#/$defs/BilingualOrNull", "description": "Curva primizia/picco/fine stagione calcolata con metadata.seasonality_curve_method (apply_seasonality_curve.py), con le correzioni applicate" },
+            "availability_note": { "$ref": "#/$defs/BilingualOrNull", "description": "Prodotti a lunga conservazione naturale: perché la stagione è più lunga della raccolta (da mostrare all'utente)" }
+          }
+        },
+        "agricultural_calendar_italy": {
+          "type": "object", "required": ["nord", "centro", "sud_isole", "agronomic_params"], "additionalProperties": false,
+          "properties": {
+            "nord": { "anyOf": [ { "$ref": "#/$defs/AgriZone" }, { "type": "null" } ] },
+            "centro": { "anyOf": [ { "$ref": "#/$defs/AgriZone" }, { "type": "null" } ] },
+            "sud_isole": { "anyOf": [ { "$ref": "#/$defs/AgriZone" }, { "type": "null" } ] },
+            "agronomic_params": {
+              "anyOf": [
+                { "type": "object", "required": ["sowing_depth_cm", "plant_spacing_cm", "sun_exposure", "lunar_phase_advice"], "additionalProperties": false,
+                  "properties": {
+                    "sowing_depth_cm": { "$ref": "#/$defs/NumOrNull" },
+                    "plant_spacing_cm": {
+                      "anyOf": [
+                        { "type": "object", "required": ["between_rows", "between_plants"], "additionalProperties": false,
+                          "properties": { "between_rows": { "type": "number" }, "between_plants": { "type": "number" } } },
+                        { "type": "null" }
+                      ]
+                    },
+                    "sun_exposure": { "enum": ["molto_soleggiato", "soleggiato", "anche_mezzombra", null] },
+                    "lunar_phase_advice": { "enum": ["fase_crescente", "fase_calante", "indifferente", null] }
+                  } },
+                { "type": "null" }
+              ]
+            },
+            "cultivation_notes": { "$ref": "#/$defs/BilingualOrNull" }
+          }
+        },
+        "buying_guide": {
+          "type": "object", "required": ["shopping_list_preview", "detailed_selection"], "additionalProperties": false,
+          "properties": {
+            "shopping_list_preview": { "$ref": "#/$defs/BilingualOrNull" },
+            "detailed_selection": { "$ref": "#/$defs/BilingualOrNull" }
+          }
+        },
+        "ripening_and_storage": {
+          "type": "object",
+          "required": ["ripening_type", "ripening_badge_label", "card_short_storage", "primary_location", "storage_instructions",
+                       "postharvest_physiology", "ripening_management", "ethylene_compatibility"],
+          "additionalProperties": false,
+          "properties": {
+            "ripening_type": { "enum": ["climaterico", "non_climaterico", null] },
+            "ripening_badge_label": { "$ref": "#/$defs/BilingualOrNull" },
+            "card_short_storage": { "$ref": "#/$defs/BilingualOrNull" },
+            "primary_location": { "enum": ["frigorifero", "temperatura_ambiente", "luogo_fresco_buio", null] },
+            "storage_instructions": { "$ref": "#/$defs/BilingualOrNull" },
+            "storage_compatibility": {
+              "type": ["object", "null"], "description": "Gruppo di conservazione compatibile (USDA HB66 Table 1, Thompson et al. 1996)",
+              "properties": { "group": { "enum": ["1A", "1B", "2", "3"] }, "label": { "$ref": "#/$defs/BilingualOrNull" },
+                              "temperature_c": { "$ref": "#/$defs/RangeNum" }, "humidity_percent": { "$ref": "#/$defs/RangeNum" },
+                              "table_entry": { "type": "string" }, "match": { "enum": ["exact", "approx"] },
+                              "compatible_with": { "type": "array", "items": { "type": "string" } }, "source": { "type": "string" } } },
+            "perishability": {
+              "type": ["object", "null"], "additionalProperties": false,
+              "description": "Traduzione pratica della classe di respirazione (Kader, USDA HB66): quanto in fretta il prodotto perde freschezza",
+              "properties": {
+                "level": { "type": ["integer", "null"], "minimum": 1, "maximum": 6 },
+                "label": { "$ref": "#/$defs/BilingualOrNull" },
+                "tip": { "$ref": "#/$defs/BilingualOrNull" },
+                "basis": { "$ref": "#/$defs/BilingualOrNull" }
+              }
+            },
+            "home_storage": {
+              "type": ["object", "null"], "additionalProperties": false,
+              "description": "Dove conservarlo in casa (consiglio sintetico per l'app), con le fonti che lo indicano",
+              "properties": {
+                "location": { "enum": ["fridge", "counter_then_fridge", "room_temperature", "cool_dry_pantry", null] },
+                "label": { "$ref": "#/$defs/BilingualOrNull" },
+                "tip": { "$ref": "#/$defs/BilingualOrNull" },
+                "ucdavis_group": { "enum": ["refrigerator", "ripen_on_counter_then_refrigerator", "room_temperature_only", null] },
+                "foodkeeper_mode": { "enum": ["days", "until_ripe", "fridge_only", null] },
+                "sources": { "type": "array", "items": { "type": "string" } },
+                "derivation": { "$ref": "#/$defs/BilingualOrNull" }
+              }
+            },
+            "postharvest_physiology": {
+              "type": "object",
+              "required": ["optimal_temperature_c", "optimal_humidity_percent", "respiration_rate_class", "chilling_injury", "estimated_shelf_life_days"],
+              "additionalProperties": false,
+              "properties": {
+                "optimal_temperature_c": { "$ref": "#/$defs/RangeNum" },
+                "optimal_humidity_percent": { "$ref": "#/$defs/RangeNum" },
+                "respiration_rate_class": { "$ref": "#/$defs/RateClassOrNull" },
+                "freezing_point_c": { "$ref": "#/$defs/NumOrNull", "description": "Punto di congelamento iniziale in °C: la temperatura PIÙ ALTA alla quale il tessuto può iniziare a congelare (USDA HB66 highest freezing point; se la fonte dà un intervallo si usa l'estremo più alto, il valore più prudente)" },
+                "freezing_susceptibility": { "enum": ["most", "moderate", "least", null],
+                                             "description": "USDA HB66 Tab. 2 p. 65: most = danneggiato anche da un solo gelo leggero; moderate = recupera da 1-2 geli leggeri; least = tollera più geli leggeri" },
+                "chilling_injury": {
+                  "type": "object", "required": ["susceptible", "critical_temperature_c", "symptoms"], "additionalProperties": false,
+                  "properties": {
+                    "susceptible": { "type": ["boolean", "null"] },
+                    "critical_temperature_c": { "$ref": "#/$defs/NumOrNull", "description": "non conservare sotto questa temperatura (estremo superiore della 'lowest safe temperature' USDA HB66, valore prudenziale)" },
+                    "lowest_safe_range_c": { "$ref": "#/$defs/RangeNum", "description": "intervallo 'lowest safe temperature' USDA HB66 Tab. 1 p. 63-64 (varia con cultivar e maturazione)" },
+                    "symptoms": { "$ref": "#/$defs/BilingualOrNull" }
+                  }
+                },
+                "estimated_shelf_life_days": {
+                  "type": "object", "required": ["room_temp_days", "refrigerated_days", "in_freezer_months"], "additionalProperties": false,
+                  "properties": {
+                    "room_temp_days": { "$ref": "#/$defs/DayRange" },
+                    "refrigerated_days": { "$ref": "#/$defs/DayRange" },
+                    "in_freezer_months": { "$ref": "#/$defs/NumOrNull" },
+                    "commercial_optimal_days": { "$ref": "#/$defs/DayRange", "description": "durata in condizioni professionali ottimali (USDA HB66)" },
+                    "basis": { "$ref": "#/$defs/BilingualOrNull" },
+                    "room_temp_mode": { "enum": ["days", "until_ripe", "fridge_only", null], "description": "USDA FoodKeeper: days = durata in dispensa; until_ripe = a temperatura ambiente fino a maturazione (room_temp_days = giorni dopo la maturazione, se indicati); fridge_only = FoodKeeper prevede solo il frigorifero" },
+                    "freezing_recommended": { "type": ["boolean", "null"], "description": "false se FoodKeeper indica 'Not Recommended' per il congelatore" }
+                  }
+                }
+              }
+            },
+            "ripening_management": {
+              "type": "object", "required": ["slow_down", "speed_up"], "additionalProperties": false,
+              "properties": { "slow_down": { "$ref": "#/$defs/BilingualOrNull" }, "speed_up": { "$ref": "#/$defs/BilingualOrNull" } }
+            },
+            "ethylene_compatibility": {
+              "type": "object",
+              "required": ["produces_ethylene", "ethylene_production_class", "sensitive_to_ethylene", "keep_away_from", "compatibility_notes"],
+              "additionalProperties": false,
+              "properties": {
+                "produces_ethylene": { "type": ["boolean", "null"] },
+                "ethylene_production_class": { "$ref": "#/$defs/RateClassOrNull" },
+                "sensitive_to_ethylene": { "type": ["boolean", "null"] },
+                "keep_away_from": { "type": "array", "items": { "$ref": "#/$defs/ItemId" } },
+                "compatibility_notes": { "$ref": "#/$defs/BilingualOrNull" }
+              }
+            }
+          }
+        },
+        "nutrition_and_sustainability": {
+          "type": "object",
+          "required": ["edible_portion_percentage", "water_percentage", "kcal_per_100g", "macros_per_100g", "vitamins", "minerals",
+                       "nutrition_claims_eu", "health_benefits_and_curiosities", "culinary_waste_reduction"],
+          "additionalProperties": false,
+          "properties": {
+            "data_basis": { "$ref": "#/$defs/BilingualOrNull", "description": "scheda di composizione usata come fonte primaria (IT/EN)" },
+            "edible_portion_percentage": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+            "water_percentage": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+            "kcal_per_100g": { "type": ["number", "null"], "minimum": 0 },
+            "kj_per_100g": { "type": ["number", "null"], "minimum": 0 },
+            "macros_per_100g": {
+              "type": "object", "required": ["carbs_g", "sugars_g", "proteins_g", "fats_g", "fiber_g"], "additionalProperties": false,
+              "properties": {
+                "carbs_g": { "$ref": "#/$defs/NumOrNull" }, "sugars_g": { "$ref": "#/$defs/NumOrNull" },
+                "starch_g": { "$ref": "#/$defs/NumOrNull" },
+                "proteins_g": { "$ref": "#/$defs/NumOrNull" }, "fats_g": { "$ref": "#/$defs/NumOrNull" },
+                "fiber_g": { "$ref": "#/$defs/NumOrNull" }, "salt_g": { "$ref": "#/$defs/NumOrNull" }
+              }
+            },
+            "vitamins": { "type": "array", "items": { "$ref": "#/$defs/Nutrient" } },
+            "minerals": { "type": "array", "items": { "$ref": "#/$defs/Nutrient" } },
+            "bioactive_compounds": { "type": "array", "items": { "$ref": "#/$defs/Nutrient" },
+                                     "description": "Composti bioattivi non vitaminici/minerali (polifenoli, carotenoidi, ecc.)" },
+            "allergens_eu": { "type": "array", "description": "Allergeni del Reg. (UE) 1169/2011, Allegato II ([] = nessuno)",
+              "items": { "type": "object", "required": ["annex_ii_number", "name"], "additionalProperties": false,
+                         "properties": { "annex_ii_number": { "type": "integer", "minimum": 1, "maximum": 14 }, "name": { "$ref": "#/$defs/BilingualOrNull" } } } },
+            "allergens_note": { "$ref": "#/$defs/BilingualOrNull" },
+            "reference_portion": {
+              "type": ["object", "null"], "additionalProperties": false, "description": "Porzione standard per adulti (IEO SmartFood / LARN-SINU)",
+              "properties": { "grams": { "type": ["number", "null"] }, "group": { "$ref": "#/$defs/BilingualOrNull" },
+                              "equivalent": { "$ref": "#/$defs/BilingualOrNull" }, "frequency": { "$ref": "#/$defs/BilingualOrNull" },
+                              "kcal": { "type": ["number", "null"] }, "proteins_g": { "type": ["number", "null"] }, "fiber_g": { "type": ["number", "null"] },
+                              "source": { "type": ["string", "null"] }, "match": { "enum": ["exact", "approx", null] } } },
+            "environmental_footprint": {
+              "type": ["object", "null"], "description": "Impronta di carbonio e idrica (SU-EATABLE LIFE, CC BY 4.0)",
+              "properties": { "carbon_kg_co2eq_per_kg": { "type": ["number", "null"] }, "carbon_g_co2eq_per_portion": { "type": ["number", "null"] },
+                              "carbon_reference": { "type": ["object", "null"] }, "water_l_per_kg": { "type": ["number", "null"] },
+                              "water_l_per_portion": { "type": ["number", "null"] }, "water_reference": { "type": ["object", "null"] },
+                              "greenhouse_comparison": { "type": ["object", "null"] }, "match": { "enum": ["exact", "approx", null] },
+                              "source": { "type": ["string", "null"] }, "sustainability_rating": { "type": ["object", "null"] } } },
+            "traditional_products_pat": { "type": ["object", "null"], "description": "Prodotti Agroalimentari Tradizionali (elenco MASAF) legati all'alimento" },
+            "protein_reference": {
+              "anyOf": [
+                { "type": "object", "required": ["protein_g_per_100g", "percent_pri_larn_adult_m", "percent_pri_larn_adult_f", "percent_ri_eu", "energy_from_protein_percent"],
+                  "properties": {
+                    "protein_g_per_100g": { "type": "number" },
+                    "percent_pri_larn_adult_m": { "type": "number" }, "percent_pri_larn_adult_f": { "type": "number" },
+                    "percent_pri_larn_over65_m": { "type": ["number", "null"] }, "percent_pri_larn_over65_f": { "type": ["number", "null"] },
+                    "percent_ri_eu": { "type": "number" }, "energy_from_protein_percent": { "type": ["number", "null"] },
+                    "claim_note": { "$ref": "#/$defs/BilingualOrNull" }
+                  } },
+                { "type": "null" }
+              ]
+            },
+            "nutrition_claims_eu": { "anyOf": [ { "$ref": "#/$defs/BilingualList" }, { "type": "null" } ] },
+            "health_benefits_and_curiosities": { "$ref": "#/$defs/BilingualOrNull" },
+            "culinary_waste_reduction": { "$ref": "#/$defs/BilingualOrNull" }
+          }
+        },
+        "help_refs": { "type": "array", "description": "Rimandi al glossario (metadata.glossary) che dipendono dal contenuto dell'alimento, con i campi in cui compaiono", "items": { "type": "object", "required": ["glossary_id", "fields"], "additionalProperties": false, "properties": { "glossary_id": { "type": "string" }, "fields": { "type": "array", "items": { "type": "string" } } } } },
+        "sources_by_topic": {
+          "type": "object",
+          "required": ["from_user_draft", "local_files_used", "nutrition_crea_url", "nutrition_bda_ieo_url", "postharvest_ucdavis_usda_url",
+                       "seasonality_and_storage_urls", "agricultural_calendar_urls", "botany_eppo_wfo_url", "eufic_url"],
+          "additionalProperties": false,
+          "properties": {
+            "from_user_draft": { "type": "boolean" },
+            "local_files_used": { "type": "array", "items": { "type": "string" } },
+            "nutrition_crea_url": { "$ref": "#/$defs/UrlOrNull" },
+            "nutrition_bda_ieo_url": { "$ref": "#/$defs/UrlOrNull" },
+            "postharvest_ucdavis_usda_url": { "anyOf": [ { "$ref": "#/$defs/Url" }, { "type": "array", "items": { "$ref": "#/$defs/Url" } }, { "type": "null" } ] },
+            "seasonality_and_storage_urls": { "type": "array", "items": { "$ref": "#/$defs/Url" } },
+            "agricultural_calendar_urls": { "type": "array", "items": { "$ref": "#/$defs/Url" } },
+            "botany_eppo_wfo_url": { "anyOf": [ { "$ref": "#/$defs/Url" }, { "type": "array", "items": { "$ref": "#/$defs/Url" } }, { "type": "null" } ] },
+            "eufic_url": { "$ref": "#/$defs/UrlOrNull" },
+            "other_urls": { "type": "array", "items": { "$ref": "#/$defs/Url" } },
+            "source_codes": { "type": "object", "description": "codici alimento per fonte (crea, bda_ieo, uc_davis, ...)" },
+            "sources_used": {
+              "type": "array", "description": "tutte le fonti usate per l'alimento, con argomenti, URL e file locali (chiavi = metadata.official_sources)",
+              "items": { "type": "object", "required": ["source_key", "name", "topics", "urls", "local_files"], "additionalProperties": false,
+                         "properties": { "source_key": { "type": "string" }, "name": { "type": "string" },
+                                         "topics": { "type": "array", "items": { "type": "string" } },
+                                         "urls": { "type": "array", "items": { "$ref": "#/$defs/Url" } },
+                                         "local_files": { "type": "array", "items": { "type": "string" } } } }
+            },
+            "useful_links": {
+              "type": "array", "description": "link specifici per l'alimento da mostrare nell'app",
+              "items": { "type": "object", "required": ["title", "url", "source_key", "topic"], "additionalProperties": false,
+                         "properties": { "title": { "$ref": "#/$defs/Bilingual" }, "url": { "$ref": "#/$defs/Url" },
+                                         "source_key": { "type": "string" }, "topic": { "type": "string" } } }
+            }
+          }
+        },
+        "data_completeness": {
+          "type": "object",
+          "required": ["is_complete", "fields_from_initial_draft", "fields_enriched_via_scraping", "missing_fields", "notes"],
+          "additionalProperties": false,
+          "properties": {
+            "is_complete": { "type": "boolean" },
+            "fields_from_initial_draft": { "type": "array", "items": { "type": "string" } },
+            "fields_pending_verification": { "type": "array", "items": { "type": "string" },
+                                             "description": "campi della bozza non ancora confrontati con una fonte ufficiale" },
+            "fields_enriched_via_scraping": { "type": "array", "items": { "type": "string" } },
+            "missing_fields": { "type": "array", "items": { "type": "string" }, "description": "campi nulli per mancanza di dati (esclusi i not_applicable_fields)" },
+            "not_applicable_fields": { "type": "array", "items": { "type": "string" },
+                                       "description": "campi nulli perché non pertinenti per l'alimento (es. soglia di danno da freddo di un prodotto non sensibile)" },
+            "discrepancies": {
+              "type": "array",
+              "items": { "type": "object", "required": ["field", "draft_value", "source_value", "source"],
+                         "properties": { "field": { "type": "string" }, "draft_value": {}, "source_value": {}, "source": { "type": "string" }, "resolution": { "type": "string" } } }
+            },
+            "notes": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

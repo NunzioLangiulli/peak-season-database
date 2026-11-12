@@ -1,0 +1,442 @@
+{
+ "_doc": "Trascrizione della tabella 'Storing Fresh Fruits and Vegetables for Better Taste' (A. Kader, J. Thompson, K. Sylva, L. Harris - UC Davis Postharvest Technology Center / UC ANR Publication 21590), PDF https://homeorchard.ucanr.edu/files/115275.pdf (copia in data/raw/ucdavis_storing/115275.pdf). Gruppi: refrigerator, ripen_on_counter_then_refrigerator, room_temperature_only. 'approx' = voce della tabella simile (es. 'leafy vegetables', 'herbs (not basil)', 'peppers' per il peperoncino). Note della tabella: (*) aglio, cipolle secche, patate e patate dolci in dispensa ben ventilata, patate al buio; (+) cetrioli, melanzane e peperoni possono stare in frigo 1-3 giorni se usati subito dopo; mele: frigo se piu' di 7 giorni, ambiente se meno di 7 giorni.",
+ "items": {
+  "mela_apple": [
+   "refrigerator",
+   "exact",
+   "both"
+  ],
+  "albicocca_apricot": [
+   "refrigerator",
+   "exact"
+  ],
+  "mora_blackberry": [
+   "refrigerator",
+   "exact"
+  ],
+  "mirtillo_blueberry": [
+   "refrigerator",
+   "exact"
+  ],
+  "ciliegia_cherry": [
+   "refrigerator",
+   "exact"
+  ],
+  "fico_fig": [
+   "refrigerator",
+   "exact"
+  ],
+  "uva_table_grape": [
+   "refrigerator",
+   "exact"
+  ],
+  "lampone_raspberry": [
+   "refrigerator",
+   "exact"
+  ],
+  "fragola_strawberry": [
+   "refrigerator",
+   "exact"
+  ],
+  "ribes_redcurrant": [
+   "refrigerator",
+   "approx"
+  ],
+  "carciofo_artichoke": [
+   "refrigerator",
+   "exact"
+  ],
+  "asparago_asparagus": [
+   "refrigerator",
+   "exact"
+  ],
+  "fagiolino_green_bean": [
+   "refrigerator",
+   "exact"
+  ],
+  "fagiolo_bean": [
+   "refrigerator",
+   "approx"
+  ],
+  "barbabietola_beetroot": [
+   "refrigerator",
+   "exact"
+  ],
+  "indivia_belga_belgian_endive": [
+   "refrigerator",
+   "exact"
+  ],
+  "broccolo_broccoli": [
+   "refrigerator",
+   "exact"
+  ],
+  "cavoletto_di_bruxelles_brussels_sprout": [
+   "refrigerator",
+   "exact"
+  ],
+  "cavolo_cappuccio_cabbage": [
+   "refrigerator",
+   "exact"
+  ],
+  "cavolo_verza_savoy_cabbage": [
+   "refrigerator",
+   "exact"
+  ],
+  "cavolo_rosso_red_cabbage": [
+   "refrigerator",
+   "exact"
+  ],
+  "carota_carrot": [
+   "refrigerator",
+   "exact"
+  ],
+  "cavolfiore_cauliflower": [
+   "refrigerator",
+   "exact"
+  ],
+  "sedano_celery": [
+   "refrigerator",
+   "exact"
+  ],
+  "prezzemolo_parsley": [
+   "refrigerator",
+   "approx"
+  ],
+  "rosmarino_rosemary": [
+   "refrigerator",
+   "approx"
+  ],
+  "salvia_sage": [
+   "refrigerator",
+   "approx"
+  ],
+  "timo_thyme": [
+   "refrigerator",
+   "approx"
+  ],
+  "menta_mint": [
+   "refrigerator",
+   "approx"
+  ],
+  "spinacio_spinach": [
+   "refrigerator",
+   "approx"
+  ],
+  "bietola_da_coste_swiss_chard": [
+   "refrigerator",
+   "approx"
+  ],
+  "cavolo_nero_black_kale": [
+   "refrigerator",
+   "approx"
+  ],
+  "cima_di_rapa_turnip_greens": [
+   "refrigerator",
+   "approx"
+  ],
+  "cicoria_da_cespo_chicory": [
+   "refrigerator",
+   "approx"
+  ],
+  "cicoria_da_taglio_cutting_chicory": [
+   "refrigerator",
+   "approx"
+  ],
+  "scarola_escarole": [
+   "refrigerator",
+   "approx"
+  ],
+  "indivia_riccia_curly_endive": [
+   "refrigerator",
+   "approx"
+  ],
+  "rucola_arugula": [
+   "refrigerator",
+   "approx"
+  ],
+  "valerianella_corn_salad": [
+   "refrigerator",
+   "approx"
+  ],
+  "radicchio_radicchio": [
+   "refrigerator",
+   "approx"
+  ],
+  "porro_leek": [
+   "refrigerator",
+   "exact"
+  ],
+  "lattuga_da_cespo_head_lettuce": [
+   "refrigerator",
+   "exact"
+  ],
+  "lattuga_da_taglio_leaf_lettuce": [
+   "refrigerator",
+   "exact"
+  ],
+  "fungo_champignon_button_mushroom": [
+   "refrigerator",
+   "exact"
+  ],
+  "fungo_pleurotus_oyster_mushroom": [
+   "refrigerator",
+   "exact"
+  ],
+  "fungo_porcino_porcini_mushroom": [
+   "refrigerator",
+   "approx"
+  ],
+  "fungo_ovolo_caesars_mushroom": [
+   "refrigerator",
+   "approx"
+  ],
+  "pisello_pea": [
+   "refrigerator",
+   "exact"
+  ],
+  "ravanello_radish": [
+   "refrigerator",
+   "exact"
+  ],
+  "zucchina_zucchini": [
+   "refrigerator",
+   "exact"
+  ],
+  "mais_corn": [
+   "refrigerator",
+   "exact"
+  ],
+  "avocado_avocado": [
+   "ripen_on_counter_then_refrigerator",
+   "exact"
+  ],
+  "kiwi_kiwifruit": [
+   "ripen_on_counter_then_refrigerator",
+   "exact"
+  ],
+  "pesca_noce_nectarine": [
+   "ripen_on_counter_then_refrigerator",
+   "exact"
+  ],
+  "pesca_peach": [
+   "ripen_on_counter_then_refrigerator",
+   "exact"
+  ],
+  "pera_pear": [
+   "ripen_on_counter_then_refrigerator",
+   "exact"
+  ],
+  "susina_plum": [
+   "ripen_on_counter_then_refrigerator",
+   "exact"
+  ],
+  "banana_banana": [
+   "room_temperature_only",
+   "exact"
+  ],
+  "pompelmo_grapefruit": [
+   "room_temperature_only",
+   "exact"
+  ],
+  "limone_lemon": [
+   "room_temperature_only",
+   "exact"
+  ],
+  "lime_lime": [
+   "room_temperature_only",
+   "exact"
+  ],
+  "mandarino_mandarin": [
+   "room_temperature_only",
+   "exact"
+  ],
+  "clementine_clementine": [
+   "room_temperature_only",
+   "approx"
+  ],
+  "mango_mango": [
+   "room_temperature_only",
+   "exact"
+  ],
+  "melone_melon": [
+   "room_temperature_only",
+   "exact"
+  ],
+  "arancia_orange": [
+   "room_temperature_only",
+   "exact"
+  ],
+  "papaya_papaya": [
+   "room_temperature_only",
+   "exact"
+  ],
+  "cachi_persimmon": [
+   "room_temperature_only",
+   "exact"
+  ],
+  "ananas_pineapple": [
+   "room_temperature_only",
+   "exact"
+  ],
+  "melograno_pomegranate": [
+   "room_temperature_only",
+   "exact"
+  ],
+  "anguria_watermelon": [
+   "room_temperature_only",
+   "exact"
+  ],
+  "basilico_basil": [
+   "room_temperature_only",
+   "exact"
+  ],
+  "cetriolo_cucumber": [
+   "room_temperature_only",
+   "exact",
+   "dagger"
+  ],
+  "cipolla_invernale_winter_onion": [
+   "room_temperature_only",
+   "exact",
+   "pantry"
+  ],
+  "scalogno_shallot": [
+   "room_temperature_only",
+   "approx",
+   "pantry"
+  ],
+  "melanzana_eggplant": [
+   "room_temperature_only",
+   "exact",
+   "dagger"
+  ],
+  "aglio_garlic": [
+   "room_temperature_only",
+   "exact",
+   "pantry"
+  ],
+  "peperone_bell_pepper": [
+   "room_temperature_only",
+   "exact",
+   "dagger"
+  ],
+  "peperoncino_chili_pepper": [
+   "room_temperature_only",
+   "approx",
+   "dagger"
+  ],
+  "patata_potato": [
+   "room_temperature_only",
+   "exact",
+   "pantry"
+  ],
+  "zucca_pumpkin": [
+   "room_temperature_only",
+   "exact"
+  ],
+  "pomodoro_tomato": [
+   "room_temperature_only",
+   "exact"
+  ],
+  "cipollotto_spring_onion": [
+   "refrigerator",
+   "exact"
+  ],
+  "erba_cipollina_chives": [
+   "refrigerator",
+   "approx"
+  ],
+  "crescione_watercress": [
+   "refrigerator",
+   "approx"
+  ],
+  "agretti_saltwort": [
+   "refrigerator",
+   "approx"
+  ],
+  "puntarelle_puntarelle": [
+   "refrigerator",
+   "approx"
+  ],
+  "salicornia_samphire": [
+   "refrigerator",
+   "approx"
+  ],
+  "cavolo_cinese_chinese_cabbage": [
+   "refrigerator",
+   "approx"
+  ],
+  "ribes_nero_blackcurrant": [
+   "refrigerator",
+   "approx"
+  ],
+  "uva_spina_gooseberry": [
+   "refrigerator",
+   "approx"
+  ],
+  "mirtillo_rosso_lingonberry": [
+   "refrigerator",
+   "approx"
+  ],
+  "sambuco_elderberry": [
+   "refrigerator",
+   "approx"
+  ],
+  "gelso_mulberry": [
+   "refrigerator",
+   "approx"
+  ],
+  "amarena_sour_cherry": [
+   "refrigerator",
+   "approx"
+  ],
+  "daikon_daikon": [
+   "refrigerator",
+   "approx"
+  ],
+  "patata_dolce_sweet_potato": [
+   "room_temperature_only",
+   "exact"
+  ],
+  "taccola_snow_pea": [
+   "refrigerator",
+   "approx"
+  ],
+  "broccolo_romanesco_romanesco": [
+   "refrigerator",
+   "approx"
+  ],
+  "asparago_selvatico_wild_asparagus": [
+   "refrigerator",
+   "approx"
+  ],
+  "finferlo_chanterelle": [
+   "refrigerator",
+   "approx"
+  ],
+  "spugnola_morel": [
+   "refrigerator",
+   "approx"
+  ],
+  "shiitake_shiitake": [
+   "refrigerator",
+   "approx"
+  ],
+  "cardoncello_king_oyster_mushroom": [
+   "refrigerator",
+   "approx"
+  ],
+  "cedro_citron": [
+   "room_temperature_only",
+   "approx"
+  ],
+  "chinotto_chinotto": [
+   "room_temperature_only",
+   "approx"
+  ],
+  "mirabella_mirabelle_plum": [
+   "ripen_on_counter_then_refrigerator",
+   "approx"
+  ]
+ }
+}

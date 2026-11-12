@@ -1,0 +1,24 @@
+{
+  "_doc": "Classi di produzione di etilene corrette sui capitoli di USDA HB66 (2026-11-06). La tabella riassuntiva di HB66 riporta per alcuni frutti il valore a 0 °C, mentre la scala delle classi è a 20 °C: si usa il valore a 20 °C del frutto maturo, cioè quando il frutto è in casa e viene conservato. note = frase aggiunta a compatibility_notes. Applicato da apply_ethylene_curated.py, che ricalcola anche keep_away_from.",
+  "items": {
+    "albicocca_apricot": {"class": "moderate", "page": 205,
+      "quote": "Ethylene production rate increases with ripening and storage temperature from under 0.1 μL kg-1 h-1 at 0 °C to 4 to 6 μL kg-1 h-1 at 20 °C for firm-ripe apricots and higher for soft-ripe apricots.",
+      "note": ["Da soda-matura produce 4-6 µL/kg·h di etilene a 20 °C, di più quando è molto matura (USDA HB66).", "When firm-ripe it produces 4-6 µL/kg·h of ethylene at 20 °C, more when very ripe (USDA HB66)."]},
+    "pesca_peach": {"class": "high", "page": 476,
+      "quote": "The lower end of this range is for mature but unripe fruit; higher values are for ripe fruit: 20 °C 0.10 to 160.",
+      "note": ["Da acerba produce poco etilene, da matura molto: fino a 160 µL/kg·h a 20 °C (USDA HB66).", "Unripe it produces little ethylene, ripe a lot: up to 160 µL/kg·h at 20 °C (USDA HB66)."]},
+    "pesca_noce_nectarine": {"class": "high", "page": 428,
+      "quote": "The lower end of the range is for mature but unripe fruit; higher values are for ripe fruit: 20 ºC 0.10 to 160.",
+      "note": ["Da acerba produce poco etilene, da matura molto: fino a 160 µL/kg·h a 20 °C (USDA HB66).", "Unripe it produces little ethylene, ripe a lot: up to 160 µL/kg·h at 20 °C (USDA HB66)."]},
+    "susina_plum": {"class": "high", "page": 507,
+      "quote": "Ethylene production rates are [...] 0.1 to 200 µL kg-1 h-1 at 20 °C. The lower end of this range is for mature but unripe fruit; higher values are for ripe fruit.",
+      "note": ["Da acerba produce poco etilene, da matura molto: fino a 200 µL/kg·h a 20 °C (USDA HB66).", "Unripe it produces little ethylene, ripe a lot: up to 200 µL/kg·h at 20 °C (USDA HB66)."]},
+    "mirabella_mirabelle_plum": {"class": "high", "page": 507, "match": "approx",
+      "quote": "Capitolo HB66 'Plum and Fresh Prune': 0.1 to 200 µL kg-1 h-1 at 20 °C; higher values are for ripe fruit.",
+      "note": ["Valori della susina (stessa specie): da matura produce molto etilene, fino a 200 µL/kg·h a 20 °C (USDA HB66).", "Plum values (same species): when ripe it produces a lot of ethylene, up to 200 µL/kg·h at 20 °C (USDA HB66)."]},
+    "kiwi_kiwifruit": {"class": "high", "page": 382,
+      "quote": "At harvest maturity, kiwifruit are low ethylene producers with rates of approximately [...] 0.1 to 0.5 µL kg-1 h-1 at 20 °C. Fruit that are ripe [...] produce 50 to 100 µL kg-1 h-1. Kiwifruit in storage are extremely sensitive to the presence of ethylene.",
+      "note": ["Da acerbo produce pochissimo etilene (0,1-0,5 µL/kg·h a 20 °C), da maturo molto (50-100); è anche estremamente sensibile: un kiwi acerbo va tenuto lontano dai produttori, uno maturo dagli alimenti sensibili (USDA HB66).",
+               "Unripe it produces very little ethylene (0.1-0.5 µL/kg·h at 20 °C), ripe a lot (50-100); it is also extremely sensitive: keep an unripe kiwi away from producers, a ripe one away from sensitive foods (USDA HB66)."]}
+  }
+}

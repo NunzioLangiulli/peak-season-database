@@ -1,0 +1,793 @@
+{
+ "_doc": "Valori trascritti a mano dai capitoli di USDA ARS Agriculture Handbook 66 (2016) che il parser automatico non aggancia (capitoli multi-prodotto, tabelle di respirazione nei capitoli) o dove la Tab. 1 del PDF contiene refusi (es. Radicchio 8/1310/2311). 'quote' = frase o dati della fonte. Respirazione: classe di Kader a 5 °C; se il capitolo non riporta 5 °C si interpola in modo esponenziale (media geometrica tra 0 e 10 °C), come indicato in 'resp_basis'. Pagine = numerazione del PDF.",
+ "url": "https://www.ars.usda.gov/is/np/commercialstorage/commercialstorage.pdf",
+ "items": {
+  "rosmarino_rosemary": {
+   "chapter": "Perennial Culinary Herbs",
+   "page": 495,
+   "optimal_temperature_c": {
+    "min": 0,
+    "max": 0
+   },
+   "commercial_optimal_days": [
+    14,
+    21
+   ],
+   "chilling_susceptible": false,
+   "produces_ethylene": false,
+   "ethylene_production_class": "low",
+   "sensitive_to_ethylene": true,
+   "quote": "rosemary, sage, and thyme will last for 2 to 3 weeks [at 0 °C]; These perennial herbs are not chilling sensitive; Ethylene production is low, but sensitivity is high."
+  },
+  "salvia_sage": {
+   "chapter": "Perennial Culinary Herbs",
+   "page": 495,
+   "optimal_temperature_c": {
+    "min": 0,
+    "max": 0
+   },
+   "commercial_optimal_days": [
+    14,
+    21
+   ],
+   "chilling_susceptible": false,
+   "produces_ethylene": false,
+   "ethylene_production_class": "very_low",
+   "sensitive_to_ethylene": true,
+   "respiration_rate_class": "extremely_high",
+   "resp_basis": "0 °C 36, 10 °C 103 mg CO2/kg·h -> 5 °C ~61 (media geometrica)",
+   "quote": "rosemary, sage, and thyme will last for 2 to 3 weeks; not chilling sensitive; Ethylene production is low, but sensitivity is high. Tab. 1: Sage ethylene 'very low'."
+  },
+  "timo_thyme": {
+   "chapter": "Perennial Culinary Herbs",
+   "page": 495,
+   "optimal_temperature_c": {
+    "min": 0,
+    "max": 0
+   },
+   "commercial_optimal_days": [
+    14,
+    21
+   ],
+   "chilling_susceptible": false,
+   "produces_ethylene": false,
+   "ethylene_production_class": "very_low",
+   "sensitive_to_ethylene": true,
+   "respiration_rate_class": "very_high",
+   "resp_basis": "0 °C 38, 10 °C 82 mg CO2/kg·h -> 5 °C ~56 (media geometrica)",
+   "quote": "rosemary, sage, and thyme will last for 2 to 3 weeks; not chilling sensitive; Ethylene production is low, but sensitivity is high."
+  },
+  "menta_mint": {
+   "chapter": "Perennial Culinary Herbs",
+   "page": 495,
+   "optimal_temperature_c": {
+    "min": 0,
+    "max": 0
+   },
+   "optimal_humidity_percent": {
+    "min": 95,
+    "max": 100
+   },
+   "commercial_optimal_days": [
+    14,
+    21
+   ],
+   "chilling_susceptible": false,
+   "produces_ethylene": false,
+   "ethylene_production_class": "very_low",
+   "sensitive_to_ethylene": true,
+   "respiration_rate_class": "high",
+   "resp_basis": "0 °C 20, 10 °C 76 mg CO2/kg·h -> 5 °C ~39 (media geometrica)",
+   "quote": "Chives and mint can be stored for 2 to 3 weeks at 0 °C with 95 to 100% RH; not chilling sensitive; Ethylene production is low, but sensitivity is high."
+  },
+  "basilico_basil": {
+   "chapter": "Annual Culinary Herbs",
+   "page": 183,
+   "optimal_temperature_c": {
+    "min": 12,
+    "max": 12
+   },
+   "optimal_humidity_percent": {
+    "min": 95,
+    "max": 100
+   },
+   "commercial_optimal_days": [
+    14,
+    14
+   ],
+   "chilling_susceptible": true,
+   "lowest_safe_range_c": {
+    "min": 12,
+    "max": 12
+   },
+   "critical_temperature_c": 12,
+   "symptoms": {
+    "it": "Imbrunimento o annerimento delle foglie",
+    "en": "Browning or blackening of the leaves"
+   },
+   "produces_ethylene": false,
+   "ethylene_production_class": "very_low",
+   "sensitive_to_ethylene": true,
+   "respiration_rate_class": "very_high",
+   "resp_basis": "0 °C 36, 10 °C 71 mg CO2/kg·h -> 5 °C ~51 (media geometrica)",
+   "quote": "Basil should be stored at 12 °C and 95 to 100% RH ... quality can be maintained for 2 weeks; Basil is susceptible to chilling injury if stored below 12 °C ... browning or blackening of the leaves; Annual herbs produce very little ethylene, but are highly susceptible to ethylene exposure."
+  },
+  "rucola_arugula": {
+   "chapter": "Salad Greens",
+   "page": 548,
+   "optimal_temperature_c": {
+    "min": 0,
+    "max": 2
+   },
+   "optimal_humidity_percent": {
+    "min": 95,
+    "max": 100
+   },
+   "commercial_optimal_days": [
+    7,
+    10
+   ],
+   "chilling_susceptible": false,
+   "produces_ethylene": false,
+   "ethylene_production_class": "very_low",
+   "sensitive_to_ethylene": true,
+   "respiration_rate_class": "extremely_high",
+   "resp_basis": "Rocket salad 5 °C 113 mg CO2/kg·h",
+   "quote": "Salad greens should be stored at 0 to 2 °C with 95 to 100% RH. Rocket salad typically lasts 7 to 10 days; not sensitive to chilling; very low ethylene production but highly sensitive to ethylene exposure."
+  },
+  "valerianella_corn_salad": {
+   "chapter": "Salad Greens",
+   "page": 548,
+   "optimal_temperature_c": {
+    "min": 0,
+    "max": 2
+   },
+   "optimal_humidity_percent": {
+    "min": 95,
+    "max": 100
+   },
+   "commercial_optimal_days": [
+    10,
+    14
+   ],
+   "chilling_susceptible": false,
+   "produces_ethylene": false,
+   "ethylene_production_class": "very_low",
+   "sensitive_to_ethylene": true,
+   "respiration_rate_class": "very_high",
+   "resp_basis": "Lamb's lettuce 0 °C 12, 7 °C 67 mg CO2/kg·h -> 5 °C ~41 (interpolazione esponenziale)",
+   "quote": "Salad greens should be stored at 0 to 2 °C with 95 to 100% RH ... other leafy greens 10 to 14 days; not sensitive to chilling; highly sensitive to ethylene."
+  },
+  "tartufo_nero_black_truffle": {
+   "chapter": "Truffle",
+   "page": 598,
+   "optimal_temperature_c": {
+    "min": 0,
+    "max": 0
+   },
+   "optimal_humidity_percent": {
+    "min": 90,
+    "max": 95
+   },
+   "commercial_optimal_days": [
+    20,
+    30
+   ],
+   "chilling_susceptible": false,
+   "produces_ethylene": false,
+   "ethylene_production_class": "very_low",
+   "sensitive_to_ethylene": false,
+   "respiration_rate_class": "high",
+   "resp_basis": "5 °C 24-45 mg CO2/kg·h (media 34,5)",
+   "quote": "Truffles can be kept in good condition for 20 to 30 days at 0 ºC with 90 to 95% RH; not chilling sensitive; produce only very low amounts of ethylene and are not sensitive to ethylene exposure.",
+   "quote_storage": "Truffles can be kept in good condition for 20 to 30 days at 0 ºC (32 °F) with 90 to 95% RH.",
+   "quote_resp": "5 °C 24 to 45 mg CO2 kg-1 h-1"
+  },
+  "radicchio_radicchio": {
+   "chapter": "Radicchio",
+   "respiration_rate_class": "moderate",
+   "sensitive_to_ethylene": true,
+   "resp_basis": "capitolo: 6 °C 10-16 mg CO2/kg·h (la Tab. 1 del PDF riporta 1310/2311, refuso)",
+   "quote": "Exposure to 10 µL L-1 ethylene for 6 days at 7.5 °C ... increased leaf browning, decay, and pigmentation of midribs."
+  },
+  "finocchio_fennel": {
+   "chapter": "Fennel",
+   "respiration_rate_class": "moderate",
+   "sensitive_to_ethylene": null,
+   "resp_basis": "capitolo: 2 °C 18-20 mg CO2/kg·h (Tab. 1 del PDF: 196, refuso)",
+   "quote": "No data exist on sensitivity to ethylene."
+  },
+  "bietola_da_coste_swiss_chard": {
+   "chapter": "Swiss Chard",
+   "respiration_rate_class": "moderate",
+   "sensitive_to_ethylene": true,
+   "resp_basis": "capitolo: 2 °C 18-20 mg CO2/kg·h",
+   "quote": "Ethylene production is very low ... Sensitivity, however, is very high. Exposure results in yellowing and senescence."
+  },
+  "carota_carrot": {
+   "chapter": "Carrot",
+   "sensitive_to_ethylene": true,
+   "quote": "exposure to ethylene (~0.2 µL L-1) induces development of the bitter compound isocoumarin ... should not be exposed to ethylene in storage."
+  },
+  "pastinaca_parsnip": {
+   "chapter": "Parsnip",
+   "sensitive_to_ethylene": true,
+   "quote": "Exposure to low levels of ethylene in cold storage causes bitterness."
+  },
+  "melanzana_eggplant": {
+   "chapter": "Eggplant",
+   "sensitive_to_ethylene": true,
+   "quote": "Eggplant fruit have a moderate to high sensitivity to ethylene exposure."
+  },
+  "cicoria_da_cespo_chicory": {
+   "chapter": "Endive and Escarole",
+   "match": "approx",
+   "sensitive_to_ethylene": true,
+   "quote": "Production is very low, but exposure can result in leaf yellowing."
+  },
+  "cicoria_da_taglio_cutting_chicory": {
+   "chapter": "Endive and Escarole",
+   "match": "approx",
+   "sensitive_to_ethylene": true,
+   "quote": "Production is very low, but exposure can result in leaf yellowing."
+  },
+  "arancia_orange": {
+   "chapter": "Orange",
+   "sensitive_to_ethylene": true,
+   "quote": "ethylene stimulates decay, such as anthracnose and stem-end rot ... Ethylene also increases respiration in citrus."
+  },
+  "fico_fig": {
+   "chapter": "Fig",
+   "sensitive_to_ethylene": true,
+   "quote": "Figs are climacteric fruit and are slightly sensitive to ethylene action on stimulating softening and decay severity.",
+   "page": 340,
+   "optimal_temperature_c": {
+    "min": -1.0,
+    "max": 0.0
+   },
+   "optimal_humidity_percent": {
+    "min": 90,
+    "max": 95
+   },
+   "chilling_susceptible": false,
+   "ethylene_production_class": "moderate",
+   "quote_storage": "Store at -1 to 0 ºC (30 to 32 ºF) with 90 to 95% RH.",
+   "quote_chill": "Figs are not chilling sensitive.",
+   "quote_eth": "20 ºC 4.0 to 6.0 µL kg-1 h-1"
+  },
+  "mela_apple": {
+   "chapter": "Apple",
+   "sensitive_to_ethylene": true,
+   "quote": "The timing of the climacteric and ripening of apple fruit is advanced by exposure to ethylene."
+  },
+  "susina_plum": {
+   "chapter": "Plum and Fresh Prune",
+   "sensitive_to_ethylene": true,
+   "respiration_rate_class": "low",
+   "resp_basis": "0 °C 2-3, 10 °C 8-12 mg CO2/kg·h -> 5 °C ~5 (media geometrica)",
+   "quote": "for slow-ripening cultivars ... application of 100 µL L-1 for at least 24 h at 20 °C is needed for faster and more uniform ripening.",
+   "page": 507,
+   "chilling_susceptible": true,
+   "critical_temperature_c": null,
+   "symptoms": {
+    "it": "La maggior parte delle varietà subisce danni da freddo se conservata a 5 °C (disfacimento interno); meglio 0 °C.",
+    "en": "Most cultivars suffer chilling injury when stored at 5 °C (internal breakdown); 0 °C is better."
+   },
+   "quote_chill": "Most plum and fresh prune cultivars are susceptible to chilling injury when stored at 5 °C (41 °F)."
+  },
+  "mango_mango": {
+   "chapter": "Mango",
+   "sensitive_to_ethylene": true,
+   "quote": "Ethylene induces faster and more uniform softening."
+  },
+  "melone_melon": {
+   "chapter": "Netted Melon",
+   "respiration_rate_class": "moderate",
+   "resp_basis": "Tab. 1 Netted Melon 5 °C 10 mg CO2/kg·h",
+   "quote": "Netted melons have a moderate rate of respiration (Kader 1992)."
+  },
+  "fragola_strawberry": {
+   "chapter": "Strawberry",
+   "respiration_rate_class": "high",
+   "resp_basis": "0 °C 12-20, 10 °C 50-100 mg CO2/kg·h -> 5 °C ~35 (media geometrica)"
+  },
+  "pera_pear": {
+   "chapter": "Pear",
+   "respiration_rate_class": "low",
+   "resp_basis": "d'Anjou/Bartlett 2 °C 3-5, 10 °C 6-16 mg CO2/kg·h -> 5 °C ~6",
+   "produces_ethylene": true,
+   "ethylene_production_class": "high",
+   "quote": "Ethylene production rates are low at harvest ... The magnitude of ethylene production at the climacteric-like peak is 10 to 20 mL kg-1 h-1 for 'd'Anjou', 40 to 80 for 'Bosc' (pere in maturazione a 20 °C).",
+   "page": 481,
+   "chilling_susceptible": false,
+   "quote_chill": "Most pears in the Pacific Northwest are stored at -1 °C (30 °F) with RH of 90 to 94%"
+  },
+  "nespola_loquat": {
+   "chapter": "Loquat",
+   "sensitive_to_ethylene": false,
+   "produces_ethylene": false,
+   "quote": "Loquat fruit produce relatively low amounts of ethylene and are not particularly sensitive to ethylene exposure after harvest.",
+   "page": 411,
+   "optimal_temperature_c": {
+    "min": 0.0,
+    "max": 5.0
+   },
+   "commercial_optimal_days": [
+    21,
+    28
+   ],
+   "chilling_susceptible": false,
+   "respiration_rate_class": "moderate",
+   "quote_storage": "0 to 5 °C (32 to 41 °F) with >90% RH ... 3 to 4 weeks at 0 °C",
+   "quote_resp": "5 °C 12.4 mg CO2 kg-1 h-1"
+  },
+  "pesca_peach": {
+   "chapter": "Peach",
+   "respiration_rate_class": "moderate",
+   "resp_basis": "0 °C 4-6, 10 °C 16-24 mg CO2/kg·h -> 5 °C ~10 (media geometrica)",
+   "page": 476,
+   "chilling_susceptible": true,
+   "critical_temperature_c": null,
+   "symptoms": {
+    "it": "Molte varietà di media e tarda stagione: imbrunimento e disfacimento interno della polpa, più rapidi tra 2 e 7 °C che a 0 °C.",
+    "en": "Most mid- and late-season cultivars: internal browning and breakdown, faster and more intense at 2-7 °C than at 0 °C or below."
+   },
+   "quote_chill": "Chilling injury develops faster and more intensely in fruit stored at 2 to 7 °C (36 to 45 °F) than in those stored at 0 °C (32 °F) or below."
+  },
+  "pesca_noce_nectarine": {
+   "chapter": "Nectarine",
+   "respiration_rate_class": "moderate",
+   "resp_basis": "Tab. 1 Nectarine (ripe): 0 °C 5, 10 °C 20 mg CO2/kg·h -> 5 °C ~10 (media geometrica)",
+   "page": 428,
+   "chilling_susceptible": true,
+   "symptoms": {
+    "it": "Alcune varietà di media e tarda stagione: imbrunimento e disfacimento interno della polpa, più rapidi tra 2 e 8 °C che a 0 °C.",
+    "en": "Some mid- and late-season cultivars: internal browning and breakdown, faster and more intense between 2 and 8 °C than at 0 °C."
+   },
+   "quote_chill": "Chilling injury symptoms develop faster and more intensely when fruit are stored between about 2 and 8 °C (36 and 46 °F) than in those stored at 0 °C (32 °F) or below."
+  },
+  "albicocca_apricot": {
+   "chapter": "Apricot",
+   "respiration_rate_class": "low",
+   "resp_basis": "Tab. 1: 0 °C 6, 10 °C 16 mg CO2/kg·h -> 5 °C ~10 (media geometrica 9,8)",
+   "page": 205,
+   "chilling_susceptible": true,
+   "critical_temperature_c": null,
+   "symptoms": {
+    "it": "Nelle varietà sensibili: polpa gelatinosa e imbrunita e perdita di sapore, più rapide a 5 °C che a 0 °C.",
+    "en": "In sensitive cultivars: gel breakdown, flesh browning and loss of flavour, faster at 5 °C than at 0 °C."
+   },
+   "quote_chill": "Chilling-sensitive cultivars develop and express chilling injury symptoms (gel breakdown, flesh browning, and loss of flavor) more rapidly at 5 °C than at 0 °C.",
+   "freezing_point_c": -1.0,
+   "quote_freezing": "The highest freezing point is -1.0 ºC"
+  },
+  "cachi_persimmon": {
+   "chapter": "Persimmon",
+   "respiration_rate_class": "low",
+   "resp_basis": "0 °C 4-8, 20 °C 20-24 mg CO2/kg·h -> 5 °C ~8 (interpolazione esponenziale)",
+   "page": 497,
+   "optimal_temperature_c": {
+    "min": -1.0,
+    "max": 1.0
+   },
+   "optimal_humidity_percent": {
+    "min": 90,
+    "max": 95
+   },
+   "commercial_optimal_days": [
+    90,
+    90
+   ],
+   "chilling_susceptible": true,
+   "symptoms": {
+    "it": "Dipende dalla varietà: i cachi non astringenti tipo Fuyu tra 5 e 15 °C imbruniscono nella polpa e si ammorbidiscono; il tipo Hachiya non è sensibile.",
+    "en": "Depends on the cultivar: non-astringent Fuyu-type persimmons develop flesh browning and softening between 5 and 15 °C; Hachiya is not chilling sensitive."
+   },
+   "ethylene_production_class": "low",
+   "sensitive_to_ethylene": true,
+   "quote_storage": "The optimum temperature for storing persimmons is 0±1 °C ... RH should be maintained at 90 to 95%. Postharvest life ... in ethylene-free air is 3 mo",
+   "quote_chill": "'Hachiya' is not chilling sensitive while 'Fuyu' and similar nonastringent cultivars are sensitive at temperatures between 5 ºC and 15 ºC",
+   "quote_eth": "0.1 to 0.5 µL kg-1 h-1 at 20 °C ... They are very sensitive to ethylene."
+  },
+  "pisello_pea": {
+   "chapter": "Pea",
+   "respiration_rate_class": "extremely_high",
+   "resp_basis": "Tab. 1 Pea (garden) 5 °C 64 mg CO2/kg·h",
+   "page": 473,
+   "chilling_susceptible": false,
+   "produces_ethylene": false,
+   "ethylene_production_class": "very_low",
+   "sensitive_to_ethylene": true,
+   "quote_chill": "Peas are not sensitive to low temperature",
+   "quote_eth": "<0.1 μL kg-1 h-1 at 20 °C ... moderately sensitive to ethylene after harvest"
+  },
+  "cavolo_nero_black_kale": {
+   "chapter": "Greens for Cooking",
+   "match": "approx",
+   "respiration_rate_class": "very_high",
+   "resp_basis": "dati per lo spinacio (il capitolo non ne ha altri): 5 °C 32-58 mg CO2/kg·h",
+   "page": 363,
+   "optimal_temperature_c": {
+    "min": 0.0,
+    "max": 0.0
+   },
+   "optimal_humidity_percent": {
+    "min": 95,
+    "max": 98
+   },
+   "quote_storage": "Greens should be stored near 0 °C (32 °F) with 95 to 98% RH."
+  },
+  "cima_di_rapa_turnip_greens": {
+   "chapter": "Greens for Cooking",
+   "match": "approx",
+   "respiration_rate_class": "very_high",
+   "resp_basis": "dati per lo spinacio (il capitolo non ne ha altri): 5 °C 32-58 mg CO2/kg·h",
+   "page": 363,
+   "optimal_temperature_c": {
+    "min": 0.0,
+    "max": 0.0
+   },
+   "optimal_humidity_percent": {
+    "min": 95,
+    "max": 98
+   },
+   "quote_storage": "Greens should be stored near 0 °C (32 °F) with 95 to 98% RH."
+  },
+  "topinambur_jerusalem_artichoke": {
+   "chapter": "Jerusalem Artichoke",
+   "page": 375,
+   "optimal_temperature_c": {
+    "min": 0.0,
+    "max": 2.0
+   },
+   "optimal_humidity_percent": {
+    "min": 90,
+    "max": 95
+   },
+   "commercial_optimal_days": [
+    180,
+    360
+   ],
+   "chilling_susceptible": false,
+   "sensitive_to_ethylene": false,
+   "quote_storage": "Tubers can be stored for 6 to 12 mo at 0 to 2 °C (32 to 34 °F) and 90 to 95% RH.",
+   "quote_chill": "Tubers can withstand low temperatures without damage but freeze at -2.2 °C",
+   "quote_eth": "Tubers are not sensitive to ethylene."
+  },
+  "mela_cotogna_quince": {
+   "chapter": "Quince",
+   "page": 528,
+   "optimal_temperature_c": {
+    "min": -0.5,
+    "max": 0.0
+   },
+   "optimal_humidity_percent": {
+    "min": 90,
+    "max": 90
+   },
+   "commercial_optimal_days": [
+    60,
+    90
+   ],
+   "quote_storage": "Optimum storage temperature is -0.5 °C to 0 °C (31 to 32 °F) with about 90% RH. Storage life in air at -0.5 °C (31 °F) is 2 to 3 mo"
+  },
+  "fico_d_india_prickly_pear": {
+   "chapter": "Prickly Pear (Cactus Pear)",
+   "page": 521,
+   "optimal_temperature_c": {
+    "min": 5.0,
+    "max": 8.0
+   },
+   "optimal_humidity_percent": {
+    "min": 90,
+    "max": 95
+   },
+   "commercial_optimal_days": [
+    14,
+    35
+   ],
+   "chilling_susceptible": true,
+   "critical_temperature_c": 5.0,
+   "symptoms": {
+    "it": "Sotto i 5 °C (in alcune varietà sotto i 10 °C): buccia butterata, bronzata e con macchie scure, più marciumi.",
+    "en": "Below 5 °C (below 10 °C in some cultivars): pitting, bronzing and dark spots on the peel, and more decay."
+   },
+   "ethylene_production_class": "low",
+   "sensitive_to_ethylene": false,
+   "quote_storage": "fruit can be kept for 2 to 5 weeks at 5 to 8 °C (41 to 46 °F) with 90 to 95% RH",
+   "quote_chill": "especially chilling sensitive when stored at <5 °C (41 °F), but chilling injury may occur in some varieties at <10 °C",
+   "quote_eth": "about 0.2 µL kg-1 h-1 at 20 °C (68 °F). They are not sensitive to ethylene exposure."
+  },
+  "fungo_porcino_porcini_mushroom": {
+   "chapter": "Mushroom",
+   "page": 425,
+   "match": "approx",
+   "optimal_temperature_c": {
+    "min": 0.0,
+    "max": 1.0
+   },
+   "optimal_humidity_percent": {
+    "min": 95,
+    "max": 95
+   },
+   "commercial_optimal_days": [
+    7,
+    9
+   ],
+   "chilling_susceptible": false,
+   "ethylene_production_class": "very_low",
+   "sensitive_to_ethylene": true,
+   "produces_ethylene": false,
+   "quote_storage": "Mushrooms can be held for 7 to 9 days upon rapid cooling and storing at 0 to 1 °C (32 to 34 °F) with 95% RH.",
+   "quote_eth": "Since ethylene causes browning of mushroom caps, they should be kept separate from ethylene-producing fruits and vegetables."
+  },
+  "fungo_ovolo_caesars_mushroom": {
+   "chapter": "Mushroom",
+   "page": 425,
+   "match": "approx",
+   "optimal_temperature_c": {
+    "min": 0.0,
+    "max": 1.0
+   },
+   "optimal_humidity_percent": {
+    "min": 95,
+    "max": 95
+   },
+   "commercial_optimal_days": [
+    7,
+    9
+   ],
+   "chilling_susceptible": false,
+   "ethylene_production_class": "very_low",
+   "sensitive_to_ethylene": true,
+   "produces_ethylene": false,
+   "quote_storage": "Mushrooms can be held for 7 to 9 days upon rapid cooling and storing at 0 to 1 °C (32 to 34 °F) with 95% RH.",
+   "quote_eth": "Since ethylene causes browning of mushroom caps, they should be kept separate from ethylene-producing fruits and vegetables."
+  },
+  "kiwi_kiwifruit": {
+   "chapter": "Kiwifruit",
+   "page": 382,
+   "chilling_susceptible": true,
+   "critical_temperature_c": null,
+   "symptoms": {
+    "it": "La varietà Hayward può subire danni vicino a 0 °C: anello di polpa granulosa e acquosa all'apice, puntinature e macchie scure sulla buccia.",
+    "en": "Hayward can be injured near 0 °C: a ring of granular, water-soaked tissue at the stylar end, pitting and dark scald-like skin."
+   },
+   "sensitive_to_ethylene": true,
+   "quote_chill": "'Hayward' are chilling sensitive at temperatures near 0 °C",
+   "quote_eth": "Kiwifruit in storage are extremely sensitive to the presence of ethylene"
+  },
+  "peperoncino_chili_pepper": {
+   "chapter": "Pepper",
+   "page": 491,
+   "match": "approx",
+   "optimal_temperature_c": {
+    "min": 7.0,
+    "max": 7.0
+   },
+   "optimal_humidity_percent": {
+    "min": 90,
+    "max": 95
+   },
+   "chilling_susceptible": true,
+   "critical_temperature_c": 7.0,
+   "symptoms": {
+    "it": "Sotto i 7 °C: buccia butterata, zone acquose, marciumi e scurimento della cavità dei semi.",
+    "en": "Below 7 °C: surface pitting, water-soaked areas, decay and seed-cavity discoloration."
+   },
+   "produces_ethylene": false,
+   "ethylene_production_class": "low",
+   "quote_storage": "Fresh peppers can be kept for 2 to 3 weeks at 7 °C (45 °F) with 90 to 95% RH.",
+   "quote_chill": "Peppers are sensitive to chilling injury when stored below 7 °C",
+   "quote_eth": "0.1 and 0.2 µL kg-1 h-1 at 10 and 20 °C"
+  },
+  "broccolo_broccoli": {
+   "chapter": "Broccoli",
+   "page": 258,
+   "optimal_temperature_c": {
+    "min": 0.0,
+    "max": 0.0
+   },
+   "optimal_humidity_percent": {
+    "min": 98,
+    "max": 100
+   },
+   "ethylene_production_class": "very_low",
+   "sensitive_to_ethylene": true,
+   "quote_storage": "2 to 3 weeks at 0 ºC (32 ºF) with 98 to 100% RH",
+   "quote_eth": "<0.1 µL kg-1 h-1 at 20 ºC ... extremely sensitive to ethylene"
+  },
+  "sedano_rapa_celeriac": {
+   "chapter": "Celeriac",
+   "page": 285,
+   "sensitive_to_ethylene": true,
+   "ethylene_production_class": "very_low",
+   "quote_eth": "celeriac may be slightly sensitive to ethylene. Therefore, celeriac should not be stored with other fruit or vegetables that produce high levels of ethylene."
+  },
+  "scarola_escarole": {
+   "chapter": "Endive and Escarole",
+   "page": 336,
+   "sensitive_to_ethylene": true,
+   "ethylene_production_class": "very_low",
+   "quote_eth": "Production is very low, but exposure can result in leaf yellowing."
+  },
+  "pompelmo_grapefruit": {
+   "chapter": "Grapefruit",
+   "page": 359,
+   "chilling_susceptible": true,
+   "critical_temperature_c": 5.0,
+   "ethylene_production_class": "very_low",
+   "symptoms": {
+    "it": "A 5 °C o meno: butteratura della buccia.",
+    "en": "At 5 °C or below: peel pitting."
+   },
+   "quote_chill": "Chilling injury can occur with low-temperature storage, typically 5 °C (41 °F) or below."
+  },
+  "lime_lime": {
+   "chapter": "Lime",
+   "page": 400,
+   "optimal_temperature_c": {
+    "min": 10.0,
+    "max": 10.0
+   },
+   "optimal_humidity_percent": {
+    "min": 95,
+    "max": 95
+   },
+   "ethylene_production_class": "very_low",
+   "quote_storage": "Limes should be cooled and stored at 10 °C (50 °F) with 95% RH."
+  },
+  "ananas_pineapple": {
+   "chapter": "Pineapple",
+   "page": 501,
+   "optimal_temperature_c": {
+    "min": 7.0,
+    "max": 12.0
+   },
+   "optimal_humidity_percent": {
+    "min": 85,
+    "max": 95
+   },
+   "ethylene_production_class": "low",
+   "quote_storage": "Temperatures of 7 to 12 °C ... RH of 85 to 95%",
+   "quote_eth": "low: 0.1 to 1.0 µL kg-1 h-1"
+  },
+  "papaya_papaya": {
+   "chapter": "Papaya",
+   "page": 457,
+   "optimal_temperature_c": {
+    "min": 7.0,
+    "max": 13.0
+   },
+   "optimal_humidity_percent": {
+    "min": 90,
+    "max": 95
+   },
+   "ethylene_production_class": "moderate",
+   "quote_storage": "Store at 7 to 13 °C (45 to 55 °F) with 90 to 95% RH.",
+   "quote_eth": "Ethylene rates in ripening fruit are 6 to 10 μL kg-1 h-1"
+  },
+  "mandarino_mandarin": {
+   "chapter": "Mandarin",
+   "page": 415,
+   "optimal_temperature_c": {
+    "min": 5.0,
+    "max": 8.0
+   },
+   "optimal_humidity_percent": {
+    "min": 95,
+    "max": 95
+   },
+   "chilling_susceptible": true,
+   "critical_temperature_c": 5.0,
+   "ethylene_production_class": "very_low",
+   "quote_storage": "Mandarin are stored at 5 to 8 °C (41 to 46 °F) with 95% RH for periods up to 4 weeks. Chilling injury can occur in storage if temperatures fall below 5 °C"
+  },
+  "indivia_riccia_curly_endive": {
+   "chapter": "Endive and Escarole",
+   "page": 336,
+   "sensitive_to_ethylene": true,
+   "ethylene_production_class": "very_low",
+   "quote_eth": "Production is very low, but exposure can result in leaf yellowing."
+  },
+  "clementine_clementine": {
+   "chapter": "Mandarin",
+   "page": 415,
+   "optimal_temperature_c": {
+    "min": 5.0,
+    "max": 8.0
+   },
+   "optimal_humidity_percent": {
+    "min": 95,
+    "max": 95
+   },
+   "chilling_susceptible": true,
+   "critical_temperature_c": 5.0,
+   "ethylene_production_class": "very_low",
+   "quote_storage": "Mandarin are stored at 5 to 8 °C (41 to 46 °F) with 95% RH for periods up to 4 weeks. Chilling injury can occur in storage if temperatures fall below 5 °C",
+   "match": "approx"
+  },
+  "patata_potato": {
+   "chapter": "Potato",
+   "page": 516,
+   "optimal_temperature_c": {
+    "min": 7.0,
+    "max": 10.0
+   },
+   "optimal_humidity_percent": {
+    "min": 95,
+    "max": 99
+   },
+   "quote_storage": "Tubers for fresh consumption are stored at 7 to 10 °C (45 to 50 °F) ... Maintaining 95 to 99% RH is required at all times ... Storage at 0 to 2 °C (32 to 36 °F) increases the risk of freezing or chilling injury."
+  },
+  "fava_broad_bean": {
+   "chapter": "Table 1 Compatible fresh fruits and vegetables (Beans, fava, lima: gruppo 1A)",
+   "page": 65,
+   "match": "approx",
+   "optimal_temperature_c": {
+    "min": 0.0,
+    "max": 2.0
+   },
+   "optimal_humidity_percent": {
+    "min": 90,
+    "max": 98
+   },
+   "chilling_susceptible": false,
+   "quote_storage": "Group 1A: 0-2 °C; 90-98% RH ... Beans, fava, lima"
+  },
+  "cipolla_estiva_summer_onion": {
+   "chapter": "Onion",
+   "page": 446,
+   "freezing_point_c": -0.8,
+   "quote_freezing": "the highest freezing point is -0.8 °C (31.6 °F)"
+  },
+  "cipolla_invernale_winter_onion": {
+   "chapter": "Onion",
+   "page": 446,
+   "freezing_point_c": -0.8,
+   "quote_freezing": "the highest freezing point is -0.8 °C (31.6 °F)"
+  },
+  "scalogno_shallot": {
+   "chapter": "Onion",
+   "page": 446,
+   "freezing_point_c": -0.8,
+   "quote_freezing": "the highest freezing point is -0.8 °C (31.6 °F)"
+  },
+  "cavolo_cappuccio_cabbage": {
+   "chapter": "Cabbage",
+   "page": 265,
+   "freezing_point_c": -0.83,
+   "quote_freezing": "The freezing point is -0.9 to -0.83 °C"
+  },
+  "cavolo_verza_savoy_cabbage": {
+   "chapter": "Cabbage",
+   "page": 265,
+   "freezing_point_c": -0.83,
+   "quote_freezing": "The freezing point is -0.9 to -0.83 °C"
+  },
+  "cavolo_rosso_red_cabbage": {
+   "chapter": "Cabbage",
+   "page": 265,
+   "freezing_point_c": -0.83,
+   "quote_freezing": "The freezing point is -0.9 to -0.83 °C"
+  },
+  "uva_table_grape": {
+   "chapter": "Grape (Table)",
+   "page": 354,
+   "freezing_point_c": -3.0,
+   "quote_freezing": "The highest freezing point for berries is -3.0 ºC"
+  },
+  "fagiolino_green_bean": {
+   "chapter": "Bean",
+   "page": 240,
+   "freezing_point_c": -0.7,
+   "quote_freezing": "Freeze damage occurs at -0.7 °C"
+  },
+  "fagiolo_bean": {
+   "chapter": "Bean",
+   "page": 240,
+   "freezing_point_c": -0.7,
+   "quote_freezing": "Freeze damage occurs at -0.7 °C"
+  }
+ }
+}

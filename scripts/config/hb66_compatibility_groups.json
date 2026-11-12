@@ -1,0 +1,645 @@
+{
+ "_doc": "USDA HB66, 'Table 1. Compatible fresh fruits and vegetables during 7-day storage' (fonte: Thompson et al. 1996), PDF pag. 65-66 (stampate 55-56). Gruppi: 1A = 0-2 °C, 90-98% UR (verdure); 1B = 0-2 °C, 85-95% UR (frutta e meloni); 2 = 7-10 °C, 85-95% UR; 3 = 13-18 °C, 85-95% UR. Nell'area di conservazione l'etilene deve restare sotto 1 ppm; i prodotti sensibili (†) vanno tenuti lontani da quelli che ne producono molto (‡). Il testo estratto dal PDF ha le colonne mescolate: l'assegnazione e' stata ricostruita riga per riga (in ogni riga: prime voci = gruppo 1, ultime = gruppi 2 e 3) e controllata con le temperature ottimali dei capitoli. 'approx' = voce della tabella affine (es. 'Herbs (not basil)', 'Lettuce', 'Endive-chicory').",
+ "groups": {
+  "1A": {
+   "temp_c": [
+    0,
+    2
+   ],
+   "rh": [
+    90,
+    98
+   ],
+   "it": "Verdure da frigorifero (0-2 °C, umidità alta)",
+   "en": "Cold vegetables (0-2 °C, high humidity)"
+  },
+  "1B": {
+   "temp_c": [
+    0,
+    2
+   ],
+   "rh": [
+    85,
+    95
+   ],
+   "it": "Frutta da frigorifero (0-2 °C)",
+   "en": "Cold fruit (0-2 °C)"
+  },
+  "2": {
+   "temp_c": [
+    7,
+    10
+   ],
+   "rh": [
+    85,
+    95
+   ],
+   "it": "Prodotti da fresco ma non da freddo (7-10 °C)",
+   "en": "Cool, not cold (7-10 °C)"
+  },
+  "3": {
+   "temp_c": [
+    13,
+    18
+   ],
+   "rh": [
+    85,
+    95
+   ],
+   "it": "Prodotti da ambiente fresco (13-18 °C)",
+   "en": "Cool room (13-18 °C)"
+  }
+ },
+ "items": {
+  "menta_mint": [
+   "1A",
+   "exact",
+   "Mint"
+  ],
+  "prezzemolo_parsley": [
+   "1A",
+   "exact",
+   "Parsley"
+  ],
+  "rosmarino_rosemary": [
+   "1A",
+   "approx",
+   "Herbs (not basil)"
+  ],
+  "salvia_sage": [
+   "1A",
+   "approx",
+   "Herbs (not basil)"
+  ],
+  "timo_thyme": [
+   "1A",
+   "approx",
+   "Herbs (not basil)"
+  ],
+  "fungo_champignon_button_mushroom": [
+   "1A",
+   "exact",
+   "Mushroom"
+  ],
+  "fungo_pleurotus_oyster_mushroom": [
+   "1A",
+   "approx",
+   "Mushroom"
+  ],
+  "fungo_porcino_porcini_mushroom": [
+   "1A",
+   "approx",
+   "Mushroom"
+  ],
+  "fungo_ovolo_caesars_mushroom": [
+   "1A",
+   "approx",
+   "Mushroom"
+  ],
+  "carciofo_artichoke": [
+   "1A",
+   "exact",
+   "Artichoke"
+  ],
+  "cardo_cardoon": [
+   "1A",
+   "approx",
+   "Artichoke"
+  ],
+  "rucola_arugula": [
+   "1A",
+   "exact",
+   "Arugula"
+  ],
+  "pastinaca_parsnip": [
+   "1A",
+   "exact",
+   "Parsnip"
+  ],
+  "asparago_asparagus": [
+   "1A",
+   "exact",
+   "Asparagus"
+  ],
+  "radicchio_radicchio": [
+   "1A",
+   "exact",
+   "Radicchio"
+  ],
+  "fava_broad_bean": [
+   "1A",
+   "exact",
+   "Beans, fava, lima"
+  ],
+  "fagiolo_bean": [
+   "2",
+   "approx",
+   "Beans, snap, green, wax (dati post-raccolta del fagiolo dal capitolo Bean)"
+  ],
+  "cicoria_da_cespo_chicory": [
+   "1A",
+   "exact",
+   "Endive-chicory"
+  ],
+  "cicoria_da_taglio_cutting_chicory": [
+   "1A",
+   "approx",
+   "Endive-chicory"
+  ],
+  "ravanello_radish": [
+   "1A",
+   "exact",
+   "Radish"
+  ],
+  "scarola_escarole": [
+   "1A",
+   "exact",
+   "Escarole"
+  ],
+  "indivia_riccia_curly_endive": [
+   "1A",
+   "exact",
+   "Endive-chicory"
+  ],
+  "barbabietola_beetroot": [
+   "1A",
+   "exact",
+   "Beet"
+  ],
+  "finocchio_fennel": [
+   "1A",
+   "exact",
+   "Fennel"
+  ],
+  "indivia_belga_belgian_endive": [
+   "1A",
+   "exact",
+   "Belgian endive"
+  ],
+  "aglio_garlic": [
+   "1A",
+   "exact",
+   "Garlic"
+  ],
+  "broccolo_broccoli": [
+   "1A",
+   "exact",
+   "Broccoli"
+  ],
+  "scalogno_shallot": [
+   "1A",
+   "exact",
+   "Shallot"
+  ],
+  "cavoletto_di_bruxelles_brussels_sprout": [
+   "1A",
+   "exact",
+   "Brussels sprouts"
+  ],
+  "topinambur_jerusalem_artichoke": [
+   "1A",
+   "exact",
+   "Jerusalem artichoke"
+  ],
+  "spinacio_spinach": [
+   "1A",
+   "exact",
+   "Spinach"
+  ],
+  "cavolo_cappuccio_cabbage": [
+   "1A",
+   "exact",
+   "Cabbage"
+  ],
+  "cavolo_verza_savoy_cabbage": [
+   "1A",
+   "exact",
+   "Cabbage"
+  ],
+  "cavolo_rosso_red_cabbage": [
+   "1A",
+   "exact",
+   "Cabbage"
+  ],
+  "pisello_pea": [
+   "1A",
+   "exact",
+   "Sweet pea"
+  ],
+  "carota_carrot": [
+   "1A",
+   "exact",
+   "Carrot"
+  ],
+  "cavolo_nero_black_kale": [
+   "1A",
+   "exact",
+   "Kale"
+  ],
+  "bietola_da_coste_swiss_chard": [
+   "1A",
+   "exact",
+   "Swiss chard"
+  ],
+  "cavolfiore_cauliflower": [
+   "1A",
+   "exact",
+   "Cauliflower"
+  ],
+  "cavolo_rapa_kohlrabi": [
+   "1A",
+   "exact",
+   "Kohlrabi"
+  ],
+  "rapa_turnip": [
+   "1A",
+   "exact",
+   "Turnip"
+  ],
+  "sedano_rapa_celeriac": [
+   "1A",
+   "exact",
+   "Celeriac"
+  ],
+  "porro_leek": [
+   "1A",
+   "exact",
+   "Leek"
+  ],
+  "cima_di_rapa_turnip_greens": [
+   "1A",
+   "exact",
+   "Turnip greens"
+  ],
+  "sedano_celery": [
+   "1A",
+   "exact",
+   "Celery"
+  ],
+  "lattuga_da_cespo_head_lettuce": [
+   "1A",
+   "exact",
+   "Lettuce"
+  ],
+  "lattuga_da_taglio_leaf_lettuce": [
+   "1A",
+   "exact",
+   "Lettuce"
+  ],
+  "valerianella_corn_salad": [
+   "1A",
+   "approx",
+   "Lettuce"
+  ],
+  "mais_corn": [
+   "1A",
+   "exact",
+   "Corn, sweet"
+  ],
+  "cipolla_estiva_summer_onion": [
+   "1A",
+   "approx",
+   "Green onion"
+  ],
+  "basilico_basil": [
+   "2",
+   "exact",
+   "Basil"
+  ],
+  "fagiolino_green_bean": [
+   "2",
+   "exact",
+   "Beans, snap, green, wax"
+  ],
+  "cetriolo_cucumber": [
+   "2",
+   "exact",
+   "Cucumber"
+  ],
+  "melanzana_eggplant": [
+   "2",
+   "exact",
+   "Eggplant"
+  ],
+  "zucchina_zucchini": [
+   "2",
+   "exact",
+   "Squash, summer (soft rind)"
+  ],
+  "peperone_bell_pepper": [
+   "2",
+   "exact",
+   "Pepper, bell, chili"
+  ],
+  "peperoncino_chili_pepper": [
+   "2",
+   "exact",
+   "Pepper, bell, chili"
+  ],
+  "pomodoro_tomato": [
+   "3",
+   "exact",
+   "Tomato, ripe, partially ripe & mature green"
+  ],
+  "patata_potato": [
+   "3",
+   "exact",
+   "Potato"
+  ],
+  "zucca_pumpkin": [
+   "3",
+   "exact",
+   "Pumpkin / Squash, winter"
+  ],
+  "cipolla_invernale_winter_onion": [
+   "3",
+   "exact",
+   "Dry onion"
+  ],
+  "mela_apple": [
+   "1B",
+   "exact",
+   "Apple"
+  ],
+  "albicocca_apricot": [
+   "1B",
+   "exact",
+   "Apricot"
+  ],
+  "fico_fig": [
+   "1B",
+   "exact",
+   "Fig"
+  ],
+  "mela_cotogna_quince": [
+   "1B",
+   "exact",
+   "Quince"
+  ],
+  "lampone_raspberry": [
+   "1B",
+   "exact",
+   "Raspberry"
+  ],
+  "uva_table_grape": [
+   "1B",
+   "exact",
+   "Grape"
+  ],
+  "fragola_strawberry": [
+   "1B",
+   "exact",
+   "Strawberry"
+  ],
+  "mora_blackberry": [
+   "1B",
+   "exact",
+   "Blackberry"
+  ],
+  "kiwi_kiwifruit": [
+   "1B",
+   "exact",
+   "Kiwifruit"
+  ],
+  "mirtillo_blueberry": [
+   "1B",
+   "exact",
+   "Blueberry"
+  ],
+  "nespola_loquat": [
+   "1B",
+   "exact",
+   "Loquat"
+  ],
+  "melone_melon": [
+   "1B",
+   "exact",
+   "Cantaloup"
+  ],
+  "litchi_lychee": [
+   "1B",
+   "exact",
+   "Lychee"
+  ],
+  "pesca_noce_nectarine": [
+   "1B",
+   "exact",
+   "Nectarine"
+  ],
+  "ciliegia_cherry": [
+   "1B",
+   "exact",
+   "Cherry"
+  ],
+  "pesca_peach": [
+   "1B",
+   "exact",
+   "Peach"
+  ],
+  "pera_pear": [
+   "1B",
+   "exact",
+   "Pear (Asian & European)"
+  ],
+  "cachi_persimmon": [
+   "1B",
+   "exact",
+   "Persimmon"
+  ],
+  "ribes_redcurrant": [
+   "1B",
+   "exact",
+   "Currant"
+  ],
+  "susina_plum": [
+   "1B",
+   "exact",
+   "Plum, ripe"
+  ],
+  "melograno_pomegranate": [
+   "1B",
+   "exact",
+   "Pomegranate"
+  ],
+  "avocado_avocado": [
+   "1B",
+   "exact",
+   "Avocado, ripe (unripe: group 2)"
+  ],
+  "lime_lime": [
+   "2",
+   "exact",
+   "Lime"
+  ],
+  "fico_d_india_prickly_pear": [
+   "2",
+   "exact",
+   "Cactus pear, tuna"
+  ],
+  "mandarino_mandarin": [
+   "2",
+   "exact",
+   "Mandarin"
+  ],
+  "clementine_clementine": [
+   "2",
+   "approx",
+   "Mandarin / Tangerine"
+  ],
+  "arancia_orange": [
+   "2",
+   "exact",
+   "Orange"
+  ],
+  "maracuja_passion_fruit": [
+   "2",
+   "exact",
+   "Passion fruit"
+  ],
+  "ananas_pineapple": [
+   "2",
+   "exact",
+   "Pineapple"
+  ],
+  "pompelmo_grapefruit": [
+   "2",
+   "exact",
+   "Grapefruit"
+  ],
+  "limone_lemon": [
+   "2",
+   "exact",
+   "Lemon"
+  ],
+  "mango_mango": [
+   "2",
+   "exact",
+   "Mango, ripe"
+  ],
+  "banana_banana": [
+   "3",
+   "exact",
+   "Banana"
+  ],
+  "anguria_watermelon": [
+   "3",
+   "exact",
+   "Watermelon"
+  ],
+  "papaya_papaya": [
+   "3",
+   "exact",
+   "Papaya"
+  ],
+  "cavolo_cinese_chinese_cabbage": [
+   "1A",
+   "exact",
+   "Chinese cabbage"
+  ],
+  "finferlo_chanterelle": [
+   "1A",
+   "approx",
+   "Mushroom"
+  ],
+  "spugnola_morel": [
+   "1A",
+   "approx",
+   "Mushroom"
+  ],
+  "shiitake_shiitake": [
+   "1A",
+   "approx",
+   "Mushroom"
+  ],
+  "cardoncello_king_oyster_mushroom": [
+   "1A",
+   "approx",
+   "Mushroom"
+  ],
+  "daikon_daikon": [
+   "1A",
+   "exact",
+   "Daikon"
+  ],
+  "navone_swede": [
+   "1A",
+   "exact",
+   "Rutabaga"
+  ],
+  "rabarbaro_rhubarb": [
+   "1A",
+   "exact",
+   "Rhubarb"
+  ],
+  "scorzonera_black_salsify": [
+   "1A",
+   "exact",
+   "Scorzonera"
+  ],
+  "cipollotto_spring_onion": [
+   "1A",
+   "exact",
+   "Green onion"
+  ],
+  "erba_cipollina_chives": [
+   "1A",
+   "approx",
+   "Herbs (not basil)"
+  ],
+  "rafano_horseradish": [
+   "1A",
+   "exact",
+   "Horseradish"
+  ],
+  "taccola_snow_pea": [
+   "1A",
+   "exact",
+   "Snow pea"
+  ],
+  "broccolo_romanesco_romanesco": [
+   "1A",
+   "approx",
+   "Broccoflower"
+  ],
+  "puntarelle_puntarelle": [
+   "1A",
+   "approx",
+   "Endive-chicory"
+  ],
+  "asparago_selvatico_wild_asparagus": [
+   "1A",
+   "approx",
+   "Asparagus"
+  ],
+  "crescione_watercress": [
+   "1A",
+   "exact",
+   "Watercress"
+  ],
+  "zucchina_spinosa_chayote": [
+   "2",
+   "exact",
+   "Chayote"
+  ],
+  "gombo_okra": [
+   "2",
+   "exact",
+   "Okra"
+  ],
+  "patata_dolce_sweet_potato": [
+   "3",
+   "exact",
+   "Sweet potato"
+  ],
+  "sambuco_elderberry": [
+   "1B",
+   "exact",
+   "Elderberry"
+  ],
+  "uva_spina_gooseberry": [
+   "1B",
+   "exact",
+   "Gooseberry"
+  ]
+ }
+}

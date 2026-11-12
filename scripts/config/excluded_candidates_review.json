@@ -1,0 +1,713 @@
+{
+  "_doc": "Candidati non inclusi nel database, raccolti in modo sistematico (2026-11-05): voci dei calendari stagionali (WWF, Greenpeace, Altroconsumo, Bio Suisse, EUFIC) non presenti nel database, prodotti ortofrutticoli italiani DOP/IGP su eAmbrosia senza alimento corrispondente, voci della lista esclusi del catalogo. it/en = nome; re = regex per cercare il candidato nelle fonti (IT e EN); eufic = chiavi EUFIC; rel = rilevanza per un'app italiana sulla stagionalità (alta/media/bassa) con motivo; prop = proposta. Le colonne su fonti e schede CREA/BDA sono calcolate da make_excluded_report.py sui dati grezzi già scaricati. comp_re = regex alternativa per le schede di composizione (cercata a inizio voce, per escludere prodotti composti).",
+  "candidates": [
+    {
+      "it": "Cipollotto",
+      "en": "Spring onion",
+      "re": "cipollott|cipolline|cipollina fresca|spring onion|scallion|green onion",
+      "eufic": [
+        "spring onion",
+        "scallion"
+      ],
+      "rel": [
+        "alta",
+        "molto comune in Italia, IGP Cipollotto Nocerino"
+      ],
+      "prop": "aggiungere (deroga: nutrizione dalle 'cipolline' CREA come approssimazione dichiarata)",
+      "comp_re": "cipollott",
+      "id": "cipollotto_spring_onion",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Agretti (barba di frate)",
+      "en": "Saltwort (agretti)",
+      "re": "agrett|barba di frate|roscano|saltwort",
+      "eufic": [],
+      "rel": [
+        "alta",
+        "ortaggio primaverile tipicamente italiano"
+      ],
+      "prop": "aggiungere se si trova una seconda fonte stagionale",
+      "id": "agretti_saltwort",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Amarena / visciola",
+      "en": "Sour cherry",
+      "re": "amaren|viscio|sour cherr|morello",
+      "eufic": [],
+      "rel": [
+        "media",
+        "IGP Amarene Brusche di Modena; frutto da consumo fresco poco diffuso"
+      ],
+      "prop": "valutare",
+      "id": "amarena_sour_cherry",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Noce",
+      "en": "Walnut",
+      "re": "^noc[ei]\\b(?! di cocco| moscata)|\\bnoci\\b|walnut",
+      "eufic": [],
+      "rel": [
+        "alta",
+        "frutta secca di stagione autunnale, molto consumata"
+      ],
+      "prop": "valutare l'estensione alla frutta secca",
+      "id": "noce_walnut",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Nocciola",
+      "en": "Hazelnut",
+      "re": "noccio|hazelnut|filbert",
+      "eufic": [],
+      "rel": [
+        "alta",
+        "tre DOP/IGP italiane (Piemonte, Giffoni, Romana)"
+      ],
+      "prop": "valutare l'estensione alla frutta secca",
+      "id": "nocciola_hazelnut",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Mandorla",
+      "en": "Almond",
+      "re": "mandorl|almond",
+      "eufic": [],
+      "rel": [
+        "media",
+        "frutta secca; la mandorla fresca ha una breve stagione estiva"
+      ],
+      "prop": "valutare l'estensione alla frutta secca",
+      "id": "mandorla_almond",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Pistacchio",
+      "en": "Pistachio",
+      "re": "pistacch|pistachio",
+      "eufic": [],
+      "rel": [
+        "media",
+        "DOP Pistacchio Verde di Bronte"
+      ],
+      "prop": "valutare l'estensione alla frutta secca",
+      "id": "pistacchio_pistachio",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Erba cipollina",
+      "en": "Chives",
+      "re": "erba cipollina|chive",
+      "eufic": [],
+      "rel": [
+        "media",
+        "erba aromatica comune nell'orto"
+      ],
+      "prop": "aggiungere se si trova una seconda fonte stagionale",
+      "id": "erba_cipollina_chives",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Crescione",
+      "en": "Watercress",
+      "re": "crescion|watercress|\\bcress\\b",
+      "eufic": [
+        "watercress",
+        "cress"
+      ],
+      "rel": [
+        "bassa",
+        "poco diffuso in Italia"
+      ],
+      "prop": "no",
+      "id": "crescione_watercress",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Ribes nero",
+      "en": "Blackcurrant",
+      "re": "ribes nero|blackcurrant|black currant",
+      "eufic": [
+        "blackcurrant"
+      ],
+      "rel": [
+        "bassa",
+        "coltura soprattutto nordeuropea"
+      ],
+      "prop": "no",
+      "id": "ribes_nero_blackcurrant",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Uva spina",
+      "en": "Gooseberry",
+      "re": "uva spina|gooseberr",
+      "eufic": [
+        "gooseberry"
+      ],
+      "rel": [
+        "bassa",
+        "coltura soprattutto nordeuropea"
+      ],
+      "prop": "no",
+      "id": "uva_spina_gooseberry",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Mirtillo rosso",
+      "en": "Cranberry / lingonberry",
+      "re": "mirtillo rosso|cranberr|lingonberr",
+      "eufic": [
+        "cranberry",
+        "lingonberry"
+      ],
+      "rel": [
+        "bassa",
+        "in Italia quasi solo essiccato o in succo"
+      ],
+      "prop": "no",
+      "id": "mirtillo_rosso_lingonberry",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Sambuco",
+      "en": "Elderberry",
+      "re": "sambuc|elderberr",
+      "eufic": [
+        "elderberry"
+      ],
+      "rel": [
+        "bassa",
+        "uso soprattutto per fiori e sciroppi"
+      ],
+      "prop": "no",
+      "id": "sambuco_elderberry",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Gelso (mora di gelso)",
+      "en": "Mulberry",
+      "re": "gels[oi]|mulberr",
+      "eufic": [
+        "mulberry",
+        "white mulberry"
+      ],
+      "rel": [
+        "media",
+        "frutto tradizionale del Sud, poco commercializzato"
+      ],
+      "prop": "valutare",
+      "id": "gelso_mulberry",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Rabarbaro",
+      "en": "Rhubarb",
+      "re": "rabarb|rhubarb",
+      "eufic": [
+        "rhubarb"
+      ],
+      "rel": [
+        "bassa",
+        "poco usato in cucina italiana"
+      ],
+      "prop": "no",
+      "id": "rabarbaro_rhubarb",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Rafano (cren)",
+      "en": "Horseradish",
+      "re": "rafano|\\bcren\\b|horseradish",
+      "eufic": [
+        "horseradish"
+      ],
+      "rel": [
+        "media",
+        "tradizionale in Basilicata (rafanata) e nel Nord-Est"
+      ],
+      "prop": "valutare",
+      "id": "rafano_horseradish",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Scorzonera / scorzobianca",
+      "en": "Salsify / black salsify",
+      "re": "scorzon|scorzobianc|salsify",
+      "eufic": [
+        "salsify",
+        "salsify (stored)"
+      ],
+      "rel": [
+        "bassa",
+        "ortaggio di nicchia"
+      ],
+      "prop": "no",
+      "id": "scorzonera_black_salsify",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Cavolo cinese / pak choi",
+      "en": "Chinese cabbage / pak choi",
+      "re": "cavolo cinese|pak choi|bok choy|chinese cabbage|napa",
+      "eufic": [
+        "chinese cabbage",
+        "chinese cabbage (stored)",
+        "pak choi"
+      ],
+      "rel": [
+        "media",
+        "sempre più presente nei supermercati e negli orti"
+      ],
+      "prop": "valutare",
+      "id": "cavolo_cinese_chinese_cabbage",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Patata dolce (batata)",
+      "en": "Sweet potato",
+      "re": "patata dolce|patate americ|batat|sweet potato",
+      "eufic": [
+        "sweet potato",
+        "sweet potato (stored)"
+      ],
+      "rel": [
+        "media",
+        "coltivata anche in Italia (Veneto, Puglia), consumo in crescita"
+      ],
+      "prop": "valutare",
+      "id": "patata_dolce_sweet_potato",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Rapa / navone (rutabaga)",
+      "en": "Swede / rutabaga",
+      "re": "navon|rutabag|\\bswede\\b",
+      "eufic": [
+        "rutabaga",
+        "swede",
+        "rutabaga (stored)",
+        "swede (stored)"
+      ],
+      "rel": [
+        "bassa",
+        "di nicchia in Italia"
+      ],
+      "prop": "no",
+      "id": "navone_swede",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Daikon",
+      "en": "Daikon / white radish",
+      "re": "daikon|white radish",
+      "eufic": [
+        "white radish"
+      ],
+      "rel": [
+        "bassa",
+        "di nicchia"
+      ],
+      "prop": "no",
+      "id": "daikon_daikon",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Taccola (pisello mangiatutto)",
+      "en": "Snow pea / mangetout",
+      "re": "taccol|mangiatutto|snow pea|snap pea|mangetout",
+      "eufic": [
+        "snap pea",
+        "snow pea",
+        "mangetout"
+      ],
+      "rel": [
+        "media",
+        "comune negli orti; potrebbe stare come forma del pisello"
+      ],
+      "prop": "come varietà del pisello",
+      "id": "taccola_snow_pea",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Broccolo romanesco",
+      "en": "Romanesco",
+      "re": "broccolo romanesc|romanesco broccoli|^romanesco$",
+      "eufic": [
+        "romanesco"
+      ],
+      "rel": [
+        "alta",
+        "ortaggio invernale tipicamente italiano"
+      ],
+      "prop": "aggiungere (deroga, nutrizione da cavolfiore o broccolo come approssimata) o come varietà",
+      "id": "broccolo_romanesco_romanesco",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Puntarelle",
+      "en": "Puntarelle (catalogna chicory shoots)",
+      "re": "puntarell|catalogna/puntarelle",
+      "eufic": [
+        "catalogna/puntarelle"
+      ],
+      "rel": [
+        "alta",
+        "tipiche del Lazio, inverno"
+      ],
+      "prop": "come varietà della cicoria da cespo (catalogna)",
+      "id": "puntarelle_puntarelle",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Asparago selvatico",
+      "en": "Wild asparagus",
+      "re": "asparag\\w* (selvatic|di bosco|di campo)|wild asparagus",
+      "eufic": [],
+      "rel": [
+        "media",
+        "raccolta spontanea primaverile, CREA ha la voce"
+      ],
+      "prop": "come varietà o nota dell'asparago",
+      "id": "asparago_selvatico_wild_asparagus",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Portulaca",
+      "en": "Purslane",
+      "re": "portulac|porcellana|purslane",
+      "eufic": [
+        "purslane"
+      ],
+      "rel": [
+        "bassa",
+        "erba spontanea"
+      ],
+      "prop": "no",
+      "status": "escluso su decisione dell'utente (2026-11-05)"
+    },
+    {
+      "it": "Acetosa",
+      "en": "Sorrel",
+      "re": "acetos|sorrel",
+      "eufic": [
+        "sorrel"
+      ],
+      "rel": [
+        "bassa",
+        "erba spontanea"
+      ],
+      "prop": "no",
+      "status": "escluso su decisione dell'utente (2026-11-05)"
+    },
+    {
+      "it": "Salicornia",
+      "en": "Samphire",
+      "re": "salicorn|samphire",
+      "eufic": [
+        "samphire"
+      ],
+      "rel": [
+        "bassa",
+        "di nicchia"
+      ],
+      "prop": "no",
+      "id": "salicornia_samphire",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Gombo (okra)",
+      "en": "Okra",
+      "re": "gombo|okra",
+      "eufic": [
+        "okra"
+      ],
+      "rel": [
+        "bassa",
+        "di nicchia"
+      ],
+      "prop": "no",
+      "id": "gombo_okra",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Zucchina spinosa (chayote)",
+      "en": "Chayote",
+      "re": "chayote|zucchina spinosa|zucchetta",
+      "eufic": [
+        "chayote"
+      ],
+      "rel": [
+        "bassa",
+        "di nicchia"
+      ],
+      "prop": "no",
+      "id": "zucchina_spinosa_chayote",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Alchechengi",
+      "en": "Cape gooseberry (physalis)",
+      "re": "alchech|physalis|cape gooseberr|golden berr",
+      "eufic": [],
+      "rel": [
+        "bassa",
+        "frutto decorativo, consumo occasionale"
+      ],
+      "prop": "no",
+      "id": "alchechengi_cape_gooseberry",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Cocco",
+      "en": "Coconut",
+      "re": "\\bcocco\\b|coconut",
+      "eufic": [],
+      "rel": [
+        "bassa",
+        "esotico, senza stagione in Italia"
+      ],
+      "prop": "no",
+      "id": "cocco_coconut",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Carruba",
+      "en": "Carob",
+      "re": "carrub|carob",
+      "eufic": [
+        "carob"
+      ],
+      "rel": [
+        "bassa",
+        "consumo soprattutto come farina"
+      ],
+      "prop": "no",
+      "id": "carruba_carob",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Giuggiola",
+      "en": "Jujube",
+      "re": "giuggiol|jujube",
+      "eufic": [
+        "jujube"
+      ],
+      "rel": [
+        "media",
+        "frutto tradizionale autunnale (Veneto, Sud)"
+      ],
+      "prop": "valutare",
+      "id": "giuggiola_jujube",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Nespola comune (germanica)",
+      "en": "Medlar",
+      "re": "nespola (comune|germanica)|medlar",
+      "eufic": [
+        "medlar"
+      ],
+      "rel": [
+        "bassa",
+        "frutto antico, raro in commercio"
+      ],
+      "prop": "no",
+      "id": "nespola_comune_medlar",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Corbezzolo",
+      "en": "Strawberry tree fruit",
+      "re": "corbezz|arbutus|strawberry tree",
+      "eufic": [],
+      "rel": [
+        "bassa",
+        "frutto spontaneo"
+      ],
+      "prop": "no",
+      "status": "escluso su decisione dell'utente (2026-11-05)"
+    },
+    {
+      "it": "Mirabella / susina gialla",
+      "en": "Mirabelle plum",
+      "re": "mirabell|greengage|cherry plum",
+      "eufic": [
+        "mirabelle plum",
+        "greengage",
+        "cherry plum"
+      ],
+      "rel": [
+        "bassa",
+        "rientra nelle susine"
+      ],
+      "prop": "come varietà della susina",
+      "id": "mirabella_mirabelle_plum",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Finferlo (gallinaccio)",
+      "en": "Chanterelle",
+      "re": "finferl|gallinacc|chanterelle|cantharellus",
+      "eufic": [
+        "chanterelle mushroom"
+      ],
+      "rel": [
+        "alta",
+        "fungo spontaneo molto raccolto e venduto"
+      ],
+      "prop": "aggiungere se si trova una fonte stagionale italiana",
+      "id": "finferlo_chanterelle",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Spugnola",
+      "en": "Morel",
+      "re": "spugnol|morchell|\\bmorel",
+      "eufic": [
+        "morel"
+      ],
+      "rel": [
+        "bassa",
+        "fungo spontaneo primaverile di nicchia"
+      ],
+      "prop": "no",
+      "id": "spugnola_morel",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Shiitake",
+      "en": "Shiitake",
+      "re": "shiitake",
+      "eufic": [
+        "shiitake mushroom"
+      ],
+      "rel": [
+        "bassa",
+        "coltivato, senza stagionalità"
+      ],
+      "prop": "no",
+      "id": "shiitake_shiitake",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Cardoncello",
+      "en": "King oyster mushroom",
+      "re": "cardoncell|eryngii|king oyster",
+      "eufic": [],
+      "rel": [
+        "media",
+        "fungo coltivato e spontaneo tipico della Puglia e Basilicata"
+      ],
+      "prop": "valutare",
+      "id": "cardoncello_king_oyster_mushroom",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Lampascioni",
+      "en": "Tassel hyacinth bulbs",
+      "re": "lampascion|cipollacc|muscari",
+      "eufic": [],
+      "rel": [
+        "media",
+        "tradizionali in Puglia e Basilicata"
+      ],
+      "prop": "valutare",
+      "id": "lampascioni_tassel_hyacinth",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Cicerchia",
+      "en": "Grass pea",
+      "re": "cicerch|grass pea|lathyrus",
+      "eufic": [],
+      "rel": [
+        "media",
+        "legume tradizionale del Centro Italia"
+      ],
+      "prop": "valutare",
+      "id": "cicerchia_grass_pea",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Cappero",
+      "en": "Caper",
+      "re": "capper|\\bcaper",
+      "eufic": [],
+      "rel": [
+        "media",
+        "DOP/IGP di Pantelleria e delle Eolie; consumo conservato"
+      ],
+      "prop": "no (prodotto conservato)",
+      "status": "escluso su decisione dell'utente (2026-11-05)"
+    },
+    {
+      "it": "Cedro",
+      "en": "Citron",
+      "re": "\\bcedr[oi]\\b|citron",
+      "eufic": [],
+      "rel": [
+        "media",
+        "DOP Cedro di Santa Maria del Cedro"
+      ],
+      "prop": "valutare",
+      "id": "cedro_citron",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Bergamotto",
+      "en": "Bergamot orange",
+      "re": "bergamott|bergamot",
+      "eufic": [],
+      "rel": [
+        "media",
+        "agrume tipico della Calabria, uso soprattutto aromatico"
+      ],
+      "prop": "valutare",
+      "status": "escluso su decisione dell'utente (2026-11-05)"
+    },
+    {
+      "it": "Chinotto",
+      "en": "Chinotto (myrtle-leaved orange)",
+      "re": "chinott",
+      "eufic": [],
+      "rel": [
+        "bassa",
+        "uso trasformato"
+      ],
+      "prop": "no",
+      "id": "chinotto_chinotto",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Oliva",
+      "en": "Olive",
+      "re": "\\boliv[ae]\\b|\\bolive\\b",
+      "eufic": [
+        "olive"
+      ],
+      "rel": [
+        "media",
+        "molte DOP; non si consuma fresca"
+      ],
+      "prop": "no (solo trasformata)",
+      "id": "oliva_olive",
+      "status": "incluso il 2026-11-05"
+    },
+    {
+      "it": "Zafferano",
+      "en": "Saffron",
+      "re": "zafferan|saffron",
+      "eufic": [],
+      "rel": [
+        "bassa",
+        "spezia; tre DOP italiane"
+      ],
+      "prop": "no (spezia secca)",
+      "id": "zafferano_saffron",
+      "status": "incluso il 2026-11-05"
+    }
+  ]
+}

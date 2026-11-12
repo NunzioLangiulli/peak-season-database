@@ -1,0 +1,2005 @@
+{
+  "_doc": "Schede unite ad altre (merge_items.py), conservate integre.",
+  "items": {
+    "bietola_da_taglio_leaf_beet": {
+      "merged_into": "bietola_da_coste_swiss_chard",
+      "item": {
+        "id": "bietola_da_taglio_leaf_beet",
+        "names": {
+          "it": "Bietola da taglio (Erbetta)",
+          "en": "Leaf Beet",
+          "synonyms": {
+            "it": [
+              "bieta a foglia",
+              "bietola bianca"
+            ],
+            "en": [
+              "Swiss chard",
+              "chard beet",
+              "foliage beet",
+              "silver beet",
+              "spinach beet"
+            ]
+          }
+        },
+        "category": "verdura",
+        "botany": {
+          "scientific_name": "Beta vulgaris subsp. vulgaris",
+          "eppo_code": "BEAVV",
+          "eppo_preferred_name": "Beta vulgaris subsp. vulgaris var. cicla",
+          "wfo_id": "wfo-0001235049",
+          "gbif_key": null,
+          "family": "Amaranthaceae",
+          "genus": "Beta",
+          "plant_part_used": "foglia",
+          "upov_code": "BETAA_VUL_GVF",
+          "upov_name": "Beta vulgaris Leaf Beet Group",
+          "upov_register": "VEG",
+          "upov_match": "exact",
+          "upov_note": null,
+          "varieties_registered_italy": {
+            "count": 22,
+            "upov_code": "BETAA_VUL_GVF",
+            "status": "Registered",
+            "checked": "2026-11-05",
+            "source": "https://ec.europa.eu/food/plant-variety-portal/"
+          }
+        },
+        "italian_varieties_and_territories": {
+          "notable_varieties": null,
+          "has_dop_igp": false,
+          "dop_igp_labels": [],
+          "eambrosia_verified": true,
+          "varieties_verification": [
+            {
+              "name": "Erbetta di Romagna",
+              "verified": false,
+              "sources": []
+            },
+            {
+              "name": "Bietolina da Taglio",
+              "verified": false,
+              "sources": []
+            }
+          ]
+        },
+        "images": {
+          "primary": "bietola_da_taglio_leaf_beet_01.jpg",
+          "gallery": [
+            "bietola_da_taglio_leaf_beet_01.jpg",
+            "bietola_da_taglio_leaf_beet_02.jpg",
+            "bietola_da_taglio_leaf_beet_03.jpg"
+          ],
+          "image_details": [
+            {
+              "filename": "bietola_da_taglio_leaf_beet_01.jpg",
+              "author": "Kwang Javier / Unsplash",
+              "license": "Unsplash License",
+              "license_url": "https://unsplash.com/license",
+              "source_url": "https://unsplash.com/photos/green-leaf-on-white-surface-qcRMfoIWxRo?utm_source=peak_season&utm_medium=referral",
+              "provider": "unsplash",
+              "width": 1080,
+              "height": 868,
+              "view_type": "whole_raw"
+            },
+            {
+              "filename": "bietola_da_taglio_leaf_beet_02.jpg",
+              "author": "Kiwima",
+              "license": "CC BY-SA 4.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+              "source_url": "https://commons.wikimedia.org/wiki/File%3ABeetroot%281%29.jpg",
+              "provider": "wikimedia_commons",
+              "width": 1600,
+              "height": 1200,
+              "view_type": "whole_raw"
+            },
+            {
+              "filename": "bietola_da_taglio_leaf_beet_03.jpg",
+              "author": "W.carter",
+              "license": "CC BY-SA 4.0",
+              "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+              "source_url": "https://commons.wikimedia.org/wiki/File%3ABeetroots_in_a_basket.jpg",
+              "provider": "wikimedia_commons",
+              "width": 1600,
+              "height": 1067,
+              "view_type": "cut_section"
+            }
+          ]
+        },
+        "seasonality": {
+          "eufic_climatic_zones": {
+            "mediterranean": [
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season"
+            ],
+            "continental": [
+              "out_of_season",
+              "out_of_season",
+              "out_of_season",
+              "out_of_season",
+              "end_of_season",
+              "primizie",
+              "in_season",
+              "in_season",
+              "in_season",
+              "end_of_season",
+              "end_of_season",
+              "out_of_season"
+            ],
+            "atlantic": null,
+            "boreal": null,
+            "mountain": [
+              "out_of_season",
+              "out_of_season",
+              "out_of_season",
+              "out_of_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "out_of_season"
+            ],
+            "pannonian": null
+          },
+          "eufic_by_country": {
+            "Croatia": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              false
+            ],
+            "Germany": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              true,
+              true,
+              true,
+              false,
+              false,
+              false
+            ],
+            "Luxembourg": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              true,
+              false,
+              false,
+              false
+            ],
+            "Turkey": [
+              true,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              true,
+              true,
+              true
+            ]
+          },
+          "italy_macro_areas": {
+            "nord": [
+              "out_of_season",
+              "out_of_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "out_of_season"
+            ],
+            "centro": [
+              "out_of_season",
+              "out_of_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season"
+            ],
+            "sud_isole": [
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season",
+              "in_season"
+            ]
+          },
+          "italy_national": null,
+          "derivation_notes": {
+            "it": "Fonti: EUFIC, Orto da Coltivare (raccolta per area). Stati calcolati per voto tra fonti (metodo in metadata.seasonality_method).",
+            "en": "Sources: EUFIC, Orto da Coltivare (raccolta per area). States computed by voting across sources (method in metadata.seasonality_method)."
+          },
+          "eufic_zone_sources": {
+            "mountain": {
+              "source": "austria_gesundheitsportal",
+              "url": "https://www.gesundheit.gv.at/leben/ernaehrung/saisonkalender.html",
+              "entry": "mangold",
+              "note": {
+                "it": "Calendario stagionale del Ministero della salute austriaco (fonte nazionale indicata da EUFIC per l'Austria)",
+                "en": "Seasonal calendar of the Austrian Ministry of Health (national source listed by EUFIC for Austria)"
+              }
+            },
+            "mediterranean": {
+              "source": "derived_italy_sud_isole",
+              "entry": "italy_macro_areas.sud_isole",
+              "note": {
+                "it": "Derivata dalla stagionalità italiana del Sud e Isole (l'Italia è un Paese mediterraneo; EUFIC non riporta l'alimento per questa zona)",
+                "en": "Derived from Italian seasonality for the South and Islands (Italy is a Mediterranean country; EUFIC does not list this food for the zone)"
+              }
+            },
+            "continental": {
+              "source": "eufic_map",
+              "url": "https://www.eufic.org/en/explore-seasonal-fruit-and-vegetables-in-europe"
+            }
+          }
+        },
+        "agricultural_calendar_italy": {
+          "nord": {
+            "sowing_or_transplant_months": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "harvest_months": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "seedbed_sowing_months": [
+              1,
+              2,
+              11,
+              12
+            ],
+            "direct_sowing_months": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "transplant_months": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "cultivation_notes": {
+              "it": "Semina in semenzaio nov-feb, semina diretta feb-ott, trapianto mar-ott, raccolta mar-nov (Orto da Coltivare).",
+              "en": "Seedbed sowing Nov-Feb, direct sowing Feb-Oct, transplanting Mar-Oct, harvest Mar-Nov (Orto da Coltivare)."
+            }
+          },
+          "centro": {
+            "sowing_or_transplant_months": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "harvest_months": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "seedbed_sowing_months": [
+              1,
+              2,
+              11,
+              12
+            ],
+            "direct_sowing_months": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "transplant_months": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "cultivation_notes": {
+              "it": "Semina in semenzaio nov-feb, semina diretta feb-nov, trapianto feb-nov, raccolta mar-dic (Orto da Coltivare).",
+              "en": "Seedbed sowing Nov-Feb, direct sowing Feb-Nov, transplanting Feb-Nov, harvest Mar-Dec (Orto da Coltivare)."
+            }
+          },
+          "sud_isole": {
+            "sowing_or_transplant_months": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "harvest_months": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "seedbed_sowing_months": [
+              1,
+              11,
+              12
+            ],
+            "direct_sowing_months": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "transplant_months": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              9,
+              10,
+              11
+            ],
+            "cultivation_notes": {
+              "it": "Semina in semenzaio nov-gen, semina diretta gen-dic, trapianto feb-giu, set-nov, raccolta gen-dic (Orto da Coltivare).",
+              "en": "Seedbed sowing Nov-Jan, direct sowing Jan-Dec, transplanting Feb-Jun, Sep-Nov, harvest Jan-Dec (Orto da Coltivare)."
+            }
+          },
+          "agronomic_params": {
+            "sowing_depth_cm": 1.5,
+            "plant_spacing_cm": {
+              "between_rows": 40,
+              "between_plants": 20
+            },
+            "sun_exposure": "anche_mezzombra",
+            "lunar_phase_advice": "fase_calante"
+          },
+          "cultivation_notes": {
+            "it": "Profondità di semina 1,5 cm; distanze 40 cm tra le file e 20 cm sulla fila; anche a mezz'ombra; ODC indica la semina con luna calante (pratica tradizionale).",
+            "en": "Sowing depth 1.5 cm; spacing 40 cm between rows and 20 cm within the row; also partial shade; ODC suggests sowing with a waning moon (traditional practice)."
+          }
+        },
+        "buying_guide": {
+          "shopping_list_preview": {
+            "it": "Foglie tenere, turgide e verde intenso, senza ingiallimenti né parti appassite.",
+            "en": "Tender, turgid, deep green leaves with no yellowing or wilting."
+          },
+          "detailed_selection": {
+            "it": "Scegli mazzi di foglie tenere e turgide, di colore verde intenso e uniforme, senza macchie gialle o brune e senza terra. Le foglie piccole sono le più delicate e si possono mangiare anche crude. Evita mazzi umidi o con foglie molli sul fondo.",
+            "en": "Choose bunches of tender, turgid leaves with deep, even green colour, no yellow or brown spots and no soil. Small leaves are the most delicate and can be eaten raw. Avoid damp bunches or ones with soft leaves at the bottom."
+          }
+        },
+        "ripening_and_storage": {
+          "ripening_type": "non_climaterico",
+          "ripening_badge_label": {
+            "it": "Non matura dopo la raccolta: scegli fresco",
+            "en": "Doesn't ripen after harvest: buy fresh"
+          },
+          "card_short_storage": {
+            "it": "Frigo · 1-2 settimane",
+            "en": "Fridge · 1-2 weeks"
+          },
+          "primary_location": "frigorifero",
+          "storage_instructions": {
+            "it": "Conservala in frigorifero, non lavata, in un sacchetto forato o in un contenitore con carta assorbente, e consumala in 2-3 giorni. A 0 °C e umidità alta si mantiene più a lungo (dati riferiti alla bietola da coste). Tienila lontana dalla frutta che produce etilene.",
+            "en": "Keep it unwashed in a perforated bag or a container lined with paper towel in the fridge and use within 2-3 days. At 0 °C and high humidity it keeps longer (data refer to Swiss chard). Keep away from ethylene-producing fruit."
+          },
+          "postharvest_physiology": {
+            "optimal_temperature_c": {
+              "min": 0.0,
+              "max": 0.0
+            },
+            "optimal_humidity_percent": {
+              "min": 95,
+              "max": 98
+            },
+            "respiration_rate_class": "moderate",
+            "freezing_point_c": null,
+            "chilling_injury": {
+              "susceptible": false,
+              "critical_temperature_c": null,
+              "symptoms": {
+                "it": "Non sensibile ai danni da freddo: va conservato il più freddo possibile senza congelare.",
+                "en": "Not chilling-sensitive: store as cold as possible without freezing."
+              },
+              "lowest_safe_range_c": null
+            },
+            "estimated_shelf_life_days": {
+              "room_temp_days": null,
+              "refrigerated_days": [
+                7,
+                14
+              ],
+              "in_freezer_months": 8,
+              "commercial_optimal_days": [
+                7,
+                14
+              ],
+              "basis": {
+                "it": "Durate domestiche: USDA FoodKeeper 'Swiss chard'. Temperatura ambiente: solo in frigorifero (nessuna durata in dispensa). Note FoodKeeper: Keep them in a plastic bag to retain moisture. commercial_optimal_days: USDA HB66 / UC Davis in condizioni professionali.",
+                "en": "Home storage times: USDA FoodKeeper 'Swiss chard'. Room temperature: fridge only (no pantry time given). FoodKeeper notes: Keep them in a plastic bag to retain moisture. commercial_optimal_days: USDA HB66 / UC Davis under professional conditions."
+              },
+              "room_temp_mode": "fridge_only",
+              "freezing_recommended": null
+            },
+            "freezing_susceptibility": null
+          },
+          "ripening_management": {
+            "slow_down": {
+              "it": "Conservalo in frigorifero, protetto dalla disidratazione e lontano da frutti che producono etilene.",
+              "en": "Keep it in the fridge, protected from drying out and away from ethylene-producing fruit."
+            },
+            "speed_up": {
+              "it": "Non matura dopo la raccolta: va scelto al giusto punto di maturazione e consumato presto.",
+              "en": "It doesn't ripen after harvest: choose it at the right stage and eat it soon."
+            }
+          },
+          "ethylene_compatibility": {
+            "produces_ethylene": false,
+            "ethylene_production_class": "low",
+            "sensitive_to_ethylene": true,
+            "keep_away_from": [
+              "avocado_avocado",
+              "kiwi_kiwifruit",
+              "lampone_raspberry",
+              "maracuja_passion_fruit",
+              "mela_apple",
+              "melone_melon",
+              "pera_pear"
+            ],
+            "compatibility_notes": {
+              "it": "Produzione di etilene bassa; sensibile all'etilene: tienilo lontano da avocado, kiwi, lampone, maracuja, mela, melone, pera.",
+              "en": "Low ethylene production; sensitive to ethylene: keep it away from avocado, kiwifruit, raspberry, passion fruit, apple, melon, pear."
+            }
+          },
+          "home_storage": {
+            "location": "fridge",
+            "label": {
+              "it": "In frigorifero",
+              "en": "In the fridge"
+            },
+            "tip": {
+              "it": "Una volta tagliato va sempre in frigorifero.",
+              "en": "Once cut, always keep it in the fridge."
+            },
+            "ucdavis_group": "refrigerator",
+            "foodkeeper_mode": "fridge_only",
+            "sources": [
+              "uc_davis_storing_guide",
+              "usda_foodkeeper"
+            ],
+            "derivation": {
+              "it": "UC Davis / Kader, Storing Fresh Fruits and Vegetables for Better Taste",
+              "en": "UC Davis / Kader, Storing Fresh Fruits and Vegetables for Better Taste"
+            }
+          },
+          "perishability": {
+            "level": 3,
+            "label": {
+              "it": "Deperibilità media",
+              "en": "Medium perishability"
+            },
+            "tip": {
+              "it": "Respira a ritmo medio: conservalo come indicato e consumalo entro pochi giorni da quando è maturo.",
+              "en": "It breathes at a moderate rate: store it as advised and eat it within a few days of ripening."
+            },
+            "basis": {
+              "it": "Classe di respirazione a 5 °C da USDA HB66 / UC Davis (valori misurati, vedi note)",
+              "en": "Respiration class at 5 °C from USDA HB66 / UC Davis (measured values, see notes)"
+            }
+          },
+          "storage_compatibility": {
+            "group": "1A",
+            "label": {
+              "it": "Verdure da frigorifero (0-2 °C, umidità alta)",
+              "en": "Cold vegetables (0-2 °C, high humidity)"
+            },
+            "temperature_c": {
+              "min": 0,
+              "max": 2
+            },
+            "humidity_percent": {
+              "min": 90,
+              "max": 98
+            },
+            "table_entry": "Chard",
+            "match": "exact",
+            "compatible_with": [
+              "aglio_garlic",
+              "asparago_asparagus",
+              "barbabietola_beetroot",
+              "bietola_da_coste_swiss_chard",
+              "broccolo_broccoli",
+              "carciofo_artichoke",
+              "cardo_cardoon",
+              "carota_carrot",
+              "cavoletto_di_bruxelles_brussels_sprout",
+              "cavolfiore_cauliflower",
+              "cavolo_cappuccio_cabbage",
+              "cavolo_nero_black_kale",
+              "cavolo_rapa_kohlrabi",
+              "cavolo_rosso_red_cabbage",
+              "cavolo_verza_savoy_cabbage",
+              "cicoria_da_cespo_chicory",
+              "cicoria_da_taglio_cutting_chicory",
+              "cima_di_rapa_turnip_greens",
+              "cipolla_estiva_summer_onion",
+              "fava_broad_bean",
+              "finocchio_fennel",
+              "fungo_champignon_button_mushroom",
+              "fungo_ovolo_caesars_mushroom",
+              "fungo_pleurotus_oyster_mushroom",
+              "fungo_porcino_porcini_mushroom",
+              "indivia_belga_belgian_endive",
+              "indivia_riccia_curly_endive",
+              "lattuga_da_cespo_head_lettuce",
+              "lattuga_da_taglio_leaf_lettuce",
+              "mais_corn",
+              "menta_mint",
+              "pastinaca_parsnip",
+              "pisello_pea",
+              "porro_leek",
+              "prezzemolo_parsley",
+              "radicchio_radicchio",
+              "rapa_turnip",
+              "ravanello_radish",
+              "rosmarino_rosemary",
+              "rucola_arugula",
+              "salvia_sage",
+              "scalogno_shallot",
+              "scarola_escarole",
+              "sedano_celery",
+              "sedano_rapa_celeriac",
+              "spinacio_spinach",
+              "timo_thyme",
+              "topinambur_jerusalem_artichoke",
+              "valerianella_corn_salad"
+            ],
+            "source": "https://www.ars.usda.gov/is/np/commercialstorage/commercialstorage.pdf#page=65"
+          }
+        },
+        "nutrition_and_sustainability": {
+          "data_basis": {
+            "it": "CREA 005080, integrato con BDA-IEO 307, valori per 100 g di parte edibile (alimento di riferimento approssimato: vedi note)",
+            "en": "CREA 005080, supplemented with BDA-IEO 307, values per 100 g of edible portion (approximate reference food: see notes)"
+          },
+          "edible_portion_percentage": 82.0,
+          "water_percentage": 93.3,
+          "kcal_per_100g": 15.0,
+          "kj_per_100g": 64.0,
+          "macros_per_100g": {
+            "carbs_g": 1.8,
+            "sugars_g": 1.8,
+            "starch_g": 0.0,
+            "proteins_g": 1.3,
+            "fats_g": 0.1,
+            "fiber_g": 1.2,
+            "salt_g": 0.025
+          },
+          "vitamins": [
+            {
+              "name": "Vitamina A (retinolo eq.)",
+              "name_en": "Vitamin A (retinol eq.)",
+              "amount": 263.0,
+              "unit": "µg",
+              "percent_nrv": 32.9,
+              "source": "crea"
+            },
+            {
+              "name": "Vitamina E",
+              "name_en": "Vitamin E",
+              "amount": 1.05,
+              "unit": "mg",
+              "percent_nrv": 8.8,
+              "source": "bda_ieo"
+            },
+            {
+              "name": "Vitamina C",
+              "name_en": "Vitamin C",
+              "amount": 24.0,
+              "unit": "mg",
+              "percent_nrv": 30.0,
+              "source": "crea"
+            },
+            {
+              "name": "Tiamina (B1)",
+              "name_en": "Thiamin (B1)",
+              "amount": 0.03,
+              "unit": "mg",
+              "percent_nrv": 2.7,
+              "source": "crea"
+            },
+            {
+              "name": "Riboflavina (B2)",
+              "name_en": "Riboflavin (B2)",
+              "amount": 0.19,
+              "unit": "mg",
+              "percent_nrv": 13.6,
+              "source": "crea"
+            },
+            {
+              "name": "Niacina (B3)",
+              "name_en": "Niacin (B3)",
+              "amount": 1.8,
+              "unit": "mg",
+              "percent_nrv": 11.2,
+              "source": "crea"
+            },
+            {
+              "name": "Vitamina B6",
+              "name_en": "Vitamin B6",
+              "amount": 0.07,
+              "unit": "mg",
+              "percent_nrv": 5.0,
+              "source": "bda_ieo"
+            },
+            {
+              "name": "Folati (B9)",
+              "name_en": "Folate (B9)",
+              "amount": 85.0,
+              "unit": "µg",
+              "percent_nrv": 42.5,
+              "source": "crea"
+            }
+          ],
+          "minerals": [
+            {
+              "name": "Sodio",
+              "name_en": "Sodium",
+              "amount": 10.0,
+              "unit": "mg",
+              "percent_nrv": null,
+              "source": "crea"
+            },
+            {
+              "name": "Potassio",
+              "name_en": "Potassium",
+              "amount": 196.0,
+              "unit": "mg",
+              "percent_nrv": 9.8,
+              "source": "crea"
+            },
+            {
+              "name": "Calcio",
+              "name_en": "Calcium",
+              "amount": 67.0,
+              "unit": "mg",
+              "percent_nrv": 8.4,
+              "source": "crea"
+            },
+            {
+              "name": "Fosforo",
+              "name_en": "Phosphorus",
+              "amount": 29.0,
+              "unit": "mg",
+              "percent_nrv": 4.1,
+              "source": "crea"
+            },
+            {
+              "name": "Magnesio",
+              "name_en": "Magnesium",
+              "amount": 38.0,
+              "unit": "mg",
+              "percent_nrv": 10.1,
+              "source": "crea"
+            },
+            {
+              "name": "Ferro",
+              "name_en": "Iron",
+              "amount": 1.0,
+              "unit": "mg",
+              "percent_nrv": 7.1,
+              "source": "crea"
+            },
+            {
+              "name": "Zinco",
+              "name_en": "Zinc",
+              "amount": 0.78,
+              "unit": "mg",
+              "percent_nrv": 7.8,
+              "source": "crea"
+            },
+            {
+              "name": "Rame",
+              "name_en": "Copper",
+              "amount": 0.16,
+              "unit": "mg",
+              "percent_nrv": 16.0,
+              "source": "crea"
+            }
+          ],
+          "bioactive_compounds": [
+            {
+              "name": "Luteina + zeaxantina",
+              "name_en": "Lutein + zeaxanthin",
+              "amount": 1503.0,
+              "unit": "µg",
+              "percent_nrv": null,
+              "source": "usda_fdc",
+              "group": "carotenoidi"
+            },
+            {
+              "name": "Alfa-carotene",
+              "name_en": "Alpha-carotene",
+              "amount": 3.0,
+              "unit": "µg",
+              "percent_nrv": null,
+              "source": "usda_fdc",
+              "group": "carotenoidi"
+            },
+            {
+              "name": "Flavonoli",
+              "name_en": "Flavonols",
+              "amount": 11.1,
+              "unit": "mg",
+              "percent_nrv": null,
+              "source": "usda_flavonoids",
+              "group": "flavonoidi",
+              "main_compounds": "kaempferolo, miricetina",
+              "main_compounds_en": "Kaempferol, Myricetin",
+              "method": {
+                "it": "somma dei composti misurati (aglicone)",
+                "en": "sum of measured compounds (aglycone)"
+              },
+              "source_food": "Chard, swiss, white leaf, raw (NDB 11147) [approx]"
+            },
+            {
+              "name": "Flavan-3-oli (catechine)",
+              "name_en": "Flavan-3-ols (catechins)",
+              "amount": 1.5,
+              "unit": "mg",
+              "percent_nrv": null,
+              "source": "usda_flavonoids",
+              "group": "flavonoidi",
+              "main_compounds": "catechina",
+              "main_compounds_en": "(+)-Catechin",
+              "method": {
+                "it": "somma dei composti misurati (aglicone)",
+                "en": "sum of measured compounds (aglycone)"
+              },
+              "source_food": "Chard, swiss, white leaf, raw (NDB 11147) [approx]"
+            },
+            {
+              "name": "Polifenoli totali",
+              "name_en": "Total polyphenols",
+              "amount": 830.0,
+              "unit": "mg",
+              "percent_nrv": null,
+              "source": "phenol_explorer",
+              "group": "polifenoli_totali",
+              "main_compounds": null,
+              "main_compounds_en": null,
+              "method": {
+                "it": "saggio di Folin-Ciocalteu",
+                "en": "Folin-Ciocalteu assay"
+              },
+              "source_food": "Swiss chard leaves [White], raw [approx]"
+            }
+          ],
+          "nutrition_claims_eu": {
+            "it": [
+              "A basso contenuto calorico",
+              "Senza grassi",
+              "A basso contenuto di zuccheri",
+              "A bassissimo contenuto di sodio/sale",
+              "Ad alto contenuto di fibre",
+              "Ad alto contenuto di proteine",
+              "Ad alto contenuto di vitamina A",
+              "Ad alto contenuto di vitamina C",
+              "Ad alto contenuto di folato",
+              "Fonte di rame"
+            ],
+            "en": [
+              "Low energy",
+              "Fat-free",
+              "Low sugars",
+              "Very low sodium/salt",
+              "High fibre",
+              "High protein",
+              "High vitamin A",
+              "High vitamin C",
+              "High folate",
+              "Source of copper"
+            ]
+          },
+          "health_benefits_and_curiosities": {
+            "it": "È la bietola che si raccoglie a foglia giovane: per 100 g è ricca di folati, vitamina A e vitamina C e fonte di rame, con poche calorie (valori della bietola). Si cuoce in pochi minuti.",
+            "en": "This is beet harvested as young leaves: per 100 g it is high in folate, vitamin A and vitamin C and a source of copper, with few calories (values for chard). It cooks in minutes."
+          },
+          "culinary_waste_reduction": {
+            "it": "Si consuma quasi tutta, anche il picciolo tenero. Le foglie cotte avanzate arricchiscono frittate, polpette e ripieni di pasta.",
+            "en": "Almost all of it is eaten, tender stalk included. Leftover cooked leaves enrich omelettes, patties and pasta fillings."
+          },
+          "protein_reference": {
+            "protein_g_per_100g": 1.3,
+            "percent_pri_larn_adult_m": 2.1,
+            "percent_pri_larn_adult_f": 2.4,
+            "percent_pri_larn_over65_m": 1.7,
+            "percent_pri_larn_over65_f": 2.0,
+            "percent_ri_eu": 2.6,
+            "energy_from_protein_percent": 34.7,
+            "claim_note": {
+              "it": "Claim conforme al Reg. CE 1924/2006 (il 34.7% delle calorie viene dalle proteine), ma in valore assoluto 100 g forniscono 1.3 g di proteine, circa il 2.4% del fabbisogno giornaliero raccomandato (LARN, donna adulta).",
+              "en": "Claim compliant with Reg. (EC) 1924/2006 (34.7% of calories from protein), but in absolute terms 100 g provide 1.3 g of protein, about 2.4% of the recommended daily intake (Italian LARN, adult woman)."
+            }
+          },
+          "allergens_eu": [],
+          "allergens_note": null,
+          "reference_portion": {
+            "grams": 200,
+            "group": {
+              "it": "Verdure e ortaggi",
+              "en": "Vegetables"
+            },
+            "equivalent": {
+              "it": "½ piatto di verdura cotta",
+              "en": "½ plate of cooked vegetables"
+            },
+            "frequency": {
+              "it": "1-2 porzioni a pasto",
+              "en": "1-2 portions per meal"
+            },
+            "kcal": 30,
+            "proteins_g": 2.6,
+            "fiber_g": 2.4,
+            "source": "https://www.smartfood.ieo.it/media/p02bkul0/smartfood-tab-porzioni-e-frequenze-completa.pdf",
+            "match": "exact"
+          },
+          "environmental_footprint": {
+            "carbon_kg_co2eq_per_kg": 0.34,
+            "carbon_g_co2eq_per_portion": 68,
+            "carbon_reference": {
+              "value": 0.338,
+              "sel_name": "SPINACH",
+              "level": "item",
+              "uncertainty": "L",
+              "sel_note": "OK item",
+              "typology": "VEGETABLES OPENFIELD",
+              "n_values": 4,
+              "min": 0.18,
+              "max": 0.93
+            },
+            "water_l_per_kg": 292,
+            "water_l_per_portion": 58,
+            "water_reference": {
+              "value": 292.0,
+              "sel_name": "SPINACH",
+              "level": "item",
+              "uncertainty": "L",
+              "sel_note": "ok item",
+              "typology": "VEGETABLES",
+              "n_values": 1,
+              "min": 292.0,
+              "max": 292.0
+            },
+            "greenhouse_comparison": null,
+            "match": "approx",
+            "source": "https://doi.org/10.1038/s41597-021-00909-8",
+            "sustainability_rating": {
+              "carbon_level": "low",
+              "water_level": "low",
+              "carbon_label": {
+                "it": "Impronta di carbonio bassa",
+                "en": "Low carbon footprint"
+              },
+              "water_label": {
+                "it": "Impronta idrica bassa",
+                "en": "Low water footprint"
+              },
+              "times_lower_than_beef_carbon": 76,
+              "times_lower_than_beef_water": 52,
+              "basis": {
+                "it": "Livelli: carbonio basso < 0,5, medio 0,5-1, alto > 1 kg CO2eq/kg; acqua bassa < 500, media 500-1500, alta > 1500 L/kg (soglie di lettura definite per l'app). Confronto con 'BEEF BONE FREE MEAT' SU-EATABLE LIFE (25.8 kg CO2eq/kg, 15139 L/kg).",
+                "en": "Levels: carbon low < 0.5, medium 0.5-1, high > 1 kg CO2eq/kg; water low < 500, medium 500-1500, high > 1500 L/kg (reading thresholds defined for the app). Compared with 'BEEF BONE FREE MEAT' SU-EATABLE LIFE (25.8 kg CO2eq/kg, 15139 L/kg)."
+              }
+            }
+          },
+          "traditional_products_pat": {
+            "count": 5,
+            "regions": [
+              "Piemonte",
+              "Puglia",
+              "Toscana",
+              "Veneto"
+            ],
+            "products": [
+              {
+                "name": "Bietola a costa rossa astigiana",
+                "region": "Piemonte"
+              },
+              {
+                "name": "Bietola rossa di Castellazzo Bormida",
+                "region": "Piemonte"
+              },
+              {
+                "name": "Bietola di campagna o bietola selvatica",
+                "region": "Puglia"
+              },
+              {
+                "name": "Bietola a coste sottili",
+                "region": "Toscana"
+              },
+              {
+                "name": "Bietola di Bassano",
+                "region": "Veneto"
+              }
+            ],
+            "source": "https://www.masaf.gov.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/24151",
+            "revision": "XXVI (2026)"
+          }
+        },
+        "sources_by_topic": {
+          "from_user_draft": true,
+          "local_files_used": [
+            "fonti_locali/odc-tabella-nord.pdf",
+            "fonti_locali/odc-tabella-centro.pdf",
+            "fonti_locali/odc-tabella-sud.pdf"
+          ],
+          "nutrition_crea_url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005080",
+          "nutrition_bda_ieo_url": "https://bda.ieo.it/?page_id=87",
+          "postharvest_ucdavis_usda_url": [
+            "https://www.ars.usda.gov/is/np/commercialstorage/commercialstorage.pdf"
+          ],
+          "seasonality_and_storage_urls": [],
+          "agricultural_calendar_urls": [],
+          "botany_eppo_wfo_url": [
+            "https://gd.eppo.int/taxon/BEAVV",
+            "https://www.worldfloraonline.org/taxon/wfo-0001235049"
+          ],
+          "eufic_url": "https://www.eufic.org/en/explore-seasonal-fruit-and-vegetables-in-europe",
+          "other_urls": [
+            "https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/",
+            "https://www.fsis.usda.gov/shared/data/EN/foodkeeper.json",
+            "https://fdc.nal.usda.gov/food-details/170375/nutrients",
+            "https://ec.europa.eu/food/plant-variety-portal/",
+            "https://eur-lex.europa.eu/legal-content/IT/TXT/HTML/?uri=CELEX:02011R1169-20180101",
+            "https://doi.org/10.1038/s41597-021-00909-8",
+            "https://www.ars.usda.gov/is/np/commercialstorage/commercialstorage.pdf#page=65",
+            "https://www.masaf.gov.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/24151"
+          ],
+          "source_codes": {
+            "crea": "005080",
+            "crea_match": "approx",
+            "bda_ieo": "307",
+            "bda_ieo_match": "approx",
+            "uc_davis": null,
+            "uc_davis_match": null,
+            "odc_pdf_row": "Biete da taglio",
+            "wwf_row": null,
+            "greenpeace_name": null,
+            "biosuisse_row": null,
+            "eufic_keys": [
+              "mangold"
+            ],
+            "usda_fdc": {
+              "fdc_id": 170375,
+              "description": "Beet greens, raw",
+              "match": "approx"
+            },
+            "usda_flavonoids": {
+              "ndb": "11147",
+              "description": "Chard, swiss, white leaf, raw",
+              "match": "approx"
+            },
+            "phenol_explorer": {
+              "food": "Swiss chard leaves [White], raw",
+              "match": "approx"
+            }
+          },
+          "sources_used": [
+            {
+              "source_key": "crea",
+              "name": "CREA Alimenti e Nutrizione - Tabelle di composizione degli alimenti (rev. 2019)",
+              "topics": [
+                "nutrition",
+                "texts"
+              ],
+              "urls": [
+                "https://www.alimentinutrizione.it/tabelle-nutrizionali/005080"
+              ],
+              "local_files": []
+            },
+            {
+              "source_key": "bda_ieo",
+              "name": "BDA-IEO - Banca Dati di Composizione degli Alimenti (Istituto Europeo di Oncologia)",
+              "topics": [
+                "nutrition"
+              ],
+              "urls": [
+                "https://bda.ieo.it/?page_id=87"
+              ],
+              "local_files": []
+            },
+            {
+              "source_key": "usda_fdc",
+              "name": "USDA FoodData Central - SR Legacy (2018-04)",
+              "topics": [
+                "bioactive_compounds"
+              ],
+              "urls": [
+                "https://fdc.nal.usda.gov/food-details/170375/nutrients"
+              ],
+              "local_files": []
+            },
+            {
+              "source_key": "usda_flavonoids",
+              "name": "USDA Database for the Flavonoid Content of Selected Foods, Release 3.3 (2018)",
+              "topics": [
+                "bioactive_compounds"
+              ],
+              "urls": [
+                "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/Flav/Flav3.3.pdf"
+              ],
+              "local_files": []
+            },
+            {
+              "source_key": "eu_plant_variety_portal",
+              "name": "EU Plant Variety Portal - Catalogo comune UE delle varieta' (agricole, ortive, frutticole)",
+              "topics": [
+                "botany_upov_code"
+              ],
+              "urls": [
+                "https://ec.europa.eu/food/plant-variety-portal/"
+              ],
+              "local_files": []
+            },
+            {
+              "source_key": "ieo_smartfood_portions",
+              "name": "IEO SmartFood - Porzioni e frequenze (porzioni standard LARN-SINU)",
+              "topics": [
+                "reference_portion"
+              ],
+              "urls": [
+                "https://www.smartfood.ieo.it/media/p02bkul0/smartfood-tab-porzioni-e-frequenze-completa.pdf"
+              ],
+              "local_files": []
+            },
+            {
+              "source_key": "su_eatable_life",
+              "name": "SU-EATABLE LIFE - database delle impronte di carbonio e idrica (Petersson et al. 2021)",
+              "topics": [
+                "environmental_footprint"
+              ],
+              "urls": [
+                "https://doi.org/10.1038/s41597-021-00909-8"
+              ],
+              "local_files": []
+            },
+            {
+              "source_key": "masaf_pat",
+              "name": "MASAF - Elenco nazionale dei Prodotti Agroalimentari Tradizionali, XXVI revisione (2026)",
+              "topics": [
+                "traditional_products"
+              ],
+              "urls": [
+                "https://www.masaf.gov.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/24151"
+              ],
+              "local_files": []
+            },
+            {
+              "source_key": "reg_1169_2011",
+              "name": "Regolamento (UE) n. 1169/2011 - Allegato XIII, Valori Nutritivi di Riferimento",
+              "topics": [
+                "allergens",
+                "percent_nrv"
+              ],
+              "urls": [
+                "https://eur-lex.europa.eu/legal-content/IT/TXT/HTML/?uri=CELEX:02011R1169-20180101",
+                "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32011R1169"
+              ],
+              "local_files": []
+            },
+            {
+              "source_key": "usda_hb66",
+              "name": "USDA ARS Agricultural Handbook 66 (2016)",
+              "topics": [
+                "storage_compatibility",
+                "plant_part_used",
+                "postharvest",
+                "texts"
+              ],
+              "urls": [
+                "https://www.ars.usda.gov/is/np/commercialstorage/commercialstorage.pdf#page=65",
+                "https://www.ars.usda.gov/is/np/commercialstorage/commercialstorage.pdf#page=581",
+                "https://www.ars.usda.gov/is/np/commercialstorage/commercialstorage.pdf"
+              ],
+              "local_files": []
+            },
+            {
+              "source_key": "uc_davis_storing_guide",
+              "name": "UC Davis / Kader - Storing Fresh Fruits and Vegetables for Better Taste (UC ANR Pub. 21590)",
+              "topics": [
+                "home_storage"
+              ],
+              "urls": [
+                "https://homeorchard.ucanr.edu/files/115275.pdf"
+              ],
+              "local_files": []
+            },
+            {
+              "source_key": "austria_gesundheitsportal",
+              "name": "Gesundheitsportal Österreichs - Saisonkalender (Ministero della salute austriaco)",
+              "topics": [
+                "seasonality_europe"
+              ],
+              "urls": [
+                "https://www.gesundheit.gv.at/leben/ernaehrung/saisonkalender.html"
+              ],
+              "local_files": []
+            },
+            {
+              "source_key": "phenol_explorer",
+              "name": "Phenol-Explorer 3.6 - database del contenuto di polifenoli negli alimenti (INRA)",
+              "topics": [
+                "bioactive_compounds"
+              ],
+              "urls": [
+                "http://phenol-explorer.eu/"
+              ],
+              "local_files": []
+            },
+            {
+              "source_key": "reg_1924_2006",
+              "name": "Regolamento (CE) n. 1924/2006 - indicazioni nutrizionali e sulla salute",
+              "topics": [
+                "nutrition_claims"
+              ],
+              "urls": [
+                "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32006R1924"
+              ],
+              "local_files": []
+            },
+            {
+              "source_key": "larn_sinu",
+              "name": "LARN - SINU (tabelle riassuntive, PDF locale)",
+              "topics": [
+                "reference_intakes"
+              ],
+              "urls": [
+                "https://sinu.it/tabelle-larn-2014/"
+              ],
+              "local_files": [
+                "fonti_locali/Tabelle-riassuntive_SINU.pdf"
+              ]
+            },
+            {
+              "source_key": "eufic_map",
+              "name": "EUFIC - Explore seasonal fruit and vegetables in Europe",
+              "topics": [
+                "seasonality_europe"
+              ],
+              "urls": [
+                "https://www.eufic.org/en/explore-seasonal-fruit-and-vegetables-in-europe"
+              ],
+              "local_files": []
+            },
+            {
+              "source_key": "ortodacoltivare",
+              "name": "Orto da Coltivare (Matteo Cereda) - tabelle di semina PDF + schede",
+              "topics": [
+                "agricultural_calendar"
+              ],
+              "urls": [],
+              "local_files": [
+                "fonti_locali/odc-tabella-nord.pdf",
+                "fonti_locali/odc-tabella-centro.pdf",
+                "fonti_locali/odc-tabella-sud.pdf"
+              ]
+            },
+            {
+              "source_key": "usda_foodkeeper",
+              "name": "USDA FSIS FoodKeeper",
+              "topics": [
+                "home_storage"
+              ],
+              "urls": [
+                "https://www.fsis.usda.gov/shared/data/EN/foodkeeper.json"
+              ],
+              "local_files": []
+            },
+            {
+              "source_key": "eppo",
+              "name": "EPPO Global Database",
+              "topics": [
+                "botany"
+              ],
+              "urls": [
+                "https://gd.eppo.int/taxon/BEAVV"
+              ],
+              "local_files": []
+            },
+            {
+              "source_key": "wfo",
+              "name": "World Flora Online - Plant List",
+              "topics": [
+                "botany"
+              ],
+              "urls": [
+                "https://www.worldfloraonline.org/taxon/wfo-0001235049"
+              ],
+              "local_files": []
+            },
+            {
+              "source_key": "unsplash",
+              "name": "Unsplash API",
+              "topics": [
+                "images"
+              ],
+              "urls": [
+                "https://unsplash.com/photos/green-leaf-on-white-surface-qcRMfoIWxRo?utm_source=peak_season&utm_medium=referral"
+              ],
+              "local_files": []
+            },
+            {
+              "source_key": "wikimedia",
+              "name": "Wikimedia Commons API",
+              "topics": [
+                "images"
+              ],
+              "urls": [
+                "https://commons.wikimedia.org/wiki/File%3ABeetroot%281%29.jpg",
+                "https://commons.wikimedia.org/wiki/File%3ABeetroots_in_a_basket.jpg"
+              ],
+              "local_files": []
+            }
+          ],
+          "useful_links": [
+            {
+              "title": {
+                "it": "Tabella nutrizionale - CREA Alimenti e Nutrizione",
+                "en": "Nutrition table - CREA (IT)"
+              },
+              "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005080",
+              "source_key": "crea",
+              "topic": "nutrition"
+            },
+            {
+              "title": {
+                "it": "Dati nutrizionali e carotenoidi - USDA FoodData Central",
+                "en": "Nutrients and carotenoids - USDA FoodData Central"
+              },
+              "url": "https://fdc.nal.usda.gov/food-details/170375/nutrients",
+              "source_key": "usda_fdc",
+              "topic": "nutrition"
+            },
+            {
+              "title": {
+                "it": "Conservazione professionale - USDA Handbook 66",
+                "en": "Commercial storage - USDA Handbook 66"
+              },
+              "url": "https://www.ars.usda.gov/is/np/commercialstorage/commercialstorage.pdf#page=65",
+              "source_key": "usda_hb66",
+              "topic": "postharvest"
+            },
+            {
+              "title": {
+                "it": "Stagionalità nei Paesi europei - EUFIC",
+                "en": "Seasonality across Europe - EUFIC"
+              },
+              "url": "https://www.eufic.org/en/explore-seasonal-fruit-and-vegetables-in-europe",
+              "source_key": "eufic_map",
+              "topic": "seasonality_europe"
+            },
+            {
+              "title": {
+                "it": "Scheda tassonomica - EPPO Global Database",
+                "en": "Taxonomy - EPPO Global Database"
+              },
+              "url": "https://gd.eppo.int/taxon/BEAVV",
+              "source_key": "eppo",
+              "topic": "botany"
+            },
+            {
+              "title": {
+                "it": "Scheda botanica - World Flora Online",
+                "en": "Botany - World Flora Online"
+              },
+              "url": "https://www.worldfloraonline.org/taxon/wfo-0001235049",
+              "source_key": "wfo",
+              "topic": "botany"
+            }
+          ]
+        },
+        "data_completeness": {
+          "is_complete": false,
+          "fields_from_initial_draft": [
+            "agricultural_calendar_italy.agronomic_params.lunar_phase_advice",
+            "agricultural_calendar_italy.agronomic_params.plant_spacing_cm.between_plants",
+            "agricultural_calendar_italy.agronomic_params.plant_spacing_cm.between_rows",
+            "agricultural_calendar_italy.agronomic_params.sowing_depth_cm",
+            "agricultural_calendar_italy.agronomic_params.sun_exposure",
+            "agricultural_calendar_italy.centro.cultivation_notes.en",
+            "agricultural_calendar_italy.centro.cultivation_notes.it",
+            "agricultural_calendar_italy.centro.harvest_months",
+            "agricultural_calendar_italy.centro.sowing_or_transplant_months",
+            "agricultural_calendar_italy.nord.cultivation_notes.en",
+            "agricultural_calendar_italy.nord.cultivation_notes.it",
+            "agricultural_calendar_italy.nord.harvest_months",
+            "agricultural_calendar_italy.nord.sowing_or_transplant_months",
+            "agricultural_calendar_italy.sud_isole.cultivation_notes.en",
+            "agricultural_calendar_italy.sud_isole.cultivation_notes.it",
+            "agricultural_calendar_italy.sud_isole.harvest_months",
+            "agricultural_calendar_italy.sud_isole.sowing_or_transplant_months",
+            "botany.family",
+            "botany.genus",
+            "botany.plant_part_used",
+            "botany.scientific_name",
+            "buying_guide.detailed_selection.en",
+            "buying_guide.detailed_selection.it",
+            "buying_guide.shopping_list_preview.en",
+            "buying_guide.shopping_list_preview.it",
+            "italian_varieties_and_territories.eambrosia_verified",
+            "italian_varieties_and_territories.has_dop_igp",
+            "italian_varieties_and_territories.notable_varieties",
+            "nutrition_and_sustainability.culinary_waste_reduction.en",
+            "nutrition_and_sustainability.culinary_waste_reduction.it",
+            "nutrition_and_sustainability.data_basis",
+            "nutrition_and_sustainability.edible_portion_percentage",
+            "nutrition_and_sustainability.health_benefits_and_curiosities.en",
+            "nutrition_and_sustainability.health_benefits_and_curiosities.it",
+            "nutrition_and_sustainability.kcal_per_100g",
+            "nutrition_and_sustainability.macros_per_100g.carbs_g",
+            "nutrition_and_sustainability.macros_per_100g.fats_g",
+            "nutrition_and_sustainability.macros_per_100g.fiber_g",
+            "nutrition_and_sustainability.macros_per_100g.proteins_g",
+            "nutrition_and_sustainability.macros_per_100g.sugars_g",
+            "nutrition_and_sustainability.minerals",
+            "nutrition_and_sustainability.vitamins",
+            "nutrition_and_sustainability.water_percentage",
+            "ripening_and_storage.card_short_storage.en",
+            "ripening_and_storage.card_short_storage.it",
+            "ripening_and_storage.ethylene_compatibility.compatibility_notes.en",
+            "ripening_and_storage.ethylene_compatibility.compatibility_notes.it",
+            "ripening_and_storage.ethylene_compatibility.keep_away_from",
+            "ripening_and_storage.ethylene_compatibility.produces_ethylene",
+            "ripening_and_storage.ethylene_compatibility.sensitive_to_ethylene",
+            "ripening_and_storage.postharvest_physiology.chilling_injury.critical_temperature_c",
+            "ripening_and_storage.postharvest_physiology.chilling_injury.susceptible",
+            "ripening_and_storage.postharvest_physiology.estimated_shelf_life_days.in_freezer_months",
+            "ripening_and_storage.postharvest_physiology.estimated_shelf_life_days.refrigerated_days",
+            "ripening_and_storage.postharvest_physiology.estimated_shelf_life_days.room_temp_days",
+            "ripening_and_storage.postharvest_physiology.optimal_humidity_percent.max",
+            "ripening_and_storage.postharvest_physiology.optimal_humidity_percent.min",
+            "ripening_and_storage.postharvest_physiology.optimal_temperature_c.max",
+            "ripening_and_storage.postharvest_physiology.optimal_temperature_c.min",
+            "ripening_and_storage.postharvest_physiology.respiration_rate_class",
+            "ripening_and_storage.primary_location",
+            "ripening_and_storage.ripening_badge_label.en",
+            "ripening_and_storage.ripening_badge_label.it",
+            "ripening_and_storage.ripening_management.slow_down.en",
+            "ripening_and_storage.ripening_management.slow_down.it",
+            "ripening_and_storage.ripening_management.speed_up.en",
+            "ripening_and_storage.ripening_management.speed_up.it",
+            "ripening_and_storage.ripening_type",
+            "ripening_and_storage.storage_instructions.en",
+            "ripening_and_storage.storage_instructions.it",
+            "seasonality.italy_macro_areas.centro",
+            "seasonality.italy_macro_areas.nord",
+            "seasonality.italy_macro_areas.sud_isole"
+          ],
+          "fields_pending_verification": [
+            "ripening_and_storage.postharvest_physiology.estimated_shelf_life_days.in_freezer_months"
+          ],
+          "fields_enriched_via_scraping": [
+            "agricultural_calendar_italy.agronomic_params",
+            "agricultural_calendar_italy.centro.cultivation_notes",
+            "agricultural_calendar_italy.centro.direct_sowing_months",
+            "agricultural_calendar_italy.centro.harvest_months",
+            "agricultural_calendar_italy.centro.seedbed_sowing_months",
+            "agricultural_calendar_italy.centro.sowing_or_transplant_months",
+            "agricultural_calendar_italy.centro.transplant_months",
+            "agricultural_calendar_italy.cultivation_notes",
+            "agricultural_calendar_italy.nord.cultivation_notes",
+            "agricultural_calendar_italy.nord.direct_sowing_months",
+            "agricultural_calendar_italy.nord.harvest_months",
+            "agricultural_calendar_italy.nord.seedbed_sowing_months",
+            "agricultural_calendar_italy.nord.sowing_or_transplant_months",
+            "agricultural_calendar_italy.nord.transplant_months",
+            "agricultural_calendar_italy.sud_isole.cultivation_notes",
+            "agricultural_calendar_italy.sud_isole.direct_sowing_months",
+            "agricultural_calendar_italy.sud_isole.harvest_months",
+            "agricultural_calendar_italy.sud_isole.seedbed_sowing_months",
+            "agricultural_calendar_italy.sud_isole.sowing_or_transplant_months",
+            "agricultural_calendar_italy.sud_isole.transplant_months",
+            "botany.eppo_code",
+            "botany.eppo_preferred_name",
+            "botany.family",
+            "botany.genus",
+            "botany.plant_part_used",
+            "botany.scientific_name",
+            "botany.upov_code",
+            "botany.upov_name",
+            "botany.upov_register",
+            "botany.varieties_registered_italy",
+            "botany.wfo_id",
+            "buying_guide",
+            "images.gallery",
+            "images.image_details",
+            "images.primary",
+            "italian_varieties_and_territories.dop_igp_labels",
+            "italian_varieties_and_territories.eambrosia_verified",
+            "italian_varieties_and_territories.has_dop_igp",
+            "italian_varieties_and_territories.notable_varieties",
+            "names.synonyms",
+            "nutrition_and_sustainability.allergens_eu",
+            "nutrition_and_sustainability.bioactive_compounds",
+            "nutrition_and_sustainability.culinary_waste_reduction",
+            "nutrition_and_sustainability.data_basis",
+            "nutrition_and_sustainability.edible_portion_percentage",
+            "nutrition_and_sustainability.environmental_footprint",
+            "nutrition_and_sustainability.health_benefits_and_curiosities",
+            "nutrition_and_sustainability.kcal_per_100g",
+            "nutrition_and_sustainability.kj_per_100g",
+            "nutrition_and_sustainability.macros_per_100g.carbs_g",
+            "nutrition_and_sustainability.macros_per_100g.fats_g",
+            "nutrition_and_sustainability.macros_per_100g.fiber_g",
+            "nutrition_and_sustainability.macros_per_100g.proteins_g",
+            "nutrition_and_sustainability.macros_per_100g.salt_g",
+            "nutrition_and_sustainability.macros_per_100g.starch_g",
+            "nutrition_and_sustainability.macros_per_100g.sugars_g",
+            "nutrition_and_sustainability.minerals",
+            "nutrition_and_sustainability.nutrition_claims_eu",
+            "nutrition_and_sustainability.protein_reference",
+            "nutrition_and_sustainability.reference_portion",
+            "nutrition_and_sustainability.traditional_products_pat",
+            "nutrition_and_sustainability.vitamins",
+            "nutrition_and_sustainability.water_percentage",
+            "ripening_and_storage.card_short_storage",
+            "ripening_and_storage.ethylene_compatibility.compatibility_notes",
+            "ripening_and_storage.ethylene_compatibility.ethylene_production_class",
+            "ripening_and_storage.ethylene_compatibility.keep_away_from",
+            "ripening_and_storage.ethylene_compatibility.produces_ethylene",
+            "ripening_and_storage.ethylene_compatibility.sensitive_to_ethylene",
+            "ripening_and_storage.home_storage",
+            "ripening_and_storage.perishability",
+            "ripening_and_storage.postharvest_physiology.chilling_injury.susceptible",
+            "ripening_and_storage.postharvest_physiology.chilling_injury.symptoms",
+            "ripening_and_storage.postharvest_physiology.estimated_shelf_life_days.basis",
+            "ripening_and_storage.postharvest_physiology.estimated_shelf_life_days.commercial_optimal_days",
+            "ripening_and_storage.postharvest_physiology.estimated_shelf_life_days.freezing_recommended",
+            "ripening_and_storage.postharvest_physiology.estimated_shelf_life_days.refrigerated_days",
+            "ripening_and_storage.postharvest_physiology.estimated_shelf_life_days.room_temp_mode",
+            "ripening_and_storage.postharvest_physiology.optimal_humidity_percent",
+            "ripening_and_storage.postharvest_physiology.optimal_temperature_c",
+            "ripening_and_storage.postharvest_physiology.respiration_rate_class",
+            "ripening_and_storage.primary_location",
+            "ripening_and_storage.ripening_badge_label",
+            "ripening_and_storage.ripening_management",
+            "ripening_and_storage.ripening_type",
+            "ripening_and_storage.storage_compatibility",
+            "ripening_and_storage.storage_instructions",
+            "seasonality.derivation_notes",
+            "seasonality.eufic_by_country",
+            "seasonality.eufic_climatic_zones",
+            "seasonality.eufic_climatic_zones.mediterranean",
+            "seasonality.eufic_climatic_zones.mountain",
+            "seasonality.italy_macro_areas.centro",
+            "seasonality.italy_macro_areas.nord",
+            "seasonality.italy_macro_areas.sud_isole"
+          ],
+          "missing_fields": [
+            "italian_varieties_and_territories.notable_varieties",
+            "ripening_and_storage.postharvest_physiology.estimated_shelf_life_days.freezing_recommended",
+            "ripening_and_storage.postharvest_physiology.freezing_point_c",
+            "ripening_and_storage.postharvest_physiology.freezing_susceptibility",
+            "seasonality.eufic_climatic_zones.atlantic",
+            "seasonality.eufic_climatic_zones.boreal",
+            "seasonality.eufic_climatic_zones.pannonian",
+            "seasonality.italy_national"
+          ],
+          "discrepancies": [
+            {
+              "field": "nutrition_and_sustainability.kcal_per_100g",
+              "draft_value": 17.0,
+              "source_value": 15.0,
+              "source": "CREA 005080",
+              "resolution": "adottato il valore della fonte ufficiale"
+            },
+            {
+              "field": "nutrition_and_sustainability.macros_per_100g.carbs_g",
+              "draft_value": 2.7,
+              "source_value": 1.8,
+              "source": "CREA 005080",
+              "resolution": "adottato il valore della fonte ufficiale"
+            },
+            {
+              "field": "nutrition_and_sustainability.macros_per_100g.sugars_g",
+              "draft_value": 1.0,
+              "source_value": 1.8,
+              "source": "CREA 005080",
+              "resolution": "adottato il valore della fonte ufficiale"
+            },
+            {
+              "field": "nutrition_and_sustainability.micronutrients.potassium",
+              "draft_value": 350.0,
+              "source_value": 196.0,
+              "source": "CREA 005080",
+              "resolution": "adottato il valore della fonte ufficiale"
+            },
+            {
+              "field": "seasonality.italy_macro_areas.nord",
+              "draft_value": [
+                "in_season",
+                "in_season",
+                "in_season",
+                "peak_season",
+                "peak_season",
+                "peak_season",
+                "in_season",
+                "in_season",
+                "peak_season",
+                "peak_season",
+                "in_season",
+                "in_season"
+              ],
+              "source_value": [
+                "out_of_season",
+                "out_of_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "out_of_season"
+              ],
+              "source": "ODC raccolta nord",
+              "resolution": "adottato il valore della fonte ufficiale"
+            },
+            {
+              "field": "seasonality.italy_macro_areas.centro",
+              "draft_value": [
+                "in_season",
+                "in_season",
+                "peak_season",
+                "peak_season",
+                "peak_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "peak_season",
+                "peak_season",
+                "peak_season",
+                "in_season"
+              ],
+              "source_value": [
+                "out_of_season",
+                "out_of_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season"
+              ],
+              "source": "ODC raccolta centro",
+              "resolution": "adottato il valore della fonte ufficiale"
+            },
+            {
+              "field": "seasonality.italy_macro_areas.sud_isole",
+              "draft_value": [
+                "peak_season",
+                "peak_season",
+                "peak_season",
+                "peak_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "peak_season",
+                "peak_season",
+                "peak_season",
+                "peak_season"
+              ],
+              "source_value": [
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season",
+                "in_season"
+              ],
+              "source": "ODC raccolta sud_isole",
+              "resolution": "adottato il valore della fonte ufficiale"
+            },
+            {
+              "field": "agricultural_calendar_italy.nord.sowing_or_transplant_months",
+              "draft_value": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "source_value": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "source": "Orto da Coltivare tabella nord",
+              "resolution": "adottato il valore della fonte ufficiale"
+            },
+            {
+              "field": "agricultural_calendar_italy.nord.harvest_months",
+              "draft_value": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "source_value": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+              ],
+              "source": "Orto da Coltivare tabella nord",
+              "resolution": "adottato il valore della fonte ufficiale"
+            },
+            {
+              "field": "agricultural_calendar_italy.centro.sowing_or_transplant_months",
+              "draft_value": [
+                2,
+                3,
+                4,
+                5,
+                8,
+                9
+              ],
+              "source_value": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "source": "Orto da Coltivare tabella centro",
+              "resolution": "adottato il valore della fonte ufficiale"
+            },
+            {
+              "field": "agricultural_calendar_italy.centro.harvest_months",
+              "draft_value": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                10,
+                11
+              ],
+              "source_value": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "source": "Orto da Coltivare tabella centro",
+              "resolution": "adottato il valore della fonte ufficiale"
+            },
+            {
+              "field": "agricultural_calendar_italy.sud_isole.sowing_or_transplant_months",
+              "draft_value": [
+                1,
+                2,
+                9,
+                10
+              ],
+              "source_value": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "source": "Orto da Coltivare tabella sud_isole",
+              "resolution": "adottato il valore della fonte ufficiale"
+            },
+            {
+              "field": "agricultural_calendar_italy.sud_isole.harvest_months",
+              "draft_value": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                11,
+                12
+              ],
+              "source_value": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "source": "Orto da Coltivare tabella sud_isole",
+              "resolution": "adottato il valore della fonte ufficiale"
+            },
+            {
+              "field": "ripening_and_storage.postharvest_physiology.optimal_temperature_c",
+              "draft_value": {
+                "min": 0.0,
+                "max": 2.0
+              },
+              "source_value": {
+                "min": 0.0,
+                "max": 0.0
+              },
+              "source": "USDA HB66 p.581 (Swiss Chard, approssimato); USDA HB66 Tabella 1 (Swiss chard)",
+              "resolution": "adottato il valore della fonte ufficiale"
+            },
+            {
+              "field": "ripening_and_storage.postharvest_physiology.optimal_humidity_percent",
+              "draft_value": {
+                "min": 95,
+                "max": 100
+              },
+              "source_value": {
+                "min": 95,
+                "max": 98
+              },
+              "source": "USDA HB66 p.581 (Swiss Chard, approssimato); USDA HB66 Tabella 1 (Swiss chard)",
+              "resolution": "adottato il valore della fonte ufficiale"
+            },
+            {
+              "field": "ripening_and_storage.postharvest_physiology.estimated_shelf_life_days.refrigerated_days",
+              "draft_value": [
+                3,
+                5
+              ],
+              "source_value": [
+                7,
+                14
+              ],
+              "source": "USDA HB66 p.581 (Swiss Chard, approssimato); USDA HB66 Tabella 1 (Swiss chard)",
+              "resolution": "adottato il valore della fonte ufficiale"
+            },
+            {
+              "field": "ripening_and_storage.ethylene_compatibility.keep_away_from",
+              "draft_value": [
+                "mela_apple",
+                "banana_banana"
+              ],
+              "source_value": [
+                "avocado_avocado",
+                "kiwi_kiwifruit",
+                "lampone_raspberry",
+                "maracuja_passion_fruit",
+                "mela_apple",
+                "melone_melon"
+              ],
+              "source": "calcolato: alimenti del database con produzione di etilene high/very_high (USDA HB66 / UC Davis)",
+              "resolution": "adottato il valore della fonte ufficiale"
+            },
+            {
+              "field": "ripening_and_storage.postharvest_physiology.respiration_rate_class",
+              "draft_value": "high",
+              "source_value": "moderate",
+              "source": "USDA HB66, capitolo 'Swiss Chard'",
+              "resolution": "adottato il valore della fonte ufficiale"
+            }
+          ],
+          "notes": "Famiglia: bozza 'Amaranthaceae', WFO 'Chenopodiaceae' (verificare classificazione APG IV al Passo 1.3). Immagini: i file PNG indicati dalla bozza non esistono; i riferimenti Commons sono in draft_legacy_values.json come candidati per il download. Stagionalità EUFIC a 6 zone della bozza NON proveniente da EUFIC (che pubblica dati per Paese): rimossa e conservata in draft_legacy_values.json; verrà ricalcolata dai dati EUFIC reali. Claim nutrizionali della bozza rimossi (solo IT, molti non previsti dall'Allegato del Reg. CE 1924/2006, es. 'Aroma eccezionale', 'Energizzante'): conservati in draft_legacy_values.json, verranno ricalcolati da valori verificati. URL della bozza sostituiti con URL verificati dall'indice (molti URL della bozza erano 404 o puntavano ad alimenti diversi); originali in draft_legacy_values.json. Nutrizione: voce di composizione approssimata (CREA 005080: ). Post-raccolta: USDA HB66 p.581 (Swiss Chard, approssimato); USDA HB66 Tabella 1 (Swiss chard). Famiglia Amaranthaceae (APG IV) = Chenopodiaceae in WFO (sistema precedente). Soglia di danno da freddo della bozza (-0.5 °C) rimossa: l'alimento non è sensibile (valore probabilmente riferito al congelamento). Varietà: 0/2 verificate sulle fonti; non verificate (in draft_legacy_values): Erbetta di Romagna, Bietolina da Taglio. Parte usata 'foglia' confermata dai testi di: usda_hb66. Composti bioattivi: carotenoidi da USDA FDC SR Legacy fdcId 170375 ('Beet greens, raw', fonte non italiana). Respirazione: capitolo Swiss Chard: 2 °C 18-20 mg CO2/kg·h (USDA HB66, capitolo 'Swiss Chard'). Dati post-raccolta dal capitolo HB66 'Swiss Chard' (prodotto affine). Polifenoli: Phenol-Explorer 3.6, USDA Flavonoid Database 3.3 (valori indicativi per 100 g di prodotto crudo). Testi IT/EN riscritti fondendo: usda_hb66, crea (2026-11-04).",
+          "not_applicable_fields": [
+            "botany.upov_note",
+            "italian_varieties_and_territories.dop_igp_labels",
+            "nutrition_and_sustainability.allergens_note",
+            "nutrition_and_sustainability.environmental_footprint.greenhouse_comparison",
+            "ripening_and_storage.postharvest_physiology.chilling_injury.critical_temperature_c",
+            "ripening_and_storage.postharvest_physiology.chilling_injury.lowest_safe_range_c",
+            "ripening_and_storage.postharvest_physiology.estimated_shelf_life_days.room_temp_days"
+          ]
+        },
+        "help_refs": [
+          {
+            "glossary_id": "chilling_injury",
+            "fields": [
+              "ripening_and_storage.postharvest_physiology.chilling_injury.symptoms"
+            ]
+          },
+          {
+            "glossary_id": "ethylene",
+            "fields": [
+              "ripening_and_storage.ethylene_compatibility.compatibility_notes",
+              "ripening_and_storage.storage_instructions"
+            ]
+          },
+          {
+            "glossary_id": "non_climacteric",
+            "fields": [
+              "ripening_and_storage.ripening_type"
+            ]
+          },
+          {
+            "glossary_id": "pat",
+            "fields": [
+              "nutrition_and_sustainability.traditional_products_pat"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

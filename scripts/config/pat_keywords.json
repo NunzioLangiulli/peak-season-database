@@ -1,0 +1,859 @@
+{
+ "_doc": "Parole chiave (regex, a inizio parola) per collegare i PAT vegetali MASAF agli alimenti. include = radici del nome italiano e nomi locali; exclude = falsi positivi. Il mais dolce usa solo 'mais dolce' (i PAT di mais sono quasi tutti da farina/polenta).",
+ "items": {
+  "aglio_garlic": {
+   "include": [
+    "agli(o|one)\\b"
+   ]
+  },
+  "asparago_asparagus": {
+   "include": [
+    "asparag"
+   ]
+  },
+  "carciofo_artichoke": {
+   "include": [
+    "carciof"
+   ]
+  },
+  "cardo_cardoon": {
+   "include": [
+    "card[oi]\\b",
+    "gobb[oi]\\b"
+   ]
+  },
+  "carota_carrot": {
+   "include": [
+    "carot"
+   ]
+  },
+  "barbabietola_beetroot": {
+   "include": [
+    "barbabietol"
+   ]
+  },
+  "bietola_da_coste_swiss_chard": {
+   "include": [
+    "biet[ae]\\b",
+    "bietol",
+    "cost[ae] di biet"
+   ],
+   "exclude": [
+    "barbabietol"
+   ]
+  },
+  "cavoletto_di_bruxelles_brussels_sprout": {
+   "include": [
+    "cavolett",
+    "cavolini"
+   ]
+  },
+  "cavolfiore_cauliflower": {
+   "include": [
+    "cavolfior",
+    "cavolo fiore",
+    "cavoli fiore"
+   ]
+  },
+  "broccolo_broccoli": {
+   "include": [
+    "broccol"
+   ],
+   "exclude": [
+    "rap[ae]\\b",
+    "broccolett"
+   ]
+  },
+  "cavolo_cappuccio_cabbage": {
+   "include": [
+    "cappucc",
+    "crauti",
+    "cavol[oi] bianc"
+   ]
+  },
+  "cavolo_rosso_red_cabbage": {
+   "include": [
+    "cavol[oi] ross"
+   ]
+  },
+  "cavolo_verza_savoy_cabbage": {
+   "include": [
+    "verz"
+   ]
+  },
+  "cavolo_nero_black_kale": {
+   "include": [
+    "cavol[oi] ner",
+    "cavol[oi] ricc"
+   ]
+  },
+  "cavolo_rapa_kohlrabi": {
+   "include": [
+    "cavol[oi] rap",
+    "cavolrap"
+   ]
+  },
+  "cece_chickpea": {
+   "include": [
+    "cec[ei]\\b"
+   ]
+  },
+  "cetriolo_cucumber": {
+   "include": [
+    "cetriol"
+   ]
+  },
+  "cicoria_da_cespo_chicory": {
+   "include": [
+    "cicori",
+    "catalogn",
+    "puntarell"
+   ]
+  },
+  "cicoria_da_taglio_cutting_chicory": {
+   "include": [
+    "cicori[ae] da taglio",
+    "cicoriett"
+   ]
+  },
+  "cima_di_rapa_turnip_greens": {
+   "include": [
+    "cim[ae] di rap",
+    "friariell",
+    "broccolett",
+    "rap[ae] verd",
+    "broccol[io] di rap"
+   ]
+  },
+  "cipolla_estiva_summer_onion": {
+   "include": [
+    "cipoll"
+   ]
+  },
+  "cipolla_invernale_winter_onion": {
+   "include": [
+    "cipoll"
+   ]
+  },
+  "fagiolo_bean": {
+   "include": [
+    "fagiol"
+   ],
+   "exclude": [
+    "fagiolin"
+   ]
+  },
+  "fagiolino_green_bean": {
+   "include": [
+    "fagiolin"
+   ]
+  },
+  "fava_broad_bean": {
+   "include": [
+    "fav[ae]\\b"
+   ]
+  },
+  "finocchio_fennel": {
+   "include": [
+    "finocch"
+   ]
+  },
+  "lattuga_da_cespo_head_lettuce": {
+   "include": [
+    "lattug"
+   ]
+  },
+  "lattuga_da_taglio_leaf_lettuce": {
+   "include": [
+    "lattug"
+   ]
+  },
+  "lenticchia_lentil": {
+   "include": [
+    "lenticch"
+   ]
+  },
+  "melanzana_eggplant": {
+   "include": [
+    "melanzan",
+    "mulignan"
+   ]
+  },
+  "pastinaca_parsnip": {
+   "include": [
+    "pastinac"
+   ]
+  },
+  "patata_potato": {
+   "include": [
+    "patat"
+   ],
+   "exclude": [
+    "patat[ae] dolc",
+    "american"
+   ]
+  },
+  "peperone_bell_pepper": {
+   "include": [
+    "peperon"
+   ]
+  },
+  "peperoncino_chili_pepper": {
+   "include": [
+    "peperoncin",
+    "diavolicch"
+   ]
+  },
+  "pisello_pea": {
+   "include": [
+    "pisell"
+   ]
+  },
+  "pomodoro_tomato": {
+   "include": [
+    "pomodor",
+    "pummarol",
+    "piennol"
+   ]
+  },
+  "porro_leek": {
+   "include": [
+    "porr[oi]\\b"
+   ]
+  },
+  "radicchio_radicchio": {
+   "include": [
+    "radicch",
+    "rosa di gorizia"
+   ]
+  },
+  "rapa_turnip": {
+   "include": [
+    "rap[ae]\\b"
+   ],
+   "exclude": [
+    "cim[ae] di rap",
+    "cavol",
+    "sedano",
+    "verd",
+    "broccol"
+   ]
+  },
+  "ravanello_radish": {
+   "include": [
+    "ravanell",
+    "rafano"
+   ]
+  },
+  "rucola_arugula": {
+   "include": [
+    "rucol",
+    "ruchett"
+   ]
+  },
+  "scalogno_shallot": {
+   "include": [
+    "scalogn"
+   ]
+  },
+  "sedano_celery": {
+   "include": [
+    "sedan[oi]\\b"
+   ],
+   "exclude": [
+    "sedano rapa"
+   ]
+  },
+  "sedano_rapa_celeriac": {
+   "include": [
+    "sedano rapa"
+   ]
+  },
+  "spinacio_spinach": {
+   "include": [
+    "spinac"
+   ]
+  },
+  "topinambur_jerusalem_artichoke": {
+   "include": [
+    "topinambur"
+   ]
+  },
+  "valerianella_corn_salad": {
+   "include": [
+    "valerian",
+    "songin",
+    "gallinell"
+   ]
+  },
+  "zucca_pumpkin": {
+   "include": [
+    "zucc(a|he)\\b"
+   ]
+  },
+  "zucchina_zucchini": {
+   "include": [
+    "zucchin",
+    "zucchett"
+   ]
+  },
+  "arachide_peanut": {
+   "include": [
+    "arachid",
+    "nocciolin"
+   ]
+  },
+  "anguria_watermelon": {
+   "include": [
+    "angur",
+    "cocomer"
+   ]
+  },
+  "melone_melon": {
+   "include": [
+    "melon"
+   ]
+  },
+  "albicocca_apricot": {
+   "include": [
+    "albicocc",
+    "armellin"
+   ]
+  },
+  "arancia_orange": {
+   "include": [
+    "aranc"
+   ],
+   "exclude": [
+    "arancin"
+   ]
+  },
+  "cachi_persimmon": {
+   "include": [
+    "cach[io]\\b",
+    "kaki",
+    "lot[oi] di"
+   ]
+  },
+  "castagna_chestnut": {
+   "include": [
+    "castagn",
+    "marron"
+   ]
+  },
+  "ciliegia_cherry": {
+   "include": [
+    "cilieg",
+    "ceras",
+    "duron"
+   ]
+  },
+  "clementine_clementine": {
+   "include": [
+    "clementin"
+   ]
+  },
+  "fico_fig": {
+   "include": [
+    "fic(o|hi)\\b"
+   ],
+   "exclude": [
+    "india"
+   ]
+  },
+  "fico_d_india_prickly_pear": {
+   "include": [
+    "fic(o|hi) d.india"
+   ]
+  },
+  "fragola_strawberry": {
+   "include": [
+    "fragol"
+   ]
+  },
+  "kiwi_kiwifruit": {
+   "include": [
+    "kiwi",
+    "actinidi"
+   ]
+  },
+  "lampone_raspberry": {
+   "include": [
+    "lampon"
+   ]
+  },
+  "limone_lemon": {
+   "include": [
+    "limon"
+   ],
+   "exclude": [
+    "mel[ae]\\b",
+    "limoncell",
+    "per[ae]\\b"
+   ]
+  },
+  "mandarino_mandarin": {
+   "include": [
+    "mandarin"
+   ]
+  },
+  "mela_apple": {
+   "include": [
+    "mel[ae]\\b"
+   ],
+   "exclude": [
+    "cotogn"
+   ]
+  },
+  "mela_cotogna_quince": {
+   "include": [
+    "cotogn"
+   ]
+  },
+  "melograno_pomegranate": {
+   "include": [
+    "melogran"
+   ]
+  },
+  "mirtillo_blueberry": {
+   "include": [
+    "mirtill"
+   ]
+  },
+  "mora_blackberry": {
+   "include": [
+    "mor[ae] di rov",
+    "rovo"
+   ]
+  },
+  "nespola_loquat": {
+   "include": [
+    "nespol"
+   ]
+  },
+  "pera_pear": {
+   "include": [
+    "per[ae]\\b"
+   ],
+   "exclude": [
+    "pomodor"
+   ]
+  },
+  "pesca_peach": {
+   "include": [
+    "pesc[ah]e?\\b",
+    "percoc"
+   ],
+   "exclude": [
+    "noce",
+    "nettarin"
+   ]
+  },
+  "pesca_noce_nectarine": {
+   "include": [
+    "pesc[ah]e? noc",
+    "nettarin"
+   ]
+  },
+  "pompelmo_grapefruit": {
+   "include": [
+    "pompelm"
+   ]
+  },
+  "ribes_redcurrant": {
+   "include": [
+    "ribes"
+   ]
+  },
+  "susina_plum": {
+   "include": [
+    "susin",
+    "prugn"
+   ]
+  },
+  "uva_table_grape": {
+   "include": [
+    "uva\\b"
+   ]
+  },
+  "banana_banana": {
+   "include": [
+    "banan"
+   ]
+  },
+  "avocado_avocado": {
+   "include": [
+    "avocado"
+   ]
+  },
+  "mango_mango": {
+   "include": [
+    "mango"
+   ]
+  },
+  "ananas_pineapple": {
+   "include": [
+    "ananas"
+   ]
+  },
+  "basilico_basil": {
+   "include": [
+    "basilic"
+   ]
+  },
+  "prezzemolo_parsley": {
+   "include": [
+    "prezzemol"
+   ]
+  },
+  "rosmarino_rosemary": {
+   "include": [
+    "rosmarin"
+   ]
+  },
+  "salvia_sage": {
+   "include": [
+    "salvi[ae]\\b"
+   ]
+  },
+  "origano_oregano": {
+   "include": [
+    "origan"
+   ]
+  },
+  "timo_thyme": {
+   "include": [
+    "timo\\b"
+   ]
+  },
+  "menta_mint": {
+   "include": [
+    "ment[ae]\\b",
+    "mentucc"
+   ]
+  },
+  "fungo_porcino_porcini_mushroom": {
+   "include": [
+    "porcin"
+   ]
+  },
+  "fungo_champignon_button_mushroom": {
+   "include": [
+    "champignon",
+    "prataiol"
+   ]
+  },
+  "fungo_pleurotus_oyster_mushroom": {
+   "include": [
+    "pleurot",
+    "cardoncell"
+   ]
+  },
+  "fungo_ovolo_caesars_mushroom": {
+   "include": [
+    "ovol[oi]\\b"
+   ]
+  },
+  "tartufo_nero_black_truffle": {
+   "include": [
+    "tartuf"
+   ],
+   "exclude": [
+    "bianc"
+   ]
+  },
+  "mais_corn": {
+   "include": [
+    "mais dolce"
+   ]
+  },
+  "farro_emmer": {
+   "include": [
+    "farro"
+   ]
+  },
+  "orzo_barley": {
+   "include": [
+    "orzo"
+   ]
+  },
+  "grano_duro_durum_wheat": {
+   "include": [
+    "grano duro",
+    "senatore cappelli",
+    "saragoll",
+    "russell",
+    "timilia",
+    "tumminia"
+   ]
+  },
+  "riso_rice": {
+   "include": [
+    "riso\\b",
+    "risi\\b"
+   ]
+  },
+  "avena_oat": {
+   "include": [
+    "avena"
+   ]
+  },
+  "grano_saraceno_buckwheat": {
+   "include": [
+    "grano saraceno",
+    "saracen"
+   ]
+  },
+  "tartufo_bianco_white_truffle": {
+   "include": [
+    "tartuf\\w*\\s.*bianco\\b",
+    "magnatum"
+   ],
+   "exclude": [
+    "bianchett"
+   ]
+  },
+  "cipollotto_spring_onion": {
+   "include": [
+    "cipollott"
+   ]
+  },
+  "agretti_saltwort": {
+   "include": [
+    "agrett",
+    "barba di frate"
+   ]
+  },
+  "amarena_sour_cherry": {
+   "include": [
+    "amaren",
+    "viscio",
+    "marasc"
+   ]
+  },
+  "noce_walnut": {
+   "include": [
+    "noc[ie]\\b",
+    "noce\\b"
+   ],
+   "exclude": [
+    "moscata",
+    "cocco",
+    "pecan"
+   ]
+  },
+  "nocciola_hazelnut": {
+   "include": [
+    "noccio"
+   ]
+  },
+  "mandorla_almond": {
+   "include": [
+    "mandorl"
+   ]
+  },
+  "pistacchio_pistachio": {
+   "include": [
+    "pistacch"
+   ]
+  },
+  "erba_cipollina_chives": {
+   "include": [
+    "erba cipollina"
+   ]
+  },
+  "crescione_watercress": {
+   "include": [
+    "crescion"
+   ]
+  },
+  "ribes_nero_blackcurrant": {
+   "include": [
+    "ribes nero"
+   ]
+  },
+  "uva_spina_gooseberry": {
+   "include": [
+    "uva spina"
+   ]
+  },
+  "mirtillo_rosso_lingonberry": {
+   "include": [
+    "mirtillo rosso",
+    "mirtilli rossi"
+   ]
+  },
+  "sambuco_elderberry": {
+   "include": [
+    "sambuc"
+   ]
+  },
+  "gelso_mulberry": {
+   "include": [
+    "gels[oi]",
+    "more di gelso"
+   ]
+  },
+  "rabarbaro_rhubarb": {
+   "include": [
+    "rabarbar"
+   ]
+  },
+  "rafano_horseradish": {
+   "include": [
+    "rafan",
+    "cren\\b"
+   ]
+  },
+  "scorzonera_black_salsify": {
+   "include": [
+    "scorzonera",
+    "scorzobianc"
+   ]
+  },
+  "cavolo_cinese_chinese_cabbage": {
+   "include": [
+    "cavolo cinese",
+    "pak choi"
+   ]
+  },
+  "patata_dolce_sweet_potato": {
+   "include": [
+    "patat\\w* (dolc|american)",
+    "batat"
+   ]
+  },
+  "navone_swede": {
+   "include": [
+    "navon"
+   ]
+  },
+  "daikon_daikon": {
+   "include": [
+    "daikon"
+   ]
+  },
+  "taccola_snow_pea": {
+   "include": [
+    "taccol",
+    "mangiatutto"
+   ]
+  },
+  "broccolo_romanesco_romanesco": {
+   "include": [
+    "broccol\\w* romanesc",
+    "cavol\\w* romanesc"
+   ]
+  },
+  "puntarelle_puntarelle": {
+   "include": [
+    "puntarell"
+   ]
+  },
+  "asparago_selvatico_wild_asparagus": {
+   "include": [
+    "asparag\\w* (selvatic|di bosco|di campo|spontane)"
+   ]
+  },
+  "salicornia_samphire": {
+   "include": [
+    "salicorn"
+   ]
+  },
+  "gombo_okra": {
+   "include": [
+    "gombo",
+    "okra"
+   ]
+  },
+  "zucchina_spinosa_chayote": {
+   "include": [
+    "chayote",
+    "zucchin\\w* spinos"
+   ]
+  },
+  "alchechengi_cape_gooseberry": {
+   "include": [
+    "alchecheng"
+   ]
+  },
+  "cocco_coconut": {
+   "include": [
+    "cocco\\b"
+   ]
+  },
+  "carruba_carob": {
+   "include": [
+    "carrub"
+   ]
+  },
+  "giuggiola_jujube": {
+   "include": [
+    "giuggiol"
+   ]
+  },
+  "nespola_comune_medlar": {
+   "include": [
+    "nespol\\w* (comun|german|d.inverno)"
+   ]
+  },
+  "mirabella_mirabelle_plum": {
+   "include": [
+    "mirabell"
+   ]
+  },
+  "finferlo_chanterelle": {
+   "include": [
+    "finferl",
+    "gallinacc"
+   ]
+  },
+  "spugnola_morel": {
+   "include": [
+    "spugnol"
+   ]
+  },
+  "shiitake_shiitake": {
+   "include": [
+    "shiitake"
+   ]
+  },
+  "cardoncello_king_oyster_mushroom": {
+   "include": [
+    "cardoncell"
+   ]
+  },
+  "lampascioni_tassel_hyacinth": {
+   "include": [
+    "lampascion",
+    "lampasciun",
+    "cipollacc"
+   ]
+  },
+  "cicerchia_grass_pea": {
+   "include": [
+    "cicerch"
+   ]
+  },
+  "cedro_citron": {
+   "include": [
+    "cedr[oi]\\b"
+   ]
+  },
+  "chinotto_chinotto": {
+   "include": [
+    "chinott"
+   ]
+  },
+  "oliva_olive": {
+   "include": [
+    "oliv[ae]\\b"
+   ]
+  },
+  "zafferano_saffron": {
+   "include": [
+    "zafferan"
+   ]
+  }
+ }
+}

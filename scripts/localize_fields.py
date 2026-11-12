@@ -1,0 +1,126 @@
+"""Rende bilingui {it, en} le spiegazioni generate dagli script (ULTIMO passo della pipeline, prima di validate/audit).
+
+Convenzioni di lingua del database (documentate in metadata.i18n):
+- testi per l'utente: oggetti {"it", "en"};
+- coppie storiche nome/nome_en (vitamine, minerali, composti): "name" = IT, "name_en" = EN;
+- nomi propri (varietà, DOP/IGP, PAT, nomi scientifici, autori, licenze, nomi delle fonti) e voci tecniche delle
+  banche dati (es. "Garlic, raw (NDB 11215)") restano nella lingua originale e non si traducono;
+- data_completeness.notes è un registro tecnico interno in italiano (non mostrato all'utente).
+Questo script converte in {it, en} i campi di spiegazione che l'app può mostrare dietro l'icona "?".
+Uso:  python scripts/localize_fields.py   (va eseguito per ultimo: gli script precedenti scrivono stringhe italiane)
+"""
+import re
+
+from common import DATA, load_json, save_json
+
+RULES = [  # (regex IT, sostituzione EN), applicate in ordine
+    (r"la varieta' 'Nero di Toscana' e' iscritta in Italia in questo gruppo", "the 'Nero di Toscana' variety is registered in Italy in this group"),
+    (r"Durate domestiche: USDA FoodKeeper '(.+?)'", r"Home storage times: USDA FoodKeeper '\1'"),
+    (r" \(voce approssimata\)", " (approximate entry)"),
+    (r" \(dalla data di acquisto\)", " (from the date of purchase)"),
+    (r"; voce di un prodotto affine, approssimazione", "; entry for a related product, approximation"),
+    (r"Temperatura ambiente: solo in frigorifero \(nessuna durata in dispensa\)", "Room temperature: fridge only (no pantry time given)"),
+    (r"Temperatura ambiente: in dispensa per (\S+) giorni", r"Room temperature: \1 days in the pantry"),
+    (r"Temperatura ambiente: fino a maturazione \(poi (\S+) giorni\), poi in frigorifero", r"Room temperature: until ripe (then \1 days), then in the fridge"),
+    (r"Temperatura ambiente: fino a maturazione, poi in frigorifero", "Room temperature: until ripe, then in the fridge"),
+    (r"; congelamento sconsigliato", "; freezing not recommended"),
+    (r"Note FoodKeeper:", "FoodKeeper notes:"),
+    (r"commercial_optimal_days: USDA HB66 / UC Davis in condizioni professionali\.", "commercial_optimal_days: USDA HB66 / UC Davis under professional conditions."),
+    (r"Temperatura ambiente non indicata: le fonti prevedono solo il frigorifero", "Room temperature not given: the sources only indicate the fridge"),
+    (r"guida UC Davis/Kader", "UC Davis/Kader guide"),
+    (r", integrato con ", ", supplemented with "),
+    (r"valori per 100 g di parte edibile", "values per 100 g of edible portion"),
+    (r"\(alimento di riferimento approssimato: vedi note\)", "(approximate reference food: see notes)"),
+    (r"\(fonte non italiana: nessuna scheda CREA/BDA-IEO\)", "(non-Italian source: no CREA/BDA-IEO entry)"),
+    (r"\(fonte non italiana: nessuna scheda CREA/BDA-IEO;", "(non-Italian source: no CREA/BDA-IEO entry;"),
+    (r"per 100 g di parte edibile", "per 100 g of edible portion"),
+    (r"carboidrati disponibili = by difference - fibra", "available carbohydrates = by difference minus fibre"),
+    (r"Classe di Kader \(USDA HB66, tabella delle classi di respirazione a 5 °C, voce '(.+?)'\)", r"Kader class (USDA HB66, table of respiration classes at 5 °C, entry '\1')"),
+    (r"Classe di respirazione a 5 °C da USDA HB66 / UC Davis \(valori misurati, vedi note\)", "Respiration class at 5 °C from USDA HB66 / UC Davis (measured values, see notes)"),
+    (r"Prodotto secco: la classe di respirazione non è pertinente; durate da USDA FoodKeeper", "Dry product: respiration class not applicable; storage times from USDA FoodKeeper"),
+    (r"Classe stimata: (.+?) riportato a 5 °C con i Q10 tipici di HB66 \(circa (\d+) mg CO2/kg/h\); prodotto sensibile al freddo, non misurato a 5 °C",
+     r"Estimated class: \1 converted to 5 °C with the typical HB66 Q10 values (about \2 mg CO2/kg/h); chilling-sensitive product, not measured at 5 °C"),
+    (r"cap\. ", "chapter "),
+    (r" a (\d+),(\d) °C", r" at \1.\2 °C"),
+    (r" a (\d+) °C", r" at \1 °C"),
+    (r"Livelli: carbonio basso < 0,5, medio 0,5-1, alto > 1 kg CO2eq/kg; acqua bassa < 500, media 500-1500, alta > 1500 L/kg \(soglie di lettura definite per l'app\)\. Confronto con",
+     "Levels: carbon low < 0.5, medium 0.5-1, high > 1 kg CO2eq/kg; water low < 500, medium 500-1500, high > 1500 L/kg (reading thresholds defined for the app). Compared with"),
+    (r"; FoodKeeper indica solo il frigorifero: seguita la guida UC Davis, pensata per il gusto", "; FoodKeeper says fridge only: the UC Davis guide (written for best taste) was followed"),
+    (r"; FoodKeeper: a temperatura ambiente fino a maturazione, poi frigo \(frutto acerbo\)", "; FoodKeeper: room temperature until ripe, then fridge (unripe fruit)"),
+    (r"USDA FoodKeeper \(in frigorifero dura più che a temperatura ambiente\)", "USDA FoodKeeper (keeps longer in the fridge than at room temperature)"),
+    (r"condizioni ottimali di conservazione USDA HB66 / UC Davis \(scheda post-raccolta\)", "optimal storage conditions USDA HB66 / UC Davis (postharvest fact sheet)"),
+    (r"Catalogo comune UE: registrata come '(.+?)' \(specie UPOV (\w+)\)", r"EU Common Catalogue: registered as '\1' (UPOV species \2)"),
+    (r"oggi non piu' iscritta", "no longer registered"),
+    (r"cancellata/scaduta in", "withdrawn/expired in"),
+    (r"iscritta in", "registered in"),
+    (r"registrato il tipo '(.+?)' \(Slovenia\), non la selezione di Diamante\.", r"the '\1' type is registered (Slovenia), not the Diamante selection."),
+    (r"registrato il tipo '(.+?)', non la selezione ligure\.", r"the '\1' type is registered, not the Ligurian selection."),
+    (r"registrata come 'Detroit 2' \(selezione del tipo Detroit\)\.", "registered as 'Detroit 2' (a selection of the Detroit type)."),
+    (r"susino cino-giapponese \(Prunus salicina\)\.", "Japanese plum (Prunus salicina)."),
+    (r"registrata come 'Lollo' \(la forma verde; quella rossa e' 'Lollo rossa'\)\.", "registered as 'Lollo' (the green form; the red one is 'Lollo rossa')."),
+    (r"nome inglese della stessa varieta'; in Italia e' registrato 'Di Vienna bianco'\.", "English name of the same variety; in Italy 'Di Vienna bianco' is registered."),
+    (r"il tipo Romanesco e' registrato in Italia in piu' selezioni per epoca di raccolta\.", "the Romanesco type is registered in Italy in several selections by harvest time."),
+    (r"registrata come 'Spadona'\.", "registered as 'Spadona'."),
+    (r"Presidio Slow Food confermato \(Fondazione Slow Food\)", "Slow Food Presidium confirmed (Slow Food Foundation)"),
+    (r"presente nell'Arca del Gusto Slow Food, non tra i Presìdi", "listed in the Slow Food Ark of Taste, not among the Presidia"),
+    (r"qualifica 'Presidio Slow Food' non trovata sul sito della Fondazione Slow Food", "'Slow Food Presidium' status not found on the Slow Food Foundation website"),
+    (r"il mandarino mediterraneo \(es\. 'Avana'\) e' iscritto come Citrus deliciosa \(CITRU_DEL\)", "the Mediterranean mandarin (e.g. 'Avana') is registered as Citrus deliciosa (CITRU_DEL)"),
+    (r"il mirtillo nero selvatico e' Vaccinium myrtillus \(VACCI_MYR\)", "the wild bilberry is Vaccinium myrtillus (VACCI_MYR)"),
+    (r"le susine cino-giapponesi sono Prunus salicina \(PRUNU_SAL\)", "Japanese plums are Prunus salicina (PRUNU_SAL)"),
+    (r"nessuna varietà iscritta con questo codice: possono essere iscritte sotto un codice affine", "no variety registered under this code: varieties may be registered under a related code"),
+    (r"somma dei composti misurati \(aglicone\)", "sum of measured compounds (aglycone)"),
+    (r"somma dei composti misurati \(cromatografia\)", "sum of measured compounds (chromatography)"),
+    (r"saggio di Folin-Ciocalteu", "Folin-Ciocalteu assay"),
+]
+IT_WORDS = re.compile(r"(?i)\b(giorni|della|delle|iscritt\w*|sono|frigorifero|dispensa|temperatura|valori|integrato|voce|classe|prodotto|stimata|nessun\w*|il|la|varietà|varieta|di|con|per la|non è|fino a)\b")
+
+
+def to_en(s):
+    for a, b in RULES:
+        s = re.sub(a, b, s)
+    return s
+
+
+def bil(s, warn, where):
+    if s is None or isinstance(s, dict):
+        return s
+    en = to_en(s.strip())
+    if IT_WORDS.search(re.sub(r"'[^']*'", "", en)):
+        warn.append(f"{where}: {en[:120]}")
+    return {"it": s.strip(), "en": en}
+
+
+def main():
+    db = load_json(DATA / "database.json")
+    warn = []
+    for it in db["items"]:
+        i = it["id"]
+        r, n, b = it["ripening_and_storage"], it["nutrition_and_sustainability"], it["botany"]
+        hs = r.get("home_storage") or {}
+        hs["derivation"] = bil(hs.get("derivation"), warn, f"{i}.derivation")
+        hs["sources"] = [s.replace(" (voce approssimata)", "") for s in hs.get("sources", [])]
+        n["data_basis"] = bil(n.get("data_basis"), warn, f"{i}.data_basis")
+        if r.get("perishability"):
+            r["perishability"]["basis"] = bil(r["perishability"].get("basis"), warn, f"{i}.perishability")
+        ef = n.get("environmental_footprint") or {}
+        if ef.get("sustainability_rating"):
+            ef["sustainability_rating"]["basis"] = bil(ef["sustainability_rating"].get("basis"), warn, f"{i}.rating")
+        sl = r["postharvest_physiology"]["estimated_shelf_life_days"]
+        sl["basis"] = bil(sl.get("basis"), warn, f"{i}.shelf")
+        b["upov_note"] = bil(b.get("upov_note"), warn, f"{i}.upov_note")
+        if b.get("varieties_registered_italy") and b["varieties_registered_italy"].get("note"):
+            b["varieties_registered_italy"]["note"] = bil(b["varieties_registered_italy"]["note"], warn, f"{i}.vri")
+        for v in it["italian_varieties_and_territories"].get("varieties_verification") or []:
+            if v.get("note"):
+                v["note"] = bil(v["note"], warn, f"{i}.variety")
+        for c in n.get("bioactive_compounds") or []:
+            if c.get("method"):
+                c["method"] = bil(c["method"], warn, f"{i}.method")
+    save_json(DATA / "database.json", db)
+    print("campi localizzati; avvisi di traduzione:", len(warn))
+    for w in warn[:30]:
+        print("  W", w)
+
+
+if __name__ == "__main__":
+    main()

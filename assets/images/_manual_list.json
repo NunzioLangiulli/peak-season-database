@@ -1,0 +1,149 @@
+{
+ "_doc": "Immagini da scaricare a mano (Wikimedia ha bloccato i download automatici). Salvarle in assets/images/_manual/ con il nome indicato; import_manual_images.py le importa con i metadati della candidata.",
+ "files": {
+  "fava_broad_bean__botanical_plate_2.jpg": {
+   "item": "fava_broad_bean",
+   "candidate": "fava_broad_bean/botanical_plate_2.jpg"
+  },
+  "fava_broad_bean__botanical_plate_3.jpg": {
+   "item": "fava_broad_bean",
+   "candidate": "fava_broad_bean/botanical_plate_3.jpg"
+  },
+  "lattuga_da_cespo_head_lettuce__botanical_plate_4.jpg": {
+   "item": "lattuga_da_cespo_head_lettuce",
+   "candidate": "lattuga_da_cespo_head_lettuce/botanical_plate_4.jpg"
+  },
+  "lattuga_da_taglio_leaf_lettuce__botanical_plate_1.jpg": {
+   "item": "lattuga_da_taglio_leaf_lettuce",
+   "candidate": "lattuga_da_taglio_leaf_lettuce/botanical_plate_1.jpg"
+  },
+  "lenticchia_lentil__isolated_background_1.jpg": {
+   "item": "lenticchia_lentil",
+   "candidate": "lenticchia_lentil/isolated_background_1.jpg"
+  },
+  "melanzana_eggplant__botanical_plate_4.jpg": {
+   "item": "melanzana_eggplant",
+   "candidate": "melanzana_eggplant/botanical_plate_4.jpg"
+  },
+  "pisello_pea__botanical_plate_3.jpg": {
+   "item": "pisello_pea",
+   "candidate": "pisello_pea/botanical_plate_3.jpg"
+  },
+  "valerianella_corn_salad__botanical_plate_2.jpg": {
+   "item": "valerianella_corn_salad",
+   "candidate": "valerianella_corn_salad/botanical_plate_2.jpg"
+  },
+  "anguria_watermelon__botanical_plate_1.jpg": {
+   "item": "anguria_watermelon",
+   "candidate": "anguria_watermelon/botanical_plate_1.jpg"
+  },
+  "albicocca_apricot__isolated_background_2.jpg": {
+   "item": "albicocca_apricot",
+   "candidate": "albicocca_apricot/isolated_background_2.jpg"
+  },
+  "kiwi_kiwifruit__isolated_background_3.jpg": {
+   "item": "kiwi_kiwifruit",
+   "candidate": "kiwi_kiwifruit/isolated_background_3.jpg"
+  },
+  "lampone_raspberry__botanical_plate_3.jpg": {
+   "item": "lampone_raspberry",
+   "candidate": "lampone_raspberry/botanical_plate_3.jpg"
+  },
+  "melograno_pomegranate__botanical_plate_2.jpg": {
+   "item": "melograno_pomegranate",
+   "candidate": "melograno_pomegranate/botanical_plate_2.jpg"
+  },
+  "melograno_pomegranate__botanical_plate_3.jpg": {
+   "item": "melograno_pomegranate",
+   "candidate": "melograno_pomegranate/botanical_plate_3.jpg"
+  },
+  "mirtillo_blueberry__botanical_plate_3.jpg": {
+   "item": "mirtillo_blueberry",
+   "candidate": "mirtillo_blueberry/botanical_plate_3.jpg"
+  },
+  "basilico_basil__botanical_plate_1.jpg": {
+   "item": "basilico_basil",
+   "candidate": "basilico_basil/botanical_plate_1.jpg"
+  },
+  "timo_thyme__botanical_plate_2.jpg": {
+   "item": "timo_thyme",
+   "candidate": "timo_thyme/botanical_plate_2.jpg"
+  },
+  "menta_mint__botanical_plate_3.jpg": {
+   "item": "menta_mint",
+   "candidate": "menta_mint/botanical_plate_3.jpg"
+  },
+  "fungo_porcino_porcini_mushroom__botanical_plate_3.jpg": {
+   "item": "fungo_porcino_porcini_mushroom",
+   "candidate": "fungo_porcino_porcini_mushroom/botanical_plate_3.jpg"
+  },
+  "fungo_porcino_porcini_mushroom__botanical_plate_1.jpg": {
+   "item": "fungo_porcino_porcini_mushroom",
+   "candidate": "fungo_porcino_porcini_mushroom/botanical_plate_1.jpg"
+  },
+  "mais_corn__botanical_plate_4.jpg": {
+   "item": "mais_corn",
+   "candidate": "mais_corn/botanical_plate_4.jpg"
+  },
+  "farro_emmer__botanical_plate_1.jpg": {
+   "item": "farro_emmer",
+   "candidate": "farro_emmer/botanical_plate_1.jpg"
+  },
+  "salicornia_samphire__botanical_plate_2.jpg": {
+   "item": "salicornia_samphire",
+   "candidate": "salicornia_samphire/botanical_plate_2.jpg"
+  },
+  "mela_cotogna_quince__botanical_plate_1.jpg": {
+   "item": "mela_cotogna_quince",
+   "candidate": "mela_cotogna_quince/botanical_plate_1.jpg"
+  },
+  "fico_d_india_prickly_pear__botanical_plate_3.jpg": {
+   "item": "fico_d_india_prickly_pear",
+   "candidate": "fico_d_india_prickly_pear/botanical_plate_3.jpg"
+  },
+  "litchi_lychee__botanical_plate_1.jpg": {
+   "item": "litchi_lychee",
+   "candidate": "litchi_lychee/botanical_plate_1.jpg"
+  },
+  "pistacchio_pistachio__botanical_plate_1.jpg": {
+   "item": "pistacchio_pistachio",
+   "candidate": "pistacchio_pistachio/botanical_plate_1.jpg"
+  },
+  "ribes_nero_blackcurrant__botanical_plate_1.jpg": {
+   "item": "ribes_nero_blackcurrant",
+   "candidate": "ribes_nero_blackcurrant/botanical_plate_1.jpg"
+  },
+  "uva_spina_gooseberry__botanical_plate_1.jpg": {
+   "item": "uva_spina_gooseberry",
+   "candidate": "uva_spina_gooseberry/botanical_plate_1.jpg"
+  },
+  "sambuco_elderberry__botanical_plate_1.jpg": {
+   "item": "sambuco_elderberry",
+   "candidate": "sambuco_elderberry/botanical_plate_1.jpg"
+  },
+  "cocco_coconut__botanical_plate_2.jpg": {
+   "item": "cocco_coconut",
+   "candidate": "cocco_coconut/botanical_plate_2.jpg"
+  },
+  "giuggiola_jujube__botanical_plate_4.jpg": {
+   "item": "giuggiola_jujube",
+   "candidate": "giuggiola_jujube/botanical_plate_4.jpg"
+  },
+  "fungo_ovolo_caesars_mushroom__botanical_plate_1.jpg": {
+   "item": "fungo_ovolo_caesars_mushroom",
+   "candidate": "fungo_ovolo_caesars_mushroom/botanical_plate_1.jpg"
+  },
+  "tartufo_nero_black_truffle__cut_section_1.jpg": {
+   "item": "tartufo_nero_black_truffle",
+   "candidate": "tartufo_nero_black_truffle/cut_section_1.jpg"
+  },
+  "finferlo_chanterelle__botanical_plate_5.jpg": {
+   "item": "finferlo_chanterelle",
+   "candidate": "finferlo_chanterelle/botanical_plate_5.jpg"
+  },
+  "spugnola_morel__botanical_plate_2.jpg": {
+   "item": "spugnola_morel",
+   "candidate": "spugnola_morel/botanical_plate_2.jpg"
+  }
+ }
+}

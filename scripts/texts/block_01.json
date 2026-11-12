@@ -1,0 +1,368 @@
+{
+  "aglio_garlic": {
+    "pl": "luogo_fresco_buio",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Testa soda e pesante, spicchi pieni e tuniche asciutte; niente germogli verdi, macchie o muffa.",
+      "Firm, heavy bulb with plump cloves and dry papery skin; no green sprouts, spots or mould."
+    ],
+    "ds": [
+      "Scegli teste compatte e turgide, con tuniche esterne asciutte e pulite e il colletto ben essiccato. Gli spicchi devono essere sodi al tatto: se cedono o suonano vuoti l'aglio è vecchio. Evita teste con germogli in superficie, macchie scure o tracce di muffa. Il colore della tunica (bianco, rosa, rosso) dipende dalla varietà.",
+      "Pick compact, firm bulbs with clean, dry outer skins and a well-dried neck. Cloves should feel firm: if they give or feel hollow, the garlic is old. Avoid bulbs with visible sprouts, dark spots or mould. Skin colour (white, pink, red) depends on the variety."
+    ],
+    "cs": [
+      "Fresco e asciutto · 1-2 mesi",
+      "Cool, dry place · 1-2 months"
+    ],
+    "si": [
+      "Conserva le teste intere in un luogo fresco, asciutto, ventilato e al buio (cestino o sacchetto di carta), lontano da fonti di calore. Il frigorifero domestico è troppo umido e favorisce germogli e muffe. Una volta sgranati, gli spicchi si conservano solo pochi giorni.",
+      "Keep whole bulbs in a cool, dry, well-ventilated dark place (basket or paper bag), away from heat. A home fridge is too humid and encourages sprouting and mould. Separated cloves keep only a few days."
+    ],
+    "hb": [
+      "Si usa in piccole quantità, ma per 100 g è ricco di vitamina B6 e fonte di tiamina, potassio, fosforo e rame. I suoi composti solforati, responsabili dell'aroma pungente, si sviluppano quando lo spicchio viene schiacciato o tritato. In Italia sono DOP l'Aglio Bianco Polesano e l'Aglio di Voghiera.",
+      "Used in small amounts, but per 100 g it is high in vitamin B6 and a source of thiamin, potassium, phosphorus and copper. Its sulphur compounds, responsible for the pungent aroma, develop when the clove is crushed or chopped. Italian PDOs include Aglio Bianco Polesano and Aglio di Voghiera."
+    ],
+    "wr": [
+      "Gli spicchi germogliati sono ancora buoni: togli il germoglio centrale, che è più amaro. Le tuniche pulite insaporiscono brodi vegetali, poi vanno nel compost.",
+      "Sprouted cloves are still fine: remove the bitter green shoot. Clean papery skins add flavour to vegetable stock before going into the compost."
+    ]
+  },
+  "asparago_asparagus": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Turioni dritti, sodi e lucidi, con le punte ben chiuse e compatte e la base non secca.",
+      "Straight, firm, glossy spears with tightly closed tips and a moist, not dried-out, base."
+    ],
+    "ds": [
+      "I turioni migliori sono dritti, sodi e brillanti, con punte serrate e compatte: punte aperte o allargate indicano un prodotto vecchio. Il gambo deve essere turgido e spezzarsi in modo netto; la base non deve essere secca o legnosa. Il colore verde deve essere uniforme fino alla base.",
+      "The best spears are straight, firm and shiny, with tight, compact tips: open or spreading tips mean old produce. The stalk should be turgid and snap cleanly; the base should not be dry or woody. Green colour should be even down to the base."
+    ],
+    "cs": [
+      "Frigo · 2-3 giorni",
+      "Fridge · 2-3 days"
+    ],
+    "si": [
+      "Avvolgi la base dei turioni in un panno umido (o tienili in piedi in un dito d'acqua) e mettili nel cassetto del frigorifero: si mantengono 2-3 giorni. In condizioni professionali (0-2 °C e umidità molto alta) arrivano a 2-3 settimane. Lontano dalla frutta che produce etilene, che li rende fibrosi.",
+      "Wrap the base of the spears in a damp cloth (or stand them in a little water) and keep them in the fridge crisper: they last 2-3 days. Under professional conditions (0-2 °C, very high humidity) they last 2-3 weeks. Keep away from ethylene-producing fruit, which makes them fibrous."
+    ],
+    "cn": [
+      "Dopo circa 10 giorni a 0 °C possono perdere lucentezza, con punte ingrigite e aspetto appassito.",
+      "After about 10 days at 0 °C they may lose their sheen, with greyish tips and a limp appearance."
+    ],
+    "hb": [
+      "Poco calorico e ricco d'acqua, per 100 g è ricco di folati e vitamina C e fonte di tiamina e riboflavina. È adatto alle diete ipocaloriche. L'odore particolare delle urine dopo averlo mangiato è dovuto a composti solforati e non è dannoso.",
+      "Low in calories and rich in water, per 100 g it is high in folate and vitamin C and a source of thiamin and riboflavin. It suits low-calorie diets. The distinctive urine odour after eating it comes from sulphur compounds and is harmless."
+    ],
+    "wr": [
+      "Non buttare la parte bassa più dura: pelata, si cuoce più a lungo per vellutate e risotti; le bucce danno sapore al brodo.",
+      "Don't throw away the tough lower ends: peeled, they can be cooked longer for soups and risottos; the peelings flavour stock."
+    ]
+  },
+  "carciofo_artichoke": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "greenpeace",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Capolino sodo e pesante, brattee chiuse, lucide e di colore intenso; gambo turgido.",
+      "Firm, heavy head with tightly closed, glossy, deeply coloured bracts and a firm stem."
+    ],
+    "ds": [
+      "Le brattee (le foglie) devono essere ben chiuse, turgide e lucide, senza punte nere, vesciche o imbrunimenti; il carciofo deve risultare sodo alla pressione. Brattee aperte o allargate indicano un capolino troppo maturo e duro. Il colore (verde o violetto) dipende dalla varietà, ad esempio Romanesco, Spinoso sardo, Violetto.",
+      "Bracts (the leaves) should be tightly closed, turgid and glossy, with no black tips, blisters or browning; the head should feel firm when squeezed. Open, spreading bracts mean an over-mature, tough head. Colour (green or purple) depends on the variety, such as Romanesco, Spinoso sardo or Violetto."
+    ],
+    "cs": [
+      "Frigo · 1-2 settimane",
+      "Fridge · 1-2 weeks"
+    ],
+    "si": [
+      "In casa conservalo in frigorifero, non lavato, in un sacchetto forato, e consumalo entro 3 giorni; puoi anche tenerlo con il gambo immerso in poca acqua. In condizioni ottimali (0 °C e umidità alta) resta in buono stato fino a 2 settimane. Non teme il freddo.",
+      "At home keep it unwashed in a perforated bag in the fridge and eat within 3 days; you can also stand it with the stem in a little water. Under optimal conditions (0 °C, high humidity) it keeps well for up to 2 weeks. It is not damaged by cold."
+    ],
+    "hb": [
+      "È ricco di fibre e per 100 g è ricco di folati e fonte di vitamina C, potassio e rame. La parte che mangiamo è il bocciolo del fiore. Una volta tagliato annerisce rapidamente per l'ossidazione dei polifenoli: limone o acqua acidulata lo evitano.",
+      "It is high in fibre and per 100 g high in folate and a source of vitamin C, potassium and copper. The part we eat is the flower bud. Once cut it darkens quickly as its polyphenols oxidise: lemon or acidulated water prevents this."
+    ],
+    "wr": [
+      "Gambi e foglie esterne più dure si possono cucinare: i gambi pelati si cuociono come il cuore o si frullano in un paté con olio e sale; le foglie lessate e passate danno vellutate e brodi.",
+      "Stems and tougher outer leaves can be cooked: peeled stems cook like the heart or can be blended into a pâté with oil and salt; boiled and sieved leaves make soups and stock."
+    ]
+  },
+  "carota_carrot": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Radici sode e dritte, arancio vivo, lisce, senza spaccature né germogli.",
+      "Firm, straight, bright orange roots, smooth, with no cracks or sprouts."
+    ],
+    "ds": [
+      "Una buona carota è soda e croccante, dritta dalla spalla alla punta, liscia e di colore arancio vivo e uniforme. Evita radici flosce, spaccate, con germogli o con la spalla verde. Se ha il ciuffo, deve essere verde e fresco: è un buon indice di freschezza.",
+      "A good carrot is firm and crisp, straight from shoulder to tip, smooth and evenly bright orange. Avoid limp, split or sprouting roots or those with green shoulders. If the tops are attached they should be green and fresh, a good sign of freshness."
+    ],
+    "cs": [
+      "Frigo · fino a 10 giorni",
+      "Fridge · up to 10 days"
+    ],
+    "si": [
+      "Togli il ciuffo (sottrae acqua alla radice) e conserva le carote in frigorifero in un sacchetto forato: durano fino a 10 giorni. Le carote mature senza ciuffo, a 0 °C e con umidità molto alta, si conservano per mesi. Tienile lontane da mele e altri frutti che producono etilene, che le rende amare.",
+      "Cut off the tops (they draw water from the root) and keep carrots in a perforated bag in the fridge: they last up to 10 days. Mature topped carrots at 0 °C and very high humidity keep for months. Keep them away from apples and other ethylene-producing fruit, which makes them bitter."
+    ],
+    "hb": [
+      "Povera di calorie e ricca di fibre, è ricchissima di vitamina A sotto forma di caroteni (100 g coprono oltre il fabbisogno giornaliero) ed è fonte di zinco e rame. Con un filo d'olio i caroteni vengono assorbiti meglio.",
+      "Low in calories and high in fibre, it is very rich in vitamin A as carotenes (100 g cover more than the daily requirement) and a source of zinc and copper. A drizzle of oil improves carotene absorption."
+    ],
+    "wr": [
+      "Il ciuffo è commestibile: frullato con olio, frutta secca e formaggio diventa un pesto, oppure aromatizza minestre. Le bucce lavate vanno nel brodo vegetale.",
+      "The tops are edible: blended with oil, nuts and cheese they make a pesto, or flavour soups. Washed peelings go into vegetable stock."
+    ]
+  },
+  "barbabietola_beetroot": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "greenpeace",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Radice soda, liscia, rosso intenso e uniforme; foglie fresche e rigide se presenti.",
+      "Firm, smooth root with deep, even red colour; fresh, crisp leaves if attached."
+    ],
+    "ds": [
+      "Scegli radici sode, lisce e pulite, di colore rosso intenso e uniforme, senza rughe, ammaccature o parti flosce. Se ha ancora le foglie, devono essere rigide e verdi, non appassite. Le radici di media grandezza sono in genere più tenere.",
+      "Choose firm, smooth, clean roots with deep, even red colour, free of wrinkles, bruises or soft spots. If the leaves are attached they should be crisp and green, not wilted. Medium-sized roots are usually more tender."
+    ],
+    "cs": [
+      "Frigo · 1-2 settimane",
+      "Fridge · 1-2 weeks"
+    ],
+    "si": [
+      "Cruda, tienila in frigorifero e consumala entro pochi giorni; separa subito le foglie, che si conservano poco. In condizioni professionali le radici con le foglie durano 10-14 giorni a 0 °C, quelle senza foglie molto di più (1-2 °C, umidità molto alta). La barbabietola già cotta va in frigo e si consuma entro 2-3 giorni.",
+      "Keep raw beetroot in the fridge and use within a few days; separate the leaves at once, as they keep less well. Professionally, bunched beets keep 10-14 days at 0 °C, topped roots much longer (1-2 °C, very high humidity). Cooked beetroot goes in the fridge and should be eaten within 2-3 days."
+    ],
+    "hb": [
+      "Dolce e versatile, si mangia cruda o cotta. Per 100 g è ricca di folati e fonte di potassio; contiene anche fibre e nitrati. Il colore rosso viene dalle betalaine, pigmenti che possono colorare temporaneamente anche le urine.",
+      "Sweet and versatile, eaten raw or cooked. Per 100 g it is high in folate and a source of potassium; it also provides fibre and nitrates. The red colour comes from betalains, pigments that can temporarily colour urine too."
+    ],
+    "wr": [
+      "Le foglie sono buone: si cucinano come le bietole (in padella, nelle frittate, nei ripieni). Il liquido di cottura colora naturalmente risotti e impasti.",
+      "The leaves are good to eat: cook them like chard (sautéed, in omelettes, in fillings). The cooking water naturally colours risottos and doughs."
+    ]
+  },
+  "bietola_da_coste_swiss_chard": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Foglie turgide verde intenso senza ingiallimenti; coste sode e pulite, bianche o colorate.",
+      "Turgid, deep green leaves with no yellowing; firm, clean stalks, white or coloured."
+    ],
+    "ds": [
+      "Si trova in due forme: da coste, con la costa centrale larga e carnosa, e da taglio (erbetta), a foglie tenere con picciolo sottile. In entrambi i casi le foglie devono essere turgide, verde intenso, senza parti gialle o brune e senza terra; le coste sode e completamente bianche o colorate, secondo la varietà. Foglie molli o appassite indicano un prodotto vecchio.",
+      "It comes in two forms: Swiss chard, with a broad, fleshy central stalk, and leaf beet (perpetual spinach), with tender leaves and thin stems. In both cases leaves should be turgid and deep green, with no yellow or brown patches and no soil; stalks should be firm and fully white or coloured, depending on the variety. Limp or wilted leaves mean old produce."
+    ],
+    "cs": [
+      "Frigo · 1-2 settimane",
+      "Fridge · 1-2 weeks"
+    ],
+    "si": [
+      "Conservala in frigorifero, non lavata, in un sacchetto forato e consumala entro 3 giorni (2-3 giorni l'erbetta, più delicata). In condizioni professionali (0 °C, umidità 95-98%) dura 1-2 settimane. Non teme il freddo ma è sensibile all'etilene: tienila lontana dalla frutta che matura.",
+      "Keep it unwashed in a perforated bag in the fridge and use within 3 days (2-3 days for the more delicate leaf beet). Professionally (0 °C, 95-98% humidity) it keeps 1-2 weeks. It tolerates cold but is sensitive to ethylene: keep it away from ripening fruit."
+    ],
+    "hb": [
+      "Ricca d'acqua e povera di calorie, per 100 g è ricca di folati, vitamina A (come caroteni) e vitamina C e fonte di rame. Una porzione contribuisce in modo rilevante al fabbisogno di queste vitamine.",
+      "Watery and low in calories, per 100 g it is high in folate, vitamin A (as carotenes) and vitamin C and a source of copper. One serving makes a substantial contribution to these vitamins."
+    ],
+    "wr": [
+      "Usa anche le coste: cotte qualche minuto più delle foglie sono ottime gratinate o in padella. Dell'erbetta si mangia quasi tutto, picciolo compreso. Le foglie lessate avanzate vanno in frittate, torte salate e ripieni.",
+      "Use the stalks too: cooked a few minutes longer than the leaves they are great au gratin or sautéed. Almost all of leaf beet is eaten, stems included. Leftover boiled leaves go into omelettes, savoury pies and fillings."
+    ]
+  },
+  "cardo_cardoon": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "crea"
+    ],
+    "sl": [
+      "Coste spesse, sode e piene, chiare (bianco-avorio), pesanti e non cave.",
+      "Thick, firm, solid stalks, pale (ivory-white), heavy and not hollow."
+    ],
+    "ds": [
+      "Scegli cespi pesanti con coste spesse, carnose e piene, di colore chiaro: le coste più bianche sono le più tenere e meno amare. Evita coste cave, flosce o con macchie scure.",
+      "Choose heavy heads with thick, fleshy, solid stalks in a pale colour: the whitest stalks are the most tender and least bitter. Avoid hollow, limp or dark-spotted stalks."
+    ],
+    "cs": [
+      "Frigo · pochi giorni",
+      "Fridge · a few days"
+    ],
+    "si": [
+      "Conservalo in frigorifero avvolto in un sacchetto o in un panno e consumalo in pochi giorni. Una volta tagliato annerisce: tienilo in acqua e limone fino alla cottura.",
+      "Keep it in the fridge wrapped in a bag or cloth and use within a few days. Once cut it darkens: keep it in lemon water until cooking."
+    ],
+    "hb": [
+      "Parente stretto del carciofo, è povero di calorie e contiene fibre. È tipico della cucina invernale piemontese (bagna cauda) e del Centro Italia.",
+      "A close relative of the artichoke, it is low in calories and provides fibre. It is typical of winter cooking in Piedmont (bagna cauda) and Central Italy."
+    ],
+    "wr": [
+      "Elimina solo i filamenti esterni più duri: le coste esterne, più fibrose, vanno bene per minestre e vellutate.",
+      "Remove only the toughest outer strings: the more fibrous outer stalks are fine for soups and purées."
+    ]
+  },
+  "cavoletto_di_bruxelles_brussels_sprout": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Germogli piccoli e sodi, foglie ben serrate verde brillante; base tagliata bianca.",
+      "Small, firm sprouts with tight, bright green leaves and a white cut end."
+    ],
+    "ds": [
+      "I cavoletti migliori sono piccoli (circa 2,5 cm), sodi e compatti, con le foglie esterne verde brillante e la base di taglio bianca e pulita. Le foglie interne devono essere giallo chiaro e ben serrate. Evita cavoletti gialli, molli o con foglie aperte.",
+      "The best sprouts are small (about 2.5 cm), firm and compact, with bright green outer leaves and a clean white cut end. Inner leaves should be pale yellow and tightly packed. Avoid yellow, soft or loose-leaved sprouts."
+    ],
+    "cs": [
+      "Frigo · 3-5 giorni",
+      "Fridge · 3-5 days"
+    ],
+    "si": [
+      "Conservali in frigorifero non lavati, in un sacchetto forato, e consumali entro qualche giorno. In condizioni professionali (0 °C, umidità 95-100%) durano 3-5 settimane; a 5 °C la durata si dimezza. Sono sensibili all'etilene, che fa ingiallire e cadere le foglie.",
+      "Keep them unwashed in a perforated bag in the fridge and use within a few days. Professionally (0 °C, 95-100% humidity) they last 3-5 weeks; at 5 °C the life is halved. They are sensitive to ethylene, which yellows the leaves and makes them drop."
+    ],
+    "hb": [
+      "Per 100 g sono ricchi di vitamina C e folati e fonte di vitamina A, vitamina B6 e potassio. Come gli altri cavoli contengono glucosinolati, responsabili del gusto amarognolo.",
+      "Per 100 g they are high in vitamin C and folate and a source of vitamin A, vitamin B6 and potassium. Like other cabbages they contain glucosinolates, responsible for their slightly bitter taste."
+    ],
+    "wr": [
+      "Togli solo le foglie esterne rovinate; quelle sane che si staccano si saltano in padella come chips. Cotti al forno o in padella sono meno amari che bolliti.",
+      "Remove only damaged outer leaves; healthy leaves that fall off can be pan-fried into crisps. Roasted or pan-fried they taste less bitter than boiled."
+    ]
+  },
+  "cavolfiore_cauliflower": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Testa soda, compatta e pesante, bianca o crema senza macchie; foglie verdi e fresche.",
+      "Firm, compact, heavy head, white or cream with no spots; fresh green leaves."
+    ],
+    "ds": [
+      "La testa (il corimbo) deve essere compatta, soda e a grana fitta, di colore uniforme (bianco-crema, o viola, arancio o verde nelle varietà colorate), senza macchie brune, ingiallimenti o parti molli. Le foglie che la avvolgono devono essere verdi, tenere e turgide.",
+      "The head (curd) should be compact, firm and tight-grained, evenly coloured (white-cream, or purple, orange or green in coloured varieties), with no brown spots, yellowing or soft parts. Wrapper leaves should be green, tender and crisp."
+    ],
+    "cs": [
+      "Frigo · fino a 5 giorni",
+      "Fridge · up to 5 days"
+    ],
+    "si": [
+      "Conservalo in frigorifero, intero e non lavato, in un sacchetto bucherellato: dura fino a 5 giorni. In condizioni professionali (0 °C, umidità 95-98%) arriva a circa 3 settimane. È molto sensibile all'etilene, che scolorisce la testa e fa ingiallire le foglie: tienilo lontano dalla frutta.",
+      "Keep it whole and unwashed in a perforated bag in the fridge: it lasts up to 5 days. Professionally (0 °C, 95-98% humidity) it keeps about 3 weeks. It is very sensitive to ethylene, which discolours the curd and yellows the leaves: keep it away from fruit."
+    ],
+    "hb": [
+      "Per 100 g è ricco di vitamina C e folati e fonte di vitamina B6 e potassio, con poche calorie e buone fibre. Anche crudo, a cimette, mantiene meglio la vitamina C.",
+      "Per 100 g it is high in vitamin C and folate and a source of vitamin B6 and potassium, with few calories and good fibre. Eaten raw as florets it retains more vitamin C."
+    ],
+    "wr": [
+      "Torsolo e foglie verdi sono buoni: il torsolo pelato e affettato sottile si cuoce con le cimette, le foglie si saltano in padella o vanno in minestra.",
+      "The core and green leaves are good to eat: the peeled, thinly sliced core cooks with the florets, the leaves can be sautéed or added to soups."
+    ]
+  },
+  "broccolo_broccoli": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Infiorescenza verde scuro, compatta e soda, boccioli chiusi; gambo tagliato di fresco.",
+      "Dark green, compact, firm head with closed buds and a freshly cut stalk."
+    ],
+    "ds": [
+      "Il broccolo di qualità ha un colore verde scuro o brillante, i boccioli (le \"perline\") ben chiusi e una testa soda e compatta alla pressione. Il gambo deve essere tagliato di netto e non legnoso. Boccioli gialli o aperti indicano un prodotto vecchio.",
+      "Good broccoli is dark or bright green, with tightly closed buds (\"beads\") and a head that is firm and compact under pressure. The stalk should be cleanly cut and not woody. Yellow or open buds mean old produce."
+    ],
+    "cs": [
+      "Frigo · fino a 5 giorni",
+      "Fridge · up to 5 days"
+    ],
+    "si": [
+      "Conservalo in frigorifero non lavato, in un sacchetto bucherellato, e consumalo entro 5 giorni. In condizioni professionali (0 °C, umidità 98-100%) dura 2-3 settimane. È estremamente sensibile all'etilene, che fa ingiallire rapidamente le cimette: tienilo lontano da mele, pere e banane.",
+      "Keep it unwashed in a perforated bag in the fridge and use within 5 days. Professionally (0 °C, 98-100% humidity) it lasts 2-3 weeks. It is extremely sensitive to ethylene, which quickly yellows the florets: keep it away from apples, pears and bananas."
+    ],
+    "hb": [
+      "Per 100 g è ricco di vitamina C e folati e fonte di potassio, con poche calorie e buone fibre. Come gli altri cavoli contiene glucosinolati; cotture brevi (a vapore o in padella) ne preservano meglio colore e vitamine.",
+      "Per 100 g it is high in vitamin C and folate and a source of potassium, with few calories and good fibre. Like other cabbages it contains glucosinolates; short cooking (steaming or stir-frying) better preserves colour and vitamins."
+    ],
+    "wr": [
+      "Il gambo è tenero all'interno: togli la parte esterna fibrosa e taglialo a rondelle da cuocere con le cimette o da frullare in vellutate. Anche le foglie si mangiano.",
+      "The stalk is tender inside: peel off the fibrous outer layer and slice it to cook with the florets or blend into soups. The leaves are edible too."
+    ]
+  },
+  "cavolo_cappuccio_cabbage": {
+    "pl": "frigorifero",
+    "rt": "non_climaterico",
+    "src": [
+      "altroconsumo",
+      "usda_hb66",
+      "crea"
+    ],
+    "sl": [
+      "Palla soda, compatta e pesante per la sua dimensione; foglie esterne turgide e lucide.",
+      "Firm, compact head, heavy for its size; crisp, glossy outer leaves."
+    ],
+    "ds": [
+      "Il cavolo cappuccio deve essere sodo e pesante rispetto alla sua grandezza, con foglie croccanti, ben serrate e di colore uniforme. Le foglie esterne devono essere turgide e senza macchie, buchi o ingiallimenti. Evita teste leggere, molli o spaccate.",
+      "The cabbage should be firm and heavy for its size, with crisp, tightly packed, evenly coloured leaves. Outer leaves should be turgid and free of spots, holes or yellowing. Avoid light, soft or split heads."
+    ],
+    "cs": [
+      "Frigo · 1-2 settimane",
+      "Fridge · 1-2 weeks"
+    ],
+    "si": [
+      "Intero si conserva bene nel cassetto del frigorifero, in un sacchetto forato, per una o due settimane; una volta tagliato, avvolgi la parte esposta e consumalo in pochi giorni. In condizioni professionali (0 °C, umidità 98-100%) dura molto più a lungo. È sensibile all'etilene, che fa ingiallire e cadere le foglie.",
+      "Whole, it keeps well in the fridge crisper in a perforated bag for one to two weeks; once cut, wrap the exposed side and use within a few days. Professionally (0 °C, 98-100% humidity) it lasts much longer. It is sensitive to ethylene, which yellows the leaves and makes them drop."
+    ],
+    "hb": [
+      "Per 100 g è ricco di vitamina C e fonte di folati, con poche calorie e buone fibre. È la base dei crauti, ottenuti per fermentazione lattica; crudo e affettato sottile è ottimo in insalata.",
+      "Per 100 g it is high in vitamin C and a source of folate, with few calories and good fibre. It is the base of sauerkraut, made by lactic fermentation; raw and thinly sliced it is great in salads."
+    ],
+    "wr": [
+      "Le foglie esterne più dure, sbollentate, diventano involtini; il torsolo affettato sottile va in insalata o in minestra.",
+      "Tougher outer leaves, blanched, can be used for stuffed rolls; the thinly sliced core goes into salads or soups."
+    ]
+  }
+}

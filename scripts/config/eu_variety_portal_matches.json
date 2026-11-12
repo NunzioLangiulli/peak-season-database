@@ -1,0 +1,437 @@
+{
+ "_doc": "Varieta' della bozza non trovate nelle fonti testuali, cercate il 2026-11-04 nel Catalogo comune UE / EU Plant Variety Portal (https://ec.europa.eu/food/plant-variety-portal/, ricerca per denominazione 'contains'). Corrispondenza accettata solo se coincide la specie UPOV. status: Registered = iscritta oggi; Surrendered/Expired = iscritta in passato (la varieta' esiste ma oggi non e' piu' nel registro di quel Paese). match: exact = stesso nome; approx = nome registrato leggermente diverso (vedi note). Non cercabili nel portale: erbe aromatiche, funghi, mango, vite (specie non regolamentate o con registro separato).",
+ "matches": [
+  {
+   "item": "barbabietola_beetroot",
+   "draft": "Barbabietola Detroit",
+   "registered": "Detroit 2",
+   "upov": "BETAA_VUL_GVC",
+   "match": "approx",
+   "note": "registrata come 'Detroit 2' (selezione del tipo Detroit)",
+   "records": [
+    "IT:Registered:NLI/VEG/IT/BETAA_VUL_GVC/251851",
+    "FR:Registered:NLI/VEG/FR/BETAA_VUL_GVC/251851",
+    "NL:Registered:NLI/VEG/NL/BETAA_VUL_GVC/251851",
+    "HU:Registered:NLI/VEG/HU/BETAA_VUL_GVC/107037"
+   ]
+  },
+  {
+   "item": "bietola_da_coste_swiss_chard",
+   "draft": "Bietola a Costa Larga Lucullus",
+   "registered": "Lucullus",
+   "upov": "BETAA_VUL_GVF",
+   "match": "exact",
+   "records": [
+    "FR:Registered:NLI/VEG/FR/BETAA_VUL_GVF/252042",
+    "NL:Registered:NLI/VEG/NL/BETAA_VUL_GVF/252042",
+    "CZ:Surrendered:NLI/VEG/CZ/BETAA_VUL_GVF/3080001"
+   ]
+  },
+  {
+   "item": "cavoletto_di_bruxelles_brussels_sprout",
+   "draft": "Groninger",
+   "registered": "Groninger",
+   "upov": "BRASS_OLE_GGM",
+   "match": "exact",
+   "records": [
+    "NL:Registered:NLI/VEG/NL/BRASS_OLE_GGM/254125",
+    "BG:Surrendered:NLI/VEG/BG/BRASS_OLE_GGM/254125"
+   ]
+  },
+  {
+   "item": "cavoletto_di_bruxelles_brussels_sprout",
+   "draft": "Sanda",
+   "registered": "Sanda",
+   "upov": "BRASS_OLE_GGM",
+   "match": "exact",
+   "records": [
+    "FR:Registered:NLI/VEG/FR/BRASS_OLE_GGM/4077332"
+   ]
+  },
+  {
+   "item": "cavolfiore_cauliflower",
+   "draft": "Cavolfiore Violetto di Sicilia",
+   "registered": "Di Sicilia violetto",
+   "upov": "BRASS_OLE_GBB",
+   "match": "exact",
+   "records": [
+    "IT:Registered:NLI/VEG/IT/BRASS_OLE_GBB/252619"
+   ]
+  },
+  {
+   "item": "cavolfiore_cauliflower",
+   "draft": "Cavolfiore Tardivo di Fano",
+   "registered": "Tardivo di Fano",
+   "upov": "BRASS_OLE_GBB",
+   "match": "exact",
+   "records": [
+    "IT:Surrendered:NLI/VEG/IT/BRASS_OLE_GBB/253386",
+    "NL:Surrendered:NLI/VEG/NL/BRASS_OLE_GBB/253386"
+   ]
+  },
+  {
+   "item": "broccolo_broccoli",
+   "draft": "Broccolo Romanesco",
+   "registered": "Romanesco natalino / ottobrino / gennarese / San Giuseppe",
+   "upov": "BRASS_OLE_GBC",
+   "match": "approx",
+   "note": "il tipo Romanesco e' registrato in Italia in piu' selezioni per epoca di raccolta",
+   "records": [
+    "IT:Surrendered:NLI/VEG/IT/BRASS_OLE_GBC/253904"
+   ]
+  },
+  {
+   "item": "cavolo_rapa_kohlrabi",
+   "draft": "Cavolo Rapa Violetto di Vienna",
+   "registered": "Purple Vienna",
+   "upov": "BRASS_OLE_GGO",
+   "match": "approx",
+   "note": "nome inglese della stessa varieta'; in Italia e' registrato 'Di Vienna bianco'",
+   "records": [
+    "BG:Surrendered:NLI/VEG/BG/BRASS_OLE_GGO/256170"
+   ]
+  },
+  {
+   "item": "cetriolo_cucumber",
+   "draft": "Cetriolo Marketer",
+   "registered": "Marketer",
+   "upov": "CUCUM_SAT",
+   "match": "exact",
+   "records": [
+    "IT:Registered:NLI/VEG/IT/CUCUM_SAT/265888",
+    "FR:Registered:NLI/VEG/FR/CUCUM_SAT/91861"
+   ]
+  },
+  {
+   "item": "cicoria_da_cespo_chicory",
+   "draft": "Cicoria Catalogna Frastagliata",
+   "registered": "Catalogna a foglie frastagliate",
+   "upov": "CICHO_INT_FOL",
+   "match": "exact",
+   "records": [
+    "IT:Registered:NLI/VEG/IT/CICHO_INT_FOL/261425"
+   ]
+  },
+  {
+   "item": "cicoria_da_cespo_chicory",
+   "draft": "Cicoria Pan di Zucchero",
+   "registered": "Pan di zucchero",
+   "upov": "CICHO_INT_FOL",
+   "match": "exact",
+   "records": [
+    "IT:Registered:NLI/VEG/IT/CICHO_INT_FOL/261500",
+    "CZ:Surrendered:NLI/VEG/CZ/CICHO_INT_FOL/5618"
+   ]
+  },
+  {
+   "item": "cicoria_da_cespo_chicory",
+   "draft": "Cicoria Bianca di Milano",
+   "registered": "Bianca di Milano",
+   "upov": "CICHO_INT_FOL",
+   "match": "exact",
+   "records": [
+    "IT:Registered:NLI/VEG/IT/CICHO_INT_FOL/261415"
+   ]
+  },
+  {
+   "item": "cicoria_da_taglio_cutting_chicory",
+   "draft": "Cicoria Spadonino",
+   "registered": "Spadona",
+   "upov": "CICHO_INT_FOL",
+   "match": "approx",
+   "note": "registrata come 'Spadona'",
+   "records": [
+    "IT:Registered:NLI/VEG/IT/CICHO_INT_FOL/261534"
+   ]
+  },
+  {
+   "item": "cipolla_estiva_summer_onion",
+   "draft": "Cipolla Bianca di Barletta",
+   "registered": "De Barletta",
+   "upov": "ALLIU_CEP_CEP",
+   "match": "exact",
+   "records": [
+    "IT:Registered:NLI/VEG/IT/ALLIU_CEP_CEP/249363",
+    "FR:Registered:NLI/VEG/FR/ALLIU_CEP_CEP/92120"
+   ]
+  },
+  {
+   "item": "fagiolino_green_bean",
+   "draft": "Fagiolino Marconi senza filo",
+   "registered": "Marconi",
+   "upov": "PHASE_VUL",
+   "match": "exact",
+   "records": [
+    "IT:Surrendered:NLI/VEG/IT/PHASE_VUL/285259"
+   ]
+  },
+  {
+   "item": "fava_broad_bean",
+   "draft": "Fava Aguadulce a baccello lungo",
+   "registered": "Aguadulce",
+   "upov": "VICIA_FAB_MAJ",
+   "match": "exact",
+   "records": [
+    "ES:Registered:NLI/VEG/ES/VICIA_FAB_MAJ/289003",
+    "IT:Surrendered:NLI/VEG/IT/VICIA_FAB_MAJ/289003"
+   ]
+  },
+  {
+   "item": "lattuga_da_cespo_head_lettuce",
+   "draft": "Lattuga Trocadero",
+   "registered": "Trocadero a seme bianco",
+   "upov": "LACTU_SAT",
+   "match": "exact",
+   "records": [
+    "IT:Surrendered:NLI/VEG/IT/LACTU_SAT/274615"
+   ]
+  },
+  {
+   "item": "lattuga_da_taglio_leaf_lettuce",
+   "draft": "Lollo Bionda",
+   "registered": "Lollo",
+   "upov": "LACTU_SAT",
+   "match": "approx",
+   "note": "registrata come 'Lollo' (la forma verde; quella rossa e' 'Lollo rossa')",
+   "records": [
+    "IT:Registered:NLI/VEG/IT/LACTU_SAT/272693",
+    "NL:Registered:NLI/VEG/NL/LACTU_SAT/272693",
+    "CZ:Registered:NLI/VEG/CZ/LACTU_SAT/B7470"
+   ]
+  },
+  {
+   "item": "melanzana_eggplant",
+   "draft": "Melanzana Seta",
+   "registered": "Seta",
+   "upov": "SOLAN_MEL",
+   "match": "exact",
+   "records": [
+    "HU:Registered:NLI/VEG/HU/SOLAN_MEL/428398"
+   ]
+  },
+  {
+   "item": "pisello_pea",
+   "draft": "Pisello Meraviglia d'Italia",
+   "registered": "Meraviglia d'Italia",
+   "upov": "PISUM_SAT",
+   "match": "exact",
+   "records": [
+    "IT:Registered:NLI/VEG/IT/PISUM_SAT/286580",
+    "LU:Registered:NLI/VEG/LU/PISUM_SAT/LU_VEG_DEL_1015"
+   ]
+  },
+  {
+   "item": "pisello_pea",
+   "draft": "Pisello Dolce Telefono",
+   "registered": "Telefono rampicante",
+   "upov": "PISUM_SAT",
+   "match": "exact",
+   "records": [
+    "IT:Registered:NLI/VEG/IT/PISUM_SAT/286405"
+   ]
+  },
+  {
+   "item": "pomodoro_tomato",
+   "draft": "Cuore di Bue Ligure",
+   "registered": "Cuor di bue",
+   "upov": "SOLAN_LYC",
+   "match": "approx",
+   "note": "registrato il tipo 'Cuor di bue', non la selezione ligure",
+   "records": [
+    "IT:Registered:NLI/VEG/IT/SOLAN_LYC/633"
+   ]
+  },
+  {
+   "item": "porro_leek",
+   "draft": "Porro di Cervere",
+   "registered": "Di Cervere",
+   "upov": "ALLIU_POR",
+   "match": "exact",
+   "records": [
+    "IT:Registered:NLI/VEG/IT/ALLIU_POR/250779"
+   ]
+  },
+  {
+   "item": "sedano_celery",
+   "draft": "Sedano Dorato d'Asti",
+   "registered": "Dorato d'Asti",
+   "upov": "APIUM_GRA_DUL",
+   "match": "exact",
+   "records": [
+    "IT:Registered:NLI/VEG/IT/APIUM_GRA_DUL/251370"
+   ]
+  },
+  {
+   "item": "valerianella_corn_salad",
+   "draft": "Valerianella d'Olanda a seme grosso",
+   "registered": "D'Olanda a seme grosso",
+   "upov": "VLRNL_LOC",
+   "match": "exact",
+   "records": [
+    "IT:Registered:NLI/VEG/IT/VLRNL_LOC/288928"
+   ]
+  },
+  {
+   "item": "zucchina_zucchini",
+   "draft": "Zucchina Romanesca",
+   "registered": "Romanesco",
+   "upov": "CUCUR_PEP",
+   "match": "exact",
+   "records": [
+    "IT:Registered:NLI/VEG/IT/CUCUR_PEP/398"
+   ]
+  },
+  {
+   "item": "zucchina_zucchini",
+   "draft": "Zucchina Tonda di Piacenza",
+   "registered": "Tondo di Piacenza",
+   "upov": "CUCUR_PEP",
+   "match": "exact",
+   "records": [
+    "IT:Registered:NLI/VEG/IT/CUCUR_PEP/268625"
+   ]
+  },
+  {
+   "item": "anguria_watermelon",
+   "draft": "Mini Anguria Sugar Baby",
+   "registered": "Sugar Baby",
+   "upov": "CTRLS_LAN",
+   "match": "exact",
+   "records": [
+    "ES:Registered:NLI/VEG/ES/CTRLS_LAN/262545",
+    "FR:Registered:NLI/VEG/FR/CTRLS_LAN/51160",
+    "NL:Registered:NLI/VEG/NL/CTRLS_LAN/262545"
+   ]
+  },
+  {
+   "item": "anguria_watermelon",
+   "draft": "Crimson Sweet",
+   "registered": "Crimson Sweet",
+   "upov": "CTRLS_LAN",
+   "match": "exact",
+   "records": [
+    "IT:Registered:NLI/VEG/IT/CTRLS_LAN/261890",
+    "ES:Registered:NLI/VEG/ES/CTRLS_LAN/261890",
+    "NL:Registered:NLI/VEG/NL/CTRLS_LAN/261890",
+    "CZ:Registered:NLI/VEG/CZ/CTRLS_LAN/B6789"
+   ]
+  },
+  {
+   "item": "albicocca_apricot",
+   "draft": "Albicocca Vesuviana (Pellecchiella)",
+   "registered": "PELLECCHIELLA",
+   "upov": "PRUNU_ARM",
+   "match": "exact",
+   "records": [
+    "IT:Registered:NLI/FRU/IT/PRUNU_ARM/IT03686",
+    "HR:Registered:NLI/FRU/HR/PRUNU_ARM/HR/16/27"
+   ]
+  },
+  {
+   "item": "fragola_strawberry",
+   "draft": "Fragolina di Nemi",
+   "registered": "FRAGOLINA DI NEMI",
+   "upov": "FRAGA_VES",
+   "match": "exact",
+   "records": [
+    "IT:Registered:NLI/FRU/IT/FRAGA_VES/IT00636"
+   ]
+  },
+  {
+   "item": "lampone_raspberry",
+   "draft": "Lampone Giallo Fallgold",
+   "registered": "Fallgold",
+   "upov": "RUBUS_IDA",
+   "match": "exact",
+   "records": [
+    "CZ:Registered:NLI/FRU/CZ/RUBUS_IDA/2017110117056",
+    "DE:Registered:NLI/FRU/DE/RUBUS_IDA/HMB_6149",
+    "NL:Registered:NLI/FRU/NL/RUBUS_IDA/FRM41"
+   ]
+  },
+  {
+   "item": "mandarino_mandarin",
+   "draft": "Mandarino Avana",
+   "registered": "AVANA",
+   "upov": "CITRU_DEL",
+   "match": "exact",
+   "records": [
+    "IT:Registered:NLI/FRU/IT/CITRU_DEL/IT00256"
+   ]
+  },
+  {
+   "item": "susina_plum",
+   "draft": "Goccia d'Oro",
+   "registered": "GOCCIA D'ORO",
+   "upov": "PRUNU_SAL",
+   "match": "exact",
+   "note": "susino cino-giapponese (Prunus salicina)",
+   "records": [
+    "IT:Registered:NLI/FRU/IT/PRUNU_SAL/IT06064"
+   ]
+  },
+  {
+   "item": "peperoncino_chili_pepper",
+   "draft": "Diavolicchio Diamante",
+   "registered": "Diavolicchio italico",
+   "upov": "CAPSI_ANN",
+   "match": "approx",
+   "note": "registrato il tipo 'Diavolicchio italico' (Slovenia), non la selezione di Diamante",
+   "records": [
+    "SI:Registered:NLI/VEG/SI/CAPSI_ANN/CAG063"
+   ]
+  },
+  {
+   "item": "peperoncino_chili_pepper",
+   "draft": "Cayenna",
+   "registered": "Cayenna",
+   "upov": "CAPSI_ANN",
+   "match": "exact",
+   "records": [
+    "IT:Registered:NLI/VEG/IT/CAPSI_ANN/257529"
+   ]
+  },
+  {
+   "item": "riso_rice",
+   "draft": "Arborio",
+   "registered": "Arborio",
+   "upov": "ORYZA_SAT",
+   "match": "exact",
+   "records": [
+    "IT:Registered:NLI/AGR/IT/ORYZA_SAT/224548"
+   ]
+  },
+  {
+   "item": "grano_duro_durum_wheat",
+   "draft": "Grano Saragolla",
+   "registered": "Saragolla",
+   "upov": "TRITI_TUR_DUR",
+   "match": "exact",
+   "records": [
+    "IT:Registered:NLI/AGR/IT/TRITI_TUR_DUR/8869"
+   ]
+  },
+  {
+   "item": "grano_duro_durum_wheat",
+   "draft": "Grano Russello",
+   "registered": "Russello",
+   "upov": "TRITI_TUR_DUR",
+   "match": "exact",
+   "records": [
+    "IT:Registered:NLI/AGR/IT/TRITI_TUR_DUR/232880"
+   ]
+  },
+  {
+   "item": "cavolo_nero_black_kale",
+   "draft": "Cavolo Nero di Toscana",
+   "registered": "Nero di Toscana",
+   "upov": "BRASS_OLE_GAS",
+   "match": "exact",
+   "records": [
+    "IT:Registered:Italy (BRASS_OLE_GAS)",
+    "DE:Registered:Germany (BRASS_OLE_PAL)"
+   ],
+   "note": "gia' verificata da altre fonti; aggiunta l'iscrizione al catalogo UE"
+  }
+ ]
+}

@@ -1,0 +1,312 @@
+{
+  "_doc": "Casi generali in cui le fonti danno valori diversi: perché accade, come si è deciso, perché. Bilingue, in metadata.source_conflicts.",
+  "conflicts": [
+    {
+      "id": "draft_vs_sources",
+      "topic": "all",
+      "sources": [],
+      "issue": [
+        "Molti valori della bozza iniziale non coincidevano con le fonti ufficiali.",
+        "Many values in the initial draft did not match the official sources."
+      ],
+      "why": [
+        "La bozza era stata compilata senza riferimenti puntuali e mescolava fonti e contesti diversi.",
+        "The draft had been compiled without specific references and mixed different sources and contexts."
+      ],
+      "decision": [
+        "Vale sempre la fonte ufficiale. Il valore della bozza è registrato come discrepanza nella scheda e, se non verificabile, è tolto dall'app ma conservato a parte.",
+        "The official source always prevails. The draft value is recorded as a discrepancy in the record and, if unverifiable, removed from the app but kept separately."
+      ],
+      "rationale": [
+        "Nessun dato inventato e nessuna informazione persa.",
+        "No invented data and no information lost."
+      ]
+    },
+    {
+      "id": "nutrition_tables",
+      "topic": "nutrition",
+      "sources": [
+        "crea",
+        "bda_ieo",
+        "usda_fdc"
+      ],
+      "issue": [
+        "CREA, BDA-IEO e USDA danno valori diversi per lo stesso alimento.",
+        "CREA, BDA-IEO and USDA give different values for the same food."
+      ],
+      "why": [
+        "Campioni, varietà, Paesi e metodi diversi (es. carboidrati 'disponibili' in Europa e 'per differenza' negli USA).",
+        "Different samples, varieties, countries and methods (e.g. 'available' carbohydrates in Europe and 'by difference' in the USA)."
+      ],
+      "decision": [
+        "Ordine di priorità: CREA, poi BDA-IEO (anche per completare i nutrienti mancanti), USDA solo se mancano le prime due. La fonte è indicata per ogni valore.",
+        "Order of priority: CREA, then BDA-IEO (also to fill missing nutrients), USDA only when the first two are missing. The source is given for every value."
+      ],
+      "rationale": [
+        "Le tabelle italiane descrivono i prodotti venduti in Italia.",
+        "Italian tables describe the products sold in Italy."
+      ]
+    },
+    {
+      "id": "seasonality_calendars",
+      "topic": "seasonality",
+      "sources": [
+        "altroconsumo",
+        "greenpeace",
+        "wwf",
+        "ortodacoltivare",
+        "eufic_map"
+      ],
+      "issue": [
+        "I calendari italiani non sempre coincidono sui mesi di stagione.",
+        "Italian calendars do not always agree on in-season months."
+      ],
+      "why": [
+        "Considerano territori, varietà e coltivazioni (pieno campo, serra) diversi.",
+        "They consider different areas, varieties and growing methods (open field, greenhouse)."
+      ],
+      "decision": [
+        "Per ogni mese e macro-area si contano le fonti che lo indicano: con almeno metà dei voti il mese è di stagione, con meno è inizio o fine stagione; il picco sono i mesi centrali di un periodo di almeno tre mesi in cui tutte le fonti concordano.",
+        "For each month and macro-area the sources listing it are counted: with at least half of the votes the month is in season, with fewer it is early or end of season; the peak is the central months of a period of at least three months on which all sources agree."
+      ],
+      "rationale": [
+        "Il voto riduce il peso di una singola fonte e la regola è la stessa per tutti gli alimenti.",
+        "Voting reduces the weight of any single source and the same rule applies to every food."
+      ]
+    },
+    {
+      "id": "european_zones",
+      "topic": "seasonality_europe",
+      "sources": [
+        "eufic_map",
+        "austria_gesundheitsportal"
+      ],
+      "issue": [
+        "EUFIC dà i dati per Paese, non per zona climatica, e non elenca tutti gli alimenti.",
+        "EUFIC gives data by country, not by climate zone, and does not list every food."
+      ],
+      "why": [
+        "Ogni Paese ha la sua fonte nazionale e i Paesi stanno in più zone.",
+        "Each country has its own national source and countries span several zones."
+      ],
+      "decision": [
+        "Ogni Paese è assegnato alla zona prevalente; le zone mancanti sono colmate con fonti nazionali indicate da EUFIC o, per la zona mediterranea, con la stagionalità del Sud Italia. La provenienza è indicata zona per zona.",
+        "Each country is assigned to its main zone; missing zones are filled with national sources listed by EUFIC or, for the Mediterranean zone, with Southern Italian seasonality. The origin is given zone by zone."
+      ],
+      "rationale": [
+        "Approssimazione dichiarata, utile per chi usa l'app fuori dall'Italia.",
+        "A declared approximation, useful for people using the app outside Italy."
+      ]
+    },
+    {
+      "id": "missing_from_calendars",
+      "topic": "seasonality",
+      "sources": [
+        "legge_752_1985",
+        "provincia_cuneo_funghi"
+      ],
+      "issue": [
+        "Alcuni alimenti (tartufi, ovolo, pesca noce) non compaiono nei calendari di stagione italiani.",
+        "Some foods (truffles, Caesar's mushroom, nectarine) are missing from Italian seasonal calendars."
+      ],
+      "why": [
+        "I calendari trattano frutta e verdura coltivate e non distinguono forme della stessa specie (pesca e pesca noce).",
+        "Calendars cover cultivated produce and do not separate forms of the same species (peach and nectarine)."
+      ],
+      "decision": [
+        "Si usa la fonte più autorevole disponibile per quel prodotto: la legge sui periodi di raccolta per i tartufi, una scheda micologica istituzionale per l'ovolo, la stagionalità della pesca per la pesca noce. La fonte è indicata in seasonality.italy_source o nelle note.",
+        "The most authoritative source available for that product is used: the harvest-period law for truffles, an institutional mushroom sheet for Caesar's mushroom, peach seasonality for nectarine. The source is stated in seasonality.italy_source or in the notes."
+      ],
+      "rationale": [
+        "Meglio una stagionalità da fonte specifica e dichiarata che un vuoto.",
+        "A declared, product-specific source is better than a gap."
+      ]
+    },
+    {
+      "id": "home_storage_location",
+      "topic": "home_storage",
+      "sources": [
+        "uc_davis_storing_guide",
+        "usda_foodkeeper"
+      ],
+      "issue": [
+        "Per cetriolo, melanzana, peperoni e agrumi FoodKeeper indica il frigorifero, la guida UC Davis la temperatura ambiente.",
+        "For cucumber, eggplant, peppers and citrus FoodKeeper says fridge, the UC Davis guide room temperature."
+      ],
+      "why": [
+        "FoodKeeper guarda alla sicurezza e alla durata, la guida UC Davis al gusto: questi prodotti soffrono il freddo e in frigo perdono qualità.",
+        "FoodKeeper focuses on safety and storage time, the UC Davis guide on taste: these products are chilling-sensitive and lose quality in the fridge."
+      ],
+      "decision": [
+        "Il 'dove' segue la guida UC Davis, le durate seguono FoodKeeper; l'etichetta breve riporta entrambe le opzioni e la scelta è spiegata nella scheda.",
+        "The 'where' follows the UC Davis guide, durations follow FoodKeeper; the short label gives both options and the choice is explained in the record."
+      ],
+      "rationale": [
+        "Per un'app sulla stagionalità conta mantenere il sapore, senza nascondere l'alternativa.",
+        "For a seasonality app keeping the flavour matters, without hiding the alternative."
+      ]
+    },
+    {
+      "id": "commercial_vs_home",
+      "topic": "storage",
+      "sources": [
+        "usda_hb66",
+        "usda_foodkeeper"
+      ],
+      "issue": [
+        "Le durate di HB66 (settimane o mesi) sono molto più lunghe di quelle di FoodKeeper (giorni).",
+        "HB66 storage times (weeks or months) are much longer than FoodKeeper's (days)."
+      ],
+      "why": [
+        "HB66 si riferisce a celle professionali a temperatura e umidità ottimali; FoodKeeper a un frigorifero di casa.",
+        "HB66 refers to commercial cold stores at optimal temperature and humidity; FoodKeeper to a home fridge."
+      ],
+      "decision": [
+        "Sono due campi distinti: durata domestica e durata professionale. Una durata professionale non viene mai usata come durata domestica.",
+        "They are two separate fields: home and commercial storage time. A commercial time is never used as a home time."
+      ],
+      "rationale": [
+        "Evita promesse irrealistiche all'utente.",
+        "It avoids unrealistic promises to the user."
+      ]
+    },
+    {
+      "id": "temperature_ranges",
+      "topic": "postharvest",
+      "sources": [
+        "usda_hb66"
+      ],
+      "issue": [
+        "Soglia di danno da freddo e punto di congelamento sono spesso dati come intervalli.",
+        "Chilling threshold and freezing point are often given as ranges."
+      ],
+      "why": [
+        "Dipendono da varietà, maturazione e zuccheri disciolti.",
+        "They depend on variety, ripeness and dissolved sugars."
+      ],
+      "decision": [
+        "Si usa l'estremo più alto (il più prudente) e si conserva l'intervallo quando disponibile. Se il danno avviene in una fascia (drupacee 2-8 °C) non si indica una soglia unica.",
+        "The highest end (the most cautious) is used and the range is kept when available. If damage occurs within a band (stone fruit 2-8 °C) no single threshold is given."
+      ],
+      "rationale": [
+        "Un consiglio prudente non danneggia il prodotto.",
+        "Cautious advice does not damage the produce."
+      ]
+    },
+    {
+      "id": "respiration_values",
+      "topic": "postharvest",
+      "sources": [
+        "usda_hb66",
+        "uc_davis"
+      ],
+      "issue": [
+        "La tabella riassuntiva di HB66 contiene alcuni refusi (es. 1310 per il radicchio) e molti prodotti non sono misurati a 5 °C.",
+        "HB66's summary table contains some typos (e.g. 1310 for radicchio) and many products are not measured at 5 °C."
+      ],
+      "why": [
+        "Errori di impaginazione del PDF; i prodotti sensibili al freddo non vengono studiati a basse temperature.",
+        "PDF layout errors; chilling-sensitive products are not studied at low temperatures."
+      ],
+      "decision": [
+        "Ordine: classe della tabella di Kader, poi valori dei capitoli, poi stima a 5 °C con i Q10 di HB66 (marcata come stimata). I valori palesemente errati non sono usati.",
+        "Order: Kader table class, then chapter values, then an estimate at 5 °C with HB66 Q10 values (marked as estimated). Clearly wrong values are not used."
+      ],
+      "rationale": [
+        "Usare per prima la classificazione dell'autore di riferimento.",
+        "Use the reference author's classification first."
+      ]
+    },
+    {
+      "id": "footprints",
+      "topic": "environmental_footprint",
+      "sources": [
+        "su_eatable_life",
+        "agribalyse"
+      ],
+      "issue": [
+        "Le impronte ambientali variano molto tra studi e banche dati.",
+        "Environmental footprints vary widely between studies and databases."
+      ],
+      "why": [
+        "Metodi, Paesi, rese e confini del sistema diversi (dal campo all'azienda, o fino al consumo).",
+        "Different methods, countries, yields and system boundaries (field to farm gate, or up to consumption)."
+      ],
+      "decision": [
+        "Si usa SU-EATABLE LIFE (mediana armonizzata) con numero di studi e intervallo; AGRIBALYSE solo per le erbe che mancano, con i confini dichiarati.",
+        "SU-EATABLE LIFE (harmonised median) is used with the number of studies and range; AGRIBALYSE only for the missing herbs, with its boundaries stated."
+      ],
+      "rationale": [
+        "Valori confrontabili tra alimenti e incertezza trasparente.",
+        "Values comparable between foods and transparent uncertainty."
+      ]
+    },
+    {
+      "id": "texts_vs_data",
+      "topic": "texts",
+      "sources": [],
+      "issue": [
+        "Alcuni testi scritti fondendo più fonti citavano durate o nutrienti diversi dai dati strutturati.",
+        "Some texts written by merging several sources quoted durations or nutrients different from the structured data."
+      ],
+      "why": [
+        "I testi riprendevano fonti italiane divulgative, i dati vengono da banche dati ufficiali.",
+        "The texts drew on Italian popular sources, the data come from official databases."
+      ],
+      "decision": [
+        "I dati strutturati prevalgono: le etichette di conservazione e le liste 'ricco di / fonte di' sono state riallineate ai dati e ai claim UE.",
+        "Structured data prevail: storage labels and 'rich in / source of' lists were realigned with the data and EU claims."
+      ],
+      "rationale": [
+        "L'app non deve dire due cose diverse sullo stesso alimento.",
+        "The app must not say two different things about the same food."
+      ]
+    },
+    {
+      "id": "approximate_matches",
+      "topic": "all",
+      "sources": [],
+      "issue": [
+        "Per alcuni alimenti una fonte non ha una voce esatta.",
+        "For some foods a source has no exact entry."
+      ],
+      "why": [
+        "Le banche dati internazionali non coprono tutte le specialità italiane (es. cicoria da taglio, cime di rapa, valerianella).",
+        "International databases do not cover every Italian speciality (e.g. cutting chicory, turnip tops, corn salad)."
+      ],
+      "decision": [
+        "Si usa la voce più vicina, sempre marcata 'approssimata' e indicata nella scheda.",
+        "The closest entry is used, always marked 'approximate' and stated in the record."
+      ],
+      "rationale": [
+        "Un dato approssimato dichiarato è più utile di un vuoto, purché trasparente.",
+        "A declared approximate value is more useful than a gap, provided it is transparent."
+      ]
+    },
+    {
+      "id": "variety_names",
+      "topic": "varieties",
+      "sources": [
+        "eu_plant_variety_portal",
+        "slow_food",
+        "eambrosia"
+      ],
+      "issue": [
+        "Il nome d'uso di una varietà può differire da quello registrato.",
+        "A variety's common name may differ from its registered name."
+      ],
+      "why": [
+        "I registri usano la denominazione ufficiale (es. 'Spadona' per Spadonino, 'Detroit 2' per Detroit).",
+        "Registers use the official denomination (e.g. 'Spadona' for Spadonino, 'Detroit 2' for Detroit)."
+      ],
+      "decision": [
+        "Si mostra il nome d'uso e si riporta il nome registrato con il Paese di iscrizione.",
+        "The common name is shown and the registered name is given with the country of registration."
+      ],
+      "rationale": [
+        "Leggibilità per l'utente e verificabilità sul registro.",
+        "Readability for the user and verifiability on the register."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# Peak Season Admin Studio - moduli Python necessari (Python 3.10 o successivo)
+# Installazione:  python -m pip install -r admin_studio/requirements.txt
+#
+# Il server web usa solo la libreria standard di Python (http.server, urllib, json, subprocess): niente Flask.
+Pillow>=10.0        # scheda Immagini: conversione delle foto scaricate in JPG; build_app_assets.py: miniature WebP
+jsonschema>=4.18    # validazione del database dopo ogni salvataggio (scripts/validate_db.py)
+requests>=2.31      # importato da scripts/common.py

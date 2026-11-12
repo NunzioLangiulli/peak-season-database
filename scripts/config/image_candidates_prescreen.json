@@ -1,0 +1,2100 @@
+{
+ "_doc": "Scarti e spostamenti decisi a vista da Claude sui fogli di anteprima, prima della revisione dell'utente. Numeri = posizione della candidata nel tipo (prima della potatura). Applicati da prune_candidates.py.",
+ "aglio_garlic": {
+  "full_frame": [
+   1
+  ],
+  "isolated_background": [
+   5
+  ],
+  "botanical_plate": [
+   5
+  ]
+ },
+ "asparago_asparagus": {
+  "full_frame": [
+   1,
+   2,
+   5
+  ],
+  "plant_in_field": [
+   1,
+   2,
+   4
+  ],
+  "cut_section": {
+   "drop": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "move": {
+    "1": "full_frame"
+   }
+  }
+ },
+ "carciofo_artichoke": {
+  "full_frame": [
+   4,
+   5
+  ],
+  "plant_in_field": [
+   4
+  ],
+  "cut_section": [
+   1
+  ]
+ },
+ "barbabietola_beetroot": {
+  "full_frame": {
+   "drop": [],
+   "move": {
+    "5": "plant_in_field"
+   }
+  },
+  "isolated_background": [
+   5
+  ],
+  "plant_in_field": [
+   1,
+   3
+  ],
+  "cut_section": [
+   4,
+   5
+  ]
+ },
+ "bietola_da_coste_swiss_chard": {
+  "full_frame": {
+   "drop": [],
+   "move": {
+    "3": "plant_in_field",
+    "4": "plant_in_field"
+   }
+  },
+  "cut_section": [
+   1
+  ]
+ },
+ "broccolo_broccoli": {
+  "full_frame": {
+   "drop": [
+    2
+   ],
+   "move": {
+    "3": "isolated_background",
+    "4": "isolated_background",
+    "5": "isolated_background"
+   }
+  },
+  "isolated_background": [
+   2
+  ],
+  "plant_in_field": {
+   "drop": [
+    4
+   ],
+   "move": {
+    "5": "isolated_background"
+   }
+  },
+  "cut_section": [
+   5
+  ]
+ },
+ "cardo_cardoon": {
+  "full_frame": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "plant_in_field": [
+   2
+  ]
+ },
+ "carota_carrot": {
+  "full_frame": [
+   4
+  ],
+  "isolated_background": [
+   1,
+   2
+  ],
+  "cut_section": {
+   "drop": [
+    1,
+    2,
+    5
+   ],
+   "move": {
+    "3": "plant_in_field"
+   }
+  }
+ },
+ "cavoletto_di_bruxelles_brussels_sprout": {
+  "full_frame": {
+   "drop": [
+    5
+   ],
+   "move": {
+    "4": "plant_in_field"
+   }
+  },
+  "plant_in_field": {
+   "drop": [],
+   "move": {
+    "1": "full_frame"
+   }
+  }
+ },
+ "cavolfiore_cauliflower": {
+  "full_frame": [
+   1,
+   2,
+   3,
+   5
+  ],
+  "plant_in_field": {
+   "drop": [
+    5
+   ],
+   "move": {
+    "4": "full_frame"
+   }
+  },
+  "cut_section": [
+   3
+  ]
+ },
+ "cavolo_cappuccio_cabbage": {
+  "full_frame": [
+   3,
+   4
+  ],
+  "isolated_background": [
+   5,
+   6
+  ],
+  "plant_in_field": [
+   3,
+   4
+  ],
+  "cut_section": [
+   1,
+   3,
+   4
+  ]
+ },
+ "cavolo_rapa_kohlrabi": {
+  "full_frame": {
+   "drop": [
+    1
+   ],
+   "move": {
+    "4": "isolated_background"
+   }
+  },
+  "isolated_background": [
+   1,
+   3
+  ],
+  "plant_in_field": {
+   "drop": [],
+   "move": {
+    "3": "full_frame"
+   }
+  },
+  "cut_section": [
+   2
+  ]
+ },
+ "cavolo_verza_savoy_cabbage": {
+  "full_frame": [
+   1
+  ]
+ },
+ "cicoria_da_cespo_chicory": {
+  "full_frame": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "isolated_background": [
+   1
+  ],
+  "plant_in_field": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "cut_section": [
+   1,
+   2
+  ]
+ },
+ "cece_chickpea": {
+  "plant_in_field": {
+   "drop": [
+    1
+   ],
+   "move": {
+    "2": "full_frame"
+   }
+  }
+ },
+ "cetriolo_cucumber": {
+  "full_frame": {
+   "drop": [
+    3
+   ],
+   "move": {
+    "1": "plant_in_field",
+    "2": "plant_in_field",
+    "4": "plant_in_field",
+    "5": "plant_in_field"
+   }
+  },
+  "isolated_background": [
+   3
+  ],
+  "botanical_plate": [
+   3,
+   4,
+   5
+  ],
+  "cut_section": [
+   1,
+   3
+  ]
+ },
+ "fagiolino_green_bean": {
+  "full_frame": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "isolated_background": [
+   1
+  ]
+ },
+ "albicocca_apricot": {
+  "full_frame": [
+   1,
+   4
+  ],
+  "cut_section": [
+   1,
+   2
+  ]
+ },
+ "ananas_pineapple": {
+  "full_frame": {
+   "drop": [
+    2
+   ],
+   "move": {
+    "1": "isolated_background",
+    "3": "isolated_background"
+   }
+  },
+  "isolated_background": [
+   3
+  ],
+  "plant_in_field": {
+   "drop": [
+    1,
+    2,
+    5
+   ],
+   "move": {
+    "4": "cut_section"
+   }
+  },
+  "cut_section": [
+   4,
+   5
+  ]
+ },
+ "anguria_watermelon": {
+  "full_frame": [
+   3,
+   4,
+   5
+  ],
+  "isolated_background": [
+   1
+  ],
+  "plant_in_field": [
+   2
+  ],
+  "botanical_plate": [
+   4
+  ],
+  "cut_section": [
+   1,
+   2,
+   3
+  ]
+ },
+ "arachide_peanut": {
+  "full_frame": {
+   "drop": [
+    2,
+    3
+   ],
+   "move": {
+    "5": "isolated_background"
+   }
+  },
+  "isolated_background": [
+   6
+  ],
+  "cut_section": [
+   3,
+   4
+  ]
+ },
+ "arancia_orange": {
+  "isolated_background": [
+   4,
+   5
+  ],
+  "botanical_plate": [
+   1,
+   2
+  ],
+  "cut_section": [
+   4,
+   5
+  ]
+ },
+ "avena_oat": {
+  "full_frame": {
+   "drop": [
+    3,
+    4
+   ],
+   "move": {
+    "1": "isolated_background",
+    "2": "plant_in_field"
+   }
+  },
+  "isolated_background": [
+   1
+  ],
+  "botanical_plate": [
+   5
+  ],
+  "cut_section": {
+   "drop": [],
+   "move": {
+    "1": "full_frame",
+    "2": "plant_in_field"
+   }
+  }
+ },
+ "avocado_avocado": {
+  "full_frame": [
+   3,
+   4
+  ],
+  "isolated_background": [
+   4,
+   5
+  ],
+  "plant_in_field": [
+   1
+  ],
+  "cut_section": [
+   5
+  ]
+ },
+ "banana_banana": {
+  "full_frame": [
+   3,
+   5
+  ],
+  "isolated_background": [
+   4,
+   6
+  ],
+  "botanical_plate": [
+   5
+  ],
+  "cut_section": {
+   "drop": [
+    1,
+    3,
+    5
+   ],
+   "move": {
+    "2": "full_frame",
+    "4": "full_frame"
+   }
+  }
+ },
+ "basilico_basil": {
+  "full_frame": [
+   3
+  ],
+  "isolated_background": [
+   1,
+   3
+  ],
+  "plant_in_field": [
+   5
+  ],
+  "botanical_plate": [
+   2,
+   5
+  ],
+  "cut_section": {
+   "drop": [
+    2,
+    3,
+    4
+   ],
+   "move": {
+    "1": "full_frame"
+   }
+  }
+ },
+ "cachi_persimmon": {
+  "full_frame": {
+   "drop": [
+    3
+   ],
+   "move": {
+    "1": "plant_in_field",
+    "2": "plant_in_field",
+    "5": "plant_in_field"
+   }
+  },
+  "botanical_plate": [
+   1,
+   2
+  ]
+ },
+ "castagna_chestnut": {
+  "full_frame": [
+   2,
+   3,
+   5
+  ],
+  "isolated_background": [
+   2
+  ],
+  "plant_in_field": [
+   2,
+   3,
+   4
+  ],
+  "botanical_plate": [
+   3,
+   4,
+   5
+  ]
+ },
+ "cavolo_rosso_red_cabbage": {
+  "full_frame": [
+   3
+  ],
+  "isolated_background": [
+   1
+  ],
+  "cut_section": [
+   3
+  ]
+ },
+ "ciliegia_cherry": {
+  "isolated_background": [
+   4
+  ],
+  "botanical_plate": [
+   2,
+   3,
+   4,
+   5
+  ],
+  "cut_section": [
+   1
+  ]
+ },
+ "clementine_clementine": {
+  "plant_in_field": {
+   "drop": [
+    1,
+    2,
+    3
+   ],
+   "move": {
+    "5": "isolated_background"
+   }
+  }
+ },
+ "fava_broad_bean": {
+  "full_frame": {
+   "drop": [
+    3
+   ],
+   "move": {
+    "4": "plant_in_field"
+   }
+  },
+  "isolated_background": [
+   1
+  ],
+  "botanical_plate": [
+   1
+  ]
+ },
+ "fico_d_india_prickly_pear": {
+  "full_frame": {
+   "drop": [],
+   "move": {
+    "3": "plant_in_field",
+    "4": "plant_in_field",
+    "5": "plant_in_field"
+   }
+  },
+  "isolated_background": [
+   1
+  ],
+  "botanical_plate": [
+   3
+  ],
+  "cut_section": [
+   2
+  ]
+ },
+ "fico_fig": {
+  "full_frame": [
+   3,
+   4
+  ],
+  "cut_section": [
+   3
+  ]
+ },
+ "finocchio_fennel": {
+  "full_frame": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "isolated_background": [
+   3
+  ],
+  "plant_in_field": [
+   2,
+   4
+  ],
+  "botanical_plate": [
+   4
+  ],
+  "cut_section": [
+   1
+  ]
+ },
+ "fragola_strawberry": {
+  "full_frame": {
+   "drop": [
+    1
+   ],
+   "move": {
+    "2": "plant_in_field"
+   }
+  },
+  "botanical_plate": [
+   4,
+   5
+  ]
+ },
+ "fungo_champignon_button_mushroom": {
+  "full_frame": {
+   "drop": [
+    4
+   ],
+   "move": {
+    "1": "isolated_background",
+    "3": "isolated_background",
+    "2": "plant_in_field"
+   }
+  }
+ },
+ "fungo_pleurotus_oyster_mushroom": {
+  "full_frame": {
+   "drop": [
+    3,
+    4
+   ],
+   "move": {
+    "1": "plant_in_field",
+    "2": "plant_in_field",
+    "5": "plant_in_field"
+   }
+  },
+  "plant_in_field": [
+   2,
+   4
+  ],
+  "botanical_plate": [
+   5
+  ]
+ },
+ "fungo_porcino_porcini_mushroom": {
+  "full_frame": {
+   "drop": [
+    1,
+    3,
+    4
+   ],
+   "move": {
+    "2": "plant_in_field",
+    "5": "plant_in_field"
+   }
+  },
+  "plant_in_field": [
+   2
+  ],
+  "botanical_plate": [
+   2,
+   3
+  ]
+ },
+ "grano_duro_durum_wheat": {
+  "full_frame": [
+   1
+  ]
+ },
+ "grano_saraceno_buckwheat": {
+  "full_frame": {
+   "drop": [
+    1
+   ],
+   "move": {
+    "3": "plant_in_field",
+    "5": "plant_in_field"
+   }
+  }
+ },
+ "lampone_raspberry": {
+  "full_frame": [
+   2,
+   4
+  ],
+  "isolated_background": [
+   1
+  ],
+  "botanical_plate": [
+   1
+  ]
+ },
+ "lenticchia_lentil": {
+  "full_frame": [
+   4
+  ],
+  "isolated_background": [
+   2
+  ],
+  "plant_in_field": [
+   1,
+   3,
+   4
+  ]
+ },
+ "lime_lime": {
+  "full_frame": {
+   "drop": [
+    1
+   ],
+   "move": {
+    "4": "plant_in_field"
+   }
+  },
+  "isolated_background": [
+   5
+  ],
+  "cut_section": [
+   2,
+   3,
+   4
+  ]
+ },
+ "limone_lemon": {
+  "full_frame": [
+   2,
+   3
+  ],
+  "isolated_background": [
+   2,
+   3,
+   6
+  ],
+  "cut_section": [
+   1,
+   2,
+   4
+  ]
+ },
+ "litchi_lychee": {
+  "full_frame": {
+   "drop": [
+    2,
+    3
+   ],
+   "move": {
+    "5": "plant_in_field"
+   }
+  },
+  "plant_in_field": [
+   4
+  ],
+  "botanical_plate": [
+   1
+  ]
+ },
+ "mais_corn": {
+  "full_frame": [
+   1
+  ],
+  "isolated_background": [
+   1,
+   2,
+   3,
+   4,
+   6
+  ],
+  "plant_in_field": [
+   1,
+   4,
+   5
+  ],
+  "botanical_plate": [
+   1
+  ]
+ },
+ "mandarino_mandarin": {
+  "isolated_background": [
+   2,
+   5
+  ],
+  "botanical_plate": [
+   1
+  ],
+  "cut_section": [
+   3
+  ]
+ },
+ "mango_mango": {
+  "full_frame": {
+   "drop": [
+    4
+   ],
+   "move": {
+    "2": "plant_in_field",
+    "5": "plant_in_field"
+   }
+  },
+  "isolated_background": [
+   1,
+   5
+  ],
+  "cut_section": [
+   2,
+   4
+  ]
+ },
+ "maracuja_passion_fruit": {
+  "full_frame": [
+   1,
+   2,
+   4,
+   5
+  ],
+  "isolated_background": [
+   4
+  ],
+  "botanical_plate": [
+   3
+  ],
+  "cut_section": [
+   2
+  ]
+ },
+ "melanzana_eggplant": {
+  "full_frame": [
+   1,
+   3,
+   4,
+   5
+  ],
+  "isolated_background": [
+   4
+  ],
+  "cut_section": {
+   "drop": [],
+   "move": {
+    "1": "full_frame"
+   }
+  }
+ },
+ "mela_apple": {
+  "isolated_background": [
+   2,
+   5
+  ],
+  "plant_in_field": [
+   1,
+   2,
+   4
+  ],
+  "botanical_plate": [
+   1
+  ],
+  "cut_section": [
+   4,
+   5
+  ]
+ },
+ "mela_cotogna_quince": {
+  "full_frame": [
+   2,
+   5
+  ],
+  "isolated_background": [
+   1
+  ]
+ },
+ "melograno_pomegranate": {
+  "full_frame": {
+   "drop": [
+    2
+   ],
+   "move": {
+    "1": "cut_section",
+    "3": "plant_in_field",
+    "5": "isolated_background"
+   }
+  },
+  "isolated_background": [
+   3
+  ],
+  "cut_section": [
+   4
+  ]
+ },
+ "melone_melon": {
+  "full_frame": [
+   2
+  ],
+  "isolated_background": [
+   3
+  ],
+  "cut_section": [
+   1,
+   3,
+   4
+  ]
+ },
+ "menta_mint": {
+  "isolated_background": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "plant_in_field": [
+   1
+  ],
+  "botanical_plate": [
+   1,
+   2
+  ],
+  "cut_section": [
+   1
+  ]
+ },
+ "mirtillo_blueberry": {
+  "full_frame": [
+   1,
+   3,
+   5
+  ],
+  "plant_in_field": [
+   1,
+   2,
+   4,
+   5
+  ]
+ },
+ "mora_blackberry": {
+  "full_frame": [
+   2,
+   4
+  ],
+  "isolated_background": [
+   3
+  ],
+  "plant_in_field": [
+   1
+  ],
+  "botanical_plate": [
+   1
+  ]
+ },
+ "nespola_loquat": {
+  "full_frame": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "botanical_plate": [
+   3,
+   4,
+   5
+  ]
+ },
+ "origano_oregano": {
+  "full_frame": {
+   "drop": [
+    1,
+    3,
+    5
+   ],
+   "move": {
+    "4": "plant_in_field"
+   }
+  },
+  "isolated_background": [
+   1,
+   2
+  ],
+  "plant_in_field": [
+   4
+  ],
+  "botanical_plate": [
+   2
+  ]
+ },
+ "orzo_barley": {
+  "full_frame": [
+   1
+  ],
+  "plant_in_field": [
+   5
+  ]
+ },
+ "pastinaca_parsnip": {
+  "full_frame": {
+   "drop": [
+    4
+   ],
+   "move": {
+    "3": "isolated_background"
+   }
+  },
+  "isolated_background": [
+   1
+  ],
+  "botanical_plate": [
+   4,
+   5
+  ]
+ },
+ "patata_potato": {
+  "full_frame": [
+   1
+  ],
+  "botanical_plate": [
+   4
+  ],
+  "cut_section": {
+   "drop": [
+    3,
+    5
+   ],
+   "move": {
+    "1": "full_frame",
+    "2": "full_frame"
+   }
+  }
+ },
+ "peperoncino_chili_pepper": {
+  "full_frame": {
+   "drop": [
+    2,
+    3,
+    5
+   ],
+   "move": {
+    "1": "isolated_background"
+   }
+  },
+  "isolated_background": [
+   4
+  ],
+  "plant_in_field": [
+   4
+  ]
+ },
+ "peperone_bell_pepper": {
+  "full_frame": {
+   "drop": [
+    5
+   ],
+   "move": {
+    "4": "isolated_background"
+   }
+  },
+  "isolated_background": [
+   4,
+   7
+  ],
+  "cut_section": [
+   4
+  ]
+ },
+ "pera_pear": {
+  "full_frame": [
+   1,
+   2,
+   3
+  ],
+  "plant_in_field": [
+   1
+  ],
+  "botanical_plate": [
+   2,
+   3,
+   4,
+   5
+  ],
+  "cut_section": {
+   "drop": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "move": {
+    "1": "full_frame"
+   }
+  }
+ },
+ "pesca_noce_nectarine": {
+  "full_frame": [
+   1,
+   2,
+   5
+  ],
+  "plant_in_field": {
+   "drop": [
+    3,
+    4,
+    5
+   ],
+   "move": {
+    "2": "full_frame"
+   }
+  }
+ },
+ "pesca_peach": {
+  "full_frame": [
+   5
+  ],
+  "isolated_background": [
+   2,
+   4,
+   5
+  ],
+  "plant_in_field": [
+   2,
+   5
+  ],
+  "cut_section": [
+   1,
+   2,
+   3
+  ]
+ },
+ "pisello_pea": {
+  "isolated_background": [
+   5
+  ],
+  "plant_in_field": [
+   2
+  ],
+  "botanical_plate": [
+   1,
+   2,
+   3,
+   5
+  ],
+  "cut_section": {
+   "drop": [
+    1
+   ],
+   "move": {
+    "4": "plant_in_field",
+    "5": "plant_in_field"
+   }
+  }
+ },
+ "pomodoro_tomato": {
+  "full_frame": [
+   1,
+   2,
+   4
+  ],
+  "botanical_plate": [
+   2
+  ],
+  "cut_section": [
+   1,
+   2
+  ]
+ },
+ "pompelmo_grapefruit": {
+  "full_frame": [
+   1,
+   3,
+   4
+  ],
+  "isolated_background": [
+   1,
+   3
+  ],
+  "cut_section": [
+   2,
+   4
+  ]
+ },
+ "porro_leek": {
+  "full_frame": [
+   3,
+   4
+  ],
+  "isolated_background": [
+   1
+  ],
+  "plant_in_field": [
+   3
+  ],
+  "cut_section": [
+   3,
+   4
+  ]
+ },
+ "prezzemolo_parsley": {
+  "full_frame": [
+   3,
+   5
+  ],
+  "isolated_background": [
+   2
+  ],
+  "plant_in_field": [
+   4
+  ]
+ },
+ "radicchio_radicchio": {
+  "full_frame": [
+   1
+  ]
+ },
+ "rapa_turnip": {
+  "isolated_background": [
+   2,
+   3
+  ],
+  "cut_section": [
+   1
+  ]
+ },
+ "ravanello_radish": {
+  "full_frame": [
+   3,
+   4,
+   5
+  ],
+  "isolated_background": [
+   1
+  ],
+  "plant_in_field": [
+   1,
+   2,
+   3,
+   5
+  ],
+  "cut_section": [
+   4,
+   5
+  ]
+ },
+ "ribes_redcurrant": {
+  "full_frame": {
+   "drop": [],
+   "move": {
+    "1": "plant_in_field"
+   }
+  }
+ },
+ "riso_rice": {
+  "full_frame": {
+   "drop": [
+    4
+   ],
+   "move": {
+    "2": "plant_in_field",
+    "3": "plant_in_field"
+   }
+  },
+  "isolated_background": [
+   1
+  ],
+  "botanical_plate": [
+   2,
+   3,
+   5
+  ],
+  "cut_section": {
+   "drop": [
+    1,
+    3
+   ],
+   "move": {
+    "2": "full_frame"
+   }
+  }
+ },
+ "rosmarino_rosemary": {
+  "full_frame": {
+   "drop": [
+    3,
+    4
+   ],
+   "move": {
+    "2": "plant_in_field"
+   }
+  },
+  "isolated_background": [
+   1,
+   2
+  ],
+  "plant_in_field": {
+   "drop": [
+    4
+   ],
+   "move": {
+    "2": "isolated_background"
+   }
+  }
+ },
+ "rucola_arugula": {
+  "full_frame": [
+   2
+  ],
+  "plant_in_field": [
+   1
+  ],
+  "cut_section": [
+   1
+  ]
+ },
+ "salvia_sage": {
+  "full_frame": [
+   1,
+   2,
+   3
+  ],
+  "plant_in_field": [
+   3,
+   4,
+   5
+  ],
+  "botanical_plate": [
+   1
+  ]
+ },
+ "sedano_celery": {
+  "full_frame": [
+   3,
+   4,
+   5
+  ],
+  "isolated_background": [
+   2
+  ],
+  "plant_in_field": [
+   2
+  ],
+  "cut_section": [
+   1,
+   2
+  ]
+ },
+ "spinacio_spinach": {
+  "full_frame": {
+   "drop": [],
+   "move": {
+    "1": "isolated_background",
+    "3": "plant_in_field",
+    "4": "plant_in_field"
+   }
+  },
+  "cut_section": [
+   1
+  ]
+ },
+ "susina_plum": {
+  "full_frame": [
+   2
+  ],
+  "isolated_background": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "botanical_plate": [
+   2,
+   4
+  ],
+  "cut_section": [
+   2,
+   4,
+   5
+  ]
+ },
+ "timo_thyme": {
+  "full_frame": {
+   "drop": [
+    2,
+    3,
+    4
+   ],
+   "move": {
+    "1": "plant_in_field"
+   }
+  },
+  "isolated_background": [
+   1
+  ],
+  "plant_in_field": [
+   4
+  ],
+  "botanical_plate": [
+   1
+  ]
+ },
+ "topinambur_jerusalem_artichoke": {
+  "full_frame": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "plant_in_field": [
+   3,
+   4,
+   5
+  ],
+  "botanical_plate": [
+   3
+  ]
+ },
+ "uva_table_grape": {
+  "full_frame": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "plant_in_field": [
+   2,
+   3,
+   4,
+   5
+  ]
+ },
+ "valerianella_corn_salad": {
+  "full_frame": [
+   1
+  ]
+ },
+ "zucca_pumpkin": {
+  "isolated_background": [
+   1
+  ],
+  "cut_section": [
+   5
+  ]
+ },
+ "zucchina_zucchini": {
+  "full_frame": {
+   "drop": [
+    4,
+    5
+   ],
+   "move": {
+    "1": "plant_in_field"
+   }
+  },
+  "isolated_background": {
+   "drop": [],
+   "move": {
+    "2": "cut_section"
+   }
+  },
+  "plant_in_field": [
+   2,
+   5
+  ],
+  "botanical_plate": [
+   1
+  ],
+  "cut_section": [
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ "papaya_papaya": {
+  "full_frame": {
+   "drop": [
+    1
+   ],
+   "move": {
+    "4": "plant_in_field"
+   }
+  }
+ },
+ "fungo_ovolo_caesars_mushroom": {
+  "full_frame": {
+   "drop": [],
+   "move": {
+    "1": "plant_in_field",
+    "2": "plant_in_field"
+   }
+  },
+  "botanical_plate": {
+   "drop": [
+    4
+   ],
+   "move": {
+    "1": "plant_in_field"
+   }
+  }
+ },
+ "tartufo_nero_black_truffle": {
+  "isolated_background": [
+   1
+  ],
+  "botanical_plate": {
+   "drop": [],
+   "move": {
+    "1": "cut_section"
+   }
+  }
+ },
+ "cipollotto_spring_onion": {
+  "full_frame": [
+   4
+  ],
+  "isolated_background": [
+   2,
+   3,
+   4,
+   5
+  ],
+  "plant_in_field": {
+   "drop": [
+    2,
+    3,
+    4
+   ],
+   "move": {
+    "5": "full_frame"
+   }
+  }
+ },
+ "agretti_saltwort": {
+  "full_frame": {
+   "drop": [],
+   "move": {
+    "2": "plant_in_field"
+   }
+  }
+ },
+ "amarena_sour_cherry": {
+  "full_frame": {
+   "drop": [
+    2,
+    3,
+    4
+   ],
+   "move": {
+    "1": "plant_in_field",
+    "5": "plant_in_field"
+   }
+  },
+  "plant_in_field": [
+   1,
+   5
+  ],
+  "botanical_plate": [
+   3
+  ]
+ },
+ "noce_walnut": {
+  "full_frame": {
+   "drop": [
+    1,
+    2,
+    5
+   ],
+   "move": {
+    "4": "cut_section"
+   }
+  },
+  "isolated_background": [
+   2,
+   6
+  ],
+  "plant_in_field": [
+   5
+  ],
+  "botanical_plate": [
+   2
+  ],
+  "cut_section": [
+   1,
+   2,
+   4
+  ]
+ },
+ "nocciola_hazelnut": {
+  "full_frame": [
+   3,
+   5
+  ],
+  "isolated_background": [
+   1,
+   2
+  ],
+  "plant_in_field": [
+   2,
+   4
+  ],
+  "botanical_plate": [
+   3
+  ],
+  "cut_section": [
+   1,
+   2,
+   4,
+   5
+  ]
+ },
+ "mandorla_almond": {
+  "cut_section": [
+   1,
+   3,
+   5
+  ]
+ },
+ "pistacchio_pistachio": {
+  "full_frame": {
+   "drop": [
+    4
+   ],
+   "move": {
+    "2": "plant_in_field",
+    "5": "plant_in_field"
+   }
+  },
+  "isolated_background": [
+   2
+  ],
+  "plant_in_field": [
+   3
+  ],
+  "cut_section": [
+   1
+  ]
+ },
+ "erba_cipollina_chives": {
+  "full_frame": {
+   "drop": [
+    3,
+    4
+   ],
+   "move": {
+    "5": "plant_in_field"
+   }
+  },
+  "plant_in_field": [
+   1,
+   3,
+   4,
+   5
+  ],
+  "botanical_plate": [
+   3,
+   4
+  ],
+  "cut_section": [
+   3
+  ]
+ },
+ "crescione_watercress": {
+  "full_frame": {
+   "drop": [
+    1
+   ],
+   "move": {
+    "2": "plant_in_field"
+   }
+  },
+  "isolated_background": [
+   1,
+   2,
+   3
+  ]
+ },
+ "ribes_nero_blackcurrant": {
+  "full_frame": {
+   "drop": [],
+   "move": {
+    "4": "plant_in_field"
+   }
+  }
+ },
+ "uva_spina_gooseberry": {
+  "full_frame": [
+   1,
+   3,
+   4,
+   5
+  ],
+  "isolated_background": [
+   1
+  ],
+  "plant_in_field": [
+   5
+  ]
+ },
+ "mirtillo_rosso_lingonberry": {
+  "full_frame": [
+   1,
+   3,
+   4
+  ]
+ },
+ "sambuco_elderberry": {
+  "full_frame": [
+   5
+  ],
+  "isolated_background": [
+   1,
+   2
+  ],
+  "plant_in_field": [
+   5
+  ],
+  "botanical_plate": [
+   1
+  ]
+ },
+ "gelso_mulberry": {
+  "full_frame": {
+   "drop": [],
+   "move": {
+    "2": "plant_in_field",
+    "3": "plant_in_field",
+    "5": "plant_in_field"
+   }
+  },
+  "plant_in_field": [
+   3
+  ]
+ },
+ "rabarbaro_rhubarb": {
+  "full_frame": [
+   2,
+   3
+  ]
+ },
+ "scorzonera_black_salsify": {
+  "plant_in_field": [
+   1
+  ]
+ },
+ "patata_dolce_sweet_potato": {
+  "full_frame": [
+   4
+  ],
+  "plant_in_field": [
+   1
+  ],
+  "botanical_plate": [
+   2,
+   3
+  ]
+ },
+ "navone_swede": {
+  "full_frame": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "isolated_background": [
+   1
+  ],
+  "plant_in_field": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "botanical_plate": [
+   1,
+   3,
+   4
+  ]
+ },
+ "daikon_daikon": {
+  "full_frame": [
+   5
+  ],
+  "isolated_background": [
+   1,
+   2
+  ],
+  "plant_in_field": [
+   1,
+   2,
+   3
+  ],
+  "botanical_plate": [
+   1
+  ]
+ },
+ "taccola_snow_pea": {
+  "full_frame": [
+   2,
+   3,
+   4,
+   5
+  ],
+  "isolated_background": [
+   1,
+   2,
+   3,
+   4,
+   6
+  ],
+  "botanical_plate": [
+   1,
+   2,
+   3,
+   5
+  ]
+ },
+ "broccolo_romanesco_romanesco": {
+  "full_frame": [
+   3
+  ],
+  "isolated_background": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "plant_in_field": {
+   "drop": [
+    2,
+    3,
+    5
+   ],
+   "move": {
+    "4": "full_frame"
+   }
+  },
+  "botanical_plate": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ]
+ },
+ "puntarelle_puntarelle": {
+  "full_frame": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "isolated_background": [
+   1
+  ],
+  "plant_in_field": [
+   1
+  ],
+  "botanical_plate": [
+   2,
+   3
+  ],
+  "cut_section": [
+   1,
+   2
+  ]
+ },
+ "asparago_selvatico_wild_asparagus": {
+  "full_frame": {
+   "drop": [],
+   "move": {
+    "1": "plant_in_field"
+   }
+  },
+  "botanical_plate": {
+   "drop": [],
+   "move": {
+    "1": "plant_in_field"
+   }
+  }
+ },
+ "salicornia_samphire": {
+  "full_frame": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "plant_in_field": [
+   2
+  ],
+  "botanical_plate": [
+   4
+  ]
+ },
+ "gombo_okra": {
+  "full_frame": {
+   "drop": [
+    4
+   ],
+   "move": {
+    "1": "cut_section"
+   }
+  },
+  "isolated_background": [
+   2
+  ],
+  "plant_in_field": [
+   4
+  ],
+  "cut_section": [
+   2
+  ]
+ },
+ "zucchina_spinosa_chayote": {
+  "full_frame": {
+   "drop": [
+    4
+   ],
+   "move": {
+    "3": "plant_in_field",
+    "5": "plant_in_field"
+   }
+  },
+  "plant_in_field": [
+   3
+  ]
+ },
+ "alchechengi_cape_gooseberry": {
+  "full_frame": [
+   2
+  ],
+  "isolated_background": [
+   2
+  ]
+ },
+ "cocco_coconut": {
+  "full_frame": {
+   "drop": [
+    3
+   ],
+   "move": {
+    "2": "isolated_background"
+   }
+  },
+  "isolated_background": [
+   1,
+   6
+  ],
+  "botanical_plate": [
+   5
+  ],
+  "cut_section": [
+   5
+  ]
+ },
+ "carruba_carob": {
+  "plant_in_field": {
+   "drop": [],
+   "move": {
+    "1": "full_frame"
+   }
+  },
+  "botanical_plate": [
+   1
+  ]
+ },
+ "giuggiola_jujube": {
+  "full_frame": [
+   1,
+   5
+  ],
+  "isolated_background": [
+   1
+  ]
+ },
+ "nespola_comune_medlar": {
+  "full_frame": {
+   "drop": [
+    1,
+    4,
+    5
+   ],
+   "move": {
+    "2": "plant_in_field",
+    "3": "plant_in_field"
+   }
+  },
+  "botanical_plate": [
+   2
+  ]
+ },
+ "mirabella_mirabelle_plum": {
+  "full_frame": [
+   1
+  ],
+  "isolated_background": [
+   1,
+   2
+  ],
+  "botanical_plate": [
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ "finferlo_chanterelle": {
+  "full_frame": [
+   3,
+   4
+  ]
+ },
+ "spugnola_morel": {
+  "full_frame": {
+   "drop": [
+    1
+   ],
+   "move": {
+    "2": "plant_in_field",
+    "3": "plant_in_field",
+    "5": "plant_in_field"
+   }
+  },
+  "isolated_background": [
+   2
+  ]
+ },
+ "shiitake_shiitake": {
+  "full_frame": [
+   5
+  ]
+ },
+ "cardoncello_king_oyster_mushroom": {
+  "full_frame": {
+   "drop": [
+    1,
+    3
+   ],
+   "move": {
+    "2": "isolated_background",
+    "4": "plant_in_field"
+   }
+  }
+ },
+ "lampascioni_tassel_hyacinth": {
+  "full_frame": {
+   "drop": [],
+   "move": {
+    "1": "plant_in_field"
+   }
+  }
+ },
+ "cedro_citron": {
+  "botanical_plate": [
+   2,
+   4
+  ]
+ },
+ "oliva_olive": {
+  "full_frame": [
+   1,
+   2,
+   3
+  ],
+  "isolated_background": [
+   1,
+   2,
+   4
+  ],
+  "botanical_plate": [
+   5
+  ]
+ },
+ "zafferano_saffron": {
+  "full_frame": {
+   "drop": [
+    1,
+    2
+   ],
+   "move": {
+    "4": "plant_in_field",
+    "5": "plant_in_field"
+   }
+  },
+  "plant_in_field": [
+   3
+  ],
+  "botanical_plate": [
+   4
+  ]
+ }
+}

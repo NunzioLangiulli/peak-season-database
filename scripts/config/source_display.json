@@ -1,0 +1,519 @@
+{
+ "_note": "Presentazione delle fonti nell'app (riquadro come in 'Fonti e Link Utili': logo, titolo in grassetto, editore in grigio). publisher = {it, en} ente o atto, breve; title = titolo del documento senza l'editore. logo_alias = logo di un'altra fonte dello stesso ente, usato se la fonte non ha un logo suo. Revisione 2026-11-13. logo_search = testo da cercare per trovare il logo (Admin Studio, scheda Loghi).",
+ "sources": {
+  "bda_ieo": {
+   "publisher": {
+    "it": "Istituto Europeo di Oncologia",
+    "en": "European Institute of Oncology"
+   },
+   "title": {
+    "it": "BDA - Banca Dati di Composizione degli Alimenti",
+    "en": "BDA - Food Composition Database"
+   },
+   "logo_search": "Istituto Europeo di Oncologia IEO logo png"
+  },
+  "crea": {
+   "publisher": {
+    "it": "CREA Alimenti e Nutrizione",
+    "en": "CREA Food and Nutrition"
+   },
+   "title": {
+    "it": "Tabelle di Composizione degli Alimenti (2019)",
+    "en": "Food Composition Tables (2019)"
+   },
+   "logo_search": "CREA Alimenti e Nutrizione logo png"
+  },
+  "my_personaltrainer": {
+   "publisher": {
+    "it": "My-PersonalTrainer",
+    "en": "My-PersonalTrainer"
+   },
+   "title": {
+    "it": "Schede Nutrizionali degli Alimenti",
+    "en": "Food Nutrition Pages"
+   },
+   "logo_search": "My-PersonalTrainer logo png"
+  },
+  "reg_1924_2006": {
+   "publisher": {
+    "it": "Regolamento CE 1924/2006",
+    "en": "Regulation (EC) 1924/2006"
+   },
+   "title": {
+    "it": "Indicazioni Nutrizionali e sulla Salute",
+    "en": "Nutrition and Health Claims"
+   },
+   "logo_search": "EUR-Lex logo png"
+  },
+  "reg_1169_2011": {
+   "publisher": {
+    "it": "Regolamento UE 1169/2011",
+    "en": "Regulation (EU) 1169/2011"
+   },
+   "title": {
+    "it": "Allegato XIII - Valori Nutritivi di Riferimento",
+    "en": "Annex XIII - Nutrient Reference Values"
+   },
+   "logo_search": "EUR-Lex logo png",
+   "logo_alias": "reg_1924_2006"
+  },
+  "larn_sinu": {
+   "publisher": {
+    "it": "SINU",
+    "en": "SINU"
+   },
+   "title": {
+    "it": "LARN - Livelli di Assunzione di Riferimento",
+    "en": "LARN - Italian Dietary Reference Values"
+   },
+   "logo_search": "SINU Società Italiana di Nutrizione Umana logo png"
+  },
+  "altroconsumo": {
+   "publisher": {
+    "it": "Altroconsumo",
+    "en": "Altroconsumo"
+   },
+   "title": {
+    "it": "Calendario della Frutta e Verdura",
+    "en": "Fruit and Vegetable Calendar"
+   },
+   "logo_search": "Altroconsumo logo png"
+  },
+  "greenpeace": {
+   "publisher": {
+    "it": "Greenpeace Italia",
+    "en": "Greenpeace Italy"
+   },
+   "title": {
+    "it": "Guida alla Frutta e Verdura di Stagione",
+    "en": "Guide to Seasonal Fruit and Vegetables"
+   },
+   "logo_search": "Greenpeace logo png"
+  },
+  "wwf": {
+   "publisher": {
+    "it": "WWF Italia",
+    "en": "WWF Italy"
+   },
+   "title": {
+    "it": "Calendario della Frutta e Verdura di Stagione",
+    "en": "Seasonal Fruit and Vegetable Calendar"
+   },
+   "logo_search": "WWF logo png"
+  },
+  "biosuisse": {
+   "publisher": {
+    "it": "Bio Suisse",
+    "en": "Bio Suisse"
+   },
+   "title": {
+    "it": "Calendario Stagionale",
+    "en": "Seasonal Calendar"
+   },
+   "logo_search": "Bio Suisse logo png"
+  },
+  "uc_davis": {
+   "publisher": {
+    "it": "UC Davis",
+    "en": "UC Davis"
+   },
+   "title": {
+    "it": "Schede Post-Raccolta dei Prodotti",
+    "en": "Produce Fact Sheets"
+   },
+   "logo_search": "UC Davis logo png"
+  },
+  "uc_davis_storing_guide": {
+   "publisher": {
+    "it": "UC Davis",
+    "en": "UC Davis"
+   },
+   "title": {
+    "it": "Conservare Frutta e Verdura per un Gusto Migliore",
+    "en": "Storing Fresh Fruits and Vegetables for Better Taste"
+   },
+   "logo_alias": "uc_davis",
+   "logo_search": "UC Davis logo png"
+  },
+  "usda_hb66": {
+   "publisher": {
+    "it": "USDA ARS",
+    "en": "USDA ARS"
+   },
+   "title": {
+    "it": "Agricultural Handbook 66 - Conservazione Commerciale",
+    "en": "Agricultural Handbook 66 - Commercial Storage"
+   },
+   "logo_search": "USDA ARS logo png"
+  },
+  "ortodacoltivare": {
+   "publisher": {
+    "it": "Orto da Coltivare",
+    "en": "Orto da Coltivare"
+   },
+   "title": {
+    "it": "Calendari di Semina e Raccolta",
+    "en": "Sowing and Harvest Calendars"
+   },
+   "logo_search": "Orto da Coltivare logo png"
+  },
+  "ismea": {
+   "publisher": {
+    "it": "ISMEA",
+    "en": "ISMEA"
+   },
+   "title": {
+    "it": "ISMEA Mercati",
+    "en": "ISMEA Markets"
+   },
+   "logo_search": "ISMEA Mercati logo png"
+  },
+  "regional": {
+   "publisher": {
+    "it": "Servizi Agricoli Regionali",
+    "en": "Regional Agricultural Services"
+   },
+   "title": {
+    "it": "Veneto Agricoltura, ERSA FVG, ARSIAL",
+    "en": "Veneto Agricoltura, ERSA FVG, ARSIAL"
+   },
+   "logo_search": "Veneto Agricoltura logo png"
+  },
+  "eufic_map": {
+   "publisher": {
+    "it": "EUFIC",
+    "en": "EUFIC"
+   },
+   "title": {
+    "it": "Frutta e Verdura di Stagione in Europa",
+    "en": "Explore Seasonal Fruit and Vegetables in Europe"
+   },
+   "logo_search": "EUFIC logo png"
+  },
+  "eufic_national": {
+   "publisher": {
+    "it": "EUFIC",
+    "en": "EUFIC"
+   },
+   "title": {
+    "it": "Fonti Nazionali sulla Frutta e Verdura di Stagione",
+    "en": "National Sources on Seasonal Fruit and Vegetables"
+   },
+   "logo_alias": "eufic_map",
+   "logo_search": "EUFIC logo png"
+  },
+  "eufic_article": {
+   "publisher": {
+    "it": "EUFIC",
+    "en": "EUFIC"
+   },
+   "title": {
+    "it": "La Frutta e Verdura di Stagione è Migliore per l'Ambiente?",
+    "en": "Are Seasonal Fruit and Vegetables Better for the Environment?"
+   },
+   "logo_alias": "eufic_map",
+   "logo_search": "EUFIC logo png"
+  },
+  "eppo": {
+   "publisher": {
+    "it": "EPPO",
+    "en": "EPPO"
+   },
+   "title": {
+    "it": "EPPO Global Database",
+    "en": "EPPO Global Database"
+   },
+   "logo_search": "EPPO logo png"
+  },
+  "wfo": {
+   "publisher": {
+    "it": "World Flora Online",
+    "en": "World Flora Online"
+   },
+   "title": {
+    "it": "Elenco delle Piante",
+    "en": "Plant List"
+   },
+   "logo_search": "World Flora Online logo png"
+  },
+  "gbif": {
+   "publisher": {
+    "it": "GBIF",
+    "en": "GBIF"
+   },
+   "title": {
+    "it": "Tassonomia di Riferimento (Funghi)",
+    "en": "Backbone Taxonomy (Fungi)"
+   },
+   "logo_search": "GBIF logo png"
+  },
+  "eambrosia": {
+   "publisher": {
+    "it": "Commissione Europea",
+    "en": "European Commission"
+   },
+   "title": {
+    "it": "eAmbrosia - Registro delle Indicazioni Geografiche",
+    "en": "eAmbrosia - Geographical Indications Register"
+   },
+   "logo_search": "Commissione Europea logo png"
+  },
+  "wikimedia": {
+   "publisher": {
+    "it": "Wikimedia Commons",
+    "en": "Wikimedia Commons"
+   },
+   "title": {
+    "it": "Archivio di Immagini Libere",
+    "en": "Free Media Repository"
+   },
+   "logo_search": "Wikimedia Commons logo png"
+  },
+  "usda_ars_images": {
+   "publisher": {
+    "it": "USDA ARS",
+    "en": "USDA ARS"
+   },
+   "title": {
+    "it": "Archivio Immagini",
+    "en": "Image Gallery"
+   },
+   "logo_alias": "usda_hb66",
+   "logo_search": "USDA ARS logo png"
+  },
+  "inaturalist": {
+   "publisher": {
+    "it": "iNaturalist",
+    "en": "iNaturalist"
+   },
+   "title": {
+    "it": "Osservazioni Naturalistiche (Foto con Licenza Libera)",
+    "en": "Nature Observations (Openly Licensed Photos)"
+   },
+   "logo_search": "iNaturalist logo png"
+  },
+  "usda_fdc": {
+   "publisher": {
+    "it": "USDA",
+    "en": "USDA"
+   },
+   "title": {
+    "it": "FoodData Central - SR Legacy (2018)",
+    "en": "FoodData Central - SR Legacy (2018)"
+   },
+   "logo_search": "USDA logo png"
+  },
+  "usda_foodkeeper": {
+   "publisher": {
+    "it": "USDA FSIS",
+    "en": "USDA FSIS"
+   },
+   "title": {
+    "it": "FoodKeeper - Quanto Dura il Cibo",
+    "en": "FoodKeeper - Food Storage Times"
+   },
+   "logo_alias": "usda_fdc",
+   "logo_search": "USDA FSIS logo png"
+  },
+  "slow_food": {
+   "publisher": {
+    "it": "Fondazione Slow Food",
+    "en": "Slow Food Foundation"
+   },
+   "title": {
+    "it": "Presìdi e Arca del Gusto",
+    "en": "Presidia and Ark of Taste"
+   },
+   "logo_search": "Fondazione Slow Food logo png"
+  },
+  "unsplash": {
+   "publisher": {
+    "it": "Unsplash",
+    "en": "Unsplash"
+   },
+   "title": {
+    "it": "Foto Libere",
+    "en": "Free Photos"
+   },
+   "logo_search": "Unsplash logo png"
+  },
+  "pixabay": {
+   "publisher": {
+    "it": "Pixabay",
+    "en": "Pixabay"
+   },
+   "title": {
+    "it": "Foto Libere",
+    "en": "Free Photos"
+   },
+   "logo_search": "Pixabay logo png"
+  },
+  "usda_flavonoids": {
+   "publisher": {
+    "it": "USDA ARS",
+    "en": "USDA ARS"
+   },
+   "title": {
+    "it": "Contenuto di Flavonoidi degli Alimenti (R3.3)",
+    "en": "Flavonoid Content of Selected Foods (R3.3)"
+   },
+   "logo_alias": "usda_hb66",
+   "logo_search": "USDA ARS logo png"
+  },
+  "phenol_explorer": {
+   "publisher": {
+    "it": "INRAE",
+    "en": "INRAE"
+   },
+   "title": {
+    "it": "Phenol-Explorer - Polifenoli negli Alimenti",
+    "en": "Phenol-Explorer - Polyphenols in Foods"
+   },
+   "logo_search": "INRAE logo png"
+  },
+  "eu_plant_variety_portal": {
+   "publisher": {
+    "it": "Commissione Europea",
+    "en": "European Commission"
+   },
+   "title": {
+    "it": "Catalogo Comune delle Varietà",
+    "en": "Common Catalogue of Varieties"
+   },
+   "logo_alias": "eambrosia",
+   "logo_search": "Commissione Europea logo png"
+  },
+  "ieo_smartfood_portions": {
+   "publisher": {
+    "it": "IEO SmartFood",
+    "en": "IEO SmartFood"
+   },
+   "title": {
+    "it": "Porzioni e Frequenze di Consumo",
+    "en": "Portions and Frequencies"
+   },
+   "logo_search": "IEO SmartFood logo png"
+  },
+  "su_eatable_life": {
+   "publisher": {
+    "it": "SU-EATABLE LIFE",
+    "en": "SU-EATABLE LIFE"
+   },
+   "title": {
+    "it": "Impronte di Carbonio e Idrica degli Alimenti",
+    "en": "Carbon and Water Footprints of Foods"
+   },
+   "logo_search": "SU-EATABLE LIFE logo png"
+  },
+  "masaf_pat": {
+   "publisher": {
+    "it": "MASAF",
+    "en": "MASAF"
+   },
+   "title": {
+    "it": "Prodotti Agroalimentari Tradizionali (XXVI Revisione)",
+    "en": "Traditional Agri-Food Products (26th Revision)"
+   },
+   "logo_search": "MASAF Ministero dell'agricoltura logo png"
+  },
+  "agribalyse": {
+   "publisher": {
+    "it": "ADEME",
+    "en": "ADEME"
+   },
+   "title": {
+    "it": "AGRIBALYSE 3.1 - Impatti Ambientali degli Alimenti",
+    "en": "AGRIBALYSE 3.1 - Environmental Impacts of Food"
+   },
+   "logo_search": "Agribalyse logo png"
+  },
+  "austria_gesundheitsportal": {
+   "publisher": {
+    "it": "Gesundheitsportal (Austria)",
+    "en": "Gesundheitsportal (Austria)"
+   },
+   "title": {
+    "it": "Calendario Stagionale",
+    "en": "Seasonal Calendar"
+   },
+   "logo_search": "Gesundheitsportal Österreich logo png"
+  },
+  "iss_istisan_09_47": {
+   "publisher": {
+    "it": "Istituto Superiore di Sanità",
+    "en": "Italian National Institute of Health"
+   },
+   "title": {
+    "it": "Rapporti ISTISAN 09/47 - Carenza di G6PD e Favismo",
+    "en": "ISTISAN Report 09/47 - G6PD Deficiency and Favism"
+   },
+   "logo_search": "Istituto Superiore di Sanità logo png"
+  },
+  "legge_752_1985": {
+   "publisher": {
+    "it": "Legge 752/1985",
+    "en": "Italian Law 752/1985"
+   },
+   "title": {
+    "it": "Normativa Quadro sui Tartufi",
+    "en": "Framework Law on Truffles"
+   },
+   "logo_search": "Gazzetta Ufficiale della Repubblica Italiana logo png"
+  },
+  "provincia_cuneo_funghi": {
+   "publisher": {
+    "it": "Provincia di Cuneo",
+    "en": "Province of Cuneo"
+   },
+   "title": {
+    "it": "Schede dei Funghi Commestibili",
+    "en": "Edible Mushroom Sheets"
+   },
+   "logo_search": "Provincia di Cuneo logo png"
+  },
+  "bur_emilia_romagna_amarene": {
+   "publisher": {
+    "it": "Regione Emilia-Romagna",
+    "en": "Emilia-Romagna Region"
+   },
+   "title": {
+    "it": "Disciplinare IGP Amarene Brusche di Modena",
+    "en": "Amarene Brusche di Modena PGI Specification"
+   },
+   "logo_search": "Regione Emilia-Romagna logo png"
+  },
+  "biblioteca_bertoliana": {
+   "publisher": {
+    "it": "Biblioteca Bertoliana",
+    "en": "Bertoliana Library"
+   },
+   "title": {
+    "it": "Scheda Botanica del Lampascione",
+    "en": "Botanical Sheet of the Tassel Hyacinth"
+   },
+   "logo_search": "Biblioteca Bertoliana Vicenza logo png"
+  },
+  "naturasi": {
+   "publisher": {
+    "it": "NaturaSì",
+    "en": "NaturaSì"
+   },
+   "title": {
+    "it": "Frutta e Verdura di Stagione",
+    "en": "Seasonal Fruit and Vegetables"
+   },
+   "logo_search": "NaturaSì logo png"
+  },
+  "eea_biogeo": {
+   "publisher": {
+    "it": "Agenzia Europea dell'Ambiente",
+    "en": "European Environment Agency"
+   },
+   "title": {
+    "it": "Regioni Biogeografiche d'Europa (2016)",
+    "en": "Biogeographical Regions of Europe (2016)"
+   },
+   "logo_search": "Agenzia Europea dell'Ambiente logo png"
+  }
+ }
+}

@@ -1,0 +1,446 @@
+{
+  "_doc": "Stagionalità italiana per alimenti assenti dai calendari di stagione (aggiunti il 2026-11-05), da fonti specifiche lette a mano. months: mesi (1-12) per stato: S = di stagione, p = inizio (primizie), f = fine stagione; gli altri mesi sono fuori stagione. Le fonti indicano il periodo di raccolta per tutta Italia: lo stesso calendario è applicato alle tre macro-aree. quote = frase della fonte. derive = stagionalità copiata da un altro alimento della stessa specie (derivazione dichiarata). Applicato da apply_curated_seasonality.py.",
+  "items": {
+    "erba_cipollina_chives": {
+      "S": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "source": "ortodacoltivare",
+      "url": "https://www.ortodacoltivare.it/erbe/erba-cipollina/",
+      "quote": "La raccolta delle foglie può essere effettuata per tutto l'anno, eccetto il periodo di riposo invernale.",
+      "rule": [
+        "riposo invernale reso come dicembre-febbraio",
+        "winter rest rendered as December-February"
+      ]
+    },
+    "zafferano_saffron": {
+      "S": [
+        10,
+        11
+      ],
+      "source": "ortodacoltivare",
+      "url": "https://www.ortodacoltivare.it/erbe/zafferano/",
+      "quote": "In autunno, tra ottobre e novembre, ha luogo la raccolta dei fiori dello zafferano."
+    },
+    "agretti_saltwort": {
+      "S": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source": "ortodacoltivare",
+      "url": "https://www.ortodacoltivare.it/ortaggi/agretti/",
+      "quote": "La semina può iniziare a marzo o aprile [...] e si può portarla avanti fino a settembre. [...] la raccolta deve avvenire a breve dopo aver seminato, in genere basta un mese.",
+      "rule": [
+        "raccolta = semina + circa un mese",
+        "harvest = sowing + about one month"
+      ]
+    },
+    "crescione_watercress": {
+      "S": [
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11
+      ],
+      "source": "ortodacoltivare",
+      "url": "https://www.ortodacoltivare.it/erbe/crescione/",
+      "quote": "Le semine si possono fare dalla fine dell'inverno fino a fine maggio e riprendere a fine agosto [...] In meno di un mese dalla semina, è pronto per il raccolto.",
+      "rule": [
+        "raccolta = semina + meno di un mese",
+        "harvest = sowing + under one month"
+      ]
+    },
+    "rabarbaro_rhubarb": {
+      "S": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "source": "ortodacoltivare",
+      "url": "https://www.ortodacoltivare.it/ortaggi/rabarbaro/",
+      "quote": "Il rabarbaro si raccoglie a partire dal mese di aprile fino all'autunno, sospendendo nel caldo estivo per non far soffrire la pianta.",
+      "rule": [
+        "caldo estivo reso come luglio-agosto",
+        "summer heat rendered as July-August"
+      ]
+    },
+    "rafano_horseradish": {
+      "S": [
+        10,
+        11,
+        12,
+        1,
+        2
+      ],
+      "source": "ortodacoltivare",
+      "url": "https://www.ortodacoltivare.it/ortaggi/rafano-cren/",
+      "quote": "Il periodo di raccolta è quello autunnale, e continua poi per tutto l'inverno."
+    },
+    "scorzonera_black_salsify": {
+      "S": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "source": "ortodacoltivare",
+      "url": "https://www.ortodacoltivare.it/ortaggi/scorzonera-scorzobianca/",
+      "quote": "Per questo è bene seminare a partire da inizio marzo [...] fino all'inizio di maggio. [...] Il ciclo colturale della scorzonera è intorno ai 4-5 mesi dalla semina alla raccolta.",
+      "rule": [
+        "raccolta = semina + 4-5 mesi",
+        "harvest = sowing + 4-5 months"
+      ]
+    },
+    "patata_dolce_sweet_potato": {
+      "S": [
+        9,
+        10
+      ],
+      "source": "ortodacoltivare",
+      "url": "https://www.ortodacoltivare.it/ortaggi/batata/",
+      "quote": "Osservando la pianta che ingiallisce abbiamo un buon segnale per riconoscere quando arriva il momento giusto: in genere è tra settembre e ottobre."
+    },
+    "puntarelle_puntarelle": {
+      "S": [
+        2,
+        3,
+        4
+      ],
+      "source": "ortodacoltivare",
+      "url": "https://www.ortodacoltivare.it/ortaggi/puntarelle/",
+      "quote": "Il periodo di raccolta dipende ovviamente dal periodo di semina, tipicamente la stagione va da febbraio ad aprile."
+    },
+    "asparago_selvatico_wild_asparagus": {
+      "p": [
+        3
+      ],
+      "S": [
+        4,
+        5,
+        6
+      ],
+      "source": "ortodacoltivare",
+      "url": "https://www.ortodacoltivare.it/erbe/asparago-selvatico/",
+      "quote": "I turioni di asparago selvatico spuntano in primavera, possiamo cominciare a trovarli a marzo, in zone a clima mite, ad aprile nella maggior parte delle zone Italiane. La raccolta dura fino a giugno compreso."
+    },
+    "salicornia_samphire": {
+      "p": [
+        5
+      ],
+      "S": [
+        6,
+        7
+      ],
+      "source": "ortodacoltivare",
+      "url": "https://www.ortodacoltivare.it/erbe/salicornia/",
+      "quote": "La stagione ideale per il raccolto comincia alla fine di maggio e prosegue fino a tutto luglio."
+    },
+    "gombo_okra": {
+      "S": [
+        7,
+        8,
+        9
+      ],
+      "source": "ortodacoltivare",
+      "url": "https://www.ortodacoltivare.it/ortaggi/okra-gombo/",
+      "quote": "[...] seminare in campo direttamente a partire da aprile. [...] per il trapianto tra aprile e maggio. [...] La raccolta in genere si effettua nell'arco di 2-3 mesi.",
+      "rule": [
+        "raccolta = semina/trapianto + 2-3 mesi",
+        "harvest = sowing/transplant + 2-3 months"
+      ]
+    },
+    "zucchina_spinosa_chayote": {
+      "S": [
+        9,
+        10
+      ],
+      "source": "ortodacoltivare",
+      "url": "https://www.ortodacoltivare.it/ortaggi/chayote/",
+      "quote": "I frutti di chayote cominciano a maturare verso la fine dell'estate e si raccolgono indicativamente tra settembre e ottobre."
+    },
+    "nocciola_hazelnut": {
+      "p": [
+        8
+      ],
+      "S": [
+        9
+      ],
+      "f": [
+        10
+      ],
+      "source": "ortodacoltivare",
+      "url": "https://www.ortodacoltivare.it/frutti/nocciolo/",
+      "quote": "Verso metà agosto le nocciole sono mature e iniziano a cadere dalle piante.",
+      "rule": [
+        "frutto fresco; secco si conserva tutto l'anno",
+        "fresh nuts; dried ones keep all year"
+      ]
+    },
+    "mandorla_almond": {
+      "S": [
+        8,
+        9
+      ],
+      "source": "ortodacoltivare",
+      "url": "https://www.ortodacoltivare.it/frutti/mandorlo/",
+      "quote": "Il periodo di maturazione delle mandorle è compreso tra agosto e settembre a seconda delle varietà."
+    },
+    "pistacchio_pistachio": {
+      "p": [
+        8
+      ],
+      "S": [
+        9
+      ],
+      "f": [
+        10
+      ],
+      "source": "ortodacoltivare",
+      "url": "https://www.ortodacoltivare.it/frutti/pistacchio/",
+      "quote": "La raccolta dei pistacchi avviene tra la fine di agosto e settembre per le varietà precoci, mentre per quelle tardive anche più tardi, ottobre o addirittura novembre."
+    },
+    "noce_walnut": {
+      "S": [
+        9,
+        10
+      ],
+      "source": "ortodacoltivare",
+      "url": "https://www.ortodacoltivare.it/frutti/noce/",
+      "quote": "La maturazione delle noci in Italia avviene tra settembre ed ottobre."
+    },
+    "ribes_nero_blackcurrant": {
+      "p": [
+        6
+      ],
+      "S": [
+        7
+      ],
+      "source": "ortodacoltivare",
+      "url": "https://www.ortodacoltivare.it/frutti/ribes-nero/",
+      "quote": "Il ribes nero matura da fine giugno alla prima metà di luglio a seconda di clima e varietà."
+    },
+    "gelso_mulberry": {
+      "S": [
+        6
+      ],
+      "source": "ortodacoltivare",
+      "url": "https://www.ortodacoltivare.it/frutti/gelso/",
+      "quote": "Le buonissime more del gelso maturano intorno all'inizio dell'estate, in genere nel mese di giugno."
+    },
+    "giuggiola_jujube": {
+      "S": [
+        9
+      ],
+      "f": [
+        10
+      ],
+      "source": "slow_food",
+      "url": "https://www.fondazioneslowfood.com/it/arca-del-gusto-slow-food/giuggiola-del-cavallino/",
+      "quote": "Verso la fine di settembre inizia la produzione e si conclude a metà di ottobre (Giuggiola del Cavallino); Orto da Coltivare: maturano generalmente durante il mese di settembre."
+    },
+    "nespola_comune_medlar": {
+      "p": [
+        10
+      ],
+      "S": [
+        11,
+        12
+      ],
+      "source": "slow_food",
+      "url": "https://www.fondazioneslowfood.com/it/arca-del-gusto-slow-food/nespolo-comune-del-sud/",
+      "quote": "I frutti sono raccolti solitamente fra la fine di ottobre e l'inizio di novembre. Le nespole possono essere acquistate [...] durante la stagione che va dal termine dell'autunno all'inizio dell'inverno.",
+      "rule": [
+        "di stagione = periodo di vendita dopo l'ammezzimento",
+        "in season = sale period after bletting"
+      ]
+    },
+    "oliva_olive": {
+      "S": [
+        10,
+        11
+      ],
+      "source": "ortodacoltivare",
+      "url": "https://www.ortodacoltivare.it/frutti/olivo/",
+      "quote": "La raccolta delle olive generalmente avviene in autunno, quando si verifica il fenomeno dell'invaiatura.",
+      "rule": [
+        "autunno reso come ottobre-novembre",
+        "autumn rendered as October-November"
+      ]
+    },
+    "chinotto_chinotto": {
+      "p": [
+        9
+      ],
+      "S": [
+        10,
+        11
+      ],
+      "source": "slow_food",
+      "url": "https://www.fondazioneslowfood.com/it/presidi-slow-food/chinotto-di-savona/",
+      "quote": "I chinotti si raccolgono da metà settembre fino alla fine di novembre (Presidio Slow Food Chinotto di Savona)."
+    },
+    "cicerchia_grass_pea": {
+      "S": [
+        7
+      ],
+      "source": "slow_food",
+      "url": "https://www.fondazioneslowfood.com/it/presidi-slow-food/cicerchia-di-serra-de-conti/",
+      "quote": "La raccolta avviene a fine luglio ma si trova essiccata tutto l'anno (Presidio Slow Food Cicerchia di Serra de' Conti).",
+      "rule": [
+        "legume secco: si conserva tutto l'anno",
+        "dried legume: keeps all year"
+      ]
+    },
+    "cedro_citron": {
+      "S": [
+        10,
+        11,
+        12
+      ],
+      "source": "slow_food",
+      "url": "https://www.fondazioneslowfood.com/it/arca-del-gusto-slow-food/cedro-liscio-di-diamante/",
+      "quote": "Fiorisce tutto l'anno e la raccolta avviene da ottobre a dicembre (Cedro liscio di Diamante, Arca del Gusto)."
+    },
+    "carruba_carob": {
+      "p": [
+        8
+      ],
+      "S": [
+        9
+      ],
+      "source": "slow_food",
+      "url": "https://www.fondazioneslowfood.com/it/arca-del-gusto-slow-food/carrubo-di-ragusa/",
+      "quote": "La raccolta avviene tra fine agosto e primi di settembre (Carrubo di Ragusa, Arca del Gusto)."
+    },
+    "navone_swede": {
+      "S": [
+        10,
+        11
+      ],
+      "f": [
+        12
+      ],
+      "source": "slow_food",
+      "url": "https://www.fondazioneslowfood.com/it/arca-del-gusto-slow-food/cavolo-navone-di-calizzano/",
+      "quote": "Il cavolo navone viene raccolto in autunno e poi [...] vengono sotterrate (Cavolo navone di Calizzano, Arca del Gusto).",
+      "rule": [
+        "autunno reso come ottobre-novembre; dicembre fine stagione (prodotto conservato)",
+        "autumn rendered as October-November; December end of season (stored produce)"
+      ]
+    },
+    "finferlo_chanterelle": {
+      "p": [
+        6
+      ],
+      "S": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "f": [
+        11
+      ],
+      "source": "provincia_cuneo_funghi",
+      "url": "https://natura.provincia.cuneo.it/funghi/commestibili/cantharellus-cibarius/",
+      "quote": "Cresce dall'estate all'autunno, sia sotto latifoglia che sotto conifera; abbondante nei periodi umidi dopo piogge prolungate.",
+      "rule": [
+        "estate-autunno reso come giugno-novembre",
+        "summer-autumn rendered as June-November"
+      ]
+    },
+    "spugnola_morel": {
+      "p": [
+        3
+      ],
+      "S": [
+        4,
+        5
+      ],
+      "f": [
+        6
+      ],
+      "source": "provincia_cuneo_funghi",
+      "url": "https://natura.provincia.cuneo.it/funghi/commestibili/morchella-esculenta-vulgaris/",
+      "quote": "Fungo tipicamente primaverile.",
+      "rule": [
+        "primavera resa come marzo-giugno",
+        "spring rendered as March-June"
+      ]
+    },
+    "amarena_sour_cherry": {
+      "p": [
+        5
+      ],
+      "S": [
+        6,
+        7
+      ],
+      "source": "bur_emilia_romagna_amarene",
+      "url": "https://bur.regione.emilia-romagna.it/area-bollettini/bollettini-pubblicati/2012/marzo-periodico-parte-seconda-1a-quindicina/richiesta-di-modifica-del-disciplinare-della-denominazione-amarene-brusche-di-modena/allegato.pdf",
+      "quote": "La raccolta viene effettuata nel periodo compreso dal 20 maggio al 31 luglio (disciplinare IGP Amarene Brusche di Modena)."
+    },
+    "lampascioni_tassel_hyacinth": {
+      "S": [
+        1,
+        2,
+        3
+      ],
+      "source": "biblioteca_bertoliana",
+      "url": "https://www.bibliotecabertoliana.it/file/4959-lampascione.pdf",
+      "quote": "I bulbi vanno estratti da gennaio a marzo.",
+      "rule": [
+        "fonte divulgativa (scheda botanica di una biblioteca civica)",
+        "popular source (botanical sheet of a public library)"
+      ]
+    },
+    "taccola_snow_pea": {
+      "derive": "pisello_pea",
+      "note": [
+        "La taccola è un pisello (Pisum sativum) di cui si mangia il baccello: i calendari italiani non la distinguono dal pisello. Stagionalità ripresa dal pisello del database.",
+        "Snow pea is a pea (Pisum sativum) eaten pod and all: Italian calendars do not list it separately from peas. Seasonality taken from the database's pea."
+      ]
+    },
+    "mirabella_mirabelle_plum": {
+      "derive": "susina_plum",
+      "note": [
+        "La mirabella è una susina (Prunus domestica subsp. syriaca): i calendari italiani non la distinguono. Stagionalità ripresa dalla susina del database.",
+        "The mirabelle is a plum (Prunus domestica subsp. syriaca): Italian calendars do not list it separately. Seasonality taken from the database's plum."
+      ]
+    },
+    "cipollotto_spring_onion": {
+      "S": [
+        3,
+        4
+      ],
+      "f": [
+        5
+      ],
+      "source": "naturasi",
+      "url": "https://www.naturasi.it/frutta-verdura-di-stagione/cipollotto",
+      "quote": "Il cipollotto è un ortaggio tipico dell'inizio della primavera.",
+      "rule": [
+        "inizio della primavera reso come marzo-aprile, maggio fine stagione",
+        "early spring rendered as March-April, May end of season"
+      ]
+    }
+  }
+}
