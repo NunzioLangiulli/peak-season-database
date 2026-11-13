@@ -1,20 +1,20 @@
-"""Stime di stagionalità per le zone senza dato (decisione dell'utente, 2026-11-06). Idempotente.
+"""Seasonality estimates for zones without data (owner decision, 2026-11-06). Idempotent.
 
-Le stime NON sostituiscono i dati: vanno in seasonality.estimates, così l'app può mostrarle marcate con "≈"
-("Stima dalla zona vicina") e l'utente può disattivarle dalle Impostazioni.
+Estimates do NOT replace data: they go to seasonality.estimates, so the app can show them marked with "≈"
+("Estimate from neighbouring zone") and the user can turn them off in Settings.
 
-Regola (una sola fonte per stima, mai una stima da un'altra stima):
-- zone climatiche europee: si copia la zona vicina più simile che ha dati veri (EUFIC o calendario nazionale
-  indicato da EUFIC), nell'ordine di NEIGHBOURS (es. pannonica <- continentale, poi alpina); in mancanza, per le
-  zone continentale, alpina e pannonica, il Nord Italia (clima continentale); atlantica e boreale non si stimano
-  dall'Italia (clima troppo diverso);
-  per la zona mediterranea, prima la stagionalità di Sud e Isole italiana (Italia = Paese mediterraneo);
-- macro-aree italiane: Nord <- zona continentale (poi alpina, pannonica); Centro <- mediterranea (poi continentale);
-  Sud e Isole <- mediterranea;
-- frutti esotici (stesso elenco di enrich_seasonality.EXOTIC_IF_NO_LOCAL + cocco): nelle zone senza dato non si
-  stima nulla, la zona è segnata "not_grown" ("Non coltivato qui");
-- senza nessuna zona vicina con dati il mese resta "non noto" (nessuna stima).
-Uso:  python scripts/estimate_zone_gaps.py   (dopo enrich_zone_gaps.py e prima di build_help.py)
+Rule (a single source per estimate, never an estimate from another estimate):
+- European climate zones: the most similar neighbouring zone with real data is copied (EUFIC or national calendar
+  cited by EUFIC), in the order of NEIGHBOURS (e.g. Pannonian <- Continental, then Alpine); failing that, for the
+  Continental, Alpine and Pannonian zones, Northern Italy (continental climate); Atlantic and Boreal are not estimated
+  from Italy (climate too different);
+  for the Mediterranean zone, first the Italian South and Islands seasonality (Italy = Mediterranean country);
+- Italian macro-areas: North <- Continental zone (then Alpine, Pannonian); Centre <- Mediterranean (then Continental);
+  South and Islands <- Mediterranean;
+- exotic fruit (same list as enrich_seasonality.EXOTIC_IF_NO_LOCAL + coconut): in zones without data nothing is
+  estimated, the zone is marked "not_grown" ("Not grown here");
+- with no neighbouring zone with data, the month stays "unknown" (no estimate).
+Usage:  python scripts/estimate_zone_gaps.py   (after enrich_zone_gaps.py and before build_help.py)
 """
 from common import DATA, load_json, save_json
 from enrich_seasonality import EXOTIC_IF_NO_LOCAL
@@ -29,7 +29,7 @@ NEIGHBOURS = {
     "mediterranean": ["italy:sud_isole", "continental"],
 }
 ITALY = {"nord": ["continental", "mountain", "pannonian"], "centro": ["mediterranean", "continental"], "sud_isole": ["mediterranean"]}
-REAL = {"eufic_map", "austria_gesundheitsportal"}          # zone con dato vero (non derivato)
+REAL = {"eufic_map", "austria_gesundheitsportal"}          # zones with real (not derived) data
 EXOTIC = set(EXOTIC_IF_NO_LOCAL) | {"cocco_coconut"}
 
 

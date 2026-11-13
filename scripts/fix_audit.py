@@ -1,11 +1,11 @@
-"""Correzioni emerse dal ricontrollo sistematico (audit_db.py), riproducibili.
+"""Reproducible fixes from the systematic re-check (audit_db.py).
 
-1. refrigerated_days uguale alla durata PROFESSIONALE (commercial_optimal_days, USDA HB66) per alimenti senza dato
-   domestico FoodKeeper: non e' una durata da frigo di casa -> null (mancante), valore spostato in legacy/nota.
-2. Soglia di danno da freddo presente per prodotti NON sensibili (valore della bozza) -> null, non pertinente.
-3. Cavolo nero: zuccheri > carboidrati disponibili per costruzione del dato FDC (carboidrati per differenza - fibra):
-   annotato, valori della fonte lasciati invariati.
-Uso:  python scripts/fix_audit.py   (dopo mark_structural_na.py)
+1. refrigerated_days equal to the COMMERCIAL storage time (commercial_optimal_days, USDA HB66) for products without
+   FoodKeeper home data: it is not a home-fridge time -> null (missing), value moved to legacy/note.
+2. Chilling-injury threshold present for NON-sensitive products (draft value) -> null, not applicable.
+3. Cavolo nero: sugars > available carbohydrates because of how the FDC data are built (carbohydrates by difference - fibre):
+   noted, source values left unchanged.
+Usage:  python scripts/fix_audit.py   (after mark_structural_na.py)
 """
 from common import DATA, finalize_completeness, load_json, save_json
 from enrich_chilling import set_na

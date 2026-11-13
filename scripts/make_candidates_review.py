@@ -1,10 +1,10 @@
-"""Pagina di revisione delle immagini candidate: assets/images/_candidates/review.html (si apre nel browser, offline).
+"""Review page for candidate images: assets/images/_candidates/review.html (opens in the browser, offline).
 
-Per ogni alimento mostra le foto attuali (con tipo e problemi segnalati) e, per ciascuno dei 5 tipi, le candidate
-trovate da find_image_candidates.py. Si sceglie con un clic: le candidate da aggiungere e le foto attuali da togliere.
-Le scelte restano salvate nel browser; il pulsante "Esporta scelte" scarica image_selection.json, da mettere in
-assets/images/_candidates/ e applicare con apply_image_selection.py.
-Uso:  python scripts/make_candidates_review.py
+For each product it shows the current photos (with type and flagged issues) and, for each of the 5 types, the candidates
+found by find_image_candidates.py. Choose with a click: candidates to add and current photos to remove.
+Choices are saved in the browser; the "Esporta scelte" (export choices) button downloads image_selection.json, to put in
+assets/images/_candidates/ and apply with apply_image_selection.py.
+Usage:  python scripts/make_candidates_review.py
 """
 import html
 import json

@@ -1,13 +1,13 @@
-"""Consiglio sintetico "dove conservarlo in casa" per ogni alimento (ripening_and_storage.home_storage).
+"""Short "where to store it at home" advice for every product (ripening_and_storage.home_storage).
 
-Priorita' delle fonti:
+Source priority:
 1. UC Davis / Kader, 'Storing Fresh Fruits and Vegetables for Better Taste' (config/ucdavis_home_storage.json):
-   frigorifero | matura sul bancone poi frigo | solo temperatura ambiente (dispensa ventilata per aglio, cipolle, patate);
-2. USDA FoodKeeper (estimated_shelf_life_days.room_temp_mode): solo frigo | fino a maturazione | giorni in dispensa;
-3. condizioni ottimali USDA HB66 / UC Davis gia' nella scheda (primary_location), per i pochi alimenti senza 1 e 2.
-Le durate restano in estimated_shelf_life_days (FoodKeeper). Se UC Davis e FoodKeeper non coincidono si segue UC Davis
-(guida pensata per il gusto a casa) e lo si annota.
-Uso:  python scripts/apply_home_storage.py   (dopo apply_foodkeeper_modes.py)
+   fridge | ripen on the counter then fridge | room temperature only (ventilated pantry for garlic, onions, potatoes);
+2. USDA FoodKeeper (estimated_shelf_life_days.room_temp_mode): fridge only | until ripe | days in the pantry;
+3. optimal USDA HB66 / UC Davis conditions already in the record (primary_location), for the few products without 1 and 2.
+Storage times stay in estimated_shelf_life_days (FoodKeeper). If UC Davis and FoodKeeper disagree, UC Davis is followed
+(a guide designed for taste at home) and this is noted.
+Usage:  python scripts/apply_home_storage.py   (after apply_foodkeeper_modes.py)
 """
 from common import DATA, ROOT, finalize_completeness, load_json, mark_enriched, save_json
 from enrich_chilling import set_na
@@ -22,7 +22,7 @@ LABEL = {"fridge": ("In frigorifero", "In the fridge"),
 UCD = {"refrigerator": "fridge", "ripen_on_counter_then_refrigerator": "counter_then_fridge", "room_temperature_only": "room_temperature"}
 FK = {"fridge_only": "fridge", "until_ripe": "counter_then_fridge"}
 PRIM = {"frigorifero": "fridge", "temperatura_ambiente": "room_temperature", "luogo_fresco_buio": "cool_dry_pantry"}
-TIPS = {  # dalla guida UC Davis (testo e note della tabella) e da FoodKeeper
+TIPS = {  # from the UC Davis guide (text and table notes) and from FoodKeeper
     "dagger": ("Si può tenere in frigo 1-3 giorni se lo usi subito dopo.", "It can be kept in the fridge for 1-3 days if used soon after."),
     "pantry": ("In un luogo della dispensa ben ventilato.", "In a well-ventilated spot in the pantry."),
     "both": ("Se lo consumi entro 7 giorni può stare anche fuori dal frigo.", "If eaten within 7 days it can stay out of the fridge."),
@@ -34,19 +34,19 @@ TIPS = {  # dalla guida UC Davis (testo e note della tabella) e da FoodKeeper
     "pera_pear": ("Matura fuori dal frigo; una volta matura dura 1-3 giorni in frigo.", "Ripen it on the counter; once ripe it keeps 1-3 days in the fridge."),
 }
 CUT = ("Una volta tagliato va sempre in frigorifero.", "Once cut, always keep it in the fridge.")
-# Revisione 2026-11-13 (richiesta dell'utente): nell'app il consiglio compare subito sotto storage_instructions, quindi
-# non deve ripeterne il contenuto. Consigli tolti perché già detti nel paragrafo: dispensa ventilata (aglio, cipolla,
-# scalogno), patata, "1-3 giorni in frigo" (cetriolo, melanzana, peperone, peperoncino), pomodoro, pera, banana, basilico.
+# Revision 2026-11-13 (owner request): in the app the tip appears right below storage_instructions, so
+# it must not repeat its content. Tips removed because already in the paragraph: ventilated pantry (garlic, onion,
+# shallot), potato, "1-3 days in the fridge" (cucumber, aubergine, pepper, chilli), tomato, pear, banana, basil.
 REDUNDANT = {"aglio_garlic", "cipolla_invernale_winter_onion", "scalogno_shallot", "patata_potato", "cetriolo_cucumber",
              "melanzana_eggplant", "peperone_bell_pepper", "peperoncino_chili_pepper", "pomodoro_tomato", "pera_pear",
              "banana_banana", "basilico_basil"}
-NO_CUT = {"anguria_watermelon",   # il paragrafo dice già come conservarla una volta tagliata
-          "basilico_basil"}       # sensibile al freddo: "in frigorifero" sarebbe un consiglio sbagliato
+NO_CUT = {"anguria_watermelon",   # the paragraph already says how to store it once cut
+          "basilico_basil"}       # chill-sensitive: "in the fridge" would be wrong advice
 
 
 def home_tip(iid, loc, tip):
-    """Consiglio breve: niente "una volta tagliato" per il frigorifero (ovvio) né senza luogo (frutta secca, legumi,
-    spezie...); niente frasi che ripetono storage_instructions. None = l'app non mostra nulla."""
+    """Short tip: no "once cut" for the fridge (obvious) nor for products without a location (nuts, legumes,
+    spices...); no sentences repeating storage_instructions. None = the app shows nothing."""
     if iid in DRY or loc is None:
         return None
     parts = [] if (tip is None or iid in REDUNDANT) else [tip]
@@ -80,9 +80,9 @@ def main():
             deriv = "USDA FoodKeeper"
             rd, rt = sl.get("refrigerated_days"), sl.get("room_temp_days")
             if it["id"] == "cipolla_estiva_summer_onion":
-                loc = "cool_dry_pantry"   # FoodKeeper 'Onions': dispensa (come le cipolle secche della guida UC Davis)
+                loc = "cool_dry_pantry"   # FoodKeeper 'Onions': pantry (like the dry onions of the UC Davis guide)
             elif loc == "room_temperature" and rd and rt and rd[1] > rt[1]:
-                loc = "fridge"   # FoodKeeper: in frigo dura di più che in dispensa
+                loc = "fridge"   # FoodKeeper: it lasts longer in the fridge than in the pantry
                 deriv += " (in frigorifero dura più che a temperatura ambiente)"
         else:
             loc = PRIM.get(r.get("primary_location"))

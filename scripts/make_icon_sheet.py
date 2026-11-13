@@ -1,9 +1,9 @@
-"""Tavola delle icone dell'app con le opzioni tra cui scegliere.
+"""Sheet of the app icons with the options to choose from.
 
-Output: schemi_interfaccia/proposte_icone/schema_icone.html e .png
-Ogni icona è un SVG 24x24 monocromatico (riempimento = currentColor), lo
-stesso formato delle icone delle fasi di stagione già nell'app.
-Uso: python scripts/make_icon_sheet.py
+Output: schemi_interfaccia/proposte_icone/schema_icone.html and .png
+Each icon is a monochrome 24x24 SVG (fill = currentColor), the
+same format as the season-phase icons already in the app.
+Usage: python scripts/make_icon_sheet.py
 """
 from pathlib import Path
 
@@ -14,7 +14,7 @@ OUT = ROOT / "schemi_interfaccia" / "proposte_icone"
 SEASON = ROOT / "app" / "assets" / "icons" / "season"
 EDGE = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
 
-G = '<rect x="5" y="20.5" width="14" height="2" rx="1"/>'  # linea di terra del set "Crescita"
+G = '<rect x="5" y="20.5" width="14" height="2" rx="1"/>'  # ground line of the "Growth" set
 
 
 def svg_file(name):
@@ -22,7 +22,7 @@ def svg_file(name):
     return s[s.index(">") + 1 : s.rindex("</svg>")]
 
 
-# Ogni voce: (titolo, nota, [(etichetta opzione, svg interno, suggerita_dall_utente)])
+# Each entry: (title, note, [(option label, inner svg, suggested_by_owner)])
 SECTIONS = [
     ("Già approvate", [
         ("Fasi di stagione (set A \"Crescita\")", "Approvate: restano così.", [

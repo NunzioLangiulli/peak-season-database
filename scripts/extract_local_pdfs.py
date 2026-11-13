@@ -1,15 +1,15 @@
-"""Passo 1.3b - Estrae i dati dai PDF vettoriali in fonti_locali/ (lettura della grafica, non del testo).
+"""Step 1.3b - Extracts the data from the vector PDFs in fonti_locali/ (reading the graphics, not the text).
 
-1) Orto da Coltivare (odc-tabella-nord/centro/sud.pdf): per ogni riga le barre colorate
-   rosso=semina in semenzaio, blu=semina diretta, verde=trapianto, arancio=raccolta, con risoluzione di mezzo mese
-   (un mese è attivo se la barra ne copre almeno il 30%); icona luna (parte scura a sinistra = fase crescente,
-   a destra = fase calante, calibrato sulla legenda del PDF); icona sole (giallo pieno = molto soleggiato,
-   giallo chiaro = soleggiato, con nuvola = anche mezz'ombra).
-   Profondità di semina e sesto d'impianto sono testo convertito in curve (non estraibile): sono trascritti a mano
-   in scripts/config/odc_params_transcribed.json; lo script verifica che il disegno di quelle celle sia identico
-   nelle tre tabelle (altrimenti segnala la riga da ricontrollare).
-2) WWF (Calendario-della-Frutta-e-Verdura-di-Stagione.pdf): colore della cella di ogni mese
-   (verde/arancio = di stagione, verde chiaro/giallo = primizie o tardive).
+1) Orto da Coltivare (odc-tabella-nord/centro/sud.pdf): for each row the coloured bars
+   red=sowing in seed trays, blue=direct sowing, green=transplanting, orange=harvest, with half-month resolution
+   (a month is active if the bar covers at least 30% of it); moon icon (dark part on the left = waxing phase,
+   on the right = waning phase, calibrated on the PDF legend); sun icon (solid yellow = very sunny,
+   light yellow = sunny, with cloud = partial shade too).
+   Sowing depth and plant spacing are text converted into curves (not extractable): they are transcribed by hand
+   in scripts/config/odc_params_transcribed.json; the script checks that the drawing of those cells is identical
+   across the three tables (otherwise it flags the row to re-check).
+2) WWF (Calendario-della-Frutta-e-Verdura-di-Stagione.pdf): colour of each month's cell
+   (green/orange = in season, light green/yellow = early or late).
 
 Output: data/raw/odc_tables.json, data/raw/wwf_calendar.json
 """
@@ -64,7 +64,7 @@ def parse_odc(path, row_names):
         d, cols, y0, pitch = page_geometry(page)
         if len(cols) < 13:
             continue
-        for k in range(27):                     # 27 righe per pagina
+        for k in range(27):                     # 27 rows per page
 
             try:
                 name = next(names)
@@ -125,7 +125,7 @@ def parse_wwf(path):
         words = page.get_text("words")
         fills = [(x["rect"], rf(x["fill"])) for x in page.get_drawings()
                  if x.get("fill") and 20 < x["rect"].width < 80 and 10 < x["rect"].height < 40]
-        # nomi delle righe (possono essere su due righe di testo, es. "Broccoletti di" / "Bruxelles")
+        # row names (may span two text lines, e.g. "Broccoletti di" / "Bruxelles")
         mx = min((w[0] for w in words if w[4] in MONTHS), default=0)
         labels = [w for w in words if w[4] not in MONTHS and w[2] <= mx + 1]
         lines = {}

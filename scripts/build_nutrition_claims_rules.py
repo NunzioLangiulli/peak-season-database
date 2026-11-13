@@ -1,19 +1,19 @@
-"""Regole dei claim nutrizionali UE per l'app (revisione 2026-11-13, richiesta dell'utente). Idempotente.
+"""EU nutrition claim rules for the app (revision 2026-11-13, owner request). Idempotent.
 
-1. Ogni vitamina e minerale (nutrition_and_sustainability.vitamins / minerals) riceve una chiave stabile "key"
-   (vitamin_c, folate, potassium...), indipendente dal nome mostrato.
-2. metadata.nutrition_claims_eu_rules descrive ogni claim presente nel database (testo IT esatto di
-   nutrition_claims_eu.it): gruppo del Reg. CE 1924/2006 (senza / a bassissimo contenuto / a basso contenuto / ad alto
-   contenuto / fonte di), nutriente (chiavi dei macronutrienti senza _g, "kcal" per l'energia, "salt" per sodio/sale, key
-   dei micronutrienti) e tono (favorable = claim positivo; warning = contenuto alto da tenere d'occhio, oggi non usato).
-L'app raggruppa i claim, colora i riquadri dei macronutrienti e mette in evidenza le barre delle vitamine con un claim.
-Uso:  python scripts/build_nutrition_claims_rules.py   (dopo gli script dei claim, prima di title_case_labels.py)
+1. Every vitamin and mineral (nutrition_and_sustainability.vitamins / minerals) gets a stable "key"
+   (vitamin_c, folate, potassium...), independent of the displayed name.
+2. metadata.nutrition_claims_eu_rules describes every claim present in the database (exact IT text of
+   nutrition_claims_eu.it): Reg. (EC) 1924/2006 group (free of / very low / low /
+   high / source of), nutrient (macronutrient keys without _g, "kcal" for energy, "salt" for sodium/salt, key
+   of the micronutrients) and tone (favorable = positive claim; warning = high content to watch, not used today).
+The app groups the claims, colours the macronutrient boxes and highlights the vitamin bars that have a claim.
+Usage:  python scripts/build_nutrition_claims_rules.py   (after the claim scripts, before title_case_labels.py)
 """
 import re
 
 from common import DATA, load_json, save_json
 
-KEYS = {  # nome IT dell'elenco (senza la parte tra parentesi) -> chiave
+KEYS = {  # IT name in the list (without the part in brackets) -> key
     "Vitamina A": "vitamin_a", "Tiamina": "thiamin", "Riboflavina": "riboflavin", "Niacina": "niacin", "Vitamina B6": "vitamin_b6",
     "Folati": "folate", "Folato": "folate", "Vitamina B12": "vitamin_b12", "Vitamina C": "vitamin_c", "Vitamina D": "vitamin_d",
     "Vitamina E": "vitamin_e", "Vitamina K": "vitamin_k", "Acido Pantotenico": "pantothenic_acid", "Biotina": "biotin",
@@ -21,7 +21,7 @@ KEYS = {  # nome IT dell'elenco (senza la parte tra parentesi) -> chiave
     "Sodio": "sodium", "Zinco": "zinc", "Rame": "copper", "Manganese": "manganese", "Selenio": "selenium", "Iodio": "iodine",
     "Cloruro": "chloride", "Fluoruro": "fluoride", "Cromo": "chromium", "Molibdeno": "molybdenum",
 }
-MACRO = {  # parola del claim -> (nutriente, etichetta IT, EN)
+MACRO = {  # claim word -> (nutrient, IT label, EN)
     "grassi": ("fats", "Grassi", "Fat"), "zuccheri": ("sugars", "Zuccheri", "Sugars"), "sodio": ("salt", "Sodio/Sale", "Sodium/Salt"),
     "sale": ("salt", "Sodio/Sale", "Sodium/Salt"), "fibre": ("fiber", "Fibre", "Fibre"), "proteine": ("proteins", "Proteine", "Protein"),
     "calorico": ("kcal", "Calorie", "Energy"), "calorie": ("kcal", "Calorie", "Energy"),
@@ -72,7 +72,7 @@ def main():
             micro.setdefault(k, (short_it, short_en))
     micro.setdefault("folate", ("Folato", "Folate"))
     names = dict(micro)
-    names["folate"] = ("Folato", "Folate")            # nei claim si usa il singolare
+    names["folate"] = ("Folato", "Folate")            # claims use the singular
     claims, unknown = {}, []
     for it in db["items"]:
         cl = it["nutrition_and_sustainability"].get("nutrition_claims_eu") or {}

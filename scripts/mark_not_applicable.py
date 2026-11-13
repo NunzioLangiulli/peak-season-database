@@ -1,11 +1,11 @@
-"""Segna i campi non pertinenti (not_applicable_fields), così il report distingue i veri vuoti.
+"""Marks non-applicable fields (not_applicable_fields), so the report can tell real gaps apart.
 
-- Prodotti secchi (cereali, legumi secchi, arachidi, origano essiccato): respirazione, etilene e durata in frigorifero
-  non pertinenti (il valore della bozza va in draft_legacy_values.json).
-- Calendario agricolo degli ortaggi presenti nelle tabelle Orto da Coltivare: un metodo di semina/trapianto che ODC
-  non indica per quella zona (campo nullo) è "non previsto", non un dato mancante.
-- Alimenti senza produzione italiana (esotici): calendario agricolo e parametri agronomici non pertinenti.
-Uso:  python scripts/mark_not_applicable.py
+- Dried products (cereals, dried legumes, peanuts, dried oregano): respiration, ethylene and fridge storage time
+  not applicable (the draft value goes to draft_legacy_values.json).
+- Agricultural calendar of the vegetables in the Orto da Coltivare tables: a sowing/transplanting method that ODC
+  does not give for that zone (null field) is "not planned", not missing data.
+- Products without Italian production (exotic): agricultural calendar and agronomic parameters not applicable.
+Usage:  python scripts/mark_not_applicable.py
 """
 from apply_texts import DRY
 from common import DATA, finalize_completeness, load_json, save_json

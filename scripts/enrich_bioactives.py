@@ -1,12 +1,12 @@
-"""Composti bioattivi misurati: carotenoidi non provitaminici da USDA FoodData Central SR Legacy (CSV ufficiale 2018-04,
+"""Measured bioactive compounds: non-provitamin carotenoids from USDA FoodData Central SR Legacy (official CSV 2018-04,
 data/raw/fdc_sr_legacy/sr_legacy.zip, https://fdc.nal.usda.gov/download-datasets).
 
-Le tabelle italiane (CREA, BDA-IEO) non riportano licopene, luteina, zeaxantina, alfa-carotene e beta-criptoxantina;
-USDA li misura per la maggior parte di frutta e verdura crude. Fonte non italiana, dichiarata nel campo source.
-I composti della bozza (antocianine, alliina, capsaicina, ecc. con quantità senza fonte) non sono verificabili sulle
-fonti del progetto: vanno in draft_legacy_values.json; se il composto coincide con un carotenoide USDA si registra
-la discrepanza.
-Uso:  python scripts/enrich_bioactives.py
+The Italian tables (CREA, BDA-IEO) do not report lycopene, lutein, zeaxanthin, alpha-carotene and beta-cryptoxanthin;
+USDA measures them for most raw fruit and vegetables. Non-Italian source, declared in the source field.
+The draft's compounds (anthocyanins, alliin, capsaicin, etc. with unsourced amounts) cannot be verified against the
+project's sources: they go to draft_legacy_values.json; if the compound matches a USDA carotenoid the
+discrepancy is recorded.
+Usage:  python scripts/enrich_bioactives.py
 """
 import csv
 import io
@@ -50,7 +50,7 @@ FDC = {
     "pesca_noce_nectarine": 169914, "fico_d_india_prickly_pear": 167750, "litchi_lychee": 169086, "lime_lime": 168155,
     "ananas_pineapple": 169124, "papaya_papaya": 169926, "maracuja_passion_fruit": 169108,
 }
-# alimenti aggiunti il 2026-11-05 (config/new_items_2026_11_05.json)
+# products added on 2026-11-05 (config/new_items_2026_11_05.json)
 FDC.update({k: (v["fdc_id"][0], v["fdc_id"][1]) for k, v in load_json(CONFIG / "new_items_2026_11_05.json").items() if v.get("fdc_id")})
 
 

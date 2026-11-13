@@ -1,6 +1,6 @@
-"""Applica il calendario dell'orto curato a mano (config/agricultural_calendar_curated.json) agli alimenti aggiunti il
-2026-11-05. Scrive solo i campi che la scheda di Orto da Coltivare riporta; gli altri restano vuoti. Idempotente.
-Uso:  python scripts/apply_curated_calendar.py
+"""Applies the hand-curated garden calendar (config/agricultural_calendar_curated.json) to the products added on
+2026-11-05. Writes only the fields reported by the Orto da Coltivare sheet; the others stay empty. Idempotent.
+Usage:  python scripts/apply_curated_calendar.py
 """
 from common import CONFIG, DATA, finalize_completeness, load_json, mark_enriched, save_json
 
@@ -60,7 +60,7 @@ def main():
         rule = c.get("rule")
         cal["cultivation_notes"] = {"it": "Calendario ricavato dalla scheda di coltivazione di Orto da Coltivare." + (f" Resa: {rule[0]}." if rule else ""),
                                     "en": "Calendar taken from the Orto da Coltivare growing guide." + (f" Rendering: {rule[1]}." if rule else "")}
-        dc = it["data_completeness"]                     # citazione testuale: solo nelle note interne (italiano)
+        dc = it["data_completeness"]                     # verbatim quote: only in the internal notes (Italian)
         q = f"Calendario dell'orto, citazione da Orto da Coltivare: \"{c['quote']}\""
         if q not in dc["notes"]:
             dc["notes"] = (dc["notes"] + " " + q).strip()

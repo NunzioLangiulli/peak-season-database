@@ -1,14 +1,14 @@
-"""Impronta di carbonio e impronta idrica da SU-EATABLE LIFE (Petersson et al. 2021, Scientific Data 8:127,
-DOI 10.1038/s41597-021-00909-8; dataset figshare 13271111, CC BY 4.0), data/raw/su_eatable_life/*.xlsx.
+"""Carbon footprint and water footprint from SU-EATABLE LIFE (Petersson et al. 2021, Scientific Data 8:127,
+DOI 10.1038/s41597-021-00909-8; figshare dataset 13271111, CC BY 4.0), data/raw/su_eatable_life/*.xlsx.
 
 nutrition_and_sustainability.environmental_footprint:
-  carbon_kg_co2eq_per_kg, carbon_g_co2eq_per_portion, carbon_reference ('item'/'typology' SEL + incertezza L/H),
+  carbon_kg_co2eq_per_kg, carbon_g_co2eq_per_portion, carbon_reference ('item'/'typology' SEL + L/H uncertainty),
   water_l_per_kg, water_l_per_portion, water_reference,
-  greenhouse_comparison: CF della stessa coltura in serra (riscaldata '(G)' o non riscaldata '(g)') e rapporto,
+  greenhouse_comparison: CF of the same crop in a greenhouse (heated '(G)' or unheated '(g)') and ratio,
   match ('exact' | 'approx'), note.
-Valori dalla vita del prodotto fino all'uscita dall'azienda agricola/distribuzione secondo i confini del dataset
-(vedi foglio INTRO): indicativi, servono a confrontare alimenti, non a calcolare un bilancio.
-Uso:  python scripts/enrich_footprint.py   (dopo enrich_allergens_portions.py, per i valori per porzione)
+Values cover the product's life up to leaving the farm/distribution, according to the dataset boundaries
+(see the INTRO sheet): indicative, meant to compare products, not to compute a balance.
+Usage:  python scripts/enrich_footprint.py   (after enrich_allergens_portions.py, for per-portion values)
 """
 from common import DATA, RAW, ROOT, finalize_completeness, load_json, mark_enriched, save_json
 from enrich_chilling import set_na
@@ -63,8 +63,8 @@ def get(ref, items, typ):
     return None if v is None else {"value": v, "sel_name": name, "level": "typology", "uncertainty": None, "sel_note": None, "typology": name}
 
 
-# Soglie di lettura definite per l'app (convenzione dichiarata, non da fonte): servono solo a tradurre i numeri in un
-# livello intuitivo. Riferimento di confronto: carne bovina senz'osso, stessa banca dati.
+# Reading thresholds defined for the app (declared convention, not from a source): they only turn numbers into an
+# intuitive level. Comparison reference: boneless beef, same database.
 CF_LEVELS = [(0.5, "low"), (1.0, "medium"), (float("inf"), "high")]
 WF_LEVELS = [(500, "low"), (1500, "medium"), (float("inf"), "high")]
 LEVEL_LABEL = {"low": ("bassa", "low"), "medium": ("media", "medium"), "high": ("alta", "high")}
@@ -107,7 +107,7 @@ def rating(it, ef, cf_i, wf_i):
 
 AGB_FILE = RAW / "agribalyse" / "agribalyse_synthese.csv"
 AGB_URL = "https://data.ademe.fr/datasets/agribalyse-31-synthese"
-# erbe fresche assenti in SU-EATABLE LIFE -> AGRIBALYSE 3.1 (ADEME), solo carbonio, confini diversi (fino al consumo)
+# fresh herbs missing from SU-EATABLE LIFE -> AGRIBALYSE 3.1 (ADEME), carbon only, different boundaries (up to consumption)
 AGB_MAP = {"basilico_basil": "11033", "menta_mint": "11027", "origano_oregano": "11035", "prezzemolo_parsley": "11014",
            "rosmarino_rosemary": "11068", "salvia_sage": "11069", "timo_thyme": "11070"}
 _AGB = {}
@@ -148,8 +148,8 @@ def main():
         if not m:
             n["environmental_footprint"] = None
             if it["id"] in ("fungo_porcino_porcini_mushroom", "fungo_ovolo_caesars_mushroom", "tartufo_nero_black_truffle", "tartufo_bianco_white_truffle",
-                            "finferlo_chanterelle", "spugnola_morel", "asparago_selvatico_wild_asparagus", "lampascioni_tassel_hyacinth"):  # raccolta spontanea
-                set_na(it, [P])  # raccolta spontanea: nessuna coltivazione di riferimento
+                            "finferlo_chanterelle", "spugnola_morel", "asparago_selvatico_wild_asparagus", "lampascioni_tassel_hyacinth"):  # wild harvest
+                set_na(it, [P])  # wild harvest: no reference cultivation
             missing.append(it["id"])
             finalize_completeness(it)
             continue

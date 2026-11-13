@@ -1,18 +1,18 @@
-"""Verifica le denominazioni DOP/IGP sul registro UE eAmbrosia (data/raw/eambrosia_it.json).
+"""Checks the PDO/PGI designations against the EU eAmbrosia register (data/raw/eambrosia_it.json).
 
-- Denominazioni della bozza trovate nel registro -> confermate (nome e tipo ufficiali).
-- Denominazioni della bozza NON trovate -> rimosse dal database, salvate in draft_legacy_values.json e segnalate
-  come discrepanza.
-- Denominazioni del registro (classe 1.6 ortofrutticoli e cereali, stato "Registrata") il cui nome contiene il
-  nome dell'alimento -> aggiunte.
-Uso:  python scripts/verify_dop_igp.py
+- Draft designations found in the register -> confirmed (official name and type).
+- Draft designations NOT found -> removed from the database, saved in draft_legacy_values.json and flagged
+  as a discrepancy.
+- Register designations (class 1.6 fruit, vegetables and cereals, status "Registrata") whose name contains the
+  product name -> added.
+Usage:  python scripts/verify_dop_igp.py
 """
 import re
 import unicodedata
 
 from common import CONFIG, DATA, RAW, add_discrepancy, finalize_completeness, load_json, mark_enriched, save_json
 
-# parole chiave (inizio di parola) per alimento; esclusioni per evitare abbinamenti sbagliati
+# keywords (start of word) per product; exclusions to avoid wrong matches
 EXCLUDE = {"fico_fig": ["india"], "mela_apple": ["cotogn", "melanzan"], "pesca_peach": ["noce"], "cipolla_estiva_summer_onion": [],
            "cavolo_cappuccio_cabbage": ["nero", "verza", "rosso"], "lattuga_da_taglio_leaf_lettuce": [],
            "cicoria_da_cespo_chicory": [], "radicchio_radicchio": []}

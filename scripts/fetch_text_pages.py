@@ -1,7 +1,7 @@
-"""Scarica e mette in cache il testo delle pagine web già collegate a ogni alimento (ODC, Altroconsumo,
-My-PersonalTrainer, UC Davis esclusa perché protetta da Cloudflare), per verificare varietà, parti edibili ecc.
-Cache: data/raw/pages/<host>/<slug>.txt (testo pulito dell'articolo).
-Uso:  python scripts/fetch_text_pages.py [--hosts ortodacoltivare.it my-personaltrainer.it]
+"""Downloads and caches the text of the web pages already linked to each product (ODC, Altroconsumo,
+My-PersonalTrainer; UC Davis excluded because it is protected by Cloudflare), to verify varieties, edible parts etc.
+Cache: data/raw/pages/<host>/<slug>.txt (clean article text).
+Usage:  python scripts/fetch_text_pages.py [--hosts ortodacoltivare.it my-personaltrainer.it]
 """
 import argparse
 import html

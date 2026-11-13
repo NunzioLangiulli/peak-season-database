@@ -1,12 +1,12 @@
-"""Icone delle macro-aree italiane (Nord, Centro, Sud e Isole) per la scheda prodotto.
+"""Icons of the Italian macro-areas (North, Centre, South and Islands) for the product page.
 
-Ogni icona ha il contorno di tutta l'Italia (Natural Earth 1:50m, già in data/raw/naturalearth/) e l'area
-interessata piena. Le aree sono ritagliate con una maschera SVG: i confini tra le macro-aree sono spezzate
-che approssimano i confini delle regioni elencate in metadata.italy_macro_areas_legend.*.regions (raggruppamento scelto dall'utente, con l'Abruzzo nel Centro) (Nord: fino a Liguria ed Emilia-Romagna; Centro: Toscana,
-Umbria, Marche, Lazio e Abruzzo; Sud e Isole: da Molise e Campania in giù, Sicilia e Sardegna). A 20 px di icona la
-precisione regionale non si vede; per un confine esatto servirebbero i poligoni delle regioni.
+Each icon has the outline of the whole of Italy (Natural Earth 1:50m, already in data/raw/naturalearth/) and the
+relevant area filled. Areas are clipped with an SVG mask: the borders between macro-areas are polylines
+approximating the borders of the regions listed in metadata.italy_macro_areas_legend.*.regions (grouping chosen by the owner, with Abruzzo in the Centre) (North: down to Liguria and Emilia-Romagna; Centre: Tuscany,
+Umbria, Marche, Lazio and Abruzzo; South and Islands: from Molise and Campania down, Sicily and Sardinia). At a 20 px icon size
+regional precision is not visible; an exact border would need the region polygons.
 
-Uscita: app/assets/icons/italy/{nord,centro,sud_isole}.svg (colore = currentColor, ricolorate dall'app).
+Output: app/assets/icons/italy/{nord,centro,sud_isole}.svg (colour = currentColor, recoloured by the app).
 """
 import json
 import math
@@ -20,11 +20,11 @@ LON0, LAT_TOP = 6.4, 47.2
 KX = math.cos(math.radians(42))
 SIZE, PAD = 24.0, 1.0
 
-# Confini delle macro-aree (lon, lat). Poligoni anche concavi: servono solo come maschera.
+# Borders of the macro-areas (lon, lat). Polygons may be concave: they are only used as a mask.
 NORD = [(5, 47.5), (19, 47.5), (19, 43.95), (12.8, 43.95), (12.3, 43.75), (11.0, 44.2), (10.02, 44.05),
         (10.02, 43.6), (5, 43.6)]
-# Centro con l'Abruzzo (scelta dell'utente, 2026-11-12): il confine con il Sud segue Lazio-Campania e
-# Abruzzo-Molise (foce del Trigno).
+# Centre including Abruzzo (owner choice, 2026-11-12): the border with the South follows Lazio-Campania and
+# Abruzzo-Molise (mouth of the Trigno).
 CENTRO = [(9.5, 43.6), (10.02, 43.6), (10.02, 44.05), (11.0, 44.2), (12.3, 43.75), (12.8, 43.95), (15.2, 43.95),
           (15.2, 42.1), (14.78, 42.07), (14.45, 41.85), (14.1, 41.72), (13.95, 41.6), (13.8, 41.3), (13.8, 41.0),
           (10.5, 41.0), (10.5, 41.4), (9.5, 41.4)]
@@ -39,12 +39,12 @@ def italy_rings():
         if f["properties"].get("ADM0_A3") == "ITA":
             g = f["geometry"]
             polys = g["coordinates"] if g["type"] == "MultiPolygon" else [g["coordinates"]]
-            return [p[0] for p in polys]  # solo il bordo esterno
+            return [p[0] for p in polys]  # outer ring only
     raise SystemExit("Italia non trovata")
 
 
 def simplify(pts, tol):
-    """Douglas-Peucker (anello chiuso: si tiene sempre il primo punto)."""
+    """Douglas-Peucker (closed ring: the first point is always kept)."""
     if len(pts) < 4:
         return pts
 
@@ -73,7 +73,7 @@ def area(r):
 
 
 def build():
-    rings = [r for r in italy_rings() if area(r) > 0.02]  # via gli isolotti
+    rings = [r for r in italy_rings() if area(r) > 0.02]  # drop the islets
     xs = [(lon - LON0) * KX for r in rings for lon, _ in r]
     ys = [LAT_TOP - lat for r in rings for _, lat in r]
     w, h = max(xs) - min(xs), max(ys) - min(ys)

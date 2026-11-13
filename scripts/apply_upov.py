@@ -1,9 +1,9 @@
-"""Codice di specie UPOV del Catalogo comune UE (botany.upov_code / upov_name / upov_register).
+"""UPOV species code of the EU Common Catalogue (botany.upov_code / upov_name / upov_register).
 
-Il codice UPOV identifica la specie nei registri varietali UE e nazionali (EU Plant Variety Portal, CPVO, registri
-nazionali): serve a collegare l'alimento all'elenco ufficiale delle varieta' iscritte. Specie non regolamentate
-(erbe aromatiche, funghi, frutti tropicali, vite...) -> null, campo non pertinente.
-Uso:  python scripts/apply_upov.py
+The UPOV code identifies the species in the EU and national variety registers (EU Plant Variety Portal, CPVO, national
+registers): it links the product to the official list of registered varieties. Unregulated species
+(culinary herbs, mushrooms, tropical fruit, grapevine...) -> null, field not applicable.
+Usage:  python scripts/apply_upov.py
 """
 from common import DATA, ROOT, finalize_completeness, load_json, mark_enriched, save_json
 from enrich_chilling import set_na

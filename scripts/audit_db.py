@@ -1,8 +1,8 @@
-"""Ricontrollo sistematico di ogni voce di ogni alimento (coerenza interna, coerenza con le fonti salvate, testi vs dati).
+"""Systematic re-check of every entry of every product (internal consistency, consistency with the saved sources, texts vs data).
 
-Scrive data/audit_findings.json: lista di {item, area, field, severity (E errore | W da controllare | I informativo), msg}.
-Non modifica il database.
-Uso:  python scripts/audit_db.py
+Writes data/audit_findings.json: list of {item, area, field, severity (E error | W to review | I informational), msg}.
+Does not modify the database.
+Usage:  python scripts/audit_db.py
 """
 import json
 import re
@@ -86,7 +86,7 @@ def check_nutrition(it):
                 add(it, A, f"{x['name']}.percent_nrv", "E", f"%VNR {x['percent_nrv']} ≠ {x['amount']/ref[0]*100:.1f}")
             if ref and x["unit"] != ref[1]:
                 add(it, A, f"{x['name']}.unit", "E", f"unità {x['unit']} diversa dal VNR ({ref[1]})")
-    if "sodium" not in vals and m.get("salt_g") is not None:   # sodio non elencato (valore 0 nella fonte): dal sale
+    if "sodium" not in vals and m.get("salt_g") is not None:   # sodium not listed (value 0 in the source): from salt
         vals["sodium"] = m["salt_g"] * 1000 / 2.5
     if "salt_g" in m and m.get("salt_g") is not None:
         sod = next((x["amount"] for x in n["minerals"] if canon(x["name"]) == "sodium"), None)
@@ -94,7 +94,7 @@ def check_nutrition(it):
             add(it, A, "macros_per_100g.salt_g", "E", f"sale {m['salt_g']} ≠ sodio×2,5 ({sod*2.5/1000:.3f})")
     exp = claims(vals)["it"]
     got = (n.get("nutrition_claims_eu") or {}).get("it", [])
-    if sorted(x.lower() for x in exp) != sorted(x.lower() for x in got):   # le etichette hanno le iniziali maiuscole
+    if sorted(x.lower() for x in exp) != sorted(x.lower() for x in got):   # labels have Title Case initials
         add(it, A, "nutrition_claims_eu", "E", f"claim non ricalcolabili: attesi {sorted(set(exp)-set(got))} / in più {sorted(set(got)-set(exp))}")
     en = (n.get("nutrition_claims_eu") or {}).get("en", [])
     if len(en) != len(got):

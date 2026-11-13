@@ -1,18 +1,18 @@
-"""Applica i testi IT/EN riscritti (scripts/texts/block_*.json) al database e genera i testi strutturati.
+"""Applies the rewritten IT/EN texts (scripts/texts/block_*.json) to the database and generates the structured texts.
 
-Testi scritti a mano fondendo le fonti (Altroconsumo, Greenpeace, USDA HB66, UC Davis, CREA/BDA-IEO e i valori
-verificati del database), rielaborati e non copiati:
+Texts written by hand by merging the sources (Altroconsumo, Greenpeace, USDA HB66, UC Davis, CREA/BDA-IEO and the
+verified database values), reworked and not copied:
   sl  buying_guide.shopping_list_preview      ds  buying_guide.detailed_selection
   cs  ripening_and_storage.card_short_storage si  ripening_and_storage.storage_instructions
-  cn  postharvest_physiology.chilling_injury.symptoms (solo se sensibile al freddo)
+  cn  postharvest_physiology.chilling_injury.symptoms (only if chill-sensitive)
   hb  nutrition_and_sustainability.health_benefits_and_curiosities
   wr  nutrition_and_sustainability.culinary_waste_reduction
   pl  primary_location                        rt  ripening_type
-Testi generati da modello (template) a partire dai dati verificati:
+Texts generated from templates starting from the verified data:
   ripening_badge_label, ripening_management.slow_down/speed_up, ethylene_compatibility.compatibility_notes,
-  chilling_injury.symptoms (se sensibile e senza testo dedicato).
-I testi della bozza sostituiti vengono salvati in data/draft_legacy_values.json.
-Uso:  python scripts/apply_texts.py
+  chilling_injury.symptoms (if sensitive and without a dedicated text).
+Replaced draft texts are saved in data/draft_legacy_values.json.
+Usage:  python scripts/apply_texts.py
 """
 import glob
 
@@ -45,7 +45,7 @@ def main():
         r, n, bg = it["ripening_and_storage"], it["nutrition_and_sustainability"], it["buying_guide"]
         ph, eth = r["postharvest_physiology"], r["ethylene_compatibility"]
         lg = legacy["items"].setdefault(iid, {})
-        if "texts" not in lg:   # conserva solo i testi ORIGINALI della bozza (riesecuzioni non li sovrascrivono)
+        if "texts" not in lg:   # keeps only the ORIGINAL draft texts (re-runs do not overwrite them)
           lg["texts"] = {"buying_guide": bg, "card_short_storage": r["card_short_storage"], "storage_instructions": r["storage_instructions"],
                        "ripening_badge_label": r["ripening_badge_label"], "ripening_management": r["ripening_management"],
                        "compatibility_notes": eth["compatibility_notes"], "chilling_symptoms": ph["chilling_injury"]["symptoms"],
@@ -67,7 +67,7 @@ def main():
             r["ripening_badge_label"] = {"it": "Matura anche dopo l'acquisto", "en": "Keeps ripening after purchase"}
         else:
             r["ripening_badge_label"] = {"it": "Non matura dopo la raccolta: scegli fresco", "en": "Doesn't ripen after harvest: buy fresh"}
-        # --- template: compatibilità etilene
+        # --- template: ethylene compatibility
         kaf = [names[k]["it"].split(" (")[0].lower() for k in eth["keep_away_from"]]
         kaf_en = [names[k]["en"].split(" (")[0].lower() for k in eth["keep_away_from"]]
         pc = eth["ethylene_production_class"]
@@ -110,10 +110,10 @@ def main():
             su = ("Non matura dopo la raccolta: va scelto al giusto punto di maturazione e consumato presto.",
                   "It doesn't ripen after harvest: choose it at the right stage and eat it soon.")
         r["ripening_management"] = {"slow_down": {"it": sd_it + ".", "en": sd_en + "."}, "speed_up": {"it": su[0], "en": su[1]}}
-        # --- sintomi danno da freddo
+        # --- chilling injury symptoms
         ci = ph["chilling_injury"]
         if (ci.get("lowest_safe_range_c") or iid in hb_sym) and ci.get("symptoms"):
-            pass  # sintomi trascritti da USDA HB66 Tab. 1 (enrich_chilling.py): hanno la precedenza
+            pass  # symptoms transcribed from USDA HB66 Tab. 1 (enrich_chilling.py): they take precedence
         elif t.get("cn"):
             ci["symptoms"] = bil(t["cn"])
         elif ci["susceptible"] is True:

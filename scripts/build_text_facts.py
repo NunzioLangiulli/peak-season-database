@@ -1,10 +1,10 @@
-"""Prepara le schede dei fatti per la riscrittura dei testi (data/raw/text_facts.json).
+"""Prepares the fact sheets for rewriting the texts (data/raw/text_facts.json).
 
-Per ogni alimento raccoglie, in forma compatta, i fatti dalle fonti: Altroconsumo (benefici, scelta, conservazione,
-descrizione), Greenpeace (lo sapevi / anti-spreco, 12 alimenti), My-PersonalTrainer (descrizione della scheda),
-USDA HB66 (qualità, conservazione, danni da freddo), UC Davis (etilene, freddo), valori verificati del database
-(temperatura, UR, durata, etilene, claim, nutrienti >=15% VNR) e i testi della bozza utente.
-Uso:  python scripts/build_text_facts.py [--block N --size 12]   (stampa le schede del blocco)
+For each product it collects, in compact form, the facts from the sources: Altroconsumo (benefits, choice, storage,
+description), Greenpeace (did you know / anti-waste, 12 products), My-PersonalTrainer (sheet description),
+USDA HB66 (quality, storage, chilling injury), UC Davis (ethylene, cold), verified database values
+(temperature, RH, shelf life, ethylene, claims, nutrients >=15% NRV) and the texts of the owner's draft.
+Usage:  python scripts/build_text_facts.py [--block N --size 12]   (prints the sheets of the block)
 """
 import html
 import re

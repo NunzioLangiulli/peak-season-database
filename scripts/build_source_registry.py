@@ -1,11 +1,11 @@
-"""Traccia completa delle fonti per alimento + link utili per l'app.
+"""Full source trace per product + useful links for the app.
 
-sources_by_topic.sources_used = [{source_key, name, topics[], urls[], local_files[]}]: ogni fonte effettivamente
-usata per l'alimento (nutrizione, stagionalità, calendario, post-raccolta, botanica, DOP/IGP, varietà, testi, immagini).
-sources_by_topic.useful_links = [{title{it,en}, url, source_key, topic}]: link specifici per l'alimento, adatti a essere
-mostrati nell'app (esclude le pagine generiche condivise da molti alimenti, salvo EUFIC e USDA HB66 con pagina).
-Aggiunge al registro le fonti usate in corso d'opera (USDA FDC, FoodKeeper, Slow Food, Unsplash, Pixabay).
-Uso:  python scripts/build_source_registry.py
+sources_by_topic.sources_used = [{source_key, name, topics[], urls[], local_files[]}]: every source actually
+used for the product (nutrition, seasonality, calendar, postharvest, botany, PDO/PGI, varieties, texts, images).
+sources_by_topic.useful_links = [{title{it,en}, url, source_key, topic}]: product-specific links, suitable to be
+shown in the app (excludes generic pages shared by many products, except EUFIC and USDA HB66 with a page).
+Adds to the register the sources used along the way (USDA FDC, FoodKeeper, Slow Food, Unsplash, Pixabay).
+Usage:  python scripts/build_source_registry.py
 """
 import collections
 import glob
@@ -71,7 +71,7 @@ NEW_SOURCES = [
     {"key": "unsplash", "number": "agg.", "name": "Unsplash API", "url": "https://unsplash.com/", "topics": ["images"], "access": "API (licenza Unsplash)", "license_note": "Unsplash License"},
     {"key": "pixabay", "number": "agg.", "name": "Pixabay API", "url": "https://pixabay.com/", "topics": ["images"], "access": "API", "license_note": "Pixabay Content License"},
 ]
-NAMES_T = {  # titoli dei link utili: source_key -> (it, en)
+NAMES_T = {  # titles of the useful links: source_key -> (it, en)
     "altroconsumo": ("Stagionalità, scelta e conservazione - Altroconsumo", "Seasonality, choosing and storage - Altroconsumo (IT)"),
     "ortodacoltivare": ("Come coltivarlo nell'orto - Orto da Coltivare", "How to grow it - Orto da Coltivare (IT)"),
     "my_personaltrainer": ("Proprietà e ricette - My-PersonalTrainer", "Properties and recipes - My-PersonalTrainer (IT)"),
@@ -112,7 +112,7 @@ def main():
     gi = {}
     for r in load_json(RAW / "eambrosia_it.json")["items"]:
         gi[norm(r["protectedName"])] = r
-    # URL condivisi da molti alimenti = pagine generiche
+    # URLs shared by many products = generic pages
     url_count = collections.Counter(u for it in db["items"] for u in set(it["sources_by_topic"]["seasonality_and_storage_urls"]
                                                                           + it["sources_by_topic"]["agricultural_calendar_urls"]))
     tot = collections.Counter()
@@ -168,7 +168,7 @@ def main():
         isrc = (it["seasonality"].get("italy_source") or {})
         if isrc.get("source") in ("legge_752_1985", "provincia_cuneo_funghi", "ortodacoltivare", "slow_food", "bur_emilia_romagna_amarene", "biblioteca_bertoliana", "naturasi"):
             add(isrc["source"], "seasonality", isrc["url"])
-        if "G6PD" in json.dumps(it, ensure_ascii=False):  # avvertenza sul favismo
+        if "G6PD" in json.dumps(it, ensure_ascii=False):  # favism warning
             add("iss_istisan_09_47", "health_notes", "https://www.iss.it/documents/20126/45616/0947web.pdf")
         if "phenol_explorer" in bsrc:
             add("phenol_explorer", "bioactive_compounds", "http://phenol-explorer.eu/")
@@ -182,7 +182,7 @@ def main():
             if "altroconsumo" in u:
                 add("altroconsumo", "seasonality", u)
                 add("altroconsumo", "buying_guide")
-            elif "my-personaltrainer" in u and url_count[u] <= 3:   # la pagina generica condivisa non è stata usata
+            elif "my-personaltrainer" in u and url_count[u] <= 3:   # the shared generic page was not used
                 add("my_personaltrainer", "verification_texts", u)
         mp = re.search(r"Parte usata '[^']+' confermata dai testi di: ([^.]+)\.", it["data_completeness"]["notes"])
         for k in (mp.group(1).split(", ") if mp else []):
@@ -207,7 +207,7 @@ def main():
         if m and m[0] in chap:
             add("usda_hb66", "postharvest", f"{hb}#page={chap[m[0]]['page']}")
         elif m and m[1]:
-            add("usda_hb66", "postharvest", f"{hb}#page=17")   # solo Tabella 1 (respirazione/etilene)
+            add("usda_hb66", "postharvest", f"{hb}#page=17")   # Table 1 only (respiration/ethylene)
         if it["id"] in hb_cur:
             add("usda_hb66", "postharvest", f"{hb}#page={hb_cur[it['id']]['page']}" if hb_cur[it["id"]].get("page") else hb)
         if it["id"] in hb_chill:
@@ -250,7 +250,7 @@ def main():
         for e in used.values():
             e["urls"] = [u for u in e["urls"] if u]
         s["sources_used"] = list(used.values())
-        # campi URL storici coerenti con le fonti effettivamente usate (la bozza citava HB66/FoodKeeper per tutti)
+        # historical URL fields consistent with the sources actually used (the draft cited HB66/FoodKeeper for all)
         phu = s.get("postharvest_ucdavis_usda_url")
         phu = [phu] if isinstance(phu, str) else (phu or [])
         if "usda_hb66" not in used:
@@ -258,10 +258,10 @@ def main():
         s["postharvest_ucdavis_usda_url"] = phu or None
         if "usda_foodkeeper" not in used:
             s["other_urls"] = [u for u in s.get("other_urls", []) if "foodkeeper" not in u]
-        if True:  # pagina generica My-PersonalTrainer citata dalla bozza, non usata
+        if True:  # generic My-PersonalTrainer page cited by the draft, not used
             s["seasonality_and_storage_urls"] = [u for u in s["seasonality_and_storage_urls"] if "frutta-conservazione-stagionalita" not in u]
         tot.update(used.keys())
-        # --- link utili per l'app
+        # --- useful links for the app
         links = []
 
         def link(key, url, topic, title=None):

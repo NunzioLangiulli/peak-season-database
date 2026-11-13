@@ -1,6 +1,6 @@
-"""Pulisce data_completeness.notes: rimuove le frasi ripetute (gli script rieseguiti le accodano più volte) e tiene
-solo l'ultima riga "Testi IT/EN riscritti ...". Da eseguire come ultimo passo della pipeline.
-Uso:  python scripts/tidy_notes.py
+"""Cleans data_completeness.notes: removes repeated sentences (re-run scripts append them several times) and keeps
+only the last "Testi IT/EN riscritti ..." line. To run as the last step of the pipeline.
+Usage:  python scripts/tidy_notes.py
 """
 import re
 

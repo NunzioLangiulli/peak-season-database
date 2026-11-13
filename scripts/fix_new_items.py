@@ -1,12 +1,12 @@
-"""Correzioni per gli alimenti aggiunti il 2026-11-05 (config/new_items_2026_11_05.json). Idempotente.
+"""Fixes for the products added on 2026-11-05 (config/new_items_2026_11_05.json). Idempotent.
 
-Durata in frigorifero: se l'alimento non ha una voce FoodKeeper, la durata "in frigo" assegnata da HB66 è in realtà
-la durata in condizioni professionali (0 °C, umidità ottimale): viene spostata in commercial_optimal_days e la durata
-domestica resta vuota (stessa regola già applicata a topinambur, nespola, mela cotogna e tartufo).
-Nutrizione assente: per gli alimenti senza scheda CREA, BDA-IEO né USDA il campo data_basis lo dichiara
-(i valori restano vuoti, come per il tartufo bianco); se ci sono solo vitamine e minerali da una voce USDA affine
-(fill_micros_fdc.py) lo si dice.
-Uso:  python scripts/fix_new_items.py   (dopo apply_foodkeeper_modes.py e fill_micros_fdc.py)
+Fridge storage time: if the product has no FoodKeeper entry, the "fridge" time assigned from HB66 is actually
+the time under commercial conditions (0 °C, optimal humidity): it is moved to commercial_optimal_days and the home
+time stays empty (same rule already applied to Jerusalem artichoke, loquat, quince and truffle).
+Missing nutrition: for products without a CREA, BDA-IEO or USDA record the data_basis field says so
+(values stay empty, as for white truffle); if there are only vitamins and minerals from a related USDA entry
+(fill_micros_fdc.py) this is stated.
+Usage:  python scripts/fix_new_items.py   (after apply_foodkeeper_modes.py and fill_micros_fdc.py)
 """
 from common import CONFIG, DATA, RAW, finalize_completeness, load_json, save_json
 

@@ -1,12 +1,12 @@
-"""Prepara i loghi delle fonti forniti a mano (fonti_locali/loghi_fonti/originali/).
+"""Prepares the source logos supplied by hand (fonti_locali/loghi_fonti/originali/).
 
-Per ogni fonte: rende l'SVG ad alta risoluzione (Playwright/Edge) o apre il
-raster, toglie lo sfondo bianco uniforme, ritaglia il solo simbolo dove il
-logo con la scritta sarebbe troppo largo per un'icona, e salva
-fonti_locali/loghi_fonti/<chiave>.png (trasparente, lato lungo 512 px).
-fetch_source_favicons.py poi usa questi file al posto delle favicon.
+For each source: renders the SVG at high resolution (Playwright/Edge) or opens the
+raster, removes the uniform white background, crops just the symbol where the
+logo with lettering would be too wide for an icon, and saves
+fonti_locali/loghi_fonti/<key>.png (transparent, long side 512 px).
+fetch_source_favicons.py then uses these files instead of the favicons.
 
-Uso: python scripts/prepare_source_logos.py
+Usage: python scripts/prepare_source_logos.py
 """
 import base64
 import io
@@ -19,31 +19,31 @@ SRC = ROOT / "fonti_locali" / "loghi_fonti" / "originali"
 OUT = ROOT / "fonti_locali" / "loghi_fonti"
 EDGE = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
 
-# chiave: (file originale, operazioni). Operazioni, in ordine:
-#   ("white",)              sfondo bianco collegato ai bordi → trasparente
-#   ("all_white",)          TUTTI i pixel bianchi/chiarissimi → trasparenti (anche dentro il logo)
-#   ("crop", x0,y0,x1,y1)   ritaglio in frazioni del logo rifilato
-#   ("erase", x0,y0,x1,y1)  cancella un riquadro (es. un sottotitolo)
-#   ("keep_red",)           tiene solo i pixel rossi (simbolo senza scritte nere)
-#   ("white_to", "#RRGGBB") i pixel bianchi diventano di quel colore (scritte bianche)
-#   ("circle",)             ritaglio circolare inscritto
+# key: (original file, operations). Operations, in order:
+#   ("white",)              white background connected to the edges → transparent
+#   ("all_white",)          ALL white/very light pixels → transparent (inside the logo too)
+#   ("crop", x0,y0,x1,y1)   crop in fractions of the trimmed logo
+#   ("erase", x0,y0,x1,y1)  erases a box (e.g. a subtitle)
+#   ("keep_red",)           keeps only red pixels (symbol without black lettering)
+#   ("white_to", "#RRGGBB") white pixels take that colour (white lettering)
+#   ("circle",)             inscribed circular crop
 LOGOS = {
-    "crea": ("CREA_logo.png", [("erase", 0.2, 0.67, 1.0, 1.0)]),            # via solo il sottotitolo
-    "eufic_map": ("EUFIC_logo_colour.webp", []),                          # logo intero con "eufic"
-    "my_personaltrainer": ("My-PersonalTrainer logo.jpg", [("white",)]),  # il cuore
-    "ortodacoltivare": ("Orto da Coltivare logo.jpg", [("all_white",)]),  # nessuna parte bianca
+    "crea": ("CREA_logo.png", [("erase", 0.2, 0.67, 1.0, 1.0)]),            # remove only the subtitle
+    "eufic_map": ("EUFIC_logo_colour.webp", []),                          # whole logo with "eufic"
+    "my_personaltrainer": ("My-PersonalTrainer logo.jpg", [("white",)]),  # the heart
+    "ortodacoltivare": ("Orto da Coltivare logo.jpg", [("all_white",)]),  # no white parts
     "uc_davis": ("UCDavisUnofficialSeal_2Color_0.png", []),
-    "altroconsumo": ("altroconsumo-logo-it-IT.svg", [("crop", 0.0, 0.0, 0.2, 1.0), ("keep_red",)]),  # solo il quadrato
-    "slow_food": ("slow-food-logo-png-transparent.png", [("erase", 0.0, 0.86, 1.0, 1.0), ("white_to", "#C1272D")]),  # con la scritta in rosso, senza "PORTLAND"
-    "gbif": ("GBIF-Standard-logo/SVG/gbif-dot-org-green-logo.svg", []),     # originale con "GBIF"
+    "altroconsumo": ("altroconsumo-logo-it-IT.svg", [("crop", 0.0, 0.0, 0.2, 1.0), ("keep_red",)]),  # only the square
+    "slow_food": ("slow-food-logo-png-transparent.png", [("erase", 0.0, 0.86, 1.0, 1.0), ("white_to", "#C1272D")]),  # with the lettering in red, without "PORTLAND"
+    "gbif": ("GBIF-Standard-logo/SVG/gbif-dot-org-green-logo.svg", []),     # original with "GBIF"
     "usda_fdc": ("usda-logo-and-lockups/USDA logo/color/usda-logo-color.svg", []),
     "usda_hb66": ("usda-logo-and-lockups/USDA logo/color/usda-logo-color.svg", []),
     "eambrosia": ("EU EC logo_MUTE/RGB/SVG/LOGO CE_RGB_MUTE_POS.svg", []),
-    "eppo": ("eppo.jpg", [("circle",)]),                                 # solo il cerchio
+    "eppo": ("eppo.jpg", [("circle",)]),                                 # only the circle
     "wfo": ("wfo_roundel.svg", []),
 }
-# Non usati: "EPPO 75th logo.png" (sostituito da eppo.jpg) e "wfp-logo-emblem-blue.png"
-# (è il World Food Programme, non World Flora Online).
+# Not used: "EPPO 75th logo.png" (replaced by eppo.jpg) and "wfp-logo-emblem-blue.png"
+# (it is the World Food Programme, not World Flora Online).
 
 
 def render_svg(path, size=1600):
@@ -96,7 +96,7 @@ def apply(im, op):
         for y in range(h):
             for x in range(w):
                 r, g, b, a = px[x, y]
-                # bianco e bianchi sporchi della compressione JPEG (chiari e poco saturi)
+                # white and off-whites from JPEG compression (light and low-saturation)
                 if min(r, g, b) >= 185 and max(r, g, b) - min(r, g, b) < 45:
                     px[x, y] = (r, g, b, 0)
         return im

@@ -1,19 +1,19 @@
-"""Corpus condiviso delle descrizioni (shared_descriptions_corpus, revisione 2026-11-12).
+"""Shared description corpus (shared_descriptions_corpus, revision 2026-11-12).
 
-Nel file data/database.json i testi descrittivi ripetuti tra i prodotti (consigli di conservazione, note sulle fonti,
-spiegazioni di metodo...) sono scritti una volta sola in "shared_descriptions_corpus" (subito dopo "metadata") e nei
-prodotti sono richiamati così:
-    { "corpus_ref": "chiave" }                                         -> testo del corpus
-    { "corpus_ref": "chiave", "specific_addition": { "it", "en" } }    -> testo del corpus + " " + aggiunta specifica
-I testi unici restano { "it", "en" } completi.
+In data/database.json the descriptive texts repeated across products (storage tips, notes on sources,
+method explanations...) are written only once in "shared_descriptions_corpus" (right after "metadata") and in the
+products they are referenced like this:
+    { "corpus_ref": "key" }                                            -> corpus text
+    { "corpus_ref": "key", "specific_addition": { "it", "en" } }       -> corpus text + " " + specific addition
+Unique texts stay complete { "it", "en" }.
 
-Gli script della pipeline lavorano sempre sul testo completo: common.load_json espande i riferimenti (expand) e
-common.save_json li ricompatta (compact) quando il file è database.json. La compattazione è deterministica e conserva
-le chiavi esistenti: se il testo di una voce del corpus viene modificato (es. con l'editor dei testi), tutti i prodotti
-che la usano cambiano insieme e la chiave resta la stessa.
-Regole: un testo completo usato almeno MIN_USES volte da almeno MIN_ITEMS prodotti diversi diventa una voce; la prima frase di testi più lunghi, se
-ripetuta almeno MIN_USES volte (in italiano e in inglese), diventa una voce con "specific_addition" per il resto.
-Si compattano solo i campi descrittivi (FIELDS), mai etichette brevi, nomi o titoli.
+Pipeline scripts always work on the full text: common.load_json expands the references (expand) and
+common.save_json compacts them again (compact) when the file is database.json. Compaction is deterministic and keeps
+existing keys: if the text of a corpus entry is changed (e.g. with the text editor), all the products
+using it change together and the key stays the same.
+Rules: a full text used at least MIN_USES times by at least MIN_ITEMS different products becomes an entry; the first sentence of longer texts, if
+repeated at least MIN_USES times (in Italian and in English), becomes an entry with "specific_addition" for the rest.
+Only descriptive fields (FIELDS) are compacted, never short labels, names or titles.
 """
 import re
 import unicodedata
@@ -32,7 +32,7 @@ def _is_bil(o):
 
 
 def resolve(o, corpus):
-    """Testo completo {it, en} di un riferimento al corpus (o l'oggetto stesso se non è un riferimento)."""
+    """Full {it, en} text of a corpus reference (or the object itself if it is not a reference)."""
     if isinstance(o, dict) and "corpus_ref" in o:
         base = corpus[o["corpus_ref"]]
         add = o.get("specific_addition")
@@ -63,7 +63,7 @@ def expand(db):
 
 
 def _slots(o, field=None):
-    """(contenitore, chiave, campo) di ogni testo descrittivo {it, en} nei prodotti."""
+    """(container, key, field) of every descriptive {it, en} text in the products."""
     if isinstance(o, dict):
         for k, v in o.items():
             if k == "data_completeness":
@@ -94,7 +94,7 @@ def _slug(field, en):
 
 
 def compact(db):
-    """Restituisce una copia del database con corpus e riferimenti (il dizionario passato non cambia)."""
+    """Returns a copy of the database with corpus and references (the dictionary passed in does not change)."""
     import copy
     db = copy.deepcopy(db)
     old = db.pop(KEY, None) or {}
@@ -106,7 +106,7 @@ def compact(db):
         f = _first(t)
         if f:
             first.setdefault(f, []).append((field, iid))
-    for f in list(first):                                    # anche i testi che coincidono con la sola prima frase
+    for f in list(first):                                    # also the texts that coincide with the first sentence alone
         if f in full:
             first[f] = first[f] + full[f]
     by_text = {(v["it"], v["en"]): k for k, v in old.items() if _is_bil(v)}

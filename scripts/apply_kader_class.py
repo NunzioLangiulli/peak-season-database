@@ -1,12 +1,12 @@
-"""Classe di respirazione secondo la classificazione di Kader (USDA HB66, 'Respiratory Metabolism', Table 1) e
-indicatore pratico di deperibilita' per l'app (ripening_and_storage.perishability).
+"""Respiration class according to Kader's classification (USDA HB66, 'Respiratory Metabolism', Table 1) and
+a practical perishability indicator for the app (ripening_and_storage.perishability).
 
-- voce 'exact': la classe della tabella sostituisce quella calcolata (discrepanza se diversa);
-- voce 'approx' (es. 'citrus', 'mushroom'): usata solo se la classe manca o e' da verificare;
-- prodotti secchi (classe non pertinente): esclusi.
-Questo risolve i prodotti sensibili al freddo misurati solo a >=10 °C (pomodoro, banana, peperone, agrumi).
-Implicazione pratica (HB66, stesso capitolo): la durata di conservazione varia in modo inverso alla respirazione.
-Uso:  python scripts/apply_kader_class.py   (dopo apply_hb66_curated.py e mark_not_applicable.py)
+- 'exact' entry: the table class replaces the computed one (discrepancy if different);
+- 'approx' entry (e.g. 'citrus', 'mushroom'): used only if the class is missing or to be verified;
+- dried products (class not applicable): excluded.
+This resolves chill-sensitive products measured only at >=10 °C (tomato, banana, pepper, citrus).
+Practical implication (HB66, same chapter): storage life varies inversely with respiration.
+Usage:  python scripts/apply_kader_class.py   (after apply_hb66_curated.py and mark_not_applicable.py)
 """
 from common import DATA, ROOT, add_discrepancy, finalize_completeness, load_json, mark_enriched, save_json
 

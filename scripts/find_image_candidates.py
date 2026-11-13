@@ -1,16 +1,16 @@
-"""Cerca immagini candidate per i 5 tipi richiesti dall'utente (2026-11-05) e ne scarica un'anteprima per la revisione.
+"""Searches candidate images for the 5 types requested by the project owner (2026-11-05) and downloads a preview for review.
 
-Tipi (view_type):
-  full_frame          il prodotto riempie tutta l'inquadratura (sarà la foto principale)
-  isolated_background prodotto su sfondo bianco o colorato uniforme
-  plant_in_field      la pianta viva (non solo fiori, non foto sgranate)
-  botanical_plate     tavola botanica / illustrazione anatomica (anche verticale)
-  cut_section         prodotto tagliato, sezione
-Criteri: orizzontale (tranne le tavole), larghezza >= 1000 px, licenza libera con autore, niente piatti/ricette/scritte.
-Fonti: Pixabay API (foto), Wikimedia Commons API (foto di qualità e tavole botaniche di pubblico dominio).
-Esclusi: le foto già nel database e quelle che l'utente ha eliminato (ricavate dall'istantanea precedente).
-Uscita: assets/images/_candidates/<id>/<tipo>_<n>.jpg (anteprime) e assets/images/_candidates/candidates.json.
-Uso:  python scripts/find_image_candidates.py [--items id1,id2] [--per-type 4]
+Types (view_type):
+  full_frame          the product fills the whole frame (it will be the main photo)
+  isolated_background product on a uniform white or coloured background
+  plant_in_field      the living plant (not only flowers, no grainy photos)
+  botanical_plate     botanical plate / anatomical illustration (portrait allowed)
+  cut_section         product cut open, cross-section
+Criteria: landscape (except plates), width >= 1000 px, free licence with author, no dishes/recipes/text.
+Sources: Pixabay API (photos), Wikimedia Commons API (quality photos and public-domain botanical plates).
+Excluded: photos already in the database and those deleted by the owner (taken from the previous snapshot).
+Output: assets/images/_candidates/<id>/<type>_<n>.jpg (previews) and assets/images/_candidates/candidates.json.
+Usage:  python scripts/find_image_candidates.py [--items id1,id2] [--per-type 4]
 """
 import io
 import json
@@ -35,7 +35,7 @@ PLATE_CATS = ["Köhler's Medizinal-Pflanzen", "Flora von Deutschland, Österreic
 
 
 def db_path():
-    """Database da usare: variabile d'ambiente IMAGES_DB (es. una copia stabile mentre il database è in modifica), altrimenti data/database.json."""
+    """Database to use: IMAGES_DB environment variable (e.g. a stable copy while the database is being edited), otherwise data/database.json."""
     import os
     from pathlib import Path
     return Path(os.environ["IMAGES_DB"]) if os.environ.get("IMAGES_DB") else DATA / "database.json"
@@ -46,7 +46,7 @@ def arg(name, default):
 
 
 def name_re(en):
-    """Il nome inglese intero (singolare o plurale) deve comparire in uno dei primi 3 tag. en può essere una lista di nomi."""
+    """The full English name (singular or plural) must appear in one of the first 3 tags. en may be a list of names."""
     alts = en if isinstance(en, list) else [en]
     bases = [re.escape(re.sub(r"(es|s)$", "", a.lower().strip())) for a in alts]
     return re.compile(r"\b(" + "|".join(bases) + r")(e?s)?\b")
@@ -59,7 +59,7 @@ def alt_names():
 
 
 def uniform_border(path):
-    """True se il bordo dell'anteprima è di colore uniforme (sfondo bianco o colorato)."""
+    """True if the preview border is a uniform colour (white or coloured background)."""
     from PIL import ImageStat
     im = Image.open(path).convert("RGB")
     w, h = im.size
@@ -71,8 +71,8 @@ def uniform_border(path):
     return max(sum(x.stddev) / 3 for x in st) < 14 and spread < 25
 
 
-def pixabay(q, en, category, orientation="horizontal"):  # en: nome o lista di nomi accettati nei tag
-    time.sleep(float(arg("--px-pause", 0.8)))   # limite API: 100 richieste/minuto in totale
+def pixabay(q, en, category, orientation="horizontal"):  # en: name or list of names accepted in the tags
+    time.sleep(float(arg("--px-pause", 0.8)))   # API limit: 100 requests/minute in total
     r = SESSION.get("https://pixabay.com/api/", params={"key": PIXABAY, "q": q, "image_type": "photo", "category": category,
                     "orientation": orientation, "safesearch": "true", "per_page": 30, "min_width": 1000, "lang": "en",
                     "order": "popular"}, timeout=60)
@@ -125,7 +125,7 @@ def commons(q, min_w=1000, landscape=True, limit=25):
 def queries(it, shared, en=None):
     en = en or it["names"]["en"].split("(")[0].strip()
     sci = " ".join(it["botany"]["scientific_name"].split()[:2])
-    key = f'"{en}"' if shared else f'"{sci}"'          # specie condivisa da più alimenti (es. Brassica oleracea): nome inglese
+    key = f'"{en}"' if shared else f'"{sci}"'          # species shared by several products (e.g. Brassica oleracea): English name
     plant = f"{en} tree" if it["category"] in TREE else f"{en} plant"
     plates = [] if shared else [("cmp", f'intitle:Köhler "{sci}"'), ("cmp", f'intitle:Illustration "{sci}"'),
                                 ("cmp", f'intitle:"{sci}" Illustration'), ("cmp", f'"{sci}" botanical illustration')]
@@ -151,7 +151,7 @@ def preview(url, path):
 
 
 def merge():
-    """Riunisce i file per alimento in assets/images/_candidates/candidates.json."""
+    """Gathers the per-product files into assets/images/_candidates/candidates.json."""
     cand = {"_doc": __doc__.split("\n")[0], "items": {}}
     for f in sorted(OUT.glob("*/candidates.json")):
         cand["items"][f.parent.name] = load_json(f)
@@ -160,7 +160,7 @@ def merge():
     return cand
 
 
-EXTRA = {  # varianti di ricerca usate solo nel secondo passaggio (--fill)
+EXTRA = {  # search variants used only in the second pass (--fill)
     "full_frame": [("px", "{n} closeup", "food"), ("px", "fresh {n}", "food"), ("px", "{n} market", "food")],
     "isolated_background": [("px", "{n} on white", "food"), ("px", "{n} studio", "food")],
     "plant_in_field": [("px", "{n} field", "nature"), ("px", "{n} crop", "nature"), ("px", "{n} farm", "nature")],
@@ -171,10 +171,10 @@ NO_CUT = {"erbe_spezie", "cereali"}
 
 
 def fill(db, per, known, rejected):
-    """Secondo passaggio: per i tipi con meno di 2 opzioni (candidate + foto attuali valide) cerca altre candidate con i
-    nomi alternativi (config/image_search_names.json) e varianti di ricerca, escludendo tutti gli URL già visti
-    (compresi quelli scartati al primo passaggio, letti dal backup indicato con --seen-dir). Le nuove candidate sono
-    accodate con i numeri successivi e marcate "pass": 2, per la pre-selezione (prune_candidates.py --pass2)."""
+    """Second pass: for types with fewer than 2 options (candidates + valid current photos) searches more candidates with the
+    alternative names (config/image_search_names.json) and search variants, excluding every URL already seen
+    (including those discarded in the first pass, read from the backup given with --seen-dir). New candidates are
+    appended with the next numbers and marked "pass": 2, for pre-selection (prune_candidates.py --pass2)."""
     seen_dir = arg("--seen-dir", None)
     alts_all = alt_names()
     only = set(arg("--items", "").split(",")) - {""}
@@ -309,7 +309,7 @@ def main():
                     if not preview(h["preview"], OUT / iid / fn):
                         continue
                     if kind != "cmp" and t != "isolated_background" and uniform_border(OUT / iid / fn):
-                        moved.append((fn, {**h, "query": q}))     # sfondo uniforme: va tra gli isolati
+                        moved.append((fn, {**h, "query": q}))     # uniform background: goes with the isolated ones
                         continue
                     if t == "isolated_background" and not uniform_border(OUT / iid / fn):
                         (OUT / iid / fn).unlink()
@@ -331,7 +331,7 @@ def main():
                 src.replace(dst)
                 h["file"] = f"{iid}/{t}_{n}.jpg"
         cand["items"][iid] = res
-        save_json(OUT / iid / "candidates.json", res)     # un file per alimento: più processi in parallelo
+        save_json(OUT / iid / "candidates.json", res)     # one file per product: several processes in parallel
         print(iid, {t: len(v) for t, v in res.items()}, flush=True)
 
 

@@ -1,8 +1,8 @@
-"""Sintesi IT/EN dell'articolo EUFIC "Are seasonal fruit and vegetables better for the environment?" (09/09/2020)
-in metadata.sustainable_diet_summary. Testo rielaborato (non copiato) dai punti dell'articolo, testo grezzo in
-data/raw/eufic_article.txt. La sintesi della bozza (che citava un "fino al 50%" non presente nell'articolo) va in
+"""IT/EN summary of the EUFIC article "Are seasonal fruit and vegetables better for the environment?" (09/09/2020)
+in metadata.sustainable_diet_summary. Text reworked (not copied) from the article's points, raw text in
+data/raw/eufic_article.txt. The draft summary (which cited an "up to 50%" not present in the article) goes to
 draft_legacy_values.json.
-Uso:  python scripts/set_sustainability_summary.py
+Usage:  python scripts/set_sustainability_summary.py
 """
 from common import DATA, load_json, save_json
 

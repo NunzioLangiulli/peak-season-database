@@ -1,19 +1,19 @@
-"""Informazioni e regole usate dall'app, scritte nel database perché resti la fonte di verità (regola dell'utente
-"il database prima dell'app", 2026-11-06). Idempotente.
+"""Information and rules used by the app, written into the database so that it stays the source of truth (owner rule
+"database first, app second", 2026-11-06). Idempotent.
 
-Aggiunge ai metadati:
-1. vocabulary["botany.family"]: nome della famiglia botanica in IT (forma italiana del nome latino, con il nome
-   tradizionale tra parentesi dove esiste) ed EN (nome comune della famiglia), più il nome latino.
-2. eufic_climatic_zones_legend: codici ISO 3166-1 alpha-2 dei Paesi (countries_primary_iso, countries_partial_iso)
-   e un colore suggerito per zona (color_hex, palette Okabe-Ito, leggibile anche da chi non distingue i colori).
-3. seasonality_reference_order e seasonality_display_rules: le regole "Dati Non Disponibili" approvate dall'utente.
-4. official_sources[]: site_url (home del sito), short_name, favicon (file in app/assets/sources/, scaricato da
-   scripts/fetch_source_favicons.py; se manca, il logo di un'altra fonte dello stesso ente - logo_alias; null se assente),
-   publisher {it, en} e title {it, en} (config/source_display.json), copiati anche nelle fonti del glossario.
-5. icon nelle voci di vocabolario degli stati di stagionalità e delle categorie (nomi Material Symbols, gli stessi
-   dell'app), con metadata.icon_set.
-Corregge inoltre la famiglia botanica mancante della mandorla (Prunus -> Rosaceae).
-Uso:  python scripts/build_app_support_metadata.py   (dopo build_source_catalog.py, prima di title_case_labels.py)
+Adds to the metadata:
+1. vocabulary["botany.family"]: botanical family name in IT (Italian form of the Latin name, with the
+   traditional name in brackets where it exists) and EN (common family name), plus the Latin name.
+2. eufic_climatic_zones_legend: ISO 3166-1 alpha-2 country codes (countries_primary_iso, countries_partial_iso)
+   and a suggested colour per zone (color_hex, Okabe-Ito palette, readable by colour-blind users too).
+3. seasonality_reference_order and seasonality_display_rules: the "No Data Available" rules approved by the owner.
+4. official_sources[]: site_url (website home), short_name, favicon (file in app/assets/sources/, downloaded by
+   scripts/fetch_source_favicons.py; if missing, the logo of another source from the same organisation - logo_alias; null if none),
+   publisher {it, en} and title {it, en} (config/source_display.json), also copied into the glossary sources.
+5. icon in the vocabulary entries of the seasonal states and categories (Material Symbols names, the same
+   as the app), with metadata.icon_set.
+It also fixes the missing botanical family of almond (Prunus -> Rosaceae).
+Usage:  python scripts/build_app_support_metadata.py   (after build_source_catalog.py, before title_case_labels.py)
 """
 import urllib.parse
 
@@ -51,8 +51,8 @@ ISO = {"Austria": "AT", "Belgium": "BE", "Bulgaria": "BG", "Croatia": "HR", "Cyp
        "Latvia": "LV", "Lithuania": "LT", "Luxembourg": "LU", "Malta": "MT", "Netherlands": "NL", "Poland": "PL", "Portugal": "PT",
        "Romania": "RO", "Slovakia": "SK", "Slovenia": "SI", "Spain": "ES", "Sweden": "SE", "Switzerland": "CH", "Turkey": "TR",
        "United Kingdom": "GB", "Norway": "NO", "Serbia": "RS"}
-# colori e simboli della mappa EUFIC (https://www.eufic.org/en/explore-seasonal-fruit-and-vegetables-in-europe), letti dallo
-# screenshot dell'utente (2026-11-06); la pannonica non c'è sulla mappa EUFIC: terracotta tenue e spiga, scelti per noi
+# colours and symbols of the EUFIC map (https://www.eufic.org/en/explore-seasonal-fruit-and-vegetables-in-europe), read from the
+# owner's screenshot (2026-11-06); the Pannonian zone is not on the EUFIC map: soft terracotta and wheat ear, chosen by us
 ZONE_COLOR = {"atlantic": "#3F5BA9", "boreal": "#12754A", "continental": "#5DBB8F", "mediterranean": "#F8AE1F",
               "mountain": "#9B5B9B", "pannonian": "#B86B4B"}
 # regioni biogeografiche EEA 2016 (data/raw/eea_biogeo/, scripts/build_europe_map.py) -> zona dell'app
@@ -81,7 +81,7 @@ SVG = {"sprout": "primizie.svg", "seedling": "in_season.svg", "plant_large": "pe
 EST_ICON = {"estimate": "≈", "not_grown": "public", "unknown": "question_mark"}
 
 
-try:                                                  # loghi scuri (stessa regola di fetch_source_favicons.py)
+try:                                                  # dark logos (same rule as fetch_source_favicons.py)
     from fetch_source_favicons import dark_logos
     DARK = {f"{k}.png" for k in dark_logos()}
 except ImportError:
@@ -90,9 +90,9 @@ DISPLAY = load_json(ROOT / "scripts" / "config" / "source_display.json")["source
 
 
 def apply_ui_config_icons():
-    """Icone scelte nell'Admin Studio (data/ui_config.json, voci target=database): sostituiscono quelle qui sopra.
-    Valori: "svg:season/<file>" del set Crescita -> nome breve (sprout...), "svg:zones/<nome>" -> nome, "material:<nome>" ->
-    nome; altri SVG restano "svg:<cartella>/<nome>"."""
+    """Icons chosen in the Admin Studio (data/ui_config.json, entries with target=database): they replace the ones above.
+    Values: "svg:season/<file>" of the Growth set -> short name (sprout...), "svg:zones/<name>" -> name, "material:<name>" ->
+    name; other SVGs stay "svg:<folder>/<name>"."""
     cfg = DATA / "ui_config.json"
     if not cfg.exists():
         return
@@ -202,10 +202,10 @@ def main():
         disp = DISPLAY.get(s["key"]) or {}
         own, alias = fav_dir / f"{s['key']}.png", disp.get("logo_alias")
         s["favicon"] = own.name if own.exists() else (f"{alias}.png" if alias and (fav_dir / f"{alias}.png").exists() else None)
-        s["favicon_dark"] = s["favicon"] in DARK if s["favicon"] else None   # nel tema scuro l'app inverte le luci
+        s["favicon_dark"] = s["favicon"] in DARK if s["favicon"] else None   # in the dark theme the app inverts the lightness
         s["publisher"] = disp.get("publisher") or {"it": s["short_name"], "en": s["short_name"]}
         s["title"] = disp.get("title") or {"it": s.get("name"), "en": s.get("name")}
-    # macro-aree italiane: Abruzzo nel Centro per scelta dell'utente (2026-11-13), diversamente dalla ripartizione ISTAT
+    # Italian macro-areas: Abruzzo in the Centre by owner choice (2026-11-13), unlike the ISTAT grouping
     ima = m.setdefault("italy_macro_areas_legend", {})
     ima.update({
         "nord": {"it": "Nord Italia (Valle d'Aosta, Piemonte, Liguria, Lombardia, Trentino-Alto Adige, Veneto, Friuli-Venezia Giulia, Emilia-Romagna)",
@@ -224,7 +224,7 @@ def main():
             "en": "Grouping chosen for Peak Season: Abruzzo is in the Centre, while ISTAT places it in the South. It affects the app's legend and "
                   "maps; the calendars do not change, because the sources (WWF, Greenpeace, Altroconsumo, EUFIC, Orto da Coltivare) already give "
                   "the months for North, Centre and South by their own split, and no data comes from regional calendars of Abruzzo."}})
-    # regole di visualizzazione della scheda prodotto (revisione 2026-11-13: l'app le applica, il database le documenta)
+    # display rules of the product page (revision 2026-11-13: the app applies them, the database documents them)
     m["detail_display_rules"] = {
         "ripening": {
             "non_climacteric": {"hide": ["ripening_and_storage.ripening_management.speed_up"],
@@ -249,12 +249,12 @@ def main():
                   "keep away, how long it lasts at home, perishability. Home filters for carbon and water footprint use the levels and colours of "
                   "environmental_footprint_method.levels."}}
     efm = m.get("environmental_footprint_method")
-    if isinstance(efm, dict):                         # soglie di sustainability_rating (enrich_footprint.py) e colori per i filtri
+    if isinstance(efm, dict):                         # sustainability_rating thresholds (enrich_footprint.py) and colours for the filters
         efm["levels"] = {
             "low": {"label": {"it": "Bassa", "en": "Low"}, "color_hex": "#2E7D32", "carbon_kg_co2eq_per_kg": [None, 0.5], "water_l_per_kg": [None, 500]},
             "medium": {"label": {"it": "Media", "en": "Medium"}, "color_hex": "#F9A825", "carbon_kg_co2eq_per_kg": [0.5, 1], "water_l_per_kg": [500, 1500]},
             "high": {"label": {"it": "Alta", "en": "High"}, "color_hex": "#C62828", "carbon_kg_co2eq_per_kg": [1, None], "water_l_per_kg": [1500, None]}}
-    # fonti delle schede di aiuto (glossary.*.sources) e di altri elenchi {key, name, url}: stessi campi del riquadro
+    # sources of the help sheets (glossary.*.sources) and of other {key, name, url} lists: same fields as the box
     by_key = {s["key"]: s for s in m.get("official_sources") or []}
 
     def dress(o):

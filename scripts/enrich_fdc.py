@@ -1,9 +1,9 @@
-"""Nutrizione da USDA FoodData Central (SR Legacy) per gli alimenti senza scheda CREA/BDA-IEO.
+"""Nutrition from USDA FoodData Central (SR Legacy) for products without a CREA/BDA-IEO record.
 
-Fonte non italiana, dichiarata in data_basis. I carboidrati USDA sono "by difference" (fibra inclusa): qui si
-riportano i carboidrati disponibili = carboidrati - fibra, per coerenza con CREA.
-API: https://api.nal.usda.gov/fdc/v1/ (chiave FDC_API_KEY in .env, altrimenti DEMO_KEY).
-Uso:  python scripts/enrich_fdc.py
+Non-Italian source, declared in data_basis. USDA carbohydrates are "by difference" (fibre included): here
+available carbohydrates = carbohydrates - fibre are reported, for consistency with CREA.
+API: https://api.nal.usda.gov/fdc/v1/ (FDC_API_KEY in .env, otherwise DEMO_KEY).
+Usage:  python scripts/enrich_fdc.py
 """
 from common import CONFIG, DATA, RAW, cached_json, env, finalize_completeness, http_get, load_json, mark_enriched, save_json
 from enrich_nutrition import NAMES, NRV, claims
@@ -11,8 +11,8 @@ from enrich_nutrition import NAMES, NRV, claims
 TARGETS = {"cavolo_nero_black_kale": "Kale, raw", "cavolo_rapa_kohlrabi": "Kohlrabi, raw", "pastinaca_parsnip": "Parsnips, raw",
            "topinambur_jerusalem_artichoke": "Jerusalem-artichokes, raw"}
 _NEW = load_json(CONFIG / "new_items_2026_11_05.json")
-TARGETS.update({k: v["fdc"] for k, v in _NEW.items() if v.get("fdc")})  # aggiunti 2026-11-05
-APPROX = {k for k, v in _NEW.items() if v.get("fdc_q") == "approx"}   # voce USDA di un prodotto affine
+TARGETS.update({k: v["fdc"] for k, v in _NEW.items() if v.get("fdc")})  # added 2026-11-05
+APPROX = {k for k, v in _NEW.items() if v.get("fdc_q") == "approx"}   # USDA entry of a related product
 NUM = {"255": "water", "208": "kcal", "268": "kj", "203": "protein", "204": "fat", "205": "carbs_diff", "291": "fiber", "269": "sugars",
        "209": "starch", "307": "sodium", "306": "potassium", "301": "calcium", "304": "magnesium", "305": "phosphorus", "303": "iron",
        "309": "zinc", "312": "copper", "315": "manganese", "317": "selenium", "401": "vit_c", "404": "vit_b1", "405": "vit_b2",
@@ -22,7 +22,7 @@ KEY = env("FDC_API_KEY") or "DEMO_KEY"
 
 
 def local_food(desc):
-    """Stessa voce dalla copia locale di SR Legacy (data/raw/fdc_sr_legacy/sr_legacy.zip), se l'API non risponde."""
+    """Same entry from the local copy of SR Legacy (data/raw/fdc_sr_legacy/sr_legacy.zip), if the API does not respond."""
     import csv
     import io
     import zipfile

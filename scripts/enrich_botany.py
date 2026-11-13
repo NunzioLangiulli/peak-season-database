@@ -1,10 +1,10 @@
-"""Passo 1.3f - Botanica (EPPO nomi comuni -> sinonimi IT/EN) e pulizia parametri agronomici non validi della bozza.
+"""Step 1.3f - Botany (EPPO common names -> IT/EN synonyms) and clean-up of invalid agronomic parameters from the draft.
 
-- names.synonyms: nomi comuni IT/EN dalla API EPPO (cache data/raw/eppo_cache.json), escluso il nome principale.
-- botany.family: se assente, da WFO (famiglia nel 'placement') o GBIF per i funghi; le differenze con la bozza
-  restano segnalate nelle note (es. Chenopodiaceae in WFO vs Amaranthaceae APG IV).
-- agronomic_params della bozza con valori 0 (es. distanze 0 cm) -> null (valore non significativo).
-Uso:  python scripts/enrich_botany.py
+- names.synonyms: IT/EN common names from the EPPO API (cache data/raw/eppo_cache.json), excluding the main name.
+- botany.family: if missing, from WFO (family in the 'placement') or GBIF for mushrooms; differences from the draft
+  stay flagged in the notes (e.g. Chenopodiaceae in WFO vs Amaranthaceae APG IV).
+- draft agronomic_params with 0 values (e.g. 0 cm spacing) -> null (meaningless value).
+Usage:  python scripts/enrich_botany.py
 """
 from common import DATA, RAW, finalize_completeness, load_json, mark_enriched, save_json
 

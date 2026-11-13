@@ -1,18 +1,18 @@
-"""Passo 1.3e - Scarica 3-5 immagini con licenza libera per alimento in assets/images/<id>_NN.jpg.
+"""Step 1.3e - Downloads 3-5 freely licensed images per product into assets/images/<id>_NN.jpg.
 
-Fonti e licenze ammesse:
-- Wikimedia Commons (PD, CC0, CC BY, CC BY-SA): candidati della bozza utente + ricerca per nome scientifico
-- Unsplash (Unsplash License; API: attribuzione autore + chiamata a download_location come da linee guida)
+Allowed sources and licences:
+- Wikimedia Commons (PD, CC0, CC BY, CC BY-SA): candidates from the owner's draft + search by scientific name
+- Unsplash (Unsplash License; API: author attribution + call to download_location as per the guidelines)
 - Pixabay (Pixabay Content License)
-- iNaturalist (solo foto CC0 / CC BY / CC BY-SA, osservazioni "research grade") -> vista "plant_in_field"
-Le immagini vengono ridimensionate (lato lungo max 1600 px), salvate in JPEG q85 senza metadati EXIF; autore,
-licenza e URL sorgente in assets/images/_metadata.json. Il tipo di vista è assegnato in base alla query
-(da verificare visivamente; eliminare le foto non adatte e lanciare sync_images.py).
+- iNaturalist (CC0 / CC BY / CC BY-SA photos only, "research grade" observations) -> "plant_in_field" view
+Images are resized (long side max 1600 px), saved as JPEG q85 without EXIF metadata; author,
+licence and source URL in assets/images/_metadata.json. The view type is assigned based on the query
+(to be checked visually; delete unsuitable photos and run sync_images.py).
 
-Ripresa automatica: data/raw/images_log.json registra cosa è già stato fatto.
-Uso:  python scripts/download_images.py [--max-per-item 4] [--unsplash-budget 45] [--only id1,id2]
-Nota: l'API Unsplash in modalità demo consente 50 richieste/ora: lo script si ferma col budget indicato e
-alla riesecuzione riprende dagli alimenti mancanti.
+Automatic resume: data/raw/images_log.json records what has already been done.
+Usage:  python scripts/download_images.py [--max-per-item 4] [--unsplash-budget 45] [--only id1,id2]
+Note: the Unsplash API in demo mode allows 50 requests/hour: the script stops at the given budget and
+resumes from the missing products when re-run.
 """
 import io
 import re
@@ -40,7 +40,7 @@ def arg(name, default):
 
 def save_image(content, iid, n):
     im = Image.open(io.BytesIO(content))
-    if im.mode in ("RGBA", "LA", "P"):                 # PNG con trasparenza -> sfondo bianco
+    if im.mode in ("RGBA", "LA", "P"):                 # PNG with transparency -> white background
         im = im.convert("RGBA")
         bg = Image.new("RGB", im.size, "white")
         bg.paste(im, mask=im.split()[3])
@@ -109,7 +109,7 @@ def unsplash_track(p):
 
 
 def pixabay(q, category, must):
-    """must = nome dell'alimento che deve comparire tra i primi 2 tag della foto (evita risultati fuori tema)."""
+    """must = product name that must appear among the photo's first 2 tags (avoids off-topic results)."""
     if not PIXABAY:
         return []
     r = SESSION.get("https://pixabay.com/api/", params={"key": PIXABAY, "q": q, "image_type": "photo", "category": category,
@@ -196,7 +196,7 @@ def main():
                 continue
             if src == "commons":
                 take = cands[:2]
-                # se il candidato della bozza era una sezione, mantieni la vista indicata dalla bozza
+                # if the draft candidate was a cross-section, keep the view given by the draft
                 views = {d["source_url"].split("/wiki/")[-1].replace("_", " "): d.get("view_type")
                          for d in legacy.get(iid, {}).get("images.image_details", [])}
             else:
@@ -218,7 +218,7 @@ def main():
                     st["errors"].append(f"{src} download: {str(e)[:120]}")
             st["done"].append(src)
             time.sleep(0.3)
-        # rinforzo: se ci sono meno di 3 foto, seconda ricerca su Commons per nome inglese
+        # reinforcement: if there are fewer than 3 photos, a second Commons search by English name
         if "commons2" not in st["done"] and len([k for k in meta if k.startswith(iid + "_") and (IMAGES / k).exists()]) < 3:
             try:
                 for c in [c for c in commons_search(f"{en} {kind}", 10) if c["source_url"] not in used_urls][:3 - len(

@@ -1,11 +1,11 @@
-"""Unisce alimenti che l'utente ha deciso di non tenere separati (decisione del 2026-11-05).
+"""Merges products that the owner decided not to keep separate (decision of 2026-11-05).
 
-- bietola_da_taglio_leaf_beet -> bietola_da_coste_swiss_chard ("Bietola"): stessa specie e stessa scheda CREA/BDA
-  (005080 / 307); da coste e da taglio differiscono per forma di raccolta e uso in cucina, non per i dati.
-  Si tiene l'id della bietola da coste (usato da configurazioni, testi e immagini); la scheda unita copre entrambe
-  le forme (nomi alternativi, testi in scripts/texts/block_01.json, varietà, immagini).
-La scheda tolta è archiviata in data/merged_items_archive.json; i riferimenti da altre schede sono riallineati.
-Uso:  python scripts/merge_items.py   (dopo apply_texts.py; idempotente)
+- bietola_da_taglio_leaf_beet -> bietola_da_coste_swiss_chard ("Bietola"): same species and same CREA/BDA record
+  (005080 / 307); chard and leaf beet differ in how they are harvested and used in cooking, not in the data.
+  The chard id is kept (used by configurations, texts and images); the merged record covers both
+  forms (alternative names, texts in scripts/texts/block_01.json, varieties, images).
+The removed record is archived in data/merged_items_archive.json; references from other records are realigned.
+Usage:  python scripts/merge_items.py   (after apply_texts.py; idempotent)
 """
 import json
 
@@ -30,7 +30,7 @@ def replace_refs(o, old, new):
         if old not in o:
             return [replace_refs(x, old, new) for x in o]
         out = []
-        for v in (new if x == old else x for x in o):  # lista di id: sostituisce e toglie il doppione
+        for v in (new if x == old else x for x in o):  # list of ids: replaces and drops the duplicate
             if v not in out:
                 out.append(v)
         return out
@@ -51,7 +51,7 @@ def main():
         arch["items"][old] = {"merged_into": m["into"], "item": src}
         dst["names"] = m["names"]
         dst["botany"]["scientific_name"] = m["scientific_name"]
-        # varietà: unione
+        # varieties: union
         iv, sv = dst["italian_varieties_and_territories"], src["italian_varieties_and_territories"]
         names = {v["name"] for v in iv.get("varieties_verification") or []}
         iv["varieties_verification"] = (iv.get("varieties_verification") or []) + [v for v in sv.get("varieties_verification") or [] if v["name"] not in names]

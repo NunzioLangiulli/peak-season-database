@@ -1,20 +1,20 @@
-"""Valida data/database.json: schema formale (data/schema.json) + controlli logici.
+"""Validates data/database.json: formal schema (data/schema.json) + logical checks.
 
-Uso:  python scripts/validate_db.py [--strict] [--report data/validation_report.json]
-  --strict  tratta anche gli avvisi come errori (per il rilascio finale)
+Usage:  python scripts/validate_db.py [--strict] [--report data/validation_report.json]
+  --strict  also treats warnings as errors (for the final release)
 
-Controlli:
-  E = errore (exit code 1)   W = avviso
-  E  conformità a JSON Schema 2020-12 (enum, 12 mesi, traduzioni IT/EN non vuote, campi non previsti, ...)
-  E  ID univoci; nome file immagini = <id>_NN.jpg; file della galleria esistenti; primaria in galleria;
-     image_details allineati alla galleria
-  E  keep_away_from verso ID esistenti e diversi da sé stessi
-  E  missing_fields coerente con i campi realmente nulli
-  E  intervalli min <= max (temperatura, umidità, giorni di conservazione)
-  E  is_complete = true solo senza campi mancanti né da verificare
-  W  somma acqua+macro > 105 g/100 g; kcal incoerenti con i macronutrienti (> 25% di scarto)
-  W  foto presenti su disco ma non in galleria (lanciare sync_images.py)
-  W  ID diverso da <nome_it>_<name_en> normalizzati
+Checks:
+  E = error (exit code 1)   W = warning
+  E  compliance with JSON Schema 2020-12 (enums, 12 months, non-empty IT/EN translations, unexpected fields, ...)
+  E  unique IDs; image file name = <id>_NN.jpg; gallery files exist; main photo in the gallery;
+     image_details aligned with the gallery
+  E  keep_away_from pointing to existing IDs other than itself
+  E  missing_fields consistent with the actually null fields
+  E  min <= max ranges (temperature, humidity, storage days)
+  E  is_complete = true only with no missing or to-verify fields
+  W  water+macro sum > 105 g/100 g; kcal inconsistent with the macronutrients (> 25% difference)
+  W  photos on disk but not in the gallery (run sync_images.py)
+  W  ID different from normalised <nome_it>_<name_en>
 """
 import json
 import re
@@ -33,7 +33,7 @@ def slug(s):
 
 def main():
     strict = "--strict" in sys.argv
-    raw = load_json(DATA / "database.json", raw=True)          # il file così com'è, con i riferimenti al corpus
+    raw = load_json(DATA / "database.json", raw=True)          # the file as stored, with the corpus references
     schema = load_json(DATA / "schema.json")
     errors, warnings = [], []
 
@@ -45,7 +45,7 @@ def main():
             path = raw["items"][idx].get("id", idx).__str__() + ":" + "/".join(path.split("/")[2:])
         errors.append(f"[schema] {path}: {e.message[:200]}")
 
-    # corpus condiviso: ogni riferimento deve esistere, ogni voce deve essere usata
+    # shared corpus: every reference must exist, every entry must be used
     corpus = raw.get("shared_descriptions_corpus") or {}
     used = set()
 
@@ -70,7 +70,7 @@ def main():
         for e in errors[:40]:
             print("  E", e)
         sys.exit(1)
-    db = load_json(DATA / "database.json")                     # testi completi per i controlli logici
+    db = load_json(DATA / "database.json")                     # full texts for the logical checks
 
     items = db.get("items", [])
     ids = [it.get("id") for it in items]
@@ -124,7 +124,7 @@ def main():
                 errors.append(f"{iid}: missing_fields elenca campi non nulli: {sorted(listed - real)[:6]}")
             if dc["is_complete"] and (real or dc.get("fields_pending_verification")):
                 errors.append(f"{iid}: is_complete=true ma ci sono campi mancanti o da verificare")
-            # --- plausibilità nutrizionale
+            # --- nutritional plausibility
             n = it["nutrition_and_sustainability"]
             m = n["macros_per_100g"]
             parts = [n["water_percentage"], m["carbs_g"], m["proteins_g"], m["fats_g"], m["fiber_g"]]
@@ -135,11 +135,11 @@ def main():
                 if calc > 5 and abs(calc - n["kcal_per_100g"]) / max(calc, n["kcal_per_100g"]) > 0.25:
                     warnings.append(f"{iid}: kcal dichiarate {n['kcal_per_100g']} vs calcolate da macro ~{calc:.0f}")
             # --- ID
-            # l'ID è stabile (usato nei nomi file): basta che inizi con la prima parola del nome IT normalizzato
+            # the ID is stable (used in file names): it only needs to start with the first word of the normalised IT name
             first = slug(re.split(r"[\s(/,]", it["names"]["it"])[0])
             if not iid.startswith(first[:5]):
                 warnings.append(f"{iid}: ID poco coerente con il nome IT '{it['names']['it']}'")
-        except (KeyError, TypeError) as e:  # struttura rotta: già segnalata dallo schema
+        except (KeyError, TypeError) as e:  # broken structure: already reported by the schema
             errors.append(f"{iid}: struttura non valutabile ({type(e).__name__}: {e})")
 
     orphan = sorted(f for f in disk - referenced if re.match(r"^[a-z0-9_]+_\d{2}\.jpg$", f))

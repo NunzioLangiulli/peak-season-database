@@ -1,10 +1,10 @@
-"""Importa le immagini scaricate a mano dall'utente (assets/images/_manual/), elencate in assets/images/_manual_list.json.
+"""Imports the images downloaded by hand by the owner (assets/images/_manual/), listed in assets/images/_manual_list.json.
 
-Per ogni file presente: lo converte in JPEG (sfondo bianco per le trasparenze), lo riduce a 1600 px al massimo, lo
-salva come <id>_NN.jpg con il primo numero libero dell'alimento e ne scrive i metadati (autore, licenza, URL d'origine,
-view_type) presi dalla candidata corrispondente; poi sposta l'originale in _manual/importate/.
-Poi lanciare sync_images.py --renumber.
-Uso:  python scripts/import_manual_images.py [--dry-run]
+For each file present: converts it to JPEG (white background for transparency), shrinks it to at most 1600 px,
+saves it as <id>_NN.jpg with the product's first free number and writes its metadata (author, licence, source URL,
+view_type) taken from the matching candidate; then moves the original to _manual/importate/.
+Then run sync_images.py --renumber.
+Usage:  python scripts/import_manual_images.py [--dry-run]
 """
 import shutil
 import sys

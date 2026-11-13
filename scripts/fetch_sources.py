@@ -1,15 +1,15 @@
-"""Passo 1.1 - Scarica e mette in cache (data/raw/) gli elenchi master delle fonti.
+"""Step 1.1 - Downloads and caches (data/raw/) the master lists of the sources.
 
-Uso:  python scripts/fetch_sources.py [--force]
+Usage:  python scripts/fetch_sources.py [--force]
 
-Produce:
-  data/raw/crea_list.json          nome alimento -> codice CREA (832 voci)
-  data/raw/bda_codes.json          nome alimento -> codice BDA-IEO (~1100 voci)
-  data/raw/eufic_fvlist.json       dati grezzi mappa EUFIC {Fruit|Vegetable: {nome: [[mese, paese], ...]}}
-  data/raw/altroconsumo_items.json nome -> URL scheda Altroconsumo
-  data/raw/greenpeace_months.json  "categoria:nome" -> mesi (dal PDF locale)
-  data/raw/sitemap_odc.json        URL schede Orto da Coltivare (ortaggi, frutti, erbe, guide)
-  data/raw/sitemap_mypt.json       URL My-PersonalTrainer
+Produces:
+  data/raw/crea_list.json          product name -> CREA code (832 entries)
+  data/raw/bda_codes.json          product name -> BDA-IEO code (~1100 entries)
+  data/raw/eufic_fvlist.json       raw EUFIC map data {Fruit|Vegetable: {name: [[month, country], ...]}}
+  data/raw/altroconsumo_items.json name -> Altroconsumo sheet URL
+  data/raw/greenpeace_months.json  "category:name" -> months (from the local PDF)
+  data/raw/sitemap_odc.json        Orto da Coltivare sheet URLs (vegetables, fruit, herbs, guides)
+  data/raw/sitemap_mypt.json       My-PersonalTrainer URLs
 """
 import collections
 import html
@@ -81,13 +81,13 @@ def greenpeace():
                 cur = "frutta"; continue
             if s.startswith("Verdura"):
                 cur = "verdura"; continue
-            if s.startswith("Attenzione"):                 # box di testo a fine pagina
+            if s.startswith("Attenzione"):                 # text box at the end of the page
                 cur = None
                 continue
             if not s or not cur:
                 continue
             if (line.startswith(" ") or s[0].islower()) and prev and len(s.split()) == 1:
-                # riga a capo nel PDF, es. "Cavolo" / "   cappuccio"
+                # line wrapped in the PDF, e.g. "Cavolo" / "   cappuccio"
                 gp[(cur, prev)].discard(m)
                 prev = prev + " " + s
                 gp[(cur, prev)].add(m)

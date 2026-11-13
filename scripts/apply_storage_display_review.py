@@ -1,9 +1,9 @@
-"""Revisione della sezione "Dove Conservarlo" (2026-11-13, richiesta dell'utente). Idempotente.
-Applica al database le regole ora scritte in apply_home_storage.py senza rigenerare tutto home_storage:
-- etichetta room_temperature: "A Temperatura Ambiente" / "At Room Temperature" (uniforme alle altre);
-- consiglio (tip): niente "Una volta tagliato va sempre in frigorifero" per il frigorifero e per i prodotti senza luogo;
-  niente frasi che ripetono storage_instructions (mostrato subito sopra nell'app). Tip vuoto = null.
-Uso:  python scripts/apply_storage_display_review.py   (dopo apply_home_storage.py; poi ux_terminology e title_case_labels)
+"""Review of the "Where to Store It" section (2026-11-13, owner request). Idempotent.
+Applies to the database the rules now written in apply_home_storage.py without regenerating the whole home_storage:
+- room_temperature label: "A Temperatura Ambiente" / "At Room Temperature" (consistent with the others);
+- tip: no "Once cut it always goes in the fridge" for the fridge and for products without a location;
+  no sentences repeating storage_instructions (shown right above in the app). Empty tip = null.
+Usage:  python scripts/apply_storage_display_review.py   (after apply_home_storage.py; then ux_terminology and title_case_labels)
 """
 from apply_home_storage import LABEL, TIPS, home_tip
 from enrich_chilling import set_na
@@ -30,7 +30,7 @@ def main():
             n["tip"] += 1
             n["tip_removed"] += new is None
             hs["tip"] = new
-            if new is None:                                   # campo vuoto per scelta, non dato mancante
+            if new is None:                                   # field empty by choice, not missing data
                 set_na(it, ["ripening_and_storage.home_storage.tip"])
         finalize_completeness(it)
     m = db["metadata"].get("home_storage_legend") or {}

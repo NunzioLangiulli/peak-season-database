@@ -1,11 +1,11 @@
-"""Passo 1.1 - Genera data/items_index.json (indice master degli alimenti).
+"""Step 1.1 - Generates data/items_index.json (master index of the products).
 
-Unisce i 91 alimenti della bozza utente (data/_backup_bozza_2026-11-04/database.json) con i nuovi
-alimenti selezionati in scripts/config/catalog.json e, per ciascuno, verifica e registra le voci
-REALI di ogni fonte (codici CREA/BDA-IEO, schede UC Davis, righe ODC/WWF/Greenpeace/BioSuisse,
-chiavi EUFIC, schede Altroconsumo/ODC/My-PersonalTrainer, codice EPPO, ID WFO).
+Merges the 91 products of the owner's draft (data/_backup_bozza_2026-11-04/database.json, not published) with the new
+products selected in scripts/config/catalog.json and, for each one, checks and records the REAL
+entries of every source (CREA/BDA-IEO codes, UC Davis sheets, ODC/WWF/Greenpeace/BioSuisse rows,
+EUFIC keys, Altroconsumo/ODC/My-PersonalTrainer sheets, EPPO code, WFO ID).
 
-Uso:  python scripts/fetch_sources.py   (una volta, popola data/raw/)
+Usage:  python scripts/fetch_sources.py   (once, fills data/raw/)
       python scripts/build_index.py
 """
 import collections
@@ -46,8 +46,8 @@ def eppo_names(code):
 
 
 def eppo_lookup(sci, override=None):
-    """name2codes di EPPO accetta solo il nome preferito esatto. Se il catalogo indica un codice
-    (override), il codice viene VERIFICATO leggendo i nomi dall'API: se non esiste -> not_found."""
+    """EPPO name2codes accepts only the exact preferred name. If the catalogue gives a code
+    (override), the code is VERIFIED by reading the names from the API: if it does not exist -> not_found."""
     if not EPPO_KEY:
         return {"status": "no_api_key"}
     hdr = {"X-Api-Key": EPPO_KEY}
@@ -86,7 +86,7 @@ def wfo_lookup(sci):
         except Exception as e:  # noqa: BLE001
             return {"status": "error", "error": str(e)[:120]}
         cands = res.get("candidates") or []
-        # preferisci: match esatto > nome accettato (placement senza '$', cioè non sinonimo) > autore Linneo
+        # prefer: exact match > accepted name (placement without '$', i.e. not a synonym) > Linnaeus as author
         accepted = [x for x in cands if "$" not in x.get("placement", "") and x.get("placement")]
         linn = [x for x in accepted if re.search(r"\bL\.(\s|$)|\(L\.\)", x.get("full_name_plain", ""))]
         cand = res.get("match") or (linn or accepted or cands or [None])[0]
@@ -212,7 +212,7 @@ def main():
         if c.get("altro"):
             chk(c["altro"] in altro, f"scheda Altroconsumo '{c['altro']}' assente")
         src["altroconsumo_url"] = altro.get(c.get("altro")) if c.get("altro") else None
-        # URL schede: override curato nel catalogo (verificato sulla sitemap) oppure ricerca automatica per parola chiave
+        # sheet URLs: curated override in the catalogue (checked against the sitemap) or automatic keyword search
         if "odc_url" in c:
             u = "https://www.ortodacoltivare.it" + c["odc_url"] if c["odc_url"] else None
             if u:

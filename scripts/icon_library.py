@@ -1,12 +1,12 @@
-"""Libreria delle icone dell'app Peak Season (SVG 24x24, monocromatiche).
+"""Library of the Peak Season app icons (24x24 SVG, monochrome).
 
-Ogni icona è il contenuto di un <svg viewBox="0 0 24 24">: si colora con il
-colore del tema (fill="currentColor" / ColorFilter in Flutter). Le due
-tonalità di verde si ottengono con fill-opacity.
+Each icon is the content of an <svg viewBox="0 0 24 24">: it is coloured with the
+theme colour (fill="currentColor" / ColorFilter in Flutter). The two
+shades of green are obtained with fill-opacity.
 
-- APPROVED: icone scelte dall'utente (scritte in app/assets/icons/ui/<nome>.svg)
-- ROUND2: icone da rifare o da scegliere (tavola schema_icone_5.png)
-Uso: python scripts/icon_library.py   → esporta le approvate e genera tavola + ICONE.md
+- APPROVED: icons chosen by the owner (written to app/assets/icons/ui/<name>.svg)
+- ROUND2: icons to redo or to choose (sheet schema_icone_5.png)
+Usage: python scripts/icon_library.py   → exports the approved ones and generates sheet + ICONE.md
 """
 from pathlib import Path
 
@@ -22,7 +22,7 @@ def season(name):
     return s[s.index(">") + 1: s.rindex("</svg>")]
 
 
-# --- Tavola 2: da rifare / da scegliere --------------------------------------
+# --- Sheet 2: to redo / to choose ------------------------------------------
 LENS_EYE = ('<path fill-rule="evenodd" d="M10 3a7 7 0 015.6 11.2l5.1 5.1-1.4 1.4-5.1-5.1A7 7 0 1110 3zm0 2a5 5 0 100 10 5 5 0 000-10z"/>'
             '<path fill-rule="evenodd" d="M10 7.2c-2 0-3.5 1.4-4.1 2.8.6 1.4 2.1 2.8 4.1 2.8s3.5-1.4 4.1-2.8c-.6-1.4-2.1-2.8-4.1-2.8zm0 1.4a1.4 1.4 0 110 2.8 1.4 1.4 0 010-2.8z"/>')
 
@@ -36,10 +36,10 @@ HILLS = ('<defs><clipPath id="front"><path d="M1 20c3.6-5.4 7.4-7.6 11.2-7.2 3.7
          + "".join(f'<rect x="18" y="0.6" width="1" height="1.6" rx=".5" transform="rotate({a} 18.5 5)"/>' for a in range(0, 360, 45)))
 
 def _sustainability(stem_w=1.1, r=6.2, deg0=-205, deg1=-140, L=9.6, Wd=4.6):
-    """Tre foglie con stelo ad arco (effetto frecce in cerchio) e nervatura
-    centrale in un verde più chiaro: la nervatura è un taglio nella foglia
-    riempito con lo stesso colore a opacità ridotta, quindi si vede su
-    qualsiasi sfondo e con qualsiasi colore del tema."""
+    """Three leaves with an arched stem (circular-arrows effect) and a central
+    vein in a lighter green: the vein is a cut in the leaf filled with
+    the same colour at reduced opacity, so it shows on
+    any background and with any theme colour."""
     import math
     cx = cy = 12
     a0, a1 = math.radians(deg0), math.radians(deg1)
@@ -57,7 +57,7 @@ def _sustainability(stem_w=1.1, r=6.2, deg0=-205, deg1=-140, L=9.6, Wd=4.6):
         tip = P(1, 1.0)
         leaf = (f"M{ex:.2f},{ey:.2f}C{f(P(.25, Wd))} {f(P(.85, Wd * .75))} {f(tip)}"
                 f"C{f(P(.85, -Wd * .45))} {f(P(.25, -Wd * .7))} {ex:.2f},{ey:.2f}Z")
-        # nervatura: sottile lente lungo l'asse della foglia (dalla base all'80%)
+        # vein: thin lens along the leaf axis (from the base to 80%)
         rib = (f"M{f(P(.12, .1))}Q{f(P(.5, .95))} {f(P(.82, .85))}"
                f"Q{f(P(.5, .3))} {f(P(.12, -.25))}Z")
         out.append(f'<g transform="rotate({rot} 12 12)"><path d="{stem}"/>'
@@ -65,8 +65,8 @@ def _sustainability(stem_w=1.1, r=6.2, deg0=-205, deg1=-140, L=9.6, Wd=4.6):
     return "".join(out)
 
 
-# --- Icone approvate (scelte nella tavola 1) --------------------------------
-# nome file: (elemento, scelta, dove si usa, svg)
+# --- Approved icons (chosen on sheet 1) -------------------------------------
+# file name: (element, choice, where it is used, svg)
 APPROVED = {
     "info": ("Informazioni Aggiuntive", "I1 · Cerchio con i (2026-11-12)", "Scheda → titolo Informazioni Aggiuntive",
                 '<path d="M12 2a10 10 0 110 20 10 10 0 010-20zm-1.2 8.2v7.6h2.4v-7.6zm1.2-4a1.5 1.5 0 100 3 1.5 1.5 0 000-3z"/>'),
@@ -132,14 +132,14 @@ DOP_SRC = ROOT / "fonti_locali" / "loghi_fonti" / "originali" / "Logo_es_DOP_UE.
 
 
 def dop_green_svg():
-    """Logo ufficiale DOP (livello "DOP" del file UE) senza la scritta
-    circolare, rosso → verde scuro, giallo → verde chiarissimo."""
+    """Official PDO logo ("DOP" layer of the EU file) without the circular
+    lettering, red → dark green, yellow → very light green."""
     import re
     t = DOP_SRC.read_text(encoding="utf-8")
     body = t[t.index('<g id="DOP">'): t.rindex("</svg>")]
     els = [m.group(0) for m in re.finditer(r"<(?:path|polygon)[^>]*/>", body, re.S)]
     classes = [re.search(r'class="([^"]*)"', e).group(1) for e in els]
-    last_shape = max(i for i, c in enumerate(classes) if c == "st11")  # dopo: lettere della scritta
+    last_shape = max(i for i, c in enumerate(classes) if c == "st11")  # after it: letters of the lettering
     keep = els[: last_shape + 1]
     inner = "".join(e.replace('class="st10"', 'fill="#2E7D32"').replace('class="st11"', 'fill="#E3F1DC"') for e in keep)
     return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170.8 170.9">{inner}</svg>'
@@ -155,9 +155,9 @@ def write_approved():
     (UI / "dop_igp.svg").write_text(dop_green_svg(), encoding="utf-8")
     for name, (_, _, _, body) in APPROVED.items():
         (UI / f"{name}.svg").write_text(
-            # currentColor: l'app passa il colore del tema senza appiattire le tonalità (fill-opacity)
+            # currentColor: the app passes the theme colour without flattening the shades (fill-opacity)
             f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">'
-            # (le maschere restano bianche/nere: servono a ritagliare, es. carrello con campanella)
+            # (masks stay white/black: they are used for clipping, e.g. cart with bell)
             f'{body if "<mask" in body else body.replace('fill="#fff"', 'fill="currentColor"')}</svg>', encoding="utf-8")
 
 

@@ -1,8 +1,8 @@
-"""Applica le classi di produzione di etilene corrette sui capitoli di USDA HB66 (config/ethylene_curated.json),
-ricalcola keep_away_from per tutti gli alimenti sensibili (produttori di classe alta o superiore) e aggiunge la nota
-della fonte a compatibility_notes. Idempotente.
-Uso:  python scripts/apply_ethylene_curated.py   (dopo apply_hb66_curated.py; poi apply_texts.py, che rigenera
-      le note, e di nuovo questo script per riaggiungere le note curate)
+"""Applies the ethylene production classes corrected from the USDA HB66 chapters (config/ethylene_curated.json),
+recomputes keep_away_from for all sensitive products (producers of high class or above) and adds the source
+note to compatibility_notes. Idempotent.
+Usage:  python scripts/apply_ethylene_curated.py   (after apply_hb66_curated.py; then apply_texts.py, which regenerates
+      the notes, and this script again to re-add the curated notes)
 """
 from common import CONFIG, DATA, finalize_completeness, load_json, mark_enriched, save_json
 

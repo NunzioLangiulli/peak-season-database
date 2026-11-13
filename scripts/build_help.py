@@ -1,14 +1,14 @@
-"""Sistema di aiuto dell'app (icona "?") e vocabolario bilingue dei codici.
+"""App help system ("?" icon) and bilingual vocabulary of the codes.
 
-Scrive nei metadati:
-- metadata.vocabulary: per ogni campo a valori codificati, l'etichetta IT/EN di ogni codice (es. "climaterico" ->
-  "Climaterico"/"Climacteric") e l'eventuale voce di glossario. Così l'app può essere tutta in italiano o tutta in inglese.
-- metadata.glossary: le voci di spiegazione (scripts/config/glossary.json), con le fonti risolte dal registro.
-- metadata.field_help: percorso del campo (relativo alla scheda) -> voci di glossario da aprire con il "?".
-E in ogni scheda:
-- help_refs: rimandi che dipendono dal contenuto dell'alimento (es. favismo per la fava, glutine per i cereali,
-  climaterico per il pomodoro), con i campi in cui compaiono.
-Uso:  python scripts/build_help.py   (dopo localize_fields.py)
+Writes to the metadata:
+- metadata.vocabulary: for every field with coded values, the IT/EN label of each code (e.g. "climaterico" ->
+  "Climaterico"/"Climacteric") and the glossary entry if any. This way the app can be entirely in Italian or entirely in English.
+- metadata.glossary: the explanation entries (scripts/config/glossary.json), with sources resolved from the register.
+- metadata.field_help: field path (relative to the record) -> glossary entries to open with the "?".
+And in every record:
+- help_refs: references depending on the product's content (e.g. favism for broad beans, gluten for cereals,
+  climacteric for tomato), with the fields where they appear.
+Usage:  python scripts/build_help.py   (after localize_fields.py)
 """
 import re
 
@@ -148,7 +148,7 @@ def main():
     m["vocabulary"] = VOCAB
     m["field_help"] = FIELD_HELP
     leg = m.get("seasonality_states_legend", {})
-    if "peak_season" in leg:   # testo della bozza ("massima qualita' nutrizionale") non supportato dalle fonti
+    if "peak_season" in leg:   # draft text ("maximum nutritional quality") not supported by the sources
         leg["peak_season"]["it"] = "Piena stagione (mesi centrali di un periodo in cui tutte le fonti concordano)"
         leg["peak_season"]["en"] = "Peak season (central months of a period on which all sources agree)"
     m["postharvest_method"]["en"] = (

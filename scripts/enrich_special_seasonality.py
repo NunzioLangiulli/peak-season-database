@@ -1,19 +1,19 @@
-"""Stagionalità italiana per gli alimenti che i calendari di stagione non riportano (2026-11-05). Idempotente.
+"""Italian seasonality for products that the seasonal calendars do not list (2026-11-05). Idempotent.
 
-- Pesca noce: i calendari italiani (WWF, Greenpeace, Altroconsumo, Orto da Coltivare) riportano solo "pesca", senza
-  distinguere la pesca noce (nettarina), che è la stessa specie con buccia liscia. Si usa la stagionalità della pesca
-  del database, dichiarando la derivazione. Conferme: IGP "Pesca e Nettarina di Romagna" (eAmbrosia) tutela insieme
-  pesche e nettarine; EUFIC, dove elenca la nettarina (Francia, Spagna), le dà gli stessi mesi della pesca.
-- Tartufi: periodi di raccolta della Legge 16 dicembre 1985, n. 752, art. 6 (data/raw/national_calendars/
-  legge_752_1985_art6.html): Tuber magnatum 1 ottobre-31 dicembre; Tuber melanosporum 15 novembre-15 marzo.
-  Le regioni possono variare il calendario con ordinanza: è il calendario nazionale. I mesi coperti solo per metà
-  sono resi come inizio (primizie) o fine stagione (end_of_season). Raccolta e commercio del fresco sono vietati
-  fuori periodo (art. 6), quindi i mesi esterni sono fuori stagione.
-- Ovolo buono: Provincia di Cuneo, schede funghi (data/raw/national_calendars/provincia_cuneo_amanita_caesarea.html):
-  "presente in estate ed inizio autunno". Resa dichiarata: giugno inizio, luglio-settembre di stagione, ottobre fine.
-  Unica fonte istituzionale trovata (Piemonte), applicata a tutte le macro-aree e dichiarata come tale.
-Nessun picco (picco solo dove almeno due fonti concordano).
-Uso:  python scripts/enrich_special_seasonality.py   (dopo enrich_seasonality.py)
+- Nectarine: the Italian calendars (WWF, Greenpeace, Altroconsumo, Orto da Coltivare) only list "peach", without
+  separating the nectarine, which is the same species with smooth skin. The database's peach seasonality is used,
+  declaring the derivation. Confirmations: the "Pesca e Nettarina di Romagna" PGI (eAmbrosia) protects peaches and
+  nectarines together; EUFIC, where it lists nectarine (France, Spain), gives it the same months as peach.
+- Truffles: harvest periods of Law no. 752 of 16 December 1985, art. 6 (data/raw/national_calendars/
+  legge_752_1985_art6.html): Tuber magnatum 1 October-31 December; Tuber melanosporum 15 November-15 March.
+  Regions may change the calendar by ordinance: this is the national calendar. Months only half covered
+  are rendered as early (primizie) or end of season (end_of_season). Harvesting and selling fresh truffles is forbidden
+  outside the period (art. 6), so the other months are out of season.
+- Caesar's mushroom: Province of Cuneo, mushroom sheets (data/raw/national_calendars/provincia_cuneo_amanita_caesarea.html):
+  "presente in estate ed inizio autunno". Declared rendering: June early, July-September in season, October end.
+  The only institutional source found (Piedmont), applied to all macro-areas and declared as such.
+No peak (peak only where at least two sources agree).
+Usage:  python scripts/enrich_special_seasonality.py   (after enrich_seasonality.py)
 """
 from common import DATA, finalize_completeness, load_json, mark_enriched, save_json
 

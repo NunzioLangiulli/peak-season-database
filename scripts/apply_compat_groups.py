@@ -1,9 +1,9 @@
-"""Gruppo di conservazione compatibile (USDA HB66, Table 1 'Compatible fresh fruits and vegetables during 7-day storage',
+"""Compatible storage group (USDA HB66, Table 1 'Compatible fresh fruits and vegetables during 7-day storage',
 Thompson et al. 1996) -> ripening_and_storage.storage_compatibility.
 
-compatible_with = alimenti dello stesso gruppo (stessa temperatura/umidita'), esclusi gli abbinamenti sconsigliati per
-l'etilene (keep_away_from in entrambe le direzioni). Prodotti secchi e non elencati: null (non pertinente).
-Uso:  python scripts/apply_compat_groups.py   (dopo apply_hb66_curated.py, che ricalcola keep_away_from)
+compatible_with = products of the same group (same temperature/humidity), excluding pairings discouraged because of
+ethylene (keep_away_from in both directions). Dried and unlisted products: null (not applicable).
+Usage:  python scripts/apply_compat_groups.py   (after apply_hb66_curated.py, which recomputes keep_away_from)
 """
 from common import DATA, ROOT, finalize_completeness, load_json, mark_enriched, save_json
 from enrich_chilling import set_na

@@ -1,8 +1,8 @@
-"""Vitamine/minerali da USDA FDC SR Legacy quando CREA e BDA-IEO non li riportano (lista vuota).
+"""Vitamins/minerals from USDA FDC SR Legacy when CREA and BDA-IEO do not report them (empty list).
 
-Esempi: CREA 005210 'Cavolo verza, cruda' e 007330 'Peschenoci, fresche' hanno solo macronutrienti; CREA 006010
-'pleurotes' non ha vitamine. Codice FDC da enrich_bioactives.FDC. Fonte dichiarata in ogni voce (source: usda_fdc).
-Uso:  python scripts/fill_micros_fdc.py   (dopo enrich_nutrition / enrich_fdc)
+Examples: CREA 005210 'Cavolo verza, cruda' and 007330 'Peschenoci, fresche' only have macronutrients; CREA 006010
+'pleurotes' has no vitamins. FDC code from enrich_bioactives.FDC. Source declared in each entry (source: usda_fdc).
+Usage:  python scripts/fill_micros_fdc.py   (after enrich_nutrition / enrich_fdc)
 """
 import csv
 import io

@@ -1,8 +1,8 @@
-"""Allinea le liste di vitamine/minerali citate nei testi 'health_benefits_and_curiosities' (scripts/texts/block_*.json, campo hb)
-ai claim nutrizionali calcolati (Reg. CE 1924/2006): "ricco di" = 'Ad alto contenuto di', "fonte di" = 'Fonte di'.
-Riscrive solo la frase con "ricc... di" / "high in"; il resto del testo resta invariato. Le frasi originali vanno in
+"""Aligns the lists of vitamins/minerals cited in the 'health_benefits_and_curiosities' texts (scripts/texts/block_*.json, hb field)
+with the computed nutrition claims (Reg. (EC) 1924/2006): "ricco di" = 'Ad alto contenuto di', "fonte di" = 'Fonte di'.
+Rewrites only the sentence with "ricc... di" / "high in"; the rest of the text stays unchanged. The original sentences go to
 draft_legacy_values (texts_hb_before_sync).
-Uso:  python scripts/sync_nutrient_mentions.py [--apply]   (senza --apply mostra solo l'anteprima)
+Usage:  python scripts/sync_nutrient_mentions.py [--apply]   (without --apply it only shows a preview)
 """
 import glob
 import re
@@ -25,7 +25,7 @@ def join(xs, conj):
 
 
 def lists(cl, lang):
-    names = {k.lower(): v for k, v in (IT_NAME if lang == "it" else EN_NAME).items()}   # claim con iniziali maiuscole
+    names = {k.lower(): v for k, v in (IT_NAME if lang == "it" else EN_NAME).items()}   # claims with Title Case initials
     hi_p, so_p = ("ad alto contenuto di ", "fonte di ") if lang == "it" else ("high ", "source of ")
     cl = [c.lower() for c in cl]
     hi = [names[c[len(hi_p):]] for c in cl if c.startswith(hi_p) and c[len(hi_p):] in names]

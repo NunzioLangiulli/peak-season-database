@@ -1,19 +1,19 @@
-"""Fase 2 - favicon dei siti usati come fonti (blocco "Fonti e Link Utili").
+"""Phase 2 - favicons of the websites used as sources ("Sources and Useful Links" block).
 
-Per ogni fonte legge la home page del sito, prende le icone dichiarate
-(apple-touch-icon, icon con dimensioni) e sceglie la più grande; in mancanza
-usa /favicon.ico. Salva:
-- data/raw/favicons/<chiave>.<ext>   originale scaricato (non modificato)
-- app/assets/sources/<chiave>.png     128 x 128 px, pronto per l'app
-- app/lib/data/source_logos.g.dart    quali loghi sono scuri (nel tema scuro diventano bianchi)
-Lo sfondo chiaro uniforme (bianco/grigio chiarissimo) viene reso trasparente.
+For each source it reads the website home page, takes the declared icons
+(apple-touch-icon, icon with sizes) and picks the largest; failing that
+it uses /favicon.ico. It saves:
+- data/raw/favicons/<key>.<ext>   original download (unchanged)
+- app/assets/sources/<key>.png     128 x 128 px, ready for the app
+- app/lib/data/source_logos.g.dart    which logos are dark (in the dark theme they become white)
+A uniform light background (white/very light grey) is made transparent.
 
-Loghi migliori a mano: metti un PNG/WebP/JPG ad alta risoluzione (ideale >= 256 px,
-meglio se già con sfondo trasparente) in fonti_locali/loghi_fonti/<chiave>.png
-(es. eufic_map.png) e rilancia lo script: il file manuale ha la precedenza.
-I loghi restano dei rispettivi enti: sono usati solo per identificare la fonte.
+Better logos by hand: put a high-resolution PNG/WebP/JPG (ideally >= 256 px,
+preferably already with a transparent background) in fonti_locali/loghi_fonti/<key>.png
+(e.g. eufic_map.png) and re-run the script: the manual file takes precedence.
+Logos belong to their respective organisations: they are used only to identify the source.
 
-Uso: python scripts/fetch_source_favicons.py
+Usage: python scripts/fetch_source_favicons.py
 """
 import io
 import re
@@ -32,7 +32,7 @@ MANUAL = ROOT / "fonti_locali" / "loghi_fonti"
 DART = ROOT / "app" / "lib" / "data" / "source_logos.g.dart"
 UA = {"User-Agent": "Mozilla/5.0 (PeakSeason favicon fetcher; non-commercial study app)"}
 
-# Siti alternativi (ente di appartenenza) da provare se l'icona è piccola
+# Alternative websites (parent organisation) to try if the icon is small
 ALT = {
     "crea": ["https://www.crea.gov.it/"],
     "usda_fdc": ["https://www.usda.gov/", "https://www.nal.usda.gov/"],
@@ -84,7 +84,7 @@ class IconParser(HTMLParser):
         elif "apple-touch-icon" in rel:
             size = 180
         elif href.lower().endswith(".svg"):
-            size = -1  # SVG: Pillow non lo legge, ultima scelta
+            size = -1  # SVG: Pillow cannot read it, last choice
         self.icons.append((size, href))
 
 
@@ -112,7 +112,7 @@ def best_icon(key, home):
             data = fetch(url).content
             im = Image.open(io.BytesIO(data))
             if getattr(im, "n_frames", 1) > 1 or im.format == "ICO":
-                # ICO multi-risoluzione: prendi la più grande
+                # multi-resolution ICO: take the largest
                 sizes = im.info.get("sizes") or []
                 if sizes:
                     im.size = max(sizes)
@@ -124,7 +124,7 @@ def best_icon(key, home):
 
 
 def pick(key, home):
-    """Migliore icona tra sito, siti alternativi e servizio favicon di Google."""
+    """Best icon among the website, alternative websites and Google's favicon service."""
     best = None
     for site in [home, *ALT.get(key, [])]:
         res = best_icon(key, site)
@@ -147,17 +147,17 @@ def pick(key, home):
 
 
 def clear_background(im, tol=28):
-    """Rende trasparente lo sfondo chiaro e uniforme che tocca i bordi."""
+    """Makes the uniform light background touching the edges transparent."""
     im = im.convert("RGBA")
     w, h = im.size
     px = im.load()
     corners = [px[0, 0], px[w - 1, 0], px[0, h - 1], px[w - 1, h - 1]]
     opaque = [c for c in corners if c[3] > 200]
     if not opaque:
-        return im  # già trasparente
+        return im  # already transparent
     ref = opaque[0]
     if sum(ref[:3]) / 3 < 200 or any(max(abs(c[i] - ref[i]) for i in range(3)) > tol for c in opaque):
-        return im  # sfondo colorato o non uniforme: è parte del logo
+        return im  # coloured or non-uniform background: it is part of the logo
     from collections import deque
     seen = set()
     q = deque((x, y) for x, y in [(0, 0), (w - 1, 0), (0, h - 1), (w - 1, h - 1)])
@@ -174,9 +174,9 @@ def clear_background(im, tol=28):
 
 
 def is_dark(im):
-    """Vero se il logo si vedrebbe male sul nero: si usa il valore HSV medio
-    (canale più luminoso) dei pixel visibili, così un rosso saturo non conta
-    come scuro mentre un blu notte sì."""
+    """True if the logo would be hard to see on black: the mean HSV value
+    (brightest channel) of the visible pixels is used, so a saturated red does not count
+    as dark while a midnight blue does."""
     px = [p for p in im.getdata() if p[3] > 128]
     if not px:
         return False
@@ -185,12 +185,12 @@ def is_dark(im):
 
 
 def make_logo(im):
-    """Logo pronto per l'app: sfondo chiaro uniforme reso trasparente, margini tolti, 128 x 128 px centrato."""
+    """Logo ready for the app: uniform light background made transparent, margins trimmed, 128 x 128 px centred."""
     im = clear_background(im.convert("RGBA"))
     bbox = im.getbbox()  # toglie i margini trasparenti
     if bbox:
         im = im.crop(bbox)
-    # adatta a 128 px anche le icone piccole (16-48 px), così riempiono il riquadro
+    # scale small icons (16-48 px) up to 128 px too, so they fill the box
     scale = 128 / max(im.width, im.height)
     im = im.resize((max(1, round(im.width * scale)), max(1, round(im.height * scale))), Image.LANCZOS)
     canvas = Image.new("RGBA", (128, 128), (0, 0, 0, 0))
@@ -199,7 +199,7 @@ def make_logo(im):
 
 
 def dark_logos():
-    """Chiavi dei loghi scuri tra tutti i PNG di app/assets/sources (anche quelli caricati dall'Admin Studio)."""
+    """Keys of the dark logos among all the PNGs in app/assets/sources (including those uploaded from the Admin Studio)."""
     out = set()
     for f in sorted(OUT.glob("*.png")):
         with Image.open(f) as im:

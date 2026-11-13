@@ -1,18 +1,18 @@
-"""Aggiunge alimenti decisi dall'utente in deroga alla regola di ammissione (2026-11-05). Idempotente.
+"""Adds products chosen by the project owner as exceptions to the inclusion rule (2026-11-05). Idempotent.
 
-Tartufo bianco (Tuber magnatum): prodotto italiano di grande importanza senza scheda di composizione CREA né BDA-IEO
-(le tabelle hanno solo il tartufo nero). L'utente ha deciso di includerlo comunque: la nutrizione resta vuota e
-dichiarata come lacuna. Dati usati, tutti da fonte:
-- botanica: EPPO TUERMA (nomi IT/EN), GBIF 5258456;
-- stagionalità: Legge 752/1985 art. 6 (enrich_special_seasonality.py); EUFIC "truffle (white)";
-- post-raccolta: USDA HB66, capitolo Truffle (pp. 588-589), che tratta esplicitamente Tuber magnatum insieme a
-  T. melanosporum: 0 °C, 90-95% UR, 20-30 giorni; non sensibile al freddo; etilene molto basso; respirazione
-  24-45 mg CO2/kg·h a 5 °C (classe come il tartufo nero);
-- conservazione domestica: FoodKeeper (voce funghi/tartufi, come per il tartufo nero);
-- porzione: gruppo "erbe aromatiche e spezie" di IEO SmartFood, come per il tartufo nero;
-- PAT: elenco MASAF (enrich_pat.py, parole chiave in config/pat_keywords.json).
-La scheda parte da quella del tartufo nero: i campi specifici di specie vengono sostituiti o azzerati.
-Uso:  python scripts/add_items.py   (poi enrich_special_seasonality, enrich_pat, apply_texts, build_source_registry…)
+White truffle (Tuber magnatum): a very important Italian product with no CREA or BDA-IEO composition record
+(the tables only have black truffle). The owner decided to include it anyway: nutrition stays empty and
+declared as a gap. Data used, all from sources:
+- botany: EPPO TUERMA (IT/EN names), GBIF 5258456;
+- seasonality: Law 752/1985 art. 6 (enrich_special_seasonality.py); EUFIC "truffle (white)";
+- postharvest: USDA HB66, Truffle chapter (pp. 588-589), which explicitly covers Tuber magnatum together with
+  T. melanosporum: 0 °C, 90-95% RH, 20-30 days; not chill-sensitive; very low ethylene; respiration
+  24-45 mg CO2/kg·h at 5 °C (same class as black truffle);
+- home storage: FoodKeeper (mushrooms/truffles entry, as for black truffle);
+- portion: IEO SmartFood "herbs and spices" group, as for black truffle;
+- PAT: MASAF list (enrich_pat.py, keywords in config/pat_keywords.json).
+The record starts from the black truffle one: species-specific fields are replaced or cleared.
+Usage:  python scripts/add_items.py   (then enrich_special_seasonality, enrich_pat, apply_texts, build_source_registry…)
 """
 import copy
 
@@ -39,7 +39,7 @@ def build(db):
     it["names"] = NEW["names"]
     it["botany"].update(NEW["botany"])
     it["images"] = {"primary": None, "gallery": [], "image_details": []}
-    # stagionalità europea (EUFIC)
+    # European seasonality (EUFIC)
     eufic = load_json(RAW / "eufic_fvlist.json")
     zmap = load_json(CONFIG / "eufic_zone_map.json")["countries"]
     fresh, stored = eufic_country_table(NEW["eufic_keys"], eufic)
@@ -61,7 +61,7 @@ def build(db):
     n["nutrition_claims_eu"] = {"it": [], "en": []}
     n["protein_reference"] = None
     n["traditional_products_pat"] = None
-    # tracciabilità
+    # traceability
     sb = it["sources_by_topic"]
     sb.update({"nutrition_crea_url": None, "nutrition_bda_ieo_url": None,
                "botany_eppo_wfo_url": ["https://gd.eppo.int/taxon/TUERMA", "https://www.gbif.org/species/5258456"]})

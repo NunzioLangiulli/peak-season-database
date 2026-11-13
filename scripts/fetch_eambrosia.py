@@ -1,8 +1,8 @@
-"""Scarica dal registro UE eAmbrosia tutte le indicazioni geografiche italiane (DOP/IGP/STG) -> data/raw/eambrosia_it.json
+"""Downloads all Italian geographical indications (PDO/PGI/TSG) from the EU eAmbrosia register -> data/raw/eambrosia_it.json
 
-API pubblica usata dalla pagina https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/
-(POST .../eambrosia-public-api/api/gi-applications/filter, corpo con lista 'filters' e paginazione first/rows).
-Uso:  python scripts/fetch_eambrosia.py
+Public API used by the page https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/
+(POST .../eambrosia-public-api/api/gi-applications/filter, body with a 'filters' list and first/rows pagination).
+Usage:  python scripts/fetch_eambrosia.py
 """
 from common import RAW, SESSION, save_json
 

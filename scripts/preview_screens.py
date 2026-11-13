@@ -1,21 +1,21 @@
-"""Fase 2 - anteprime PNG delle schermate dell'app (senza telefono).
+"""Phase 2 - PNG previews of the app screens (without a phone).
 
-Usa la build web dell'app *vera* (stesso codice Flutter di Android/iOS) e
-la fotografa con Playwright + Microsoft Edge a dimensione telefono.
-Le pagine lunghe (scheda alimento, impostazioni) sono fotografate con un
-"telefono altissimo", così si vede tutta la pagina come se si scorresse.
+Uses the web build of the *real* app (same Flutter code as Android/iOS) and
+screenshots it with Playwright + Microsoft Edge at phone size.
+Long pages (product page, settings) are captured with a
+"very tall phone", so the whole page is visible as if scrolled.
 
-Le notifiche non esistono nel browser: per quelle si genera una
-simulazione grafica di Android con i testi reali calcolati dall'app
-(esportati da app/test/preview_export_test.dart).
+Notifications do not exist in the browser: for those a graphic
+Android simulation is generated with the real texts computed by the app
+(exported by app/test/preview_export_test.dart).
 
-Prerequisiti (una volta):
+Prerequisites (once):
     pip install playwright
     cd C:\\dev\\peak_season && flutter build web --release --no-web-resources-cdn
-    (in un altro terminale) python -m http.server 8765 --bind 127.0.0.1 -d C:\\dev\\peak_season\\build\\web
+    (in another terminal) python -m http.server 8765 --bind 127.0.0.1 -d C:\\dev\\peak_season\\build\\web
     cd C:\\dev\\peak_season && set PREVIEW_EXPORT=1 && flutter test test/preview_export_test.dart
 
-Uso:  python scripts/preview_screens.py [nome_schermata ...]
+Usage:  python scripts/preview_screens.py [screen_name ...]
 Output: schemi_interfaccia/anteprime_fase2/v2/*.png
 """
 import html
@@ -33,7 +33,7 @@ W, H = 390, 844  # iPhone 14 / Pixel 7 circa, in punti logici
 EDGE = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
 NOTIF_JSON = ROOT / "app" / "build" / "notification_preview.json"
 
-# Stato di partenza: qualche preferito e qualcosa in lista, per vedere le icone attive.
+# Starting state: a few favourites and something on the list, to see the active icons.
 BASE_PREFS = {
     "favoriteIds": ["cavolo_nero_black_kale", "cachi_persimmon", "mela_apple"],
     "shoppingListIds": ["mela_apple", "zucca_pumpkin", "finocchio_fennel", "porro_leek", "pomodoro_tomato"],
@@ -80,7 +80,7 @@ def shot(browser, name, prefs=None, actions=(), dark=False, query="", height=H, 
 # --- Simulazione notifiche Android ------------------------------------------
 
 def _line(s: str) -> str:
-    # le righe usano <b> come in Android (htmlFormatLines); il resto va escapato
+    # lines use <b> as in Android (htmlFormatLines); the rest is escaped
     parts = re.split(r"(</?b>)", s)
     return "".join(p if p in ("<b>", "</b>") else html.escape(p) for p in parts)
 

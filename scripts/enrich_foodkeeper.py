@@ -1,11 +1,11 @@
-"""Durate di conservazione DOMESTICHE da USDA FSIS FoodKeeper (data/raw/foodkeeper_produce.json).
+"""HOME storage times from USDA FSIS FoodKeeper (data/raw/foodkeeper_produce.json).
 
-- room_temp_days      <- dispensa (dalla data di acquisto)
-- refrigerated_days   <- frigorifero domestico; la durata professionale USDA HB66 (prima in refrigerated_days) viene
-                         spostata in commercial_optimal_days
-- in_freezer_months   <- congelatore
-Valori mancanti in FoodKeeper = conservazione non indicata: il valore precedente (bozza) resta, da verificare.
-Uso:  python scripts/enrich_foodkeeper.py
+- room_temp_days      <- pantry (from the date of purchase)
+- refrigerated_days   <- home fridge; the USDA HB66 commercial storage time (previously in refrigerated_days) is
+                         moved to commercial_optimal_days
+- in_freezer_months   <- freezer
+Values missing in FoodKeeper = storage not stated: the previous (draft) value stays, to be verified.
+Usage:  python scripts/enrich_foodkeeper.py
 """
 import re
 

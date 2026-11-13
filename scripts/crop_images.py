@@ -1,13 +1,13 @@
-"""Uniforma il formato delle immagini (decisione dell'utente, 2026-11-06). Idempotente.
+"""Standardises the image format (owner decision, 2026-11-06). Idempotent.
 
-- Foto orizzontali (tutti i tipi tranne botanical_plate): ritaglio centrato a 3:2.
-- Tavole botaniche: tutte verticali 2:3, SENZA tagliare: si aggiunge un margine del colore della carta (mediana dei
-  pixel del bordo), così disegni e didascalie restano interi. Anche le poche tavole orizzontali diventano 2:3.
-- Foto verticali o quadrate che non sono tavole: non toccate, salvo quelle in VERTICAL_ANCHOR (ritagliate a 3:2
-  con la posizione scelta dall'utente).
-Prima di modificare un file ne salva l'originale in assets/images/_originals/ (una sola volta), così si può tornare
-indietro. Aggiorna width/height in assets/images/_metadata.json; poi lanciare sync_images.py.
-Uso:  python scripts/crop_images.py [--dry-run]
+- Landscape photos (all types except botanical_plate): centred 3:2 crop.
+- Botanical plates: all portrait 2:3, WITHOUT cropping: a margin in the paper colour (median of the
+  border pixels) is added, so drawings and captions stay whole. The few landscape plates also become 2:3.
+- Portrait or square photos that are not plates: untouched, except those in VERTICAL_ANCHOR (cropped to 3:2
+  with the position chosen by the owner).
+Before changing a file it saves the original in assets/images/_originals/ (only once), so changes can be
+undone. Updates width/height in assets/images/_metadata.json; then run sync_images.py.
+Usage:  python scripts/crop_images.py [--dry-run]
 """
 import shutil
 import statistics
@@ -18,8 +18,8 @@ from PIL import Image
 from common import IMAGES, load_json, save_json
 
 ORIG = IMAGES / "_originals"
-# Foto verticali o quadrate da portare comunque a 3:2, con la posizione verticale del ritaglio decisa dall'utente
-# guardando l'anteprima (0 = parte dall'alto, 0.5 = centro, 1 = parte più bassa).
+# Portrait or square photos to bring to 3:2 anyway, with the vertical crop position chosen by the owner
+# looking at the preview (0 = top part, 0.5 = centre, 1 = bottom part).
 VERTICAL_ANCHOR = {
     "bietola_da_coste_swiss_chard_04.jpg": 0.5, "cavolfiore_cauliflower_02.jpg": 0.5, "cavolo_nero_black_kale_02.jpg": 0.5,
     "cavolo_verza_savoy_cabbage_02.jpg": 1.0, "finocchio_fennel_01.jpg": 0.5, "fungo_champignon_button_mushroom_05.jpg": 0.75,

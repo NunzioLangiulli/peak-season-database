@@ -1,10 +1,10 @@
-"""Modifiche a mano ai link utili dei prodotti (sources_by_topic.useful_links), fatte con l'Admin Studio (scheda Link).
-Idempotente. Le modifiche stanno in config/link_overrides.json, così restano anche quando build_source_registry.py
-rigenera i link:
-    {"items": {"<id>": {"edit":   {"<url originale>": {"url": "...", "title": {"it", "en"}}},
+"""Manual edits to the products' useful links (sources_by_topic.useful_links), made with the Admin Studio (Links tab).
+Idempotent. The edits live in config/link_overrides.json, so they survive when build_source_registry.py
+regenerates the links:
+    {"items": {"<id>": {"edit":   {"<original url>": {"url": "...", "title": {"it", "en"}}},
                         "remove": ["<url>", ...],
                         "add":    [{"url", "title": {"it", "en"}, "source_key", "topic"}]}}}
-Uso:  python scripts/apply_link_overrides.py   (dopo build_source_registry.py; lo studio lo esegue da solo)
+Usage:  python scripts/apply_link_overrides.py   (after build_source_registry.py; the Studio runs it by itself)
 """
 from common import CONFIG, DATA, load_json, save_json
 

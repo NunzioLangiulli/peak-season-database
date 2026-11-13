@@ -1,9 +1,9 @@
-﻿"""Seconda verifica delle varieta' della bozza: Catalogo comune UE (EU Plant Variety Portal).
+﻿"""Second check of the draft's varieties: EU Common Catalogue (EU Plant Variety Portal).
 
-Le corrispondenze sono in config/eu_variety_portal_matches.json (ricerca fatta dal browser il 2026-11-04, specie UPOV
-controllata a mano). Le varieta' confermate tornano in notable_varieties con la fonte; le altre restano in
+The matches are in config/eu_variety_portal_matches.json (search done in the browser on 2026-11-04, UPOV species
+checked by hand). Confirmed varieties go back into notable_varieties with their source; the others stay in
 draft_legacy_values.json (notable_varieties_unverified).
-Uso:  python scripts/verify_varieties_eu.py   (dopo verify_varieties.py)
+Usage:  python scripts/verify_varieties_eu.py   (after verify_varieties.py)
 """
 from common import DATA, ROOT, finalize_completeness, load_json, mark_enriched, save_json
 
@@ -28,7 +28,7 @@ def main():
         src = {"source_key": "eu_plant_variety_portal", "url": URL, "list": "common_catalogue",
                "registered_name": m["registered"], "upov_code": m["upov"], "match": m["match"], "records": recs}
         if m["draft"] in iv["notable_varieties"]:
-            # gia' verificata da altre fonti: aggiunge solo l'iscrizione al Catalogo UE
+            # already verified by other sources: only adds the EU Catalogue listing
             for e in iv.get("varieties_verification", []):
                 if e["name"] == m["draft"] and not any(s["source_key"] == "eu_plant_variety_portal" for s in e["sources"]):
                     e["sources"].append(src)
@@ -51,7 +51,7 @@ def main():
         mark_enriched(it, ["italian_varieties_and_territories.notable_varieties"])
         finalize_completeness(it)
         n += 1
-    # rimuove le voci "non verificata" rimaste per varieta' poi confermate dal Catalogo UE
+    # removes the leftover "not verified" entries for varieties later confirmed by the EU Catalogue
     for it in db["items"]:
         iv = it["italian_varieties_and_territories"]
         ok = {e["name"] for e in iv.get("varieties_verification") or [] if e.get("verified")}

@@ -1,9 +1,9 @@
-"""Catalogo delle fonti e dei conflitti in testa al database (metadata.official_sources, metadata.source_conflicts).
+"""Catalogue of sources and conflicts at the top of the database (metadata.official_sources, metadata.source_conflicts).
 
-Per ogni fonte aggiunge: description (cos'è), authority (perché è autorevole), offers (cosa offre), used_for (argomenti,
-numero e elenco degli alimenti per cui è stata consultata, calcolati dalle schede). Aggiunge i casi generali di conflitto
-tra fonti con la decisione presa (config/source_conflicts.json).
-Uso:  python scripts/build_source_catalog.py   (dopo build_source_registry.py e build_help.py)
+For each source adds: description (what it is), authority (why it is authoritative), offers (what it offers), used_for (topics,
+number and list of the products for which it was consulted, computed from the records). Adds the general cases of conflict
+between sources with the decision taken (config/source_conflicts.json).
+Usage:  python scripts/build_source_catalog.py   (after build_source_registry.py and build_help.py)
 """
 import collections
 

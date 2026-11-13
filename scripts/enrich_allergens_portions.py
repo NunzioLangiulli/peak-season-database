@@ -1,9 +1,9 @@
-"""Allergeni (Reg. UE 1169/2011, All. II) e porzione standard di riferimento (IEO SmartFood / LARN-SINU).
+"""Allergens (Reg. (EU) 1169/2011, Annex II) and standard reference portion (IEO SmartFood / LARN-SINU).
 
-nutrition_and_sustainability.allergens_eu: lista di {annex_ii_number, name{it,en}} ([] = nessun allergene dell'allegato II)
+nutrition_and_sustainability.allergens_eu: list of {annex_ii_number, name{it,en}} ([] = no Annex II allergen)
 nutrition_and_sustainability.reference_portion: {grams, group{it,en}, equivalent{it,en}, frequency{it,en}, kcal,
-    proteins_g, fiber_g, source, match}. La castagna fresca usa la porzione della frutta (approssimata).
-Uso:  python scripts/enrich_allergens_portions.py
+    proteins_g, fiber_g, source, match}. Fresh chestnut uses the fruit portion (approximated).
+Usage:  python scripts/enrich_allergens_portions.py
 """
 from common import DATA, ROOT, finalize_completeness, load_json, mark_enriched, save_json
 from enrich_chilling import set_na

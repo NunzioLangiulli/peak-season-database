@@ -1,14 +1,14 @@
-"""Riferimento proteico per l'Italia (nutrition_and_sustainability.protein_reference).
+"""Protein reference for Italy (nutrition_and_sustainability.protein_reference).
 
-Riferimento scientifico nazionale: LARN - SINU, IV revisione 2014 (fonti_locali/Tabelle-riassuntive_SINU.pdf):
-  adulti 18-64 anni PRI 0,90 g/kg/die -> 63 g/die uomo (70 kg), 54 g/die donna (60 kg)
-  65 anni e oltre   PRI 1,1 g/kg/die  -> 77 g/die uomo, 66 g/die donna
-Riferimento di etichettatura UE: RI proteine 50 g/die (Reg. UE 1169/2011, Allegato XIII, parte B).
-Claim (Reg. CE 1924/2006): "fonte di/ad alto contenuto di proteine" = >=12% / >=20% dell'energia da proteine.
-Il criterio è legale ma relativo: in ortaggi molto poco calorici scatta anche con pochi grammi. Se la porzione
-di 100 g copre meno del 10% della PRI LARN (donna adulta, 5,4 g), il claim resta (è conforme) ma viene
-affiancato da una nota che lo contestualizza.
-Uso:  python scripts/enrich_protein.py
+National scientific reference: LARN - SINU, 4th revision 2014 (fonti_locali/Tabelle-riassuntive_SINU.pdf):
+  adults 18-64 years PRI 0.90 g/kg/day -> 63 g/day men (70 kg), 54 g/day women (60 kg)
+  65 years and over   PRI 1.1 g/kg/day  -> 77 g/day men, 66 g/day women
+EU labelling reference: protein RI 50 g/day (Reg. (EU) 1169/2011, Annex XIII, part B).
+Claim (Reg. (EC) 1924/2006): "source of/high in protein" = >=12% / >=20% of energy from protein.
+The criterion is legal but relative: in very low-energy vegetables it triggers even with a few grams. If the 100 g
+portion covers less than 10% of the LARN PRI (adult woman, 5.4 g), the claim stays (it is compliant) but comes
+with a note that puts it into context.
+Usage:  python scripts/enrich_protein.py
 """
 from common import DATA, finalize_completeness, load_json, mark_enriched, save_json
 

@@ -1,22 +1,22 @@
-"""Sincronizza assets/images/ con database.json.
+"""Synchronises assets/images/ with database.json.
 
-Per ogni alimento cerca i file  <id>_NN.jpg  in assets/images/ e aggiorna images.primary, images.gallery e
-images.image_details. I metadati di licenza (autore, licenza, URL sorgente, tipo di vista) stanno in
-assets/images/_metadata.json, scritto dallo script di download: così se elimini a mano le foto che non ti
-piacciono basta rilanciare questo script e il database si riallinea.
+For each product it looks for the files  <id>_NN.jpg  in assets/images/ and updates images.primary, images.gallery and
+images.image_details. Licence metadata (author, licence, source URL, view type) live in
+assets/images/_metadata.json, written by the download script: so if you delete by hand the photos you do not
+like, re-running this script realigns the database.
 
-Uso:
-  python scripts/sync_images.py               # riallinea il database ai file presenti
-  python scripts/sync_images.py --renumber    # rinomina i file rimasti in sequenza _01, _02, ... (aggiorna i metadati)
-  python scripts/sync_images.py --prune       # rimuove da _metadata.json le voci di file non più presenti
-  python scripts/sync_images.py --dry-run     # mostra cosa cambierebbe senza scrivere nulla
+Usage:
+  python scripts/sync_images.py               # realigns the database to the files present
+  python scripts/sync_images.py --renumber    # renames the remaining files in sequence _01, _02, ... (updates the metadata)
+  python scripts/sync_images.py --prune       # removes from _metadata.json the entries of files no longer present
+  python scripts/sync_images.py --dry-run     # shows what would change without writing anything
 
-Regole:
-  - la primaria scelta a mano nell'Admin Studio (assets/images/_primary_manual.json) vince sempre, se il file esiste;
-  - altrimenti la primaria è la prima foto "full_frame" (prodotto a tutto campo) senza problemi segnalati e non di una varietà particolare; se non c'è resta
-    quella già scelta se il file esiste ancora, altrimenti la foto con numero più basso (regola dell'utente, 2026-11-05);
-  - una foto SENZA metadati di licenza non entra nella galleria (viene solo segnalata): per una tua foto
-    aggiungi in _metadata.json una voce con "provider": "user", autore e licenza.
+Rules:
+  - the main photo chosen by hand in the Admin Studio (assets/images/_primary_manual.json) always wins, if the file exists;
+  - otherwise the main photo is the first "full_frame" photo (product filling the frame) without flagged issues and not of a specific variety; if there is none,
+    the one already chosen stays if the file still exists, otherwise the lowest-numbered photo (owner rule, 2026-11-05);
+  - a photo WITHOUT licence metadata does not enter the gallery (it is only flagged): for a photo of your own
+    add an entry to _metadata.json with "provider": "user", author and licence.
 """
 import re
 import sys
@@ -59,7 +59,7 @@ def main():
             for o, n in plan:
                 print(f"rinomina {o} -> {n}")
             if not dry and plan:
-                # due fasi (vecchio -> temporaneo -> nuovo) per evitare collisioni tra nomi
+                # two phases (old -> temporary -> new) to avoid name collisions
                 for o, _ in plan:
                     (IMAGES / o).rename(IMAGES / (o + ".tmp"))
                 moved = {o: meta.pop(o, None) for o, _ in plan}
@@ -84,9 +84,9 @@ def main():
         licensed = [n for n in names if n in meta and meta[n].get("license") and meta[n].get("source_url")]
         unlicensed += [n for n in names if n not in licensed]
         old = it["images"]
-        prev = renamed.get(old.get("primary"), old.get("primary"))   # la primaria segue l'eventuale rinomina
+        prev = renamed.get(old.get("primary"), old.get("primary"))   # the main photo follows any renaming
         ff = [n for n in licensed if meta[n].get("view_type") == "full_frame" and not meta[n].get("flags") and not meta[n].get("variety")]
-        manual_p = renamed.get(manual.get(iid), manual.get(iid))     # scelta a mano nell'Admin Studio: vince sulla regola
+        manual_p = renamed.get(manual.get(iid), manual.get(iid))     # chosen by hand in the Admin Studio: wins over the rule
         primary = manual_p if manual_p in licensed else (ff[0] if ff else (prev if prev in licensed else (licensed[0] if licensed else None)))
         gallery = ([primary] + [n for n in licensed if n != primary]) if primary else []
         details = [{**{k: (meta[n].get(k) if k != "filename" else n) for k in DETAIL_KEYS},

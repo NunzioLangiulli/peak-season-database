@@ -1,18 +1,18 @@
-"""Terminologia dei testi per l'utente (revisione UX writing, 2026-11-12). Idempotente.
+"""Terminology of user-facing texts (UX writing review, 2026-11-12). Idempotent.
 
-"Alimento/alimenti" e "food/foods" suonano freddi per un'app di frutta e verdura: nei testi per l'utente si usa
-"prodotto/prodotti" (IT) e "product"/"produce" (EN: "produce" per il plurale e il collettivo). Restano invariati:
-i nomi propri (CREA "Alimenti e Nutrizione", "Banca Dati di Composizione degli Alimenti", "Slow Food", "Agri-food"),
-le espressioni sull'alimentazione in generale ("alimenti di origine animale" / "animal-based foods") e le note
-interne in data_completeness. Le parole con iniziale maiuscola (nomi propri ed etichette) non vengono toccate.
-Uso:  python scripts/ux_terminology.py   (penultimo passo, prima di title_case_labels.py)
+"Alimento/alimenti" and "food/foods" sound cold for a fruit and vegetable app: user-facing texts use
+"prodotto/prodotti" (IT) and "product"/"produce" (EN: "produce" for the plural and the collective). Unchanged:
+proper names (CREA "Alimenti e Nutrizione", "Banca Dati di Composizione degli Alimenti", "Slow Food", "Agri-food"),
+expressions about food in general ("alimenti di origine animale" / "animal-based foods") and the internal
+notes in data_completeness. Words with a capital initial (proper names and labels) are not touched.
+Usage:  python scripts/ux_terminology.py   (second-to-last step, before title_case_labels.py)
 """
 import re
 
 from common import DATA, load_json, save_json
 
 KEEP = re.compile(r"origine animale|animal-based foods|Agri-food|Slow Food|Food Composition")
-IT = [  # (regex, sostituzione) in ordine: prima le forme con articolo
+IT = [  # (regex, replacement) in order: forms with an article first
     (r"\bquesto alimento\b", "questo prodotto"), (r"\bdell'alimento\b", "del prodotto"), (r"\ball'alimento\b", "al prodotto"),
     (r"\bl'alimento\b", "il prodotto"), (r"\bun alimento\b", "un prodotto"), (r"\bdegli alimenti\b", "dei prodotti"),
     (r"\bagli alimenti\b", "ai prodotti"), (r"\bdagli alimenti\b", "dai prodotti"), (r"\bnegli alimenti\b", "nei prodotti"),
@@ -27,12 +27,12 @@ EN = [
 
 def fix(s, rules):
     if not isinstance(s, str) or KEEP.search(s):
-        if isinstance(s, str) and KEEP.search(s):          # proteggi solo le parti da conservare
+        if isinstance(s, str) and KEEP.search(s):          # protect only the parts to keep
             parts = re.split(f"({KEEP.pattern})", s)
             return "".join(p if KEEP.fullmatch(p) else fix(p, rules) for p in parts)
         return s
     for rx, rep in rules:
-        s = re.sub(rx, rep, s)                               # solo minuscole: i nomi propri restano
+        s = re.sub(rx, rep, s)                               # lowercase only: proper names stay
     return s
 
 

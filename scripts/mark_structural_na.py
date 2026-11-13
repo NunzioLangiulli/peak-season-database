@@ -1,13 +1,13 @@
-"""Campi del template vuoti per definizione -> data_completeness.not_applicable_fields (con motivazione).
+"""Template fields empty by definition -> data_completeness.not_applicable_fields (with a reason).
 
-- keep_away_from = [] se il prodotto non e' sensibile all'etilene (o il dato manca);
-- dop_igp_labels = [] se has_dop_igp e' false;
-- prodotti secchi: temperatura/umidita' ottimali post-raccolta (riferite al fresco), note di compatibilita' etilene,
-  mesi in congelatore se FoodKeeper non li indica;
-- pomodoro: niente frigorifero (FoodKeeper e UC Davis: a temperatura ambiente);
-- giorni a temperatura ambiente quando le fonti indicano solo il frigorifero (guida UC Davis o capitolo HB66) e
-  FoodKeeper non da' una durata in dispensa. Il valore della bozza va in draft_legacy_values.
-Uso:  python scripts/mark_structural_na.py   (dopo apply_home_storage.py)
+- keep_away_from = [] if the product is not ethylene-sensitive (or the data are missing);
+- dop_igp_labels = [] if has_dop_igp is false;
+- dried products: optimal postharvest temperature/humidity (referring to fresh produce), ethylene compatibility notes,
+  months in the freezer if FoodKeeper does not give them;
+- tomato: no fridge (FoodKeeper and UC Davis: at room temperature);
+- days at room temperature when the sources give only the fridge (UC Davis guide or HB66 chapter) and
+  FoodKeeper gives no pantry time. The draft value goes to draft_legacy_values.
+Usage:  python scripts/mark_structural_na.py   (after apply_home_storage.py)
 """
 from common import DATA, finalize_completeness, load_json, save_json
 from enrich_chilling import set_na

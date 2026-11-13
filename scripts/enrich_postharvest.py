@@ -1,16 +1,16 @@
-"""Passo 1.3d - Fisiologia post-raccolta ed etilene (USDA ARS Handbook 66 + UC Davis Produce Fact Sheets).
+"""Step 1.3d - Postharvest physiology and ethylene (USDA ARS Handbook 66 + UC Davis Produce Fact Sheets).
 
-Fonti:
-- data/raw/usda_hb66.txt (testo del PDF, scaricato da scripts/... vedi fetch in questo file): capitolo per prodotto
-  ("Optimum Storage Conditions", "Chilling Sensitivity", "Ethylene Production and Sensitivity") e Tabella 1
-  (respirazione a 0-25 °C, produzione di etilene).
-- data/raw/ucdavis_extract.json (letto col browser): temperatura, UR, produzione e risposta all'etilene, chilling.
-Classi (Kader A.A., Postharvest Technology of Horticultural Crops, UC ANR 2002, usate da UC Davis):
-- respirazione a 5 °C (mg CO2/kg·h): <5 very_low, 5-10 low, 10-20 moderate, 20-40 high, 40-60 very_high, >60 extremely_high
-- etilene a 20 °C (µL/kg·h): <0.1 very_low, 0.1-1 low, 1-10 moderate, 10-100 high, >100 very_high
-keep_away_from = alimenti del database con produzione di etilene high/very_high, per gli alimenti sensibili.
+Sources:
+- data/raw/usda_hb66.txt (text of the PDF, downloaded by scripts/... see fetch in this file): chapter per product
+  ("Optimum Storage Conditions", "Chilling Sensitivity", "Ethylene Production and Sensitivity") and Table 1
+  (respiration at 0-25 °C, ethylene production).
+- data/raw/ucdavis_extract.json (read with the browser): temperature, RH, ethylene production and response, chilling.
+Classes (Kader A.A., Postharvest Technology of Horticultural Crops, UC ANR 2002, used by UC Davis):
+- respiration at 5 °C (mg CO2/kg·h): <5 very_low, 5-10 low, 10-20 moderate, 20-40 high, 40-60 very_high, >60 extremely_high
+- ethylene at 20 °C (µL/kg·h): <0.1 very_low, 0.1-1 low, 1-10 moderate, 10-100 high, >100 very_high
+keep_away_from = database products with high/very_high ethylene production, for sensitive products.
 
-Uso:  python scripts/enrich_postharvest.py
+Usage:  python scripts/enrich_postharvest.py
 """
 import re
 
@@ -25,7 +25,7 @@ HEADINGS = ["Scientific Name", "Quality Characteristics", "Horticultural Maturit
             "Ethylene Production", "Respiration Rates", "Physiological Disorders", "Postharvest Pathology", "Quarantine",
             "Suitability as Fresh-Cut", "Special Considerations", "References", "Acknowledgments", "Freezing"]
 
-MAP = {  # id -> (titolo capitolo HB66, chiave Tabella 1, qualità)
+MAP = {  # id -> (HB66 chapter title, Table 1 key, quality)
     "aglio_garlic": ("Garlic", "Garlic", "exact"), "asparago_asparagus": ("Asparagus", "Asparagus", "exact"),
     "carciofo_artichoke": ("Artichoke", "Artichoke", "exact"), "carota_carrot": ("Carrot", "Carrot", "exact"),
     "barbabietola_beetroot": ("Beet", "Beets", "exact"), "bietola_da_coste_swiss_chard": ("Swiss Chard", "Swiss chard", "exact"),
@@ -75,7 +75,7 @@ MAP = {  # id -> (titolo capitolo HB66, chiave Tabella 1, qualità)
     "maracuja_passion_fruit": ("Passion Fruit", "Passion fruit", "exact"), "tartufo_nero_black_truffle": ("Truffle", "Truffle", "exact"), "tartufo_bianco_white_truffle": ("Truffle", "Truffle", "exact"),
     "basilico_basil": (None, "Basil", "exact"), "castagna_chestnut": (None, None, None),
 }
-# alimenti aggiunti il 2026-11-05 (config/new_items_2026_11_05.json): capitolo HB66, voce Tabella 1, qualità
+# products added on 2026-11-05 (config/new_items_2026_11_05.json): HB66 chapter, Table 1 entry, quality
 MAP.update({k: tuple(v["hb66"]) for k, v in load_json(CONFIG / "new_items_2026_11_05.json").items() if v.get("hb66")})
 
 
@@ -112,12 +112,12 @@ def load_hb66():
         end = chapters[k + 1][1] if k + 1 < len(chapters) else start + 6
         body = "\n".join(pages[start:end])
         chap[title] = {"page": start + 1, "text": body}
-    # Tabella 1 (pagine 17-22 circa): nome seguito da 6 valori di respirazione e dal valore di etilene
+    # Table 1 (pages 17-22 roughly): name followed by 6 respiration values and the ethylene value
     table = {}
     tt = "\n".join(pages[16:23])
     tt = tt[tt.find("Table 1. Rates of respiration"):]
-    # token con indicazione di rientro: nel testo estratto le sotto-righe (es. Apple -> Fall/Summer) sono
-    # precedute da una riga che contiene solo una tabulazione
+    # tokens with an indent marker: in the extracted text the sub-rows (e.g. Apple -> Fall/Summer) are
+    # preceded by a line containing only a tab
     toks, indent = [], False
     for line in tt.split("\n"):
         if line.strip() == "":
@@ -163,7 +163,7 @@ def table_lookup(table, key):
 def eth_word(text):
     if not text:
         return None
-    # solo le frasi che parlano di PRODUZIONE di etilene (non di sensibilità o di respirazione)
+    # only the sentences about ethylene PRODUCTION (not sensitivity or respiration)
     sents = [s for s in re.split(r"(?<=\.)\s", text.lower()) if "ethylene" in s and re.search(r"produc|evolution|emit", s)]
     for s in sents:
         for pat, cls in ((r"very high|extremely high|copious", "very_high"), (r"\bhigh\b|large amounts|large quantities", "high"),
@@ -184,7 +184,7 @@ def section(text, name):
 
 
 def best_sentence(text, keys):
-    """Prima frase del testo che contiene una delle parole chiave (es. 'recommended', 'optimum')."""
+    """First sentence of the text containing one of the keywords (e.g. 'recommended', 'optimum')."""
     if not text:
         return None
     for s in re.split(r"(?<=[.;])\s+", text):
@@ -218,7 +218,7 @@ def rh_range(s):
     return {"min": int(m.group(1)), "max": int(m.group(1))} if m else None
 
 
-HINT = {  # capitoli HB66 che trattano più tipi di prodotto: frase da usare per l'alimento
+HINT = {  # HB66 chapters covering several product types: sentence to use for the product
     "cipolla_estiva_summer_onion": "dry onion", "cipolla_invernale_winter_onion": "dry onion", "scalogno_shallot": "dry onion",
     "fagiolino_green_bean": "snap", "lattuga_da_cespo_head_lettuce": "crisphead", "lattuga_da_taglio_leaf_lettuce": "leaf",
 }
@@ -240,7 +240,7 @@ def sens_from_text(s):
     if not s:
         return None
     s = s.lower()
-    # effetti dannosi descritti (anche a basse concentrazioni) -> sensibile
+    # harmful effects described (even at low concentrations) -> sensitive
     positive = re.search(r"(extremely|highly|very|moderately) sensitive|sensitive to (physiological|exogenous|ethylene)[^.]{0,40}as low as|"
                          r"as low as|promot\w+ (chlorophyll|yellowing|browning)|stimulat\w* (the )?growth of botrytis|botrytis[^.]{0,60}stimulated|stimulation of botrytis|"
                          r"accelerat\w+ (yellowing|softening|ripening|decay|the lignification|deterioration)|adversely|"
@@ -278,8 +278,8 @@ def eth_value(s):
     if not m:
         return None
     v = float(m.group(2))
-    # "<x" è un limite superiore: si usa la metà (valore centrale dell'intervallo possibile), così "<1.1" (cavolo) resta
-    # nella classe bassa invece di passare a "moderata" (correzione 2026-11-06)
+    # "<x" is an upper bound: half of it is used (central value of the possible range), so "<1.1" (cabbage) stays
+    # in the low class instead of moving to "moderate" (fix 2026-11-06)
     return v * 0.5 if m.group(1) == "<" else v * 1.01 if m.group(1) == ">" else v
 
 
@@ -334,8 +334,8 @@ def main():
                 stats["hb66"] += 1
             if u:
                 used.append(f"UC Davis {idx[iid]['sources']['uc_davis']['slug']}")
-                # UC Davis ha campi espliciti "Optimum Temperature/Relative Humidity": hanno la precedenza sul
-                # paragrafo HB66, in cui la prima cifra può riferirsi ad altre condizioni (es. aglio 20-30 °C per la cura)
+                # UC Davis has explicit "Optimum Temperature/Relative Humidity" fields: they take precedence over the
+                # HB66 paragraph, where the first figure may refer to other conditions (e.g. garlic 20-30 °C for curing)
                 tt = u.get("T") or ""
                 if re.match(r"^\s*(-?\d|[A-Za-z ]{0,20}:\s*-?\d)", tt):
                     ut = num_range(tt.split("(")[0], r"°C")
@@ -385,7 +385,7 @@ def main():
             if new.get("chill") is not None:
                 put(f"{P}.chilling_injury.susceptible", ph["chilling_injury"], "susceptible", new["chill"])
                 if new["chill"] is False and ph["chilling_injury"]["critical_temperature_c"] not in (None,) and ph["chilling_injury"]["critical_temperature_c"] > 0:
-                    ph["chilling_injury"]["critical_temperature_c"] = None   # soglia della bozza incoerente con "non sensibile"
+                    ph["chilling_injury"]["critical_temperature_c"] = None   # draft threshold inconsistent with "not sensitive"
                 if new.get("chill_t") is not None:
                     put(f"{P}.chilling_injury.critical_temperature_c", ph["chilling_injury"], "critical_temperature_c", new["chill_t"])
             ev = new.get("eth20") if new.get("eth20") is not None else new.get("ucd_eth")
@@ -414,7 +414,7 @@ def main():
             if k != "source":
                 it["ripening_and_storage"]["postharvest_physiology"][k] = v
                 it["data_completeness"]["notes"] += f" {k} corretto manualmente: {ov[it['id']]['source']}."
-    # keep_away_from (dopo aver classificato tutti)
+    # keep_away_from (after classifying all of them)
     producers = sorted(i for i, c in eth_cls.items() if c in ("high", "very_high", "extremely_high"))
     for it in db["items"]:
         eth = it["ripening_and_storage"]["ethylene_compatibility"]

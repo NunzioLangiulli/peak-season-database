@@ -1,6 +1,6 @@
-"""Spostato: l'editor dei testi fa ora parte del Peak Season Admin Studio (admin_studio/studio.py), insieme alle schede
-Immagini, Icone e Build & Deploy. Questo file resta solo per compatibilità e avvia lo studio.
-Uso consigliato:  doppio clic su admin_studio/Avvia_Admin_Studio.bat (Windows) o Avvia_Admin_Studio.sh
+"""Moved: the text editor is now part of the Peak Season Admin Studio (admin_studio/studio.py), together with the
+Images, Icons and Build & Deploy tabs. This file remains only for compatibility and starts the Studio.
+Recommended use:  double-click admin_studio/Avvia_Admin_Studio.bat (Windows) or Avvia_Admin_Studio.sh
 """
 import runpy
 from pathlib import Path

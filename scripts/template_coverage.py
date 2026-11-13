@@ -1,8 +1,8 @@
-"""Copertura dei campi del TEMPLATE ORIGINALE (prompt Fase 1) nel database attuale.
+"""Coverage of the ORIGINAL TEMPLATE fields (Phase 1 prompt) in the current database.
 
-Per ogni campo del modello: verificato da fonte | solo bozza (da verificare) | non pertinente (N/A) | mancante (null).
-Scrive data/template_coverage.json e stampa una tabella.
-Uso:  python scripts/template_coverage.py
+For each template field: verified from a source | draft only (to verify) | not applicable (N/A) | missing (null).
+Writes data/template_coverage.json and prints a table.
+Usage:  python scripts/template_coverage.py
 """
 from common import DATA, load_json, save_json
 

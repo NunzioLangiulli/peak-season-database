@@ -1,7 +1,7 @@
-"""Genera assets/images/_review.html: galleria locale di tutte le foto per alimento, con autore, licenza,
-fonte e tipo di vista, per scegliere quali tenere. Elimina dalla cartella i file che non vuoi e poi esegui
+"""Generates assets/images/_review.html: local gallery of all photos per product, with author, licence,
+source and view type, to choose which to keep. Delete the files you do not want from the folder and then run
 python scripts/sync_images.py --renumber --prune
-Uso:  python scripts/make_image_review.py
+Usage:  python scripts/make_image_review.py
 """
 import html
 

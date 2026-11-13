@@ -1,11 +1,11 @@
-"""Correzioni e aggiunte curate a mano alle varietà (2026-11-05). Idempotente.
+"""Hand-curated fixes and additions to the varieties (2026-11-05). Idempotent.
 
-1. Pesca Tabacchiera dell'Etna come varietà della pesca (decisione dell'utente): Arca del Gusto Slow Food,
-   pagina in data/raw/slowfood_pages/pesca-tabacchiera-delletna.html ("forma schiacciata ... tanto schiacciata da
-   sembrare una tabacchiera"; comuni di Adrano, Biancavilla, Bronte, Maniace, Mojo Alcantara, Roccella Valdemone).
-2. Collegamenti Slow Food sbagliati prodotti dall'abbinamento automatico per parole (verify_varieties.py): tolti.
-   Le varietà restano verificate se hanno altre fonti.
-Uso:  python scripts/curate_varieties.py   (dopo verify_varieties_eu.py / merge_items.py)
+1. Pesca Tabacchiera dell'Etna as a variety of peach (owner decision): Slow Food Ark of Taste,
+   page in data/raw/slowfood_pages/pesca-tabacchiera-delletna.html ("forma schiacciata ... tanto schiacciata da
+   sembrare una tabacchiera"; municipalities of Adrano, Biancavilla, Bronte, Maniace, Mojo Alcantara, Roccella Valdemone).
+2. Wrong Slow Food links produced by the automatic word matching (verify_varieties.py): removed.
+   The varieties stay verified if they have other sources.
+Usage:  python scripts/curate_varieties.py   (after verify_varieties_eu.py / merge_items.py)
 """
 from common import DATA, finalize_completeness, load_json, mark_enriched, save_json
 
@@ -20,7 +20,7 @@ ADD = {
                      "local_file": "data/raw/slowfood_pages/pesca-tabacchiera-delletna.html"}],
     },
 }
-WRONG_SF = {  # (alimento, varietà) -> pagina Slow Food abbinata per errore
+WRONG_SF = {  # (product, variety) -> Slow Food page matched by mistake
     ("bietola_da_coste_swiss_chard", "Bietola Verde a Costa Bianca Gigante"): "pisello-lagrima-de-costa-di-gipuzkoa",
     ("fico_fig", "Fico Bianco del Cilento DOP"): "fico-monnato-di-prignano-cilento",
     ("lattuga_da_cespo_head_lettuce", "Lattuga Romana"): "lattuga-romana-kesseler-strunkchen",

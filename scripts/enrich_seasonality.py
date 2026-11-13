@@ -1,19 +1,19 @@
-"""Passo 1.3c - Stagionalità (EUFIC, WWF, Greenpeace, Altroconsumo, ODC) e calendario agronomico (ODC).
+"""Step 1.3c - Seasonality (EUFIC, WWF, Greenpeace, Altroconsumo, ODC) and agronomic calendar (ODC).
 
-Metodo di fusione (documentato anche in metadata e nel report):
-- per ogni mese si calcola un punteggio s = voti / fonti disponibili:
-    voto 1   = la fonte indica il mese "di stagione" (WWF, Greenpeace, Altroconsumo, EUFIC-Italia, raccolta ODC)
-    voto 0,5 = la fonte indica "primizia/tardivo" (WWF, Altroconsumo)
-- s >= 0,5 -> in_season ; 0 < s < 0,5 -> primizie (se precede un periodo di stagione) o end_of_season (se lo segue);
-  s = 0 -> out_of_season; le indicazioni esplicite primizia/tardivo delle fonti hanno la precedenza;
-- peak_season = mesi interni (non il primo né l'ultimo) di un periodo di almeno 3 mesi in cui TUTTE le fonti
-  disponibili (almeno 2) concordano;
-- frutti esotici senza alcuna fonte di produzione italiana (ODC, EUFIC-Italia, WWF, Greenpeace) -> not_applicable;
-- nessuna fonte -> null (campo mancante).
-- EUFIC per zona: quota dei Paesi della zona (regione EEA prevalente) che segnalano l'alimento di stagione;
-  i dati "(stored)" = prodotto locale da conservazione -> end_of_season.
+Merging method (also documented in metadata and in the report):
+- for each month a score s = votes / available sources is computed:
+    vote 1   = the source marks the month "in season" (WWF, Greenpeace, Altroconsumo, EUFIC-Italy, ODC harvest)
+    vote 0.5 = the source marks it "early/late" (WWF, Altroconsumo)
+- s >= 0.5 -> in_season ; 0 < s < 0.5 -> primizie (if it precedes a seasonal period) or end_of_season (if it follows it);
+  s = 0 -> out_of_season; explicit early/late indications from the sources take precedence;
+- peak_season = inner months (neither the first nor the last) of a run of at least 3 months on which ALL available
+  sources (at least 2) agree;
+- exotic fruit without any Italian production source (ODC, EUFIC-Italy, WWF, Greenpeace) -> not_applicable;
+- no source -> null (missing field).
+- EUFIC by zone: share of the zone's countries (prevailing EEA region) that report the product as in season;
+  "(stored)" data = local stored product -> end_of_season.
 
-Uso:  python scripts/enrich_seasonality.py
+Usage:  python scripts/enrich_seasonality.py
 """
 import html
 import re
@@ -53,7 +53,7 @@ def altroconsumo_page(url):
 
 
 def states(score, hints, n_sources):
-    """score: 12 float (None = nessuna fonte); hints: 12 di None|'early'|'late'|'stored'."""
+    """score: 12 floats (None = no source); hints: 12 of None|'early'|'late'|'stored'."""
     if n_sources == 0:
         return None
     st = []
@@ -75,7 +75,7 @@ def states(score, hints, n_sources):
         if st[m] == "?":
             nxt = st[(m + 1) % 12] in ("in_season", "primizie")
             st[m] = "primizie" if nxt else "end_of_season"
-    # apice: mesi interni di un blocco >= 3 mesi con accordo totale e >= 2 fonti
+    # peak: inner months of a block >= 3 months with full agreement and >= 2 sources
     if n_sources >= 2:
         full = [score[m] >= 0.999 for m in range(12)]
         if not all(full):
@@ -229,7 +229,7 @@ def main():
                     for f, val in (("sowing_or_transplant_months", sow), ("harvest_months", r["harvest"])):
                         if z.get(f) and sorted(z[f]) != val:
                             add_discrepancy(it, f"agricultural_calendar_italy.{a}.{f}", z[f], val, f"Orto da Coltivare tabella {a}")
-                    # liste vuote = la tabella ODC non prevede quella operazione (dato presente, non mancante)
+                    # empty lists = the ODC table does not include that operation (data present, not missing)
                     agri[a] = {"sowing_or_transplant_months": sow, "harvest_months": r["harvest"],
                                "seedbed_sowing_months": r["seedbed"], "direct_sowing_months": r["direct"],
                                "transplant_months": r["transplant"], "cultivation_notes": z.get("cultivation_notes")}
@@ -259,7 +259,7 @@ def main():
                     if f not in it["sources_by_topic"]["local_files_used"]:
                         it["sources_by_topic"]["local_files_used"].append(f)
                 stats["odc"] += 1
-            # legacy: conserva i valori della bozza sostituiti
+            # legacy: keep the replaced draft values
             legacy["items"].setdefault(iid, {})["seasonality.italy_macro_areas"] = draft_areas
             mark_enriched(it, enriched)
             finalize_completeness(it)

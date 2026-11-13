@@ -1,8 +1,8 @@
-"""Elenco dei Presìdi Slow Food e dell'Arca del Gusto dalle sitemap della Fondazione Slow Food per la Biodiversità
-(fonte aggiunta per verificare varietà e qualifiche "Presidio Slow Food" della bozza).
-Cache: data/raw/slowfood_index.json = {"presidi": {url: slug}, "arca": {url: slug}}; titoli delle pagine aperte in
+"""List of the Slow Food Presidia and Ark of Taste from the sitemaps of the Slow Food Foundation for Biodiversity
+(source added to verify the draft's varieties and "Slow Food Presidium" labels).
+Cache: data/raw/slowfood_index.json = {"presidi": {url: slug}, "arca": {url: slug}}; titles of the opened pages in
 data/raw/slowfood_titles.json.
-Uso:  python scripts/fetch_slowfood.py
+Usage:  python scripts/fetch_slowfood.py
 """
 import re
 

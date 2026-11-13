@@ -1,10 +1,10 @@
-﻿"""Note di coltivazione IT/EN generate dai dati verificati di Orto da Coltivare (tabelle PDF per Nord/Centro/Sud).
+﻿"""IT/EN growing notes generated from the verified Orto da Coltivare data (PDF tables for North/Centre/South).
 
-- <zona>.cultivation_notes: mesi di semina in semenzaio, semina diretta, trapianto e raccolta della zona.
-- cultivation_notes (generale): profondità di semina, distanze, esposizione e fase lunare indicate da ODC.
-Le note della bozza (testo libero non verificato) vanno in draft_legacy_values.json.
-Solo per gli alimenti con riga nelle tabelle ODC; gli altri restano da verificare.
-Uso:  python scripts/build_cultivation_notes.py
+- <zone>.cultivation_notes: months of sowing in seed trays, direct sowing, transplanting and harvest for the zone.
+- cultivation_notes (general): sowing depth, spacing, exposure and moon phase given by ODC.
+The draft's notes (unverified free text) go to draft_legacy_values.json.
+Only for products with a row in the ODC tables; the others stay to be verified.
+Usage:  python scripts/build_cultivation_notes.py
 """
 from common import DATA, finalize_completeness, load_json, mark_enriched, save_json
 
@@ -21,7 +21,7 @@ def cap(s):
 
 
 def runs(months):
-    """Mesi -> intervalli consecutivi (anche a cavallo d'anno), es. [1,2,3,10,11,12] -> [(10,3)]."""
+    """Months -> consecutive ranges (also across the year end), e.g. [1,2,3,10,11,12] -> [(10,3)]."""
     s = sorted(set(months))
     if not s:
         return []

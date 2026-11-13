@@ -1,18 +1,18 @@
-"""Polifenoli da banche dati di composizione (senza ricerca bibliografica), aggiunti ai carotenoidi USDA FDC.
+"""Polyphenols from composition databases (no literature search), added to the USDA FDC carotenoids.
 
 1. USDA Database for the Flavonoid Content of Selected Foods, Release 3.3 (2018), data/raw/usda_flavonoids/*.csv
-   (esportati da Flav_R03-3.accdb). Collegamento: codice FDC dell'alimento (enrich_bioactives.FDC) -> NDB
-   (sr_legacy_food.csv) -> FLAV_DAT; se manca, config/polyphenol_sources.json:usda_ndb_fallback.
-   Per ogni classe (antocianine, flavonoli, flavoni, flavanoni, flavan-3-oli) si riporta la somma dei composti
-   misurati (mg/100 g, parte edibile cruda) e i 2 composti principali.
-2. Phenol-Explorer 3.6 (2016), data/raw/phenol_explorer/composition-data.xlsx, voce in
+   (exported from Flav_R03-3.accdb). Link: the product's FDC code (enrich_bioactives.FDC) -> NDB
+   (sr_legacy_food.csv) -> FLAV_DAT; if missing, config/polyphenol_sources.json:usda_ndb_fallback.
+   For each class (anthocyanins, flavonols, flavones, flavanones, flavan-3-ols) the sum of the measured compounds
+   (mg/100 g, raw edible portion) and the 2 main compounds are reported.
+2. Phenol-Explorer 3.6 (2016), data/raw/phenol_explorer/composition-data.xlsx, entry in
    config/polyphenol_sources.json:phenol_explorer:
-   - polifenoli totali (saggio di Folin-Ciocalteu), indicatore sintetico;
-   - acidi fenolici, stilbeni, lignani, altri polifenoli, isoflavoni (cromatografia, somma dei composti);
-   - le classi di flavonoidi solo se l'alimento non e' nella banca dati USDA.
-Soglia: classi >= 0,5 mg/100 g. Valori indicativi: la variabilita' tra varieta' e campioni e' ampia.
-Licenze: USDA dominio pubblico; Phenol-Explorer gratuito, uso commerciale con permesso degli autori e citazione.
-Uso:  python scripts/enrich_polyphenols.py   (dopo enrich_bioactives.py)
+   - total polyphenols (Folin-Ciocalteu assay), summary indicator;
+   - phenolic acids, stilbenes, lignans, other polyphenols, isoflavones (chromatography, sum of the compounds);
+   - flavonoid classes only if the product is not in the USDA database.
+Threshold: classes >= 0.5 mg/100 g. Indicative values: variability between varieties and samples is wide.
+Licences: USDA public domain; Phenol-Explorer free, commercial use with the authors' permission and citation.
+Usage:  python scripts/enrich_polyphenols.py   (after enrich_bioactives.py)
 """
 import csv
 import io

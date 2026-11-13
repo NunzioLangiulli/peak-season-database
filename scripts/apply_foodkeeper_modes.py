@@ -1,17 +1,17 @@
-"""Conservazione domestica da USDA FoodKeeper, versione completa (data/raw/foodkeeper_full.json).
+"""Home storage from USDA FoodKeeper, full version (data/raw/foodkeeper_full.json).
 
-enrich_foodkeeper.py usava solo i campi DOP_* ("dalla data di acquisto"). FoodKeeper ha anche i campi generici
-Pantry_/Refrigerate_/Freeze_* (es. erbe aromatiche, cereali, fico d'India) e indicazioni qualitative:
-- Pantry_Metric = "When Ripe": il frutto si tiene a temperatura ambiente FINO A MATURAZIONE (poi, se indicato
-  nelle note, N giorni: "Until Ripe, then 1-2 days") e solo dopo in frigorifero;
-- nessun valore di dispensa: FoodKeeper prevede SOLO il frigorifero;
-- Freeze_Metric = "Not Recommended": congelamento sconsigliato.
-Campi aggiunti a estimated_shelf_life_days:
+enrich_foodkeeper.py only used the DOP_* fields ("from the date of purchase"). FoodKeeper also has the generic fields
+Pantry_/Refrigerate_/Freeze_* (e.g. culinary herbs, cereals, prickly pear) and qualitative indications:
+- Pantry_Metric = "When Ripe": the fruit is kept at room temperature UNTIL RIPE (then, if stated
+  in the notes, N days: "Until Ripe, then 1-2 days") and only afterwards in the fridge;
+- no pantry value: FoodKeeper recommends the fridge ONLY;
+- Freeze_Metric = "Not Recommended": freezing not recommended.
+Fields added to estimated_shelf_life_days:
   room_temp_mode: "days" | "until_ripe" | "fridge_only" | null
   freezing_recommended: true | false | null
-Se room_temp_mode e' "fridge_only" (o "until_ripe" senza giorni) room_temp_days e' non pertinente (N/A); se il
-congelamento e' sconsigliato lo e' in_freezer_months. I valori della bozza sostituiti vanno in draft_legacy_values.
-Uso:  python scripts/apply_foodkeeper_modes.py   (dopo enrich_foodkeeper; prima di apply_texts)
+If room_temp_mode is "fridge_only" (or "until_ripe" without days) room_temp_days is not applicable (N/A); if
+freezing is not recommended, so is in_freezer_months. Replaced draft values go to draft_legacy_values.
+Usage:  python scripts/apply_foodkeeper_modes.py   (after enrich_foodkeeper; before apply_texts)
 """
 import re
 
@@ -82,7 +82,7 @@ def main():
             na.append(f"{P}.room_temp_days")
         stats[mode] += 1
 
-        # --- frigorifero (campi generici se mancano i DOP)
+        # --- fridge (generic fields if the DOP ones are missing)
         fridge = rng(o, "DOP_Refrigerate") or rng(o, "Refrigerate")
         if fridge and sl["refrigerated_days"] != fridge:
             if sl["refrigerated_days"] is not None:

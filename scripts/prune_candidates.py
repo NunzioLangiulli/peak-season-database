@@ -1,12 +1,12 @@
-"""Filtra le immagini candidate prima della revisione dell'utente. Idempotente.
+"""Filters the candidate images before the owner's review. Idempotent.
 
-1. Regola automatica (Pixabay): il nome inglese dell'alimento deve essere ESATTAMENTE uno dei primi due tag
-   (singolare o plurale); scarta per esempio "wild garlic" per l'aglio.
-2. Scarti a vista (pre-revisione di Claude sui fogli di anteprima): scripts/config/image_candidates_prescreen.json,
-   {alimento: {tipo: [numeri da scartare]}} oppure {tipo: {"drop": [numeri], "move": {"numero": "altro_tipo"}}}
-   per spostare una candidata nel tipo giusto (es. una foto a tutto campo trovata cercando "tagliato").
-I file scartati vengono eliminati da assets/images/_candidates/<id>/; i rimanenti sono rinumerati.
-Uso:  python scripts/prune_candidates.py [--pass2]   (poi find_image_candidates.py --merge e make_candidates_review.py)
+1. Automatic rule (Pixabay): the product's English name must be EXACTLY one of the first two tags
+   (singular or plural); e.g. discards "wild garlic" for garlic.
+2. Visual discards (Claude's pre-review of the preview sheets): scripts/config/image_candidates_prescreen.json,
+   {product: {type: [numbers to discard]}} or {type: {"drop": [numbers], "move": {"number": "other_type"}}}
+   to move a candidate to the right type (e.g. a full-frame photo found by searching "cut").
+Discarded files are deleted from assets/images/_candidates/<id>/; the remaining ones are renumbered.
+Usage:  python scripts/prune_candidates.py [--pass2]   (then find_image_candidates.py --merge and make_candidates_review.py)
 """
 import re
 
@@ -18,7 +18,7 @@ OUT = IMAGES / "_candidates"
 
 
 def exact_tag(h, en):
-    """en: nome o lista di nomi accettati (nome del database + nomi alternativi di config/image_search_names.json)."""
+    """en: accepted name or list of names (database name + alternative names from config/image_search_names.json)."""
     tags = [t.strip().lower() for t in h.get("title", "").split(",")][:2]
     for a in (en if isinstance(en, list) else [en]):
         base = re.sub(r"(es|s)$", "", a.lower().strip())
@@ -28,8 +28,8 @@ def exact_tag(h, en):
 
 
 def pass2(names):
-    """Secondo passaggio: agisce solo sulle candidate marcate "pass": 2 (aggiunte da find_image_candidates.py --fill).
-    Scarti a vista in config/image_candidates_prescreen2.json, con i numeri presenti nel NOME DEL FILE (<tipo>_<n>.jpg)."""
+    """Second pass: acts only on candidates marked "pass": 2 (added by find_image_candidates.py --fill).
+    Visual discards in config/image_candidates_prescreen2.json, with the numbers in the FILE NAME (<type>_<n>.jpg)."""
     pre = load_json(CONFIG / "image_candidates_prescreen2.json") if (CONFIG / "image_candidates_prescreen2.json").exists() else {}
     tot = drop = 0
     for f in sorted(OUT.glob("*/candidates.json")):
@@ -70,8 +70,8 @@ def pass2(names):
 
 
 def renumber(iid, c):
-    """Rinumera <tipo>_<n>.jpg. Prima porta TUTTI i file a nomi temporanei unici, poi assegna i nomi definitivi:
-    così una candidata spostata da un tipo all'altro non viene sovrascritta."""
+    """Renumbers <type>_<n>.jpg. First moves ALL files to unique temporary names, then assigns the final names:
+    so a candidate moved from one type to another is not overwritten."""
     items = []
     for t, lst in list(c.items()):
         if t.startswith("_"):

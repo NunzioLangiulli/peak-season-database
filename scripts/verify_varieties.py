@@ -1,14 +1,14 @@
-﻿"""Verifica le varietà della bozza (italian_varieties_and_territories.notable_varieties) sui testi delle fonti.
+﻿"""Checks the draft's varieties (italian_varieties_and_territories.notable_varieties) against the source texts.
 
-Una varietà è verificata se:
-- è una DOP/IGP presente in eAmbrosia (registrata) per quell'alimento, oppure
-- tutte le sue parole distintive (escluse quelle generiche e il nome dell'alimento) compaiono vicine (entro 60
-  caratteri) nel testo di almeno una fonte dell'alimento (Orto da Coltivare, Altroconsumo, My-PersonalTrainer,
-  USDA HB66 per le cultivar estere).
-La dicitura "Presidio Slow Food" non è verificabile su queste fonti: viene tolta dal nome e annotata.
-Risultato in italian_varieties_and_territories.varieties_verification = [{name, verified, sources[]}];
-notable_varieties tiene solo le varietà verificate, le altre vanno in draft_legacy_values.json.
-Uso:  python scripts/verify_varieties.py [--dry-run]
+A variety is verified if:
+- it is a PDO/PGI registered in eAmbrosia for that product, or
+- all its distinctive words (excluding generic words and the product name) appear close together (within 60
+  characters) in the text of at least one of the product's sources (Orto da Coltivare, Altroconsumo, My-PersonalTrainer,
+  USDA HB66 for foreign cultivars).
+The "Presidio Slow Food" label cannot be verified on these sources: it is removed from the name and noted.
+Result in italian_varieties_and_territories.varieties_verification = [{name, verified, sources[]}];
+notable_varieties keeps only the verified varieties, the others go to draft_legacy_values.json.
+Usage:  python scripts/verify_varieties.py [--dry-run]
 """
 import argparse
 import re
@@ -30,7 +30,7 @@ def core(name):
 
 def tokens(name, item_words):
     t = [w for w in norm(re.sub(r"\(.*?\)", " ", core(name))).split() if w not in STOP and w not in item_words and len(w) > 2]
-    if not t:  # nome fatto solo di parole generiche (es. "Cappuccio Rosso"): uso tutte le parole non vuote
+    if not t:  # name made only of generic words (e.g. "Cappuccio Rosso"): use all non-empty words
         t = [w for w in norm(core(name)).split() if len(w) > 2 and w not in ("dop", "igp")]
     return t
 
@@ -60,7 +60,7 @@ def main():
     def slow_lookup(toks, first, item_words):
         if not toks:
             return []
-        # nomi di una sola parola (es. "Kent"): serve anche il nome dell'alimento nello slug
+        # one-word names (e.g. "Kent"): the product name is also needed in the slug
         need_item = first in toks
         hits = [(k, u) for k, u, s in slugs if all(has(w, s) for w in toks)
                 and (any(has(w, s) for w in item_words) or (not need_item and has(first, s)))]

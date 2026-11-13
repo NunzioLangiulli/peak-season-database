@@ -1,20 +1,20 @@
-"""Mappa dell'Europa colorata per zona climatica EUFIC (SVG per l'app).
+"""Map of Europe coloured by EUFIC climate zone (SVG for the app).
 
-Dati:
-- confini: Natural Earth "Admin 0 - Countries" 1:50m (pubblico dominio),
+Data:
+- borders: Natural Earth "Admin 0 - Countries" 1:50m (public domain),
   data/raw/naturalearth/ne_50m_admin_0_countries.geojson
-- zone, Paesi (ISO 3166-1 alpha-2) e colori: database,
+- zones, countries (ISO 3166-1 alpha-2) and colours: database,
   metadata.eufic_climatic_zones_legend (countries_primary_iso,
   countries_partial_iso, color_hex)
-- regioni: EEA "Biogeographical regions, Europe 2016" (EEA, Copenaghen, 2016; CC BY 4.0),
-  scaricate semplificate dal servizio ArcGIS EEA in EPSG:3035:
+- regions: EEA "Biogeographical regions, Europe 2016" (EEA, Copenhagen, 2016; CC BY 4.0),
+  downloaded simplified from the EEA ArcGIS service in EPSG:3035:
   data/raw/eea_biogeo/biogeo_regions_3035_simplified.geojson
 Output:
-- app/assets/maps/europe_zones_light.svg e europe_zones_dark.svg: zone continue come
-  sulla mappa EUFIC (regioni EEA colorate con i colori del database, confini degli Stati sopra)
-- app/assets/icons/season/europe.svg (sagoma reale dell'Europa per l'icona "Zona Climatica")
-Proiezione: azimutale equivalente di Lambert centrata su 10°E 52°N (come ETRS89-LAEA).
-Uso: python scripts/build_europe_map.py
+- app/assets/maps/europe_zones_light.svg and europe_zones_dark.svg: continuous zones as
+  on the EUFIC map (EEA regions coloured with the database colours, country borders on top)
+- app/assets/icons/season/europe.svg (real outline of Europe for the "Climate Zone" icon)
+Projection: Lambert azimuthal equal-area centred on 10°E 52°N (like ETRS89-LAEA).
+Usage: python scripts/build_europe_map.py
 """
 import json
 import math
@@ -26,16 +26,16 @@ DB = ROOT / "data" / "database.json"
 EEA = ROOT / "data" / "raw" / "eea_biogeo" / "biogeo_regions_3035_simplified.geojson"
 OUT_MAP = ROOT / "app" / "assets" / "maps"
 
-# Regione EEA -> zona dell'app: letta dal database
-# (eufic_climatic_zones_legend.<zona>.eea_regions, approssimazioni in eea_regions_approx).
-ARCTIC = "#5B6670"  # come su EUFIC: Artica in grigio (non è una zona dell'app)
-FE, FN, R = 4321000.0, 3210000.0, 6371007.0  # EPSG:3035 → coordinate sulla sfera unitaria
+# EEA region -> app zone: read from the database
+# (eufic_climatic_zones_legend.<zone>.eea_regions, approximations in eea_regions_approx).
+ARCTIC = "#5B6670"  # as on EUFIC: Arctic in grey (not a zone of the app)
+FE, FN, R = 4321000.0, 3210000.0, 6371007.0  # EPSG:3035 → coordinates on the unit sphere
 OUT_ICON = ROOT / "app" / "assets" / "icons" / "season" / "europe.svg"
 
 LON0, LAT0 = math.radians(10), math.radians(52)
-VIEW = (-25, 34, 40, 72)          # lon min, lat min, lon max, lat max della mappa
-ICON_VIEW = (-11, 35, 32, 71.5)    # area più stretta per l'icona (niente Islanda/Russia)
-W = 1000                           # larghezza SVG della mappa
+VIEW = (-25, 34, 40, 72)          # min lon, min lat, max lon, max lat of the map
+ICON_VIEW = (-11, 35, 32, 71.5)    # narrower area for the icon (no Iceland/Russia)
+W = 1000                           # SVG width of the map
 
 
 def laea(lon, lat):
@@ -47,7 +47,7 @@ def laea(lon, lat):
 
 
 def dp(points, tol):
-    """Douglas-Peucker: semplifica una linea mantenendo la forma."""
+    """Douglas-Peucker: simplifies a line while keeping its shape."""
     if len(points) < 3:
         return points
     (x1, y1), (x2, y2) = points[0], points[-1]
@@ -56,7 +56,7 @@ def dp(points, tol):
     dmax, idx = 0, 0
     for i in range(1, len(points) - 1):
         px, py = points[i]
-        if norm < 1e-9:  # anello chiuso: distanza dal punto di partenza
+        if norm < 1e-9:  # closed ring: distance from the starting point
             d = math.hypot(px - x1, py - y1)
         else:
             d = abs(dy * px - dx * py + x2 * y1 - y2 * x1) / norm
@@ -80,7 +80,7 @@ def frame(view):
     pts = [laea(lon, lat) for lon in range(lon_min, lon_max + 1) for lat in (lat_min, lat_max)]
     pts += [laea(lon, lat) for lat in range(int(lat_min), int(lat_max) + 1) for lon in (lon_min, lon_max)]
     xs, ys = [p[0] for p in pts], [p[1] for p in pts]
-    # riquadro interno (si taglia sui lati), per non vedere i bordi curvi
+    # inner frame (clipped at the sides), so the curved edges are not visible
     return min(xs) * 0.82, max(xs) * 0.9, min(ys) + 0.02, max(ys) * 0.97
 
 
@@ -141,7 +141,7 @@ def main():
         land = "#3A3D40" if dark else "#ECEEEA"
         border = "#141516" if dark else "#FFFFFF"
         shapes = [f'<rect width="{W}" height="{height:.0f}" fill="{sea}"/>']
-        # 1) tutte le terre in grigio
+        # 1) all land in grey
         for f in ne["features"]:
             d, _, _ = path_for(f["geometry"], VIEW, W, 0.6)
             if d:
@@ -165,8 +165,8 @@ def main():
         (OUT_MAP / f"europe_zones_{theme}.svg").write_text(svg, encoding="utf-8")
         print(theme, f"{len(svg) / 1024:.0f} KB")
 
-    # Icona: sagoma reale dei Paesi europei (senza Russia e Islanda, senza
-    # territori lontani), adattata a 24 x 24 con 1 px di margine.
+    # Icon: real outline of the European countries (without Russia and Iceland, without
+    # distant territories), fitted to 24 x 24 with a 1 px margin.
     rings = []
     lon_min, lat_min, lon_max, lat_max = ICON_VIEW
     for f in ne["features"]:
@@ -193,7 +193,7 @@ def main():
             if area > 0.08:
                 parts.append("M" + "L".join(f"{x:.2f},{y:.2f}" for x, y in pts) + "Z")
     OUT_ICON.write_text(
-        # contorno dello stesso colore: chiude le fessure tra Stati, laghi e fiumi → blocco unico pieno
+        # outline in the same colour: closes the gaps between countries, lakes and rivers → one solid block
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000">'
         f'<path d="{"".join(parts)}" stroke="#000" stroke-width="0.45" stroke-linejoin="round"/></svg>',
         encoding="utf-8")

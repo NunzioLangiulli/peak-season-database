@@ -1,10 +1,10 @@
-"""Verifica nome scientifico, genere e famiglia della bozza con WFO (piante) / GBIF (funghi) ed EPPO.
+"""Checks the draft's scientific name, genus and family against WFO (plants) / GBIF (mushrooms) and EPPO.
 
-- scientific_name/genus: confermati se coincidono (senza autori) con il nome trovato in WFO/GBIF o EPPO.
-- family: confermata se coincide con WFO/GBIF. Se diversa, si mantiene la famiglia secondo APG IV quando la
-  differenza è solo di sistema di classificazione (es. Chenopodiaceae in WFO = Amaranthaceae in APG IV) e si
-  annota; altrimenti si segnala come discrepanza.
-Uso:  python scripts/verify_botany.py
+- scientific_name/genus: confirmed if they match (without authors) the name found in WFO/GBIF or EPPO.
+- family: confirmed if it matches WFO/GBIF. If different, the APG IV family is kept when the
+  difference is only one of classification system (e.g. Chenopodiaceae in WFO = Amaranthaceae in APG IV) and it is
+  noted; otherwise it is flagged as a discrepancy.
+Usage:  python scripts/verify_botany.py
 """
 import re
 

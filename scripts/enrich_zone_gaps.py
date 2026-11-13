@@ -1,19 +1,19 @@
-"""Colma alcune zone climatiche EUFIC mancanti con fonti nazionali indicate da EUFIC stessa
+"""Fills some missing EUFIC climate zones with national sources cited by EUFIC itself
 (https://www.eufic.org/en/page/european-national-sources-to-find-information-on-seasonal-fruit-and-vegetables).
 
-- mountain (alpina): Gesundheitsportal Österreichs (Ministero della salute austriaco), data/raw/national_calendars/
-  austria_gesundheitsportal.json; solo per gli alimenti che il calendario austriaco elenca.
-- mediterranean: per gli alimenti assenti da EUFIC in zona mediterranea si usa la stagionalità italiana del database
-  (macro-area Sud e Isole, gia' verificata sulle fonti italiane): l'Italia e' un Paese a prevalenza mediterranea e
-  per l'Italia EUFIC rinvia a una fonte nazionale (Slow Food). Derivazione dichiarata.
-Le altre zone (atlantica, continentale, boreale, pannonica): le lacune riguardano soprattutto prodotti che li' non si
-coltivano (agrumi, cachi, nespola, fico d'India…): restano vuote.
-Mai sovrascritto un dato EUFIC esistente. Provenienza in seasonality.eufic_zone_sources.
-Uso:  python scripts/enrich_zone_gaps.py   (dopo enrich_seasonality.py)
+- mountain (Alpine): Gesundheitsportal Österreichs (Austrian Ministry of Health), data/raw/national_calendars/
+  austria_gesundheitsportal.json; only for the products listed by the Austrian calendar.
+- mediterranean: for products missing from EUFIC in the Mediterranean zone the database's Italian seasonality is used
+  (South and Islands macro-area, already verified on Italian sources): Italy is a mainly Mediterranean country and
+  for Italy EUFIC refers to a national source (Slow Food). Declared derivation.
+The other zones (Atlantic, Continental, Boreal, Pannonian): the gaps mostly concern products not grown
+there (citrus, persimmon, loquat, prickly pear…): they stay empty.
+Existing EUFIC data are never overwritten. Provenance in seasonality.eufic_zone_sources.
+Usage:  python scripts/enrich_zone_gaps.py   (after enrich_seasonality.py)
 """
 from common import DATA, RAW, finalize_completeness, load_json, mark_enriched, save_json
 
-AT = {  # id -> voce del calendario austriaco
+AT = {  # id -> Austrian calendar entry
     "bietola_da_coste_swiss_chard": "mangold", "bietola_da_taglio_leaf_beet": "mangold", "indivia_riccia_curly_endive": "endivie",
     "scarola_escarole": "endivie", "cicoria_da_cespo_chicory": "zuckerhut", "fungo_pleurotus_oyster_mushroom": "pilze",
     "fungo_champignon_button_mushroom": "pilze", "radicchio_radicchio": "radicchio", "valerianella_corn_salad": "vogerlsalat",

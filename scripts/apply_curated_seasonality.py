@@ -1,6 +1,6 @@
-"""Applica la stagionalità italiana curata a mano (config/italy_seasonality_curated.json) agli alimenti assenti
-dai calendari di stagione. Non sovrascrive una stagionalità già calcolata dal voto tra calendari. Idempotente.
-Uso:  python scripts/apply_curated_seasonality.py   (dopo enrich_seasonality.py)
+"""Applies the hand-curated Italian seasonality (config/italy_seasonality_curated.json) to products missing
+from the seasonal calendars. Does not overwrite a seasonality already computed by the vote across calendars. Idempotent.
+Usage:  python scripts/apply_curated_seasonality.py   (after enrich_seasonality.py)
 """
 from common import CONFIG, DATA, finalize_completeness, load_json, mark_enriched, save_json
 
@@ -22,7 +22,7 @@ def main():
         s = it["seasonality"]
         own = s.get("italy_source", {}).get("source")
         if (s.get("italy_macro_areas") or {}).get("nord") and own is None:
-            continue                     # già calcolata dai calendari
+            continue                     # already computed from the calendars
         if c.get("derive"):
             src = I[c["derive"]]["seasonality"]
             areas, nat = src["italy_macro_areas"], src["italy_national"]
@@ -39,7 +39,7 @@ def main():
             rule_en = f" Rendering: {c['rule'][1]}." if c.get("rule") else ""
             note = (f"Fonte: {NAME[c['source']]} (periodo di raccolta).{rule_it} Calendario unico applicato alle tre macro-aree; nessun picco (una sola fonte).",
                     f"Source: {NAME[c['source']]} (harvest period).{rule_en} One calendar applied to all three macro-areas; no peak (single source).")
-            dc = it["data_completeness"]                 # citazione testuale: solo nelle note interne (italiano)
+            dc = it["data_completeness"]                 # verbatim quote: only in the internal notes (Italian)
             q = f"Stagionalità italiana, citazione da {NAME[c['source']]}: \"{c['quote']}\""
             if q not in dc["notes"]:
                 dc["notes"] = (dc["notes"] + " " + q).strip()

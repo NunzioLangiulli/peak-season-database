@@ -1,4 +1,4 @@
-"""Utility condivise dagli script Peak Season (percorsi, HTTP con cache, chiavi API)."""
+"""Utilities shared by the Peak Season scripts (paths, cached HTTP, API keys)."""
 import json
 import os
 import pathlib
@@ -20,8 +20,8 @@ SESSION.headers["User-Agent"] = UA
 
 
 def load_json(path, raw=False):
-    """Legge un JSON. Per database.json i riferimenti al corpus condiviso sono espansi in testo completo (corpus.py),
-    salvo raw=True (file così com'è, per la validazione dello schema e per l'editor dei testi)."""
+    """Reads a JSON file. For database.json the references to the shared corpus are expanded into full text (corpus.py),
+    unless raw=True (file as stored, for schema validation and for the text editor)."""
     with open(path, encoding="utf-8-sig") as f:
         data = json.load(f)
     if not raw and pathlib.Path(path).name == "database.json" and isinstance(data, dict):
@@ -31,8 +31,8 @@ def load_json(path, raw=False):
 
 
 def save_json(path, obj, raw=False):
-    """Scrive un JSON in modo atomico. Per database.json ricompatta i testi ripetuti nel corpus condiviso (corpus.py),
-    salvo raw=True (oggetto già nella forma del file)."""
+    """Writes a JSON file atomically. For database.json it compacts repeated texts into the shared corpus (corpus.py),
+    unless raw=True (object already in the file's form)."""
     path = pathlib.Path(path)
     if not raw and path.name == "database.json" and isinstance(obj, dict) and "items" in obj:
         import corpus
@@ -42,7 +42,7 @@ def save_json(path, obj, raw=False):
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(obj, f, ensure_ascii=False, indent=2)
         f.write("\n")
-    for attempt in range(10):  # OneDrive o un altro processo possono bloccare il file per qualche istante
+    for attempt in range(10):  # OneDrive or another process may lock the file for a moment
         try:
             os.replace(tmp, path)
             return
@@ -54,7 +54,7 @@ def save_json(path, obj, raw=False):
 
 
 def env(key):
-    """Legge una chiave da variabile d'ambiente o dal file .env nella radice del progetto."""
+    """Reads a key from an environment variable or from the .env file at the project root."""
     if os.environ.get(key):
         return os.environ[key]
     p = ROOT / ".env"
@@ -92,9 +92,9 @@ def http_post_json(url, payload, timeout=45, retries=3, pause=0.3):
 
 
 def curl_get_json(url, timeout=45):
-    """GET tramite curl.exe di sistema (usa l'archivio certificati di Windows).
-    Serve per host come list.worldfloraonline.org, che da Python fallisce la verifica TLS
-    perché manca un certificato intermedio nell'archivio di Python."""
+    """GET through the system curl.exe (uses the Windows certificate store).
+    Needed for hosts such as list.worldfloraonline.org, which fail TLS verification from Python
+    because an intermediate certificate is missing from Python's store."""
     out = subprocess.run(["curl.exe", "-s", "-L", "--max-time", str(timeout), "-A", UA, url],
                          capture_output=True, timeout=timeout + 10)
     if out.returncode != 0:
@@ -103,7 +103,7 @@ def curl_get_json(url, timeout=45):
 
 
 def null_paths(item, skip=("sources_by_topic", "data_completeness")):
-    """Percorsi 'a.b.c' dei campi foglia nulli di un alimento (liste di oggetti = foglia unica)."""
+    """'a.b.c' paths of a product's null leaf fields (lists of objects = a single leaf)."""
     out = []
 
     def walk(o, p):
@@ -113,7 +113,7 @@ def null_paths(item, skip=("sources_by_topic", "data_completeness")):
         elif o is None:
             out.append(p)
     walk({k: v for k, v in item.items() if k not in skip}, "")
-    # campi non applicabili (non contano come mancanti): identificativo tassonomico dell'altro registro
+    # non-applicable fields (not counted as missing): taxonomic identifier of the other register
     b = item.get("botany", {})
     na = set(item.get("data_completeness", {}).get("not_applicable_fields", []))
     if b.get("wfo_id"):
@@ -124,7 +124,7 @@ def null_paths(item, skip=("sources_by_topic", "data_completeness")):
 
 
 def mark_enriched(item, paths):
-    """Registra i campi compilati/verificati da fonte: li toglie da 'pending' e li aggiunge a 'enriched'."""
+    """Records the fields filled/verified from a source: removes them from 'pending' and adds them to 'enriched'."""
     dc = item["data_completeness"]
     paths = set(paths)
     dc["fields_enriched_via_scraping"] = sorted(set(dc["fields_enriched_via_scraping"]) | paths)

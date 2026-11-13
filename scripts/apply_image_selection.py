@@ -1,16 +1,16 @@
-"""Applica le scelte fatte nella pagina di revisione (assets/images/_candidates/image_selection.json).
+"""Applies the choices made on the review page (assets/images/_candidates/image_selection.json).
 
-- moves (lista in cima al file, facoltativa): sposta una foto già presente su un altro alimento e/o tipo,
-  {"file": "<id>_NN.jpg", "to": "<altro_id>", "view_type": "<tipo>"}; prende il primo numero libero dell'alimento
-  di destinazione e ne aggiorna i metadati (autore e licenza restano quelli originali);
-- add: scarica la candidata alla risoluzione piena disponibile (Pixabay largeImageURL fino a 1280 px, riletto
-  dall'API perché gli URL scadono dopo 24 h; Commons fino a 1600 px), la salva come <id>_NN.jpg con il numero libero
-  successivo e ne scrive i metadati (autore, licenza, URL d'origine, view_type = tipo della candidata);
-- add_from: come add, ma per una candidata trovata per un altro alimento,
-  {"file": "<altro_id>/<tipo>_<n>.jpg", "view_type": "<tipo>"} (view_type facoltativo);
-- remove: sposta la foto in assets/images/_removed/ (non la cancella) e ne toglie i metadati.
-Poi lanciare sync_images.py (la principale diventa la prima foto full_frame).
-Uso:  python scripts/apply_image_selection.py [--dry-run] [--selection altro_file.json]
+- moves (list at the top of the file, optional): moves an existing photo to another product and/or type,
+  {"file": "<id>_NN.jpg", "to": "<other_id>", "view_type": "<type>"}; takes the first free number of the target
+  product and updates its metadata (author and licence stay the original ones);
+- add: downloads the candidate at the full available resolution (Pixabay largeImageURL up to 1280 px, re-read
+  from the API because URLs expire after 24 h; Commons up to 1600 px), saves it as <id>_NN.jpg with the next free
+  number and writes its metadata (author, licence, source URL, view_type = type of the candidate);
+- add_from: like add, but for a candidate found for another product,
+  {"file": "<other_id>/<type>_<n>.jpg", "view_type": "<type>"} (view_type optional);
+- remove: moves the photo to assets/images/_removed/ (does not delete it) and removes its metadata.
+Then run sync_images.py (the main photo becomes the first full_frame photo).
+Usage:  python scripts/apply_image_selection.py [--dry-run] [--selection other_file.json]
 """
 import io
 import re
@@ -35,20 +35,20 @@ def next_free(iid, used):
 
 def download(h):
     url = h["full"]
-    if h["provider"] == "pixabay":   # gli URL immagine di Pixabay scadono dopo 24 h: si rilegge l'URL dall'API
+    if h["provider"] == "pixabay":   # Pixabay image URLs expire after 24 h: the URL is re-read from the API
         m = re.search(r"-(\d+)/?$", h["source_url"].split("?")[0])
         hit = SESSION.get("https://pixabay.com/api/", params={"key": env("PIXABAY_API_KEY"), "id": m.group(1)},
                           timeout=60).json().get("hits") or []
         if not hit:
             raise RuntimeError("non più disponibile su Pixabay")
         url = hit[0]["largeImageURL"]
-    if h["provider"] == "wikimedia_commons" and "/thumb/" in url:   # file originale: niente miniature da generare
+    if h["provider"] == "wikimedia_commons" and "/thumb/" in url:   # original file: no thumbnails to generate
         url = url.replace("/thumb/", "/").rsplit("/", 1)[0]
     for attempt in range(5):
         r = SESSION.get(url, timeout=90)
         if r.status_code != 429:
             break
-        time.sleep(20 * (attempt + 1))   # Wikimedia limita le richieste ravvicinate
+        time.sleep(20 * (attempt + 1))   # Wikimedia throttles rapid requests
     r.raise_for_status()
     if h["provider"] == "wikimedia_commons":
         time.sleep(6)
@@ -122,7 +122,7 @@ def main():
                         "source_url": h["source_url"], "provider": h["provider"], "width": im.width, "height": im.height,
                         "view_type": vt or t}
         if not dry:
-            save_json(IMAGES / "_metadata.json", meta)   # salva dopo ogni alimento
+            save_json(IMAGES / "_metadata.json", meta)   # save after every product
     if not dry:
         save_json(IMAGES / "_metadata.json", meta)
     print(f"spostate {n_mov}, aggiunte {n_add}, tolte {n_rem}" + (" (prova)" if dry else ""))

@@ -1,11 +1,11 @@
-"""Prodotti Agroalimentari Tradizionali (PAT) collegati a ogni alimento.
+"""Traditional Agri-food Products (PAT) linked to each product.
 
-Fonte: MASAF, XXVI revisione dell'Elenco nazionale dei PAT (2026), 'Tabella con suddivisione per Regione e categoria
-merceologica' (data/raw/pat/pat_xxvi_2026_tabella.xlsx; pagina https://www.masaf.gov.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/24151).
-Si usa la categoria 'Prodotti vegetali allo stato naturale o trasformati'. Collegamento per parola chiave (radice del nome
-italiano, a parola intera) con esclusioni per i falsi positivi: config/pat_keywords.json.
+Source: MASAF, 26th revision of the national PAT list (2026), 'Tabella con suddivisione per Regione e categoria
+merceologica' (data/raw/pat/pat_xxvi_2026_tabella.xlsx; page https://www.masaf.gov.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/24151).
+The category 'Prodotti vegetali allo stato naturale o trasformati' is used. Linked by keyword (stem of the Italian
+name, whole word) with exclusions for false positives: config/pat_keywords.json.
 nutrition_and_sustainability.traditional_products_pat = {count, regions[], products[{name, region}], source, revision}
-Uso:  python scripts/enrich_pat.py
+Usage:  python scripts/enrich_pat.py
 """
 import re
 import zipfile

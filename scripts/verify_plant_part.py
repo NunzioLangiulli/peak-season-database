@@ -1,9 +1,9 @@
-"""Verifica botany.plant_part_used della bozza sui testi delle fonti.
+"""Checks the draft's botany.plant_part_used against the source texts.
 
-Si cercano le parole che descrivono la parte consumata nella sezione 'Scientific Name and Introduction' del capitolo
-USDA HB66 e nelle pagine Orto da Coltivare / My-PersonalTrainer / Altroconsumo dell'alimento. Il valore è verificato
-se almeno una fonte usa un termine coerente; altrimenti resta da verificare.
-Uso:  python scripts/verify_plant_part.py [--dry-run]
+It looks for the words describing the eaten part in the 'Scientific Name and Introduction' section of the
+USDA HB66 chapter and in the product's Orto da Coltivare / My-PersonalTrainer / Altroconsumo pages. The value is verified
+if at least one source uses a consistent term; otherwise it stays to be verified.
+Usage:  python scripts/verify_plant_part.py [--dry-run]
 """
 import argparse
 import re
@@ -50,7 +50,7 @@ def main():
         hits = []
         for k, t in docs:
             n = norm(t)
-            # il termine deve comparire vicino al nome dell'alimento (entro 150 caratteri) per evitare citazioni generiche
+            # the term must appear near the product name (within 150 characters) to avoid generic mentions
             for mm in re.finditer(KW[part], n):
                 win = n[max(0, mm.start() - 150):mm.end() + 150]
                 if k == "usda_hb66" or any(w[:5] in win for w in name_words):

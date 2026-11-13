@@ -1,4 +1,4 @@
-"""Lettore XLSX minimo (solo libreria standard): restituisce le righe del primo foglio come liste di stringhe."""
+"""Minimal XLSX reader (standard library only): returns the rows of the first sheet as lists of strings."""
 import re
 import zipfile
 import xml.etree.ElementTree as ET

@@ -1,21 +1,21 @@
-"""Passo 1.2 - Migra la bozza utente nella struttura definitiva (data/schema.json).
+"""Step 1.2 - Migrates the owner's draft into the final structure (data/schema.json).
 
-Input : data/_backup_bozza_2026-11-04/database.json  (bozza originale, mai modificata)
-        data/items_index.json                        (indice master, Passo 1.1)
+Input : data/_backup_bozza_2026-11-04/database.json  (original draft, never modified; not published)
+        data/items_index.json                        (master index, Step 1.1)
         scripts/config/eufic_zone_map.json
-Output: data/database.json                           (database v2, migrato)
-        data/draft_legacy_values.json                (valori della bozza NON riportati nel database,
-                                                      conservati integralmente per tracciabilità)
+Output: data/database.json                           (database v2, migrated)
+        data/draft_legacy_values.json                (draft values NOT carried into the database,
+                                                      kept in full for traceability)
 
-Regole:
-- nessun dato valido della bozza viene perso: o è migrato nel nuovo campo, o finisce in draft_legacy_values.json
-  con il motivo;
-- i valori migrati dalla bozza sono elencati in data_completeness.fields_pending_verification finché il
-  Passo 1.3 non li confronta con le fonti ufficiali;
-- i dati arricchiti dalle fonti NON vengono aggiunti qui (solo dati già verificati nell'indice: codici EPPO,
-  WFO/GBIF e URL delle schede).
+Rules:
+- no valid draft data is lost: it is either migrated into the new field or ends up in draft_legacy_values.json
+  with the reason;
+- values migrated from the draft are listed in data_completeness.fields_pending_verification until
+  Step 1.3 compares them with the official sources;
+- data enriched from the sources are NOT added here (only data already verified in the index: EPPO,
+  WFO/GBIF codes and sheet URLs).
 
-Uso:  python scripts/migrate_draft.py
+Usage:  python scripts/migrate_draft.py
 """
 import datetime
 import re
@@ -25,7 +25,7 @@ from common import CONFIG, DATA, load_json, save_json
 DRAFT = DATA / "_backup_bozza_2026-11-04" / "database.json"
 ZONES = ["mediterranean", "continental", "atlantic", "boreal", "mountain", "pannonian"]
 
-PLANT_PART = {  # valori della bozza fuori enum -> enum definitivo
+PLANT_PART = {  # draft values outside the enum -> final enum
     "foglie": "foglia", "foglie_cespo": "foglia", "rosetta_fogliare": "foglia", "costole_foglie": "fusto_costa",
     "grumolo": "fusto_costa", "falso_fusto": "fusto_costa", "frutto_baccello": "frutto",
     "fungo_corpo_fruttifero": "fungo_carpoforo",
@@ -46,7 +46,7 @@ FOLATE_NAMES = {"Folati", "Folati (B9)"}
 
 
 def leaf_paths(obj, prefix=""):
-    """Percorsi foglia (stringhe tipo 'a.b.c') con valore nullo / non nullo. Liste di oggetti = foglia unica."""
+    """Leaf paths ('a.b.c' strings) with null / non-null value. Lists of objects = a single leaf."""
     if isinstance(obj, dict):
         if not obj:
             yield prefix, obj
@@ -138,7 +138,7 @@ def sources_block(ix, from_draft):
 
 
 def migrate_item(d, ix, legacy):
-    """d = voce della bozza (o None per i nuovi), ix = voce dell'indice."""
+    """d = draft entry (or None for new ones), ix = index entry."""
     iid = ix["id"]
     item = {"id": iid, "names": {"it": ix["names"]["it"], "en": ix["names"]["en"], "synonyms": None}, "category": ix["category"]}
     eppo = ix["botany_check"]["eppo"]
@@ -176,7 +176,7 @@ def migrate_item(d, ix, legacy):
         item["italian_varieties_and_territories"] = {"notable_varieties": v.get("notable_varieties"),
                                                      "has_dop_igp": v.get("has_dop_igp"),
                                                      "dop_igp_labels": v.get("dop_igp_names") or [], "eambrosia_verified": False}
-        # immagini: i file .png della bozza non esistono su disco -> candidati Commons conservati per il Passo 1.3
+        # images: the draft's .png files do not exist on disk -> Commons candidates kept for Step 1.3
         lg["images.image_details"] = d["images"]["image_details"]
         item["images"] = {"primary": None, "gallery": [], "image_details": []}
         notes.append("Immagini: i file PNG indicati dalla bozza non esistono; i riferimenti Commons sono in draft_legacy_values.json come candidati per il download.")

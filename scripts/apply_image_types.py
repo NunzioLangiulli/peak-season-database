@@ -1,7 +1,7 @@
-"""Applica a assets/images/_metadata.json la classificazione delle foto (scripts/config/image_view_types.json):
-view_type, flags (dish, wrong_item) e variety. Poi lanciare sync_images.py, che sceglie come principale la prima
-foto full_frame senza problemi.
-Uso:  python scripts/apply_image_types.py
+"""Applies the photo classification (scripts/config/image_view_types.json) to assets/images/_metadata.json:
+view_type, flags (dish, wrong_item) and variety. Then run sync_images.py, which picks as main photo the first
+full_frame photo without issues.
+Usage:  python scripts/apply_image_types.py
 """
 from common import CONFIG, IMAGES, load_json, save_json
 

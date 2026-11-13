@@ -1,12 +1,12 @@
-"""Danno da freddo e sensibilità al gelo da USDA HB66 (tabelle trascritte in config/hb66_chilling_freezing.json).
+"""Chilling injury and freezing susceptibility from USDA HB66 (tables transcribed in config/hb66_chilling_freezing.json).
 
-- Tab. 1 (lowest safe temperature): susceptible=True, lowest_safe_range_c, critical_temperature_c = estremo superiore
-  (prudenziale), sintomi IT/EN. Un valore diverso della bozza diventa discrepanza.
-- Alimenti con chilling_injury.susceptible=False già verificato: soglia e sintomi non pertinenti -> null e
-  not_applicable_fields (il valore della bozza, spesso un punto di congelamento, va in draft_legacy_values.json).
-- Prodotti secchi (semi, cereali, legumi secchi, erbe essiccate): danno da freddo non pertinente.
+- Tab. 1 (lowest safe temperature): susceptible=True, lowest_safe_range_c, critical_temperature_c = upper end
+  (cautious), IT/EN symptoms. A different draft value becomes a discrepancy.
+- Products with chilling_injury.susceptible=False already verified: threshold and symptoms not applicable -> null and
+  not_applicable_fields (the draft value, often a freezing point, goes to draft_legacy_values.json).
+- Dried products (seeds, cereals, dried legumes, dried herbs): chilling injury not applicable.
 - Tab. 2: freezing_susceptibility most/moderate/least.
-Uso:  python scripts/enrich_chilling.py
+Usage:  python scripts/enrich_chilling.py
 """
 from apply_texts import DRY
 from common import CONFIG, DATA, add_discrepancy, finalize_completeness, load_json, mark_enriched, save_json
@@ -81,7 +81,7 @@ def main():
             set_na(it, [f"{C}.critical_temperature_c", f"{C}.symptoms", f"{C}.lowest_safe_range_c"])
             st["na_non_sensibile"] += 1
         elif ci["susceptible"] is True and f"{C}.critical_temperature_c" not in pend:
-            set_na(it, [f"{C}.lowest_safe_range_c"])  # soglia già verificata dal capitolo HB66 / UC Davis
+            set_na(it, [f"{C}.lowest_safe_range_c"])  # threshold already verified from the HB66 chapter / UC Davis
         if iid in frz:
             cls, m = frz[iid]
             ph["freezing_susceptibility"] = cls

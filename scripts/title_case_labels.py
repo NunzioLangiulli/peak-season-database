@@ -1,14 +1,14 @@
-"""Etichette brevi con l'iniziale maiuscola a ogni parola (decisione dell'utente, 2026-11-06). Idempotente.
+"""Short labels with a capital initial on every word (owner decision, 2026-11-06). Idempotent.
 
-Vale per le espressioni brevi di poche parole mostrate come etichette (nomi, categorie, stati, livelli, luoghi di
-conservazione, badge, claim, gruppi di porzione, termini del glossario, voci del vocabolario...), in italiano e in
-inglese: "Cavolo Nero Toscano", "In Frigorifero", "Non Climaterico". NON vale per le frasi di commento (testi di
-conservazione, descrizioni, spiegazioni) né per i nomi ufficiali registrati (DOP/IGP, PAT, fonti), che restano come
-nel registro.
-Regole: le parole di collegamento restano minuscole tranne in prima posizione (it: di, e, a, in, con...; en: of, and,
-the, in...); dopo un apostrofo si mette la maiuscola alla parola ("All'Asciutto"); sigle, numeri, unità e parole con
-maiuscole interne restano invariate.
-Uso:  python scripts/title_case_labels.py   (ultimo passo, dopo build_help.py e build_source_catalog.py)
+Applies to short few-word expressions shown as labels (names, categories, states, levels, storage
+locations, badges, claims, portion groups, glossary terms, vocabulary entries...), in Italian and in
+English: "Cavolo Nero Toscano", "In Frigorifero", "Non Climaterico". It does NOT apply to comment sentences (storage
+texts, descriptions, explanations) nor to registered official names (PDO/PGI, PAT, sources), which stay as in
+the register.
+Rules: linking words stay lowercase except in first position (it: di, e, a, in, con...; en: of, and,
+the, in...); after an apostrophe the word is capitalised ("All'Asciutto"); acronyms, numbers, units and words with
+internal capitals stay unchanged.
+Usage:  python scripts/title_case_labels.py   (last step, after build_help.py and build_source_catalog.py)
 """
 import re
 
@@ -25,12 +25,12 @@ APOS = re.compile(r"^(?P<pre>(?:[a-zà-ù]+)['’])(?P<rest>.+)$", re.I)
 
 def cap_word(w, lang, first):
     lead = re.match(r"^[(\[«\"']+", w or "")
-    if lead:                                       # "(bacche)" -> "(Bacche)": la parentesi apre un nuovo gruppo
+    if lead:                                       # "(bacche)" -> "(Bacche)": the bracket opens a new group
         return lead.group(0) + cap_word(w[lead.end():], lang, True)
     if not w or not w[0].isalpha() or not w[0].islower():
-        return w                                   # numeri, sigle, parole già maiuscole
+        return w                                   # numbers, acronyms, words already capitalised
     m = APOS.match(w)
-    if m:                                          # all'asciutto -> all'Asciutto (pre maiuscolo solo se prima parola)
+    if m:                                          # all'asciutto -> all'Asciutto (prefix capitalised only if first word)
         pre = m.group("pre")
         pre = pre[0].upper() + pre[1:] if first else pre
         return pre + cap_word(m.group("rest"), lang, True)
@@ -114,7 +114,7 @@ def main():
             bil(v.get("ui_label"))
     for z, v in (m.get("eufic_climatic_zones_legend") or {}).items():
         if z.startswith("_"):
-            continue                               # note descrittive (_method, _style): sono frasi
+            continue                               # descriptive notes (_method, _style): they are sentences
         bil(v) if isinstance(v, dict) and "it" in v else bil((v or {}).get("name") if isinstance(v, dict) else None)
     for lv in ((m.get("perishability_legend") or {}).get("levels") or []):
         bil(lv.get("label"))

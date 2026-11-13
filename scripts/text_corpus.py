@@ -1,5 +1,5 @@
-"""Corpus di testo per alimento, dalle fonti già scaricate (per verifiche testuali: varietà, parti usate, composti).
-Ogni voce: (source_key, url, testo). Usato da verify_varieties.py e simili.
+"""Text corpus per product, from the sources already downloaded (for text checks: varieties, parts used, compounds).
+Each entry: (source_key, url, text). Used by verify_varieties.py and similar scripts.
 """
 import json
 import re

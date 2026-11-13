@@ -1,15 +1,15 @@
-"""Passo 1.3a - Nutrizione (CREA 2019 + BDA-IEO) e claim nutrizionali UE.
+"""Step 1.3a - Nutrition (CREA 2019 + BDA-IEO) and EU nutrition claims.
 
-- CREA: tabella HTML della scheda (codice dall'indice). Cache: data/raw/crea/<codice>.json
-- BDA-IEO: API POST /api/BDA/SearchFoodByCode + /api/BDA/FoodComponents. Cache: data/raw/bda/<codice>.json
-- Fonte primaria = CREA se la corrispondenza è 'exact', altrimenti BDA-IEO 'exact', altrimenti quella disponibile
-  (marcata come approssimazione). I nutrienti assenti nella fonte primaria vengono integrati dall'altra.
-- %VNR: Reg. (UE) 1169/2011, Allegato XIII, parte A.
-- Claim: Reg. (CE) 1924/2006, Allegato (formulazioni del testo consolidato IT 13.12.2014), soglie per 100 g di solido.
-- Valori della bozza diversi dalla fonte (>10% e >0,5 unità) -> data_completeness.discrepancies.
+- CREA: HTML table of the record (code from the index). Cache: data/raw/crea/<code>.json
+- BDA-IEO: API POST /api/BDA/SearchFoodByCode + /api/BDA/FoodComponents. Cache: data/raw/bda/<code>.json
+- Primary source = CREA if the match is 'exact', otherwise BDA-IEO 'exact', otherwise whichever is available
+  (flagged as an approximation). Nutrients missing from the primary source are filled in from the other.
+- %NRV: Reg. (EU) 1169/2011, Annex XIII, part A.
+- Claims: Reg. (EC) 1924/2006, Annex (wording of the consolidated IT text of 13.12.2014), thresholds per 100 g of solid.
+- Draft values differing from the source (>10% and >0.5 units) -> data_completeness.discrepancies.
 
-Elabora a blocchi di 15 alimenti e salva database.json dopo ogni blocco.
-Uso:  python scripts/enrich_nutrition.py
+Processes blocks of 15 products and saves database.json after each block.
+Usage:  python scripts/enrich_nutrition.py
 """
 import html
 import re
@@ -23,7 +23,7 @@ NRV = {"vit_a": (800, "µg"), "vit_d": (5, "µg"), "vit_e": (12, "mg"), "vit_k":
        "vit_b12": (2.5, "µg"), "potassium": (2000, "mg"), "calcium": (800, "mg"), "phosphorus": (700, "mg"),
        "magnesium": (375, "mg"), "iron": (14, "mg"), "zinc": (10, "mg"), "copper": (1, "mg"), "manganese": (2, "mg"),
        "selenium": (55, "µg"), "iodine": (150, "µg")}
-NAMES = {  # chiave -> (nome IT scheda, nome EN, nome IT nel claim, nome EN nel claim, tipo)
+NAMES = {  # key -> (IT name in the record, EN name, IT name in the claim, EN name in the claim, type)
     "vit_a": ("Vitamina A (retinolo eq.)", "Vitamin A (retinol eq.)", "vitamina A", "vitamin A", "v"),
     "beta_carotene": ("Beta-carotene", "Beta-carotene", None, None, "b"),
     "vit_d": ("Vitamina D", "Vitamin D", "vitamina D", "vitamin D", "v"),
@@ -113,7 +113,7 @@ def fetch_crea(code):
 
 
 def fetch_bda(code):
-    """Cache della risposta API grezza (data/raw/bda/<codice>.json), poi parsing."""
+    """Cache of the raw API response (data/raw/bda/<code>.json), then parsing."""
     p = RAW / "bda" / f"{code}.json"
     if p.exists() and "raw_components" in load_json(p):
         raw = load_json(p)
@@ -133,7 +133,7 @@ def fetch_bda(code):
             name = c.get("dscomp", "")
             key = canon(f"{name}, {unit}") if name.lower().startswith("energia") else canon(name)
             if name.lower().startswith("energia") and "fibra" not in name.lower():
-                continue   # usa l'energia "Ric con fibra" (coerente con il metodo CREA/Southgate)
+                continue   # uses the "Ric con fibra" energy (consistent with the CREA/Southgate method)
             v = num(c.get("valore", ""))
             if key and v is not None and key not in out["values"]:
                 out["values"][key] = {"v": v, "u": unit_norm(unit), "raw": name, "ref": c.get("dsfonte")}
@@ -242,14 +242,14 @@ def enrich(item, crea, bda, idx):
 
     vit, mins = [], []
     for k, (it_n, en_n, *_rest, typ) in NAMES.items():
-        if k not in vals or typ == "b" or not vals[k]:   # valori nulli/zero non mostrati
+        if k not in vals or typ == "b" or not vals[k]:   # null/zero values not shown
             continue
         unit = (prim["values"].get(k) or (sec or {}).get("values", {}).get(k) or {}).get("u") or NRV.get(k, (0, "mg"))[1]
         ref = NRV.get(k)
         e = {"name": it_n, "name_en": en_n, "amount": vals[k], "unit": unit if unit in ("g", "mg", "µg") else NRV.get(k, (0, "mg"))[1],
              "percent_nrv": round(vals[k] / ref[0] * 100, 1) if ref else None, "source": tag(k)}
         (vit if typ == "v" else mins).append(e)
-    # composti bioattivi della bozza: conservati; beta-carotene da fonte se presente
+    # bioactive compounds from the draft: kept; beta-carotene from the source if present
     bio = [b for b in n.get("bioactive_compounds", []) if not b["name"].lower().startswith("beta-carotene")]
     if "beta_carotene" in vals:
         bio.insert(0, {"name": "Beta-carotene", "name_en": "Beta-carotene", "amount": vals["beta_carotene"], "unit": "µg",

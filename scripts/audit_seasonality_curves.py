@@ -1,7 +1,7 @@
-"""Audit della curva stagionale (Fase 2 della revisione 2026-11-12): copertura di peak_season, curve "piatte",
-buchi isolati di fuori stagione e discrepanze tra mesi di raccolta (Orto da Coltivare) e stagionalità italiana.
-Scrive data/seasonality_audit.json; non modifica il database.
-Uso:  python scripts/audit_seasonality_curves.py
+"""Audit of the seasonal curve (Phase 2 of the 2026-11-12 revision): peak_season coverage, "flat" curves,
+isolated out-of-season gaps and discrepancies between harvest months (Orto da Coltivare) and Italian seasonality.
+Writes data/seasonality_audit.json; does not modify the database.
+Usage:  python scripts/audit_seasonality_curves.py
 """
 import collections
 
@@ -13,7 +13,7 @@ ZONES = ("mediterranean", "continental", "atlantic", "boreal", "mountain", "pann
 
 
 def gaps(m):
-    """Mesi fuori stagione isolati (1-2 mesi) tra due mesi positivi, anche a cavallo d'anno."""
+    """Isolated out-of-season months (1-2 months) between two positive months, also across the year end."""
     if not m or not any(x in POS for x in m):
         return []
     out = []

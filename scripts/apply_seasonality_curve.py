@@ -1,24 +1,24 @@
-"""Curva stagionale completa per le macro-aree italiane (revisione 2026-11-12, richiesta dell'utente). Idempotente
-se applicato all'uscita delle fasi di stagionalità (prima di estimate_zone_gaps.py).
+"""Full seasonal curve for the Italian macro-areas (revision 2026-11-12, owner request). Idempotent
+when applied to the output of the seasonality steps (before estimate_zone_gaps.py).
 
-Regole (dichiarate in metadata.seasonality_curve_method e segnate in seasonality.curve_basis):
-- Caso 1 - prodotti freschi deperibili (ortaggi da frutto estivi, erbe, piccoli frutti) con mesi di raccolta di Orto
-  da Coltivare: la stagionalità si allinea alla raccolta in pieno campo; i mesi di stagione fuori dalla raccolta
-  (serra o importazione) diventano fuori stagione, i mesi di raccolta mancanti diventano di stagione.
-- Caso 2 - buchi tra due periodi di stagione: un mese isolato fuori stagione si chiude sempre con "fine stagione"
-  (artefatto dell'unione dei calendari); due mesi si chiudono se in quel mese il prodotto è di stagione in un'altra
-  macro-area italiana (al mercato arriva da lì). Restano le pause reali (PAUSE: rabarbaro e crescione col caldo
-  estivo, aglio e pera tra fine scorte e nuovo raccolto).
-- Caso 3 - prodotti a raccolta breve e lunga conservazione naturale (fruttaio, cantina, prodotti secchi): raccolta e
-  disponibilità restano distinte; seasonality.availability_note spiega all'utente il perché.
-- Curva: in ogni periodo continuo di stagione il primo mese è "primizia" e l'ultimo "fine stagione"; il picco sono
-  i mesi interni che cadono nei mesi di raccolta in pieno campo (per i prodotti da conservazione: i mesi di raccolta),
-  oppure, senza dati di raccolta, il terzo centrale del periodo (almeno 1, al massimo 3 mesi). Periodi di 1 mese:
-  picco; di 2 mesi: picco e fine stagione. Disponibilità tutto l'anno senza una raccolta più breve: nessun picco.
-- Le curve calcolate dal voto tra calendari con un picco già documentato (almeno due fonti concordi) non si toccano,
-  tranne i buchi brevi (caso 2) e i prodotti del caso 1, dove i calendari contano anche serra e importazione.
-- Esotici (not_applicable) e prodotti senza stagionalità italiana: invariati.
-Uso:  python scripts/apply_seasonality_curve.py   (dopo apply_curated_seasonality.py, prima di estimate_zone_gaps.py)
+Rules (declared in metadata.seasonality_curve_method and marked in seasonality.curve_basis):
+- Case 1 - perishable fresh produce (summer fruiting vegetables, herbs, berries) with harvest months from Orto
+  da Coltivare: seasonality is aligned with open-field harvest; in-season months outside the harvest
+  (greenhouse or import) become out of season, missing harvest months become in season.
+- Case 2 - gaps between two seasonal periods: an isolated out-of-season month is always closed with "end of season"
+  (an artefact of merging calendars); two months are closed if in that month the product is in season in another
+  Italian macro-area (the market gets it from there). Real pauses remain (PAUSE: rhubarb and watercress in the summer
+  heat, garlic and pear between the end of stocks and the new harvest).
+- Case 3 - products with a short harvest and long natural storage (fruit store, cellar, dried products): harvest and
+  availability stay distinct; seasonality.availability_note explains why to the user.
+- Curve: in each continuous seasonal period the first month is "early season" and the last "end of season"; the peak is
+  the inner months falling within the open-field harvest months (for stored products: the harvest months),
+  or, without harvest data, the central third of the period (at least 1, at most 3 months). 1-month periods:
+  peak; 2-month periods: peak and end of season. Year-round availability without a shorter harvest: no peak.
+- Curves computed by the vote across calendars with an already documented peak (at least two agreeing sources) are not touched,
+  except short gaps (case 2) and case 1 products, where the calendars also count greenhouse and import.
+- Exotic produce (not_applicable) and products without Italian seasonality: unchanged.
+Usage:  python scripts/apply_seasonality_curve.py   (after apply_curated_seasonality.py, before estimate_zone_gaps.py)
 """
 from common import DATA, finalize_completeness, load_json, mark_enriched, save_json
 
@@ -37,11 +37,11 @@ STORAGE = {"aglio_garlic", "cipolla_estiva_summer_onion", "cipolla_invernale_win
            "farro_emmer", "orzo_barley", "grano_duro_durum_wheat", "riso_rice", "avena_oat", "grano_saraceno_buckwheat",
            "cece_chickpea", "lenticchia_lentil", "cicerchia_grass_pea", "fagiolo_bean", "carruba_carob"}
 
-PAUSE = {"aglio_garlic", "pera_pear", "crescione_watercress", "rabarbaro_rhubarb"}  # pause documentate: restano
+PAUSE = {"aglio_garlic", "pera_pear", "crescione_watercress", "rabarbaro_rhubarb"}  # documented pauses: they stay
 
 
 def runs(m):
-    """Periodi continui di mesi positivi (indici 0-11), anche a cavallo d'anno; None se tutto l'anno."""
+    """Continuous periods of positive months (indices 0-11), also across the year end; None if all year."""
     if all(x in POS for x in m):
         return None
     start = next(i for i in range(12) if m[i] not in POS)
@@ -64,7 +64,7 @@ def rng(ms, ab):
 
 
 def curve(m, harvest, storage):
-    """Assegna primizia, picco e fine stagione a ogni periodo; restituisce la nuova serie."""
+    """Assigns early season, peak and end of season to each period; returns the new series."""
     m = list(m)
     rs = runs(m)
     if rs is None:                                   # disponibile tutto l'anno
@@ -107,11 +107,11 @@ def main():
             continue
         cb = (s.get("curve_basis") or {}).get("it", "")
         voted = it["id"] not in CASE1 and (not cb or cb.startswith("Curva dal voto")) and any(K in (ita.get(a) or []) for a in AREAS)
-        stats["kept_voted_peak"] += voted            # picco già documentato dal voto: solo i buchi (caso 2)
+        stats["kept_voted_peak"] += voted            # peak already documented by the vote: gaps only (case 2)
         changed = []
         iid = it["id"]
         harvest = {a: sorted((cal.get(a) or {}).get("harvest_months") or []) for a in AREAS}
-        # Caso 1: allinea alla raccolta in pieno campo
+        # Case 1: align with open-field harvest
         if iid in CASE1:
             for a in AREAS:
                 m, hv = ita.get(a), harvest[a]
@@ -121,7 +121,7 @@ def main():
                         ita[a] = new
                         changed.append(f"case1:{a}")
             stats["case1"] += bool(changed)
-        # Caso 2: buchi brevi colmati se un'altra macro-area è di stagione
+        # Case 2: short gaps filled if another macro-area is in season
         for a in AREAS:
             m = ita.get(a)
             if not m:
@@ -132,12 +132,12 @@ def main():
                     if j is not None and m[(j + 1) % 12] not in POS:
                         continue
                     others = [b for b in AREAS if b != a and ita.get(b) and ita[b][i] in POS]
-                    single = j is None and iid not in PAUSE          # pausa di un solo mese: artefatto del merge
+                    single = j is None and iid not in PAUSE          # one-month pause: merge artefact
                     if single or (others and iid not in STORAGE):
                         m[i] = E
                         stats["case2_filled"] += 1
                         changed.append(f"case2:{a}:{i + 1}")
-        # Caso 3: nota sulla disponibilità
+        # Case 3: availability note
         if iid in STORAGE:
             hv = sorted(set().union(*[set(h) for h in harvest.values()]))
             nat = s.get("italy_national") or ita.get("nord") or []
@@ -168,7 +168,7 @@ def main():
             s["italy_national"] = curve(s["italy_national"], nat_h, iid in STORAGE)
         stats["curves"] += 1
         if not changed and cb.startswith("Curva completata"):
-            continue                                 # già calcolata: la nota con le modifiche resta
+            continue                                 # already computed: the note with the changes stays
         s["curve_basis"] = {"it": "Curva completata con la regola del database (metadata.seasonality_curve_method)" + (": " + ", ".join(changed) if changed else "."),
                             "en": "Curve completed with the database rule (metadata.seasonality_curve_method)" + (": " + ", ".join(changed) if changed else ".")}
         mark_enriched(it, ["seasonality.italy_macro_areas", "seasonality.italy_national"])

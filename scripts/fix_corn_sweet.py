@@ -1,15 +1,15 @@
-"""Decisione utente 2026-11-04: nell'app il mais e' la PANNOCCHIA FRESCA (mais dolce, Zea mays var. saccharata).
+"""Owner decision 2026-11-04: in the app maize is the FRESH COB (sweet corn, Zea mays var. saccharata).
 
-Prima la scheda mescolava due prodotti: nutrizione da granella secca (CREA 000060 'Mais', BDA-IEO 3 'MAIS, crudo',
-FDC 170288 'Corn grain, yellow') e conservazione/stagionalita' del mais dolce (UC Davis, HB66, EUFIC 'sweet corn').
-Questo script:
-- nutrizione -> BDA-IEO 50086 'MAIS DOLCE, crudo' (corrispondenza esatta). CREA ha solo 'Mais, dolce, in scatola,
-  sgocciolato' (000070): non usato, perche' il prodotto in scatola e' salato e trattato termicamente.
-- carotenoidi -> FDC 169998 'Corn, sweet, yellow, raw' (mappa in enrich_bioactives.py, da rieseguire dopo).
-- categoria 'cereali' -> 'verdura' (si consuma come ortaggio fresco).
-- varieta' Marano, Biancoperla, Ottofile = mais da granella/polenta: tolte dalla scheda, conservate in draft_legacy_values.
-- discrepanze nutrizionali ricalcolate rispetto ai valori della bozza (che descriveva gia' il mais dolce).
-Uso:  python scripts/fix_corn_sweet.py   (poi enrich_bioactives, enrich_protein, apply_texts, build_source_registry, tidy_notes)
+Before, the record mixed two products: nutrition from dry grain (CREA 000060 'Mais', BDA-IEO 3 'MAIS, crudo',
+FDC 170288 'Corn grain, yellow') and storage/seasonality of sweet corn (UC Davis, HB66, EUFIC 'sweet corn').
+This script:
+- nutrition -> BDA-IEO 50086 'MAIS DOLCE, crudo' (exact match). CREA only has 'Mais, dolce, in scatola,
+  sgocciolato' (000070): not used, because the canned product is salted and heat-treated.
+- carotenoids -> FDC 169998 'Corn, sweet, yellow, raw' (map in enrich_bioactives.py, to re-run afterwards).
+- category 'cereali' -> 'verdura' (eaten as a fresh vegetable).
+- varieties Marano, Biancoperla, Ottofile = grain/polenta maize: removed from the record, kept in draft_legacy_values.
+- nutritional discrepancies recomputed against the draft values (which already described sweet corn).
+Usage:  python scripts/fix_corn_sweet.py   (then enrich_bioactives, enrich_protein, apply_texts, build_source_registry, tidy_notes)
 """
 import re
 
@@ -51,7 +51,7 @@ def main():
     dc = it["data_completeness"]
     n = it["nutrition_and_sustainability"]
 
-    # valori della bozza (mais dolce) come termine di confronto per le discrepanze
+    # draft values (sweet corn) as the comparison term for discrepancies
     dn = draft["nutrition_and_facts"]
     dm = dn["macros_per_100g"]
     n["kcal_per_100g"], n["water_percentage"], n["edible_portion_percentage"] = dn["kcal_per_100g"], dm.get("water_g"), dn["edible_portion_percentage"]
@@ -77,7 +77,7 @@ def main():
     sc = sb["source_codes"]
     sc.update({"crea": None, "crea_match": None, "bda_ieo": BDA, "bda_ieo_match": "exact"})
 
-    # varieta' da granella -> legacy
+    # grain varieties -> legacy
     iv = it["italian_varieties_and_territories"]
     if iv["notable_varieties"]:
         legacy["items"].setdefault(ID, {})["italian_varieties_and_territories.grain_corn_varieties_removed"] = {

@@ -1,17 +1,17 @@
-"""Fase 2 - prepara gli asset offline dell'app Flutter (app/assets/).
+"""Phase 2 - prepares the offline assets of the Flutter app (app/assets/).
 
-Da eseguire dopo ogni modifica di data/database.json o di assets/images/.
+To run after every change to data/database.json or assets/images/.
 
-- app/assets/data/database.json: copia minificata del database, senza
-  `data_completeness` (note interne in italiano, non destinate all'app).
-- app/assets/images/thumb/<nome>.webp: immagine principale (images.primary),
-  lato lungo 600 px, per card griglia/lista e righe del calendario.
-- app/assets/images/full/<nome>.webp: tutte le immagini della galleria,
-  lato lungo 1080 px, per il carosello della scheda alimento.
+- app/assets/data/database.json: minified copy of the database, without
+  `data_completeness` (internal notes in Italian, not meant for the app).
+- app/assets/images/thumb/<name>.webp: main image (images.primary),
+  long side 600 px, for grid/list cards and calendar rows.
+- app/assets/images/full/<name>.webp: all gallery images,
+  long side 1080 px, for the product page carousel.
 
-I file JPEG originali restano la fonte di verità in assets/images/.
-Uso: python scripts/build_app_assets.py [--force] [--db-only]
-    --db-only: aggiorna solo il database, senza toccare le immagini
+The original JPEG files remain the source of truth in assets/images/.
+Usage: python scripts/build_app_assets.py [--force] [--db-only]
+    --db-only: updates only the database, without touching the images
 """
 import json
 import shutil
@@ -25,7 +25,7 @@ SRC_DB = ROOT / "data" / "database.json"
 SRC_IMG = ROOT / "assets" / "images"
 OUT = ROOT / "app" / "assets"
 THUMB_PX, FULL_PX = 600, 1080
-THUMB_Q, FULL_Q = 75, 80  # qualità approvata dall'utente (2026-11-06)
+THUMB_Q, FULL_Q = 75, 80  # quality approved by the project owner (2026-11-06)
 DROP_ITEM_KEYS = {"data_completeness"}
 
 
@@ -62,7 +62,7 @@ def main() -> None:
     out_db.write_text(json.dumps(db, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
     print(f"database.json: {out_db.stat().st_size / 1e6:.1f} MB")
-    for name in ("ui_copy.json", "ui_config.json"):  # testi e icone dell'app (admin_studio): copia identica byte per byte
+    for name in ("ui_copy.json", "ui_config.json"):  # app texts and icons (admin_studio): byte-for-byte identical copy
         src = ROOT / "data" / name
         if src.exists():
             shutil.copyfile(src, OUT / "data" / name)
