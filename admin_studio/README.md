@@ -1,84 +1,87 @@
 # Peak Season Admin Studio
 
-Una dashboard nel browser per modificare testi, immagini e icone dell'app e per compilarla, senza scrivere codice e senza usare Claude.
+A browser dashboard to edit the app's texts, images and icons and to build the app, without writing code.
 
-## Avvio
+The Studio interface is in English. App texts are always entered in both Italian and English (fields "Italian (app text)" and "English (app text)").
 
-- **Windows:** doppio clic su `Avvia_Admin_Studio.bat`.
+## Starting it
+
+- **Windows:** double-click `Avvia_Admin_Studio.bat`.
 - **Mac/Linux:** `./Avvia_Admin_Studio.sh`.
 
-Si apre il browser su http://localhost:8765. Se quella porta è occupata (per esempio dall'anteprima web dell'app), lo studio usa la porta libera successiva e scrive l'indirizzo nella finestra nera. Per chiudere lo studio, chiudi la finestra nera.
+The browser opens at http://localhost:8765. If that port is busy (for example because of the app's web preview), the Studio uses the next free port and prints the address in the console window. To stop the Studio, close the console window.
 
-## Requisiti minimi
+## Minimum requirements
 
-- **Python 3.10 o successivo**, nel PATH come `python` o `py`.
-- **Moduli Python**, da installare una volta con:
+- **Python 3.10 or later**, on the PATH as `python` or `py`.
+- **Python modules**, installed once with:
   ```
   python -m pip install -r admin_studio/requirements.txt
   ```
-  I moduli sono Pillow, jsonschema e requests. Il server web usa solo la libreria standard: Flask non serve.
-- **Per la compilazione dell'APK:**
-  - Flutter. Lo studio lo cerca nella variabile `FLUTTER`, poi nel PATH, poi in `C:\src\flutter\bin\flutter.bat`.
-  - Android SDK, con le licenze accettate una volta con `flutter doctor --android-licenses`.
-- **Per le schede Icone e Immagini:** una connessione internet. Serve per le icone Material e per scaricare le foto.
+  The modules are Pillow, jsonschema and requests. The web server uses only the standard library: Flask is not needed.
+- **To build the APK:**
+  - Flutter. The Studio looks for it in the `FLUTTER` variable, then on the PATH, then in `C:\src\flutter\bin\flutter.bat`.
+  - Android SDK, with licences accepted once with `flutter doctor --android-licenses`.
+  - The app repository ([peak-season-app](https://github.com/NunzioLangiulli/peak-season-app)) cloned into the `app/` folder of this repository.
+- **For the Icons and Images tabs:** an internet connection, needed for Material icons and to download photos.
 
-## Schede
+## Tabs
 
-| Scheda | Cosa modifica | File |
+| Tab | What it edits | Files |
 |---|---|---|
-| Testi App | i testi dell'interfaccia, in italiano e inglese; le chiavi non si possono cambiare | `data/ui_copy.json` |
-| Corpus Condiviso | i testi comuni a più prodotti; una modifica vale per tutti i prodotti collegati | `data/database.json` |
-| Descrizioni Prodotti | i testi di ogni prodotto: testo specifico oppure voce del corpus con un'eventuale aggiunta | `data/database.json` |
-| Immagini | la foto principale (stella), il tipo di vista, la ricerca di nuove foto e il download da URL | `assets/images/`, `_metadata.json`, `_primary_manual.json`, database |
-| Icone | l'icona di ogni stato, categoria, zona ed elemento dell'interfaccia | `data/ui_config.json` (e il database per le voci `database`) |
-| Loghi | il logo di ogni fonte (caricato dal tuo computer), editore e titolo mostrati nei riquadri delle fonti, testo da cercare per trovare il logo; in alto l'elenco dei loghi che mancano, da copiare | `app/assets/sources/`, `fonti_locali/loghi_fonti/`, `scripts/config/source_display.json`, database |
-| Link | tutti i link: generali (le fonti) e di ogni prodotto, che puoi modificare, aggiungere o eliminare | `scripts/config/link_overrides.json`, database |
+| App Copy | interface texts, in Italian and English; keys cannot be changed | `data/ui_copy.json` |
+| Shared Corpus | texts shared by several products; a change applies to every linked product | `data/database.json` |
+| Product Texts | the texts of each product: specific text, or a corpus entry with an optional addition | `data/database.json` |
+| Images | main photo (star), view type, search for new photos and download from URL | `assets/images/`, `_metadata.json`, `_primary_manual.json`, database |
+| Icons | the icon of every state, category, zone and interface element | `data/ui_config.json` (and the database for `database` entries) |
+| Logos | each source's logo (uploaded from your computer), publisher and title shown in the source boxes, search text to find the logo; at the top, the list of missing logos, ready to copy | `app/assets/sources/`, `fonti_locali/loghi_fonti/`, `scripts/config/source_display.json`, database |
+| Links | every link: general ones (the sources) and per product, which you can edit, add or delete | `scripts/config/link_overrides.json`, database |
 
-**Salva Modifiche** salva i cambiamenti della scheda aperta e fa tre cose:
-1. prima di scrivere, mette una copia di sicurezza in `data/_snapshots/_studio_backup_*`;
-2. controlla il database con `scripts/validate_db.py`;
-3. aggiorna i file dell'app in `app/assets` con `scripts/build_app_assets.py`.
+**Save Changes** saves the changes in the open tab and does three things:
+1. before writing, it stores a backup copy in `data/_snapshots/_studio_backup_*`;
+2. it checks the database with `scripts/validate_db.py`;
+3. it updates the app files in `app/assets` with `scripts/build_app_assets.py`.
 
-Se il controllo trova errori, i file tornano com'erano.
+If the check finds errors, the files are restored to their previous state.
 
-I testi si possono anche esportare in CSV e reimportare (separatore `;`, si apre con Excel).
+Texts can also be exported to CSV and re-imported (`;` separator, opens in Excel).
 
-## Scaricare una foto
+## Downloading a photo
 
-1. Nella scheda Immagini scegli il prodotto.
-2. Usa i link rapidi (Wikimedia Commons per nome scientifico e inglese, USDA ARS) per trovare una foto.
-3. Incolla l'indirizzo della pagina o della foto e premi **Scarica e Aggiungi alla Galleria**.
+1. In the Images tab, choose the product.
+2. Use the quick links (Wikimedia Commons by scientific and English name, USDA ARS) to find a photo.
+3. Paste the address of the page or of the photo and press **Download and Add to Gallery**.
 
-Autore, licenza e pagina sorgente si compilano da soli in due casi:
-- **Wikimedia Commons:** li prende dall'API di Commons.
-- **USDA ARS:** le foto sono di pubblico dominio; l'autore viene dalla didascalia "Photo by".
+Author, licence and source page are filled in automatically in two cases:
+- **Wikimedia Commons:** taken from the Commons API.
+- **USDA ARS:** photos are in the public domain; the author comes from the "Photo by" caption.
 
-Per le altre fonti scrivi autore e licenza nel modulo: senza questi dati la foto non entra nella galleria. La foto viene salvata come `<id>_NN.jpg` (al massimo 2400 px) e convertita in WebP per l'app.
+For other sources, enter author and licence in the form: without them the photo is not added to the gallery. The photo is saved as `<id>_NN.jpg` (at most 2400 px) and converted to WebP for the app.
 
-## Loghi delle fonti
+## Source logos
 
-1. In alto nella scheda Loghi c'è l'elenco dei loghi che mancano: premi **Copia Elenco** e cerca le immagini riga per riga. Ogni fonte ha anche il pulsante **Cerca Immagini**.
-2. Salva l'immagine sul computer, meglio PNG grande e con sfondo trasparente.
-3. Premi **Carica Logo** sulla fonte giusta.
+1. At the top of the Logos tab is the list of missing logos: press **Copy List** and search for the images line by line. Each source also has a **Search Images** button.
+2. Save the image on your computer, preferably a large PNG with a transparent background.
+3. Press **Upload Logo** on the right source.
 
-Lo studio toglie lo sfondo chiaro uniforme e porta il logo a 128 px. Se il logo è scuro, lo segna perché nel tema scuro dell'app venga schiarito. L'originale resta in `fonti_locali/loghi_fonti/`.
+The Studio removes a uniform light background and scales the logo to 128 px. If the logo is dark, it is flagged so that it gets lightened in the app's dark theme. The original is kept in `fonti_locali/loghi_fonti/`.
 
-Le modifiche ai link dei prodotti restano anche quando i link vengono rigenerati dagli script.
+Changes to product links are kept even when the links are regenerated by the scripts.
 
 ## Build & Deploy
 
-Il pannello a destra mostra se database, testi, icone, foto e APK sono allineati con l'app.
+The right-hand panel shows whether database, texts, icons, photos and APK are in sync with the app.
 
-- **Sincronizza App** aggiorna i file dell'app.
-- **Compila APK Android** sincronizza i file, lancia `flutter build apk --release` con il log dal vivo e alla fine apre `build/app/outputs/flutter-apk/`.
+- **Sync App** updates the app files.
+- **Build Android APK** syncs the files, runs `flutter build apk --release` with a live log and at the end opens `build/app/outputs/flutter-apk/`.
 
-Per vedere le modifiche nell'app aperta con `flutter run`, premi **R** maiuscola nel terminale di Flutter (Hot Restart). La `r` minuscola non basta, perché i file JSON si leggono solo all'avvio.
+To see changes in an app running with `flutter run`, press capital **R** in the Flutter terminal (Hot Restart). Lowercase `r` is not enough, because JSON files are read only at startup.
 
-## File della cartella
+## Folder contents
 
-- `studio.py`: server e API. Accetta richieste solo da questo computer (127.0.0.1) e può eseguire solo i comandi previsti.
-- `images.py`: galleria e download.
-- `sources.py`: loghi, editori e titoli delle fonti; link generali e per prodotto.
-- `icons.py`: mappa delle icone.
-- `static/`: la pagina (`index.html`, `studio.css`, `core.js`, `copy.js`, `images.js`, `icons.js`, `sources.js`, `build.js`).
+- `studio.py`: server and API. It accepts requests only from this computer (127.0.0.1) and can run only the expected commands.
+- `images.py`: gallery and downloads.
+- `sources.py`: source logos, publishers and titles; general and per-product links.
+- `icons.py`: icon map.
+- `static/`: the page (`index.html`, `studio.css`, `core.js`, `copy.js`, `images.js`, `icons.js`, `sources.js`, `build.js`).
 - `requirements.txt`, `Avvia_Admin_Studio.bat`, `Avvia_Admin_Studio.sh`.

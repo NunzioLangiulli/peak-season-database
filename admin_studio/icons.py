@@ -1,13 +1,13 @@
-"""Scheda Icone dell'Admin Studio: quale icona usa l'app per ogni stato, categoria, zona ed elemento dell'interfaccia.
+"""Icons tab of the Admin Studio: which icon the app uses for every state, category, zone and interface element.
 
-La mappa sta in data/ui_config.json (copia identica in app/assets/data/, letta dall'app):
+The map lives in data/ui_config.json (identical copy in app/assets/data/, read by the app):
     {"_meta": {...}, "icon_slots": [{"slot", "group", "description", "icon", "target"}]}
-icon = "svg:<cartella>/<nome>" (file app/assets/icons/<cartella>/<nome>.svg, set disegnato per Peak Season) oppure
-"material:<nome>" (Material Symbols Rounded, https://fonts.google.com/icons).
-target = "database": l'icona è anche nel database ("il database prima dell'app") e build_app_support_metadata.py la
-scrive in metadata.vocabulary / eufic_climatic_zones_legend; target = "app": la usa solo l'interfaccia.
-Le voci dell'interfaccia sono definite dall'app (IconService.defaults): lo studio cambia solo il campo "icon", non
-aggiunge, toglie o rinomina voci. Le icone Material proposte sono solo quelle di app/lib/theme/material_icon_names.dart.
+icon = "svg:<folder>/<name>" (file app/assets/icons/<folder>/<name>.svg, set drawn for Peak Season) or
+"material:<name>" (Material Symbols Rounded, https://fonts.google.com/icons).
+target = "database": the icon is also in the database ("database first, app second") and build_app_support_metadata.py
+writes it into metadata.vocabulary / eufic_climatic_zones_legend; target = "app": used by the interface only.
+Interface entries are defined by the app (IconService.defaults): the Studio only changes the "icon" field, it does not
+add, remove or rename entries. The Material icons offered are only those in app/lib/theme/material_icon_names.dart.
 """
 import json
 import re
@@ -36,7 +36,7 @@ nutrition egg cookie icecream cake local_cafe wine_bar liquor emoji_nature pest_
 
 
 def svg_path(rel):
-    """Percorso di un SVG del catalogo (solo cartelle ammesse e nomi semplici)."""
+    """Path of a catalogue SVG (allowed folders and simple names only)."""
     m = re.fullmatch(r"(season|ui|zones|italy)/([a-z0-9_]+)\.svg", rel)
     if not m:
         return None
@@ -44,12 +44,12 @@ def svg_path(rel):
     return p if p.exists() else None
 
 
-APP_MATERIAL = ROOT / "app" / "lib" / "theme" / "material_icon_names.dart"   # nomi Material che l'app sa disegnare
+APP_MATERIAL = ROOT / "app" / "lib" / "theme" / "material_icon_names.dart"   # Material names the app can draw
 
 
 def material_names():
-    """Solo i nomi Material presenti nella mappa dell'app (righe  'nome': Icons.nome_rounded,): un nome fuori mappa
-    non verrebbe disegnato e fa fallire il test ui_config_test. Per un'icona nuova serve una riga in quel file."""
+    """Only the Material names present in the app's map (lines  'name': Icons.name_rounded,): a name outside the map
+    would not be drawn and makes the ui_config_test test fail. A new icon needs a line in that file."""
     if not APP_MATERIAL.exists():
         return MATERIAL
     lines = [ln for ln in APP_MATERIAL.read_text(encoding="utf-8").splitlines() if not ln.lstrip().startswith("//")]
@@ -80,7 +80,7 @@ def to_ref(name, zone=False):
 
 
 def to_db(ref, zone=False):
-    """Valore da scrivere nel database, nel formato che il database usa già (nomi brevi)."""
+    """Value to write into the database, in the format the database already uses (short names)."""
     rev = {v: k for k, v in SVG_NAME.items()}
     if ref in rev:
         return rev[ref]
@@ -153,20 +153,20 @@ def save(data, run_script):
     by = {s["slot"]: s for s in cfg["icon_slots"]}
     for slot, ref in (data.get("changes") or {}).items():
         if slot not in by:
-            raise ValueError(f"voce sconosciuta: {slot}")
+            raise ValueError(f"unknown slot: {slot}")
         if not valid_ref(ref):
-            raise ValueError(f"icona non valida: {ref}")
+            raise ValueError(f"invalid icon: {ref}")
         by[slot]["icon"] = ref
     cfg["_meta"]["updated"] = date.today().isoformat()
     save_json(CONFIG, cfg)
-    for script in ("build_app_support_metadata.py", "ux_terminology.py", "title_case_labels.py"):   # icone "database" scritte nel database
+    for script in ("build_app_support_metadata.py", "ux_terminology.py", "title_case_labels.py"):   # "database" icons written into the database
         rc, out = run_script(script)
         if rc != 0:
             raise RuntimeError(f"{script}: {out[-500:]}")
 
 
 def overrides():
-    """Per build_app_support_metadata.py: {gruppo: {codice: valore per il database}} dalle voci target=database."""
+    """For build_app_support_metadata.py: {group: {code: value for the database}} from the target=database entries."""
     if not CONFIG.exists():
         return {}
     out = {}

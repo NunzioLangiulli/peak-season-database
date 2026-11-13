@@ -1,14 +1,14 @@
-"""Scheda Immagini dell'Admin Studio: galleria di ogni prodotto, foto principale, tipo di vista e download da URL.
+"""Images tab of the Admin Studio: gallery of each product, main photo, view type and download from URL.
 
-Le foto stanno in assets/images/<id>_NN.jpg; i metadati di licenza in assets/images/_metadata.json (fonte per
-scripts/sync_images.py) e nel database (images.primary, images.gallery, images.image_details). Lo studio aggiorna
-entrambi. La foto principale scelta a mano è registrata in assets/images/_primary_manual.json, che sync_images.py
-rispetta: altrimenti la regola automatica (prima foto "full_frame") la cambierebbe al primo riallineamento.
+Photos live in assets/images/<id>_NN.jpg; licence metadata in assets/images/_metadata.json (source for
+scripts/sync_images.py) and in the database (images.primary, images.gallery, images.image_details). The Studio updates
+both. The main photo chosen by hand is recorded in assets/images/_primary_manual.json, which sync_images.py
+respects: otherwise the automatic rule (first "full_frame" photo) would change it at the first realignment.
 
-Download: si incolla l'URL di una pagina Wikimedia Commons (File:...), di un file upload.wikimedia.org, di una pagina
-o foto USDA ARS, o di un'immagine qualsiasi. Per Wikimedia autore, licenza e pagina sorgente vengono dall'API di
-Commons; per USDA ARS la licenza è il pubblico dominio delle foto del governo USA (autore dalla didascalia "Photo by").
-Per le altre fonti autore e licenza vanno scritti nel modulo: senza licenza la foto non entra nella galleria.
+Download: paste the URL of a Wikimedia Commons page (File:...), of an upload.wikimedia.org file, of a USDA ARS
+page or photo, or of any image. For Wikimedia, author, licence and source page come from the Commons
+API; for USDA ARS the licence is the public domain of US government photos (author from the "Photo by" caption).
+For other sources author and licence must be entered in the form: without a licence the photo does not enter the gallery.
 """
 import html
 import io
@@ -25,7 +25,7 @@ MANUAL = IMAGES / "_primary_manual.json"
 VIEW_TYPES = ["full_frame", "isolated_background", "plant_in_field", "botanical_plate", "cut_section", "other"]
 MAX_BYTES = 40 * 1024 * 1024
 MAX_SIDE = 2400
-WIKI_WIDTH = 1920                                     # misura standard delle miniature Wikimedia (le altre possono dare 429)
+WIKI_WIDTH = 1920                                     # standard Wikimedia thumbnail size (other sizes may return 429)
 
 
 def _db():
@@ -49,7 +49,7 @@ def links(it):
         {"label": f"Wikimedia Commons · {sci}", "url": f"https://commons.wikimedia.org/w/index.php?search={q(sci)}&title=Special:MediaSearch&type=image"},
         {"label": f"Wikimedia Commons · {en}", "url": f"https://commons.wikimedia.org/w/index.php?search={q(en)}&title=Special:MediaSearch&type=image"},
         {"label": f"USDA ARS Image Gallery · {en}", "url": f"https://www.ars.usda.gov/search/?q={q(en + ' image')}"},
-        {"label": f"USDA ARS (ricerca immagini web) · {en}", "url": f"https://www.google.com/search?tbm=isch&q={q('site:ars.usda.gov ' + en)}"},
+        {"label": f"USDA ARS (web image search) · {en}", "url": f"https://www.google.com/search?tbm=isch&q={q('site:ars.usda.gov ' + en)}"},
     ]
 
 
@@ -66,7 +66,7 @@ def item_detail(iid):
 
 
 def save(data):
-    """Foto principale e tipi di vista di un prodotto."""
+    """Main photo and view types of a product."""
     db = _db()
     it = next(x for x in db["items"] if x["id"] == data["id"])
     im = it["images"]
@@ -75,14 +75,14 @@ def save(data):
     for d in im.get("image_details") or []:
         if d["filename"] in vt:
             if vt[d["filename"]] not in VIEW_TYPES:
-                raise ValueError(f"tipo di vista non valido: {vt[d['filename']]}")
+                raise ValueError(f"invalid view type: {vt[d['filename']]}")
             d["view_type"] = vt[d["filename"]]
             if d["filename"] in meta:
                 meta[d["filename"]]["view_type"] = d["view_type"]
     p = data.get("primary")
     if p and p != im.get("primary"):
         if p not in (im.get("gallery") or []):
-            raise ValueError("la foto principale deve essere nella galleria")
+            raise ValueError("the primary photo must be in the gallery")
         im["primary"] = p
         im["gallery"] = [p] + [f for f in im["gallery"] if f != p]
         manual = load_json(MANUAL) if MANUAL.exists() else {}
@@ -94,10 +94,10 @@ def save(data):
 
 # ------------------------------------------------------------------ download
 def _get(url, accept="*/*"):
-    """Scarica con il client del progetto (common.SESSION: TLS verificato, User-Agent del progetto). Wikimedia risponde
-    429 ai client generici; se chiede di aspettare (Retry-After) si riprova una volta."""
+    """Downloads with the project client (common.SESSION: verified TLS, project User-Agent). Wikimedia returns
+    429 to generic clients; if it asks to wait (Retry-After) it retries once."""
     if urllib.parse.urlparse(url).scheme not in ("http", "https"):
-        raise ValueError("serve un indirizzo http o https")
+        raise ValueError("an http or https address is required")
     for attempt in range(2):
         r = SESSION.get(url, headers={"Accept": accept}, timeout=40, stream=True)
         if r.status_code == 429 and attempt == 0:
@@ -106,9 +106,9 @@ def _get(url, accept="*/*"):
         r.raise_for_status()
         data = r.raw.read(MAX_BYTES + 1, decode_content=True)
         if len(data) > MAX_BYTES:
-            raise ValueError("file troppo grande (oltre 40 MB)")
+            raise ValueError("file too large (over 40 MB)")
         return data, r.headers.get("Content-Type", "").split(";")[0].strip(), r.url
-    raise ValueError("il sito chiede di riprovare più tardi (troppe richieste)")
+    raise ValueError("the site asks to retry later (too many requests)")
 
 
 def _strip(s):
@@ -121,7 +121,7 @@ def _commons(title):
     data, _, _ = _get(api, "application/json")
     page = next(iter(json.loads(data)["query"]["pages"].values()))
     if "imageinfo" not in page:
-        raise ValueError(f"file non trovato su Wikimedia Commons: {title}")
+        raise ValueError(f"file not found on Wikimedia Commons: {title}")
     ii = page["imageinfo"][0]
     em = ii.get("extmetadata") or {}
     v = lambda k: _strip((em.get(k) or {}).get("value"))  # noqa: E731
@@ -132,7 +132,7 @@ def _commons(title):
 
 
 def resolve(url):
-    """Indirizzo della foto e metadati (quando la fonte li espone)."""
+    """Photo address and metadata (when the source exposes them)."""
     u = urllib.parse.urlparse(url.strip())
     host, path = u.netloc.lower(), urllib.parse.unquote(u.path)
     if host.endswith("wikimedia.org") or host.endswith("wikipedia.org"):
@@ -154,7 +154,7 @@ def resolve(url):
     m = re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)', page) or \
         re.search(r'<img[^>]+src=["\']([^"\']+\.(?:jpe?g|png|webp))', page, re.I)
     if not m:
-        raise ValueError("nella pagina non ho trovato un'immagine: incolla l'indirizzo diretto della foto")
+        raise ValueError("no image found on the page: paste the direct address of the photo")
     info["image_url"] = urllib.parse.urljoin(final, html.unescape(m.group(1)))
     if info["provider"] == "usda_ars":
         by = re.search(r"[Pp]hoto(?:graph)? by ([A-Z][\w.\- ]{2,60}?)[.<,)]", page)
@@ -168,7 +168,7 @@ def next_name(iid, gallery):
             if (m := re.fullmatch(re.escape(iid) + r"_(\d{2})\.jpg", f))}
     n = max(used, default=0) + 1
     if n > 99:
-        raise ValueError("questo prodotto ha già 99 foto")
+        raise ValueError("this product already has 99 photos")
     return f"{iid}_{n:02d}.jpg"
 
 
@@ -179,9 +179,9 @@ def download(data):
     info = resolve(data["url"])
     for k in ("author", "license", "license_url"):
         if (data.get(k) or "").strip():
-            info[k] = data[k].strip()                # quello scritto nel modulo vale più di quello letto dalla fonte
+            info[k] = data[k].strip()                # what is typed in the form beats what is read from the source
     if not info.get("author") or not info.get("license"):
-        raise ValueError("autore e licenza non sono leggibili da questa fonte: scrivili nel modulo (servono per mostrare la foto)")
+        raise ValueError("author and licence cannot be read from this source: type them in the form (they are needed to show the photo)")
     raw = info.pop("_bytes", None) or _get(info["image_url"], "image/*")[0]
     with Image.open(io.BytesIO(raw)) as im:
         im = ImageOps.exif_transpose(im).convert("RGB")

@@ -1,15 +1,15 @@
-"""Peak Season Admin Studio (revisione 2026-11-12): testi, immagini, icone e build dell'app in un'unica dashboard.
+"""Peak Season Admin Studio (revision 2026-11-12): app texts, images, icons and build in a single dashboard.
 
-Avvio:  doppio clic su admin_studio/Avvia_Admin_Studio.bat (Windows) o Avvia_Admin_Studio.sh (Mac/Linux),
-        oppure  python admin_studio/studio.py  [--no-browser]
-Si apre il browser su http://localhost:8765 (se la porta è occupata, ad esempio dall'anteprima web dell'app, la
-successiva libera: l'indirizzo è scritto nella finestra). Il server ascolta solo su 127.0.0.1.
+Start:  double-click admin_studio/Avvia_Admin_Studio.bat (Windows) or Avvia_Admin_Studio.sh (Mac/Linux),
+        or  python admin_studio/studio.py  [--no-browser]
+The browser opens at http://localhost:8765 (if the port is busy, for example because of the app's web preview, the
+next free one: the address is printed in the window). The server listens on 127.0.0.1 only.
 
-Schede: Testi App, Corpus Condiviso, Descrizioni Prodotti (testi), Immagini, Icone; pannello Build & Deploy sempre
-visibile. Ogni salvataggio scrive i file, esegue scripts/validate_db.py (se fallisce, i file tornano com'erano) e
-sincronizza gli asset dell'app (scripts/build_app_assets.py). I comandi eseguibili sono solo quelli elencati in
-JOBS: il browser non può lanciare comandi arbitrari.
-Moduli: studio.py (server e API), images.py (galleria e download), icons.py (mappa delle icone), static/ (pagina).
+Tabs: App Copy, Shared Corpus, Product Texts, Images, Icons, Logos, Links; Build & Deploy panel always
+visible. Every save writes the files, runs scripts/validate_db.py (if it fails, the files are restored) and
+syncs the app assets (scripts/build_app_assets.py). The only commands that can be run are those listed in
+JOBS: the browser cannot launch arbitrary commands.
+Modules: studio.py (server and API), images.py (gallery and download), icons.py (icon map), sources.py (logos and links), static/ (page).
 """
 import json
 import mimetypes
@@ -38,17 +38,17 @@ from corpus import FIELDS, KEY  # noqa: E402
 DB = ROOT / "data" / "database.json"
 UI = ROOT / "data" / "ui_copy.json"
 SNAP = ROOT / "data" / "_snapshots"
-APP = Path(r"C:\dev\peak_season") if Path(r"C:\dev\peak_season\pubspec.yaml").exists() else ROOT / "app"  # junction: evita il percorso con "Università"
+APP = Path(r"C:\dev\peak_season") if Path(r"C:\dev\peak_season\pubspec.yaml").exists() else ROOT / "app"  # junction: avoids a project path with non-ASCII characters
 APP_DATA = ROOT / "app" / "assets" / "data"
 APK_DIR = ROOT / "app" / "build" / "app" / "outputs" / "flutter-apk"
-# Su Windows il compilatore Dart (AOT) e il plugin Kotlin falliscono con percorsi non ASCII ("Università") anche passando
-# dalla junction o da un'unità subst: l'APK si compila in una copia dell'app in un percorso semplice, sullo stesso disco
-# della cache dei pacchetti, e l'APK viene riportato in app/build/app/outputs/flutter-apk/.
+# On Windows the Dart (AOT) compiler and the Kotlin plugin fail with non-ASCII paths (e.g. "Università") even through
+# the junction or a subst drive: the APK is then built in a copy of the app on a simple path, on the same drive
+# as the package cache, and the APK is copied back to app/build/app/outputs/flutter-apk/.
 STAGE = Path(r"C:\dev\peak_season_build")
 NEEDS_STAGE = sys.platform.startswith("win") and not str(ROOT).isascii()
 PORT = 8765
-KEEP_BACKUPS = 30                                     # copie di sicurezza dello studio conservate in data/_snapshots
-LOCK = threading.Lock()                               # una scrittura alla volta sui file del database
+KEEP_BACKUPS = 30                                     # Studio backup copies kept in data/_snapshots
+LOCK = threading.Lock()                               # one write at a time on the database files
 
 
 def flutter_cmd():
@@ -66,7 +66,7 @@ def read(p, default):
 def write(p, obj):
     tmp = p.with_suffix(".tmp")
     tmp.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    for attempt in range(10):                       # OneDrive può bloccare il file per qualche istante
+    for attempt in range(10):                       # OneDrive may lock the file for a moment
         try:
             os.replace(tmp, p)
             return
@@ -83,8 +83,8 @@ def run_script(name, *args):
 
 
 def guarded(files, change, sync_args=("--db-only",)):
-    """Copia di sicurezza dei file, modifica, validazione; se la validazione fallisce i file tornano com'erano.
-    Se va bene sincronizza gli asset dell'app (database, ui_copy, ui_config ed eventuali nuove immagini)."""
+    """Backup copy of the files, change, validation; if validation fails the files are restored.
+    If it succeeds it syncs the app assets (database, ui_copy, ui_config and any new images)."""
     with LOCK:
         SNAP.mkdir(parents=True, exist_ok=True)
         stamp = time.strftime("%Y%m%d_%H%M%S")
@@ -98,16 +98,16 @@ def guarded(files, change, sync_args=("--db-only",)):
         except Exception as e:                       # noqa: BLE001 - mostrato all'utente
             for f, b in saved.items():
                 shutil.copy2(b, f)
-            return {"ok": False, "report": f"Errore: {e}"}
+            return {"ok": False, "report": f"Error: {e}"}
         rc, report = run_script("validate_db.py")
         if rc != 0:
             for f, b in saved.items():
                 shutil.copy2(b, f)
-            for f in extra.get("new_files", []):     # file creati da questa operazione (es. foto scaricata)
+            for f in extra.get("new_files", []):     # files created by this operation (e.g. a downloaded photo)
                 Path(f).unlink(missing_ok=True)
             return {"ok": False, "report": report}
         backups = sorted(SNAP.glob("_studio_backup_*"), key=lambda f: f.name)
-        for f in backups[:-KEEP_BACKUPS]:             # solo le copie di sicurezza dello studio, le più vecchie
+        for f in backups[:-KEEP_BACKUPS]:             # only the Studio's backup copies, the oldest ones
             f.unlink(missing_ok=True)
         src, sync = run_script("build_app_assets.py", *sync_args)
         return {"ok": True, "report": report, "sync": sync, "sync_ok": src == 0, **{k: v for k, v in extra.items() if k != "new_files"}}
@@ -141,7 +141,7 @@ def copy_payload():
     for it in db.get("items", []):
         out = []
         slots(it, [], None, out)
-        items.append({"id": it["id"], "name": it["names"]["it"], "fields": [{"path": p, "value": v} for p, v in out]})
+        items.append({"id": it["id"], "name": it["names"]["it"], "name_en": it["names"]["en"], "fields": [{"path": p, "value": v} for p, v in out]})
     return {"ui": read(UI, {"_meta": {}, "strings": []}), "corpus": db.get(KEY, {}), "items": items}
 
 
@@ -150,7 +150,7 @@ def copy_save(data):
         db = read(DB, {})
         if data.get("corpus") is not None:
             rebuilt = {}
-            for k, v in db.items():                  # il corpus resta tra "metadata" e "items"
+            for k, v in db.items():                  # the corpus stays between "metadata" and "items"
                 if k == KEY:
                     continue
                 rebuilt[k] = v
@@ -168,13 +168,13 @@ def copy_save(data):
             prev = {s["key"]: s for s in read(UI, {"strings": []})["strings"]}
             new = {s["key"] for s in data["ui"]["strings"]}
             if set(prev) != new:
-                raise ValueError("le chiavi dei testi dell'app non si possono aggiungere, togliere o rinominare dall'editor")
-            ph = re.compile(r"\{\w+\}")                # segnaposto come {name} o {icon}: l'app li sostituisce
+                raise ValueError("app copy keys cannot be added, removed or renamed from the editor")
+            ph = re.compile(r"\{\w+\}")                # placeholders such as {name} or {icon}: the app replaces them
             for s in data["ui"]["strings"]:
                 want = set(ph.findall(prev[s["key"]].get("it", "")) + ph.findall(prev[s["key"]].get("en", "")))
                 for lang in ("it", "en"):
                     if set(ph.findall(s.get(lang, ""))) != set(ph.findall(prev[s["key"]].get(lang, ""))):
-                        raise ValueError(f"{s['key']} ({lang}): i segnaposto {sorted(want)} devono restare nel testo, scritti uguali")
+                        raise ValueError(f"{s['key']} ({lang}): the placeholders {sorted(want)} must stay in the text, written exactly the same")
             data["ui"].setdefault("_meta", {})["updated"] = date.today().isoformat()
             write(UI, data["ui"])
     return guarded([DB, UI], change)
@@ -203,15 +203,15 @@ class Job:
                 if self.rc in ok:
                     self.rc = 0
                 if self.rc != 0:
-                    self.lines.append(f"✗ Comando terminato con codice {self.rc}")
+                    self.lines.append(f"✗ Command ended with exit code {self.rc}")
                     return
-            self.lines.append("✓ Completato")
+            self.lines.append("✓ Done")
             if open_dir and Path(open_dir).exists():
                 open_folder(open_dir)
-                self.lines.append(f"Cartella aperta: {open_dir}")
+                self.lines.append(f"Folder opened: {open_dir}")
         except Exception as e:                       # noqa: BLE001
             self.rc = -1
-            self.lines.append(f"✗ Errore: {e}")
+            self.lines.append(f"✗ Error: {e}")
         finally:
             self.done = True
 
@@ -226,39 +226,39 @@ def open_folder(p):
 def start_job(kind):
     with JOB_LOCK:
         if any(not j.done for j in JOBS.values()):
-            return None, "C'è già un'operazione in corso: aspetta che finisca."
+            return None, "Another operation is already running: wait for it to finish."
         py = [sys.executable, str(ROOT / "scripts" / "build_app_assets.py")]
         if kind == "sync":
-            steps, open_dir = [("Sincronizza database, testi, icone e immagini nuove con l'app", py, ROOT)], None
+            steps, open_dir = [("Sync database, copy, icons and new images with the app", py, ROOT)], None
         elif kind == "apk":
             fl = flutter_cmd()
             if not fl:
-                return None, "Flutter non trovato: installa Flutter o imposta la variabile FLUTTER con il percorso di flutter(.bat)."
+                return None, "Flutter not found: install Flutter or set the FLUTTER variable to the path of flutter(.bat)."
             fcmd = ["cmd", "/c", fl] if fl.lower().endswith(".bat") else [fl]
-            steps = [("Sincronizza gli asset dell'app", py, ROOT)]
+            steps = [("Sync the app assets", py, ROOT)]
             build_dir = APP
             if NEEDS_STAGE:
                 build_dir = STAGE
                 STAGE.mkdir(parents=True, exist_ok=True)
-                steps.append((f"Copia dell'app in {STAGE} (percorso senza accenti)",
+                steps.append((f"Copy the app to {STAGE} (path without accents)",
                               ["robocopy", str(ROOT / "app"), str(STAGE), "/MIR", "/XD", "build", ".dart_tool", ".idea", ".gradle",
                                "/NFL", "/NDL", "/NJH", "/NP"], ROOT, range(0, 8)))      # robocopy: 0-7 = riuscito
             steps.append(("flutter build apk --release", fcmd + ["build", "apk", "--release"], build_dir))
             if NEEDS_STAGE:
                 src = STAGE / "build" / "app" / "outputs" / "flutter-apk"
-                steps.append(("Copia dell'APK nella cartella dell'app", [sys.executable, "-c",
+                steps.append(("Copy the APK to the app folder", [sys.executable, "-c",
                               "import shutil,sys,pathlib;s,d=map(pathlib.Path,sys.argv[1:]);d.mkdir(parents=True,exist_ok=True);"
-                              "[print('copiato',f.name) or shutil.copy2(f,d/f.name) for f in s.glob('*.apk*')]", str(src), str(APK_DIR)], ROOT))
+                              "[print('copied',f.name) or shutil.copy2(f,d/f.name) for f in s.glob('*.apk*')]", str(src), str(APK_DIR)], ROOT))
             open_dir = APK_DIR
         else:
-            return None, "Operazione sconosciuta"
+            return None, "Unknown operation"
         jid = str(int(time.time() * 1000))
         JOBS[jid] = Job(kind, steps, open_dir)
         return jid, None
 
 
 def status():
-    """Stato di sincronizzazione tra i file del progetto e quelli dell'app."""
+    """Sync status between the project files and the app files."""
     def mt(p):
         return p.stat().st_mtime if p.exists() else None
 
@@ -266,7 +266,7 @@ def status():
         return a.exists() and b.exists() and a.read_bytes() == b.read_bytes()
     db_src, db_app = mt(DB), mt(APP_DATA / "database.json")
     db = read(DB, {})
-    out = ROOT / "app" / "assets" / "images"         # thumb/ = foto principali (600 px), full/ = tutta la galleria (1080 px)
+    out = ROOT / "app" / "assets" / "images"         # thumb/ = main photos (600 px), full/ = whole gallery (1080 px)
     full = {p.stem for p in (out / "full").glob("*.webp")}
     thumb = {p.stem for p in (out / "thumb").glob("*.webp")}
     no_webp = [f for it in db.get("items", []) for f in it["images"].get("gallery") or [] if Path(f).stem not in full]
@@ -274,9 +274,9 @@ def status():
     apk = APK_DIR / "app-release.apk"
     newest = max(x for x in [db_app, mt(APP_DATA / "ui_copy.json"), mt(APP_DATA / "ui_config.json"), 0] if x)
     return {
-        "database": "ok" if db_app and db_src and db_app >= db_src else "da sincronizzare",
-        "ui_copy": "ok" if same(UI, APP_DATA / "ui_copy.json") else ("assente" if not UI.exists() else "da sincronizzare"),
-        "ui_config": "ok" if same(icons.CONFIG, APP_DATA / "ui_config.json") else ("assente" if not icons.CONFIG.exists() else "da sincronizzare"),
+        "database": "ok" if db_app and db_src and db_app >= db_src else "needs sync",
+        "ui_copy": "ok" if same(UI, APP_DATA / "ui_copy.json") else ("missing" if not UI.exists() else "needs sync"),
+        "ui_config": "ok" if same(icons.CONFIG, APP_DATA / "ui_config.json") else ("missing" if not icons.CONFIG.exists() else "needs sync"),
         "images_without_webp": len(no_webp),
         "apk": {"exists": apk.exists(), "time": time.strftime("%d/%m/%Y %H:%M", time.localtime(mt(apk))) if apk.exists() else None,
                 "stale": (not apk.exists()) or mt(apk) < newest, "path": str(APK_DIR)},
@@ -323,7 +323,7 @@ class Handler(BaseHTTPRequestHandler):
             return self.js(images.item_list())
         if p == "/api/images/item":
             return self.js(images.item_detail(q.get("id", [""])[0]))
-        if p.startswith("/img/"):                    # miniatura WebP dell'app se c'è, altrimenti la foto originale
+        if p.startswith("/img/"):                    # the app's WebP thumbnail if present, otherwise the original photo
             name = p[5:]
             if not SAFE_IMG.match(name):
                 return self.send(404, "{}")
@@ -339,7 +339,7 @@ class Handler(BaseHTTPRequestHandler):
             return self.js(sources.logos_payload())
         if p == "/api/links":
             return self.js(sources.links_payload())
-        if p.startswith("/logo/"):                   # loghi delle fonti per l'app (app/assets/sources)
+        if p.startswith("/logo/"):                   # source logos for the app (app/assets/sources)
             name = p[6:]
             if not re.fullmatch(r"[a-z0-9_]+\.png", name):
                 return self.send(404, "{}")
@@ -388,12 +388,12 @@ class Handler(BaseHTTPRequestHandler):
             else:
                 return self.send(404, "{}")
         except Exception as e:                       # noqa: BLE001 - l'errore va mostrato all'utente
-            res = {"ok": False, "report": f"Errore: {e}"}
+            res = {"ok": False, "report": f"Error: {e}"}
         self.js(res)
 
 
 class Server(ThreadingHTTPServer):
-    allow_reuse_address = False                      # su Windows il riuso permetterebbe di "condividere" una porta occupata
+    allow_reuse_address = False                      # on Windows, reuse would allow "sharing" a busy port
 
     def server_bind(self):
         import socket
@@ -404,7 +404,7 @@ class Server(ThreadingHTTPServer):
 
 def main():
     global PORT
-    for port in range(PORT, PORT + 15):              # 8765; se è occupata la successiva libera
+    for port in range(PORT, PORT + 15):              # 8765; if it is busy, the next free one
         try:
             srv = Server(("127.0.0.1", port), Handler)
             PORT = port
@@ -412,9 +412,9 @@ def main():
         except OSError:
             continue
     else:
-        sys.exit(f"Nessuna porta libera tra {PORT} e {PORT + 14}")
+        sys.exit(f"No free port between {PORT} and {PORT + 14}")
     url = f"http://localhost:{PORT}"
-    print(f"Peak Season Admin Studio aperto su {url}\n(chiudi questa finestra o premi Ctrl+C per fermarlo)", flush=True)
+    print(f"Peak Season Admin Studio running at {url}\n(close this window or press Ctrl+C to stop it)", flush=True)
     if "--no-browser" not in sys.argv:
         threading.Timer(0.6, lambda: webbrowser.open(url)).start()
     try:

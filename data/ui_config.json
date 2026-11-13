@@ -1,671 +1,861 @@
 {
   "_meta": {
-    "description": "Mappa delle icone dell'app, modificabile con l'Admin Studio (scheda Icone). icon = svg:<cartella>/<nome> (app/assets/icons) oppure material:<nome> (Material Symbols Rounded). target database = scritta anche nel database da build_app_support_metadata.py.",
+    "description": "Map of the app icons, editable with the Admin Studio (Icons tab). icon = svg:<folder>/<name> (app/assets/icons) or material:<name> (Material Symbols Rounded). target database = also written into the database by build_app_support_metadata.py.",
     "updated": "2026-11-12"
   },
   "icon_slots": [
     {
       "slot": "seasonality.state.primizie",
       "group": "Stati stagionali (indicatore a 3 punti e calendario)",
+      "group_en": "Season states (3-dot indicator and calendar)",
       "description": "Stato \"Primizia\"",
+      "description_en": "State \"Early Season\"",
       "icon": "svg:season/primizie",
       "target": "database"
     },
     {
       "slot": "seasonality.state.in_season",
       "group": "Stati stagionali (indicatore a 3 punti e calendario)",
+      "group_en": "Season states (3-dot indicator and calendar)",
       "description": "Stato \"Di Stagione\"",
+      "description_en": "State \"In Season\"",
       "icon": "svg:season/in_season",
       "target": "database"
     },
     {
       "slot": "seasonality.state.peak_season",
       "group": "Stati stagionali (indicatore a 3 punti e calendario)",
+      "group_en": "Season states (3-dot indicator and calendar)",
       "description": "Stato \"Piena Stagione\"",
+      "description_en": "State \"Peak Season\"",
       "icon": "svg:season/peak_season",
       "target": "database"
     },
     {
       "slot": "seasonality.state.end_of_season",
       "group": "Stati stagionali (indicatore a 3 punti e calendario)",
+      "group_en": "Season states (3-dot indicator and calendar)",
       "description": "Stato \"Fine Stagione\"",
+      "description_en": "State \"End of Season\"",
       "icon": "svg:season/end_of_season",
       "target": "database"
     },
     {
       "slot": "seasonality.state.out_of_season",
       "group": "Stati stagionali (indicatore a 3 punti e calendario)",
+      "group_en": "Season states (3-dot indicator and calendar)",
       "description": "Stato \"Fuori Stagione\"",
+      "description_en": "State \"Out of Season\"",
       "icon": "material:remove",
       "target": "database"
     },
     {
       "slot": "seasonality.state.not_applicable",
       "group": "Stati stagionali (indicatore a 3 punti e calendario)",
+      "group_en": "Season states (3-dot indicator and calendar)",
       "description": "Stato \"Non Coltivato nella Zona\"",
+      "description_en": "State \"Not Grown in the Zone\"",
       "icon": "material:public",
       "target": "database"
     },
     {
       "slot": "category.verdura",
       "group": "Categorie (filtri)",
+      "group_en": "Categories (filters)",
       "description": "Categoria \"Verdura\"",
+      "description_en": "Category \"Vegetables\"",
       "icon": "material:grass",
       "target": "database"
     },
     {
       "slot": "category.frutta",
       "group": "Categorie (filtri)",
+      "group_en": "Categories (filters)",
       "description": "Categoria \"Frutta\"",
+      "description_en": "Category \"Fruit\"",
       "icon": "svg:season/apple",
       "target": "database"
     },
     {
       "slot": "category.erbe_spezie",
       "group": "Categorie (filtri)",
+      "group_en": "Categories (filters)",
       "description": "Categoria \"Erbe e Spezie\"",
+      "description_en": "Category \"Herbs and Spices\"",
       "icon": "material:local_florist",
       "target": "database"
     },
     {
       "slot": "category.funghi",
       "group": "Categorie (filtri)",
+      "group_en": "Categories (filters)",
       "description": "Categoria \"Funghi\"",
+      "description_en": "Category \"Mushrooms\"",
       "icon": "material:forest",
       "target": "database"
     },
     {
       "slot": "category.cereali",
       "group": "Categorie (filtri)",
+      "group_en": "Categories (filters)",
       "description": "Categoria \"Cereali\"",
+      "description_en": "Category \"Grains\"",
       "icon": "material:grain",
       "target": "database"
     },
     {
       "slot": "seasonality.estimates.not_grown",
       "group": "Stime e dati mancanti",
+      "group_en": "Estimates and missing data",
       "description": "\"Non Coltivato Qui\"",
+      "description_en": "\"Not Grown Locally\"",
       "icon": "material:public",
       "target": "database"
     },
     {
       "slot": "seasonality.estimates.unknown",
       "group": "Stime e dati mancanti",
+      "group_en": "Estimates and missing data",
       "description": "\"Dato Non Disponibile\"",
+      "description_en": "\"No Data Available\"",
       "icon": "material:question_mark",
       "target": "database"
     },
     {
       "slot": "zone.mediterranean",
       "group": "Zone climatiche (mappa e filtri)",
+      "group_en": "Climate zones (map and filters)",
       "description": "Zona Mediterranea",
+      "description_en": "Mediterranean zone",
       "icon": "svg:zones/palm_tree",
       "target": "database"
     },
     {
       "slot": "zone.continental",
       "group": "Zone climatiche (mappa e filtri)",
+      "group_en": "Climate zones (map and filters)",
       "description": "Zona Continentale",
+      "description_en": "Continental zone",
       "icon": "svg:zones/leaf",
       "target": "database"
     },
     {
       "slot": "zone.atlantic",
       "group": "Zone climatiche (mappa e filtri)",
+      "group_en": "Climate zones (map and filters)",
       "description": "Zona Atlantica",
+      "description_en": "Atlantic zone",
       "icon": "svg:zones/water_drop",
       "target": "database"
     },
     {
       "slot": "zone.boreal",
       "group": "Zone climatiche (mappa e filtri)",
+      "group_en": "Climate zones (map and filters)",
       "description": "Zona Boreale",
+      "description_en": "Boreal zone",
       "icon": "svg:zones/fir_tree",
       "target": "database"
     },
     {
       "slot": "zone.mountain",
       "group": "Zone climatiche (mappa e filtri)",
+      "group_en": "Climate zones (map and filters)",
       "description": "Zona Alpina / Montana",
+      "description_en": "Alpine / mountain zone",
       "icon": "svg:zones/mountain",
       "target": "database"
     },
     {
       "slot": "zone.pannonian",
       "group": "Zone climatiche (mappa e filtri)",
+      "group_en": "Climate zones (map and filters)",
       "description": "Zona Pannonica",
+      "description_en": "Pannonian zone",
       "icon": "svg:zones/wheat",
       "target": "database"
     },
     {
       "slot": "storage.frigorifero",
       "group": "Conservazione",
+      "group_en": "Storage",
       "description": "Dove conservarlo: frigorifero",
+      "description_en": "Where to store it: fridge",
       "icon": "svg:ui/fridge",
       "target": "app"
     },
     {
       "slot": "storage.temperatura_ambiente",
       "group": "Conservazione",
+      "group_en": "Storage",
       "description": "Dove conservarlo: temperatura ambiente",
+      "description_en": "Where to store it: room temperature",
       "icon": "svg:ui/room_temp",
       "target": "app"
     },
     {
       "slot": "storage.dispensa",
       "group": "Conservazione",
+      "group_en": "Storage",
       "description": "Dove conservarlo: dispensa",
+      "description_en": "Where to store it: pantry",
       "icon": "svg:ui/pantry",
       "target": "app"
     },
     {
       "slot": "nav.home",
       "group": "Barra di navigazione",
-      "description": "Scheda Home (non selezionata)",
+      "group_en": "Navigation bar",
+      "description": "Scheda Home",
+      "description_en": "Home tab",
       "icon": "material:eco",
       "target": "app"
     },
     {
       "slot": "nav.shopping",
       "group": "Barra di navigazione",
+      "group_en": "Navigation bar",
       "description": "Scheda Lista Spesa",
+      "description_en": "Shopping List tab",
       "icon": "material:checklist",
       "target": "app"
     },
     {
       "slot": "nav.settings",
       "group": "Barra di navigazione",
+      "group_en": "Navigation bar",
       "description": "Scheda Impostazioni",
+      "description_en": "Settings tab",
       "icon": "material:settings",
       "target": "app"
     },
     {
       "slot": "storage.freezer",
       "group": "Conservazione",
+      "group_en": "Storage",
       "description": "Durata in freezer (riquadro \"Quanto Dura in Casa\")",
+      "description_en": "Freezer time (\"How Long It Keeps at Home\" box)",
       "icon": "svg:ui/chilling",
       "target": "app"
     },
     {
       "slot": "storage.ripening_type",
       "group": "Conservazione",
+      "group_en": "Storage",
       "description": "Etichetta Climaterico / Non Climaterico",
+      "description_en": "Climacteric / Non-climacteric label",
       "icon": "svg:ui/ripening",
       "target": "app"
     },
     {
       "slot": "storage.ethylene_alert",
       "group": "Conservazione",
+      "group_en": "Storage",
       "description": "Riquadro \"Da Tenere Separati\" (etilene) in Come Conservarli",
+      "description_en": "\"Keep Apart\" box (ethylene) in How to Store Them",
       "icon": "svg:ui/ethylene",
       "target": "app"
     },
     {
       "slot": "storage.chilling_injury",
       "group": "Conservazione",
+      "group_en": "Storage",
       "description": "Avviso danni da freddo (\"Non metterlo in frigo\")",
+      "description_en": "Chilling injury warning (\"Keep it out of the fridge\")",
       "icon": "svg:ui/chilling",
       "target": "app"
     },
     {
       "slot": "storage.ideal_temperature",
       "group": "Conservazione",
+      "group_en": "Storage",
       "description": "Chip della temperatura ideale in frigo",
+      "description_en": "Ideal fridge temperature chip",
       "icon": "material:thermostat",
       "target": "app"
     },
     {
       "slot": "home.shopping_mode",
       "group": "Schermata Home",
-      "description": "Pulsante Modalità Spesa (carrello in alto)",
+      "group_en": "Home screen",
+      "description": "Interruttore \"Sono a fare la spesa\" (accanto al cuore, anche nella Lista Spesa)",
+      "description_en": "\"I'm out shopping\" toggle (next to the heart, also in the Shopping List)",
       "icon": "svg:ui/shopping_mode",
       "target": "app"
     },
     {
       "slot": "home.advanced_filters",
       "group": "Schermata Home",
+      "group_en": "Home screen",
       "description": "Pulsante Filtri Avanzati",
+      "description_en": "Advanced Filters button",
       "icon": "material:tune",
       "target": "app"
     },
     {
       "slot": "home.search",
       "group": "Schermata Home",
+      "group_en": "Home screen",
       "description": "Pulsante e barra di ricerca",
+      "description_en": "Search button and search bar",
       "icon": "material:search",
       "target": "app"
     },
     {
       "slot": "home.no_results",
       "group": "Schermata Home",
+      "group_en": "Home screen",
       "description": "Messaggio \"Nessun Prodotto Trovato\"",
+      "description_en": "\"No Items Found\" message",
       "icon": "material:search_off",
       "target": "app"
     },
     {
       "slot": "home.hidden_visible",
       "group": "Schermata Home",
+      "group_en": "Home screen",
       "description": "Chip \"Nascosti Visibili\"",
+      "description_en": "\"Hidden Shown\" chip",
       "icon": "material:visibility",
       "target": "app"
     },
     {
       "slot": "home.view.grid",
       "group": "Schermata Home",
+      "group_en": "Home screen",
       "description": "Vista Griglia",
+      "description_en": "Grid view",
       "icon": "material:grid_view",
       "target": "app"
     },
     {
       "slot": "home.view.list",
       "group": "Schermata Home",
+      "group_en": "Home screen",
       "description": "Vista Lista",
+      "description_en": "List view",
       "icon": "material:view_agenda",
       "target": "app"
     },
     {
       "slot": "home.view.calendar",
       "group": "Schermata Home",
+      "group_en": "Home screen",
       "description": "Vista Calendario 12 Mesi",
+      "description_en": "12-month calendar view",
       "icon": "material:calendar_view_month",
       "target": "app"
     },
     {
       "slot": "action.shopping_list.add",
       "group": "Azioni sul prodotto",
+      "group_en": "Product actions",
       "description": "Aggiungi alla Lista Spesa (non ancora in lista)",
+      "description_en": "Add to Shopping List (not in the list yet)",
       "icon": "material:playlist_add",
       "target": "app"
     },
     {
       "slot": "action.shopping_list.active",
       "group": "Azioni sul prodotto",
-      "description": "Già nella Lista Spesa (e filtro Solo Lista Spesa)",
+      "group_en": "Product actions",
+      "description": "Già nella Lista Spesa",
+      "description_en": "Already in the Shopping List",
       "icon": "material:playlist_add_check",
       "target": "app"
     },
     {
       "slot": "action.favorite.add",
       "group": "Azioni sul prodotto",
+      "group_en": "Product actions",
       "description": "Aggiungi ai Preferiti (non ancora preferito)",
+      "description_en": "Add to Favourites (not a favourite yet)",
       "icon": "material:favorite_border",
       "target": "app"
     },
     {
       "slot": "action.favorite.active",
       "group": "Azioni sul prodotto",
+      "group_en": "Product actions",
       "description": "Preferito (e filtro Solo Preferiti)",
+      "description_en": "Favourite (and Favourites Only filter)",
       "icon": "material:favorite",
       "target": "app"
     },
     {
       "slot": "action.dislike.add",
       "group": "Azioni sul prodotto",
+      "group_en": "Product actions",
       "description": "Non lo Mangio (non ancora nascosto)",
+      "description_en": "\"I Don't Eat It\" (not hidden yet)",
       "icon": "material:do_not_disturb_on",
       "target": "app"
     },
     {
       "slot": "action.dislike.active",
       "group": "Azioni sul prodotto",
+      "group_en": "Product actions",
       "description": "Nascosto (\"Non lo Mangio\" attivo), anche sul badge della card",
+      "description_en": "Hidden (\"I Don't Eat It\" on), also on the card badge",
       "icon": "material:do_not_disturb_on",
       "target": "app"
     },
     {
       "slot": "action.open_detail",
       "group": "Azioni sul prodotto",
+      "group_en": "Product actions",
       "description": "Voce \"Apri la scheda\" nel menu del prodotto",
+      "description_en": "\"Open the page\" item in the product menu",
       "icon": "material:open_in_full",
       "target": "app"
     },
     {
       "slot": "filters.dop_only",
       "group": "Filtri avanzati",
+      "group_en": "Advanced filters",
       "description": "Interruttore Solo Prodotti DOP/IGP",
+      "description_en": "PDO/PGI Products Only switch",
       "icon": "svg:ui/dop_igp",
       "target": "app"
     },
     {
       "slot": "filters.show_hidden",
       "group": "Filtri avanzati",
+      "group_en": "Advanced filters",
       "description": "Interruttore Mostra i Nascosti",
+      "description_en": "Show Hidden switch",
       "icon": "material:visibility",
       "target": "app"
     },
     {
       "slot": "detail.section.calendar",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Titolo sezione Calendario Stagionale",
+      "description_en": "Seasonal Calendar section title",
       "icon": "svg:ui/calendar",
       "target": "app"
     },
     {
       "slot": "detail.section.varieties",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Titolo sezione Varietà e Territori",
+      "description_en": "Varieties and Origins section title",
       "icon": "svg:ui/varieties",
       "target": "app"
     },
     {
       "slot": "detail.section.buy_store",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Titolo sezione Acquisto, Maturazione e Conservazione",
+      "description_en": "Buying, Ripening and Storage section title",
       "icon": "material:shopping_basket",
       "target": "app"
     },
     {
       "slot": "detail.section.nutrition",
       "group": "Scheda prodotto",
-      "description": "Titolo sezione Nutrizione",
+      "group_en": "Product page",
+      "description": "Titolo sezione Valori Nutrizionali",
+      "description_en": "Nutrition Facts section title",
       "icon": "svg:ui/nutrition",
       "target": "app"
     },
     {
       "slot": "detail.section.sustainability",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Titolo sezione Sostenibilità",
+      "description_en": "Sustainability section title",
       "icon": "svg:ui/sustainability",
       "target": "app"
     },
     {
       "slot": "detail.section.garden",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Titolo sezione Calendario dell'Orto",
+      "description_en": "Growing Calendar section title",
       "icon": "svg:ui/garden",
       "target": "app"
     },
     {
       "slot": "detail.section.curiosities",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Titolo sezione Informazioni Aggiuntive",
+      "description_en": "More Information section title",
       "icon": "svg:ui/info",
       "target": "app"
     },
     {
       "slot": "detail.section.recipes",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Titolo sezione Ricette e Note",
+      "description_en": "Recipes and Notes section title",
       "icon": "svg:ui/recipes",
       "target": "app"
     },
     {
       "slot": "detail.section.links",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Titolo sezione Fonti e Link Utili",
+      "description_en": "Sources and Useful Links section title",
       "icon": "material:link",
       "target": "app"
     },
     {
       "slot": "detail.availability_note",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Nota sotto il calendario dei prodotti a lunga conservazione",
+      "description_en": "Note under the calendar for long-keeping produce",
       "icon": "material:info",
       "target": "app"
     },
     {
       "slot": "detail.dop_igp",
       "group": "Scheda prodotto",
-      "description": "Chip DOP/IGP accanto alle denominazioni",
+      "group_en": "Product page",
+      "description": "Icona DOP/IGP (titoletto e chip delle denominazioni)",
+      "description_en": "PDO/PGI icon (subtitle and designation chips)",
       "icon": "svg:ui/dop_igp",
       "target": "app"
     },
     {
       "slot": "detail.carbon_footprint",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Riquadro Impronta di Carbonio",
+      "description_en": "Carbon Footprint box",
       "icon": "svg:ui/carbon",
       "target": "app"
     },
     {
       "slot": "detail.water_footprint",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Riquadro Impronta Idrica",
+      "description_en": "Water Footprint box",
       "icon": "svg:ui/water",
       "target": "app"
     },
     {
       "slot": "detail.beef_comparison",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Riga \"Volte Meno della Carne Bovina\"",
+      "description_en": "\"Times Lower Than Beef\" line",
       "icon": "svg:ui/cow",
       "target": "app"
     },
     {
       "slot": "detail.zero_waste",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Sottotitolo Antispreco",
+      "description_en": "Zero Waste subtitle",
       "icon": "svg:ui/zero_waste",
       "target": "app"
     },
     {
       "slot": "shopping.done_shopping",
       "group": "Lista della spesa",
+      "group_en": "Shopping list",
       "description": "Riquadro \"Hai Finito la Spesa?\"",
+      "description_en": "\"Done Shopping?\" box",
       "icon": "svg:ui/fridge",
       "target": "app"
     },
     {
       "slot": "shopping.how_to_choose",
       "group": "Lista della spesa",
+      "group_en": "Shopping list",
       "description": "Anteprima \"Come Sceglierlo al Meglio\"",
+      "description_en": "\"How to Pick the Best One\" preview",
       "icon": "svg:ui/choose",
       "target": "app"
     },
     {
       "slot": "shopping.weight_calculator",
       "group": "Lista della spesa",
+      "group_en": "Shopping list",
       "description": "Calcolo \"Quanto Comprarne\" (peso lordo)",
+      "description_en": "\"How Much to Buy\" calculator (gross weight)",
       "icon": "svg:ui/scale",
       "target": "app"
     },
     {
       "slot": "shopping.add_item",
       "group": "Lista della spesa",
+      "group_en": "Shopping list",
       "description": "Pulsante per aggiungere un prodotto alla lista",
+      "description_en": "Button to add a product to the list",
       "icon": "material:add_circle",
       "target": "app"
     },
     {
       "slot": "shopping.in_cart",
       "group": "Lista della spesa",
+      "group_en": "Shopping list",
       "description": "Riga \"Nel Carrello\"",
+      "description_en": "\"In the Cart\" row",
       "icon": "material:shopping_cart_checkout",
       "target": "app"
     },
     {
       "slot": "shopping.clear_completed",
       "group": "Lista della spesa",
+      "group_en": "Shopping list",
       "description": "Menu: togli i prodotti già presi",
+      "description_en": "Menu: remove items already picked up",
       "icon": "material:playlist_remove",
       "target": "app"
     },
     {
       "slot": "shopping.clear_list",
       "group": "Lista della spesa",
+      "group_en": "Shopping list",
       "description": "Menu: svuota la lista",
+      "description_en": "Menu: clear the list",
       "icon": "material:delete_sweep",
       "target": "app"
     },
     {
       "slot": "settings.notifications",
       "group": "Impostazioni",
+      "group_en": "Settings",
       "description": "Sezione Notifiche",
+      "description_en": "Notifications section",
       "icon": "svg:ui/notifications",
       "target": "app"
     },
     {
       "slot": "settings.shopping_mode",
       "group": "Impostazioni",
+      "group_en": "Settings",
       "description": "Opzioni della Modalità Spesa",
+      "description_en": "Shopping Mode options",
       "icon": "svg:ui/shopping_mode",
       "target": "app"
     },
     {
       "slot": "settings.theme.light",
       "group": "Impostazioni",
+      "group_en": "Settings",
       "description": "Tema Chiaro",
+      "description_en": "Light theme",
       "icon": "material:light_mode",
       "target": "app"
     },
     {
       "slot": "settings.theme.dark",
       "group": "Impostazioni",
+      "group_en": "Settings",
       "description": "Tema Scuro",
+      "description_en": "Dark theme",
       "icon": "material:dark_mode",
       "target": "app"
     },
     {
       "slot": "settings.theme.system",
       "group": "Impostazioni",
+      "group_en": "Settings",
       "description": "Tema di Sistema",
+      "description_en": "System theme",
       "icon": "material:brightness_auto",
       "target": "app"
     },
     {
       "slot": "settings.detail_sections",
       "group": "Impostazioni",
+      "group_en": "Settings",
       "description": "Voce \"Sezioni della Scheda Prodotto\"",
+      "description_en": "\"Product Page Sections\" item",
       "icon": "material:view_agenda",
       "target": "app"
     },
     {
       "slot": "settings.sustainable_diet",
       "group": "Impostazioni",
+      "group_en": "Settings",
       "description": "Voce \"More Sustainable Diet\" (EUFIC)",
+      "description_en": "\"More Sustainable Diet\" item (EUFIC)",
       "icon": "material:eco",
       "target": "app"
     },
     {
       "slot": "settings.database",
       "group": "Impostazioni",
+      "group_en": "Settings",
       "description": "Riga della versione del database",
+      "description_en": "Database version row",
       "icon": "material:storage",
       "target": "app"
     },
     {
       "slot": "home.category_other",
       "group": "Schermata Home",
+      "group_en": "Home screen",
       "description": "Pulsante Altro (erbe e spezie, funghi, cereali) nella barra delle categorie",
+      "description_en": "\"Other\" button (herbs and spices, mushrooms, grains) in the category bar",
       "icon": "material:local_florist",
       "target": "app"
     },
     {
       "slot": "home.list_card_how_to_choose",
       "group": "Schermata Home",
+      "group_en": "Home screen",
       "description": "Icona davanti alla descrizione \"Come Sceglierlo\" nelle card della vista Lista",
+      "description_en": "Icon before the \"How to pick it\" text on List view cards",
       "icon": "svg:ui/choose",
       "target": "app"
     },
     {
       "slot": "detail.how_to_choose",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Sottotitolo \"Come Sceglierlo al Meglio\"",
+      "description_en": "\"How to Pick the Best One\" subtitle",
       "icon": "svg:ui/choose",
       "target": "app"
     },
     {
       "slot": "detail.keep_longer",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Sottotitolo \"Per Conservarlo più a Lungo\" (prodotti non climaterici)",
+      "description_en": "\"To Keep It Longer\" subtitle (non-climacteric produce)",
       "icon": "material:timer",
       "target": "app"
     },
     {
       "slot": "sources.law",
       "group": "Fonti",
+      "group_en": "Sources",
       "description": "Leggi e regolamenti UE citati come fonte (al posto del logo)",
+      "description_en": "EU laws and regulations cited as sources (instead of a logo)",
       "icon": "material:gavel",
       "target": "app"
     },
     {
       "slot": "sources.generic",
       "group": "Fonti",
+      "group_en": "Sources",
       "description": "Fonte senza logo (es. link aggiunti a mano)",
+      "description_en": "Source without a logo (e.g. links added by hand)",
       "icon": "material:link",
       "target": "app"
     },
     {
       "slot": "detail.ripening",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Titoletto Maturazione",
+      "description_en": "Ripening subtitle",
       "icon": "svg:ui/ripening",
       "target": "app"
     },
     {
       "slot": "detail.speed_up",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Titoletto Per Farlo Maturare",
+      "description_en": "\"To Ripen It\" subtitle",
       "icon": "svg:ui/speed_up",
       "target": "app"
     },
     {
       "slot": "detail.slow_down",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Titoletto Per Rallentare la Maturazione o il Deperimento",
+      "description_en": "\"To Slow Ripening or Spoilage\" subtitle",
       "icon": "material:timer",
       "target": "app"
     },
     {
       "slot": "detail.perishability",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Titoletto Deperibilità",
+      "description_en": "Perishability subtitle",
       "icon": "svg:ui/perishability",
       "target": "app"
     },
     {
       "slot": "detail.where_to_store",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Titoletto Dove Conservarlo",
+      "description_en": "\"Where to Store It\" subtitle",
       "icon": "material:inventory_2",
       "target": "app"
     },
     {
       "slot": "detail.how_long",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Titoletto Quanto Dura in Casa",
+      "description_en": "\"How Long It Keeps at Home\" subtitle",
       "icon": "material:schedule",
       "target": "app"
     },
     {
       "slot": "detail.keep_away_from",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Titoletto Tienilo Lontano da (etilene)",
+      "description_en": "\"Keep It Away from\" subtitle (ethylene)",
       "icon": "svg:ui/ethylene",
       "target": "app"
     },
     {
       "slot": "detail.notable_varieties",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Titoletto Varietà Note",
+      "description_en": "Notable Varieties subtitle",
       "icon": "material:label",
       "target": "app"
     },
     {
       "slot": "detail.pat",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Titoletto PAT (prodotti agroalimentari tradizionali)",
+      "description_en": "PAT subtitle (traditional Italian food products)",
       "icon": "svg:ui/pat",
       "target": "app"
     },
     {
       "slot": "detail.nutrition_claims",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Titoletto Indicazioni Nutrizionali UE",
+      "description_en": "EU Nutrition Claims subtitle",
       "icon": "material:verified",
       "target": "app"
     },
     {
       "slot": "detail.vitamins_minerals",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Titoletto Vitamine e Minerali",
+      "description_en": "Vitamins and Minerals subtitle",
       "icon": "material:science",
       "target": "app"
     },
     {
       "slot": "detail.curiosities",
       "group": "Scheda prodotto",
+      "group_en": "Product page",
       "description": "Titoletto Benefici e Curiosità",
+      "description_en": "Benefits and Curiosities subtitle",
       "icon": "material:tips_and_updates",
       "target": "app"
     }

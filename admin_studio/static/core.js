@@ -1,4 +1,4 @@
-// Peak Season Admin Studio: funzioni comuni a tutte le schede.
+// Peak Season Admin Studio: helpers shared by all tabs.
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
 const norm = s => String(s ?? '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -7,7 +7,7 @@ const api = {
   post: async (u, body) => (await fetch(u, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body)})).json(),
 };
 
-// Ogni scheda si registra con: render(main, query), dirty() -> numero, save() -> risposta del server, csv (facoltativo), placeholder
+// Each tab registers: render(main, query), dirty() -> count, save() -> server reply, csv (optional), placeholder
 const Studio = {tabs: {}, tab: 'ui', q: '', status: null};
 
 function msg(t, err) {
@@ -24,22 +24,22 @@ function modal(title, html) {
 function howtoHtml() {
   const s = Studio.status || {}, app = esc(s.app_dir || 'C:\\dev\\peak_season'), fl = esc(s.flutter || 'flutter');
   return `<ol>
-    <li>I file dell'app sono già sincronizzati (database, testi, icone e foto nuove in <code>app/assets</code>).</li>
-    <li><b>App già aperta con <code>flutter run</code>:</b> nel terminale di Flutter premi <b>R</b> maiuscola (<i>Hot Restart</i>). I dati JSON si rileggono solo al riavvio: la <b>r</b> minuscola (Hot Reload) non basta.</li>
-    <li><b>App non aperta:</b> in un terminale <code>cd ${app}</code> e poi <code>${fl} run</code> (scegli il dispositivo o il browser).</li>
-    <li><b>Sul telefono senza cavo:</b> premi <b>Compila APK Android</b> qui a destra e installa <code>app-release.apk</code> dalla cartella che si apre.</li>
+    <li>The app files are already synced (database, copy, icons and new photos in <code>app/assets</code>).</li>
+    <li><b>App already running with <code>flutter run</code>:</b> press capital <b>R</b> in the Flutter terminal (<i>Hot Restart</i>). JSON data is only re-read on restart: lowercase <b>r</b> (Hot Reload) is not enough.</li>
+    <li><b>App not running:</b> in a terminal run <code>cd ${app}</code> and then <code>${fl} run</code> (pick the device or the browser).</li>
+    <li><b>On the phone without a cable:</b> press <b>Build Android APK</b> on the right and install <code>app-release.apk</code> from the folder that opens.</li>
   </ol>`;
 }
 
 function refreshDirty() {
   const t = Studio.tabs[Studio.tab], n = t.dirty();
-  $('#dirty').textContent = n ? n + ' modifiche non salvate' : '';
+  $('#dirty').textContent = n ? n + ' unsaved change' + (n === 1 ? '' : 's') : '';
   $('#save').disabled = !n;
 }
 
 function render() {
   const t = Studio.tabs[Studio.tab];
-  $('#q').placeholder = t.placeholder || 'Cerca…';
+  $('#q').placeholder = t.placeholder || 'Search…';
   $('#csv').style.display = t.csv ? '' : 'none';
   const m = $('#main'); m.innerHTML = '';
   t.render(m, Studio.q);
@@ -48,10 +48,10 @@ function render() {
 
 async function afterSave(res, what) {
   if (res.ok) {
-    modal(what + ' salvate e validate ✓', howtoHtml() + (res.sync_ok === false ? '<p class="no">Attenzione: la sincronizzazione con l\'app non è riuscita, premi "Sincronizza App".</p>' : ''));
-    msg('Validazione:\n' + (res.report || '').split('\n').slice(0, 4).join('\n'));
+    modal(what + ' saved and validated ✓', howtoHtml() + (res.sync_ok === false ? '<p class="no">Warning: syncing with the app failed, press "Sync App".</p>' : ''));
+    msg('Validation:\n' + (res.report || '').split('\n').slice(0, 4).join('\n'));
   } else {
-    msg('NON salvato: ' + (res.report || 'errore sconosciuto') + '\n(i file sono tornati com\'erano)', true);
+    msg('NOT saved: ' + (res.report || 'unknown error') + '\n(the files were restored)', true);
   }
   if (window.Build) Build.refresh();
   return res.ok;
@@ -59,15 +59,15 @@ async function afterSave(res, what) {
 
 document.querySelectorAll('#tabs button').forEach(b => b.onclick = () => {
   const cur = Studio.tabs[Studio.tab];
-  if (cur.dirty() && !confirm('Ci sono modifiche non salvate in questa scheda. Cambiare scheda comunque? (restano in memoria finché non chiudi la pagina)')) return;
+  if (cur.dirty() && !confirm('This tab has unsaved changes. Switch tab anyway? (they stay in memory until you close the page)')) return;
   document.querySelectorAll('#tabs button').forEach(x => x.classList.remove('on'));
   b.classList.add('on'); Studio.tab = b.dataset.t; Studio.q = ''; $('#q').value = ''; render();
 });
 let tq; $('#q').oninput = e => { clearTimeout(tq); tq = setTimeout(() => { Studio.q = e.target.value; render(); }, 120); };
 $('#save').onclick = async () => {
   const t = Studio.tabs[Studio.tab];
-  $('#save').disabled = true; $('#save').textContent = 'Salvataggio…';
-  try { await t.save(); } finally { $('#save').textContent = 'Salva Modifiche'; refreshDirty(); }
+  $('#save').disabled = true; $('#save').textContent = 'Saving…';
+  try { await t.save(); } finally { $('#save').textContent = 'Save Changes'; refreshDirty(); }
 };
 window.onbeforeunload = e => { if (Object.values(Studio.tabs).some(t => t.dirty())) { e.preventDefault(); e.returnValue = ''; } };
 window.addEventListener('DOMContentLoaded', async () => {

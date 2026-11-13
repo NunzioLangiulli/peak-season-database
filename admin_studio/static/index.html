@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <title>Peak Season · Admin Studio</title>
@@ -10,34 +10,34 @@
 <header>
   <h1>Peak Season <span>Admin Studio</span></h1>
   <nav id="tabs">
-    <button data-t="ui" class="on">Testi App</button>
-    <button data-t="corpus">Corpus Condiviso</button>
-    <button data-t="items">Descrizioni Prodotti</button>
-    <button data-t="images">Immagini</button>
-    <button data-t="icons">Icone</button>
-    <button data-t="logos">Loghi</button>
-    <button data-t="links">Link</button>
+    <button data-t="ui" class="on">App Copy</button>
+    <button data-t="corpus">Shared Corpus</button>
+    <button data-t="items">Product Texts</button>
+    <button data-t="images">Images</button>
+    <button data-t="icons">Icons</button>
+    <button data-t="logos">Logos</button>
+    <button data-t="links">Links</button>
   </nav>
-  <input type="search" id="q" placeholder="Cerca…" autofocus>
+  <input type="search" id="q" placeholder="Search…" autofocus>
   <span id="dirty"></span>
-  <span id="csv"><button class="btn" id="exp">Esporta CSV</button><button class="btn" id="imp">Importa CSV</button><input type="file" id="file" accept=".csv,text/csv" hidden></span>
-  <button class="btn primary" id="save" disabled>Salva Modifiche</button>
+  <span id="csv"><button class="btn" id="exp">Export CSV</button><button class="btn" id="imp">Import CSV</button><input type="file" id="file" accept=".csv,text/csv" hidden></span>
+  <button class="btn primary" id="save" disabled>Save Changes</button>
 </header>
 <div id="layout">
   <main id="main"></main>
   <aside id="build">
     <h2>Build &amp; Deploy</h2>
-    <div id="status">Controllo…</div>
+    <div id="status">Checking…</div>
     <div class="actions">
-      <button class="btn" id="sync">Sincronizza App</button>
-      <button class="btn primary" id="apk">Compila APK Android</button>
-      <button class="btn" id="apkdir">Apri Cartella APK</button>
+      <button class="btn" id="sync">Sync App</button>
+      <button class="btn primary" id="apk">Build Android APK</button>
+      <button class="btn" id="apkdir">Open APK Folder</button>
     </div>
-    <details id="howto"><summary>Come provare le modifiche</summary><div id="howto_text"></div></details>
+    <details id="howto"><summary>How to test your changes</summary><div id="howto_text"></div></details>
     <pre id="log" hidden></pre>
   </aside>
 </div>
-<div id="modal" hidden><div class="card"><h3 id="m_title"></h3><div id="m_body"></div><button class="btn primary" id="m_ok">Ho Capito</button></div></div>
+<div id="modal" hidden><div class="card"><h3 id="m_title"></h3><div id="m_body"></div><button class="btn primary" id="m_ok">Got It</button></div></div>
 <div id="msg"></div>
 <script src="/static/core.js"></script>
 <script src="/static/copy.js"></script>
