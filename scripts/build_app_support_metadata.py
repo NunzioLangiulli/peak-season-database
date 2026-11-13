@@ -227,9 +227,9 @@ def main():
     # display rules of the product page (revision 2026-11-13: the app applies them, the database documents them)
     m["detail_display_rules"] = {
         "ripening": {
-            "non_climacteric": {"hide": ["ripening_and_storage.ripening_management.speed_up"],
-                                "move_to_storage": {"field": "ripening_and_storage.ripening_management.slow_down",
-                                                    "label": {"it": "Per Conservarlo più a Lungo", "en": "To Keep It Longer"}}},
+            "non_climacteric": {"hide": ["ripening_and_storage.ripening_management.speed_up",
+                                         "ripening_and_storage.ripening_management.slow_down"],
+                                "slow_down_merged_into": "ripening_and_storage.storage_instructions"},
             "badge_behaviour_text": "help_only",
             "badge_help_glossary": ["climacteric", "non_climacteric"]},
         "storage_order": ["ripening_and_storage.home_storage.label", "ripening_and_storage.storage_instructions",
@@ -238,16 +238,21 @@ def main():
         "footprint_filters": ["nutrition_and_sustainability.environmental_footprint.sustainability_rating.carbon_level",
                               "nutrition_and_sustainability.environmental_footprint.sustainability_rating.water_level"],
         "note": {
-            "it": "Prodotti non climaterici: non si mostra \"come accelerare la maturazione\" (speed_up); il consiglio slow_down compare nella "
-                  "parte di conservazione con l'etichetta \"Per Conservarlo più a Lungo\". Il testo del comportamento di maturazione non compare "
+            "it": "Prodotti non climaterici: non si mostrano speed_up (\"come accelerare la maturazione\") né slow_down: "
+                  "le informazioni di slow_down che mancavano sono state aggiunte a storage_instructions (merge_slow_down_into_storage.py). Il testo del comportamento di maturazione non compare "
                   "sotto il badge (Climaterico / Non Climaterico) ma nell'aiuto \"?\" (glossario climacteric / non_climacteric). Ordine della "
                   "conservazione: dove conservarlo, istruzioni, consiglio, cosa tenere lontano, quanto dura in casa, deperibilità. Filtri della Home "
                   "per impronta di carbonio e idrica con i livelli e i colori di environmental_footprint_method.levels.",
-            "en": "Non-climacteric produce: \"how to speed up ripening\" (speed_up) is not shown; the slow_down tip appears in the storage part "
-                  "under the label \"To Keep It Longer\". The ripening behaviour text is not shown under the badge (Climacteric / Non-climacteric) "
+            "en": "Non-climacteric produce: neither speed_up (\"how to speed up ripening\") nor slow_down is shown: the slow_down "
+                  "information that was missing has been added to storage_instructions (merge_slow_down_into_storage.py). The ripening behaviour text is not shown under the badge (Climacteric / Non-climacteric) "
                   "but in the \"?\" help (glossary climacteric / non_climacteric). Storage order: where to store it, instructions, tip, what to "
                   "keep away, how long it lasts at home, perishability. Home filters for carbon and water footprint use the levels and colours of "
                   "environmental_footprint_method.levels."}}
+    # perishability ramp (green -> red), used by the app for the perishability badge and filters
+    PERISH_COLOR = {1: "#2E7D32", 2: "#66BB6A", 3: "#F9A825", 4: "#EF6C00", 5: "#C62828", 6: "#8E1B1B"}   # 6 = extremely high
+    for lv in ((m.get("perishability_legend") or {}).get("levels") or []):
+        if lv.get("level") in PERISH_COLOR:
+            lv["color_hex"] = PERISH_COLOR[lv["level"]]
     efm = m.get("environmental_footprint_method")
     if isinstance(efm, dict):                         # sustainability_rating thresholds (enrich_footprint.py) and colours for the filters
         efm["levels"] = {

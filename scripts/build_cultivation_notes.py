@@ -1,6 +1,6 @@
 ﻿"""IT/EN growing notes generated from the verified Orto da Coltivare data (PDF tables for North/Centre/South).
 
-- <zone>.cultivation_notes: months of sowing in seed trays, direct sowing, transplanting and harvest for the zone.
+- <zone>.cultivation_notes: no longer written (2026-11-13): the app draws the sowing, transplanting and harvest rows itself.
 - cultivation_notes (general): sowing depth, spacing, exposure and moon phase given by ODC.
 The draft's notes (unverified free text) go to draft_legacy_values.json.
 Only for products with a row in the ODC tables; the others stay to be verified.
@@ -93,7 +93,7 @@ def main():
         enr = []
         for zn in ("nord", "centro", "sud_isole"):
             z = cal[zn]
-            note = zone_note(z)
+            note = None   # 2026-11-13: the app draws the chart rows (zone_note kept for reference); see clean_garden_notes.py
             if note:
                 old = z.get("cultivation_notes")
                 if old and old != note and "Orto da Coltivare" not in (old.get("it") or ""):

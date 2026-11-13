@@ -725,15 +725,6 @@
       "target": "app"
     },
     {
-      "slot": "detail.keep_longer",
-      "group": "Scheda prodotto",
-      "group_en": "Product page",
-      "description": "Sottotitolo \"Per Conservarlo più a Lungo\" (prodotti non climaterici)",
-      "description_en": "\"To Keep It Longer\" subtitle (non-climacteric produce)",
-      "icon": "material:timer",
-      "target": "app"
-    },
-    {
       "slot": "sources.law",
       "group": "Fonti",
       "group_en": "Sources",
@@ -856,7 +847,25 @@
       "group_en": "Product page",
       "description": "Titoletto Benefici e Curiosità",
       "description_en": "Benefits and Curiosities subtitle",
-      "icon": "material:tips_and_updates",
+      "icon": "material:lightbulb",
+      "target": "app"
+    },
+    {
+      "slot": "settings.app_version",
+      "group": "Impostazioni",
+      "group_en": "Settings",
+      "description": "Riga della versione dell'app (Informazioni)",
+      "description_en": "App version row (About)",
+      "icon": "material:info",
+      "target": "app"
+    },
+    {
+      "slot": "settings.license",
+      "group": "Impostazioni",
+      "group_en": "Settings",
+      "description": "Riga delle licenze (Informazioni)",
+      "description_en": "Licences row (About)",
+      "icon": "material:policy",
       "target": "app"
     }
   ]

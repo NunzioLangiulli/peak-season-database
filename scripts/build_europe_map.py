@@ -31,6 +31,7 @@ OUT_MAP = ROOT / "app" / "assets" / "maps"
 ARCTIC = "#5B6670"  # as on EUFIC: Arctic in grey (not a zone of the app)
 FE, FN, R = 4321000.0, 3210000.0, 6371007.0  # EPSG:3035 → coordinates on the unit sphere
 OUT_ICON = ROOT / "app" / "assets" / "icons" / "season" / "europe.svg"
+OUT_ZONE_ICONS = ROOT / "app" / "assets" / "icons" / "zones_map"
 
 LON0, LAT0 = math.radians(10), math.radians(52)
 VIEW = (-25, 34, 40, 72)          # min lon, min lat, max lon, max lat of the map
@@ -198,6 +199,44 @@ def main():
         f'<path d="{"".join(parts)}" stroke="#000" stroke-width="0.45" stroke-linejoin="round"/></svg>',
         encoding="utf-8")
     print("icon", f"{OUT_ICON.stat().st_size / 1024:.1f} KB")
+
+    # Zone icons (product page, next to the zone name): the same Europe outline,
+    # empty, with the EEA regions of the zone filled. currentColor: the app tints them.
+    OUT_ZONE_ICONS.mkdir(parents=True, exist_ok=True)
+    outline = "".join(parts)
+    for z in zones:
+        fills = []
+        for f in eea["features"]:
+            if eea_to_zone.get(f["properties"]["code"]) != z:
+                continue
+            for poly in polygons(f["geometry"]):
+                for ring in poly[:1]:  # outer ring only: no lakes or rivers (holes)
+                    pts = [(ox + ((X - FE) / R - bx0) * s, oy + (by1 - (Y - FN) / R) * s) for X, Y in ring]
+                    pts = dp(pts, 0.12)
+                    if len(pts) >= 3:
+                        fills.append("M" + "L".join(f"{x:.2f},{y:.2f}" for x, y in pts) + "Z")
+        # Outer outline only (no borders between countries): the stroked land is
+        # masked by the land itself, so only the half of the stroke outside the
+        # coast remains. The zone fill is masked by the land (one path per
+        # country, so overlaps between simplified borders do not cancel out).
+        # each country also gets a thin stroke of the same colour: it closes the
+        # hairline seams between neighbours, so no border lines show inside.
+        # (the white mask reaches the middle of the outline stroke, so the fill
+        # touches the border instead of leaving a white line along the coast)
+        land_white = "".join(f'<path d="{d}Z" fill="#fff" stroke="#fff" stroke-width="1.1"/>'
+                             for d in outline.split("Z") if d)
+        land_black = "".join(f'<path d="{d}Z" fill="#000" stroke="#000" stroke-width="0.35"/>'
+                             for d in outline.split("Z") if d)
+        svg = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">'
+               f'<mask id="eu-in-{z}">{land_white}</mask>'
+               f'<mask id="eu-out-{z}"><rect x="-2" y="-2" width="28" height="28" fill="#fff"/>{land_black}</mask>'
+               f'<path d="{"".join(fills)}" stroke="currentColor" stroke-width="1.0" stroke-linejoin="round" '
+               f'mask="url(#eu-in-{z})"/>'
+               f'<path d="{outline}" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round" '
+               f'mask="url(#eu-out-{z})"/>'
+               '</svg>')
+        (OUT_ZONE_ICONS / f"{z}.svg").write_text(svg, encoding="utf-8")
+        print("zone icon", z, f"{len(svg) / 1024:.1f} KB")
 
 if __name__ == "__main__":
     main()

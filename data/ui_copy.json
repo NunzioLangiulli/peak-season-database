@@ -1296,8 +1296,8 @@
       "screen": "detail",
       "key": "detail.how_long",
       "element_description": "Product detail page: how long",
-      "it": "Quanto Dura in Casa",
-      "en": "How Long It Keeps at Home"
+      "it": "Quanto Dura",
+      "en": "How Long It Keeps"
     },
     {
       "screen": "detail",
@@ -1476,10 +1476,24 @@
     },
     {
       "screen": "detail",
-      "key": "detail.keep_longer",
-      "element_description": "Product detail page: storage tip for non-climacteric produce (moved from ripening)",
-      "it": "Per Conservarlo più a Lungo",
-      "en": "To Keep It Longer"
+      "key": "detail.seedbed_sowing",
+      "element_description": "Product detail page: growing calendar row, sowing in a seedbed",
+      "it": "Semina in Semenzaio",
+      "en": "Seedbed Sowing"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.direct_sowing",
+      "element_description": "Product detail page: growing calendar row, direct sowing",
+      "it": "Semina Diretta",
+      "en": "Direct Sowing"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.transplant",
+      "element_description": "Product detail page: growing calendar row, transplanting",
+      "it": "Trapianto",
+      "en": "Transplanting"
     },
     {
       "screen": "settings",
@@ -1564,13 +1578,6 @@
       "element_description": "Settings: palette name (green teal)",
       "it": "Verde e Acqua",
       "en": "Green and Teal"
-    },
-    {
-      "screen": "settings",
-      "key": "settings.palette_name.green_amber",
-      "element_description": "Settings: palette name (green amber)",
-      "it": "Verde e Ambra",
-      "en": "Green and Amber"
     },
     {
       "screen": "settings",
@@ -2159,6 +2166,76 @@
       "element_description": "Settings: country name in the climate-zone list (United Kingdom)",
       "it": "Regno Unito",
       "en": "United Kingdom"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.palette_name.custom",
+      "element_description": "Settings: palette name (custom colours)",
+      "it": "Personalizzata",
+      "en": "Custom"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.palette_top_color",
+      "element_description": "Settings: custom palette, colour at the top of the screen",
+      "it": "Colore Principale (in Alto)",
+      "en": "Main Colour (Top)"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.palette_bottom_color",
+      "element_description": "Settings: custom palette, colour at the bottom of the screen",
+      "it": "Colore Secondario (in Basso)",
+      "en": "Secondary Colour (Bottom)"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.app_version",
+      "element_description": "Settings: About, app version — placeholders: {v}",
+      "it": "Peak Season v{v}",
+      "en": "Peak Season v{v}"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.github_app",
+      "element_description": "Settings: About, link to the app source code on GitHub",
+      "it": "Codice dell'App su GitHub",
+      "en": "App Source Code on GitHub"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.github_app_sub",
+      "element_description": "Settings: About, subtitle of the app GitHub link",
+      "it": "Open source: segnala problemi o proponi miglioramenti",
+      "en": "Open source: report issues or suggest improvements"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.github_database",
+      "element_description": "Settings: About, link to the database on GitHub",
+      "it": "Database su GitHub",
+      "en": "Database on GitHub"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.github_database_sub",
+      "element_description": "Settings: About, subtitle of the database GitHub link",
+      "it": "Dati, fonti e metodi, liberamente riutilizzabili",
+      "en": "Data, sources and methods, free to reuse"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.license_title",
+      "element_description": "Settings: About, licence title",
+      "it": "Licenze",
+      "en": "Licences"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.license_sub",
+      "element_description": "Settings: About, licence details",
+      "it": "Codice MIT · Dati CC BY 4.0 (i valori di terzi restano soggetti ai termini delle fonti)",
+      "en": "Code MIT · Data CC BY 4.0 (third-party values remain subject to the sources' terms)"
     }
   ]
 }

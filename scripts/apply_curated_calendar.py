@@ -55,11 +55,9 @@ def main():
                 a["sowing_or_transplant_months"] = sow
             parts = {lang: ", ".join(f"{LAB[k][i]} {ranges(v[k], lang)}" for k in ("seed", "direct", "transplant", "harvest") if v.get(k))
                      for i, lang in enumerate(("it", "en"))}
-            a["cultivation_notes"] = {"it": parts["it"][0].upper() + parts["it"][1:] + " (Orto da Coltivare).",
-                                      "en": parts["en"][0].upper() + parts["en"][1:] + " (Orto da Coltivare)."}
+            a["cultivation_notes"] = None    # the app draws the chart rows; a note listing the same months adds nothing
         rule = c.get("rule")
-        cal["cultivation_notes"] = {"it": "Calendario ricavato dalla scheda di coltivazione di Orto da Coltivare." + (f" Resa: {rule[0]}." if rule else ""),
-                                    "en": "Calendar taken from the Orto da Coltivare growing guide." + (f" Rendering: {rule[1]}." if rule else "")}
+        cal["cultivation_notes"] = ({"it": f"Nel calendario: {rule[0]}.", "en": f"In the chart: {rule[1]}."} if rule else None)
         dc = it["data_completeness"]                     # verbatim quote: only in the internal notes (Italian)
         q = f"Calendario dell'orto, citazione da Orto da Coltivare: \"{c['quote']}\""
         if q not in dc["notes"]:
