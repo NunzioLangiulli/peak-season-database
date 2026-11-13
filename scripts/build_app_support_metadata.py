@@ -86,6 +86,11 @@ try:                                                  # dark logos (same rule as
     DARK = {f"{k}.png" for k in dark_logos()}
 except ImportError:
     DARK = set()
+# Database release: metadata.version is the GitHub release tag of peak-season-database (semantic versioning: patch =
+# text/data fixes, minor = new fields or content, major = breaking format changes). schema_version is the JSON format
+# and changes independently. Bump both values here when preparing a release, then publish the tag v<DB_VERSION>.
+DB_VERSION = "1.1.0"
+DB_RELEASE_DATE = "2026-11-13"
 DISPLAY = load_json(ROOT / "scripts" / "config" / "source_display.json")["sources"]   # editore, titolo, logo condiviso
 
 
@@ -114,6 +119,7 @@ def main():
     apply_ui_config_icons()
     db = load_json(DATA / "database.json")
     m = db["metadata"]
+    m["version"], m["generated"] = DB_VERSION, DB_RELEASE_DATE
     for it in db["items"]:                              # famiglia mancante (mandorla)
         b = it["botany"]
         if not b.get("family") and (b.get("genus") == "Prunus" or b["scientific_name"].startswith("Prunus ")):

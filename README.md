@@ -178,6 +178,15 @@ from common import load_json
 db = load_json("data/database.json")
 ```
 
+### Versioning
+
+`metadata.version` is the GitHub release tag of this repository (current release: **v1.1.0**, `metadata.generated` = release date). It follows semantic versioning:
+- **patch** (1.1.x): fixes to texts or data;
+- **minor** (1.x.0): new fields or new content;
+- **major** (x.0.0): breaking changes to the format.
+
+`metadata.schema_version` describes the JSON format and changes independently of the data release. The version is set in `scripts/build_app_support_metadata.py` (`DB_VERSION`, `DB_RELEASE_DATE`), so pipeline reruns keep it.
+
 ## 8. Sources
 
 The full list of the 46 sources, with URL, topics, access method and licence notes, is in `metadata.official_sources`; the description and authority of each one are in the database's source catalogue. The main ones:
