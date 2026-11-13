@@ -40,7 +40,7 @@ def download(h):
         hit = SESSION.get("https://pixabay.com/api/", params={"key": env("PIXABAY_API_KEY"), "id": m.group(1)},
                           timeout=60).json().get("hits") or []
         if not hit:
-            raise RuntimeError("non più disponibile su Pixabay")
+            raise RuntimeError("no longer available on Pixabay")
         url = hit[0]["largeImageURL"]
     if h["provider"] == "wikimedia_commons" and "/thumb/" in url:   # original file: no thumbnails to generate
         url = url.replace("/thumb/", "/").rsplit("/", 1)[0]
@@ -76,10 +76,10 @@ def main():
     for mv in data.get("moves", []):
         src = mv["file"]
         if not (IMAGES / src).exists():
-            print("  foto da spostare non trovata:", src)
+            print("  photo to move not found:", src)
             continue
         dst = next_free(mv["to"], used)
-        print("sposta", src, "->", dst, mv.get("view_type", ""))
+        print("move", src, "->", dst, mv.get("view_type", ""))
         n_mov += 1
         if not dry:
             (IMAGES / src).rename(IMAGES / dst)
@@ -90,7 +90,7 @@ def main():
     for iid, s in sel.items():
         for fn in s.get("remove", []):
             if (IMAGES / fn).exists():
-                print("togli", fn)
+                print("remove", fn)
                 if not dry:
                     removed.mkdir(exist_ok=True)
                     shutil.move(str(IMAGES / fn), str(removed / fn))
@@ -101,18 +101,18 @@ def main():
             owner = cf.split("/", 1)[0]
             by_file = {h["file"]: (t, h) for t, lst in cand.get(owner, {}).items() if not t.startswith("_") for h in lst}
             if cf not in by_file:
-                print("  candidata sconosciuta:", cf)
+                print("  unknown candidate:", cf)
                 continue
             t, h = by_file[cf]
             fn = next_free(iid, used)
-            print("aggiungi", cf, "->", fn, vt or t)
+            print("add", cf, "->", fn, vt or t)
             n_add += 1
             if dry:
                 continue
             try:
                 im = download(h)
             except Exception as e:
-                print("  ERRORE", cf, e)
+                print("  ERROR", cf, e)
                 failed.append(cf)
                 used[iid].discard(int(fn[-6:-4]))
                 n_add -= 1
@@ -125,9 +125,9 @@ def main():
             save_json(IMAGES / "_metadata.json", meta)   # save after every product
     if not dry:
         save_json(IMAGES / "_metadata.json", meta)
-    print(f"spostate {n_mov}, aggiunte {n_add}, tolte {n_rem}" + (" (prova)" if dry else ""))
+    print(f"moved {n_mov}, added {n_add}, removed {n_rem}" + (" (dry run)" if dry else ""))
     if failed:
-        print("non scaricate:", failed)
+        print("not downloaded:", failed)
 
 
 if __name__ == "__main__":

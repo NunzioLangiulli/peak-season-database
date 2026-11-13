@@ -38,7 +38,7 @@ def main():
     hb_sym = {k for k, v in load_json(ROOT / "scripts" / "config" / "hb66_chapter_curated.json")["items"].items() if v.get("symptoms")}
     missing = [it["id"] for it in db["items"] if it["id"] not in texts]
     if missing:
-        raise SystemExit(f"Testi mancanti per: {missing}")
+        raise SystemExit(f"Missing texts for: {missing}")
     warn = []
     for it in db["items"]:
         iid, t = it["id"], texts[it["id"]]
@@ -137,7 +137,7 @@ def main():
         finalize_completeness(it)
     save_json(DATA / "database.json", db)
     save_json(DATA / "draft_legacy_values.json", legacy)
-    print(f"testi applicati a {len(db['items'])} alimenti; avvisi: {len(warn)}")
+    print(f"texts applied to {len(db['items'])} products; warnings: {len(warn)}")
     for w in warn:
         print("  W", w)
 

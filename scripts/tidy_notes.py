@@ -25,7 +25,7 @@ def main():
         removed += len(segs) - len(out)
         dc["notes"] = " ".join(out)
     save_json(DATA / "database.json", db)
-    print("frasi duplicate rimosse:", removed)
+    print("duplicate sentences removed:", removed)
 
 
 if __name__ == "__main__":

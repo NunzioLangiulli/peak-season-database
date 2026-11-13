@@ -289,8 +289,8 @@ def main():
                 stats["none"].append(it["id"])
             finalize_completeness(it)
         save_json(DATA / "database.json", db)
-        print(f"blocco {b}: salvato ({stats['ok']} arricchiti finora)")
-    print("senza dati di composizione:", stats["none"])
+        print(f"block {b}: saved ({stats['ok']} enriched so far)")
+    print("without composition data:", stats["none"])
 
 
 if __name__ == "__main__":

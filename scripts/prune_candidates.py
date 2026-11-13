@@ -66,7 +66,7 @@ def pass2(names):
         c["_pruned2"] = True
         save_json(f, c)
     merge()
-    print(f"secondo passaggio: candidate esaminate {tot}, scartate {drop}")
+    print(f"second pass: candidates examined {tot}, discarded {drop}")
 
 
 def renumber(iid, c):
@@ -131,7 +131,7 @@ def main():
         c["_pruned"] = True
         save_json(f, c)
     merge()
-    print(f"candidate esaminate {tot}, scartate {drop}")
+    print(f"candidates examined {tot}, discarded {drop}")
 
 
 if __name__ == "__main__":

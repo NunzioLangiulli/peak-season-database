@@ -197,7 +197,7 @@ def main():
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000">'
         f'<path d="{"".join(parts)}" stroke="#000" stroke-width="0.45" stroke-linejoin="round"/></svg>',
         encoding="utf-8")
-    print("icona", f"{OUT_ICON.stat().st_size / 1024:.1f} KB")
+    print("icon", f"{OUT_ICON.stat().st_size / 1024:.1f} KB")
 
 if __name__ == "__main__":
     main()

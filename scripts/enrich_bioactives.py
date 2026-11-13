@@ -110,7 +110,7 @@ def main():
         n_comp += len(new)
     save_json(DATA / "database.json", db)
     save_json(DATA / "draft_legacy_values.json", legacy)
-    print(f"alimenti con carotenoidi USDA: {n_items}, valori: {n_comp}")
+    print(f"products with USDA carotenoids: {n_items}, values: {n_comp}")
 
 
 if __name__ == "__main__":

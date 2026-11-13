@@ -100,7 +100,7 @@ def main():
                 "spreco": n["culinary_waste_reduction"], "luogo": r["primary_location"], "maturaz": r["ripening_type"]}.items()},
         }
     save_json(RAW / "text_facts.json", facts)
-    print("schede fatti:", len(facts))
+    print("fact sheets:", len(facts))
 
 
 def show(block, size):
@@ -111,8 +111,8 @@ def show(block, size):
         f = facts[i]
         v = f["valori"]
         print(f"### {i} | {f['nome']}")
-        print(f"- V: T{v['T'] and (v['T']['min'], v['T']['max'])} UR{v['UR'] and (v['UR']['min'], v['UR']['max'])} frigo{v['frigo_gg']} "
-              f"freddo{v['freddo']} et{v['etilene']} | nutr15: {', '.join(v['nutrienti_15'])}")
+        print(f"- V: T{v['T'] and (v['T']['min'], v['T']['max'])} RH{v['UR'] and (v['UR']['min'], v['UR']['max'])} fridge{v['frigo_gg']} "
+              f"cold{v['freddo']} et{v['etilene']} | nutr15: {', '.join(v['nutrienti_15'])}")
         if f.get("altroconsumo"):
             print("- AC:", " | ".join(f"{k}: {cut(x, 140)}" for k, x in f["altroconsumo"].items() if x))
         if f.get("altro_desc"):
@@ -126,7 +126,7 @@ def show(block, size):
         if h.get("climacteric_word"):
             print("- HB clim:", h["climacteric_word"])
         b = f.get("bozza") or {}
-        print(f"- BZ luogo={b.get('luogo')} mat={b.get('maturaz')} | spesa: {cut(b.get('spesa'), 120)} | benefici: {cut(b.get('benefici'), 180)} | spreco: {cut(b.get('spreco'), 160)}")
+        print(f"- BZ place={b.get('luogo')} ripe={b.get('maturaz')} | shopping: {cut(b.get('spesa'), 120)} | benefits: {cut(b.get('benefici'), 180)} | waste: {cut(b.get('spreco'), 160)}")
 
 
 if __name__ == "__main__":

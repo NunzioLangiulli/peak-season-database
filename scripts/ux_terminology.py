@@ -56,7 +56,7 @@ def main():
     stats = [0]
     walk(db, stats)
     save_json(DATA / "database.json", db)
-    print("testi aggiornati (alimento/food -> prodotto/produce):", stats[0])
+    print("texts updated (alimento/food -> prodotto/produce):", stats[0])
 
 
 if __name__ == "__main__":

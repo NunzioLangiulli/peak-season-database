@@ -66,7 +66,7 @@ def main():
 
     bda = fetch_bda(BDA)
     if not bda["values"]:
-        raise SystemExit("BDA-IEO 50086 senza valori")
+        raise SystemExit("BDA-IEO 50086 without values")
     enrich(it, None, bda, ie)
     for v in n["vitamins"] + n["minerals"]:
         v.setdefault("source", "bda_ieo")
@@ -95,8 +95,8 @@ def main():
     finalize_completeness(it)
     save_json(DATA / "database.json", db)
     save_json(DATA / "draft_legacy_values.json", legacy)
-    print("kcal", n["kcal_per_100g"], "acqua", n["water_percentage"], "macro", n["macros_per_100g"], "claim", n["nutrition_claims_eu"]["it"])
-    print("discrepanze:", [(d["field"], d.get("draft_value"), d.get("source_value")) for d in dc["discrepancies"] if d["field"].startswith("nutrition")])
+    print("kcal", n["kcal_per_100g"], "water", n["water_percentage"], "macros", n["macros_per_100g"], "claims", n["nutrition_claims_eu"]["it"])
+    print("discrepancies:", [(d["field"], d.get("draft_value"), d.get("source_value")) for d in dc["discrepancies"] if d["field"].startswith("nutrition")])
 
 
 if __name__ == "__main__":

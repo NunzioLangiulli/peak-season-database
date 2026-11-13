@@ -68,7 +68,7 @@ def main():
         finalize_completeness(it)
         n += 1
     save_json(DATA / "database.json", db)
-    print("calendari dell'orto applicati:", n)
+    print("garden calendars applied:", n)
 
 
 if __name__ == "__main__":

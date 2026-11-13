@@ -1,6 +1,6 @@
 # Peak Season – Phase 1 report: building, organising and validating the database
 
-Generated on 2026-11-12 by `scripts/make_report.py` · database v2.0.0 · 153 products · schema `data/schema.json` (JSON Schema 2020-12).
+Generated on 2026-11-13 by `scripts/make_report.py` · database v2.0.0 · 153 products · schema `data/schema.json` (JSON Schema 2020-12).
 
 This report explains the method used to build the database, how it is organised (records, metadata, sources, glossary, bilingualism) and how it was checked. The field-by-field guide is in `data/database_guide.md`.
 
@@ -200,20 +200,20 @@ Four levels of checks, all re-runnable.
 
 `audit_db.py` checks every record: consistency of energy/macronutrients, %NRV, EU claims, portions and per-portion footprints; seasonal states and months; harvest versus seasonality; min ≤ max ranges; chilling-injury thresholds and freezing points; home storage times versus commercial ones; storage location versus text labels; ethylene (producers, "keep away from"); respiration class versus perishability; compatibility group versus temperatures; botany; varieties; PDO/PGI; images and licences; source URLs; completeness of IT/EN texts and no Italian text in English fields. It also checks the metadata: every glossary entry bilingual and with registered sources, `see_also`, `field_help` and `help_refs` pointing to existing entries, every coded value present in the vocabulary, every source described.
 
-Remaining data warnings (explained, not errors; messages are the audit's original Italian output):
+Remaining data warnings (explained, not errors):
 
 | Level | Product | Field | Detail |
 |---|---|---|---|
-| E | cavolo_nero_black_kale | macros_per_100g.sugars_g | zuccheri 0.99 > carboidrati 0.3 |
-| W | cipolla_invernale_winter_onion | storage_compatibility | gruppo 3 (13-18 °C) ma temperatura ottimale {'min': 0.0, 'max': 0.0} |
-| W | fagiolino_green_bean | chilling_injury | temperatura ottimale {'min': 5.0, 'max': 7.5} sotto la soglia di danno 7 °C |
-| W | pastinaca_parsnip | italy_macro_areas.sud_isole | sempre fuori stagione |
-| W | melone_melon | storage_compatibility | gruppo 1B a 0-2 °C ma sensibile al freddo sotto 5 °C |
-| W | lampone_raspberry | ripening_type | non climaterico ma forte produttore di etilene |
-| W | avocado_avocado | storage_compatibility | gruppo 1B a 0-2 °C ma sensibile al freddo sotto 13 °C |
-| W | orzo_barley | macros_per_100g | acqua+macro = 105.8 g/100 g |
-| W | maracuja_passion_fruit | chilling_injury | temperatura ottimale {'min': 7.0, 'max': 10.0} sotto la soglia di danno 10 °C |
-| W | oliva_olive | chilling_injury | temperatura ottimale {'min': 5.0, 'max': 7.5} sotto la soglia di danno 7 °C |
+| E | cavolo_nero_black_kale | macros_per_100g.sugars_g | sugars 0.99 > carbohydrates 0.3 |
+| W | cipolla_invernale_winter_onion | storage_compatibility | group 3 (13-18 °C) but optimal temperature {'min': 0.0, 'max': 0.0} |
+| W | fagiolino_green_bean | chilling_injury | optimal temperature {'min': 5.0, 'max': 7.5} below the injury threshold 7 °C |
+| W | pastinaca_parsnip | italy_macro_areas.sud_isole | always out of season |
+| W | melone_melon | storage_compatibility | group 1B at 0-2 °C but chill-sensitive below 5 °C |
+| W | lampone_raspberry | ripening_type | non-climacteric but a strong ethylene producer |
+| W | avocado_avocado | storage_compatibility | group 1B at 0-2 °C but chill-sensitive below 13 °C |
+| W | orzo_barley | macros_per_100g | water+macros = 105.8 g/100 g |
+| W | maracuja_passion_fruit | chilling_injury | optimal temperature {'min': 7.0, 'max': 10.0} below the injury threshold 10 °C |
+| W | oliva_olive | chilling_injury | optimal temperature {'min': 5.0, 'max': 7.5} below the injury threshold 7 °C |
 
 Explanation: in cavolo nero sugars > carbohydrates because of how USDA computes carbohydrates (by difference) → noted; barley slightly exceeds 105 g/100 g when summing water and macronutrients because of rounding in the CREA table; the "below optimal temperature" thresholds come from the end of HB66's lowest safe range; dry onion in group 3 and melon/avocado in group 1B are as in the HB66 compatibility table (groups for 7-day mixed storage, not optimal temperatures); the differences between labels and FoodKeeper for chilli pepper, banana and pomegranate are intentional (UC Davis guide, optimised for taste).
 

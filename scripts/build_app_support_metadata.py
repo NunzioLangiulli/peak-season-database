@@ -270,8 +270,8 @@ def main():
                     dress(x)
     dress(m.get("glossary") or {})
     save_json(DATA / "database.json", db)
-    print(f"famiglie: {len(used)} (senza nome: {missing}); paesi senza ISO: {sorted(unknown_iso)}; "
-          f"fonti con favicon: {sum(1 for s in m['official_sources'] if s['favicon'])}/{len(m['official_sources'])}")
+    print(f"families: {len(used)} (without name: {missing}); countries without ISO: {sorted(unknown_iso)}; "
+          f"sources with favicon: {sum(1 for s in m['official_sources'] if s['favicon'])}/{len(m['official_sources'])}")
 
 
 if __name__ == "__main__":

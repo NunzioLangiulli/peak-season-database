@@ -129,7 +129,7 @@ def main():
         for t in (s.get("used_for") or {}).get("topics") or []:
             bil(t.get("label"))
     save_json(DATA / "database.json", db)
-    print("etichette brevi in maiuscolo iniziale:", n, "alimenti + metadati")
+    print("short labels in Title Case:", n, "products + metadata")
 
 
 if __name__ == "__main__":

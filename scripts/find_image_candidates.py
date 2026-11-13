@@ -219,7 +219,7 @@ def fill(db, per, known, rejected):
                 try:
                     hits = pixabay(q, names, cat[0]) if kind == "px" else commons(q, min_w=800 if kind == "cmp" else 1000, landscape=(kind != "cmp"))
                 except Exception as e:
-                    print("  errore", iid, t, e)
+                    print("  error", iid, t, e)
                     continue
                 hits.sort(key=lambda h: -h["score"])
                 for h in hits:
@@ -257,7 +257,7 @@ def main():
         merge()
         return
     if "--merge" in sys.argv:
-        print("alimenti con candidate:", len(merge()["items"]))
+        print("products with candidates:", len(merge()["items"]))
         return
     db = load_json(db_path())
     only = set(arg("--items", "").split(",")) - {""}
@@ -296,7 +296,7 @@ def main():
                 try:
                     hits = pixabay(q, names, cat[0]) if kind == "px" else commons(q, min_w=800 if kind == "cmp" else 1000, landscape=(kind != "cmp"))
                 except Exception as e:
-                    print("  errore", iid, t, e)
+                    print("  error", iid, t, e)
                     continue
                 hits.sort(key=lambda h: -h["score"])
                 for h in hits:

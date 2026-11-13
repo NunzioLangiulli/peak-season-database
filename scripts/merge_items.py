@@ -45,7 +45,7 @@ def main():
     for old, m in MERGES.items():
         src = next((i for i in db["items"] if i["id"] == old), None)
         if src is None:
-            print(f"{old}: già unita")
+            print(f"{old}: already merged")
             continue
         dst = next(i for i in db["items"] if i["id"] == m["into"])
         arch["items"][old] = {"merged_into": m["into"], "item": src}
@@ -81,11 +81,11 @@ def main():
         db["items"] = [i for i in db["items"] if i["id"] != old]
         db["items"] = [replace_refs(i, old, m["into"]) for i in db["items"]]
         finalize_completeness(dst)
-        print(f"{old} -> {m['into']}: immagini {len(dst['images']['gallery'])}, varietà {len(iv['varieties_verification'])}")
+        print(f"{old} -> {m['into']}: images {len(dst['images']['gallery'])}, varieties {len(iv['varieties_verification'])}")
     save_json(IMAGES / "_metadata.json", meta)
     save_json(arch_path, arch)
     save_json(DATA / "database.json", db)
-    print("alimenti:", len(db["items"]), "| riferimenti residui:", json.dumps(db, ensure_ascii=False).count(next(iter(MERGES))))
+    print("products:", len(db["items"]), "| remaining references:", json.dumps(db, ensure_ascii=False).count(next(iter(MERGES))))
 
 
 if __name__ == "__main__":

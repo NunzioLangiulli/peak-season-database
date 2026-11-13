@@ -193,8 +193,8 @@ def main():
             mark_enriched(it, [P])
         finalize_completeness(it)
     save_json(DATA / "database.json", db)
-    print(f"alimenti con flavonoidi USDA: {stats['usda']}, con Phenol-Explorer: {stats['pe']}, valori aggiunti: {stats['values']}")
-    print("ancora senza composti bioattivi:", stats["none"])
+    print(f"products with USDA flavonoids: {stats['usda']}, with Phenol-Explorer: {stats['pe']}, values added: {stats['values']}")
+    print("still without bioactive compounds:", stats["none"])
 
 
 if __name__ == "__main__":

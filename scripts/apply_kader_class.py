@@ -99,7 +99,7 @@ def main():
     left = [it["id"] for it in db["items"] if P in it["data_completeness"].get("fields_pending_verification", [])
             or (it["ripening_and_storage"]["postharvest_physiology"]["respiration_rate_class"] is None
                 and P not in it["data_completeness"].get("not_applicable_fields", []))]
-    print(f"classi di Kader applicate: {n_set}, discrepanze: {n_disc}; ancora da verificare: {left}")
+    print(f"Kader classes applied: {n_set}, discrepancies: {n_disc}; still to verify: {left}")
 
 
 if __name__ == "__main__":

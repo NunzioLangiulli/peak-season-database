@@ -109,7 +109,7 @@ def main():
     it = build(db)
     index_entry()
     save_json(DATA / "database.json", db)
-    print("aggiunto" if it else "già presente", NEW["id"], "| alimenti:", len(db["items"]))
+    print("added" if it else "already present", NEW["id"], "| products:", len(db["items"]))
 
 
 if __name__ == "__main__":

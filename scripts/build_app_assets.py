@@ -66,12 +66,12 @@ def main() -> None:
         src = ROOT / "data" / name
         if src.exists():
             shutil.copyfile(src, OUT / "data" / name)
-            print(f"{name} copiato")
+            print(f"{name} copied")
     if "--db-only" in sys.argv:
         webp = {p.name for p in (OUT / "images").rglob("*.webp")}
         absent = sorted(f for f in gallery if webp_name(f) not in webp)
         if absent:
-            print(f"{len(absent)} immagini del database non ancora convertite in WebP (in app: segnaposto)")
+            print(f"{len(absent)} database images not yet converted to WebP (placeholder in the app)")
         return
 
     missing = [f for f in gallery if not (SRC_IMG / f).exists()]
@@ -92,10 +92,10 @@ def main() -> None:
     def size(p: Path) -> float:
         return sum(f.stat().st_size for f in p.rglob("*") if f.is_file()) / 1e6
 
-    print(f"thumb: {len(primaries)} file, {size(OUT / 'images' / 'thumb'):.1f} MB")
-    print(f"full:  {len(gallery)} file, {size(OUT / 'images' / 'full'):.1f} MB")
+    print(f"thumb: {len(primaries)} files, {size(OUT / 'images' / 'thumb'):.1f} MB")
+    print(f"full:  {len(gallery)} files, {size(OUT / 'images' / 'full'):.1f} MB")
     if missing:
-        print("ATTENZIONE, immagini mancanti:", missing)
+        print("WARNING, missing images:", missing)
 
 
 if __name__ == "__main__":

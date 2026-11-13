@@ -102,7 +102,7 @@ def best_icon(key, home):
         p.feed(page.text)
         candidates = [(s, urljoin(page.url, h)) for s, h in p.icons]
     except Exception as e:  # noqa: BLE001
-        print(f"  {key}: home non letta ({e})")
+        print(f"  {key}: home page not read ({e})")
     candidates.sort(key=lambda x: -x[0])
     candidates.append((16, urljoin(home, "/favicon.ico")))
     for size, url in candidates:
@@ -219,7 +219,7 @@ def write_dart():
         "};",
     ]
     DART.write_text(nl.join(lines) + nl, encoding="utf-8")
-    print("loghi scuri:", sorted(dark))
+    print("dark logos:", sorted(dark))
 
 
 def main():
@@ -236,17 +236,17 @@ def main():
             res = pick(key, home)
         if not res:
             failed.append(key)
-            print(f"{key}: nessuna icona")
+            print(f"{key}: no icon")
             continue
         url, data, im = res
         ext = (im.format or "img").lower()
         (RAW / f"{key}.{ext}").write_bytes(data)
         canvas = make_logo(im)
         canvas.save(OUT / f"{key}.png")
-        print(f"{key}: da {url}")
+        print(f"{key}: from {url}")
     write_dart()
     if failed:
-        print("senza icona:", failed)
+        print("without icon:", failed)
         sys.exit(1)
 
 

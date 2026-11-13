@@ -55,7 +55,7 @@ def main():
         "id": c["id"], "topic": c["topic"], "sources": c["sources"],
         **{k: {"it": c[k][0], "en": c[k][1]} for k in ("issue", "why", "decision", "rationale")}} for c in conf]
     save_json(DATA / "database.json", db)
-    print(f"fonti descritte: {len(db['metadata']['official_sources']) - len(missing)}; senza descrizione: {missing}; conflitti: {len(conf)}")
+    print(f"sources described: {len(db['metadata']['official_sources']) - len(missing)}; without description: {missing}; conflicts: {len(conf)}")
 
 
 if __name__ == "__main__":

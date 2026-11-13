@@ -40,12 +40,12 @@ def apply(db, ov):
 
 def main():
     if not FILE.exists():
-        print("nessuna modifica ai link")
+        print("no link changes")
         return
     db = load_json(DATA / "database.json")
     n = apply(db, load_json(FILE))
     save_json(DATA / "database.json", db)
-    print("modifiche ai link applicate:", n)
+    print("link changes applied:", n)
 
 
 if __name__ == "__main__":

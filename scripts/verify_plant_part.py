@@ -67,7 +67,7 @@ def main():
         finalize_completeness(it)
     if not a.dry_run:
         save_json(DATA / "database.json", db)
-        print("parti confermate:", ok)
+        print("confirmed parts:", ok)
 
 
 if __name__ == "__main__":

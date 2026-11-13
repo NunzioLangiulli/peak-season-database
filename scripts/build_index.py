@@ -276,10 +276,10 @@ def main():
     }
     save_json(DATA / "items_index.json", index)
     missing_draft = set(draft) - {i["draft_id"] or i["id"] for i in out_items}
-    print(f"Indice: {len(out_items)} alimenti ({index['from_draft']} bozza + {index['new_items']} nuovi) {dict(cats)}")
+    print(f"Index: {len(out_items)} products ({index['from_draft']} draft + {index['new_items']} new) {dict(cats)}")
     if missing_draft:
-        print("ATTENZIONE alimenti bozza non indicizzati:", sorted(missing_draft))
-    print(f"Problemi di mappatura: {len(problems)}")
+        print("WARNING draft products not indexed:", sorted(missing_draft))
+    print(f"Mapping problems: {len(problems)}")
     for p in problems:
         print("  -", p)
 

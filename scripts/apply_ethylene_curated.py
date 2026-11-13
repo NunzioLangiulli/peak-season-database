@@ -36,7 +36,7 @@ def main():
                 n["en"] = n["en"].rstrip() + " " + c["note"][1]
         finalize_completeness(it)
     save_json(DATA / "database.json", db)
-    print("produttori forti:", strong)
+    print("strong producers:", strong)
 
 
 if __name__ == "__main__":

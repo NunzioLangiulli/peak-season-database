@@ -63,8 +63,8 @@ def main():
         stats[g] = stats.get(g, 0) + 1
         finalize_completeness(it)
     save_json(DATA / "database.json", db)
-    print("porzioni per gruppo:", stats)
-    print("con allergeni:", [it["id"] for it in db["items"] if it[N]["allergens_eu"]])
+    print("portions per group:", stats)
+    print("with allergens:", [it["id"] for it in db["items"] if it[N]["allergens_eu"]])
 
 
 if __name__ == "__main__":

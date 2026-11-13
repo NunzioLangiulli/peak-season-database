@@ -65,7 +65,7 @@ def main():
         finalize_completeness(it)
         n += 1
     save_json(DATA / "database.json", db)
-    print("alimenti con durate FoodKeeper:", n)
+    print("products with FoodKeeper storage times:", n)
 
 
 if __name__ == "__main__":

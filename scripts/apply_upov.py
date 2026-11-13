@@ -39,7 +39,7 @@ def main():
         set_na(it, [f"botany.{k}" for k in ("upov_code", "upov_name", "upov_register", "upov_match", "upov_note", "varieties_registered_italy") if b.get(k) is None])
         finalize_completeness(it)
     save_json(DATA / "database.json", db)
-    print(f"codice UPOV assegnato a {n} alimenti su {len(db['items'])}")
+    print(f"UPOV code assigned to {n} of {len(db['items'])} products")
 
 
 if __name__ == "__main__":

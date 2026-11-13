@@ -63,7 +63,7 @@ def main():
         tot += len(prods)
         finalize_completeness(it)
     save_json(DATA / "database.json", db)
-    print(f"PAT vegetali nell'elenco: {len(pats)}; collegamenti: {tot}")
+    print(f"plant PATs in the list: {len(pats)}; links: {tot}")
     top = sorted(db["items"], key=lambda i: -i[N]["traditional_products_pat"]["count"])[:12]
     print([(i["id"], i[N]["traditional_products_pat"]["count"]) for i in top])
 

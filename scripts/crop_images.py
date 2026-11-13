@@ -79,8 +79,8 @@ def main():
         m["width"], m["height"] = out.size
     if not dry:
         save_json(IMAGES / "_metadata.json", meta)
-    print(f"ritagliate a 3:2: {cropped}; tavole portate a 2:3: {padded}; foto verticali non toccate: {len(vertical)} {vertical}"
-          + (" (prova)" if dry else ""))
+    print(f"cropped to 3:2: {cropped}; plates brought to 2:3: {padded}; portrait photos left untouched: {len(vertical)} {vertical}"
+          + (" (dry run)" if dry else ""))
 
 
 if __name__ == "__main__":

@@ -59,7 +59,7 @@ def main():
     save_json(DATA / "database.json", db)
     save_json(DATA / "draft_legacy_values.json", legacy)
     left = sum(len(v.get(K, [])) for v in legacy["items"].values())
-    print(f"varieta' confermate dal Catalogo UE: {n}; ancora non verificate: {left}")
+    print(f"varieties confirmed by the EU Catalogue: {n}; still not verified: {left}")
 
 
 if __name__ == "__main__":

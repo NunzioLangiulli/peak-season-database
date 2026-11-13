@@ -61,12 +61,12 @@ def main():
             c[status(it, p)].append(it["id"])
         out[p] = c
     save_json(DATA / "template_coverage.json", out)
-    print(f"{'campo':72} ok draft  na miss")
+    print(f"{'field':72} ok draft  na miss")
     for p, c in out.items():
         if c["draft"] or c["missing"]:
             print(f"{p:72} {len(c['ok']):3} {len(c['draft']):4} {len(c['na']):3} {len(c['missing']):4}")
     full = [p for p, c in out.items() if not c["draft"] and not c["missing"]]
-    print(f"\ncampi del template completi (ok o N/A per tutti gli alimenti): {len(full)}/{len(F)}")
+    print(f"\ntemplate fields complete (ok or N/A for all products): {len(full)}/{len(F)}")
 
 
 if __name__ == "__main__":

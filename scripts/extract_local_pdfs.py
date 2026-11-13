@@ -165,18 +165,18 @@ def main():
     res, hashes = {}, {}
     for area, fn in (("nord", "odc-tabella-nord.pdf"), ("centro", "odc-tabella-centro.pdf"), ("sud_isole", "odc-tabella-sud.pdf")):
         res[area], hashes[area] = parse_odc(FONTI / fn, rows)
-        print(area, "righe lette:", len(res[area]))
+        print(area, "rows read:", len(res[area]))
     diff = [r for r in rows if not (hashes["nord"].get(r) == hashes["centro"].get(r) == hashes["sud_isole"].get(r))]
     params = load_json(CONFIG / "odc_params_transcribed.json")
     save_json(RAW / "odc_tables.json", {
         "_source": "fonti_locali/odc-tabella-{nord,centro,sud}.pdf (Orto da Coltivare, M. Cereda) - estrazione vettoriale",
         "areas": res, "params_transcribed": params["rows"],
         "param_cells_differ_between_areas": diff})
-    print("righe con celle profondità/sesto diverse tra le tabelle:", diff)
+    print("rows with depth/spacing cells differing between tables:", diff)
     wwf = parse_wwf(FONTI / "Calendario-della-Frutta-e-Verdura-di-Stagione.pdf")
     save_json(RAW / "wwf_calendar.json", {"_source": "fonti_locali/Calendario-della-Frutta-e-Verdura-di-Stagione.pdf (WWF)", "rows": wwf})
     missing = sorted(set(load_json(RAW / "local_pdf_lists.json")["wwf"]["rows"]) - set(wwf))
-    print("WWF righe lette:", len(wwf), "| non lette:", missing)
+    print("WWF rows read:", len(wwf), "| not read:", missing)
 
 
 if __name__ == "__main__":

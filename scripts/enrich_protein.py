@@ -48,7 +48,7 @@ def main():
                                                   "pri_g_day": PRI, "ri_eu_g_day": RI_EU,
                                                   "source": "fonti_locali/Tabelle-riassuntive_SINU.pdf (LARN 2014, tabella Proteine)"}
     save_json(DATA / "database.json", db)
-    print(f"protein_reference aggiunto; claim proteici contestualizzati: {n_note}")
+    print(f"protein_reference added; protein claims put into context: {n_note}")
 
 
 if __name__ == "__main__":

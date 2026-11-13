@@ -40,7 +40,7 @@ def main():
         n["data_basis"] = {"it": it_txt, "en": en_txt}
         nonut.append(it["id"])
     save_json(DATA / "database.json", db)
-    print("durate professionali spostate:", moved, "| nutrizione dichiarata non disponibile:", nonut)
+    print("commercial storage times moved:", moved, "| nutrition declared not available:", nonut)
 
 
 if __name__ == "__main__":

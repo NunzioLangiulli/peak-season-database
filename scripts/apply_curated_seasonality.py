@@ -50,7 +50,7 @@ def main():
         finalize_completeness(it)
         done.append(iid)
     save_json(DATA / "database.json", db)
-    print("stagionalità curata applicata:", len(done))
+    print("curated seasonality applied:", len(done))
 
 
 if __name__ == "__main__":

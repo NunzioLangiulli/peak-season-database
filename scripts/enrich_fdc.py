@@ -56,7 +56,7 @@ def main():
             continue
         f = fetch(TARGETS[it["id"]])
         if not f:
-            print("non trovato:", it["id"]); continue
+            print("not found:", it["id"]); continue
         v = {}
         for nu in f.get("foodNutrients", []):
             k = NUM.get(str(nu.get("nutrientNumber")))
@@ -87,7 +87,7 @@ def main():
         mark_enriched(it, ["nutrition_and_sustainability"])
         it["data_completeness"]["notes"] += " Nutrizione da USDA FoodData Central (nessuna scheda italiana disponibile)."
         finalize_completeness(it)
-        print(it["id"], "kcal", v.get("kcal"), "prot", v.get("protein"), "fibra", v.get("fiber"), "| claim:", n["nutrition_claims_eu"]["it"][:4])
+        print(it["id"], "kcal", v.get("kcal"), "prot", v.get("protein"), "fibre", v.get("fiber"), "| claim:", n["nutrition_claims_eu"]["it"][:4])
     save_json(DATA / "database.json", db)
 
 

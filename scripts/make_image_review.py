@@ -26,4 +26,4 @@ img{{width:240px;height:170px;object-fit:cover;display:block}}figcaption{{paddin
 <p>Elimina da <code>assets/images/</code> le foto che non vuoi, poi esegui <code>python scripts/sync_images.py --renumber --prune</code>.</p>
 {''.join(rows)}"""
 (IMAGES / "_review.html").write_text(page, encoding="utf-8")
-print("scritto", IMAGES / "_review.html")
+print("wrote", IMAGES / "_review.html")

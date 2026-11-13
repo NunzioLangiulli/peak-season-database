@@ -107,7 +107,7 @@ def main():
             '<code>image_selection.json</code> nella cartella <code>assets/images/_candidates/</code>.</p>'
             + "".join(parts) + f"</main><script>{JS}</script></body></html>")
     (OUT / "review.html").write_text(page, encoding="utf-8")
-    print("scritto", OUT / "review.html", "|", len(parts), "alimenti")
+    print("wrote", OUT / "review.html", "|", len(parts), "products")
 
 
 if __name__ == "__main__":

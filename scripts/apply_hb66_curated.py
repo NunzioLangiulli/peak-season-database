@@ -85,7 +85,7 @@ def main():
         ec["keep_away_from"] = [p for p in producers if p != it["id"]] if ec.get("sensitive_to_ethylene") is True else []
     save_json(DATA / "database.json", db)
     save_json(DATA / "draft_legacy_values.json", legacy)
-    print("alimenti aggiornati da capitoli HB66:", n, "| produttori di etilene:", producers)
+    print("products updated from HB66 chapters:", n, "| ethylene producers:", producers)
 
 
 if __name__ == "__main__":

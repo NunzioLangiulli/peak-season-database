@@ -32,7 +32,7 @@ def main():
         h = next(x for x in load_json(IMAGES / "_candidates" / owner / "candidates.json")[t] if x["file"] == cf)
         used = {int(f.stem.rsplit("_", 1)[1]) for f in IMAGES.glob(f"{iid}_[0-9][0-9].jpg")}
         out = f"{iid}_{next(k for k in range(1, 100) if k not in used):02d}.jpg"
-        print("importa", src.name, "->", out)
+        print("import", src.name, "->", out)
         done += 1
         if dry:
             continue
@@ -50,7 +50,7 @@ def main():
         (MAN / "importate").mkdir(exist_ok=True)
         shutil.move(str(src), str(MAN / "importate" / src.name))
         save_json(IMAGES / "_metadata.json", meta)
-    print(f"importate {done}; ancora da scaricare: {len(missing)}")
+    print(f"imported {done}; still to download: {len(missing)}")
 
 
 if __name__ == "__main__":

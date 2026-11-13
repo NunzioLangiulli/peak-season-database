@@ -1,233 +1,233 @@
 [
   {
     "item": "asparago_asparagus",
-    "area": "conservazione",
+    "area": "storage",
     "field": "chilling_injury",
     "severity": "I",
-    "msg": "soglia 2 °C = massimo dell'intervallo minimo sicuro {'min': 0, 'max': 2}; ottimale {'min': 0.0, 'max': 2.0}"
+    "msg": "threshold 2 °C = upper end of the lowest safe range {'min': 0, 'max': 2}; optimal {'min': 0.0, 'max': 2.0}"
   },
   {
     "item": "carciofo_artichoke",
-    "area": "testi",
+    "area": "texts",
     "field": "storage_instructions",
     "severity": "I",
-    "msg": "il testo cita 3-3 giorni in frigo, FoodKeeper [7, 14]"
+    "msg": "the text cites 3-3 days in the fridge, FoodKeeper [7, 14]"
   },
   {
     "item": "barbabietola_beetroot",
-    "area": "testi",
+    "area": "texts",
     "field": "storage_instructions",
     "severity": "I",
-    "msg": "il testo cita 2-3 giorni in frigo, FoodKeeper [7, 14]"
+    "msg": "the text cites 2-3 days in the fridge, FoodKeeper [7, 14]"
   },
   {
     "item": "bietola_da_coste_swiss_chard",
-    "area": "testi",
+    "area": "texts",
     "field": "storage_instructions",
     "severity": "I",
-    "msg": "il testo cita 3-3 giorni in frigo, FoodKeeper [7, 14]"
+    "msg": "the text cites 3-3 days in the fridge, FoodKeeper [7, 14]"
   },
   {
     "item": "cavolo_nero_black_kale",
-    "area": "nutrizione",
+    "area": "nutrition",
     "field": "macros_per_100g.sugars_g",
     "severity": "E",
-    "msg": "zuccheri 0.99 > carboidrati 0.3"
+    "msg": "sugars 0.99 > carbohydrates 0.3"
   },
   {
     "item": "cipolla_invernale_winter_onion",
-    "area": "conservazione",
+    "area": "storage",
     "field": "storage_compatibility",
     "severity": "W",
-    "msg": "gruppo 3 (13-18 °C) ma temperatura ottimale {'min': 0.0, 'max': 0.0}"
+    "msg": "group 3 (13-18 °C) but optimal temperature {'min': 0.0, 'max': 0.0}"
   },
   {
     "item": "fagiolino_green_bean",
-    "area": "conservazione",
+    "area": "storage",
     "field": "chilling_injury",
     "severity": "W",
-    "msg": "temperatura ottimale {'min': 5.0, 'max': 7.5} sotto la soglia di danno 7 °C"
+    "msg": "optimal temperature {'min': 5.0, 'max': 7.5} below the injury threshold 7 °C"
   },
   {
     "item": "finocchio_fennel",
-    "area": "testi",
+    "area": "texts",
     "field": "storage_instructions",
     "severity": "I",
-    "msg": "il testo cita 5-6 giorni in frigo, FoodKeeper [14, 14]"
+    "msg": "the text cites 5-6 days in the fridge, FoodKeeper [14, 14]"
   },
   {
     "item": "pastinaca_parsnip",
-    "area": "stagionalita",
+    "area": "seasonality",
     "field": "italy_macro_areas.sud_isole",
     "severity": "W",
-    "msg": "sempre fuori stagione"
+    "msg": "always out of season"
   },
   {
     "item": "zucca_pumpkin",
-    "area": "testi",
+    "area": "texts",
     "field": "storage_instructions",
     "severity": "I",
-    "msg": "il testo cita 4-5 giorni in frigo, FoodKeeper [30, 90]"
+    "msg": "the text cites 4-5 days in the fridge, FoodKeeper [30, 90]"
   },
   {
     "item": "melone_melon",
-    "area": "conservazione",
+    "area": "storage",
     "field": "chilling_injury",
     "severity": "I",
-    "msg": "soglia 5 °C = massimo dell'intervallo minimo sicuro {'min': 2, 'max': 5}; ottimale {'min': 2.2, 'max': 5.0}"
+    "msg": "threshold 5 °C = upper end of the lowest safe range {'min': 2, 'max': 5}; optimal {'min': 2.2, 'max': 5.0}"
   },
   {
     "item": "melone_melon",
-    "area": "conservazione",
+    "area": "storage",
     "field": "storage_compatibility",
     "severity": "W",
-    "msg": "gruppo 1B a 0-2 °C ma sensibile al freddo sotto 5 °C"
+    "msg": "group 1B at 0-2 °C but chill-sensitive below 5 °C"
   },
   {
     "item": "cachi_persimmon",
-    "area": "testi",
+    "area": "texts",
     "field": "storage_instructions",
     "severity": "I",
-    "msg": "il testo cita 3-3 giorni in frigo, FoodKeeper [7, 14]"
+    "msg": "the text cites 3-3 days in the fridge, FoodKeeper [7, 14]"
   },
   {
     "item": "lampone_raspberry",
-    "area": "etilene",
+    "area": "ethylene",
     "field": "ripening_type",
     "severity": "W",
-    "msg": "non climaterico ma forte produttore di etilene"
+    "msg": "non-climacteric but a strong ethylene producer"
   },
   {
     "item": "limone_lemon",
-    "area": "conservazione",
+    "area": "storage",
     "field": "chilling_injury",
     "severity": "I",
-    "msg": "soglia 13 °C = massimo dell'intervallo minimo sicuro {'min': 11, 'max': 13}; ottimale {'min': 12.0, 'max': 14.0}"
+    "msg": "threshold 13 °C = upper end of the lowest safe range {'min': 11, 'max': 13}; optimal {'min': 12.0, 'max': 14.0}"
   },
   {
     "item": "mela_apple",
-    "area": "testi",
+    "area": "texts",
     "field": "storage_instructions",
     "severity": "I",
-    "msg": "il testo cita 10-10 giorni in frigo, FoodKeeper [28, 42]"
+    "msg": "the text cites 10-10 days in the fridge, FoodKeeper [28, 42]"
   },
   {
     "item": "avocado_avocado",
-    "area": "conservazione",
+    "area": "storage",
     "field": "chilling_injury",
     "severity": "I",
-    "msg": "soglia 13 °C = massimo dell'intervallo minimo sicuro {'min': 4.5, 'max': 13}; ottimale {'min': 5.0, 'max': 13.0}"
+    "msg": "threshold 13 °C = upper end of the lowest safe range {'min': 4.5, 'max': 13}; optimal {'min': 5.0, 'max': 13.0}"
   },
   {
     "item": "avocado_avocado",
-    "area": "conservazione",
+    "area": "storage",
     "field": "storage_compatibility",
     "severity": "W",
-    "msg": "gruppo 1B a 0-2 °C ma sensibile al freddo sotto 13 °C"
+    "msg": "group 1B at 0-2 °C but chill-sensitive below 13 °C"
   },
   {
     "item": "fungo_pleurotus_oyster_mushroom",
-    "area": "calendario",
+    "area": "calendar",
     "field": "nord.harvest_months",
     "severity": "I",
-    "msg": "raccolta [10, 11, 12, 1, 2] poco sovrapposta alla stagionalità [7, 8, 9, 10, 11]"
+    "msg": "harvest [10, 11, 12, 1, 2] barely overlaps seasonality [7, 8, 9, 10, 11]"
   },
   {
     "item": "fungo_pleurotus_oyster_mushroom",
-    "area": "calendario",
+    "area": "calendar",
     "field": "centro.harvest_months",
     "severity": "I",
-    "msg": "raccolta [10, 11, 12, 1, 2] poco sovrapposta alla stagionalità [6, 7, 8, 9, 10, 11]"
+    "msg": "harvest [10, 11, 12, 1, 2] barely overlaps seasonality [6, 7, 8, 9, 10, 11]"
   },
   {
     "item": "fungo_pleurotus_oyster_mushroom",
-    "area": "calendario",
+    "area": "calendar",
     "field": "sud_isole.harvest_months",
     "severity": "I",
-    "msg": "raccolta [11, 12, 1, 2, 3] poco sovrapposta alla stagionalità [6, 7, 8, 9, 10, 11, 12]"
+    "msg": "harvest [11, 12, 1, 2, 3] barely overlaps seasonality [6, 7, 8, 9, 10, 11, 12]"
   },
   {
     "item": "orzo_barley",
-    "area": "nutrizione",
+    "area": "nutrition",
     "field": "macros_per_100g",
     "severity": "W",
-    "msg": "acqua+macro = 105.8 g/100 g"
+    "msg": "water+macros = 105.8 g/100 g"
   },
   {
     "item": "rafano_horseradish",
-    "area": "nutrizione",
+    "area": "nutrition",
     "field": "kcal_per_100g",
     "severity": "I",
-    "msg": "nutrizione non disponibile da fonti ufficiali (dichiarato)"
+    "msg": "nutrition not available from official sources (declared)"
   },
   {
     "item": "salicornia_samphire",
-    "area": "nutrizione",
+    "area": "nutrition",
     "field": "kcal_per_100g",
     "severity": "I",
-    "msg": "nutrizione non disponibile da fonti ufficiali (dichiarato)"
+    "msg": "nutrition not available from official sources (declared)"
   },
   {
     "item": "lampascioni_tassel_hyacinth",
-    "area": "nutrizione",
+    "area": "nutrition",
     "field": "kcal_per_100g",
     "severity": "I",
-    "msg": "nutrizione non disponibile da fonti ufficiali (dichiarato)"
+    "msg": "nutrition not available from official sources (declared)"
   },
   {
     "item": "cicerchia_grass_pea",
-    "area": "nutrizione",
+    "area": "nutrition",
     "field": "kcal_per_100g",
     "severity": "I",
-    "msg": "nutrizione non disponibile da fonti ufficiali (dichiarato)"
+    "msg": "nutrition not available from official sources (declared)"
   },
   {
     "item": "ananas_pineapple",
-    "area": "conservazione",
+    "area": "storage",
     "field": "chilling_injury",
     "severity": "I",
-    "msg": "soglia 10 °C = massimo dell'intervallo minimo sicuro {'min': 7, 'max': 10}; ottimale {'min': 7.0, 'max': 12.0}"
+    "msg": "threshold 10 °C = upper end of the lowest safe range {'min': 7, 'max': 10}; optimal {'min': 7.0, 'max': 12.0}"
   },
   {
     "item": "maracuja_passion_fruit",
-    "area": "conservazione",
+    "area": "storage",
     "field": "chilling_injury",
     "severity": "W",
-    "msg": "temperatura ottimale {'min': 7.0, 'max': 10.0} sotto la soglia di danno 10 °C"
+    "msg": "optimal temperature {'min': 7.0, 'max': 10.0} below the injury threshold 10 °C"
   },
   {
     "item": "nespola_comune_medlar",
-    "area": "nutrizione",
+    "area": "nutrition",
     "field": "kcal_per_100g",
     "severity": "I",
-    "msg": "nutrizione non disponibile da fonti ufficiali (dichiarato)"
+    "msg": "nutrition not available from official sources (declared)"
   },
   {
     "item": "cedro_citron",
-    "area": "nutrizione",
+    "area": "nutrition",
     "field": "kcal_per_100g",
     "severity": "I",
-    "msg": "nutrizione non disponibile da fonti ufficiali (dichiarato)"
+    "msg": "nutrition not available from official sources (declared)"
   },
   {
     "item": "chinotto_chinotto",
-    "area": "nutrizione",
+    "area": "nutrition",
     "field": "kcal_per_100g",
     "severity": "I",
-    "msg": "nutrizione non disponibile da fonti ufficiali (dichiarato)"
+    "msg": "nutrition not available from official sources (declared)"
   },
   {
     "item": "oliva_olive",
-    "area": "conservazione",
+    "area": "storage",
     "field": "chilling_injury",
     "severity": "W",
-    "msg": "temperatura ottimale {'min': 5.0, 'max': 7.5} sotto la soglia di danno 7 °C"
+    "msg": "optimal temperature {'min': 5.0, 'max': 7.5} below the injury threshold 7 °C"
   },
   {
     "item": "tartufo_bianco_white_truffle",
-    "area": "nutrizione",
+    "area": "nutrition",
     "field": "kcal_per_100g",
     "severity": "I",
-    "msg": "nutrizione non disponibile da fonti ufficiali (dichiarato)"
+    "msg": "nutrition not available from official sources (declared)"
   }
 ]

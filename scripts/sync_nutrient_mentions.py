@@ -106,7 +106,7 @@ def main():
             it_new, en_new = rebuild(t["hb"][0], cl["it"], "it"), rebuild(t["hb"][1], cl["en"], "en")
             if (it_new, en_new) != tuple(t["hb"]):
                 n += 1
-                print(f"--- {iid}\n  IT prima: {t['hb'][0][:230]}\n  IT dopo : {it_new[:230]}\n  EN dopo : {en_new[:230]}")
+                print(f"--- {iid}\n  IT before: {t['hb'][0][:230]}\n  IT after : {it_new[:230]}\n  EN after : {en_new[:230]}")
                 if apply:
                     legacy["items"].setdefault(iid, {}).setdefault("texts_hb_before_sync", t["hb"])
                     t["hb"] = [it_new, en_new]
@@ -115,7 +115,7 @@ def main():
             save_json(f, blk)
     if apply:
         save_json(DATA / "draft_legacy_values.json", legacy)
-    print("testi da allineare:", n, "(applicato)" if apply else "(anteprima)")
+    print("texts to align:", n, "(applied)" if apply else "(preview)")
 
 
 if __name__ == "__main__":

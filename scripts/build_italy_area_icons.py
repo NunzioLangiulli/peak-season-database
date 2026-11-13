@@ -40,7 +40,7 @@ def italy_rings():
             g = f["geometry"]
             polys = g["coordinates"] if g["type"] == "MultiPolygon" else [g["coordinates"]]
             return [p[0] for p in polys]  # outer ring only
-    raise SystemExit("Italia non trovata")
+    raise SystemExit("Italy not found")
 
 
 def simplify(pts, tol):

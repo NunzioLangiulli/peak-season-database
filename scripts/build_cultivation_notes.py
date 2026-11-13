@@ -109,7 +109,7 @@ def main():
         n += 1
     save_json(DATA / "database.json", db)
     save_json(DATA / "draft_legacy_values.json", legacy)
-    print("alimenti con note di coltivazione da ODC:", n)
+    print("products with ODC growing notes:", n)
     ex = next(i for i in db["items"] if i["id"] == "aglio_garlic")[A]
     print(ex["nord"]["cultivation_notes"], ex["cultivation_notes"], sep="\n")
 

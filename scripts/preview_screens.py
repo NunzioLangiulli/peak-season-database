@@ -126,7 +126,7 @@ body{margin:0;font-family:Roboto,'Segoe UI',sans-serif;width:390px}
 
 def render_notifications(browser):
     if not NOTIF_JSON.exists():
-        print("manca", NOTIF_JSON, "(esegui il test di export, vedi docstring)")
+        print("missing", NOTIF_JSON, "(run the export test, see the docstring)")
         return
     d = json.loads(NOTIF_JSON.read_text(encoding="utf-8"))
     cap = "Simulazione grafica Android · testi reali generati dall'app"

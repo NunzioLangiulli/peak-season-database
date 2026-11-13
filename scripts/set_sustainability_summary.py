@@ -51,7 +51,7 @@ def main():
                                                   "source_date": "2020-09-09"}
     save_json(DATA / "database.json", db)
     save_json(DATA / "draft_legacy_values.json", legacy)
-    print("sintesi EUFIC aggiornata")
+    print("EUFIC summary updated")
 
 
 if __name__ == "__main__":

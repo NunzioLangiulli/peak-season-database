@@ -61,7 +61,7 @@ def main():
             mark_enriched(it, ch)
         finalize_completeness(it)
     save_json(DATA / "database.json", db)
-    print(f"zona alpina colmata: {n_m}; zona mediterranea derivata: {n_med}")
+    print(f"Alpine zone filled: {n_m}; Mediterranean zone derived: {n_med}")
 
 
 if __name__ == "__main__":

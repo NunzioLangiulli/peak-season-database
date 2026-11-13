@@ -57,7 +57,7 @@ def main():
             plan = [(o, n) for o, n in plan if o != n]
             renamed.update(dict(plan))
             for o, n in plan:
-                print(f"rinomina {o} -> {n}")
+                print(f"rename {o} -> {n}")
             if not dry and plan:
                 # two phases (old -> temporary -> new) to avoid name collisions
                 for o, _ in plan:
@@ -73,7 +73,7 @@ def main():
         present = {n for v in files.values() for n in v}
         gone = [k for k in meta if k not in present]
         for k in gone:
-            print("prune metadati:", k)
+            print("prune metadata:", k)
             if not dry:
                 meta.pop(k)
 
@@ -106,12 +106,12 @@ def main():
 
     n_img = sum(len(it["images"]["gallery"]) for it in db["items"])
     with_img = sum(bool(it["images"]["gallery"]) for it in db["items"])
-    print(f"Alimenti aggiornati: {changed}. Immagini in galleria: {n_img} su {with_img}/{len(db['items'])} alimenti "
-          f"(media {n_img / max(with_img, 1):.1f} per alimento con foto).")
+    print(f"Products updated: {changed}. Images in gallery: {n_img} across {with_img}/{len(db['items'])} products "
+          f"(average {n_img / max(with_img, 1):.1f} per product with photos).")
     if unlicensed:
-        print(f"ATTENZIONE {len(unlicensed)} foto senza metadati di licenza (escluse dalla galleria): {unlicensed[:10]}")
+        print(f"WARNING {len(unlicensed)} photos without licence metadata (excluded from the gallery): {unlicensed[:10]}")
     if unknown:
-        print(f"ATTENZIONE {len(unknown)} file con nome non riconosciuto (atteso <id>_NN.jpg): {unknown[:10]}")
+        print(f"WARNING {len(unknown)} files with an unrecognised name (expected <id>_NN.jpg): {unknown[:10]}")
     if not dry:
         save_json(DATA / "database.json", db)
         save_json(META, meta)

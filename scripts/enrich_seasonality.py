@@ -265,7 +265,7 @@ def main():
             finalize_completeness(it)
         save_json(DATA / "database.json", db)
         save_json(DATA / "draft_legacy_values.json", legacy)
-        print(f"blocco {b} salvato")
+        print(f"block {b} saved")
     db["metadata"]["seasonality_method"] = {"it": __doc__.split("Metodo di fusione")[1].split("Uso:")[0].strip(),
                                             "en": "Per-month score = votes / available sources (1 = in season, 0.5 = early/late); >=0.5 in season; "
                                                   "edges = early/end of season; peak = interior months of >=3-month runs where all (>=2) sources agree; "

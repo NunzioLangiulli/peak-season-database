@@ -138,7 +138,7 @@ def apply(im, op):
 
 def main():
     if not SRC.exists():
-        raise SystemExit(f"manca {SRC}")
+        raise SystemExit(f"missing {SRC}")
     for key, (name, ops) in LOGOS.items():
         path = SRC / name
         im = render_svg(path) if path.suffix.lower() == ".svg" else Image.open(path).convert("RGBA")

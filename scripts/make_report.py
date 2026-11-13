@@ -61,8 +61,8 @@ def main():
     pend = sum(len(d["fields_pending_verification"]) for d in dcs)
     disc = sum(len(d["discrepancies"]) for d in dcs)
     na = sum(len(d.get("not_applicable_fields", [])) for d in dcs)
-    img_err = sum(1 for a in audit if a["area"] == "immagini")
-    sev = collections.Counter(a["severity"] for a in audit if a["area"] != "immagini")
+    img_err = sum(1 for a in audit if a["area"] == "images")
+    sev = collections.Counter(a["severity"] for a in audit if a["area"] != "images")
 
     # ------------------------------------------------------------------ header
     w("# Peak Season – Phase 1 report: building, organising and validating the database\n")
@@ -199,8 +199,8 @@ def main():
       "images and licences; source URLs; completeness of IT/EN texts and no Italian text in English fields. It also checks the "
       "metadata: every glossary entry bilingual and with registered sources, `see_also`, `field_help` and `help_refs` pointing to existing entries, "
       "every coded value present in the vocabulary, every source described.\n")
-    w("Remaining data warnings (explained, not errors; messages are the audit's original Italian output):\n")
-    rows = [[a["severity"], a["item"], a["field"], a["msg"][:110]] for a in audit if a["severity"] in ("E", "W") and a["area"] != "immagini"]
+    w("Remaining data warnings (explained, not errors):\n")
+    rows = [[a["severity"], a["item"], a["field"], a["msg"][:110]] for a in audit if a["severity"] in ("E", "W") and a["area"] != "images"]
     w(table(rows, ["Level", "Product", "Field", "Detail"]))
     w("\nExplanation: in cavolo nero sugars > carbohydrates because of how USDA computes carbohydrates (by difference) → noted; barley slightly exceeds "
       "105 g/100 g when summing water and macronutrients because of rounding in the CREA table; the \"below optimal temperature\" thresholds "
@@ -273,7 +273,7 @@ def main():
     rows = []
     for i in sorted(items, key=lambda x: (x["category"], x["names"]["en"])):
         d = i["data_completeness"]
-        ae = sum(1 for a in audit if a["item"] == i["id"] and a["severity"] in ("E", "W") and a["area"] != "immagini")
+        ae = sum(1 for a in audit if a["item"] == i["id"] and a["severity"] in ("E", "W") and a["area"] != "images")
         rows.append([i["names"]["en"], CAT_EN[i["category"]], len(i["sources_by_topic"]["sources_used"]), len(i.get("help_refs", [])),
                      len(d["fields_pending_verification"]), len(d["missing_fields"]), len(d.get("not_applicable_fields", [])), ae])
     w(table(rows, ["Product", "Category", "Sources", "Help entries", "To verify", "Missing", "N/A", "Warnings"]))

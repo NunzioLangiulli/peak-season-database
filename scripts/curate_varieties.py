@@ -38,7 +38,7 @@ def main():
             iv["varieties_verification"] = vv
             iv["notable_varieties"] = (iv.get("notable_varieties") or []) + [v["name"]]
             mark_enriched(I[iid], ["italian_varieties_and_territories.notable_varieties"])
-            print("aggiunta", iid, v["name"])
+            print("added", iid, v["name"])
     for (iid, name), slug in WRONG_SF.items():
         it = I.get(iid)
         if not it:
@@ -48,7 +48,7 @@ def main():
                 before = len(v["sources"])
                 v["sources"] = [s for s in v["sources"] if slug not in s.get("url", "")]
                 if len(v["sources"]) < before:
-                    print("tolto link Slow Food errato:", iid, name, "| fonti restanti", [s["source_key"] for s in v["sources"]])
+                    print("removed wrong Slow Food link:", iid, name, "| remaining sources", [s["source_key"] for s in v["sources"]])
                 if not v["sources"]:
                     v["verified"] = False
     for it in I.values():

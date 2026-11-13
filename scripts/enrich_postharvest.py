@@ -405,7 +405,7 @@ def main():
                 it["data_completeness"]["notes"] += " Post-raccolta: " + "; ".join(used) + "."
             mark_enriched(it, enr)
         save_json(DATA / "database.json", db)
-        print(f"blocco {b} salvato")
+        print(f"block {b} saved")
 
     # correzioni manuali verificate
     ov = load_json(CONFIG / "postharvest_overrides.json")["items"]
@@ -430,7 +430,7 @@ def main():
         finalize_completeness(it)
     db["metadata"]["postharvest_method"] = {"it": __doc__.split("Classi")[1].split("Uso:")[0].strip(), "producers_high": producers}
     save_json(DATA / "database.json", db)
-    print(stats, "produttori high/very_high:", producers)
+    print(stats, "high/very_high producers:", producers)
 
 
 if __name__ == "__main__":

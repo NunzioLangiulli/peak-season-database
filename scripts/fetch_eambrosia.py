@@ -32,7 +32,7 @@ def main():
             "productCategory", "status", "registrationDate", "fileName", "countryId"]
     save_json(RAW / "eambrosia_it.json", {"_source": URL, "count": total,
                                           "items": [{k: r.get(k) for k in keep} for r in out]})
-    print("salvate", len(out), "voci; paesi:", sorted({r.get("countryId") for r in out}))
+    print("saved", len(out), "entries; countries:", sorted({r.get("countryId") for r in out}))
 
 
 if __name__ == "__main__":

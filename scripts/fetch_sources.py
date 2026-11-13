@@ -122,4 +122,4 @@ if __name__ == "__main__":
         if need(fname):
             fn()
         else:
-            print("cache presente:", fname)
+            print("cache present:", fname)

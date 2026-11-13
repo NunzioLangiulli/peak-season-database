@@ -44,7 +44,7 @@ def main():
         "basis": "USDA HB66, Table 1 (Thompson et al. 1996): prodotti che possono stare insieme per 7 giorni; etilene < 1 ppm.",
         "groups": {k: {"it": v["it"], "en": v["en"], "temperature_c": v["temp_c"], "humidity_percent": v["rh"]} for k, v in cfg["groups"].items()}}
     save_json(DATA / "database.json", db)
-    print(f"gruppo di compatibilita' assegnato a {n} alimenti; per gruppo:", {k: len(v) for k, v in by_group.items()})
+    print(f"compatibility group assigned to {n} products; per group:", {k: len(v) for k, v in by_group.items()})
 
 
 if __name__ == "__main__":

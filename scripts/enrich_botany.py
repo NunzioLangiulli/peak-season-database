@@ -45,7 +45,7 @@ def main():
                 it["agricultural_calendar_italy"]["agronomic_params"] = None
         finalize_completeness(it)
     save_json(DATA / "database.json", db)
-    print(f"sinonimi EPPO: {n_syn} alimenti; parametri agronomici non validi rimossi: {n_fix}")
+    print(f"EPPO synonyms: {n_syn} products; invalid agronomic parameters removed: {n_fix}")
 
 
 if __name__ == "__main__":

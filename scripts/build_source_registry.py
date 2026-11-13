@@ -303,8 +303,8 @@ def main():
     save_json(DATA / "database.json", db)
     nl = [len(i["sources_by_topic"]["useful_links"]) for i in db["items"]]
     ns = [len(i["sources_by_topic"]["sources_used"]) for i in db["items"]]
-    print(f"fonti per alimento: media {sum(ns) / len(ns):.1f} (min {min(ns)}, max {max(ns)}); link utili: media {sum(nl) / len(nl):.1f} (min {min(nl)})")
-    print("alimenti per fonte:", dict(tot.most_common()))
+    print(f"sources per product: average {sum(ns) / len(ns):.1f} (min {min(ns)}, max {max(ns)}); useful links: average {sum(nl) / len(nl):.1f} (min {min(nl)})")
+    print("products per source:", dict(tot.most_common()))
 
 
 if __name__ == "__main__":

@@ -117,7 +117,7 @@ def main():
             if c.get("method"):
                 c["method"] = bil(c["method"], warn, f"{i}.method")
     save_json(DATA / "database.json", db)
-    print("campi localizzati; avvisi di traduzione:", len(warn))
+    print("fields localised; translation warnings:", len(warn))
     for w in warn[:30]:
         print("  W", w)
 

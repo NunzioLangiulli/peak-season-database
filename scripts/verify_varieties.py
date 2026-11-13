@@ -133,7 +133,7 @@ def main():
                                              + (f"; non verificate (in draft_legacy_values): {', '.join(bad)}." if bad else "."))
         finalize_completeness(it)
     print(st)
-    print("DOP/IGP aggiunte da eAmbrosia:", added_gi)
+    print("PDO/PGI added from eAmbrosia:", added_gi)
     if not a.dry_run:
         save_json(DATA / "database.json", db)
         save_json(DATA / "draft_legacy_values.json", legacy)

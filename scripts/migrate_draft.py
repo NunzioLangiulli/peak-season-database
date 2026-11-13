@@ -335,8 +335,8 @@ def main():
         "_doc": "Valori della bozza originale (v1.0.0, 2026-11-02) non riportati in database.json, con il motivo nelle note di ciascun alimento. La bozza completa è in data/_backup_bozza_2026-11-04/.",
         "items": legacy})
     n_missing = sum(len(i["data_completeness"]["missing_fields"]) for i in items)
-    print(f"Migrati {len(items)} alimenti ({sum(i['sources_by_topic']['from_user_draft'] for i in items)} dalla bozza). "
-          f"Campi nulli totali: {n_missing}. Legacy: {len(legacy)} alimenti.")
+    print(f"Migrated {len(items)} products ({sum(i['sources_by_topic']['from_user_draft'] for i in items)} from the draft). "
+          f"Total null fields: {n_missing}. Legacy: {len(legacy)} products.")
 
 
 if __name__ == "__main__":

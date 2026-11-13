@@ -191,7 +191,7 @@ def main():
               "(open field, heated greenhouse, imported), not as values for a specific product.",
         "source": URL, "dataset": "https://figshare.com/articles/dataset/13271111"}
     save_json(DATA / "database.json", db)
-    print(f"carbonio: {n_cf}, acqua: {n_wf}; senza voce: {missing}")
+    print(f"carbon: {n_cf}, water: {n_wf}; without entry: {missing}")
 
 
 if __name__ == "__main__":

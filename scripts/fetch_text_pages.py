@@ -54,7 +54,7 @@ def main():
             p.parent.mkdir(parents=True, exist_ok=True)
             p.write_text(u + "\n" + clean(r.text), encoding="utf-8")
             n += 1
-    print("pagine scaricate:", n)
+    print("pages downloaded:", n)
 
 
 if __name__ == "__main__":

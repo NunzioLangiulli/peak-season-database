@@ -236,8 +236,8 @@ def main():
             st["done"].append("complete")
         save_json(META, meta)
         save_json(LOG, log)
-        print(f"{iid}: {len([k for k in meta if k.startswith(iid + '_')])} immagini", flush=True)
-    print(f"chiamate Unsplash usate: {unsplash_calls}")
+        print(f"{iid}: {len([k for k in meta if k.startswith(iid + '_')])} images", flush=True)
+    print(f"Unsplash calls used: {unsplash_calls}")
 
 
 if __name__ == "__main__":

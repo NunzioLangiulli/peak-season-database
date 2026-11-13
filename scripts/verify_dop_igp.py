@@ -95,7 +95,7 @@ def main():
     save_json(DATA / "database.json", db)
     save_json(DATA / "draft_legacy_values.json", legacy)
     save_json(RAW / "eambrosia_matching_log.json", report)
-    print(stats, "| alimenti con DOP/IGP:", sum(it["italian_varieties_and_territories"]["has_dop_igp"] for it in db["items"]))
+    print(stats, "| products with PDO/PGI:", sum(it["italian_varieties_and_territories"]["has_dop_igp"] for it in db["items"]))
     for line in report:
         print(line)
 

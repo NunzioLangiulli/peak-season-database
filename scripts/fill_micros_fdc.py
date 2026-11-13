@@ -50,7 +50,7 @@ def main():
         it["data_completeness"]["notes"] += (f" Vitamine/minerali assenti in CREA/BDA-IEO: integrati da USDA FDC {fid} "
                                              f"'{desc.get(fid)}' (fonte non italiana).")
         finalize_completeness(it)
-        print(iid, len(n["vitamins"]), "vitamine,", len(n["minerals"]), "minerali")
+        print(iid, len(n["vitamins"]), "vitamins,", len(n["minerals"]), "minerals")
     save_json(DATA / "database.json", db)
 
 

@@ -133,14 +133,14 @@ def main():
     for e in gl:
         for s in e["sources"]:
             if s not in src:
-                print("  W fonte non registrata nel glossario:", e["id"], s)
+                print("  W source not registered in the glossary:", e["id"], s)
         for x in e.get("see_also", []):
             if x not in ids:
-                print("  W see_also inesistente:", e["id"], x)
+                print("  W non-existent see_also:", e["id"], x)
     for f, v in FIELD_HELP.items():
         for g in v:
             if g not in ids:
-                print("  W field_help verso voce inesistente:", f, g)
+                print("  W field_help pointing to a non-existent entry:", f, g)
     m = db["metadata"]
     m["glossary"] = {e["id"]: {"term": e["term"], "short": e["short"], "text": e["text"],
                                "sources": [{"key": s, "name": src.get(s, {}).get("name"), "url": src.get(s, {}).get("url")} for s in e["sources"]],
@@ -210,7 +210,7 @@ def main():
         n_refs += len(refs)
         finalize_completeness(it)
     save_json(DATA / "database.json", db)
-    print(f"glossario: {len(gl)} voci; vocabolario: {len(VOCAB)} campi; field_help: {len(FIELD_HELP)}; rimandi negli alimenti: {n_refs}")
+    print(f"glossary: {len(gl)} entries; vocabulary: {len(VOCAB)} fields; field_help: {len(FIELD_HELP)}; references in products: {n_refs}")
 
 
 if __name__ == "__main__":

@@ -54,7 +54,7 @@ def main():
             if "corpus_ref" in o:
                 used.add(o["corpus_ref"])
                 if o["corpus_ref"] not in corpus:
-                    errors.append(f"[corpus] {where}: corpus_ref '{o['corpus_ref']}' non esiste in shared_descriptions_corpus")
+                    errors.append(f"[corpus] {where}: corpus_ref '{o['corpus_ref']}' does not exist in shared_descriptions_corpus")
                 return
             for x in o.values():
                 refs(x, where)
@@ -64,9 +64,9 @@ def main():
     for it in raw.get("items", []):
         refs(it, it.get("id"))
     for k in sorted(set(corpus) - used):
-        warnings.append(f"[corpus] voce '{k}' non usata da nessun prodotto")
+        warnings.append(f"[corpus] entry '{k}' not used by any product")
     if errors:
-        print(f"ERRORI: {len(errors)}")
+        print(f"ERRORS: {len(errors)}")
         for e in errors[:40]:
             print("  E", e)
         sys.exit(1)
@@ -76,7 +76,7 @@ def main():
     ids = [it.get("id") for it in items]
     dup = {i for i in ids if ids.count(i) > 1}
     if dup:
-        errors.append(f"ID duplicati: {sorted(dup)}")
+        errors.append(f"duplicate IDs: {sorted(dup)}")
     idset = set(ids)
     disk = {f.name for f in IMAGES.glob("*.jpg")} if IMAGES.exists() else set()
     referenced = set()
@@ -90,20 +90,20 @@ def main():
             referenced |= set(gal)
             for f in gal:
                 if not re.match(rf"^{re.escape(iid)}_\d{{2}}\.jpg$", f):
-                    errors.append(f"{iid}: nome immagine non conforme '{f}'")
+                    errors.append(f"{iid}: non-compliant image name '{f}'")
                 if f not in disk:
-                    errors.append(f"{iid}: immagine '{f}' assente in assets/images/")
+                    errors.append(f"{iid}: image '{f}' missing from assets/images/")
             if im["primary"] and im["primary"] not in gal:
-                errors.append(f"{iid}: primary '{im['primary']}' non è nella galleria")
+                errors.append(f"{iid}: primary '{im['primary']}' is not in the gallery")
             if gal and not im["primary"]:
-                errors.append(f"{iid}: galleria non vuota ma primary nullo")
+                errors.append(f"{iid}: gallery not empty but primary is null")
             if [d["filename"] for d in im["image_details"]] != gal:
-                errors.append(f"{iid}: image_details non allineati alla galleria")
+                errors.append(f"{iid}: image_details not aligned with the gallery")
             # --- etilene
             kaf = it["ripening_and_storage"]["ethylene_compatibility"]["keep_away_from"]
             for k in kaf:
                 if k not in idset or k == iid:
-                    errors.append(f"{iid}: keep_away_from -> '{k}' non valido")
+                    errors.append(f"{iid}: keep_away_from -> '{k}' invalid")
             # --- intervalli
             ph = it["ripening_and_storage"]["postharvest_physiology"]
             for key in ("optimal_temperature_c", "optimal_humidity_percent"):
@@ -113,53 +113,53 @@ def main():
             for key in ("room_temp_days", "refrigerated_days"):
                 r = ph["estimated_shelf_life_days"][key]
                 if r and r[0] > r[1]:
-                    errors.append(f"{iid}: {key} [min,max] invertito")
+                    errors.append(f"{iid}: {key} [min,max] inverted")
             # --- completezza
             dc = it["data_completeness"]
             real = set(null_paths(it))
             listed = set(dc["missing_fields"])
             if real - listed:
-                errors.append(f"{iid}: campi nulli non elencati in missing_fields: {sorted(real - listed)[:6]}")
+                errors.append(f"{iid}: null fields not listed in missing_fields: {sorted(real - listed)[:6]}")
             if listed - real:
-                errors.append(f"{iid}: missing_fields elenca campi non nulli: {sorted(listed - real)[:6]}")
+                errors.append(f"{iid}: missing_fields lists non-null fields: {sorted(listed - real)[:6]}")
             if dc["is_complete"] and (real or dc.get("fields_pending_verification")):
-                errors.append(f"{iid}: is_complete=true ma ci sono campi mancanti o da verificare")
+                errors.append(f"{iid}: is_complete=true but there are missing or to-verify fields")
             # --- nutritional plausibility
             n = it["nutrition_and_sustainability"]
             m = n["macros_per_100g"]
             parts = [n["water_percentage"], m["carbs_g"], m["proteins_g"], m["fats_g"], m["fiber_g"]]
             if all(p is not None for p in parts) and sum(parts) > 105:
-                warnings.append(f"{iid}: acqua+macro = {sum(parts):.1f} g/100 g (> 105)")
+                warnings.append(f"{iid}: water+macros = {sum(parts):.1f} g/100 g (> 105)")
             if n["kcal_per_100g"] is not None and all(m[k] is not None for k in ("carbs_g", "proteins_g", "fats_g", "fiber_g")):
                 calc = 3.75 * m["carbs_g"] + 4 * m["proteins_g"] + 9 * m["fats_g"] + 2 * m["fiber_g"]
                 if calc > 5 and abs(calc - n["kcal_per_100g"]) / max(calc, n["kcal_per_100g"]) > 0.25:
-                    warnings.append(f"{iid}: kcal dichiarate {n['kcal_per_100g']} vs calcolate da macro ~{calc:.0f}")
+                    warnings.append(f"{iid}: declared kcal {n['kcal_per_100g']} vs computed from macros ~{calc:.0f}")
             # --- ID
             # the ID is stable (used in file names): it only needs to start with the first word of the normalised IT name
             first = slug(re.split(r"[\s(/,]", it["names"]["it"])[0])
             if not iid.startswith(first[:5]):
-                warnings.append(f"{iid}: ID poco coerente con il nome IT '{it['names']['it']}'")
+                warnings.append(f"{iid}: ID not very consistent with the IT name '{it['names']['it']}'")
         except (KeyError, TypeError) as e:  # broken structure: already reported by the schema
-            errors.append(f"{iid}: struttura non valutabile ({type(e).__name__}: {e})")
+            errors.append(f"{iid}: structure cannot be evaluated ({type(e).__name__}: {e})")
 
     orphan = sorted(f for f in disk - referenced if re.match(r"^[a-z0-9_]+_\d{2}\.jpg$", f))
     if orphan:
-        warnings.append(f"{len(orphan)} foto su disco non in galleria (esegui sync_images.py): {orphan[:8]}")
+        warnings.append(f"{len(orphan)} photos on disk not in the gallery (run sync_images.py): {orphan[:8]}")
 
     pend = sum(len(it["data_completeness"].get("fields_pending_verification", [])) for it in items)
     miss = sum(len(it["data_completeness"]["missing_fields"]) for it in items)
     complete = sum(it["data_completeness"]["is_complete"] for it in items)
-    print(f"Alimenti: {len(items)} | completi: {complete} | campi mancanti: {miss} | campi da verificare: {pend} | "
-          f"immagini referenziate: {len(referenced)}")
-    print(f"ERRORI: {len(errors)}   AVVISI: {len(warnings)}")
+    print(f"Products: {len(items)} | complete: {complete} | missing fields: {miss} | fields to verify: {pend} | "
+          f"referenced images: {len(referenced)}")
+    print(f"ERRORS: {len(errors)}   WARNINGS: {len(warnings)}")
     for e in errors[:60]:
         print("  E", e)
     if len(errors) > 60:
-        print(f"  ... altri {len(errors) - 60} errori")
+        print(f"  ... {len(errors) - 60} more errors")
     for w in warnings[:40]:
         print("  W", w)
     if len(warnings) > 40:
-        print(f"  ... altri {len(warnings) - 40} avvisi")
+        print(f"  ... {len(warnings) - 40} more warnings")
     if "--report" in sys.argv:
         p = sys.argv[sys.argv.index("--report") + 1]
         with open(p, "w", encoding="utf-8") as f:

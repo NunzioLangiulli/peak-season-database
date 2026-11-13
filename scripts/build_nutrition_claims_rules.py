@@ -98,7 +98,7 @@ def main():
         "claims": dict(sorted(claims.items())),
     }
     save_json(DATA / "database.json", db)
-    print(f"claim: {len(claims)}; non riconosciuti: {unknown}; micronutrienti senza chiave: {sorted(missing)}")
+    print(f"claims: {len(claims)}; not recognised: {unknown}; micronutrients without key: {sorted(missing)}")
 
 
 if __name__ == "__main__":

@@ -26,7 +26,7 @@ def main():
         n += 1
     left = [k for k, v in meta.items() if v.get("view_type") not in ("full_frame", "isolated_background", "plant_in_field", "botanical_plate", "cut_section", "other")]
     save_json(IMAGES / "_metadata.json", meta)
-    print(f"classificate {n} foto; senza classificazione: {left[:10]}")
+    print(f"classified {n} photos; without classification: {left[:10]}")
 
 
 if __name__ == "__main__":
