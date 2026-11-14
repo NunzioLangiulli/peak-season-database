@@ -12,7 +12,7 @@ Checks:
   E  missing_fields consistent with the actually null fields
   E  min <= max ranges (temperature, humidity, storage days)
   E  is_complete = true only with no missing or to-verify fields
-  W  water+macro sum > 105 g/100 g; kcal inconsistent with the macronutrients (> 25% difference)
+  W  water+macro sum > 105 g/100 g (carbohydrates as starch + sugars, real weight); kcal inconsistent with the macronutrients (> 25% difference)
   W  photos on disk but not in the gallery (run sync_images.py)
   W  ID different from normalised <nome_it>_<name_en>
 """
@@ -127,7 +127,10 @@ def main():
             # --- nutritional plausibility
             n = it["nutrition_and_sustainability"]
             m = n["macros_per_100g"]
-            parts = [n["water_percentage"], m["carbs_g"], m["proteins_g"], m["fats_g"], m["fiber_g"]]
+            # carbs_g follows CREA/BDA-IEO: available carbohydrates expressed as monosaccharide equivalents (starch x 1.1),
+            # so for starchy foods it exceeds the real weight; starch_g + sugars_g are real weights and are used instead
+            carb_mass = m["starch_g"] + m["sugars_g"] if m.get("starch_g") is not None and m.get("sugars_g") is not None else m["carbs_g"]
+            parts = [n["water_percentage"], carb_mass, m["proteins_g"], m["fats_g"], m["fiber_g"]]
             if all(p is not None for p in parts) and sum(parts) > 105:
                 warnings.append(f"{iid}: water+macros = {sum(parts):.1f} g/100 g (> 105)")
             if n["kcal_per_100g"] is not None and all(m[k] is not None for k in ("carbs_g", "proteins_g", "fats_g", "fiber_g")):

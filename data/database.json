@@ -1,8 +1,8 @@
 {
   "metadata": {
     "app_title": "Peak Season - Conscious & Seasonal Food Assistant",
-    "version": "1.1.0",
-    "generated": "2026-11-13",
+    "version": "1.1.1",
+    "generated": "2026-11-14",
     "schema_version": "2.0",
     "sustainable_diet_summary": {
       "it": "Secondo EUFIC, frutta e verdura hanno in genere un impatto climatico molto inferiore ai prodotti di origine animale (le emissioni di gas serra sono 10-50 volte più basse di carne bovina e latticini). Il vantaggio della stagionalità non dipende tanto dai chilometri percorsi quanto dal modo di produzione: i prodotti con l'impronta più bassa sono quelli coltivati all'aperto nella loro stagione naturale e consumati nella stessa regione, perché non richiedono energia per serre riscaldate, illuminazione o lunghe conservazioni in cella frigorifera.",
@@ -1817,7 +1817,6 @@
             "chilling_injury",
             "climacteric",
             "ethylene",
-            "ethylene_sensitivity",
             "home_storage",
             "non_climacteric",
             "optimal_storage"
@@ -2053,8 +2052,6 @@
             "chilling_injury",
             "climacteric",
             "ethylene",
-            "ethylene_production",
-            "ethylene_sensitivity",
             "freezing_point",
             "freezing_susceptibility",
             "keep_away_from",
@@ -2062,8 +2059,6 @@
             "non_climacteric",
             "optimal_storage",
             "perishability",
-            "q10",
-            "respiration_rate",
             "storage_compatibility"
           ],
           "database_level": false
@@ -2256,7 +2251,6 @@
             "zucchina_zucchini"
           ],
           "glossary_entries": [
-            "agronomic_params",
             "italy_macro_areas",
             "seasonality_states",
             "sowing_transplant",
@@ -3074,7 +3068,9 @@
             "tartufo_bianco_white_truffle",
             "tartufo_nero_black_truffle"
           ],
-          "glossary_entries": [],
+          "glossary_entries": [
+            "scientific_name"
+          ],
           "database_level": false
         },
         "site_url": "https://www.gbif.org/",
@@ -4640,7 +4636,7 @@
             "zucchina_zucchini"
           ],
           "glossary_entries": [
-            "upov_variety_register",
+            "scientific_name",
             "varieties"
           ],
           "database_level": false
@@ -6575,8 +6571,8 @@
           "en": "Natural gas that speeds up ripening and ageing."
         },
         "text": {
-          "it": "L'etilene è un gas prodotto da frutta e verdura che regola la maturazione. Contano due cose distinte: quanto un prodotto ne produce e quanto ne è sensibile. Tutti i prodotti climaterici ne producono mentre maturano, ma in quantità molto diverse: molto avocado, maracuja, mela, pera, melone, pesca, susina e kiwi maturo; una quantità media pomodoro, banana, albicocca e fico; poco il cachi. La sensibilità è un'altra cosa: molte verdure non climateriche (broccoli, lattuga, carote, cetrioli) e alcuni frutti (kiwi, cachi) si rovinano anche con poco etilene: ingialliscono, si ammorbidiscono o diventano amari. Regola pratica: tieni i grandi produttori lontani dai prodotti sensibili che vuoi far durare. Due prodotti climaterici insieme non sono un errore: maturano solo più in fretta. È anzi il modo per far maturare un prodotto acerbo: chiudilo in un sacchetto di carta con una mela o una banana.",
-          "en": "Ethylene is a gas produced by fruit and vegetables that controls ripening. Two separate things matter: how much a product produces and how sensitive it is. All climacteric produce releases it while ripening, but in very different amounts: a lot from avocado, passion fruit, apple, pear, melon, peach, plum and ripe kiwifruit; a medium amount from tomato, banana, apricot and fig; little from persimmon. Sensitivity is something else: many non-climacteric vegetables (broccoli, lettuce, carrots, cucumbers) and some fruits (kiwifruit, persimmon) spoil even with little ethylene: they turn yellow, soften or become bitter. Rule of thumb: keep strong producers away from sensitive produce you want to keep. Two climacteric products together are not a mistake: they just ripen faster. That is actually how to ripen unripe produce: close it in a paper bag with an apple or a banana."
+          "it": "L'etilene è un gas prodotto da frutta e verdura che regola la maturazione. Contano due cose distinte: quanto un prodotto ne produce e quanto ne è sensibile.\n\nProduzione. La classe segue la scala di USDA HB66 a 20 °C, per il prodotto maturo (µL di etilene per kg all'ora):\n• molto bassa: meno di 0,1\n• bassa: da 0,1 a 1\n• moderata: da 1 a 10\n• alta: da 10 a 100\n• molto alta: più di 100\nTutti i prodotti climaterici ne producono mentre maturano, ma in quantità molto diverse: molto avocado, maracuja, mela, pera, melone, pesca, susina e kiwi maturo; una quantità media pomodoro, banana, albicocca e fico; poco il cachi. Molti frutti cambiano con la maturazione: il kiwi acerbo produce 0,1-0,5 µL/kg·h, quello maturo 50-100. Solo i produttori di classe alta o molto alta entrano nell'elenco \"Tienilo Lontano da\".\n\nSensibilità. Non dipende da quanto un prodotto ne produce: lattuga e broccoli ne producono pochissimo ma sono molto sensibili, il kiwi ne produce molto da maturo ed è anche estremamente sensibile. Un prodotto sensibile esposto all'etilene perde qualità più in fretta: ingiallisce (broccoli, cetrioli), si ammorbidisce (kiwi, cachi), diventa amaro (carote) o forma macchie (lattuga). Il dato viene dai capitoli di USDA HB66 e dalle schede UC Davis.\n\nRegola pratica: tieni i grandi produttori lontani dai prodotti sensibili che vuoi far durare. Due prodotti climaterici insieme non sono un errore: maturano solo più in fretta. È anzi il modo per far maturare un prodotto acerbo: chiudilo in un sacchetto di carta con una mela o una banana.",
+          "en": "Ethylene is a gas produced by fruit and vegetables that controls ripening. Two separate things matter: how much a product releases and how sensitive it is.\n\nProduction. The class follows the USDA HB66 scale at 20 °C, for ripe produce (µL of ethylene per kg per hour):\n• very low: below 0.1\n• low: 0.1 to 1\n• moderate: 1 to 10\n• high: 10 to 100\n• very high: above 100\nAll climacteric produce releases it while ripening, but in very different amounts: a lot from avocado, passion fruit, apple, pear, melon, peach, plum and ripe kiwifruit; a medium amount from tomato, banana, apricot and fig; little from persimmon. Many fruits change as they ripen: unripe kiwifruit produces 0.1-0.5 µL/kg·h, ripe kiwifruit 50-100. Only high and very high producers go into the \"Keep It Away from\" list.\n\nSensitivity. It does not depend on how much a product releases: lettuce and broccoli produce very little but are very sensitive, kiwifruit produces a lot when ripe and is also extremely sensitive. A sensitive product exposed to ethylene loses quality faster: it turns yellow (broccoli, cucumbers), softens (kiwifruit, persimmon), becomes bitter (carrots) or develops spots (lettuce). The data come from the USDA HB66 chapters and the UC Davis fact sheets.\n\nRule of thumb: keep strong producers away from sensitive produce you want to keep. Two climacteric products together are not a mistake: they just ripen faster. That is actually how to ripen unripe produce: close it in a paper bag with an apple or a banana."
         },
         "sources": [
           {
@@ -6623,90 +6619,8 @@
           }
         ],
         "see_also": [
-          "ethylene_production",
-          "ethylene_sensitivity",
-          "keep_away_from"
-        ]
-      },
-      "ethylene_production": {
-        "term": {
-          "it": "Produzione di Etilene",
-          "en": "Ethylene Production"
-        },
-        "short": {
-          "it": "Quanto etilene emette il prodotto a 20 °C.",
-          "en": "How much ethylene the produce gives off at 20 °C."
-        },
-        "text": {
-          "it": "La classe segue la scala di USDA HB66 a 20 °C, per il prodotto maturo: molto bassa (< 0,1 µL/kg·h), bassa (0,1-1), moderata (1-10), alta (10-100), molto alta (> 100). Nel database un prodotto è \"produttore\" dalla classe moderata in su; solo i produttori di classe alta o molto alta finiscono nell'elenco \"Tienilo lontano da\". Molti frutti cambiano molto con la maturazione: il kiwi acerbo produce 0,1-0,5 µL/kg·h, quello maturo 50-100; pesca e susina passano da quasi zero a 160-200.",
-          "en": "The class follows the USDA HB66 scale at 20 °C, for ripe produce: very low (< 0.1 µL/kg·h), low (0.1-1), moderate (1-10), high (10-100), very high (> 100). In the database a product is a \"producer\" from moderate upwards; only high or very high producers go into the \"Keep It Away from\" list. Many fruits change a lot as they ripen: unripe kiwifruit produces 0.1-0.5 µL/kg·h, ripe kiwifruit 50-100; peach and plum go from almost zero to 160-200."
-        },
-        "sources": [
-          {
-            "key": "usda_hb66",
-            "name": "USDA ARS Agricultural Handbook 66 (2016)",
-            "url": "https://www.ars.usda.gov/is/np/commercialstorage/commercialstorage.pdf",
-            "publisher": {
-              "it": "USDA ARS",
-              "en": "USDA ARS"
-            },
-            "title": {
-              "it": "Agricultural Handbook 66 - Conservazione Commerciale",
-              "en": "Agricultural Handbook 66 - Commercial Storage"
-            },
-            "favicon": "usda_hb66.png"
-          }
-        ],
-        "see_also": [
-          "ethylene"
-        ]
-      },
-      "ethylene_sensitivity": {
-        "term": {
-          "it": "Sensibilità all'Etilene",
-          "en": "Ethylene Sensitivity"
-        },
-        "short": {
-          "it": "Se l'etilene lo danneggia o lo fa invecchiare.",
-          "en": "Whether ethylene damages or ages it."
-        },
-        "text": {
-          "it": "La sensibilità non dipende dal fatto che un prodotto produca etilene: lattuga e broccoli ne producono pochissimo ma sono molto sensibili, il kiwi ne produce molto da maturo ed è anche estremamente sensibile. Un prodotto sensibile, esposto all'etilene, perde qualità più in fretta: ingiallisce (broccoli, cetrioli), si ammorbidisce (kiwi, cachi), diventa amaro (carote) o forma macchie (lattuga). Il dato viene dai capitoli di USDA HB66 e dalle schede UC Davis; dove le fonti non lo indicano il campo resta vuoto.",
-          "en": "Sensitivity does not depend on whether a product produces ethylene: lettuce and broccoli produce very little but are very sensitive, kiwifruit produces a lot when ripe and is also extremely sensitive. A sensitive product exposed to ethylene loses quality faster: it turns yellow (broccoli, cucumbers), softens (kiwifruit, persimmon), becomes bitter (carrots) or develops spots (lettuce). The data come from the USDA HB66 chapters and the UC Davis fact sheets; where the sources say nothing the field is left empty."
-        },
-        "sources": [
-          {
-            "key": "usda_hb66",
-            "name": "USDA ARS Agricultural Handbook 66 (2016)",
-            "url": "https://www.ars.usda.gov/is/np/commercialstorage/commercialstorage.pdf",
-            "publisher": {
-              "it": "USDA ARS",
-              "en": "USDA ARS"
-            },
-            "title": {
-              "it": "Agricultural Handbook 66 - Conservazione Commerciale",
-              "en": "Agricultural Handbook 66 - Commercial Storage"
-            },
-            "favicon": "usda_hb66.png"
-          },
-          {
-            "key": "uc_davis",
-            "name": "UC Davis Postharvest Research and Extension Center - Produce Fact Sheets",
-            "url": "https://postharvest.ucdavis.edu/produce-facts-sheets",
-            "publisher": {
-              "it": "UC Davis",
-              "en": "UC Davis"
-            },
-            "title": {
-              "it": "Schede Post-Raccolta dei Prodotti",
-              "en": "Produce Fact Sheets"
-            },
-            "favicon": "uc_davis.png"
-          }
-        ],
-        "see_also": [
-          "ethylene",
-          "keep_away_from"
+          "keep_away_from",
+          "climacteric"
         ]
       },
       "keep_away_from": {
@@ -6753,42 +6667,7 @@
           }
         ],
         "see_also": [
-          "ethylene_production",
-          "ethylene_sensitivity"
-        ]
-      },
-      "respiration_rate": {
-        "term": {
-          "it": "Respirazione e Classe di Kader",
-          "en": "Respiration and Kader Class"
-        },
-        "short": {
-          "it": "Quanto in fretta il prodotto 'consuma' sé stesso.",
-          "en": "How fast the produce 'uses itself up'."
-        },
-        "text": {
-          "it": "Frutta e verdura restano vive dopo la raccolta e respirano: consumano zuccheri e acqua e producono calore e CO2. La classificazione di Kader (USDA HB66) usa i mg di CO2 per kg all'ora a 5 °C: molto bassa < 5, bassa 5-10, moderata 10-20, alta 20-40, molto alta 40-60, elevatissima > 60. La durata di conservazione varia in modo inverso alla respirazione.",
-          "en": "Fruit and vegetables stay alive after harvest and respire: they use up sugars and water and release heat and CO2. Kader's classification (USDA HB66) uses mg of CO2 per kg per hour at 5 °C: very low < 5, low 5-10, moderate 10-20, high 20-40, very high 40-60, extremely high > 60. Storage life varies inversely with respiration."
-        },
-        "sources": [
-          {
-            "key": "usda_hb66",
-            "name": "USDA ARS Agricultural Handbook 66 (2016)",
-            "url": "https://www.ars.usda.gov/is/np/commercialstorage/commercialstorage.pdf",
-            "publisher": {
-              "it": "USDA ARS",
-              "en": "USDA ARS"
-            },
-            "title": {
-              "it": "Agricultural Handbook 66 - Conservazione Commerciale",
-              "en": "Agricultural Handbook 66 - Commercial Storage"
-            },
-            "favicon": "usda_hb66.png"
-          }
-        ],
-        "see_also": [
-          "perishability",
-          "q10"
+          "ethylene"
         ]
       },
       "perishability": {
@@ -6797,12 +6676,12 @@
           "en": "Perishability"
         },
         "short": {
-          "it": "La classe di respirazione tradotta in un livello da 1 a 6.",
-          "en": "The respiration class turned into a 1-6 level."
+          "it": "Quanto in fretta perde freschezza: un livello da 1 a 6 dato dalla respirazione.",
+          "en": "How fast it loses freshness: a 1-6 level given by respiration."
         },
         "text": {
-          "it": "Livello 1 = si conserva a lungo, livello 6 = da consumare subito. Deriva direttamente dalla classe di respirazione di Kader; per i prodotti secchi (cereali, legumi secchi) indica una lunga conservazione. È un'indicazione relativa, utile per confrontare i prodotti: le durate in giorni sono nei campi di conservazione.",
-          "en": "Level 1 = keeps for a long time, level 6 = eat it soon. It comes straight from Kader's respiration class; for dry products (grains, dried legumes) it means long storage. It is a relative indication for comparing produce: storage times in days are in the storage fields."
+          "it": "Frutta e verdura restano vive dopo la raccolta e respirano: consumano zuccheri e acqua e producono calore e CO2. Più respirano, prima perdono freschezza. Il livello traduce la classe di respirazione di Kader (USDA HB66, mg di CO2 per kg all'ora a 5 °C):\n• 1, si conserva a lungo: meno di 5\n• 2: da 5 a 10\n• 3: da 10 a 20\n• 4: da 20 a 40\n• 5: da 40 a 60\n• 6, da consumare subito: più di 60\nPer i prodotti secchi (cereali, legumi secchi) indica una lunga conservazione. È un'indicazione relativa, utile per confrontare i prodotti: le durate in giorni sono nei campi di conservazione.\n\nLa respirazione cresce con la temperatura. Il Q10 è il rapporto tra la respirazione a una temperatura e quella a 10 °C in meno: HB66 indica 2,5-4 tra 0 e 10 °C e 2-2,5 tra 10 e 20 °C. Per pochi prodotti sensibili al freddo, misurati solo sopra i 10 °C, la classe a 5 °C è stimata con i valori minimi (stima prudente) ed è segnata come stimata.",
+          "en": "Fruit and vegetables stay alive after harvest and respire: they use up sugars and water and release heat and CO2. The more they respire, the sooner they lose freshness. The level turns Kader's respiration class (USDA HB66, mg of CO2 per kg per hour at 5 °C) into a number:\n• 1, keeps for a long time: below 5\n• 2: 5 to 10\n• 3: 10 to 20\n• 4: 20 to 40\n• 5: 40 to 60\n• 6, eat it soon: above 60\nFor dry products (grains, dried legumes) it means long storage. It is a relative indication for comparing produce: storage times in days are in the storage fields.\n\nRespiration rises with temperature. Q10 is the ratio between respiration at one temperature and at 10 °C lower: HB66 gives 2.5-4 between 0 and 10 °C and 2-2.5 between 10 and 20 °C. For a few chilling-sensitive products measured only above 10 °C, the 5 °C class is estimated with the lowest values (a cautious estimate) and marked as estimated."
         },
         "sources": [
           {
@@ -6821,40 +6700,8 @@
           }
         ],
         "see_also": [
-          "respiration_rate"
-        ]
-      },
-      "q10": {
-        "term": {
-          "it": "Q10 (Stima della Respirazione)",
-          "en": "Q10 (Respiration Estimate)"
-        },
-        "short": {
-          "it": "Di quanto cambia la respirazione ogni 10 °C.",
-          "en": "How much respiration changes every 10 °C."
-        },
-        "text": {
-          "it": "Il Q10 è il rapporto tra la respirazione a una temperatura e quella a 10 °C in meno. HB66 indica valori tipici di 2,5-4 tra 0 e 10 °C e 2-2,5 tra 10 e 20 °C. Per pochi prodotti sensibili al freddo, misurati solo sopra i 10 °C, la classe a 5 °C è stimata con i valori minimi (stima prudente) ed è marcata come 'stimata'.",
-          "en": "Q10 is the ratio between respiration at one temperature and at 10 °C lower. HB66 gives typical values of 2.5-4 between 0 and 10 °C and 2-2.5 between 10 and 20 °C. For a few chilling-sensitive products measured only above 10 °C, the 5 °C class is estimated with the lowest values (a cautious estimate) and marked as 'estimated'."
-        },
-        "sources": [
-          {
-            "key": "usda_hb66",
-            "name": "USDA ARS Agricultural Handbook 66 (2016)",
-            "url": "https://www.ars.usda.gov/is/np/commercialstorage/commercialstorage.pdf",
-            "publisher": {
-              "it": "USDA ARS",
-              "en": "USDA ARS"
-            },
-            "title": {
-              "it": "Agricultural Handbook 66 - Conservazione Commerciale",
-              "en": "Agricultural Handbook 66 - Commercial Storage"
-            },
-            "favicon": "usda_hb66.png"
-          }
-        ],
-        "see_also": [
-          "respiration_rate"
+          "optimal_storage",
+          "shelf_life_home"
         ]
       },
       "chilling_injury": {
@@ -7145,8 +6992,8 @@
           "en": "Groups with the same ideal temperature and humidity."
         },
         "text": {
-          "it": "Viene dalla tabella di compatibilità di USDA HB66 (Thompson e altri, 1996), pensata per 7 giorni di conservazione mista: gruppo 1A verdure a 0-2 °C con umidità alta, 1B frutta a 0-2 °C, gruppo 2 a 7-10 °C, gruppo 3 a 13-18 °C. L'elenco esclude gli abbinamenti sconsigliati per l'etilene.",
-          "en": "It comes from the USDA HB66 compatibility table (Thompson et al., 1996), designed for 7 days of mixed storage: group 1A vegetables at 0-2 °C with high humidity, 1B fruit at 0-2 °C, group 2 at 7-10 °C, group 3 at 13-18 °C. The list excludes pairings to avoid because of ethylene."
+          "it": "Viene dalla tabella di compatibilità di USDA HB66 (Thompson e altri, 1996), pensata per 7 giorni di conservazione mista:\n• gruppo 1A: verdure a 0-2 °C con umidità alta\n• gruppo 1B: frutta a 0-2 °C\n• gruppo 2: 7-10 °C\n• gruppo 3: 13-18 °C\nL'elenco esclude gli abbinamenti sconsigliati per l'etilene.",
+          "en": "It comes from the USDA HB66 compatibility table (Thompson et al., 1996), designed for 7 days of mixed storage:\n• group 1A: vegetables at 0-2 °C with high humidity\n• group 1B: fruit at 0-2 °C\n• group 2: 7-10 °C\n• group 3: 13-18 °C\nThe list excludes pairings to avoid because of ethylene."
         },
         "sources": [
           {
@@ -7440,8 +7287,8 @@
           "en": "Garden work months by area."
         },
         "text": {
-          "it": "Semina in semenzaio: si semina al riparo e poi si trapianta; semina diretta: si semina in piena terra; trapianto: si mette a dimora la piantina. I mesi vengono dalle tabelle di Orto da Coltivare per Nord, Centro e Sud; per frutta, erbe perenni e cereali i valori sono ancora quelli della bozza, da verificare.",
-          "en": "Seedbed sowing: sow under cover, then transplant; direct sowing: sow straight in the ground; transplanting: plant out the seedling. Months come from Orto da Coltivare's tables for North, Centre and South; for fruit, perennial herbs and grains the values are still those of the draft, to be verified."
+          "it": "Il calendario dell'orto mostra i mesi dei lavori per Nord, Centro e Sud:\n• semina in semenzaio: si semina al riparo e poi si trapianta\n• semina diretta: si semina in piena terra\n• trapianto: si mette a dimora la piantina\n• raccolta: i mesi in cui si raccoglie\nI mesi vengono dalle tabelle e dalle schede di coltivazione di Orto da Coltivare. Per alcuni alberi da frutto, erbe perenni e cereali sono indicativi.",
+          "en": "The garden calendar shows the work months for North, Centre and South:\n• seedbed sowing: sow under cover, then transplant\n• direct sowing: sow straight in the ground\n• transplanting: plant out the seedling\n• harvest: the months when it is picked\nMonths come from Orto da Coltivare's tables and growing guides. For some fruit trees, perennial herbs and grains they are indicative."
         },
         "sources": [
           {
@@ -7460,40 +7307,7 @@
           }
         ],
         "see_also": [
-          "agronomic_params"
-        ]
-      },
-      "agronomic_params": {
-        "term": {
-          "it": "Parametri di Coltivazione",
-          "en": "Growing Parameters"
-        },
-        "short": {
-          "it": "Profondità di semina, distanze, esposizione, luna.",
-          "en": "Sowing depth, spacing, sun, moon."
-        },
-        "text": {
-          "it": "Profondità di semina e distanze tra file e tra piante sono indicazioni pratiche per l'orto domestico. Il consiglio sulla fase lunare riporta la tradizione contadina citata da Orto da Coltivare: non ha una base scientifica dimostrata ed è indicato solo come uso tradizionale.",
-          "en": "Sowing depth and row and plant spacing are practical guidance for home gardens. The moon phase advice reports the farming tradition cited by Orto da Coltivare: it has no proven scientific basis and is given only as a traditional practice."
-        },
-        "sources": [
-          {
-            "key": "ortodacoltivare",
-            "name": "Orto da Coltivare (Matteo Cereda) - tabelle di semina PDF + schede",
-            "url": "https://www.ortodacoltivare.it/calendario/calendario-delle-raccolte/",
-            "publisher": {
-              "it": "Orto da Coltivare",
-              "en": "Orto da Coltivare"
-            },
-            "title": {
-              "it": "Calendari di Semina e Raccolta",
-              "en": "Sowing and Harvest Calendars"
-            },
-            "favicon": "ortodacoltivare.png"
-          }
-        ],
-        "see_also": [
-          "sowing_transplant"
+          "seasonality_states"
         ]
       },
       "edible_portion": {
@@ -7578,7 +7392,7 @@
       },
       "nutrition_claims": {
         "term": {
-          "it": "Claim Nutrizionali UE",
+          "it": "Indicazioni Nutrizionali UE",
           "en": "EU Nutrition Claims"
         },
         "short": {
@@ -7586,8 +7400,8 @@
           "en": "Wording such as 'source of' or 'high in', with legal thresholds."
         },
         "text": {
-          "it": "Sono calcolati applicando le soglie del Reg. CE 1924/2006 ai valori per 100 g: per vitamine e minerali 'fonte di' = almeno 15% del VNR, 'ad alto contenuto di' = almeno 30%; per la fibra 3 e 6 g; per le proteine il 12% e il 20% delle calorie. I testi del database usano 'ricco di' solo quando c'è il claim 'ad alto contenuto'.",
-          "en": "They are computed by applying the thresholds of Regulation (EC) 1924/2006 to the values per 100 g: for vitamins and minerals 'source of' = at least 15% of the NRV, 'high in' = at least 30%; for fibre 3 and 6 g; for protein 12% and 20% of energy. The database texts say 'rich in' only when the 'high in' claim applies."
+          "it": "Sono calcolate applicando le soglie del Reg. CE 1924/2006 ai valori per 100 g:\n• vitamine e minerali: 'fonte di' almeno il 15% del VNR, 'ad alto contenuto di' almeno il 30%\n• fibra: 3 g e 6 g\n• proteine: il 12% e il 20% delle calorie\nI testi del database usano 'ricco di' solo quando c'è l'indicazione 'ad alto contenuto'.",
+          "en": "They are computed by applying the thresholds of Regulation (EC) 1924/2006 to the values per 100 g:\n• vitamins and minerals: 'source of' at least 15% of the NRV, 'high in' at least 30%\n• fibre: 3 g and 6 g\n• protein: 12% and 20% of energy\nThe database texts say 'rich in' only when the 'high in' claim applies."
         },
         "sources": [
           {
@@ -7666,8 +7480,8 @@
           "en": "The standard portion for an adult."
         },
         "text": {
-          "it": "Porzioni standard LARN (tabella IEO SmartFood): frutta 150 g, verdura 200 g, insalata 80 g, legumi freschi 150 g, legumi secchi 50 g, cereali 80 g, frutta a guscio 30 g, patate 200 g; erbe e spezie 'a piacere'. I valori per porzione (calorie, proteine, fibra, CO2, acqua) sono calcolati su questi grammi.",
-          "en": "LARN standard portions (IEO SmartFood table): fruit 150 g, vegetables 200 g, salad 80 g, fresh legumes 150 g, dried legumes 50 g, grains 80 g, nuts 30 g, potatoes 200 g; herbs and spices 'as desired'. Per-portion values (calories, protein, fibre, CO2, water) are calculated on these grams."
+          "it": "Porzioni standard LARN (tabella IEO SmartFood):\n• frutta 150 g\n• verdura 200 g\n• insalata 80 g\n• legumi freschi 150 g\n• legumi secchi 50 g\n• cereali 80 g\n• frutta a guscio 30 g\n• patate 200 g\n• erbe e spezie 'a piacere'\nI valori per porzione (calorie, proteine, fibra, CO2, acqua) sono calcolati su questi grammi.",
+          "en": "LARN standard portions (IEO SmartFood table):\n• fruit 150 g\n• vegetables 200 g\n• salad 80 g\n• fresh legumes 150 g\n• dried legumes 50 g\n• grains 80 g\n• nuts 30 g\n• potatoes 200 g\n• herbs and spices 'as desired'\nPer-portion values (calories, protein, fibre, CO2, water) are calculated on these grams."
         },
         "sources": [
           {
@@ -7907,8 +7721,8 @@
           "en": "Greenhouse gases emitted to produce 1 kg, in kg CO2 equivalent."
         },
         "text": {
-          "it": "Somma i gas serra legati alla produzione (fertilizzanti, energia, macchinari…) espressi come CO2 equivalente. I valori vengono da SU-EATABLE LIFE, un database europeo che armonizza centinaia di studi; per le erbe fresche da AGRIBALYSE (ADEME), che include anche imballaggio e trasporto e quindi non è direttamente confrontabile. I livelli basso/medio/alto sono una convenzione dell'app.",
-          "en": "It adds up the greenhouse gases linked to production (fertilisers, energy, machinery…) expressed as CO2 equivalent. Values come from SU-EATABLE LIFE, a European database harmonising hundreds of studies; for fresh herbs from AGRIBALYSE (ADEME), which also includes packaging and transport and is therefore not directly comparable. The low/medium/high levels are an app convention."
+          "it": "Somma i gas serra legati alla produzione (fertilizzanti, energia, macchinari…) espressi come CO2 equivalente. I valori vengono da SU-EATABLE LIFE, un database europeo che armonizza centinaia di studi; per le erbe fresche da AGRIBALYSE (ADEME), che include anche imballaggio e trasporto e quindi non è direttamente confrontabile.\n\nI livelli sono una convenzione dell'app, con soglie fisse sui kg di CO2 equivalente per kg di prodotto:\n• bassa: meno di 0,5\n• media: da 0,5 a 1\n• alta: più di 1",
+          "en": "It adds up the greenhouse gases linked to production (fertilisers, energy, machinery…) expressed as CO2 equivalent. Values come from SU-EATABLE LIFE, a European database harmonising hundreds of studies; for fresh herbs from AGRIBALYSE (ADEME), which also includes packaging and transport and is therefore not directly comparable.\n\nThe levels are an app convention, with fixed thresholds on kg of CO2 equivalent per kg of produce:\n• low: below 0.5\n• medium: 0.5 to 1\n• high: above 1"
         },
         "sources": [
           {
@@ -7955,8 +7769,8 @@
           "en": "Litres of water used to produce 1 kg."
         },
         "text": {
-          "it": "Comprende l'acqua piovana usata dalla coltura, l'acqua di irrigazione e quella necessaria a diluire gli inquinanti, secondo i metodi degli studi raccolti da SU-EATABLE LIFE. È un valore medio con forte variabilità tra studi e Paesi: per questo il database riporta anche numero di studi e intervallo minimo-massimo.",
-          "en": "It includes rainwater used by the crop, irrigation water and the water needed to dilute pollutants, following the methods of the studies collected by SU-EATABLE LIFE. It is an average with large variability between studies and countries: that's why the database also gives the number of studies and the min-max range."
+          "it": "Comprende l'acqua piovana usata dalla coltura, l'acqua di irrigazione e quella necessaria a diluire gli inquinanti, secondo i metodi degli studi raccolti da SU-EATABLE LIFE.\n\nI livelli sono una convenzione dell'app, con soglie fisse sui litri per kg di prodotto:\n• bassa: meno di 500\n• media: da 500 a 1500\n• alta: più di 1500\n\nÈ un valore medio con forte variabilità tra studi e Paesi: per questo il database riporta anche il numero di studi e l'intervallo minimo-massimo.",
+          "en": "It includes rainwater used by the crop, irrigation water and the water needed to dilute pollutants, following the methods of the studies collected by SU-EATABLE LIFE.\n\nThe levels are an app convention, with fixed thresholds on litres per kg of produce:\n• low: below 500\n• medium: 500 to 1500\n• high: above 1500\n\nIt is an average with large variability between studies and countries: that's why the database also gives the number of studies and the min-max range."
         },
         "sources": [
           {
@@ -7988,8 +7802,8 @@
           "en": "Out of season energy is often needed: the footprint grows."
         },
         "text": {
-          "it": "Secondo EUFIC il vantaggio ambientale della stagionalità dipende soprattutto da come si produce: un ortaggio coltivato fuori stagione in serra riscaldata può avere un'impronta di carbonio diverse volte più alta dello stesso prodotto di pieno campo (il confronto è nel campo 'serra'). Il trasporto pesa meno, tranne per i prodotti viaggiati in aereo.",
-          "en": "According to EUFIC the environmental benefit of seasonality depends mostly on how produce is grown: a vegetable grown out of season in a heated greenhouse can have a carbon footprint several times higher than the same field-grown produce (the comparison is in the 'greenhouse' field). Transport matters less, except for air-freighted produce."
+          "it": "Secondo EUFIC il vantaggio ambientale della stagionalità dipende soprattutto da come si produce: un ortaggio coltivato fuori stagione in serra riscaldata può avere un'impronta di carbonio diverse volte più alta dello stesso prodotto di pieno campo. Il trasporto pesa meno, tranne per i prodotti viaggiati in aereo.",
+          "en": "According to EUFIC the environmental benefit of seasonality depends mostly on how produce is grown: a vegetable grown out of season in a heated greenhouse can have a carbon footprint several times higher than the same field-grown produce. Transport matters less, except for air-freighted produce."
         },
         "sources": [
           {
@@ -8126,47 +7940,14 @@
           "pat"
         ]
       },
-      "upov_variety_register": {
-        "term": {
-          "it": "Codice UPOV e Catalogo Comune UE",
-          "en": "UPOV Code and EU Common Catalogue"
-        },
-        "short": {
-          "it": "Il codice ufficiale della specie nei registri varietali.",
-          "en": "The species' official code in variety registers."
-        },
-        "text": {
-          "it": "Le sementi e le piante di specie ortive, agricole e da frutto si vendono nell'UE solo se la varietà è iscritta in un registro nazionale, riunito nel Catalogo comune UE. Il codice UPOV identifica la specie in questi registri; il numero di varietà iscritte in Italia dà un'idea della diversità coltivata.",
-          "en": "Seeds and plants of vegetable, agricultural and fruit species can be sold in the EU only if the variety is listed in a national register, gathered in the EU Common Catalogue. The UPOV code identifies the species in these registers; the number of varieties listed in Italy gives an idea of cultivated diversity."
-        },
-        "sources": [
-          {
-            "key": "eu_plant_variety_portal",
-            "name": "EU Plant Variety Portal - Catalogo comune UE delle varieta' (agricole, ortive, frutticole)",
-            "url": "https://ec.europa.eu/food/plant-variety-portal/",
-            "publisher": {
-              "it": "Commissione Europea",
-              "en": "European Commission"
-            },
-            "title": {
-              "it": "Catalogo Comune delle Varietà",
-              "en": "Common Catalogue of Varieties"
-            },
-            "favicon": "eambrosia.png"
-          }
-        ],
-        "see_also": [
-          "varieties"
-        ]
-      },
       "varieties": {
         "term": {
-          "it": "Varietà Verificate",
-          "en": "Verified Varieties"
+          "it": "Varietà",
+          "en": "Varieties"
         },
         "short": {
-          "it": "Mostrate solo se una fonte ne conferma l'esistenza.",
-          "en": "Shown only if a source confirms them."
+          "it": "Le varietà italiane note, ognuna trovata in almeno una fonte.",
+          "en": "Known Italian varieties, each found in at least one source."
         },
         "text": {
           "it": "Ogni varietà indicata è stata trovata in almeno una fonte: registro UE delle DOP/IGP, Fondazione Slow Food, Catalogo comune UE delle varietà o testi delle fonti italiane. Il nome registrato può differire leggermente da quello d'uso comune.",
@@ -8231,7 +8012,7 @@
           }
         ],
         "see_also": [
-          "upov_variety_register",
+          "scientific_name",
           "dop_igp"
         ]
       },
@@ -8241,12 +8022,12 @@
           "en": "Scientific Name and Botanical Codes"
         },
         "short": {
-          "it": "Nome latino verificato su EPPO e World Flora Online.",
-          "en": "Latin name checked on EPPO and World Flora Online."
+          "it": "Nome latino verificato su EPPO, World Flora Online e GBIF.",
+          "en": "Latin name checked on EPPO, World Flora Online and GBIF."
         },
         "text": {
-          "it": "Il nome scientifico (genere e specie) identifica la pianta senza ambiguità tra lingue. È verificato su EPPO Global Database, che assegna un codice di 5-6 lettere, e su World Flora Online, il catalogo mondiale delle piante; per i funghi si usa GBIF.",
-          "en": "The scientific name (genus and species) identifies the plant unambiguously across languages. It is checked on the EPPO Global Database, which assigns a 5-6 letter code, and on World Flora Online, the global plant catalogue; GBIF is used for fungi."
+          "it": "Il nome scientifico (genere e specie) identifica la pianta senza ambiguità tra lingue. È verificato su EPPO Global Database e su World Flora Online, il catalogo mondiale delle piante; per i funghi si usa GBIF, il database mondiale della biodiversità.\n\nNella scheda compaiono due codici diversi:\n• codice EPPO (5-6 lettere): identifica la specie nella protezione delle piante ed è assegnato da EPPO;\n• codice UPOV: identifica la specie nei registri delle varietà. Sementi e piante di specie ortive, agricole e da frutto si vendono nell'UE solo se la varietà è iscritta in un registro nazionale, riunito nel Catalogo comune UE; il numero di varietà iscritte in Italia dà un'idea della diversità coltivata.",
+          "en": "The scientific name (genus and species) identifies the plant unambiguously across languages. It is checked on the EPPO Global Database and on World Flora Online, the global plant catalogue; GBIF, the global biodiversity database, is used for fungi.\n\nThe record shows two different codes:\n• EPPO code (5-6 letters): identifies the species in plant protection and is assigned by EPPO;\n• UPOV code: identifies the species in variety registers. Seeds and plants of vegetable, agricultural and fruit species can be sold in the EU only if the variety is listed in a national register, gathered in the EU Common Catalogue; the number of varieties listed in Italy gives an idea of cultivated diversity."
         },
         "sources": [
           {
@@ -8276,10 +8057,38 @@
               "en": "Plant List"
             },
             "favicon": "wfo.png"
+          },
+          {
+            "key": "gbif",
+            "name": "GBIF Backbone Taxonomy (funghi)",
+            "url": "https://www.gbif.org/",
+            "publisher": {
+              "it": "GBIF",
+              "en": "GBIF"
+            },
+            "title": {
+              "it": "Tassonomia di Riferimento (Funghi)",
+              "en": "Backbone Taxonomy (Fungi)"
+            },
+            "favicon": "gbif.png"
+          },
+          {
+            "key": "eu_plant_variety_portal",
+            "name": "EU Plant Variety Portal - Catalogo comune UE delle varieta' (agricole, ortive, frutticole)",
+            "url": "https://ec.europa.eu/food/plant-variety-portal/",
+            "publisher": {
+              "it": "Commissione Europea",
+              "en": "European Commission"
+            },
+            "title": {
+              "it": "Catalogo Comune delle Varietà",
+              "en": "Common Catalogue of Varieties"
+            },
+            "favicon": "eambrosia.png"
           }
         ],
         "see_also": [
-          "upov_variety_register"
+          "varieties"
         ]
       },
       "favism": {
@@ -8313,6 +8122,24 @@
         ],
         "see_also": []
       },
+      "useful_links": {
+        "term": {
+          "it": "Fonti e Link Utili",
+          "en": "Sources and Useful Links"
+        },
+        "short": {
+          "it": "Da dove vengono i dati della scheda e dove approfondire.",
+          "en": "Where the page's data come from and where to learn more."
+        },
+        "text": {
+          "it": "Ogni scheda elenca le fonti da cui vengono i dati e alcuni link per approfondire:\n• fonti: banche dati nutrizionali, manuali di conservazione, calendari di stagione, registri ufficiali;\n• link utili: schede di coltivazione, proprietà, prodotti tipici e altre pagine dedicate al prodotto.\nLe fonti sono scelte tra enti pubblici, università, banche dati scientifiche e associazioni riconosciute, e per ogni dato il database indica da dove viene.\n\nI link aprono siti esterni, che non fanno parte dell'app: contenuti e disponibilità dipendono dai rispettivi editori.",
+          "en": "Each page lists the sources its data come from and some links to learn more:\n• sources: nutrition databases, storage handbooks, seasonal calendars, official registers;\n• useful links: growing guides, properties, traditional products and other pages about the product.\nSources are chosen among public bodies, universities, scientific databases and recognised associations, and for every value the database records where it comes from.\n\nThe links open external websites, which are not part of the app: their content and availability depend on their publishers."
+        },
+        "sources": [],
+        "see_also": [
+          "data_quality"
+        ]
+      },
       "data_quality": {
         "term": {
           "it": "Esatto o Approssimato",
@@ -8336,7 +8163,7 @@
         "verdura": {
           "it": "Verdura",
           "en": "Vegetables",
-          "icon": "grass"
+          "icon": "svg:ui/eggplant"
         },
         "frutta": {
           "it": "Frutta",
@@ -8611,7 +8438,7 @@
         }
       },
       "class_scale": {
-        "_glossary": "respiration_rate",
+        "_glossary": "perishability",
         "_used_by": [
           "ripening_and_storage.postharvest_physiology.respiration_rate_class",
           "ripening_and_storage.ethylene_compatibility.ethylene_production_class"
@@ -8710,7 +8537,7 @@
         }
       },
       "agricultural_calendar_italy.agronomic_params.sun_exposure": {
-        "_glossary": "agronomic_params",
+        "_glossary": null,
         "molto_soleggiato": {
           "it": "Pieno Sole",
           "en": "Full Sun"
@@ -8725,7 +8552,7 @@
         }
       },
       "agricultural_calendar_italy.agronomic_params.lunar_phase_advice": {
-        "_glossary": "agronomic_params",
+        "_glossary": null,
         "fase_crescente": {
           "it": "Luna Crescente (Tradizione)",
           "en": "Waxing Moon (Tradition)"
@@ -8767,7 +8594,7 @@
         }
       },
       "botany.upov_register": {
-        "_glossary": "upov_variety_register",
+        "_glossary": "scientific_name",
         "VEG": {
           "it": "Specie Ortive",
           "en": "Vegetable Species"
@@ -8802,6 +8629,47 @@
         "polifenoli_totali": {
           "it": "Polifenoli Totali",
           "en": "Total Polyphenols"
+        }
+      },
+      "ripening_and_storage.ethylene_compatibility.ethylene_production_class": {
+        "_glossary": "ethylene",
+        "very_low": {
+          "it": "Produzione Molto Bassa",
+          "en": "Very Low Production",
+          "color_hex": "#2E7D32"
+        },
+        "low": {
+          "it": "Produzione Bassa",
+          "en": "Low Production",
+          "color_hex": "#66BB6A"
+        },
+        "moderate": {
+          "it": "Produzione Moderata",
+          "en": "Moderate Production",
+          "color_hex": "#F9A825"
+        },
+        "high": {
+          "it": "Produzione Alta",
+          "en": "High Production",
+          "color_hex": "#EF6C00"
+        },
+        "very_high": {
+          "it": "Produzione Molto Alta",
+          "en": "Very High Production",
+          "color_hex": "#C62828"
+        }
+      },
+      "ripening_and_storage.ethylene_compatibility.sensitive_to_ethylene": {
+        "_glossary": "ethylene",
+        "true": {
+          "it": "Sensibile all'Etilene",
+          "en": "Sensitive to Ethylene",
+          "color_hex": "#F9A825"
+        },
+        "false": {
+          "it": "Non Sensibile",
+          "en": "Not Sensitive",
+          "color_hex": "#2E7D32"
         }
       },
       "sustainability_level": {
@@ -9163,8 +9031,7 @@
         "shelf_life_home"
       ],
       "ripening_and_storage.perishability": [
-        "perishability",
-        "respiration_rate"
+        "perishability"
       ],
       "ripening_and_storage.storage_compatibility": [
         "storage_compatibility"
@@ -9176,8 +9043,7 @@
         "optimal_storage"
       ],
       "ripening_and_storage.postharvest_physiology.respiration_rate_class": [
-        "respiration_rate",
-        "q10"
+        "perishability"
       ],
       "ripening_and_storage.postharvest_physiology.freezing_point_c": [
         "freezing_point"
@@ -9194,9 +9060,13 @@
         "optimal_storage"
       ],
       "ripening_and_storage.ethylene_compatibility": [
-        "ethylene",
-        "ethylene_production",
-        "ethylene_sensitivity"
+        "ethylene"
+      ],
+      "ripening_and_storage.ethylene_compatibility.ethylene_production_class": [
+        "ethylene"
+      ],
+      "ripening_and_storage.ethylene_compatibility.sensitive_to_ethylene": [
+        "ethylene"
       ],
       "ripening_and_storage.ethylene_compatibility.keep_away_from": [
         "keep_away_from"
@@ -9217,9 +9087,6 @@
       "agricultural_calendar_italy": [
         "sowing_transplant"
       ],
-      "agricultural_calendar_italy.agronomic_params": [
-        "agronomic_params"
-      ],
       "nutrition_and_sustainability.edible_portion_percentage": [
         "edible_portion"
       ],
@@ -9230,8 +9097,7 @@
         "nrv"
       ],
       "nutrition_and_sustainability.nutrition_claims_eu": [
-        "nutrition_claims",
-        "nrv"
+        "nutrition_claims"
       ],
       "nutrition_and_sustainability.protein_reference": [
         "larn"
@@ -9265,10 +9131,16 @@
         "scientific_name"
       ],
       "botany.upov_code": [
-        "upov_variety_register"
+        "scientific_name"
       ],
       "botany.varieties_registered_italy": [
-        "upov_variety_register"
+        "scientific_name"
+      ],
+      "botany.eppo_code": [
+        "scientific_name"
+      ],
+      "sources_by_topic.useful_links": [
+        "useful_links"
       ]
     },
     "source_conflicts": [
@@ -10274,6 +10146,10 @@
         "it": "Prodotti non climaterici: non si mostrano speed_up (\"come accelerare la maturazione\") né slow_down: le informazioni di slow_down che mancavano sono state aggiunte a storage_instructions (merge_slow_down_into_storage.py). Il testo del comportamento di maturazione non compare sotto il badge (Climaterico / Non Climaterico) ma nell'aiuto \"?\" (glossario climacteric / non_climacteric). Ordine della conservazione: dove conservarlo, istruzioni, consiglio, cosa tenere lontano, quanto dura in casa, deperibilità. Filtri della Home per impronta di carbonio e idrica con i livelli e i colori di environmental_footprint_method.levels.",
         "en": "Non-climacteric produce: neither speed_up (\"how to speed up ripening\") nor slow_down is shown: the slow_down information that was missing has been added to storage_instructions (merge_slow_down_into_storage.py). The ripening behaviour text is not shown under the badge (Climacteric / Non-climacteric) but in the \"?\" help (glossary climacteric / non_climacteric). Storage order: where to store it, instructions, tip, what to keep away, how long it lasts at home, perishability. Home filters for carbon and water footprint use the levels and colours of environmental_footprint_method.levels."
       }
+    },
+    "macros_note": {
+      "it": "I carboidrati disponibili seguono le tabelle CREA e BDA-IEO: sono espressi come monosaccaridi, cioè l'amido conta 1,1 volte il suo peso (l'acqua che si lega durante la digestione). Per i prodotti ricchi di amido, come cereali e castagne, il valore è quindi circa il 10% più alto della somma di amido e zuccheri, e acqua più nutrienti può superare di poco i 100 g. Le calorie sono calcolate su questo valore (3,75 kcal/g).",
+      "en": "Available carbohydrates follow the CREA and BDA-IEO tables: they are expressed as monosaccharides, so starch counts 1.1 times its weight (the water bound during digestion). For starchy products such as grains and chestnuts the value is therefore about 10% higher than starch plus sugars, and water plus nutrients can slightly exceed 100 g. Calories are computed from this value (3.75 kcal/g)."
     }
   },
   "shared_descriptions_corpus": {
@@ -46435,7 +46311,8 @@
             },
             "basis": {
               "corpus_ref": "basis__levels_carbon_low_0_5_medium_0_2"
-            }
+            },
+            "tips_topic": "greenhouse"
           }
         },
         "traditional_products_pat": {
@@ -61996,7 +61873,8 @@
             },
             "basis": {
               "corpus_ref": "basis__levels_carbon_low_0_5_medium_0_2"
-            }
+            },
+            "tips_topic": "greenhouse"
           }
         },
         "traditional_products_pat": {
@@ -69035,7 +68913,8 @@
             },
             "basis": {
               "corpus_ref": "basis__levels_carbon_low_0_5_medium_0_2"
-            }
+            },
+            "tips_topic": "greenhouse"
           }
         },
         "traditional_products_pat": {
@@ -71274,7 +71153,8 @@
             },
             "basis": {
               "corpus_ref": "basis__levels_carbon_low_0_5_medium_0_2"
-            }
+            },
+            "tips_topic": "greenhouse"
           }
         },
         "traditional_products_pat": {
@@ -75380,7 +75260,8 @@
             },
             "basis": {
               "corpus_ref": "basis__levels_carbon_low_0_5_medium_0_2"
-            }
+            },
+            "tips_topic": "greenhouse"
           }
         },
         "traditional_products_pat": {
@@ -82501,7 +82382,8 @@
             },
             "basis": {
               "corpus_ref": "basis__levels_carbon_low_0_5_medium_0_2"
-            }
+            },
+            "tips_topic": "greenhouse"
           }
         },
         "traditional_products_pat": {
@@ -87699,7 +87581,8 @@
             },
             "basis": {
               "corpus_ref": "basis__levels_carbon_low_0_5_medium_0_2"
-            }
+            },
+            "tips_topic": "greenhouse"
           }
         },
         "traditional_products_pat": {
@@ -114540,7 +114423,8 @@
             },
             "basis": {
               "corpus_ref": "basis__levels_carbon_low_0_5_medium_0_2"
-            }
+            },
+            "tips_topic": "greenhouse"
           }
         },
         "traditional_products_pat": {
@@ -120738,7 +120622,8 @@
             },
             "basis": {
               "corpus_ref": "basis__levels_carbon_low_0_5_medium_0_2"
-            }
+            },
+            "tips_topic": "greenhouse"
           }
         },
         "traditional_products_pat": {
@@ -138277,7 +138162,8 @@
             },
             "basis": {
               "corpus_ref": "basis__levels_carbon_low_0_5_medium_0_2"
-            }
+            },
+            "tips_topic": "greenhouse"
           }
         },
         "traditional_products_pat": {
@@ -142530,7 +142416,8 @@
             },
             "basis": {
               "corpus_ref": "basis__levels_carbon_low_0_5_medium_0_2"
-            }
+            },
+            "tips_topic": "greenhouse"
           }
         },
         "traditional_products_pat": {

@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Testi dell'interfaccia dell'app Peak Season (IT/EN). Li legge CopyService all'avvio; si modificano con scripts/copy_editor.py. I segnaposto tra graffe, es. {n}, vanno lasciati invariati. Chiavi uniche nel formato schermata.elemento.",
-    "updated": "2026-11-12"
+    "updated": "2026-11-14"
   },
   "strings": [
     {
@@ -449,8 +449,8 @@
       "screen": "home",
       "key": "home.no_data_section_hint",
       "element_description": "Home screen: no data section hint",
-      "it": "Nessuna fonte riporta la loro stagionalità per la zona che hai scelto: non vuol dire che siano fuori stagione.",
-      "en": "No source gives their seasonality for the zone you chose: it does not mean they are out of season."
+      "it": "Nessuna fonte riporta la loro stagionalità per la zona che hai scelto: non vuol dire che siano necessariamente fuori stagione.",
+      "en": "No source gives their seasonality for the zone you chose: it does not mean they are necessarily out of season."
     },
     {
       "screen": "home",
@@ -463,8 +463,8 @@
       "screen": "home",
       "key": "home.include_no_data_sub",
       "element_description": "Home screen: include no data sub",
-      "it": "Li mostra nella lista principale, in fondo, con i pallini grigi \"?\".",
-      "en": "Shows them in the main list, at the bottom, with the grey \"?\" dots."
+      "it": "Li mostra nella lista principale, in fondo, con i pallini grigi.",
+      "en": "Shows them in the main list, at the bottom, with grey dots."
     },
     {
       "screen": "home",
@@ -512,8 +512,8 @@
       "screen": "home",
       "key": "home.unknown_description",
       "element_description": "Home screen: unknown description",
-      "it": "Il pallino grigio con il punto interrogativo significa che nessuna delle fonti consultate (EUFIC e calendari regionali) riporta la stagionalità di questo prodotto per la zona climatica che hai scelto, e non esiste una zona vicina da cui stimarla. NON vuol dire che sia fuori stagione: il dato semplicemente manca. Puoi provare un'altra zona o area italiana nelle Impostazioni.",
-      "en": "The grey dot with a question mark means that none of the sources consulted (EUFIC and regional calendars) gives the seasonality of this item for the climate zone you chose, and there is no neighbouring zone to estimate it from. It does NOT mean it is out of season: the data is simply missing. You can try another zone or Italian area in Settings."
+      "it": "Il pallino grigio significa che nessuna delle fonti consultate (EUFIC e calendari regionali) riporta la stagionalità di questo prodotto per la zona climatica che hai scelto, e non esiste una zona vicina da cui stimarla. NON vuol dire che sia fuori stagione: il dato semplicemente manca. Puoi provare un'altra zona o area italiana nelle Impostazioni.",
+      "en": "The grey dot means that none of the sources consulted (EUFIC and regional calendars) gives the seasonality of this item for the climate zone you chose, and there is no neighbouring zone to estimate it from. It does NOT mean it is out of season: the data is simply missing. You can try another zone or Italian area in Settings."
     },
     {
       "screen": "home",
@@ -1494,6 +1494,69 @@
       "element_description": "Product detail page: growing calendar row, transplanting",
       "it": "Trapianto",
       "en": "Transplanting"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.edible_portion",
+      "element_description": "Product detail page: edible portion percentage next to 'Per 100 g' — placeholders: {pct}",
+      "it": "({pct}% del prodotto)",
+      "en": "({pct}% of the product)"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.ethylene",
+      "element_description": "Product detail page: subtitle of the ethylene tags",
+      "it": "Etilene",
+      "en": "Ethylene"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.ethylene_production.very_low",
+      "element_description": "Ethylene tag: production class very low",
+      "it": "Produce Pochissimo Etilene",
+      "en": "Very Low Ethylene Production"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.ethylene_production.low",
+      "element_description": "Ethylene tag: production class low",
+      "it": "Produce Poco Etilene",
+      "en": "Low Ethylene Production"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.ethylene_production.moderate",
+      "element_description": "Ethylene tag: production class moderate",
+      "it": "Produce Etilene Moderato",
+      "en": "Moderate Ethylene Production"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.ethylene_production.high",
+      "element_description": "Ethylene tag: production class high",
+      "it": "Produce Molto Etilene",
+      "en": "High Ethylene Production"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.ethylene_production.very_high",
+      "element_description": "Ethylene tag: production class very high",
+      "it": "Produce Moltissimo Etilene",
+      "en": "Very High Ethylene Production"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.ethylene_sensitive.true",
+      "element_description": "Ethylene tag: sensitive to ethylene",
+      "it": "Sensibile all'Etilene",
+      "en": "Sensitive to Ethylene"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.ethylene_sensitive.false",
+      "element_description": "Ethylene tag: not sensitive to ethylene",
+      "it": "Poco Sensibile all'Etilene",
+      "en": "Not Sensitive to Ethylene"
     },
     {
       "screen": "settings",

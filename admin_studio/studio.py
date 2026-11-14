@@ -33,6 +33,8 @@ sys.path.insert(0, str(HERE))
 import icons  # noqa: E402
 import images  # noqa: E402
 import sources  # noqa: E402
+import helptexts  # noqa: E402
+import publish  # noqa: E402
 from corpus import FIELDS, KEY  # noqa: E402
 
 DB = ROOT / "data" / "database.json"
@@ -180,6 +182,39 @@ def copy_save(data):
     return guarded([DB, UI], change)
 
 
+def set_db_version(version):
+    publish.set_version("database", version)
+    for script in ("build_app_support_metadata.py", "ux_terminology.py", "title_case_labels.py"):
+        rc, out = run_script(script)
+        if rc != 0:
+            raise RuntimeError(f"{script}: {out[-500:]}")
+
+
+# ------------------------------------------------------------------ README files (published on GitHub)
+READMES = [  # (path, repository, description); generated reports (data/*.md) are left out: their scripts rewrite them
+    ("README.md", "peak-season-database", "Main page of the database repository"),
+    ("scripts/README.md", "peak-season-database", "Pipeline: order of the scripts"),
+    ("admin_studio/README.md", "peak-season-database", "Admin Studio guide"),
+    ("app/README.md", "peak-season-app", "Main page of the app repository"),
+]
+
+
+def readmes():
+    return {"files": [{"path": p, "repo": r, "description": d, "content": (ROOT / p).read_text(encoding="utf-8-sig")}
+                      for p, r, d in READMES if (ROOT / p).exists()]}
+
+
+def save_readme(data):
+    path = data.get("path")
+    if path not in {p for p, _, _ in READMES}:
+        raise ValueError("unknown README")
+    f = ROOT / path
+    crlf = b"\r\n" in f.read_bytes()
+    text = data.get("content", "").replace("\r\n", "\n")
+    f.write_text(text, encoding="utf-8", newline="\r\n" if crlf else "\n")
+    return {"ok": True, "report": f"{path} saved. It reaches GitHub with Commit & Push or Publish."}
+
+
 # ------------------------------------------------------------------ build & deploy
 JOBS, JOB_LOCK = {}, threading.Lock()
 
@@ -223,7 +258,7 @@ def open_folder(p):
         subprocess.Popen(["open" if sys.platform == "darwin" else "xdg-open", str(p)])
 
 
-def start_job(kind):
+def start_job(kind, opts=None):
     with JOB_LOCK:
         if any(not j.done for j in JOBS.values()):
             return None, "Another operation is already running: wait for it to finish."
@@ -250,6 +285,19 @@ def start_job(kind):
                               "import shutil,sys,pathlib;s,d=map(pathlib.Path,sys.argv[1:]);d.mkdir(parents=True,exist_ok=True);"
                               "[print('copied',f.name) or shutil.copy2(f,d/f.name) for f in s.glob('*.apk*')]", str(src), str(APK_DIR)], ROOT))
             open_dir = APK_DIR
+        elif kind in ("git", "publish"):             # admin_studio/publish.py; one message per repository
+            opts = opts or {}
+            only = [k for k in (opts.get("only") or []) if k in ("database", "app")]
+            if not only:
+                return None, "Select at least one repository."
+            args = [sys.executable, "-u", str(HERE / "publish.py"), "--only", ",".join(only)]
+            if kind == "git":
+                args.append("--git-only")
+            for k in only:
+                m = ((opts.get("messages") or {}).get(k) or "").strip()
+                if m:
+                    args += [f"--message-{k}", m]
+            steps, open_dir = [("Commit & Push" if kind == "git" else "Publish", args, ROOT)], None
         else:
             return None, "Unknown operation"
         jid = str(int(time.time() * 1000))
@@ -337,6 +385,16 @@ class Handler(BaseHTTPRequestHandler):
             return self.file(f, cache=True) if f else self.send(404, "{}")
         if p == "/api/sources":
             return self.js(sources.logos_payload())
+        if p == "/api/help":
+            return self.js(helptexts.payload())
+        if p == "/api/readmes":
+            return self.js(readmes())
+        if p == "/api/versions":
+            return self.js(publish.versions())
+        if p == "/api/publish/preview":
+            r = subprocess.run([sys.executable, str(HERE / "publish.py"), "--preview"], cwd=ROOT, capture_output=True, text=True,
+                               encoding="utf-8", errors="replace")
+            return self.js(json.loads(r.stdout) if r.returncode == 0 else {"error": (r.stdout + r.stderr)[-800:]})
         if p == "/api/links":
             return self.js(sources.links_payload())
         if p.startswith("/logo/"):                   # source logos for the app (app/assets/sources)
@@ -378,8 +436,19 @@ class Handler(BaseHTTPRequestHandler):
                 res = guarded([DB, sources.DISPLAY], lambda: sources.upload_logo(data, run_script))
             elif p == "/api/links/save":
                 res = guarded([DB, sources.LINK_OV], lambda: sources.save_links(data, run_script))
+            elif p == "/api/help/save":
+                res = guarded([DB, helptexts.GLOSSARY], lambda: helptexts.save(data, run_script))
+            elif p == "/api/readmes/save":
+                res = save_readme(data)
+            elif p == "/api/versions/set":
+                target, version = data.get("target"), data.get("version")
+                if target == "database":          # the version is part of the database metadata: rebuild and validate
+                    res = guarded([DB, publish.METADATA_SCRIPT, ROOT / "README.md"], lambda: set_db_version(version))
+                else:
+                    publish.set_version(target, version)
+                    res = {"ok": True, "report": f"App version set to {version} (app_info.dart, pubspec.yaml, README)."}
             elif p == "/api/jobs":
-                jid, err = start_job(data.get("kind"))
+                jid, err = start_job(data.get("kind"), data)
                 res = {"ok": bool(jid), "id": jid, "report": err}
             elif p == "/api/open_apk_folder":
                 if APK_DIR.exists():

@@ -64,7 +64,7 @@
       "group_en": "Categories (filters)",
       "description": "Categoria \"Verdura\"",
       "description_en": "Category \"Vegetables\"",
-      "icon": "material:grass",
+      "icon": "svg:ui/eggplant",
       "target": "database"
     },
     {
@@ -703,7 +703,7 @@
       "group_en": "Home screen",
       "description": "Pulsante Altro (erbe e spezie, funghi, cereali) nella barra delle categorie",
       "description_en": "\"Other\" button (herbs and spices, mushrooms, grains) in the category bar",
-      "icon": "material:local_florist",
+      "icon": "material:grass",
       "target": "app"
     },
     {

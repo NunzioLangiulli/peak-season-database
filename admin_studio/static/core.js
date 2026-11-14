@@ -37,8 +37,22 @@ function refreshDirty() {
   $('#save').disabled = !n;
 }
 
+// Short description shown at the top of every page
+const PAGE_DESC = {
+  ui: 'Every text of the app interface (buttons, titles, messages), in Italian and English. Keys are fixed because the app code uses them; placeholders such as {name} must stay in the text.',
+  corpus: 'Texts shared by several products (storage advice, source notes…). Editing an entry changes it in every linked product at once.',
+  items: 'The descriptive texts of each product. A field can use its own text or a shared corpus entry, optionally followed by a product-specific addition.',
+  images: "Each product's photo gallery: choose the main photo (star) and the view type, find new photos and download them with author and licence.",
+  icons: 'The icon used by the app for every state, category, zone and interface element. Database slots are also written into the database.',
+  logos: 'Logo, publisher and title of every source, shown in the source tiles of the app. Upload a logo from your computer; the list at the top shows what is missing.',
+  links: 'All links: the general ones (the sources) and the useful links of each product. Edits survive when the scripts regenerate the links.',
+  readmes: 'The README files shown on GitHub (database and app repositories), with a live preview. Write them in English; they reach GitHub with Commit & Push or Publish. Generated reports in data/ are not listed, because their scripts rewrite them.',
+  help: 'The "?" explanations of the app (glossary). For each entry you see where it appears in the app and which data fields point to it. Lists: start lines with "• "; an empty line starts a new paragraph.',
+};
+
 function render() {
   const t = Studio.tabs[Studio.tab];
+  $('#pagedesc').textContent = PAGE_DESC[Studio.tab] || '';
   $('#q').placeholder = t.placeholder || 'Search…';
   $('#csv').style.display = t.csv ? '' : 'none';
   const m = $('#main'); m.innerHTML = '';

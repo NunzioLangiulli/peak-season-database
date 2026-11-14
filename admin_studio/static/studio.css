@@ -69,3 +69,47 @@ select{padding:5px;border:1px solid var(--b);border-radius:6px;font:inherit;max-
 .grp{margin:16px 0 6px;font-weight:600;color:var(--g)}
 .tag{font-size:11px;border-radius:9px;padding:0 7px;background:#e3e8df;color:var(--m)}
 @media (max-width:1000px){#layout{grid-template-columns:1fr}aside{position:static;height:auto;border-left:0;border-top:1px solid var(--b)}#msg{right:0}.imgwrap{grid-template-columns:1fr}.plist{position:static;max-height:220px}}
+
+#pagedesc{color:var(--m);font-size:13px;background:var(--w);border:1px solid var(--b);border-left:4px solid var(--g);border-radius:8px;padding:8px 12px;margin-bottom:12px}
+#pagedesc:empty{display:none}
+.uses{font-size:12px;color:var(--m);margin:4px 0 0;padding-left:16px}
+.uses li{margin:1px 0}
+#iphone{margin-top:8px}
+#pubsum ul{margin:4px 0 8px;padding-left:18px;font-size:12.5px}
+#pubsum code{font-size:11.5px}
+
+.qhelp{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:#dfe5da;color:#4a5646;font-size:11px;font-weight:700;cursor:help;margin:0 4px 0 3px;vertical-align:middle;user-select:none;flex:none}
+.qhelp:hover{background:var(--g);color:#fff}
+.qtip{position:fixed;z-index:50;max-width:320px;background:#1d2a20;color:#fff;font-size:12.5px;line-height:1.45;padding:8px 10px;border-radius:8px;box-shadow:0 6px 24px #0004;display:none;pointer-events:none}
+.qtip.pinned{pointer-events:auto;outline:2px solid var(--g)}
+aside .actions{flex-direction:column}
+aside .actions .qhelp{align-self:flex-end;margin-top:-26px;margin-right:6px;position:relative}
+
+/* dialogs always fit the window: header and buttons stay visible, the content scrolls */
+#modal{padding:4vh 12px}
+#modal .card{max-height:92vh;width:min(680px,100%);display:flex;flex-direction:column;overflow:hidden}
+#modal h3{flex:none}
+#m_body{overflow-y:auto;min-height:0;flex:1 1 auto;padding-right:6px;overscroll-behavior:contain}
+#m_ok{flex:none;align-self:flex-start;margin-top:10px}
+.mactions{position:sticky;bottom:0;background:var(--w);padding:10px 0 2px;margin:8px 0 0;border-top:1px solid var(--b);display:flex;gap:6px;align-items:center}
+.filelist{max-height:30vh;overflow-y:auto;border:1px solid var(--b);border-radius:6px;padding:4px 8px 4px 24px;margin:4px 0 10px;background:#fafbf8}
+
+/* READMEs */
+.mdwrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+.mdedit{width:100%;height:calc(100vh - 290px);min-height:300px;font:12.5px/1.5 Consolas,monospace;white-space:pre;overflow:auto}
+.mdprev{height:calc(100vh - 290px);min-height:300px;overflow:auto;background:var(--w);border:1px solid var(--b);border-radius:6px;padding:4px 18px;font-size:14px;line-height:1.55}
+.mdprev h1{font-size:24px;border-bottom:1px solid #e1e4e8;padding-bottom:.3em}.mdprev h2{font-size:19px;border-bottom:1px solid #e1e4e8;padding-bottom:.3em}
+.mdprev h3{font-size:16px}.mdprev code{background:#eff1f3;border-radius:4px;padding:1px 4px;font-size:85%}
+.mdprev pre{background:#f6f8fa;border-radius:6px;padding:10px;overflow:auto}.mdprev pre code{background:none;padding:0}
+.mdprev table{border-collapse:collapse;margin:8px 0}.mdprev td,.mdprev th{border:1px solid #d0d7de;padding:4px 10px;font-size:13px}.mdprev th{background:#f6f8fa}
+.mdprev blockquote{margin:0;padding:0 12px;color:#57606a;border-left:4px solid #d0d7de}.mdprev a{color:#0969da}
+.mdimg{background:#eef3ec;border-radius:4px;padding:0 6px;font-size:12px;color:var(--m)}
+@media (max-width:1000px){.mdwrap{grid-template-columns:1fr}}
+
+.rdtop{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start}
+.rdgroups{display:flex;gap:18px;flex-wrap:wrap}
+.rdgroup{display:flex;gap:4px;flex-wrap:wrap;align-items:center;padding:6px 8px;border:1px solid var(--b);border-radius:8px;background:#fafbf8}
+.rdgtitle{width:100%;font-weight:600;font-size:12.5px;color:var(--g);margin-bottom:2px}
+.rdview{display:flex;gap:4px;align-items:center}
+.mdwrap.view-code{grid-template-columns:minmax(0,1fr)}.mdwrap.view-code>div:last-child{display:none}
+.mdwrap.view-preview{grid-template-columns:minmax(0,1fr)}.mdwrap.view-preview>div:first-child{display:none}

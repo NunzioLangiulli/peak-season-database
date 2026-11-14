@@ -89,8 +89,8 @@ except ImportError:
 # Database release: metadata.version is the GitHub release tag of peak-season-database (semantic versioning: patch =
 # text/data fixes, minor = new fields or content, major = breaking format changes). schema_version is the JSON format
 # and changes independently. Bump both values here when preparing a release, then publish the tag v<DB_VERSION>.
-DB_VERSION = "1.1.0"
-DB_RELEASE_DATE = "2026-11-13"
+DB_VERSION = "1.1.1"
+DB_RELEASE_DATE = "2026-11-14"
 DISPLAY = load_json(ROOT / "scripts" / "config" / "source_display.json")["sources"]   # editore, titolo, logo condiviso
 
 
@@ -254,6 +254,16 @@ def main():
                   "but in the \"?\" help (glossary climacteric / non_climacteric). Storage order: where to store it, instructions, tip, what to "
                   "keep away, how long it lasts at home, perishability. Home filters for carbon and water footprint use the levels and colours of "
                   "environmental_footprint_method.levels."}}
+    # how carbohydrates are expressed (CREA / BDA-IEO convention), for the nutrition table and its help
+    m["macros_note"] = {
+        "it": "I carboidrati disponibili seguono le tabelle CREA e BDA-IEO: sono espressi come monosaccaridi, cioè l'amido conta 1,1 volte "
+              "il suo peso (l'acqua che si lega durante la digestione). Per i prodotti ricchi di amido, come cereali e castagne, il valore è "
+              "quindi circa il 10% più alto della somma di amido e zuccheri, e acqua più nutrienti può superare di poco i 100 g. Le calorie "
+              "sono calcolate su questo valore (3,75 kcal/g).",
+        "en": "Available carbohydrates follow the CREA and BDA-IEO tables: they are expressed as monosaccharides, so starch counts 1.1 times "
+              "its weight (the water bound during digestion). For starchy products such as grains and chestnuts the value is therefore about "
+              "10% higher than starch plus sugars, and water plus nutrients can slightly exceed 100 g. Calories are computed from this value "
+              "(3.75 kcal/g)."}
     # perishability ramp (green -> red), used by the app for the perishability badge and filters
     PERISH_COLOR = {1: "#2E7D32", 2: "#66BB6A", 3: "#F9A825", 4: "#EF6C00", 5: "#C62828", 6: "#8E1B1B"}   # 6 = extremely high
     for lv in ((m.get("perishability_legend") or {}).get("levels") or []):

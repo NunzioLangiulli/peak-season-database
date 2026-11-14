@@ -180,7 +180,7 @@ db = load_json("data/database.json")
 
 ### Versioning
 
-`metadata.version` is the GitHub release tag of this repository (current release: **v1.1.0**, `metadata.generated` = release date). It follows semantic versioning:
+`metadata.version` is the GitHub release tag of this repository (current release: **v1.1.1**, `metadata.generated` = release date). It follows semantic versioning:
 - **patch** (1.1.x): fixes to texts or data;
 - **minor** (1.x.0): new fields or new content;
 - **major** (x.0.0): breaking changes to the format.

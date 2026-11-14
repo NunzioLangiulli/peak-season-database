@@ -384,8 +384,9 @@
             "macros_per_100g": {
               "type": "object", "required": ["carbs_g", "sugars_g", "proteins_g", "fats_g", "fiber_g"], "additionalProperties": false,
               "properties": {
-                "carbs_g": { "$ref": "#/$defs/NumOrNull" }, "sugars_g": { "$ref": "#/$defs/NumOrNull" },
-                "starch_g": { "$ref": "#/$defs/NumOrNull" },
+                "carbs_g": { "$ref": "#/$defs/NumOrNull", "description": "Available carbohydrates as in CREA/BDA-IEO: expressed as monosaccharide equivalents (starch x 1.1 + sugars), so for starchy foods it is about 10% higher than starch_g + sugars_g. Energy (kcal) is computed from this value at 3.75 kcal/g." },
+                "sugars_g": { "$ref": "#/$defs/NumOrNull" },
+                "starch_g": { "$ref": "#/$defs/NumOrNull", "description": "Starch, real weight (CREA 'Amido')." },
                 "proteins_g": { "$ref": "#/$defs/NumOrNull" }, "fats_g": { "$ref": "#/$defs/NumOrNull" },
                 "fiber_g": { "$ref": "#/$defs/NumOrNull" }, "salt_g": { "$ref": "#/$defs/NumOrNull" }
               }

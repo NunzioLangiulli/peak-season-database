@@ -68,6 +68,8 @@ def _sustainability(stem_w=1.1, r=6.2, deg0=-205, deg1=-140, L=9.6, Wd=4.6):
 # --- Approved icons (chosen on sheet 1) -------------------------------------
 # file name: (element, choice, where it is used, svg)
 APPROVED = {
+    "eggplant": ("Verdura (categoria)", "Melanzana (2026-11-14)", "Barra categorie e filtri: Verdura",
+                '<g transform="rotate(38 12 13)"><path d="M12 7.2c2.4 0 3.4 2 4.3 4.5 1.1 3 3.3 5.2 1.8 8.2-1.3 2.5-3.8 2.9-6.1 2.9s-4.8-.4-6.1-2.9c-1.5-3 .7-5.2 1.8-8.2.9-2.5 1.9-4.5 4.3-4.5z"/><path d="M12 5.2l-4.4 3.5 2.6-.2 1.8 1.9 1.8-1.9 2.6.2z"/><rect x="11.2" y="1.6" width="1.6" height="4.2" rx=".8"/></g>'),
     "info": ("Informazioni Aggiuntive", "I1 · Cerchio con i (2026-11-12)", "Scheda → titolo Informazioni Aggiuntive",
                 '<path d="M12 2a10 10 0 110 20 10 10 0 010-20zm-1.2 8.2v7.6h2.4v-7.6zm1.2-4a1.5 1.5 0 100 3 1.5 1.5 0 000-3z"/>'),
     "speed_up": ("Per Farlo Maturare", "M4 · Frutto al calduccio (2026-11-12)", "Scheda → Maturazione",
@@ -84,8 +86,8 @@ APPROVED = {
                   '<path fill-rule="evenodd" d="M12 7.2C10.8 6.2 9.3 5.8 7.8 6 4.9 6.4 3.2 9 3.2 12.3c0 4.5 3.1 8.9 5.8 8.9 1.2 0 1.8-.6 3-.6s1.8.6 3 .6c2.7 0 5.8-4.4 5.8-8.9 0-3.3-1.7-5.9-4.6-6.3-1.5-.2-3 .3-4.2 1.4zM5 12.3h2.6l1.4-2.4 2.6 5.6 1.7-3.2H19v1.4h-4.9l-2.6 4.8-2.6-5.6-.6 1z"/>'),
     "carbon": ("Impronta di Carbonio", "A · Nuvola CO₂", "Scheda → Sostenibilità",
                '<path d="M7 19a5 5 0 01-.8-9.9A6.5 6.5 0 0118.6 8 5.5 5.5 0 0118 19z"/>'),
-    "water": ("Impronta Idrica", "B · Goccia", "Scheda → Sostenibilità",
-              '<path fill-rule="evenodd" d="M12 2s7 7.6 7 12.5A7 7 0 015 14.5C5 9.6 12 2 12 2zm-3 12.5a3 3 0 003 3v-1.6a1.4 1.4 0 01-1.4-1.4z"/>'),
+    "water": ("Impronta Idrica", "Goccia piena (2026-11-14)", "Scheda → Sostenibilità",
+                '<path d="M12 2.2s7 7.6 7 12.4A7 7 0 015 14.6C5 9.8 12 2.2 12 2.2z"/>'),
     "cow": ("Mucca (confronto con la carne)", "A · Testa di mucca", "Scheda → Sostenibilità",
             '<path fill-rule="evenodd" d="M4 5c1.6 0 2.8.8 3.5 2h9c.7-1.2 1.9-2 3.5-2 .5 0 1 .1 1.5.3-.4 2.2-2 3.5-4 3.6V13c0 1-.3 1.9-.8 2.7A4.5 4.5 0 0118 19a3 3 0 01-3 3H9a3 3 0 01-3-3c0-1.4.6-2.6 1.5-3.4A5 5 0 016.7 13V8.9C4.6 8.8 3 7.5 2.5 5.3 3 5.1 3.5 5 4 5zm6 14.2a1 1 0 100 2 1 1 0 000-2zm4 0a1 1 0 100 2 1 1 0 000-2zM9.3 11a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4zm5.4 0a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z"/>'),
     "zero_waste": ("Antispreco", "B · Due frecce a cerchio", "Scheda → Curiosità e Antispreco",

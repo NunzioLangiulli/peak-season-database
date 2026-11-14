@@ -18,6 +18,7 @@ Prerequisites (once):
 Usage:  python scripts/preview_screens.py [screen_name ...]
 Output: schemi_interfaccia/anteprime_fase2/v2/*.png
 """
+import os
 import html
 import json
 import re
@@ -28,7 +29,8 @@ from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "schemi_interfaccia" / "anteprime_fase2" / "v2"
-URL = "http://127.0.0.1:8765/"
+# PREVIEW_PORT overrides the port (8765 may be taken by the Admin Studio)
+URL = f"http://127.0.0.1:{os.environ.get('PREVIEW_PORT', '8765')}/"
 W, H = 390, 844  # iPhone 14 / Pixel 7 circa, in punti logici
 EDGE = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
 NOTIF_JSON = ROOT / "app" / "build" / "notification_preview.json"
@@ -194,6 +196,8 @@ def main():
         ("42_impostazioni_personalizzata_dark", {"themeMode": "dark", "backdropPalette": "custom",
          "backdropCustomTop": 0xFF64B5F6, "backdropCustomBottom": 0xFFF06292, "frostStrength": 0.0}, [], True, "tab=2", 3600),
         ("43_scheda_carciofo_atlantica", {"climaticZone": "atlantic"}, [], False, "food=carciofo_artichoke", 3600),
+        ("44_aiuto_deperibilita", {}, [], False, "help=perishability", 1700),
+        ("45_aiuto_link_utili", {}, [], False, "help=useful_links", 1500),
         ("38_zone_climatiche_mappa_dark", {"themeMode": "dark"}, [], True, "help=eufic_zones", 1500),
         ("34_famiglia_solanaceae", {}, [], False, "family=Solanaceae", H),
         ("35_mesi_gennaio_centrato", {}, [], False, "month=1", H),
