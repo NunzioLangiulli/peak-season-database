@@ -18,6 +18,12 @@ from enrich_postharvest import MAP, load_hb66
 from text_corpus import norm
 
 NEW_SOURCES = [
+    {"key": "usda_sr_legacy_doc", "number": "agg.", "name": "USDA ARS - SR Legacy documentation (FoodData Central, 2018)", "url": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR-Legacy/SR-Legacy_Doc.pdf", "topics": ["nutrition"], "access": "PDF ufficiale USDA", "license_note": "Pubblico dominio (governo USA)"},
+    {"key": "englyst_1994_nsp", "number": "agg.", "name": "Englyst, Quigley, Hudson (1994), The Analyst - Determination of dietary fibre as non-starch polysaccharides", "url": "https://doi.org/10.1039/AN9941901497", "topics": ["nutrition"], "access": "articolo scientifico (DOI)", "license_note": None},
+    {"key": "ajpcr_2018_scorzonera_inulin", "number": "agg.", "name": "Asian Journal of Pharmaceutical and Clinical Research (2018) - Characterization of inulin from black salsify (Scorzonera hispanica L.) for food and pharmaceutical purposes", "url": "https://doi.org/10.22159/ajpcr.2018.v11i12.28262", "topics": ["nutrition"], "access": "articolo scientifico (DOI)", "license_note": None},
+    {"key": "reg_1169_2011_energy", "number": "agg.", "name": "Regolamento (UE) n. 1169/2011 - Allegato XIV, Fattori di conversione per il calcolo dell'energia", "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32011R1169", "topics": ["nutrition"], "access": "EUR-Lex", "license_note": "Atto pubblico UE"},
+    {"key": "fao_fnp77", "number": "agg.", "name": "FAO - Food energy: methods of analysis and conversion factors (Food and Nutrition Paper 77, 2003)",
+     "url": "https://www.fao.org/4/y5022e/y5022e00.htm", "topics": ["nutrition"], "access": "pagina web (report FAO)", "license_note": None},
     {"key": "agribalyse", "number": "agg.", "name": "AGRIBALYSE 3.1 (ADEME, Francia) - impatti ambientali degli alimenti", "url": "https://data.ademe.fr/datasets/agribalyse-31-synthese",
      "topics": ["environmental_footprint"], "access": "CSV ufficiale (data.ademe.fr)", "license_note": "Licence Ouverte / Etalab"},
     {"key": "austria_gesundheitsportal", "number": "agg.", "name": "Gesundheitsportal Österreichs - Saisonkalender (Ministero della salute austriaco)",

@@ -441,6 +441,91 @@
    }
   },
   {
+   "id": "available_carbohydrates",
+   "sources": [
+    "crea",
+    "bda_ieo",
+    "fao_fnp77",
+    "reg_1169_2011_energy"
+   ],
+   "see_also": [
+    "inulin",
+    "carbs_by_difference",
+    "nrv"
+   ],
+   "term": {
+    "it": "Carboidrati disponibili",
+    "en": "Available carbohydrates"
+   },
+   "short": {
+    "it": "Espressi come monosaccaridi: l'amido conta 1,1 volte il suo peso.",
+    "en": "Expressed as monosaccharides: starch counts 1.1 times its weight."
+   },
+   "text": {
+    "it": "I carboidrati disponibili sono quelli che il corpo digerisce e usa come energia: amido e zuccheri. Le tabelle italiane CREA e BDA-IEO li riportano come monosaccaridi, cioè come zuccheri semplici, secondo il metodo descritto dalla FAO:\n• l'amido conta 1,1 volte il suo peso, perché durante la digestione ogni unità di zucchero si lega a una molecola d'acqua;\n• nei prodotti ricchi di amido (cereali, legumi secchi, patate, castagne) il valore è circa il 10% più alto della somma di amido e zuccheri;\n• per lo stesso motivo acqua e nutrienti possono superare di poco i 100 g;\n• le calorie delle tabelle usano 3,75 kcal per grammo di carboidrati espressi così, mentre le etichette UE usano 4 kcal per grammo di carboidrati (Reg. UE 1169/2011, Allegato XIV): i valori in etichetta possono quindi essere un po' diversi.",
+    "en": "Available carbohydrates are those the body digests and uses for energy: starch and sugars. The Italian CREA and BDA-IEO tables report them as monosaccharides, that is as simple sugars, following the method described by FAO:\n• starch counts 1.1 times its weight, because during digestion each sugar unit binds one molecule of water;\n• in starchy products (grains, dried legumes, potatoes, chestnuts) the value is about 10% higher than starch plus sugars;\n• for the same reason water and nutrients can slightly exceed 100 g;\n• the tables' calories use 3.75 kcal per gram of carbohydrates expressed this way, while EU labels use 4 kcal per gram of carbohydrate (Regulation (EU) 1169/2011, Annex XIV): label values may therefore differ slightly."
+   },
+   "footnote": {
+    "it": "Carboidrati espressi come monosaccaridi",
+    "en": "Carbohydrates expressed as monosaccharides"
+   }
+  },
+  {
+   "id": "inulin",
+   "sources": [
+    "bda_ieo",
+    "ajpcr_2018_scorzonera_inulin",
+    "englyst_1994_nsp"
+   ],
+   "see_also": [
+    "available_carbohydrates",
+    "carbs_by_difference"
+   ],
+   "term": {
+    "it": "Inulina",
+    "en": "Inulin"
+   },
+   "short": {
+    "it": "Parte dei carboidrati non è amido né zuccheri: con ogni probabilità inulina, una fibra solubile.",
+    "en": "Part of the carbohydrates is neither starch nor sugar: most likely inulin, a soluble fibre."
+   },
+   "text": {
+    "it": "L'inulina è una catena di fruttosio che alcune piante accumulano come riserva nelle radici, al posto dell'amido. Il corpo non la digerisce nell'intestino tenue: si comporta come una fibra solubile e nutre i batteri dell'intestino.\n\nNella scorzonera la tabella BDA-IEO riporta 10,2 g di carboidrati disponibili, ma solo 3,5 g di amido e 1,5 g di zuccheri:\n• circa 5 g di carboidrati non sono attribuiti né all'amido né agli zuccheri;\n• la radice di scorzonera accumula inulina: uno studio del 2018 ne misura il 22% del peso secco;\n• la fibra della tabella è misurata con il metodo Englyst, che conta i polisaccaridi delle pareti cellulari: l'inulina, che è una riserva e non fa parte della parete, di norma non vi rientra;\n• per questo la differenza è con ogni probabilità inulina, contata tra i carboidrati invece che tra le fibre. La tabella non lo dice esplicitamente: è una deduzione dai dati.\n\nPoiché l'inulina fornisce meno energia di amido e zuccheri, le calorie della tabella possono essere un po' più alte di quelle realmente assorbite.",
+    "en": "Inulin is a chain of fructose that some plants store in their roots instead of starch. The body does not digest it in the small intestine: it behaves like a soluble fibre and feeds the gut bacteria.\n\nFor black salsify the BDA-IEO table gives 10.2 g of available carbohydrates, but only 3.5 g of starch and 1.5 g of sugars:\n• about 5 g of carbohydrates are assigned neither to starch nor to sugars;\n• black salsify roots store inulin: a 2018 study measures 22% of the dry weight;\n• the table's fibre is measured with the Englyst method, which counts cell-wall polysaccharides: inulin, a storage substance and not part of the wall, is normally not included;\n• so the difference is most likely inulin, counted among carbohydrates instead of fibre. The table does not say so explicitly: it is a deduction from the data.\n\nSince inulin provides less energy than starch and sugars, the table's calories may be a little higher than what is actually absorbed."
+   },
+   "footnote": {
+    "it": "Carboidrati con probabile inulina",
+    "en": "Carbohydrates likely including inulin"
+   }
+  },
+  {
+   "id": "carbs_by_difference",
+   "sources": [
+    "usda_sr_legacy_doc",
+    "usda_fdc",
+    "fao_fnp77"
+   ],
+   "see_also": [
+    "available_carbohydrates"
+   ],
+   "term": {
+    "it": "Carboidrati per differenza",
+    "en": "Carbohydrates by difference"
+   },
+   "footnote": {
+    "it": "Carboidrati calcolati per differenza",
+    "en": "Carbohydrates calculated by difference"
+   },
+   "short": {
+    "it": "Dati USDA: i carboidrati sono ciò che resta togliendo da 100 g gli altri componenti, non una misura diretta.",
+    "en": "USDA data: carbohydrates are what is left when the other components are subtracted from 100 g, not a direct measure."
+   },
+   "text": {
+    "it": "Per questo prodotto non c'è una scheda italiana (CREA o BDA-IEO): i valori vengono dalla banca dati americana USDA (FoodData Central, SR Legacy), che calcola i carboidrati in un altro modo:\n• USDA non misura i carboidrati: li ricava per differenza, cioè 100 g meno acqua, proteine, grassi e ceneri (i minerali);\n• il valore USDA comprende anche la fibra: qui la fibra viene tolta, per avvicinarlo ai carboidrati disponibili delle tabelle italiane;\n• quello che resta comprende amido e zuccheri, ma anche tutto ciò che non viene misurato a parte, come gli acidi organici (molti nei mirtilli rossi): per questo supera la somma di amido e zuccheri;\n• il metodo è diverso da quello di CREA e BDA-IEO, quindi i carboidrati di questi prodotti non sono del tutto confrontabili con quelli degli altri.",
+    "en": "There is no Italian record (CREA or BDA-IEO) for this product: the values come from the US USDA database (FoodData Central, SR Legacy), which computes carbohydrates in a different way:\n• USDA does not measure carbohydrates: it derives them by difference, that is 100 g minus water, protein, fat and ash (the minerals);\n• the USDA value also includes fibre: here fibre is subtracted, to bring it closer to the available carbohydrates of the Italian tables;\n• what is left includes starch and sugars, but also anything not measured separately, such as organic acids (plentiful in lingonberries): that is why it exceeds starch plus sugars;\n• the method differs from CREA and BDA-IEO, so the carbohydrates of these products are not fully comparable with the others."
+   }
+  },
+  {
    "id": "nrv",
    "sources": [
     "reg_1169_2011"

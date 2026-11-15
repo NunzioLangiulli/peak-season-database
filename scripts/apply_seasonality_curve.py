@@ -97,6 +97,49 @@ def curve(m, harvest, storage):
     return m
 
 
+AREA_NAMES = {"nord": ("Nord", "North"), "centro": ("Centro", "Centre"), "sud_isole": ("Sud e Isole", "South and Islands")}
+MONTHS_IT = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"]
+MONTHS_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+
+def _join(xs, conj):
+    return xs[0] if len(xs) == 1 else ", ".join(xs[:-1]) + f" {conj} " + xs[-1]
+
+
+def basis_text(changed, voted):
+    """Plain-language provenance of the curve (shown to users): no field names or internal codes.
+    changed: codes "case1:<area>" (season aligned with open-field harvest) and "case2:<area>:<month>" (gap closed)."""
+    c1 = [a.split(":")[1] for a in changed if a.startswith("case1:")]
+    c2 = {}
+    for a in changed:
+        if a.startswith("case2:"):
+            _, area, month = a.split(":")
+            c2.setdefault(area, []).append(int(month))
+    if voted:
+        it, en = ["Curva dal voto tra le fonti."], ["Curve from the vote between sources."]
+    else:
+        it = ["Curva completata con la regola del database: primizia nel primo mese di stagione, piena stagione nei mesi di raccolta "
+              "in pieno campo o in quelli centrali, fine stagione nell'ultimo."]
+        en = ["Curve completed with the database rule: early season in the first month, peak in the open-field harvest months or "
+              "the central ones, end of season in the last month."]
+    if c1:
+        all3 = len(set(c1)) == 3
+        it.append("Stagione allineata ai mesi di raccolta in pieno campo (" + ("tutte le macro-aree" if all3 else _join([AREA_NAMES[a][0] for a in c1], "e")) + ").")
+        en.append("Season aligned with the open-field harvest months (" + ("all macro-areas" if all3 else _join([AREA_NAMES[a][1] for a in c1], "and")) + ").")
+    if c2:
+        it.append("Mesi isolati fuori stagione segnati come fine stagione: " + "; ".join(
+            f"{AREA_NAMES[a][0]} {'ad' if MONTHS_IT[min(ms) - 1][0] in 'aeiou' else 'a'} {_join([MONTHS_IT[m - 1] for m in sorted(ms)], 'e')}" for a, ms in c2.items()) + ".")
+        en.append("Isolated off-season months marked as end of season: " + "; ".join(
+            f"{AREA_NAMES[a][1]} in {_join([MONTHS_EN[m - 1] for m in sorted(ms)], 'and')}" for a, ms in c2.items()) + ".")
+    return {"it": " ".join(it), "en": " ".join(en)}
+
+
+def _old_codes(cb):
+    """Codes stored by the earlier version of this script ("...curve_method): case2:nord:1, ...")."""
+    tail = cb.split("):", 1)[1] if "):" in cb else ""
+    return [x.strip() for x in tail.split(",") if x.strip().startswith("case")]
+
+
 def main():
     db = load_json(DATA / "database.json")
     stats = {"case1": 0, "case2_filled": 0, "case3_notes": 0, "curves": 0, "kept_voted_peak": 0}
@@ -106,6 +149,9 @@ def main():
         if not any(ita.get(a) for a in AREAS) or all(x == "not_applicable" for a in AREAS for x in (ita.get(a) or [])):
             continue
         cb = (s.get("curve_basis") or {}).get("it", "")
+        if "metadata.seasonality_curve_method" in cb:   # earlier wording with field names and codes: rewrite in plain words
+            s["curve_basis"] = basis_text(_old_codes(cb), cb.startswith("Curva dal voto"))
+            cb = s["curve_basis"]["it"]
         voted = it["id"] not in CASE1 and (not cb or cb.startswith("Curva dal voto")) and any(K in (ita.get(a) or []) for a in AREAS)
         stats["kept_voted_peak"] += voted            # peak already documented by the vote: gaps only (case 2)
         changed = []
@@ -154,8 +200,7 @@ def main():
                 stats["case3_notes"] += 1
         if voted:
             if changed:
-                s["curve_basis"] = {"it": "Curva dal voto tra le fonti; buchi chiusi con la regola del database (metadata.seasonality_curve_method): " + ", ".join(changed),
-                                    "en": "Curve from the vote between sources; gaps closed with the database rule (metadata.seasonality_curve_method): " + ", ".join(changed)}
+                s["curve_basis"] = basis_text(changed, True)
                 mark_enriched(it, ["seasonality.italy_macro_areas"])
                 finalize_completeness(it)
             continue
@@ -169,8 +214,7 @@ def main():
         stats["curves"] += 1
         if not changed and cb.startswith("Curva completata"):
             continue                                 # already computed: the note with the changes stays
-        s["curve_basis"] = {"it": "Curva completata con la regola del database (metadata.seasonality_curve_method)" + (": " + ", ".join(changed) if changed else "."),
-                            "en": "Curve completed with the database rule (metadata.seasonality_curve_method)" + (": " + ", ".join(changed) if changed else ".")}
+        s["curve_basis"] = basis_text(changed, False)
         mark_enriched(it, ["seasonality.italy_macro_areas", "seasonality.italy_national"])
         finalize_completeness(it)
     db["metadata"]["seasonality_curve_method"] = {

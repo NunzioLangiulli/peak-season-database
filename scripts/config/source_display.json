@@ -514,6 +514,63 @@
     "en": "Biogeographical Regions of Europe (2016)"
    },
    "logo_search": "Agenzia Europea dell'Ambiente logo png"
+  },
+  "fao_fnp77": {
+   "publisher": {
+    "it": "FAO",
+    "en": "FAO"
+   },
+   "title": {
+    "it": "Energia degli Alimenti: Metodi di Analisi e Fattori di Conversione (2003)",
+    "en": "Food Energy: Methods of Analysis and Conversion Factors (2003)"
+   },
+   "logo_search": "FAO logo png"
+  },
+  "reg_1169_2011_energy": {
+   "publisher": {
+    "it": "Regolamento UE 1169/2011",
+    "en": "Regulation (EU) 1169/2011"
+   },
+   "title": {
+    "it": "Allegato XIV - Fattori di Conversione per il Calcolo dell'Energia",
+    "en": "Annex XIV - Conversion Factors for the Calculation of Energy"
+   },
+   "logo_search": "EUR-Lex logo png",
+   "logo_alias": "reg_1924_2006"
+  },
+  "ajpcr_2018_scorzonera_inulin": {
+   "publisher": {
+    "it": "Asian Journal of Pharmaceutical and Clinical Research",
+    "en": "Asian Journal of Pharmaceutical and Clinical Research"
+   },
+   "title": {
+    "it": "Inulina della Scorzonera (2018)",
+    "en": "Inulin from Black Salsify (2018)"
+   },
+   "logo_search": "Asian Journal of Pharmaceutical and Clinical Research logo png"
+  },
+  "englyst_1994_nsp": {
+   "publisher": {
+    "it": "The Analyst (Royal Society of Chemistry)",
+    "en": "The Analyst (Royal Society of Chemistry)"
+   },
+   "title": {
+    "it": "Fibra Alimentare come Polisaccaridi Non Amidacei (Englyst, 1994)",
+    "en": "Dietary Fibre as Non-Starch Polysaccharides (Englyst, 1994)"
+   },
+   "logo_search": "Royal Society of Chemistry logo png"
+  },
+  "usda_sr_legacy_doc": {
+   "publisher": {
+    "it": "USDA ARS",
+    "en": "USDA ARS"
+   },
+   "title": {
+    "it": "Documentazione della Banca Dati SR Legacy (2018)",
+    "en": "SR Legacy Database Documentation (2018)"
+   },
+   "logo_search": "USDA logo png",
+   "logo_alias": "usda_fdc"
   }
  }
 }

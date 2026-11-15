@@ -1,6 +1,6 @@
 // Logos tab (logo, publisher and title of each source) and Links tab (every link, general and per product).
-const Src = {list: [], changes: {}, v: Date.now()};
-Src.load = async () => { Src.list = (await api.get('/api/sources')).sources; Src.changes = {}; };
+const Src = {list: [], app: [], changes: {}, v: Date.now()};
+Src.load = async () => { const p = await api.get('/api/sources'); Src.list = p.sources; Src.app = p.app_logos || []; Src.changes = {}; };
 Src.set = (k, f, v) => { (Src.changes[k] = Src.changes[k] || {})[f] = v; refreshDirty(); };
 Src.copy = async (text, what) => { try { await navigator.clipboard.writeText(text); msg('Copied: ' + what); } catch (e) { msg('Copy failed: select the text and press Ctrl+C', true); } };
 Src.status = s => s.own_logo ? '<span class="ok">Own logo</span>'
@@ -17,6 +17,13 @@ Studio.tabs.logos = {
       <button class="btn small" id="cp_all">Copy List</button>`;
     m.append(box);
     $('#cp_all').onclick = () => Src.copy(missing.map(s => s.logo_search).join('\n'), missing.length + ' lines');
+    const apps = Src.app.filter(l => !nq || norm(l.key).includes(nq));
+    if (apps.length) {
+      const ab = Nav.sec(m, {key: 'applogos', title: 'Other logos used by the app', count: apps.length, open: true});
+      ab.insertAdjacentHTML('beforeend', `<div class="meta">Logo files in <code>app/assets/sources/</code> that belong to no source and are used directly by the app code (e.g. the GitHub links in Settings). To replace one, overwrite the PNG in that folder (128 px, transparent background) and rebuild the app.</div>
+        <div class="resgrid">${apps.map(l => `<div class="res"><div style="width:64px;height:64px;border-radius:12px;background:${l.dark ? '#cfd6cc' : '#f1f3ee'};display:flex;align-items:center;justify-content:center"><img src="/logo/${esc(l.file)}?v=${Src.v}" style="width:48px;height:48px;object-fit:contain" alt=""></div><b>${esc(l.key)}</b><span class="meta">${l.dark ? 'dark logo (inverted in dark theme)' : 'app code'}</span></div>`).join('')}</div>`);
+    }
+    const list = Nav.sec(m, {key: 'srclogos', title: 'Source logos', count: Src.list.length, open: true});
     Src.list.filter(s => !nq || norm([s.key, s.name, s.publisher.it, s.publisher.en, s.title.it, s.title.en].join(' ')).includes(nq)).forEach(s => {
       const ch = Src.changes[s.key] || {}, pub = ch.publisher || {...s.publisher}, tit = ch.title || {...s.title};
       const r = document.createElement('div'); r.className = 'row' + (Src.changes[s.key] ? ' changed' : '');
@@ -55,7 +62,7 @@ Studio.tabs.logos = {
         };
         rd.readAsDataURL(f);
       };
-      m.append(r);
+      list.append(r);
     });
   },
   async save() {

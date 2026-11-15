@@ -19,6 +19,7 @@ Studio.tabs.help = {
       const term = Help.cur(e, 'term'), open = Help.open === e.id || !!nq;
       const usage = e.app_usage.map(u => `<li><b>${esc(u.screen)}</b>${u.field ? ' · ' + esc(u.field) : ''} <span class="tag">${esc(u.where)}</span></li>`).join('');
       const extra = [
+        e.footnote.it ? `<li>Footnote: ${esc(e.footnote.en)}</li>` : '',
         e.fields.length ? `<li>Data fields (field_help): ${e.fields.map(f => '<code>' + esc(f) + '</code>').join(', ')}</li>` : '',
         e.vocabulary.length ? `<li>Value labels: ${e.vocabulary.map(f => '<code>' + esc(f) + '</code>').join(', ')}</li>` : '',
         e.product_refs.length ? `<li>Linked from the texts of ${e.product_refs.length} products (e.g. ${esc(e.product_refs.slice(0, 4).join(', '))})</li>` : '',
@@ -30,7 +31,7 @@ Studio.tabs.help = {
         <ul class="uses">${usage || '<li>No direct "?" button found in the app code</li>'}${extra}</ul>`;
       r.querySelector('button').onclick = () => { Help.open = Help.open === e.id ? null : e.id; render(); };
       if (open) {
-        for (const [f, lbl] of [['term', 'Title'], ['short', 'Short line (tooltip)'], ['text', 'Full explanation']]) {
+        for (const [f, lbl] of [['term', 'Title'], ['short', 'Short line (tooltip)'], ['footnote', 'Footnote on the product page, before the "?" (optional: leave both empty to use the short line)'], ['text', 'Full explanation']]) {
           const v = Help.cur(e, f);
           r.insertAdjacentHTML('beforeend', `<label class="l" style="margin-top:8px">${lbl}</label>`);
           const p = document.createElement('div'); p.className = 'pair';

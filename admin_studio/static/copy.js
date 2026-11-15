@@ -1,5 +1,5 @@
 // Copy tabs: App Copy (data/ui_copy.json), Shared Corpus and Product Texts (data/database.json).
-const Copy = {D: null, changed: {ui: new Set(), corpus: new Set(), items: new Set()}, limit: 150};
+const Copy = {D: null, changed: {ui: new Set(), corpus: new Set(), items: new Set()}};
 
 Copy.load = async () => {
   Copy.D = await api.get('/api/copy');
@@ -28,13 +28,6 @@ Copy.pair = (obj, onchg) => {
   const p = document.createElement('div'); p.className = 'pair';
   p.append(Copy.field('Italian (app text)', obj.it, v => { obj.it = v; onchg(); }), Copy.field('English (app text)', obj.en, v => { obj.en = v; onchg(); }));
   return p;
-};
-Copy.more = (m, n) => {
-  if (n > Copy.limit) {
-    const d = document.createElement('div'); d.className = 'more';
-    d.innerHTML = 'Showing ' + Copy.limit + ' of ' + n + ' · <button class="btn">Show more</button>';
-    d.querySelector('button').onclick = () => { Copy.limit += 300; render(); }; m.append(d);
-  } else if (!n) m.insertAdjacentHTML('beforeend', '<div class="empty">No results</div>');
 };
 Copy.save = async () => {
   const c = Copy.changed, D = Copy.D;
@@ -69,19 +62,25 @@ Copy.exportCSV = (tab, rows) => {
   a.download = 'peakseason_' + tab + '.csv'; a.click();
 };
 
-// ---------- App Copy
+// ---------- App Copy (one collapsible section per screen)
+const SCREEN_TITLE = {common: 'Common', home: 'Home', detail: 'Product detail', filters: 'Filters', settings: 'Settings',
+  storage_tips: 'Storage tips', shopping_list: 'Shopping list', actions: 'Actions', notifications: 'Notifications'};
+Copy.uiRow = (s, i) => {
+  const r = document.createElement('div'); r.className = 'row' + (Copy.changed.ui.has(i) ? ' changed' : '');
+  r.innerHTML = '<div class="meta"><span>Key: <b>' + esc(s.key) + '</b></span><span>' + esc(s.element_description) + '</span></div>';
+  r.append(Copy.pair(s, () => Copy.mark('ui', i, r))); return r;
+};
 Studio.tabs.ui = {
   placeholder: 'Search screens, keys, descriptions and texts…', csv: true, load: Copy.load, dirty: Copy.dirty, save: Copy.save,
   render(m, q) {
     const S = Copy.D.ui.strings || [], nq = norm(q);
     if (!S.length) { m.innerHTML = '<div class="empty">data/ui_copy.json does not exist yet or is empty.</div>'; return; }
-    const rows = S.map((s, i) => [s, i]).filter(([s]) => !nq || norm([s.screen, s.key, s.element_description, s.it, s.en].join(' ')).includes(nq));
-    rows.slice(0, Copy.limit).forEach(([s, i]) => {
-      const r = document.createElement('div'); r.className = 'row' + (Copy.changed.ui.has(i) ? ' changed' : '');
-      r.innerHTML = '<div class="meta"><span>Screen: <b>' + esc(s.screen) + '</b></span><span>Key: <b>' + esc(s.key) + '</b></span><span>' + esc(s.element_description) + '</span></div>';
-      r.append(Copy.pair(s, () => Copy.mark('ui', i, r))); m.append(r);
-    });
-    Copy.more(m, rows.length);
+    const by = {};
+    S.forEach((s, i) => { if (!nq || norm([s.screen, s.key, s.element_description, s.it, s.en].join(' ')).includes(nq)) (by[s.screen] = by[s.screen] || []).push([s, i]); });
+    const screens = Object.keys(by);
+    if (!screens.length) return m.insertAdjacentHTML('beforeend', '<div class="empty">No results</div>');
+    screens.forEach(sc => Nav.sec(m, {key: sc, title: esc(SCREEN_TITLE[sc] || sc), sub: 'screen: ' + esc(sc), count: by[sc].length, open: !!nq,
+      fill: body => by[sc].forEach(([s, i]) => body.append(Copy.uiRow(s, i)))}));
   },
   rows: () => [['screen', 'key', 'element_description', 'it', 'en'], ...(Copy.D.ui.strings || []).map(s => [s.screen, s.key, s.element_description, s.it, s.en])],
   import(H, R) {
@@ -96,12 +95,16 @@ Studio.tabs.ui = {
   },
 };
 
-// ---------- Shared Corpus
+// ---------- Shared Corpus (grouped by the field that uses each entry)
+Copy.corpusField = () => {
+  const f = {};
+  Copy.D.items.forEach(it => it.fields.forEach(x => { const r = x.value.corpus_ref; if (r !== undefined && !f[r]) f[r] = x.path.filter(p => typeof p === 'string').pop(); }));
+  return f;
+};
 Studio.tabs.corpus = {
   placeholder: 'Search keys, texts and linked products…', csv: true, dirty: Copy.dirty, save: Copy.save,
   render(m, q) {
-    const D = Copy.D, u = Copy.usage(), nq = norm(q);
-    const keys = Object.keys(D.corpus).filter(k => !nq || norm(k + ' ' + D.corpus[k].it + ' ' + D.corpus[k].en + ' ' + [...(u[k] || [])].join(' ')).includes(nq));
+    const D = Copy.D, u = Copy.usage(), nq = norm(q), fld = Copy.corpusField();
     const add = document.createElement('div'); add.className = 'row';
     add.innerHTML = '<b>New corpus entry</b> <input type="text" id="nk" placeholder="descriptive_key (lowercase, digits, _)" style="width:320px"> <button class="btn" id="nb">Add</button>';
     m.append(add);
@@ -110,14 +113,19 @@ Studio.tabs.corpus = {
       if (!/^[a-z0-9_]+$/.test(k) || D.corpus[k]) return alert('Invalid or existing key');
       D.corpus[k] = {it: '', en: ''}; Copy.mark('corpus', k); Studio.q = k; $('#q').value = k; render();
     };
-    keys.slice(0, Copy.limit).forEach(k => {
-      const r = document.createElement('div'); r.className = 'row' + (Copy.changed.corpus.has(k) ? ' changed' : ''); const us = [...(u[k] || [])];
-      r.innerHTML = '<div class="meta"><span>Key: <b>' + esc(k) + '</b></span><span>Used by <b>' + us.length + '</b> products</span></div>';
-      r.append(Copy.pair(D.corpus[k], () => Copy.mark('corpus', k, r)));
-      const c = document.createElement('div'); c.className = 'chips'; c.innerHTML = us.sort().map(n => '<span class="chip">' + esc(n) + '</span>').join('');
-      r.append(c); m.append(r);
-    });
-    Copy.more(m, keys.length);
+    const by = {};
+    Object.keys(D.corpus).filter(k => !nq || norm(k + ' ' + D.corpus[k].it + ' ' + D.corpus[k].en + ' ' + [...(u[k] || [])].join(' ')).includes(nq))
+      .forEach(k => { const g = fld[k] || 'not used yet'; (by[g] = by[g] || []).push(k); });
+    if (!Object.keys(by).length) return m.insertAdjacentHTML('beforeend', '<div class="empty">No results</div>');
+    Object.keys(by).sort().forEach(g => Nav.sec(m, {key: g, title: esc(g.replace(/_/g, ' ').replace(/^./, c => c.toUpperCase())), sub: 'field', count: by[g].length, open: true, fill: body => {
+      by[g].forEach(k => {
+        const r = document.createElement('div'); r.className = 'row' + (Copy.changed.corpus.has(k) ? ' changed' : ''); const us = [...(u[k] || [])];
+        r.innerHTML = '<div class="meta"><span>Key: <b>' + esc(k) + '</b></span><span>Used by <b>' + us.length + '</b> products</span></div>';
+        r.append(Copy.pair(D.corpus[k], () => Copy.mark('corpus', k, r)));
+        const c = document.createElement('div'); c.className = 'chips'; c.innerHTML = us.sort().map(n => '<span class="chip">' + esc(n) + '</span>').join('');
+        r.append(c); body.append(r);
+      });
+    }}));
   },
   rows() { const u = Copy.usage(), D = Copy.D; return [['key', 'it', 'en', 'used_by'], ...Object.keys(D.corpus).map(k => [k, D.corpus[k].it, D.corpus[k].en, [...(u[k] || [])].join(', ')])]; },
   import(H, R) {
@@ -131,44 +139,90 @@ Studio.tabs.corpus = {
   },
 };
 
-// ---------- Product Texts
+// ---------- Product Texts: category › product › section › field
+const KIND = {block: ['block', '✎ hand-written', 'Written by hand for this product: saved in the database and in scripts/texts/'],
+  corpus: ['corpus', 'shared-capable', 'Can use a shared corpus entry'], generated: ['generated', '🔒 generated', 'Written by a script']};
+Copy.show = 'all';
+Copy.fieldName = f => f.path.map(x => typeof x === 'number' ? '#' + (x + 1) : x).slice(1).join(' › ').replace(/_/g, ' ');
+Copy.fieldRow = (it, f, j) => {
+  const id = it.id + '|' + j, r = document.createElement('div');
+  r.className = 'row' + (Copy.changed.items.has(id) ? ' changed' : '') + (f.kind === 'generated' ? ' locked' : '');
+  const dirty = () => Copy.mark('items', id, r), [kc, kl, kt] = KIND[f.kind];
+  const head = () => '<div class="meta"><span><b>' + esc(Copy.fieldName(f)) + '</b></span><span class="kind ' + kc + '" title="' + esc(kt) + '">' + kl + '</span>' +
+    (f.block ? '<span>also in <code>scripts/texts</code> (' + esc(f.block) + ')</span>' : '') + '</div>' + (f.warn ? '<div class="warnline">⚠ ' + esc(f.warn) + '</div>' : '');
+  const limit = el => {                              // character counter for the short app texts
+    if (!f.limit) return; const t = Copy.resolve(f.value), n = Math.max(t.it.length, t.en.length);
+    el.innerHTML = 'Max ' + f.limit + ' characters (IT ' + t.it.length + ' · EN ' + t.en.length + ')'; el.className = 'lim' + (n > f.limit ? ' over' : '');
+  };
+  const draw = () => {
+    r.innerHTML = head();
+    if (f.kind === 'generated') {
+      r.insertAdjacentHTML('beforeend', '<div class="pair"><div class="base">' + esc(f.value.it) + '</div><div class="base">' + esc(f.value.en) + '</div></div>' +
+        '<div class="meta" style="margin:4px 0 0">To change it, edit ' + esc(f.source) + ' (Database chat).</div>');
+      return;
+    }
+    const lim = document.createElement('div'); const dl = () => { dirty(); limit(lim); };
+    if (f.kind === 'corpus') {
+      const opts = Object.keys(Copy.D.corpus).sort(), sel = document.createElement('select');
+      sel.innerHTML = '<option value="">— Text specific to this product —</option>' + opts.map(k => '<option' + (k === f.value.corpus_ref ? ' selected' : '') + '>' + esc(k) + '</option>').join('');
+      sel.onchange = () => { const full = Copy.resolve(f.value); f.value = sel.value ? {corpus_ref: sel.value} : {it: full.it, en: full.en}; dirty(); draw(); };
+      const sl = document.createElement('div'); sl.className = 'meta'; sl.append('Corpus entry: ', sel); r.append(sl);
+    }
+    if (f.value.corpus_ref !== undefined) {
+      const b = Copy.D.corpus[f.value.corpus_ref] || {};
+      r.insertAdjacentHTML('beforeend', '<div class="pair"><div class="base">' + esc(b.it) + '</div><div class="base">' + esc(b.en) + '</div></div><label class="l" style="margin-top:6px">Specific addition (optional, added after the corpus text)</label>');
+      const add = f.value.specific_addition || {it: '', en: ''};
+      r.append(Copy.pair(add, () => { if (add.it || add.en) f.value.specific_addition = add; else delete f.value.specific_addition; dl(); }));
+    } else r.append(Copy.pair(f.value, dl));
+    r.append(lim); limit(lim);
+  };
+  draw(); return r;
+};
+Copy.match = (it, f, nq) => {
+  if (Copy.show === 'edit' && f.kind === 'generated') return false;
+  if (Copy.show !== 'all' && Copy.show !== 'edit' && f.kind !== Copy.show) return false;
+  if (!nq) return true; const t = Copy.resolve(f.value);
+  return norm(it.name + ' ' + it.name_en + ' ' + it.id + ' ' + f.path.join('.') + ' ' + t.it + ' ' + t.en + ' ' + (f.value.corpus_ref || '')).includes(nq);
+};
 Studio.tabs.items = {
   placeholder: 'Search product, field or text…', csv: true, dirty: Copy.dirty, save: Copy.save,
   render(m, q) {
-    const D = Copy.D, nq = norm(q), opts = Object.keys(D.corpus).sort(); let shown = 0, total = 0;
+    const D = Copy.D, nq = norm(q), cats = {};
+    const bar = document.createElement('div'); bar.className = 'box';
+    const n = k => D.items.reduce((a, it) => a + it.fields.filter(f => f.kind === k).length, 0);
+    bar.innerHTML = `<div class="meta" style="margin:0">Show <select id="ishow">
+        <option value="all">All texts</option><option value="edit">Editable only</option><option value="block">Hand-written only</option>
+        <option value="corpus">Shared-capable only</option><option value="generated">Generated only</option></select>
+      <span class="kind block">✎ hand-written</span> ${n('block')} <span class="kind corpus">shared-capable</span> ${n('corpus')} <span class="kind generated">🔒 generated</span> ${n('generated')}
+      · Link titles are in the Links tab.</div>`;
+    m.append(bar);
+    const sel = bar.querySelector('#ishow'); sel.value = Copy.show; sel.onchange = () => { Copy.show = sel.value; render(); };
     D.items.forEach(it => {
-      const fs = it.fields.map((f, j) => [f, j]).filter(([f]) => {
-        if (!nq) return true; const t = Copy.resolve(f.value);
-        return norm(it.name + ' ' + it.id + ' ' + f.path.join('.') + ' ' + t.it + ' ' + t.en + ' ' + (f.value.corpus_ref || '')).includes(nq);
-      });
-      if (!fs.length) return; total += fs.length; if (shown >= Copy.limit) return;
-      const h = document.createElement('div'); h.className = 'prod'; h.textContent = (it.name_en || it.name) + ' (' + it.name + ')  ·  ' + it.id; m.append(h);
-      fs.forEach(([f, j]) => {
-        if (shown++ >= Copy.limit) return;
-        const id = it.id + '|' + j, r = document.createElement('div'); r.className = 'row' + (Copy.changed.items.has(id) ? ' changed' : '');
-        const dirty = () => Copy.mark('items', id, r);
-        const draw = () => {
-          r.innerHTML = '<div class="meta"><span>Field: <b>' + esc(f.path.filter(x => typeof x === 'string').join(' › ')) + '</b></span></div>';
-          const sel = document.createElement('select');
-          sel.innerHTML = '<option value="">— Text specific to this product —</option>' + opts.map(k => '<option' + (k === f.value.corpus_ref ? ' selected' : '') + '>' + esc(k) + '</option>').join('');
-          sel.onchange = () => { const full = Copy.resolve(f.value); f.value = sel.value ? {corpus_ref: sel.value} : {it: full.it, en: full.en}; dirty(); draw(); };
-          const sl = document.createElement('div'); sl.className = 'meta'; sl.append('Corpus entry: ', sel); r.append(sl);
-          if (f.value.corpus_ref !== undefined) {
-            const b = D.corpus[f.value.corpus_ref] || {};
-            const bd = document.createElement('div'); bd.className = 'pair'; bd.innerHTML = '<div class="base">' + esc(b.it) + '</div><div class="base">' + esc(b.en) + '</div>'; r.append(bd);
-            const add = f.value.specific_addition || {it: '', en: ''};
-            const lab = document.createElement('label'); lab.className = 'l'; lab.style.marginTop = '6px'; lab.textContent = 'Specific addition (optional, added after the corpus text)'; r.append(lab);
-            r.append(Copy.pair(add, () => { if (add.it || add.en) f.value.specific_addition = add; else delete f.value.specific_addition; dirty(); }));
-          } else r.append(Copy.pair(f.value, dirty));
-        };
-        draw(); m.append(r);
-      });
+      const fs = it.fields.map((f, j) => [f, j]).filter(([f]) => Copy.match(it, f, nq));
+      if (fs.length) (cats[it.category || 'other'] = cats[it.category || 'other'] || []).push([it, fs]);
     });
-    Copy.more(m, total);
+    const keys = Object.keys(cats);
+    if (!keys.length) return m.insertAdjacentHTML('beforeend', '<div class="empty">No results</div>');
+    let opened = 0;
+    keys.forEach(c => {
+      const list = cats[c];
+      Nav.sec(m, {key: 'cat:' + c, title: esc(typeof Voc !== 'undefined' && Voc.groups.length ? Voc.label('category', c) : c), count: list.length + ' products', open: true, fill: body => {
+        list.forEach(([it, fs]) => {
+          const ch = fs.filter(([, j]) => Copy.changed.items.has(it.id + '|' + j)).length;
+          Nav.sec(body, {key: it.id, title: esc(it.name_en || it.name) + ' <span style="font-weight:400;color:var(--m)">(' + esc(it.name) + ')</span>',
+            sub: esc(it.id), count: fs.length + ' texts' + (ch ? ' · ' + ch + ' changed' : ''), open: !!nq && opened++ < 25, fill: pb => {
+              const secs = {}; fs.forEach(x => (secs[x[0].section] = secs[x[0].section] || []).push(x));
+              Object.keys(secs).forEach(sn => Nav.sec(pb, {key: it.id + '|' + sn, title: esc(sn), count: secs[sn].length, open: true,
+                fill: sb => secs[sn].forEach(([f, j]) => sb.append(Copy.fieldRow(it, f, j)))}));
+            }});
+        });
+      }});
+    });
   },
   rows() {
     const out = [['item_id', 'item_name', 'path', 'corpus_ref', 'it', 'en']];
     Copy.D.items.forEach(it => it.fields.forEach(f => {
+      if (f.kind === 'generated') return;
       const v = f.value, a = v.corpus_ref !== undefined ? (v.specific_addition || {it: '', en: ''}) : v;
       out.push([it.id, it.name, JSON.stringify(f.path), v.corpus_ref || '', a.it, a.en]);
     }));
@@ -178,7 +232,7 @@ Studio.tabs.items = {
     const ix = n => H.indexOf(n); if (ix('path') < 0) throw 'item_id and path columns are required'; let n = 0, miss = 0;
     R.forEach(r => {
       const it = Copy.D.items.find(x => x.id === r[ix('item_id')]); if (!it) { if (r[ix('item_id')]) miss++; return; }
-      const j = it.fields.findIndex(f => JSON.stringify(f.path) === r[ix('path')]); if (j < 0) { miss++; return; }
+      const j = it.fields.findIndex(f => JSON.stringify(f.path) === r[ix('path')] && f.kind !== 'generated'); if (j < 0) { miss++; return; }
       const ref = r[ix('corpus_ref')], ti = r[ix('it')], te = r[ix('en')]; let v;
       if (ref) { v = {corpus_ref: ref}; if (ti || te) v.specific_addition = {it: ti, en: te}; } else v = {it: ti, en: te};
       if (JSON.stringify(v) !== JSON.stringify(it.fields[j].value)) { it.fields[j].value = v; Copy.changed.items.add(it.id + '|' + j); n++; }

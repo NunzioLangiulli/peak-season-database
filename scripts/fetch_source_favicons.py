@@ -61,6 +61,9 @@ SITES = {
     "wfo": "https://www.worldfloraonline.org/",
     "gbif": "https://www.gbif.org/",
     "eea_biogeo": "https://www.eea.europa.eu/",
+    "fao_fnp77": "https://www.fao.org/",                 # logo supplied by the user (fonti_locali/loghi_fonti)
+    "englyst_1994_nsp": "https://pubs.rsc.org/en/journals/journalissues/an",   # logo supplied by the user
+    "ajpcr_2018_scorzonera_inulin": "https://journals.innovareacademics.in/index.php/ajpcr",   # text logo "AJPCR" made on request (the journal has none)
 }
 
 

@@ -49,7 +49,12 @@ def logos_payload():
                     "logo_search": d.get("logo_search") or "", "logo_alias": d.get("logo_alias"),
                     "favicon": s.get("favicon"), "own_logo": own, "dark": s.get("favicon_dark"), "uses": used.get(k, 0)})
     out.sort(key=lambda x: (x["own_logo"], x["favicon"] is not None, x["key"]))   # those without a logo first
-    return {"sources": out}
+    # logo files of the app that belong to no source (e.g. github.png in Settings): shown read-only
+    linked = {x["key"] for x in out} | {x["favicon"] for x in out if x["favicon"]}
+    dark = set(re.findall(r"'([a-z0-9_]+)'", (ROOT / "app" / "lib" / "data" / "source_logos.g.dart").read_text(encoding="utf-8")))         if (ROOT / "app" / "lib" / "data" / "source_logos.g.dart").exists() else set()
+    extra = [{"file": f.name, "key": f.stem, "dark": f.stem in dark} for f in sorted(LOGOS.glob("*.png"))
+             if f.stem not in linked and f.name not in linked]
+    return {"sources": out, "app_logos": extra}
 
 
 def save_display(data, run_script):

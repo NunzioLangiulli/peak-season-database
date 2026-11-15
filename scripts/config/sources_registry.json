@@ -521,6 +521,61 @@
       ],
       "access": "servizio ArcGIS EEA, strato semplificato in data/raw/eea_biogeo/ (scripts/build_europe_map.py)",
       "license_note": "CC BY 4.0"
+    },
+    {
+      "key": "fao_fnp77",
+      "number": "agg.",
+      "name": "FAO - Food energy: methods of analysis and conversion factors (Food and Nutrition Paper 77, 2003)",
+      "url": "https://www.fao.org/4/y5022e/y5022e00.htm",
+      "topics": [
+        "nutrition"
+      ],
+      "access": "pagina web (report FAO)",
+      "license_note": null
+    },
+    {
+      "key": "reg_1169_2011_energy",
+      "number": "agg.",
+      "name": "Regolamento (UE) n. 1169/2011 - Allegato XIV, Fattori di conversione per il calcolo dell'energia",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32011R1169",
+      "topics": [
+        "nutrition"
+      ],
+      "access": "EUR-Lex",
+      "license_note": "Atto pubblico UE"
+    },
+    {
+      "key": "ajpcr_2018_scorzonera_inulin",
+      "number": "agg.",
+      "name": "Asian Journal of Pharmaceutical and Clinical Research (2018) - Characterization of inulin from black salsify (Scorzonera hispanica L.) for food and pharmaceutical purposes",
+      "url": "https://doi.org/10.22159/ajpcr.2018.v11i12.28262",
+      "topics": [
+        "nutrition"
+      ],
+      "access": "articolo scientifico (DOI)",
+      "license_note": null
+    },
+    {
+      "key": "englyst_1994_nsp",
+      "number": "agg.",
+      "name": "Englyst, Quigley, Hudson (1994), The Analyst - Determination of dietary fibre as non-starch polysaccharides",
+      "url": "https://doi.org/10.1039/AN9941901497",
+      "topics": [
+        "nutrition"
+      ],
+      "access": "articolo scientifico (DOI)",
+      "license_note": null
+    },
+    {
+      "key": "usda_sr_legacy_doc",
+      "number": "agg.",
+      "name": "USDA ARS - SR Legacy documentation (FoodData Central, 2018)",
+      "url": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR-Legacy/SR-Legacy_Doc.pdf",
+      "topics": [
+        "nutrition"
+      ],
+      "access": "PDF ufficiale USDA",
+      "license_note": "Pubblico dominio (governo USA)"
     }
   ]
 }

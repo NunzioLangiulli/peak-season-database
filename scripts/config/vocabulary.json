@@ -1,0 +1,601 @@
+{
+  "_meta": {
+    "description": "Bilingual labels of the coded values (metadata.vocabulary), edited with the Admin Studio (Vocabulary tab). build_help.py copies them into the database. Codes and the _glossary/_used_by/glossary/color_hex/marker fields are used by the app: change only the it/en labels.",
+    "updated": "2026-11-15"
+  },
+  "vocabulary": {
+    "category": {
+      "_glossary": null,
+      "verdura": {
+        "it": "Verdura",
+        "en": "Vegetables"
+      },
+      "frutta": {
+        "it": "Frutta",
+        "en": "Fruit"
+      },
+      "erbe_spezie": {
+        "it": "Erbe e spezie",
+        "en": "Herbs and spices"
+      },
+      "funghi": {
+        "it": "Funghi",
+        "en": "Mushrooms"
+      },
+      "cereali": {
+        "it": "Cereali",
+        "en": "Grains"
+      }
+    },
+    "botany.plant_part_used": {
+      "_glossary": "scientific_name",
+      "frutto": {
+        "it": "Frutto",
+        "en": "Fruit"
+      },
+      "foglia": {
+        "it": "Foglia",
+        "en": "Leaf"
+      },
+      "radice": {
+        "it": "Radice",
+        "en": "Root"
+      },
+      "tubero": {
+        "it": "Tubero",
+        "en": "Tuber"
+      },
+      "infiorescenza_bocciolo": {
+        "it": "Infiorescenza o bocciolo",
+        "en": "Flower head or bud"
+      },
+      "bulbo": {
+        "it": "Bulbo",
+        "en": "Bulb"
+      },
+      "fusto_costa": {
+        "it": "Fusto o costa",
+        "en": "Stem or stalk"
+      },
+      "seme": {
+        "it": "Seme",
+        "en": "Seed"
+      },
+      "fiore": {
+        "it": "Fiore",
+        "en": "Flower"
+      },
+      "fungo_carpoforo": {
+        "it": "Corpo fruttifero del fungo",
+        "en": "Mushroom fruiting body"
+      }
+    },
+    "seasonality.state": {
+      "_glossary": "seasonality_states",
+      "primizie": {
+        "it": "Primizia",
+        "en": "Early season"
+      },
+      "in_season": {
+        "it": "Di stagione",
+        "en": "In season"
+      },
+      "peak_season": {
+        "it": "Piena stagione",
+        "en": "Peak season"
+      },
+      "end_of_season": {
+        "it": "Fine stagione",
+        "en": "End of season"
+      },
+      "out_of_season": {
+        "it": "Fuori stagione",
+        "en": "Out of season"
+      },
+      "not_applicable": {
+        "it": "Non coltivato nella zona",
+        "en": "Not grown in the area"
+      }
+    },
+    "seasonality.italy_macro_areas": {
+      "_glossary": "italy_macro_areas",
+      "nord": {
+        "it": "Nord",
+        "en": "North"
+      },
+      "centro": {
+        "it": "Centro",
+        "en": "Centre"
+      },
+      "sud_isole": {
+        "it": "Sud e Isole",
+        "en": "South and Islands"
+      }
+    },
+    "seasonality.eufic_climatic_zones": {
+      "_glossary": "eufic_zones",
+      "mediterranean": {
+        "it": "Mediterranea",
+        "en": "Mediterranean"
+      },
+      "continental": {
+        "it": "Continentale",
+        "en": "Continental"
+      },
+      "atlantic": {
+        "it": "Atlantica",
+        "en": "Atlantic"
+      },
+      "boreal": {
+        "it": "Boreale",
+        "en": "Boreal"
+      },
+      "mountain": {
+        "it": "Alpina",
+        "en": "Alpine"
+      },
+      "pannonian": {
+        "it": "Pannonica",
+        "en": "Pannonian"
+      }
+    },
+    "seasonality.estimates": {
+      "_glossary": "seasonality_estimate",
+      "estimate": {
+        "it": "Stima dalla zona vicina",
+        "en": "Estimate from neighbouring zone",
+        "marker": "≈"
+      },
+      "not_grown": {
+        "it": "Non coltivato qui",
+        "en": "Not grown here"
+      },
+      "unknown": {
+        "it": "Dato non disponibile",
+        "en": "No data available"
+      }
+    },
+    "seasonality.estimates.from": {
+      "_glossary": "seasonality_estimate",
+      "mediterranean": {
+        "it": "zona mediterranea",
+        "en": "Mediterranean zone"
+      },
+      "continental": {
+        "it": "zona continentale",
+        "en": "Continental zone"
+      },
+      "atlantic": {
+        "it": "zona atlantica",
+        "en": "Atlantic zone"
+      },
+      "boreal": {
+        "it": "zona boreale",
+        "en": "Boreal zone"
+      },
+      "mountain": {
+        "it": "zona alpina",
+        "en": "Alpine zone"
+      },
+      "pannonian": {
+        "it": "zona pannonica",
+        "en": "Pannonian zone"
+      },
+      "italy_nord": {
+        "it": "Nord Italia",
+        "en": "Northern Italy"
+      },
+      "italy_sud_isole": {
+        "it": "Sud e Isole",
+        "en": "Southern Italy and Islands"
+      }
+    },
+    "month": {
+      "_glossary": null,
+      "1": {
+        "it": "Gennaio",
+        "en": "January"
+      },
+      "2": {
+        "it": "Febbraio",
+        "en": "February"
+      },
+      "3": {
+        "it": "Marzo",
+        "en": "March"
+      },
+      "4": {
+        "it": "Aprile",
+        "en": "April"
+      },
+      "5": {
+        "it": "Maggio",
+        "en": "May"
+      },
+      "6": {
+        "it": "Giugno",
+        "en": "June"
+      },
+      "7": {
+        "it": "Luglio",
+        "en": "July"
+      },
+      "8": {
+        "it": "Agosto",
+        "en": "August"
+      },
+      "9": {
+        "it": "Settembre",
+        "en": "September"
+      },
+      "10": {
+        "it": "Ottobre",
+        "en": "October"
+      },
+      "11": {
+        "it": "Novembre",
+        "en": "November"
+      },
+      "12": {
+        "it": "Dicembre",
+        "en": "December"
+      }
+    },
+    "ripening_and_storage.ripening_type": {
+      "_glossary": null,
+      "climaterico": {
+        "it": "Climaterico",
+        "en": "Climacteric",
+        "glossary": "climacteric"
+      },
+      "non_climaterico": {
+        "it": "Non climaterico",
+        "en": "Non-climacteric",
+        "glossary": "non_climacteric"
+      }
+    },
+    "ripening_and_storage.primary_location": {
+      "_glossary": "home_storage",
+      "frigorifero": {
+        "it": "Frigorifero",
+        "en": "Fridge"
+      },
+      "temperatura_ambiente": {
+        "it": "Temperatura ambiente",
+        "en": "Room temperature"
+      },
+      "luogo_fresco_buio": {
+        "it": "Luogo fresco e buio",
+        "en": "Cool, dark place"
+      }
+    },
+    "class_scale": {
+      "_glossary": "perishability",
+      "_used_by": [
+        "ripening_and_storage.postharvest_physiology.respiration_rate_class",
+        "ripening_and_storage.ethylene_compatibility.ethylene_production_class"
+      ],
+      "very_low": {
+        "it": "Molto bassa",
+        "en": "Very low"
+      },
+      "low": {
+        "it": "Bassa",
+        "en": "Low"
+      },
+      "moderate": {
+        "it": "Moderata",
+        "en": "Moderate"
+      },
+      "high": {
+        "it": "Alta",
+        "en": "High"
+      },
+      "very_high": {
+        "it": "Molto alta",
+        "en": "Very high"
+      },
+      "extremely_high": {
+        "it": "Elevatissima",
+        "en": "Extremely high"
+      }
+    },
+    "ripening_and_storage.postharvest_physiology.freezing_susceptibility": {
+      "_glossary": "freezing_susceptibility",
+      "most": {
+        "it": "Molto sensibile al gelo",
+        "en": "Most susceptible"
+      },
+      "moderate": {
+        "it": "Moderatamente sensibile",
+        "en": "Moderately susceptible"
+      },
+      "least": {
+        "it": "Poco sensibile",
+        "en": "Least susceptible"
+      }
+    },
+    "ripening_and_storage.home_storage.location": {
+      "_glossary": "home_storage",
+      "fridge": {
+        "it": "In frigorifero",
+        "en": "In the fridge"
+      },
+      "counter_then_fridge": {
+        "it": "Fuori dal frigo finché matura, poi in frigo",
+        "en": "On the counter until ripe, then in the fridge"
+      },
+      "room_temperature": {
+        "it": "A temperatura ambiente",
+        "en": "At room temperature"
+      },
+      "cool_dry_pantry": {
+        "it": "In dispensa, al fresco e all'asciutto",
+        "en": "In a cool, dry pantry"
+      }
+    },
+    "ripening_and_storage.postharvest_physiology.estimated_shelf_life_days.room_temp_mode": {
+      "_glossary": "shelf_life_home",
+      "days": {
+        "it": "Giorni in dispensa",
+        "en": "Days in the pantry"
+      },
+      "until_ripe": {
+        "it": "Fino a maturazione",
+        "en": "Until ripe"
+      },
+      "fridge_only": {
+        "it": "Solo frigorifero",
+        "en": "Fridge only"
+      }
+    },
+    "ripening_and_storage.storage_compatibility.group": {
+      "_glossary": "storage_compatibility",
+      "1A": {
+        "it": "Verdure da frigo (0-2 °C, umidità alta)",
+        "en": "Cold vegetables (0-2 °C, high humidity)"
+      },
+      "1B": {
+        "it": "Frutta da frigo (0-2 °C)",
+        "en": "Cold fruit (0-2 °C)"
+      },
+      "2": {
+        "it": "Fresco, non freddo (7-10 °C)",
+        "en": "Cool, not cold (7-10 °C)"
+      },
+      "3": {
+        "it": "Ambiente fresco (13-18 °C)",
+        "en": "Cool room (13-18 °C)"
+      }
+    },
+    "agricultural_calendar_italy.agronomic_params.sun_exposure": {
+      "_glossary": null,
+      "molto_soleggiato": {
+        "it": "Pieno sole",
+        "en": "Full sun"
+      },
+      "soleggiato": {
+        "it": "Soleggiato",
+        "en": "Sunny"
+      },
+      "anche_mezzombra": {
+        "it": "Anche mezz'ombra",
+        "en": "Also partial shade"
+      }
+    },
+    "agricultural_calendar_italy.agronomic_params.lunar_phase_advice": {
+      "_glossary": null,
+      "fase_crescente": {
+        "it": "Luna crescente (tradizione)",
+        "en": "Waxing moon (tradition)"
+      },
+      "fase_calante": {
+        "it": "Luna calante (tradizione)",
+        "en": "Waning moon (tradition)"
+      },
+      "indifferente": {
+        "it": "Indifferente",
+        "en": "Not relevant"
+      }
+    },
+    "images.image_details.view_type": {
+      "_glossary": null,
+      "full_frame": {
+        "it": "Prodotto a tutto campo",
+        "en": "Full frame"
+      },
+      "isolated_background": {
+        "it": "Su sfondo",
+        "en": "On plain background"
+      },
+      "plant_in_field": {
+        "it": "Pianta",
+        "en": "Plant"
+      },
+      "botanical_plate": {
+        "it": "Tavola botanica",
+        "en": "Botanical plate"
+      },
+      "cut_section": {
+        "it": "In sezione",
+        "en": "Cut"
+      },
+      "other": {
+        "it": "Altro",
+        "en": "Other"
+      }
+    },
+    "botany.upov_register": {
+      "_glossary": "scientific_name",
+      "VEG": {
+        "it": "Specie ortive",
+        "en": "Vegetable species"
+      },
+      "AGR": {
+        "it": "Specie agricole",
+        "en": "Agricultural species"
+      },
+      "FRU": {
+        "it": "Specie da frutto",
+        "en": "Fruit species"
+      }
+    },
+    "nutrition_and_sustainability.bioactive_compounds.group": {
+      "_glossary": "polyphenols",
+      "carotenoidi": {
+        "it": "Carotenoidi",
+        "en": "Carotenoids"
+      },
+      "flavonoidi": {
+        "it": "Flavonoidi",
+        "en": "Flavonoids"
+      },
+      "acidi_fenolici": {
+        "it": "Acidi fenolici",
+        "en": "Phenolic acids"
+      },
+      "altri_polifenoli": {
+        "it": "Altri polifenoli",
+        "en": "Other polyphenols"
+      },
+      "polifenoli_totali": {
+        "it": "Polifenoli totali",
+        "en": "Total polyphenols"
+      }
+    },
+    "ripening_and_storage.ethylene_compatibility.ethylene_production_class": {
+      "_glossary": "ethylene",
+      "very_low": {
+        "it": "Produzione molto bassa",
+        "en": "Very low production",
+        "color_hex": "#2E7D32"
+      },
+      "low": {
+        "it": "Produzione bassa",
+        "en": "Low production",
+        "color_hex": "#66BB6A"
+      },
+      "moderate": {
+        "it": "Produzione moderata",
+        "en": "Moderate production",
+        "color_hex": "#F9A825"
+      },
+      "high": {
+        "it": "Produzione alta",
+        "en": "High production",
+        "color_hex": "#EF6C00"
+      },
+      "very_high": {
+        "it": "Produzione molto alta",
+        "en": "Very high production",
+        "color_hex": "#C62828"
+      }
+    },
+    "ripening_and_storage.ethylene_compatibility.sensitive_to_ethylene": {
+      "_glossary": "ethylene",
+      "true": {
+        "it": "Sensibile all'etilene",
+        "en": "Sensitive to ethylene",
+        "color_hex": "#F9A825"
+      },
+      "false": {
+        "it": "Non sensibile",
+        "en": "Not sensitive",
+        "color_hex": "#2E7D32"
+      }
+    },
+    "sustainability_level": {
+      "_glossary": "carbon_footprint",
+      "_used_by": [
+        "nutrition_and_sustainability.environmental_footprint.sustainability_rating.carbon_level",
+        "nutrition_and_sustainability.environmental_footprint.sustainability_rating.water_level"
+      ],
+      "low": {
+        "it": "Bassa",
+        "en": "Low"
+      },
+      "medium": {
+        "it": "Media",
+        "en": "Medium"
+      },
+      "high": {
+        "it": "Alta",
+        "en": "High"
+      }
+    },
+    "match": {
+      "_glossary": "data_quality",
+      "_used_by": [
+        "*.match",
+        "botany.upov_match"
+      ],
+      "exact": {
+        "it": "Esatto",
+        "en": "Exact"
+      },
+      "approx": {
+        "it": "Approssimato",
+        "en": "Approximate"
+      }
+    },
+    "nutrition_and_sustainability.allergens_eu.annex_ii_number": {
+      "_glossary": "allergens",
+      "1": {
+        "it": "Cereali contenenti glutine",
+        "en": "Cereals containing gluten"
+      },
+      "2": {
+        "it": "Crostacei",
+        "en": "Crustaceans"
+      },
+      "3": {
+        "it": "Uova",
+        "en": "Eggs"
+      },
+      "4": {
+        "it": "Pesce",
+        "en": "Fish"
+      },
+      "5": {
+        "it": "Arachidi",
+        "en": "Peanuts"
+      },
+      "6": {
+        "it": "Soia",
+        "en": "Soybeans"
+      },
+      "7": {
+        "it": "Latte",
+        "en": "Milk"
+      },
+      "8": {
+        "it": "Frutta a guscio",
+        "en": "Tree nuts"
+      },
+      "9": {
+        "it": "Sedano",
+        "en": "Celery"
+      },
+      "10": {
+        "it": "Senape",
+        "en": "Mustard"
+      },
+      "11": {
+        "it": "Semi di sesamo",
+        "en": "Sesame seeds"
+      },
+      "12": {
+        "it": "Anidride solforosa e solfiti",
+        "en": "Sulphur dioxide and sulphites"
+      },
+      "13": {
+        "it": "Lupini",
+        "en": "Lupin"
+      },
+      "14": {
+        "it": "Molluschi",
+        "en": "Molluscs"
+      }
+    }
+  }
+}

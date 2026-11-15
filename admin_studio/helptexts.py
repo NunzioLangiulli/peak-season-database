@@ -65,6 +65,7 @@ def payload():
     for e in cfg["entries"]:
         fields = sorted(k for k, ids in fh_ids.items() if e["id"] in ids)
         out.append({"id": e["id"], "term": e["term"], "short": e.get("short") or {"it": "", "en": ""}, "text": e["text"],
+                    "footnote": e.get("footnote") or {"it": "", "en": ""},
                     "sources": e.get("sources") or [], "see_also": e.get("see_also") or [], "fields": fields,
                     "vocabulary": vocab.get(e["id"], []), "app_usage": usage.get(e["id"], []),
                     "product_refs": sorted(refs.get(e["id"], set()))})
@@ -77,6 +78,15 @@ def save(data, run_script):
     for gid, ch in (data.get("changes") or {}).items():
         if gid not in by:
             raise ValueError(f"unknown help entry: {gid}")
+        if "footnote" in ch:                         # optional: empty = no footnote (the app falls back to "short")
+            v = ch["footnote"]
+            it, en = (v.get("it") or "").strip(), (v.get("en") or "").strip()
+            if it and en:
+                by[gid]["footnote"] = {"it": it, "en": en}
+            elif it or en:
+                raise ValueError(f"{gid}: footnote needs both Italian and English, or leave both empty to remove it")
+            else:
+                by[gid].pop("footnote", None)
         for f in ("term", "short", "text"):
             if f in ch:
                 v = ch[f]

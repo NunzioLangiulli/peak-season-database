@@ -1,8 +1,8 @@
 {
   "metadata": {
     "app_title": "Peak Season - Conscious & Seasonal Food Assistant",
-    "version": "1.1.1",
-    "generated": "2026-11-14",
+    "version": "1.1.2",
+    "generated": "2026-11-15",
     "schema_version": "2.0",
     "sustainable_diet_summary": {
       "it": "Secondo EUFIC, frutta e verdura hanno in genere un impatto climatico molto inferiore ai prodotti di origine animale (le emissioni di gas serra sono 10-50 volte più basse di carne bovina e latticini). Il vantaggio della stagionalità non dipende tanto dai chilometri percorsi quanto dal modo di produzione: i prodotti con l'impronta più bassa sono quelli coltivati all'aperto nella loro stagione naturale e consumati nella stessa regione, perché non richiedono energia per serre riscaldate, illuminazione o lunghe conservazioni in cella frigorifera.",
@@ -196,7 +196,9 @@
             "zucchina_zucchini"
           ],
           "glossary_entries": [
-            "edible_portion"
+            "available_carbohydrates",
+            "edible_portion",
+            "inulin"
           ],
           "database_level": false
         },
@@ -366,6 +368,7 @@
             "zucchina_zucchini"
           ],
           "glossary_entries": [
+            "available_carbohydrates",
             "edible_portion"
           ],
           "database_level": false
@@ -3644,6 +3647,7 @@
             "zucchina_zucchini"
           ],
           "glossary_entries": [
+            "carbs_by_difference",
             "carotenoids"
           ],
           "database_level": false
@@ -5855,6 +5859,227 @@
           "en": "Biogeographical Regions of Europe (2016)"
         },
         "favicon_dark": true
+      },
+      {
+        "key": "fao_fnp77",
+        "number": "agg.",
+        "name": "FAO - Food energy: methods of analysis and conversion factors (Food and Nutrition Paper 77, 2003)",
+        "url": "https://www.fao.org/4/y5022e/y5022e00.htm",
+        "topics": [
+          "nutrition"
+        ],
+        "access": "pagina web (report FAO)",
+        "license_note": null,
+        "description": {
+          "it": "Rapporto tecnico FAO sui metodi di analisi dell'energia dei prodotti e sui fattori di conversione (2003).",
+          "en": "FAO technical report on methods of analysis of product energy and conversion factors (2003)."
+        },
+        "authority": {
+          "it": "Organizzazione delle Nazioni Unite per l'alimentazione e l'agricoltura: è il riferimento internazionale per i fattori energetici usati dalle tabelle di composizione.",
+          "en": "The Food and Agriculture Organization of the United Nations: the international reference for the energy factors used by product composition tables."
+        },
+        "offers": {
+          "it": "La spiegazione dei carboidrati espressi come monosaccaridi e dei fattori 3,75 e 4 kcal/g.",
+          "en": "The explanation of carbohydrates expressed as monosaccharides and of the 3.75 and 4 kcal/g factors."
+        },
+        "used_for": {
+          "topics": [],
+          "items_count": 0,
+          "items": [],
+          "glossary_entries": [
+            "available_carbohydrates",
+            "carbs_by_difference"
+          ],
+          "database_level": false
+        },
+        "site_url": "https://www.fao.org/",
+        "short_name": "FAO",
+        "favicon": "fao_fnp77.png",
+        "favicon_dark": false,
+        "publisher": {
+          "it": "FAO",
+          "en": "FAO"
+        },
+        "title": {
+          "it": "Energia degli Alimenti: Metodi di Analisi e Fattori di Conversione (2003)",
+          "en": "Food Energy: Methods of Analysis and Conversion Factors (2003)"
+        }
+      },
+      {
+        "key": "reg_1169_2011_energy",
+        "number": "agg.",
+        "name": "Regolamento (UE) n. 1169/2011 - Allegato XIV, Fattori di conversione per il calcolo dell'energia",
+        "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32011R1169",
+        "topics": [
+          "nutrition"
+        ],
+        "access": "EUR-Lex",
+        "license_note": "Atto pubblico UE",
+        "description": {
+          "it": "Allegato XIV del regolamento UE sull'informazione alimentare: i fattori per calcolare le calorie in etichetta.",
+          "en": "Annex XIV of the EU product information regulation: the factors used to calculate calories on labels."
+        },
+        "authority": {
+          "it": "Norma dell'Unione europea, obbligatoria per le etichette nutrizionali.",
+          "en": "European Union law, mandatory for nutrition labels."
+        },
+        "offers": {
+          "it": "Il fattore di 4 kcal per grammo di carboidrati usato in etichetta.",
+          "en": "The 4 kcal per gram of carbohydrate factor used on labels."
+        },
+        "used_for": {
+          "topics": [],
+          "items_count": 0,
+          "items": [],
+          "glossary_entries": [
+            "available_carbohydrates"
+          ],
+          "database_level": false
+        },
+        "site_url": "https://eur-lex.europa.eu/",
+        "short_name": "Regolamento (UE) n. 1169/2011",
+        "favicon": "reg_1924_2006.png",
+        "favicon_dark": false,
+        "publisher": {
+          "it": "Regolamento UE 1169/2011",
+          "en": "Regulation (EU) 1169/2011"
+        },
+        "title": {
+          "it": "Allegato XIV - Fattori di Conversione per il Calcolo dell'Energia",
+          "en": "Annex XIV - Conversion Factors for the Calculation of Energy"
+        }
+      },
+      {
+        "key": "ajpcr_2018_scorzonera_inulin",
+        "number": "agg.",
+        "name": "Asian Journal of Pharmaceutical and Clinical Research (2018) - Characterization of inulin from black salsify (Scorzonera hispanica L.) for food and pharmaceutical purposes",
+        "url": "https://doi.org/10.22159/ajpcr.2018.v11i12.28262",
+        "topics": [
+          "nutrition"
+        ],
+        "access": "articolo scientifico (DOI)",
+        "license_note": null,
+        "description": {
+          "it": "Studio scientifico sull'inulina estratta dalla radice di scorzonera.",
+          "en": "Scientific study of the inulin extracted from black salsify roots."
+        },
+        "authority": {
+          "it": "Articolo pubblicato su una rivista con revisione paritaria.",
+          "en": "Article published in a peer-reviewed journal."
+        },
+        "offers": {
+          "it": "Il contenuto di inulina della radice (22% del peso secco).",
+          "en": "The inulin content of the root (22% of dry weight)."
+        },
+        "used_for": {
+          "topics": [],
+          "items_count": 0,
+          "items": [],
+          "glossary_entries": [
+            "inulin"
+          ],
+          "database_level": false
+        },
+        "site_url": "https://doi.org/",
+        "short_name": "Asian Journal of Pharmaceutica",
+        "favicon": "ajpcr_2018_scorzonera_inulin.png",
+        "favicon_dark": false,
+        "publisher": {
+          "it": "Asian Journal of Pharmaceutical and Clinical Research",
+          "en": "Asian Journal of Pharmaceutical and Clinical Research"
+        },
+        "title": {
+          "it": "Inulina della Scorzonera (2018)",
+          "en": "Inulin from Black Salsify (2018)"
+        }
+      },
+      {
+        "key": "englyst_1994_nsp",
+        "number": "agg.",
+        "name": "Englyst, Quigley, Hudson (1994), The Analyst - Determination of dietary fibre as non-starch polysaccharides",
+        "url": "https://doi.org/10.1039/AN9941901497",
+        "topics": [
+          "nutrition"
+        ],
+        "access": "articolo scientifico (DOI)",
+        "license_note": null,
+        "description": {
+          "it": "Articolo di riferimento del metodo Englyst per misurare la fibra come polisaccaridi non amidacei.",
+          "en": "Reference paper of the Englyst method that measures fibre as non-starch polysaccharides."
+        },
+        "authority": {
+          "it": "Metodo usato dalle tabelle di composizione europee per la fibra.",
+          "en": "A method used by European composition tables for fibre."
+        },
+        "offers": {
+          "it": "Cosa conta come fibra con questo metodo: i polisaccaridi delle pareti cellulari.",
+          "en": "What counts as fibre with this method: cell-wall polysaccharides."
+        },
+        "used_for": {
+          "topics": [],
+          "items_count": 0,
+          "items": [],
+          "glossary_entries": [
+            "inulin"
+          ],
+          "database_level": false
+        },
+        "site_url": "https://doi.org/",
+        "short_name": "Englyst, Quigley, Hudson (1994",
+        "favicon": "englyst_1994_nsp.png",
+        "favicon_dark": false,
+        "publisher": {
+          "it": "The Analyst (Royal Society of Chemistry)",
+          "en": "The Analyst (Royal Society of Chemistry)"
+        },
+        "title": {
+          "it": "Fibra Alimentare come Polisaccaridi Non Amidacei (Englyst, 1994)",
+          "en": "Dietary Fibre as Non-Starch Polysaccharides (Englyst, 1994)"
+        }
+      },
+      {
+        "key": "usda_sr_legacy_doc",
+        "number": "agg.",
+        "name": "USDA ARS - SR Legacy documentation (FoodData Central, 2018)",
+        "url": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR-Legacy/SR-Legacy_Doc.pdf",
+        "topics": [
+          "nutrition"
+        ],
+        "access": "PDF ufficiale USDA",
+        "license_note": "Pubblico dominio (governo USA)",
+        "description": {
+          "it": "Documentazione ufficiale della banca dati USDA SR Legacy: definizioni e metodi dei nutrienti.",
+          "en": "Official documentation of the USDA SR Legacy database: nutrient definitions and methods."
+        },
+        "authority": {
+          "it": "Dipartimento dell'agricoltura degli Stati Uniti, servizio di ricerca agricola.",
+          "en": "United States Department of Agriculture, Agricultural Research Service."
+        },
+        "offers": {
+          "it": "La definizione dei carboidrati per differenza.",
+          "en": "The definition of carbohydrates by difference."
+        },
+        "used_for": {
+          "topics": [],
+          "items_count": 0,
+          "items": [],
+          "glossary_entries": [
+            "carbs_by_difference"
+          ],
+          "database_level": false
+        },
+        "site_url": "https://www.ars.usda.gov/",
+        "short_name": "USDA ARS",
+        "favicon": "usda_fdc.png",
+        "favicon_dark": true,
+        "publisher": {
+          "it": "USDA ARS",
+          "en": "USDA ARS"
+        },
+        "title": {
+          "it": "Documentazione della Banca Dati SR Legacy (2018)",
+          "en": "SR Legacy Database Documentation (2018)"
+        }
       }
     ],
     "seasonality_states_legend": {
@@ -7356,6 +7581,218 @@
         "see_also": [
           "nrv"
         ]
+      },
+      "available_carbohydrates": {
+        "term": {
+          "it": "Carboidrati Disponibili",
+          "en": "Available Carbohydrates"
+        },
+        "short": {
+          "it": "Espressi come monosaccaridi: l'amido conta 1,1 volte il suo peso.",
+          "en": "Expressed as monosaccharides: starch counts 1.1 times its weight."
+        },
+        "text": {
+          "it": "I carboidrati disponibili sono quelli che il corpo digerisce e usa come energia: amido e zuccheri. Le tabelle italiane CREA e BDA-IEO li riportano come monosaccaridi, cioè come zuccheri semplici, secondo il metodo descritto dalla FAO:\n• l'amido conta 1,1 volte il suo peso, perché durante la digestione ogni unità di zucchero si lega a una molecola d'acqua;\n• nei prodotti ricchi di amido (cereali, legumi secchi, patate, castagne) il valore è circa il 10% più alto della somma di amido e zuccheri;\n• per lo stesso motivo acqua e nutrienti possono superare di poco i 100 g;\n• le calorie delle tabelle usano 3,75 kcal per grammo di carboidrati espressi così, mentre le etichette UE usano 4 kcal per grammo di carboidrati (Reg. UE 1169/2011, Allegato XIV): i valori in etichetta possono quindi essere un po' diversi.",
+          "en": "Available carbohydrates are those the body digests and uses for energy: starch and sugars. The Italian CREA and BDA-IEO tables report them as monosaccharides, that is as simple sugars, following the method described by FAO:\n• starch counts 1.1 times its weight, because during digestion each sugar unit binds one molecule of water;\n• in starchy products (grains, dried legumes, potatoes, chestnuts) the value is about 10% higher than starch plus sugars;\n• for the same reason water and nutrients can slightly exceed 100 g;\n• the tables' calories use 3.75 kcal per gram of carbohydrates expressed this way, while EU labels use 4 kcal per gram of carbohydrate (Regulation (EU) 1169/2011, Annex XIV): label values may therefore differ slightly."
+        },
+        "sources": [
+          {
+            "key": "crea",
+            "name": "CREA Alimenti e Nutrizione - Tabelle di composizione degli alimenti (rev. 2019)",
+            "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/ricerca-per-alimento",
+            "publisher": {
+              "it": "CREA Alimenti e Nutrizione",
+              "en": "CREA Food and Nutrition"
+            },
+            "title": {
+              "it": "Tabelle di Composizione degli Alimenti (2019)",
+              "en": "Food Composition Tables (2019)"
+            },
+            "favicon": "crea.png"
+          },
+          {
+            "key": "bda_ieo",
+            "name": "BDA-IEO - Banca Dati di Composizione degli Alimenti (Istituto Europeo di Oncologia)",
+            "url": "https://bda.ieo.it/",
+            "publisher": {
+              "it": "Istituto Europeo di Oncologia",
+              "en": "European Institute of Oncology"
+            },
+            "title": {
+              "it": "BDA - Banca Dati di Composizione degli Alimenti",
+              "en": "BDA - Food Composition Database"
+            },
+            "favicon": "bda_ieo.png"
+          },
+          {
+            "key": "fao_fnp77",
+            "name": "FAO - Food energy: methods of analysis and conversion factors (Food and Nutrition Paper 77, 2003)",
+            "url": "https://www.fao.org/4/y5022e/y5022e00.htm",
+            "publisher": {
+              "it": "FAO",
+              "en": "FAO"
+            },
+            "title": {
+              "it": "Energia degli Alimenti: Metodi di Analisi e Fattori di Conversione (2003)",
+              "en": "Food Energy: Methods of Analysis and Conversion Factors (2003)"
+            },
+            "favicon": "fao_fnp77.png"
+          },
+          {
+            "key": "reg_1169_2011_energy",
+            "name": "Regolamento (UE) n. 1169/2011 - Allegato XIV, Fattori di conversione per il calcolo dell'energia",
+            "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32011R1169",
+            "publisher": {
+              "it": "Regolamento UE 1169/2011",
+              "en": "Regulation (EU) 1169/2011"
+            },
+            "title": {
+              "it": "Allegato XIV - Fattori di Conversione per il Calcolo dell'Energia",
+              "en": "Annex XIV - Conversion Factors for the Calculation of Energy"
+            },
+            "favicon": "reg_1924_2006.png"
+          }
+        ],
+        "see_also": [
+          "inulin",
+          "carbs_by_difference",
+          "nrv"
+        ],
+        "footnote": {
+          "it": "Carboidrati espressi come monosaccaridi",
+          "en": "Carbohydrates expressed as monosaccharides"
+        }
+      },
+      "inulin": {
+        "term": {
+          "it": "Inulina",
+          "en": "Inulin"
+        },
+        "short": {
+          "it": "Parte dei carboidrati non è amido né zuccheri: con ogni probabilità inulina, una fibra solubile.",
+          "en": "Part of the carbohydrates is neither starch nor sugar: most likely inulin, a soluble fibre."
+        },
+        "text": {
+          "it": "L'inulina è una catena di fruttosio che alcune piante accumulano come riserva nelle radici, al posto dell'amido. Il corpo non la digerisce nell'intestino tenue: si comporta come una fibra solubile e nutre i batteri dell'intestino.\n\nNella scorzonera la tabella BDA-IEO riporta 10,2 g di carboidrati disponibili, ma solo 3,5 g di amido e 1,5 g di zuccheri:\n• circa 5 g di carboidrati non sono attribuiti né all'amido né agli zuccheri;\n• la radice di scorzonera accumula inulina: uno studio del 2018 ne misura il 22% del peso secco;\n• la fibra della tabella è misurata con il metodo Englyst, che conta i polisaccaridi delle pareti cellulari: l'inulina, che è una riserva e non fa parte della parete, di norma non vi rientra;\n• per questo la differenza è con ogni probabilità inulina, contata tra i carboidrati invece che tra le fibre. La tabella non lo dice esplicitamente: è una deduzione dai dati.\n\nPoiché l'inulina fornisce meno energia di amido e zuccheri, le calorie della tabella possono essere un po' più alte di quelle realmente assorbite.",
+          "en": "Inulin is a chain of fructose that some plants store in their roots instead of starch. The body does not digest it in the small intestine: it behaves like a soluble fibre and feeds the gut bacteria.\n\nFor black salsify the BDA-IEO table gives 10.2 g of available carbohydrates, but only 3.5 g of starch and 1.5 g of sugars:\n• about 5 g of carbohydrates are assigned neither to starch nor to sugars;\n• black salsify roots store inulin: a 2018 study measures 22% of the dry weight;\n• the table's fibre is measured with the Englyst method, which counts cell-wall polysaccharides: inulin, a storage substance and not part of the wall, is normally not included;\n• so the difference is most likely inulin, counted among carbohydrates instead of fibre. The table does not say so explicitly: it is a deduction from the data.\n\nSince inulin provides less energy than starch and sugars, the table's calories may be a little higher than what is actually absorbed."
+        },
+        "sources": [
+          {
+            "key": "bda_ieo",
+            "name": "BDA-IEO - Banca Dati di Composizione degli Alimenti (Istituto Europeo di Oncologia)",
+            "url": "https://bda.ieo.it/",
+            "publisher": {
+              "it": "Istituto Europeo di Oncologia",
+              "en": "European Institute of Oncology"
+            },
+            "title": {
+              "it": "BDA - Banca Dati di Composizione degli Alimenti",
+              "en": "BDA - Food Composition Database"
+            },
+            "favicon": "bda_ieo.png"
+          },
+          {
+            "key": "ajpcr_2018_scorzonera_inulin",
+            "name": "Asian Journal of Pharmaceutical and Clinical Research (2018) - Characterization of inulin from black salsify (Scorzonera hispanica L.) for food and pharmaceutical purposes",
+            "url": "https://doi.org/10.22159/ajpcr.2018.v11i12.28262",
+            "publisher": {
+              "it": "Asian Journal of Pharmaceutical and Clinical Research",
+              "en": "Asian Journal of Pharmaceutical and Clinical Research"
+            },
+            "title": {
+              "it": "Inulina della Scorzonera (2018)",
+              "en": "Inulin from Black Salsify (2018)"
+            },
+            "favicon": "ajpcr_2018_scorzonera_inulin.png"
+          },
+          {
+            "key": "englyst_1994_nsp",
+            "name": "Englyst, Quigley, Hudson (1994), The Analyst - Determination of dietary fibre as non-starch polysaccharides",
+            "url": "https://doi.org/10.1039/AN9941901497",
+            "publisher": {
+              "it": "The Analyst (Royal Society of Chemistry)",
+              "en": "The Analyst (Royal Society of Chemistry)"
+            },
+            "title": {
+              "it": "Fibra Alimentare come Polisaccaridi Non Amidacei (Englyst, 1994)",
+              "en": "Dietary Fibre as Non-Starch Polysaccharides (Englyst, 1994)"
+            },
+            "favicon": "englyst_1994_nsp.png"
+          }
+        ],
+        "see_also": [
+          "available_carbohydrates",
+          "carbs_by_difference"
+        ],
+        "footnote": {
+          "it": "Carboidrati con probabile inulina",
+          "en": "Carbohydrates likely including inulin"
+        }
+      },
+      "carbs_by_difference": {
+        "term": {
+          "it": "Carboidrati per Differenza",
+          "en": "Carbohydrates by Difference"
+        },
+        "short": {
+          "it": "Dati USDA: i carboidrati sono ciò che resta togliendo da 100 g gli altri componenti, non una misura diretta.",
+          "en": "USDA data: carbohydrates are what is left when the other components are subtracted from 100 g, not a direct measure."
+        },
+        "text": {
+          "it": "Per questo prodotto non c'è una scheda italiana (CREA o BDA-IEO): i valori vengono dalla banca dati americana USDA (FoodData Central, SR Legacy), che calcola i carboidrati in un altro modo:\n• USDA non misura i carboidrati: li ricava per differenza, cioè 100 g meno acqua, proteine, grassi e ceneri (i minerali);\n• il valore USDA comprende anche la fibra: qui la fibra viene tolta, per avvicinarlo ai carboidrati disponibili delle tabelle italiane;\n• quello che resta comprende amido e zuccheri, ma anche tutto ciò che non viene misurato a parte, come gli acidi organici (molti nei mirtilli rossi): per questo supera la somma di amido e zuccheri;\n• il metodo è diverso da quello di CREA e BDA-IEO, quindi i carboidrati di questi prodotti non sono del tutto confrontabili con quelli degli altri.",
+          "en": "There is no Italian record (CREA or BDA-IEO) for this product: the values come from the US USDA database (FoodData Central, SR Legacy), which computes carbohydrates in a different way:\n• USDA does not measure carbohydrates: it derives them by difference, that is 100 g minus water, protein, fat and ash (the minerals);\n• the USDA value also includes fibre: here fibre is subtracted, to bring it closer to the available carbohydrates of the Italian tables;\n• what is left includes starch and sugars, but also anything not measured separately, such as organic acids (plentiful in lingonberries): that is why it exceeds starch plus sugars;\n• the method differs from CREA and BDA-IEO, so the carbohydrates of these products are not fully comparable with the others."
+        },
+        "sources": [
+          {
+            "key": "usda_sr_legacy_doc",
+            "name": "USDA ARS - SR Legacy documentation (FoodData Central, 2018)",
+            "url": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR-Legacy/SR-Legacy_Doc.pdf",
+            "publisher": {
+              "it": "USDA ARS",
+              "en": "USDA ARS"
+            },
+            "title": {
+              "it": "Documentazione della Banca Dati SR Legacy (2018)",
+              "en": "SR Legacy Database Documentation (2018)"
+            },
+            "favicon": "usda_fdc.png"
+          },
+          {
+            "key": "usda_fdc",
+            "name": "USDA FoodData Central - SR Legacy (2018-04)",
+            "url": "https://fdc.nal.usda.gov/",
+            "publisher": {
+              "it": "USDA",
+              "en": "USDA"
+            },
+            "title": {
+              "it": "FoodData Central - SR Legacy (2018)",
+              "en": "FoodData Central - SR Legacy (2018)"
+            },
+            "favicon": "usda_fdc.png"
+          },
+          {
+            "key": "fao_fnp77",
+            "name": "FAO - Food energy: methods of analysis and conversion factors (Food and Nutrition Paper 77, 2003)",
+            "url": "https://www.fao.org/4/y5022e/y5022e00.htm",
+            "publisher": {
+              "it": "FAO",
+              "en": "FAO"
+            },
+            "title": {
+              "it": "Energia degli Alimenti: Metodi di Analisi e Fattori di Conversione (2003)",
+              "en": "Food Energy: Methods of Analysis and Conversion Factors (2003)"
+            },
+            "favicon": "fao_fnp77.png"
+          }
+        ],
+        "see_also": [
+          "available_carbohydrates"
+        ],
+        "footnote": {
+          "it": "Carboidrati calcolati per differenza",
+          "en": "Carbohydrates calculated by difference"
+        }
       },
       "nrv": {
         "term": {
@@ -9090,6 +9527,9 @@
       "nutrition_and_sustainability.edible_portion_percentage": [
         "edible_portion"
       ],
+      "nutrition_and_sustainability.macros_per_100g.carbs_g": [
+        "available_carbohydrates"
+      ],
       "nutrition_and_sustainability.vitamins": [
         "nrv"
       ],
@@ -10149,7 +10589,10 @@
     },
     "macros_note": {
       "it": "I carboidrati disponibili seguono le tabelle CREA e BDA-IEO: sono espressi come monosaccaridi, cioè l'amido conta 1,1 volte il suo peso (l'acqua che si lega durante la digestione). Per i prodotti ricchi di amido, come cereali e castagne, il valore è quindi circa il 10% più alto della somma di amido e zuccheri, e acqua più nutrienti può superare di poco i 100 g. Le calorie sono calcolate su questo valore (3,75 kcal/g).",
-      "en": "Available carbohydrates follow the CREA and BDA-IEO tables: they are expressed as monosaccharides, so starch counts 1.1 times its weight (the water bound during digestion). For starchy products such as grains and chestnuts the value is therefore about 10% higher than starch plus sugars, and water plus nutrients can slightly exceed 100 g. Calories are computed from this value (3.75 kcal/g)."
+      "en": "Available carbohydrates follow the CREA and BDA-IEO tables: they are expressed as monosaccharides, so starch counts 1.1 times its weight (the water bound during digestion). For starchy products such as grains and chestnuts the value is therefore about 10% higher than starch plus sugars, and water plus nutrients can slightly exceed 100 g. Calories are computed from this value (3.75 kcal/g).",
+      "min_starch_g": 10,
+      "min_gap_g": 1,
+      "glossary": "available_carbohydrates"
     }
   },
   "shared_descriptions_corpus": {
@@ -10253,17 +10696,21 @@
       "it": "Profondità di semina 0,5 cm; distanze 70 cm tra le file e 50 cm sulla fila; posizione soleggiata; ODC indica la semina con luna calante (pratica tradizionale).",
       "en": "Sowing depth 0.5 cm; spacing 70 cm between rows and 50 cm within the row; sunny position; ODC suggests sowing with a waning moon (traditional practice)."
     },
-    "curve_basis__curve_completed_with_database_rule_metadata_seasonality": {
-      "it": "Curva completata con la regola del database (metadata.seasonality_curve_method).",
-      "en": "Curve completed with the database rule (metadata.seasonality_curve_method)."
+    "curve_basis__curve_completed_with_database_rule_early_season": {
+      "it": "Curva completata con la regola del database: primizia nel primo mese di stagione, piena stagione nei mesi di raccolta in pieno campo o in quelli centrali, fine stagione nell'ultimo.",
+      "en": "Curve completed with the database rule: early season in the first month, peak in the open-field harvest months or the central ones, end of season in the last month."
     },
-    "curve_basis__curve_completed_with_database_rule_metadata_seasonality_2": {
-      "it": "Curva completata con la regola del database (metadata.seasonality_curve_method): case1:nord, case1:centro, case1:sud_isole",
-      "en": "Curve completed with the database rule (metadata.seasonality_curve_method): case1:nord, case1:centro, case1:sud_isole"
+    "curve_basis__curve_completed_with_database_rule_early_season_3": {
+      "it": "Curva completata con la regola del database: primizia nel primo mese di stagione, piena stagione nei mesi di raccolta in pieno campo o in quelli centrali, fine stagione nell'ultimo. Stagione allineata ai mesi di raccolta in pieno campo (tutte le macro-aree).",
+      "en": "Curve completed with the database rule: early season in the first month, peak in the open-field harvest months or the central ones, end of season in the last month. Season aligned with the open-field harvest months (all macro-areas)."
     },
-    "curve_basis__curve_from_vote_between_sources_gaps_closed": {
-      "it": "Curva dal voto tra le fonti; buchi chiusi con la regola del database (metadata.seasonality_curve_method): case2:sud_isole:7",
-      "en": "Curve from the vote between sources; gaps closed with the database rule (metadata.seasonality_curve_method): case2:sud_isole:7"
+    "curve_basis__curve_from_vote_between_sources": {
+      "it": "Curva dal voto tra le fonti.",
+      "en": "Curve from the vote between sources."
+    },
+    "curve_basis__curve_from_vote_between_sources_isolated_off": {
+      "it": "Curva dal voto tra le fonti. Mesi isolati fuori stagione segnati come fine stagione: Sud e Isole a luglio.",
+      "en": "Curve from the vote between sources. Isolated off-season months marked as end of season: South and Islands in July."
     },
     "derivation__optimal_storage_conditions_usda_hb66_uc_davis": {
       "it": "condizioni ottimali di conservazione USDA HB66 / UC Davis (scheda post-raccolta)",
@@ -11159,7 +11606,7 @@
           "en": "Harvested in Apr-Aug; it stays in season for several more months thanks to its natural keeping quality (cellar, fruit store or dried), without heated greenhouses."
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -13755,7 +14202,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -16201,7 +16648,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -25673,7 +26120,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -30149,7 +30596,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_from_vote_between_sources_gaps_closed"
+          "corpus_ref": "curve_basis__curve_from_vote_between_sources_isolated_off"
         }
       },
       "agricultural_calendar_italy": {
@@ -32627,7 +33074,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_from_vote_between_sources_gaps_closed"
+          "corpus_ref": "curve_basis__curve_from_vote_between_sources_isolated_off"
         }
       },
       "agricultural_calendar_italy": {
@@ -35089,7 +35536,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_from_vote_between_sources_gaps_closed"
+          "corpus_ref": "curve_basis__curve_from_vote_between_sources_isolated_off"
         }
       },
       "agricultural_calendar_italy": {
@@ -37295,8 +37742,11 @@
           }
         },
         "curve_basis": {
-          "it": "Curva dal voto tra le fonti; buchi chiusi con la regola del database (metadata.seasonality_curve_method): case2:nord:5, case2:centro:5",
-          "en": "Curve from the vote between sources; gaps closed with the database rule (metadata.seasonality_curve_method): case2:nord:5, case2:centro:5"
+          "corpus_ref": "curve_basis__curve_from_vote_between_sources",
+          "specific_addition": {
+            "it": "Mesi isolati fuori stagione segnati come fine stagione: Nord a maggio; Centro a maggio.",
+            "en": "Isolated off-season months marked as end of season: North in May; Centre in May."
+          }
         }
       },
       "agricultural_calendar_italy": {
@@ -39578,7 +40028,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -41575,8 +42025,11 @@
           }
         },
         "curve_basis": {
-          "it": "Curva dal voto tra le fonti; buchi chiusi con la regola del database (metadata.seasonality_curve_method): case2:nord:5, case2:centro:5",
-          "en": "Curve from the vote between sources; gaps closed with the database rule (metadata.seasonality_curve_method): case2:nord:5, case2:centro:5"
+          "corpus_ref": "curve_basis__curve_from_vote_between_sources",
+          "specific_addition": {
+            "it": "Mesi isolati fuori stagione segnati come fine stagione: Nord a maggio; Centro a maggio.",
+            "en": "Isolated off-season months marked as end of season: North in May; Centre in May."
+          }
         }
       },
       "agricultural_calendar_italy": {
@@ -43566,7 +44019,7 @@
           "corpus_ref": "availability_note__keeps_naturally_for_long_time_available_season"
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -45718,7 +46171,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality_2"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season_3"
         }
       },
       "agricultural_calendar_italy": {
@@ -47790,7 +48243,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -49693,8 +50146,11 @@
           }
         },
         "curve_basis": {
-          "it": "Curva completata con la regola del database (metadata.seasonality_curve_method): case2:nord:1, case2:nord:2",
-          "en": "Curve completed with the database rule (metadata.seasonality_curve_method): case2:nord:1, case2:nord:2"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season",
+          "specific_addition": {
+            "it": "Mesi isolati fuori stagione segnati come fine stagione: Nord a gennaio e febbraio.",
+            "en": "Isolated off-season months marked as end of season: North in January and February."
+          }
         }
       },
       "agricultural_calendar_italy": {
@@ -53887,8 +54343,11 @@
           "corpus_ref": "availability_note__keeps_naturally_for_long_time_available_season"
         },
         "curve_basis": {
-          "it": "Curva completata con la regola del database (metadata.seasonality_curve_method): case2:nord:9, case2:centro:9, case2:sud_isole:9",
-          "en": "Curve completed with the database rule (metadata.seasonality_curve_method): case2:nord:9, case2:centro:9, case2:sud_isole:9"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season",
+          "specific_addition": {
+            "it": "Mesi isolati fuori stagione segnati come fine stagione: Nord a settembre; Centro a settembre; Sud e Isole a settembre.",
+            "en": "Isolated off-season months marked as end of season: North in September; Centre in September; South and Islands in September."
+          }
         }
       },
       "agricultural_calendar_italy": {
@@ -56167,7 +56626,7 @@
           "corpus_ref": "availability_note__keeps_naturally_for_long_time_available_season"
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -58477,7 +58936,7 @@
           "corpus_ref": "availability_note__keeps_naturally_for_long_time_available_season"
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -61289,7 +61748,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -65760,8 +66219,11 @@
           }
         },
         "curve_basis": {
-          "it": "Curva dal voto tra le fonti; buchi chiusi con la regola del database (metadata.seasonality_curve_method): case2:nord:8, case2:centro:8",
-          "en": "Curve from the vote between sources; gaps closed with the database rule (metadata.seasonality_curve_method): case2:nord:8, case2:centro:8"
+          "corpus_ref": "curve_basis__curve_from_vote_between_sources",
+          "specific_addition": {
+            "it": "Mesi isolati fuori stagione segnati come fine stagione: Nord ad agosto; Centro ad agosto.",
+            "en": "Isolated off-season months marked as end of season: North in August; Centre in August."
+          }
         }
       },
       "agricultural_calendar_italy": {
@@ -68223,7 +68685,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -70458,7 +70920,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -72537,7 +72999,7 @@
           "corpus_ref": "availability_note__keeps_naturally_for_long_time_available_season"
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -74619,7 +75081,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality_2"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season_3"
         }
       },
       "agricultural_calendar_italy": {
@@ -76865,7 +77327,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -81739,7 +82201,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -84438,7 +84900,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -86914,8 +87376,11 @@
           }
         },
         "curve_basis": {
-          "it": "Curva completata con la regola del database (metadata.seasonality_curve_method): case1:nord",
-          "en": "Curve completed with the database rule (metadata.seasonality_curve_method): case1:nord"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season",
+          "specific_addition": {
+            "it": "Stagione allineata ai mesi di raccolta in pieno campo (Nord).",
+            "en": "Season aligned with the open-field harvest months (North)."
+          }
         }
       },
       "agricultural_calendar_italy": {
@@ -89665,8 +90130,11 @@
           }
         },
         "curve_basis": {
-          "it": "Curva dal voto tra le fonti; buchi chiusi con la regola del database (metadata.seasonality_curve_method): case2:nord:3, case2:centro:3, case2:sud_isole:3",
-          "en": "Curve from the vote between sources; gaps closed with the database rule (metadata.seasonality_curve_method): case2:nord:3, case2:centro:3, case2:sud_isole:3"
+          "corpus_ref": "curve_basis__curve_from_vote_between_sources",
+          "specific_addition": {
+            "it": "Mesi isolati fuori stagione segnati come fine stagione: Nord a marzo; Centro a marzo; Sud e Isole a marzo.",
+            "en": "Isolated off-season months marked as end of season: North in March; Centre in March; South and Islands in March."
+          }
         }
       },
       "agricultural_calendar_italy": {
@@ -91694,7 +92162,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -93988,7 +94456,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -96217,8 +96685,11 @@
           }
         },
         "curve_basis": {
-          "it": "Curva dal voto tra le fonti; buchi chiusi con la regola del database (metadata.seasonality_curve_method): case2:centro:1, case2:centro:2",
-          "en": "Curve from the vote between sources; gaps closed with the database rule (metadata.seasonality_curve_method): case2:centro:1, case2:centro:2"
+          "corpus_ref": "curve_basis__curve_from_vote_between_sources",
+          "specific_addition": {
+            "it": "Mesi isolati fuori stagione segnati come fine stagione: Centro a gennaio e febbraio.",
+            "en": "Isolated off-season months marked as end of season: Centre in January and February."
+          }
         }
       },
       "agricultural_calendar_italy": {
@@ -98344,8 +98815,11 @@
           }
         },
         "curve_basis": {
-          "it": "Curva completata con la regola del database (metadata.seasonality_curve_method): case2:centro:1, case2:centro:2",
-          "en": "Curve completed with the database rule (metadata.seasonality_curve_method): case2:centro:1, case2:centro:2"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season",
+          "specific_addition": {
+            "it": "Mesi isolati fuori stagione segnati come fine stagione: Centro a gennaio e febbraio.",
+            "en": "Isolated off-season months marked as end of season: Centre in January and February."
+          }
         }
       },
       "agricultural_calendar_italy": {
@@ -100355,7 +100829,7 @@
           "corpus_ref": "availability_note__keeps_naturally_for_long_time_available_season"
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -102622,7 +103096,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -105102,8 +105576,11 @@
           }
         },
         "curve_basis": {
-          "it": "Curva dal voto tra le fonti; buchi chiusi con la regola del database (metadata.seasonality_curve_method): case2:sud_isole:7, case2:sud_isole:8",
-          "en": "Curve from the vote between sources; gaps closed with the database rule (metadata.seasonality_curve_method): case2:sud_isole:7, case2:sud_isole:8"
+          "corpus_ref": "curve_basis__curve_from_vote_between_sources",
+          "specific_addition": {
+            "it": "Mesi isolati fuori stagione segnati come fine stagione: Sud e Isole a luglio e agosto.",
+            "en": "Isolated off-season months marked as end of season: South and Islands in July and August."
+          }
         }
       },
       "agricultural_calendar_italy": {
@@ -109153,8 +109630,11 @@
           }
         },
         "curve_basis": {
-          "it": "Curva completata con la regola del database (metadata.seasonality_curve_method): case2:nord:8, case2:centro:1, case2:centro:8",
-          "en": "Curve completed with the database rule (metadata.seasonality_curve_method): case2:nord:8, case2:centro:1, case2:centro:8"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season",
+          "specific_addition": {
+            "it": "Mesi isolati fuori stagione segnati come fine stagione: Nord ad agosto; Centro a gennaio e agosto.",
+            "en": "Isolated off-season months marked as end of season: North in August; Centre in January and August."
+          }
         }
       },
       "agricultural_calendar_italy": {
@@ -113792,8 +114272,11 @@
           }
         },
         "curve_basis": {
-          "it": "Curva completata con la regola del database (metadata.seasonality_curve_method): case1:nord, case1:centro",
-          "en": "Curve completed with the database rule (metadata.seasonality_curve_method): case1:nord, case1:centro"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season",
+          "specific_addition": {
+            "it": "Stagione allineata ai mesi di raccolta in pieno campo (Nord e Centro).",
+            "en": "Season aligned with the open-field harvest months (North and Centre)."
+          }
         }
       },
       "agricultural_calendar_italy": {
@@ -115805,7 +116288,7 @@
           "corpus_ref": "availability_note__keeps_naturally_for_long_time_available_season"
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -122424,7 +122907,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -128451,7 +128934,7 @@
           "corpus_ref": "availability_note__keeps_naturally_for_long_time_available_season"
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -130962,7 +131445,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -135087,7 +135570,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -137548,7 +138031,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality_2"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season_3"
         }
       },
       "agricultural_calendar_italy": {
@@ -141784,7 +142267,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality_2"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season_3"
         }
       },
       "agricultural_calendar_italy": {
@@ -150708,7 +151191,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -152746,7 +153229,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality_2"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season_3"
         }
       },
       "agricultural_calendar_italy": {
@@ -154835,8 +155318,11 @@
           }
         },
         "curve_basis": {
-          "it": "Curva completata con la regola del database (metadata.seasonality_curve_method): case1:sud_isole",
-          "en": "Curve completed with the database rule (metadata.seasonality_curve_method): case1:sud_isole"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season",
+          "specific_addition": {
+            "it": "Stagione allineata ai mesi di raccolta in pieno campo (Sud e Isole).",
+            "en": "Season aligned with the open-field harvest months (South and Islands)."
+          }
         }
       },
       "agricultural_calendar_italy": {
@@ -159381,7 +159867,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -171541,7 +172027,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -173683,7 +174169,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -175633,7 +176119,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -177594,7 +178080,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -179195,7 +179681,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -182275,7 +182761,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -183910,8 +184396,11 @@
           }
         },
         "curve_basis": {
-          "it": "Curva completata con la regola del database (metadata.seasonality_curve_method): case1:centro, case1:sud_isole",
-          "en": "Curve completed with the database rule (metadata.seasonality_curve_method): case1:centro, case1:sud_isole"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season",
+          "specific_addition": {
+            "it": "Stagione allineata ai mesi di raccolta in pieno campo (Centro e Sud e Isole).",
+            "en": "Season aligned with the open-field harvest months (Centre and South and Islands)."
+          }
         }
       },
       "agricultural_calendar_italy": {
@@ -185542,7 +186031,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -186747,7 +187236,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -189627,7 +190116,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -193064,7 +193553,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -194875,7 +195364,7 @@
           "en": "Harvested in May-Aug; it stays in season for several more months thanks to its natural keeping quality (cellar, fruit store or dried), without heated greenhouses."
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -196229,7 +196718,7 @@
           "corpus_ref": "availability_note__harvested_may_jul_stays_season_for_several"
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -197721,7 +198210,7 @@
           "corpus_ref": "availability_note__harvested_may_jul_stays_season_for_several"
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -199201,7 +199690,7 @@
           "en": "Harvested in Sep-Oct; it stays in season for several more months thanks to its natural keeping quality (cellar, fruit store or dried), without heated greenhouses."
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -200602,7 +201091,7 @@
           "corpus_ref": "availability_note__harvested_may_jul_stays_season_for_several"
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -201910,7 +202399,7 @@
           "en": "Harvested in Aug-Oct; it stays in season for several more months thanks to its natural keeping quality (cellar, fruit store or dried), without heated greenhouses."
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -210821,7 +211310,7 @@
           "url": "https://www.naturasi.it/frutta-verdura-di-stagione/cipollotto"
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -212042,7 +212531,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -213170,7 +213659,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -214600,7 +215089,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -215840,7 +216329,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -217101,7 +217590,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -217371,7 +217860,8 @@
           "proteins_g": 1.3,
           "fats_g": 0.3,
           "fiber_g": 3.2,
-          "salt_g": 0.013
+          "salt_g": 0.013,
+          "carbs_note": "inulin"
         },
         "vitamins": [
           {
@@ -217961,6 +218451,12 @@
           "glossary_id": "ethylene",
           "fields": [
             "ripening_and_storage.ethylene_compatibility.compatibility_notes"
+          ]
+        },
+        {
+          "glossary_id": "inulin",
+          "fields": [
+            "nutrition_and_sustainability.macros_per_100g.carbs_g"
           ]
         },
         {
@@ -219752,7 +220248,7 @@
           "corpus_ref": "availability_note__keeps_naturally_for_long_time_available_season"
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -221082,7 +221578,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -221316,7 +221812,8 @@
           "proteins_g": 1.08,
           "fats_g": 0.16,
           "fiber_g": 2.3,
-          "salt_g": 0.03
+          "salt_g": 0.03,
+          "carbs_note": "carbs_by_difference"
         },
         "vitamins": [
           {
@@ -221994,6 +222491,12 @@
         ]
       },
       "help_refs": [
+        {
+          "glossary_id": "carbs_by_difference",
+          "fields": [
+            "nutrition_and_sustainability.macros_per_100g.carbs_g"
+          ]
+        },
         {
           "glossary_id": "chilling_injury",
           "fields": [
@@ -223472,7 +223975,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -224740,7 +225243,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -226005,7 +226508,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -227163,7 +227666,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -228384,7 +228887,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -229250,7 +229753,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -229494,7 +229997,8 @@
           "proteins_g": 1.93,
           "fats_g": 0.19,
           "fiber_g": 3.2,
-          "salt_g": 0.018
+          "salt_g": 0.018,
+          "carbs_note": "carbs_by_difference"
         },
         "vitamins": [
           {
@@ -230209,6 +230713,12 @@
       },
       "help_refs": [
         {
+          "glossary_id": "carbs_by_difference",
+          "fields": [
+            "nutrition_and_sustainability.macros_per_100g.carbs_g"
+          ]
+        },
+        {
           "glossary_id": "chilling_injury",
           "fields": [
             "ripening_and_storage.postharvest_physiology.chilling_injury",
@@ -230490,7 +231000,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -231463,7 +231973,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -232118,7 +232628,7 @@
           "corpus_ref": "availability_note__keeps_naturally_for_long_time_available_season"
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -232891,7 +233401,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -239282,7 +239792,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -242058,7 +242568,7 @@
           ]
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -243271,7 +243781,7 @@
           ]
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -248434,7 +248944,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -249741,7 +250251,7 @@
           "corpus_ref": "availability_note__keeps_naturally_for_long_time_available_season"
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -251018,7 +251528,7 @@
           "en": "Harvested in Aug-Sep; it stays in season for several more months thanks to its natural keeping quality (cellar, fruit store or dried), without heated greenhouses."
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -252393,7 +252903,7 @@
           "corpus_ref": "availability_note__keeps_naturally_for_long_time_available_season"
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -253700,7 +254210,7 @@
           "corpus_ref": "availability_note__keeps_naturally_for_long_time_available_season"
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -255277,7 +255787,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -258076,7 +258586,8 @@
           "proteins_g": 0.46,
           "fats_g": 0.13,
           "fiber_g": 3.6,
-          "salt_g": 0.005
+          "salt_g": 0.005,
+          "carbs_note": "carbs_by_difference"
         },
         "vitamins": [
           {
@@ -258839,6 +259350,12 @@
         ]
       },
       "help_refs": [
+        {
+          "glossary_id": "carbs_by_difference",
+          "fields": [
+            "nutrition_and_sustainability.macros_per_100g.carbs_g"
+          ]
+        },
         {
           "glossary_id": "chilling_injury",
           "fields": [
@@ -260437,7 +260954,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -262462,7 +262979,7 @@
           ]
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -263624,7 +264141,7 @@
           "corpus_ref": "availability_note__keeps_naturally_for_long_time_available_season"
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -264616,7 +265133,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -265763,7 +266280,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -267558,7 +268075,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -268424,7 +268941,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -269300,7 +269817,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -270652,7 +271169,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -271792,7 +272309,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -272923,7 +273440,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -273805,7 +274322,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -275030,7 +275547,7 @@
           }
         },
         "curve_basis": {
-          "corpus_ref": "curve_basis__curve_completed_with_database_rule_metadata_seasonality"
+          "corpus_ref": "curve_basis__curve_completed_with_database_rule_early_season"
         }
       },
       "agricultural_calendar_italy": {
@@ -277398,7 +277915,8 @@
           "proteins_g": 3.31,
           "fats_g": 0.41,
           "fiber_g": 2.3,
-          "salt_g": 0.045
+          "salt_g": 0.045,
+          "carbs_note": "carbs_by_difference"
         },
         "vitamins": [
           {
@@ -278022,6 +278540,12 @@
         ]
       },
       "help_refs": [
+        {
+          "glossary_id": "carbs_by_difference",
+          "fields": [
+            "nutrition_and_sustainability.macros_per_100g.carbs_g"
+          ]
+        },
         {
           "glossary_id": "chilling_injury",
           "fields": [

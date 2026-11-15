@@ -72,6 +72,25 @@ def main():
         sys.exit(1)
     db = load_json(DATA / "database.json")                     # full texts for the logical checks
 
+    # glossary ("?" help): term/short/text in IT and EN, optional footnote (short line on the product page)
+    gloss = db["metadata"].get("glossary") or {}
+
+    def bil_ok(v):
+        return isinstance(v, dict) and all(isinstance(v.get(l), str) and v[l].strip() for l in ("it", "en"))
+    for gid, e in gloss.items():
+        for f in ("term", "short", "text"):
+            if not bil_ok(e.get(f)):
+                errors.append(f"[glossary] {gid}: {f} needs Italian and English text")
+        if "footnote" in e and not bil_ok(e["footnote"]):
+            errors.append(f"[glossary] {gid}: footnote needs Italian and English text")
+        for s in e.get("see_also") or []:
+            if s not in gloss:
+                errors.append(f"[glossary] {gid}: see_also points to a missing entry '{s}'")
+    for it in db.get("items", []):
+        note = ((it.get("nutrition_and_sustainability") or {}).get("macros_per_100g") or {}).get("carbs_note")
+        if note and note not in gloss:
+            errors.append(f"{it.get('id')}: macros_per_100g.carbs_note '{note}' is not a glossary entry")
+
     items = db.get("items", [])
     ids = [it.get("id") for it in items]
     dup = {i for i in ids if ids.count(i) > 1}

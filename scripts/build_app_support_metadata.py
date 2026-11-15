@@ -89,8 +89,8 @@ except ImportError:
 # Database release: metadata.version is the GitHub release tag of peak-season-database (semantic versioning: patch =
 # text/data fixes, minor = new fields or content, major = breaking format changes). schema_version is the JSON format
 # and changes independently. Bump both values here when preparing a release, then publish the tag v<DB_VERSION>.
-DB_VERSION = "1.1.1"
-DB_RELEASE_DATE = "2026-11-14"
+DB_VERSION = "1.1.2"
+DB_RELEASE_DATE = "2026-11-15"
 DISPLAY = load_json(ROOT / "scripts" / "config" / "source_display.json")["sources"]   # editore, titolo, logo condiviso
 
 
@@ -263,7 +263,11 @@ def main():
         "en": "Available carbohydrates follow the CREA and BDA-IEO tables: they are expressed as monosaccharides, so starch counts 1.1 times "
               "its weight (the water bound during digestion). For starchy products such as grains and chestnuts the value is therefore about "
               "10% higher than starch plus sugars, and water plus nutrients can slightly exceed 100 g. Calories are computed from this value "
-              "(3.75 kcal/g)."}
+              "(3.75 kcal/g).",
+        # when the app shows the note: starch_g >= min_starch_g AND carbs_g - starch_g - sugars_g >= min_gap_g. Starchy products
+        # whose carbs come from a source without the convention (e.g. USDA values: oat, buckwheat, sweet potato, saffron) have no
+        # gap and are left out; scorzonera's gap comes from inulin, not from the convention, and its starch is below the minimum.
+        "min_starch_g": 10, "min_gap_g": 1, "glossary": "available_carbohydrates"}
     # perishability ramp (green -> red), used by the app for the perishability badge and filters
     PERISH_COLOR = {1: "#2E7D32", 2: "#66BB6A", 3: "#F9A825", 4: "#EF6C00", 5: "#C62828", 6: "#8E1B1B"}   # 6 = extremely high
     for lv in ((m.get("perishability_legend") or {}).get("levels") or []):

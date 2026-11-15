@@ -14,78 +14,13 @@ import re
 
 from common import DATA, ROOT, finalize_completeness, load_json, save_json
 
-L = lambda it, en: {"it": it, "en": en}  # noqa: E731
-VOCAB = {
-    "category": {"_glossary": None, "verdura": L("Verdura", "Vegetables"), "frutta": L("Frutta", "Fruit"),
-                 "erbe_spezie": L("Erbe e spezie", "Herbs and spices"), "funghi": L("Funghi", "Mushrooms"), "cereali": L("Cereali", "Grains")},
-    "botany.plant_part_used": {"_glossary": "scientific_name", "frutto": L("Frutto", "Fruit"), "foglia": L("Foglia", "Leaf"), "radice": L("Radice", "Root"),
-                               "tubero": L("Tubero", "Tuber"), "infiorescenza_bocciolo": L("Infiorescenza o bocciolo", "Flower head or bud"),
-                               "bulbo": L("Bulbo", "Bulb"), "fusto_costa": L("Fusto o costa", "Stem or stalk"), "seme": L("Seme", "Seed"),
-                               "fiore": L("Fiore", "Flower"), "fungo_carpoforo": L("Corpo fruttifero del fungo", "Mushroom fruiting body")},
-    "seasonality.state": {"_glossary": "seasonality_states", "primizie": L("Primizia", "Early season"), "in_season": L("Di stagione", "In season"),
-                          "peak_season": L("Piena stagione", "Peak season"), "end_of_season": L("Fine stagione", "End of season"),
-                          "out_of_season": L("Fuori stagione", "Out of season"), "not_applicable": L("Non coltivato nella zona", "Not grown in the area")},
-    "seasonality.italy_macro_areas": {"_glossary": "italy_macro_areas", "nord": L("Nord", "North"), "centro": L("Centro", "Centre"), "sud_isole": L("Sud e Isole", "South and Islands")},
-    "seasonality.eufic_climatic_zones": {"_glossary": "eufic_zones", "mediterranean": L("Mediterranea", "Mediterranean"), "continental": L("Continentale", "Continental"),
-                                         "atlantic": L("Atlantica", "Atlantic"), "boreal": L("Boreale", "Boreal"), "mountain": L("Alpina", "Alpine"),
-                                         "pannonian": L("Pannonica", "Pannonian")},
-    "seasonality.estimates": {"_glossary": "seasonality_estimate",
-                              "estimate": {**L("Stima dalla zona vicina", "Estimate from neighbouring zone"), "marker": "≈"},
-                              "not_grown": L("Non coltivato qui", "Not grown here"), "unknown": L("Dato non disponibile", "No data available")},
-    "seasonality.estimates.from": {"_glossary": "seasonality_estimate", "mediterranean": L("zona mediterranea", "Mediterranean zone"),
-                                   "continental": L("zona continentale", "Continental zone"), "atlantic": L("zona atlantica", "Atlantic zone"),
-                                   "boreal": L("zona boreale", "Boreal zone"), "mountain": L("zona alpina", "Alpine zone"), "pannonian": L("zona pannonica", "Pannonian zone"),
-                                   "italy_nord": L("Nord Italia", "Northern Italy"), "italy_sud_isole": L("Sud e Isole", "Southern Italy and Islands")},
-    "month": {"_glossary": None, **{str(i + 1): L(a, b) for i, (a, b) in enumerate(zip(
-        ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"],
-        ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]))}},
-    "ripening_and_storage.ripening_type": {"_glossary": None, "climaterico": {**L("Climaterico", "Climacteric"), "glossary": "climacteric"},
-                                           "non_climaterico": {**L("Non climaterico", "Non-climacteric"), "glossary": "non_climacteric"}},
-    "ripening_and_storage.primary_location": {"_glossary": "home_storage", "frigorifero": L("Frigorifero", "Fridge"),
-                                              "temperatura_ambiente": L("Temperatura ambiente", "Room temperature"), "luogo_fresco_buio": L("Luogo fresco e buio", "Cool, dark place")},
-    "class_scale": {"_glossary": "perishability", "_used_by": ["ripening_and_storage.postharvest_physiology.respiration_rate_class", "ripening_and_storage.ethylene_compatibility.ethylene_production_class"],
-                    "very_low": L("Molto bassa", "Very low"), "low": L("Bassa", "Low"), "moderate": L("Moderata", "Moderate"), "high": L("Alta", "High"),
-                    "very_high": L("Molto alta", "Very high"), "extremely_high": L("Elevatissima", "Extremely high")},
-    "ripening_and_storage.postharvest_physiology.freezing_susceptibility": {"_glossary": "freezing_susceptibility", "most": L("Molto sensibile al gelo", "Most susceptible"),
-                                                                           "moderate": L("Moderatamente sensibile", "Moderately susceptible"), "least": L("Poco sensibile", "Least susceptible")},
-    "ripening_and_storage.home_storage.location": {"_glossary": "home_storage", "fridge": L("In frigorifero", "In the fridge"),
-                                                   "counter_then_fridge": L("Fuori dal frigo finché matura, poi in frigo", "On the counter until ripe, then in the fridge"),
-                                                   "room_temperature": L("A temperatura ambiente", "At room temperature"), "cool_dry_pantry": L("In dispensa, al fresco e all'asciutto", "In a cool, dry pantry")},
-    "ripening_and_storage.postharvest_physiology.estimated_shelf_life_days.room_temp_mode": {"_glossary": "shelf_life_home", "days": L("Giorni in dispensa", "Days in the pantry"),
-                                                                                            "until_ripe": L("Fino a maturazione", "Until ripe"), "fridge_only": L("Solo frigorifero", "Fridge only")},
-    "ripening_and_storage.storage_compatibility.group": {"_glossary": "storage_compatibility", "1A": L("Verdure da frigo (0-2 °C, umidità alta)", "Cold vegetables (0-2 °C, high humidity)"),
-                                                         "1B": L("Frutta da frigo (0-2 °C)", "Cold fruit (0-2 °C)"), "2": L("Fresco, non freddo (7-10 °C)", "Cool, not cold (7-10 °C)"),
-                                                         "3": L("Ambiente fresco (13-18 °C)", "Cool room (13-18 °C)")},
-    "agricultural_calendar_italy.agronomic_params.sun_exposure": {"_glossary": None, "molto_soleggiato": L("Pieno sole", "Full sun"),
-                                                                  "soleggiato": L("Soleggiato", "Sunny"), "anche_mezzombra": L("Anche mezz'ombra", "Also partial shade")},
-    "agricultural_calendar_italy.agronomic_params.lunar_phase_advice": {"_glossary": None, "fase_crescente": L("Luna crescente (tradizione)", "Waxing moon (tradition)"),
-                                                                        "fase_calante": L("Luna calante (tradizione)", "Waning moon (tradition)"), "indifferente": L("Indifferente", "Not relevant")},
-    "images.image_details.view_type": {"_glossary": None, "full_frame": L("Prodotto a tutto campo", "Full frame"), "isolated_background": L("Su sfondo", "On plain background"),
-                                       "plant_in_field": L("Pianta", "Plant"), "botanical_plate": L("Tavola botanica", "Botanical plate"),
-                                       "cut_section": L("In sezione", "Cut"), "other": L("Altro", "Other")},
-    "botany.upov_register": {"_glossary": "scientific_name", "VEG": L("Specie ortive", "Vegetable species"), "AGR": L("Specie agricole", "Agricultural species"), "FRU": L("Specie da frutto", "Fruit species")},
-    "nutrition_and_sustainability.bioactive_compounds.group": {"_glossary": "polyphenols", "carotenoidi": L("Carotenoidi", "Carotenoids"), "flavonoidi": L("Flavonoidi", "Flavonoids"),
-                                                               "acidi_fenolici": L("Acidi fenolici", "Phenolic acids"), "altri_polifenoli": L("Altri polifenoli", "Other polyphenols"),
-                                                               "polifenoli_totali": L("Polifenoli totali", "Total polyphenols")},
-    "ripening_and_storage.ethylene_compatibility.ethylene_production_class": {"_glossary": "ethylene",
-        "very_low": {**L("Produzione molto bassa", "Very low production"), "color_hex": "#2E7D32"},
-        "low": {**L("Produzione bassa", "Low production"), "color_hex": "#66BB6A"},
-        "moderate": {**L("Produzione moderata", "Moderate production"), "color_hex": "#F9A825"},
-        "high": {**L("Produzione alta", "High production"), "color_hex": "#EF6C00"},
-        "very_high": {**L("Produzione molto alta", "Very high production"), "color_hex": "#C62828"}},
-    "ripening_and_storage.ethylene_compatibility.sensitive_to_ethylene": {"_glossary": "ethylene",
-        "true": {**L("Sensibile all'etilene", "Sensitive to ethylene"), "color_hex": "#F9A825"},
-        "false": {**L("Non sensibile", "Not sensitive"), "color_hex": "#2E7D32"}},
-    "sustainability_level": {"_glossary": "carbon_footprint", "_used_by": ["nutrition_and_sustainability.environmental_footprint.sustainability_rating.carbon_level",
-                                                                          "nutrition_and_sustainability.environmental_footprint.sustainability_rating.water_level"],
-                             "low": L("Bassa", "Low"), "medium": L("Media", "Medium"), "high": L("Alta", "High")},
-    "match": {"_glossary": "data_quality", "_used_by": ["*.match", "botany.upov_match"], "exact": L("Esatto", "Exact"), "approx": L("Approssimato", "Approximate")},
-    "nutrition_and_sustainability.allergens_eu.annex_ii_number": {"_glossary": "allergens", **{str(k): L(a, b) for k, (a, b) in {
-        1: ("Cereali contenenti glutine", "Cereals containing gluten"), 2: ("Crostacei", "Crustaceans"), 3: ("Uova", "Eggs"), 4: ("Pesce", "Fish"),
-        5: ("Arachidi", "Peanuts"), 6: ("Soia", "Soybeans"), 7: ("Latte", "Milk"), 8: ("Frutta a guscio", "Tree nuts"), 9: ("Sedano", "Celery"),
-        10: ("Senape", "Mustard"), 11: ("Semi di sesamo", "Sesame seeds"), 12: ("Anidride solforosa e solfiti", "Sulphur dioxide and sulphites"),
-        13: ("Lupini", "Lupin"), 14: ("Molluschi", "Molluscs")}.items()}},
-}
+# labels of the coded values: scripts/config/vocabulary.json (edited with the Admin Studio, Vocabulary tab)
+VOCAB = load_json(ROOT / "scripts" / "config" / "vocabulary.json")["vocabulary"]
+# products whose carbohydrates need their own explanation under the macros (macros_per_100g.carbs_note = glossary id):
+# black salsify's available carbohydrates include ~5 g that are neither starch nor sugars, most likely inulin; the USDA
+# products' carbohydrates are "by difference" minus fibre, so they exceed starch + sugars (organic acids and the like)
+CARBS_NOTE = {"scorzonera_black_salsify": "inulin", "navone_swede": "carbs_by_difference", "gombo_okra": "carbs_by_difference",
+              "mirtillo_rosso_lingonberry": "carbs_by_difference", "cardoncello_king_oyster_mushroom": "carbs_by_difference"}
 FIELD_HELP = {
     "ripening_and_storage.ripening_type": ["climacteric", "non_climacteric"],
     "ripening_and_storage.ripening_badge_label": ["climacteric", "non_climacteric"],
@@ -109,6 +44,7 @@ FIELD_HELP = {
     "seasonality.estimates": ["seasonality_estimate", "eufic_zones", "italy_macro_areas"],
     "agricultural_calendar_italy": ["sowing_transplant"],
     "nutrition_and_sustainability.edible_portion_percentage": ["edible_portion"],
+    "nutrition_and_sustainability.macros_per_100g.carbs_g": ["available_carbohydrates"],
     "nutrition_and_sustainability.vitamins": ["nrv"],
     "nutrition_and_sustainability.minerals": ["nrv"],
     "nutrition_and_sustainability.nutrition_claims_eu": ["nutrition_claims"],
@@ -156,7 +92,9 @@ def main():
     m = db["metadata"]
     m["glossary"] = {e["id"]: {"term": e["term"], "short": e["short"], "text": e["text"],
                                "sources": [{"key": s, "name": src.get(s, {}).get("name"), "url": src.get(s, {}).get("url")} for s in e["sources"]],
-                               "see_also": e.get("see_also", [])} for e in gl}
+                               "see_also": e.get("see_also", []),
+                               # optional very short line shown on the product page before the "?" (the app falls back to short)
+                               **({"footnote": e["footnote"]} if e.get("footnote") else {})} for e in gl}
     # groups written by later scripts (botany.family by build_app_support_metadata.py) are kept, so the order of reruns
     # does not matter
     kept = {k: v for k, v in (m.get("vocabulary") or {}).items() if k not in VOCAB and k in ("botany.family",)}
@@ -222,6 +160,12 @@ def main():
                 rating.pop("tips_topic", None)
         if ef.get("greenhouse_comparison"):
             add("greenhouse", "nutrition_and_sustainability.environmental_footprint.greenhouse_comparison")
+        mac = n.get("macros_per_100g") or {}
+        if it["id"] in CARBS_NOTE:
+            mac["carbs_note"] = CARBS_NOTE[it["id"]]
+            add(CARBS_NOTE[it["id"]], "nutrition_and_sustainability.macros_per_100g.carbs_g")
+        else:
+            mac.pop("carbs_note", None)
         for f in TEXT_FIELDS:
             t = get(it, f)
             txt = " ".join(t.values()) if isinstance(t, dict) else ""
