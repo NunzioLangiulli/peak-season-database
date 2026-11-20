@@ -8,6 +8,14 @@ Img.open = async id => {
   Img.cur = id; Img.item = await api.get('/api/images/item?id=' + encodeURIComponent(id));
   Img.primary = Img.item.primary; Img.vt = {}; render();
 };
+Img.del = async (f, isP) => {
+  if (Img.dirty()) return msg('Save or undo the pending changes of this product before deleting a photo.', true);
+  if (!confirm('Delete ' + f + '?\n\nThe photo file, its author/licence record and its place in the gallery are removed' +
+    (isP ? '; the primary photo is then chosen automatically (first "whole" photo)' : '') +
+    '. A backup copy is kept in data/_snapshots.')) return;
+  const res = await api.post('/api/images/delete', {id: Img.cur, filename: f});
+  if (await afterSave(res, 'Photo ' + f + ' deleted')) { await Img.load(); await Img.open(Img.cur); }
+};
 Img.dirty = () => (Img.item && Img.primary !== Img.item.primary ? 1 : 0) + Object.keys(Img.vt).length;
 
 Studio.tabs.images = {
@@ -33,12 +41,13 @@ Studio.tabs.images = {
       const c = document.createElement('div'); c.className = 'ph' + (isP ? ' primary' : '') + ((Img.vt[f] || (isP && Img.primary !== it.primary)) ? ' changed' : '');
       c.innerHTML = `<img loading="lazy" src="/img/${esc(f)}" alt="${esc(f)}">
         <div class="c"><div class="meta" style="margin:0;justify-content:space-between"><b>${esc(f.replace(it.id + '_', '#').replace('.jpg', ''))}</b>
-        <span class="star ${isP ? 'on' : ''}" title="Set as primary photo">★</span></div>
+        <span><button class="btn small del" title="Delete this photo">🗑</button> <span class="star ${isP ? 'on' : ''}" title="Set as primary photo">★</span></span></div>
         <div class="credit" title="${esc((d.author || '') + ' · ' + (d.license || ''))}">${esc(d.author || 'author ?')} · ${esc(d.license || 'licence ?')}</div>
         ${(d.flags || []).length ? '<div class="no">Flagged: ' + esc(d.flags.join(', ')) + '</div>' : ''}
         <select>${it.view_types.map(v => `<option value="${v}" ${v === vt ? 'selected' : ''}>${VT_LABEL[v] || v}</option>`).join('')}</select></div>`;
       c.querySelector('img').onclick = () => window.open('/img/' + f + '?full=1', '_blank');
       c.querySelector('.star').onclick = () => { Img.primary = f; render(); };
+      c.querySelector('.del').onclick = () => Img.del(f, isP);
       c.querySelector('select').onchange = e => { if (e.target.value === d.view_type) delete Img.vt[f]; else Img.vt[f] = e.target.value; refreshDirty(); c.classList.add('changed'); };
       grid.append(c);
     });

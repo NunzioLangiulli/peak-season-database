@@ -419,6 +419,9 @@ class Handler(BaseHTTPRequestHandler):
                 res = copy_save(data)
             elif p == "/api/images/save":
                 res = guarded([DB, images.META, images.MANUAL], lambda: images.save(data), sync_args=())  # nuova miniatura principale
+            elif p == "/api/images/delete":             # the photo file is in the backup list: restored if validation fails
+                res = guarded([DB, images.META, images.MANUAL, images.photo_path(data["id"], data["filename"])],
+                              lambda: images.delete(data), sync_args=())
             elif p == "/api/images/download":
                 res = guarded([DB, images.META, images.MANUAL], lambda: images.download(data), sync_args=())
             elif p == "/api/icons/save":

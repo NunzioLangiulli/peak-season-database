@@ -147,3 +147,32 @@ details.sec details.sec details.sec>summary{background:none;border:0;border-bott
 .row.locked{background:#fafbf8}
 .lim{font-size:11px;color:var(--m)}.lim.over{color:var(--err);font-weight:600}
 .warnline{color:var(--warn);font-size:12px;margin:4px 0}
+/* dark mode (header button; choice kept in localStorage, default = system setting) */
+#theme{font-size:16px;line-height:1;padding:6px 10px}
+:root[data-theme=dark]{--g:#6cc08b;--gl:#1e2a22;--bg:#111713;--b:#2e3a31;--t:#e2eae3;--m:#9aa89c;--w:#192119;--warn:#e8a06c;--err:#f19a9a;color-scheme:dark}
+[data-theme=dark] input,[data-theme=dark] textarea,[data-theme=dark] select{background:#141b16;color:var(--t);border-color:var(--b)}
+[data-theme=dark] nav button{color:var(--t)}
+[data-theme=dark] nav button.on,[data-theme=dark] .btn.primary,[data-theme=dark] .plist div.on,[data-theme=dark] .qhelp:hover{background:#2e7d4f;border-color:#2e7d4f;color:#fff}
+[data-theme=dark] .btn{background:#29342c;color:var(--t)}
+[data-theme=dark] code,[data-theme=dark] .tag{background:#29342c;color:#d6e2d8}
+[data-theme=dark] .base{color:#cfdcd1}
+[data-theme=dark] .ph img{background:#29342c}
+[data-theme=dark] #status div{border-bottom-color:var(--b)}
+[data-theme=dark] .plist div{border-bottom-color:#212b24}
+[data-theme=dark] .qhelp{background:#29342c;color:#cfdcd1}
+[data-theme=dark] #msg,[data-theme=dark] .qtip{background:#0a0f0c;border:1px solid var(--b)}
+[data-theme=dark] .filelist,[data-theme=dark] .rdgroup,[data-theme=dark] .row.locked{background:#151c17}
+[data-theme=dark] .mdprev h1,[data-theme=dark] .mdprev h2{border-bottom-color:var(--b)}
+[data-theme=dark] .mdprev code{background:#29342c}[data-theme=dark] .mdprev pre{background:#151c17}
+[data-theme=dark] .mdprev td,[data-theme=dark] .mdprev th{border-color:var(--b)}
+[data-theme=dark] .mdprev blockquote{color:#a9b4ab;border-left-color:var(--b)}[data-theme=dark] .mdprev a{color:#7fb8ff}
+[data-theme=dark] .mdimg{background:#1e2a22}
+[data-theme=dark] details.sec>summary{background:#1f2d24}[data-theme=dark] details.sec>summary:hover{background:#28392e}
+[data-theme=dark] details.sec.lv2>summary,[data-theme=dark] details.sec details.sec>summary{background:var(--w)}
+[data-theme=dark] details.sec details.sec details.sec>summary{background:none;border-bottom-color:var(--b)}
+[data-theme=dark] details.sec>.secb{border-left-color:var(--b)}
+[data-theme=dark] .kind.block{background:#1d3a28}[data-theme=dark] .kind.corpus{background:#1d2b40;color:#8fb6ea}
+[data-theme=dark] .kind.generated{background:#2a2d2a;color:#b0b5b0}
+/* the drawn SVG icons are dark: give them a light tile so they stay visible */
+[data-theme=dark] .ico img,[data-theme=dark] .picker img,[data-theme=dark] .res img{background:#e4e9e2;border-radius:5px;padding:2px}
+[data-theme=dark] .picker button{background:var(--w);color:var(--t)}

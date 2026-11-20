@@ -203,6 +203,8 @@ def main():
         ("49_scheda_scorzonera_inulina", {}, [], False, "food=scorzonera_black_salsify", 3600),
         ("50_scheda_gombo_differenza", {}, [], False, "food=gombo_okra", 3600),
         ("51_aiuto_inulina", {}, [], False, "help=inulin", 1500),
+        ("53_scheda_grano_allergeni", {}, [], False, "food=grano_duro_durum_wheat", 3600),
+        ("54_scheda_fava_favismo", {}, [], False, "food=fava_broad_bean", 3600),
         ("38_zone_climatiche_mappa_dark", {"themeMode": "dark"}, [], True, "help=eufic_zones", 1500),
         ("34_famiglia_solanaceae", {}, [], False, "family=Solanaceae", H),
         ("35_mesi_gennaio_centrato", {}, [], False, "month=1", H),

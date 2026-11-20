@@ -802,7 +802,7 @@
       "group_en": "Product page",
       "description": "Titoletto Tienilo Lontano da (etilene)",
       "description_en": "\"Keep It Away from\" subtitle (ethylene)",
-      "icon": "svg:ui/ethylene",
+      "icon": "svg:ui/keep_away",
       "target": "app"
     },
     {
@@ -866,6 +866,24 @@
       "description": "Riga delle licenze (Informazioni)",
       "description_en": "Licences row (About)",
       "icon": "material:policy",
+      "target": "app"
+    },
+    {
+      "slot": "detail.section.allergens",
+      "group": "Scheda prodotto",
+      "group_en": "Product page",
+      "description": "Icona sezione Allergeni",
+      "description_en": "Allergens section icon",
+      "icon": "material:warning",
+      "target": "app"
+    },
+    {
+      "slot": "detail.bioactive",
+      "group": "Scheda prodotto",
+      "group_en": "Product page",
+      "description": "Titoletto Composti Bioattivi",
+      "description_en": "\"Bioactive Compounds\" subtitle",
+      "icon": "svg:ui/bioactive",
       "target": "app"
     }
   ]

@@ -122,6 +122,7 @@ $('#gitpush').onclick = () => repoDialog('git');
 
 // ---------------------------------------------------------------- Versions & Git
 const Ver = {data: null};
+window.Ver = Ver;               // other files refresh it after a job or a save (a const is not a window property)
 Ver.refresh = async () => {
   const v = Ver.data = await api.get('/api/versions');
   const box = (key, name) => {

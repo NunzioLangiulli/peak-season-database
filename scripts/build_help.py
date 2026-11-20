@@ -124,7 +124,10 @@ def main():
                 "perishability_legend": "Respiration class at 5 °C according to Kader (USDA HB66, Respiratory Metabolism, Table 1): storage life varies inversely with respiration.",
                 "home_storage_legend": "UC Davis/Kader guide \"Storing Fresh Fruits and Vegetables for Better Taste\" + USDA FoodKeeper",
                 "storage_compatibility_legend": "USDA HB66, Table 1 (Thompson et al. 1996): produce that can be stored together for 7 days; ethylene < 1 ppm."}[key]}
-    kw = [(e["id"], re.compile("|".join(re.escape(k) for k in e["keywords"]), re.I)) for e in gl if e.get("keywords")]
+    # keywords match at the start of a word; all-caps acronyms (DOP, IGP, G6PD) only as whole, upper-case words
+    # (otherwise "dopo" would match DOP)
+    kw = [(e["id"], re.compile("|".join((r"(?-i:\b" + re.escape(k) + r"\b)") if k.isupper() else (r"\b" + re.escape(k))
+                                         for k in e["keywords"]), re.I)) for e in gl if e.get("keywords")]
     n_refs = 0
     for it in db["items"]:
         refs = {}

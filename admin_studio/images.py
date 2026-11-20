@@ -65,6 +65,12 @@ def item_detail(iid):
             "images": [det.get(f, {"filename": f}) for f in im.get("gallery") or []]}
 
 
+def _align(im):
+    """image_details in the same order as the gallery (validate_db requires it; the primary photo comes first)."""
+    det = {d["filename"]: d for d in im.get("image_details") or []}
+    im["image_details"] = [det[f] for f in im.get("gallery") or [] if f in det]
+
+
 def save(data):
     """Main photo and view types of a product."""
     db = _db()
@@ -85,6 +91,7 @@ def save(data):
             raise ValueError("the primary photo must be in the gallery")
         im["primary"] = p
         im["gallery"] = [p] + [f for f in im["gallery"] if f != p]
+        _align(im)
         manual = load_json(MANUAL) if MANUAL.exists() else {}
         manual[it["id"]] = p
         save_json(MANUAL, manual)
@@ -202,8 +209,51 @@ def download(data):
     if data.get("make_primary") or not imgs.get("primary"):
         imgs["primary"] = name
         imgs["gallery"] = [name] + [f for f in imgs["gallery"] if f != name]
+        _align(imgs)
         manual = load_json(MANUAL) if MANUAL.exists() else {}
         manual[it["id"]] = name
         save_json(MANUAL, manual)
     save_json(DATA / "database.json", db)
     return {"new_files": [str(dst)], "added": detail}
+
+
+# ------------------------------------------------------------------ delete
+def photo_path(iid, name):
+    """Original of a product photo (only <id>_NN.jpg names of that product)."""
+    if not re.fullmatch(re.escape(iid) + r"_\d{2}\.jpg", name or ""):
+        raise ValueError(f"not a photo of {iid}: {name}")
+    return IMAGES / name
+
+
+def delete(data):
+    """Removes a photo: original file, _metadata.json entry, gallery/image_details and the manual primary choice.
+    The caller (studio.guarded) has already backed up the file, so a failed validation puts everything back.
+    If the deleted photo was the primary one, the automatic rule of sync_images.py picks the new one
+    (first "full_frame" photo without flags or variety, otherwise the first photo)."""
+    db = _db()
+    it = next(x for x in db["items"] if x["id"] == data["id"])
+    name = data["filename"]
+    path = photo_path(it["id"], name)
+    im = it["images"]
+    if name not in (im.get("gallery") or []):
+        raise ValueError(f"{name} is not in the gallery of {it['id']}")
+    meta = load_json(META) if META.exists() else {}
+    meta.pop(name, None)
+    manual = load_json(MANUAL) if MANUAL.exists() else {}
+    if manual.get(it["id"]) == name:
+        manual.pop(it["id"])
+    im["gallery"] = [f for f in im["gallery"] if f != name]
+    im["image_details"] = [d for d in im.get("image_details") or [] if d["filename"] != name]
+    if im.get("primary") == name or im.get("primary") not in im["gallery"]:
+        det = {d["filename"]: d for d in im["image_details"]}
+        ff = [f for f in im["gallery"] if det.get(f, {}).get("view_type") == "full_frame"
+              and not det[f].get("flags") and not det[f].get("variety")]
+        im["primary"] = (ff or im["gallery"] or [None])[0]
+        if im["primary"]:
+            im["gallery"] = [im["primary"]] + [f for f in im["gallery"] if f != im["primary"]]
+    _align(im)
+    save_json(META, meta)
+    save_json(MANUAL, manual)
+    save_json(DATA / "database.json", db)
+    path.unlink(missing_ok=True)
+    return {"deleted": name, "primary": im["primary"]}

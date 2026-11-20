@@ -102,9 +102,9 @@ def main():
     db["metadata"]["home_storage_legend"] = {
         "basis": "Guida UC Davis/Kader \"Storing Fresh Fruits and Vegetables for Better Taste\" + USDA FoodKeeper",
         "locations": {k: {"it": v[0], "en": v[1]} for k, v in LABEL.items()},
-        "room_temp_mode": {"days": {"it": "giorni in dispensa (FoodKeeper)", "en": "days in the pantry (FoodKeeper)"},
-                           "until_ripe": {"it": "a temperatura ambiente fino a maturazione", "en": "at room temperature until ripe"},
-                           "fridge_only": {"it": "solo frigorifero", "en": "fridge only"}}}
+        "room_temp_mode": {"days": {"it": "Giorni in dispensa (FoodKeeper)", "en": "Days in the pantry (FoodKeeper)"},
+                           "until_ripe": {"it": "A temperatura ambiente fino a maturazione", "en": "At room temperature until ripe"},
+                           "fridge_only": {"it": "Solo frigorifero", "en": "Fridge only"}}}
     save_json(DATA / "database.json", db)
     print(stats)
 

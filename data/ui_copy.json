@@ -1297,7 +1297,7 @@
       "key": "detail.how_long",
       "element_description": "Product detail page: how long",
       "it": "Quanto Dura",
-      "en": "How Long It Keeps"
+      "en": "Shelf Life"
     },
     {
       "screen": "detail",
@@ -1557,6 +1557,27 @@
       "element_description": "Ethylene tag: not sensitive to ethylene",
       "it": "Poco Sensibile all'Etilene",
       "en": "Not Sensitive to Ethylene"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.water_range",
+      "element_description": "Detail: water footprint min-max range under the value — placeholders: {min}, {max}",
+      "it": "Intervallo {min}–{max} L/kg",
+      "en": "Range {min}–{max} L/kg"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.sec_allergens",
+      "element_description": "Detail: section title Allergens and Bioactive Compounds",
+      "it": "Allergeni",
+      "en": "Allergens"
+    },
+    {
+      "screen": "detail",
+      "key": "detail.bioactive",
+      "element_description": "Detail: subtitle bioactive compounds",
+      "it": "Composti Bioattivi",
+      "en": "Bioactive Compounds"
     },
     {
       "screen": "settings",
@@ -2297,8 +2318,8 @@
       "screen": "settings",
       "key": "settings.license_sub",
       "element_description": "Settings: About, licence details",
-      "it": "Codice MIT · Dati CC BY 4.0 (i valori di terzi restano soggetti ai termini delle fonti)",
-      "en": "Code MIT · Data CC BY 4.0 (third-party values remain subject to the sources' terms)"
+      "it": "Codice MIT · Dati CC BY 4.0 · I dati di terzi seguono le condizioni delle rispettive fonti",
+      "en": "Code MIT · Data CC BY 4.0 · Third-party data follow the terms of their sources"
     }
   ]
 }

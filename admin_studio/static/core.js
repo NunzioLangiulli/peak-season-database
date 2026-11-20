@@ -70,6 +70,7 @@ async function afterSave(res, what) {
     msg('NOT saved: ' + (res.report || 'unknown error') + '\n(the files were restored)', true);
   }
   if (window.Build) Build.refresh();
+  if (res.ok && window.Ver) Ver.refresh();         // saved files change the "not committed" count
   return res.ok;
 }
 
@@ -90,3 +91,11 @@ window.addEventListener('DOMContentLoaded', async () => {
   for (const t of Object.values(Studio.tabs)) if (t.load) await t.load();
   render();
 });
+
+// light / dark mode: the choice is remembered; until then the system setting is used
+const Theme = {
+  set(t) { document.documentElement.dataset.theme = t; localStorage.setItem('studio-theme', t); Theme.icon(); },
+  icon() { const d = document.documentElement.dataset.theme === 'dark'; $('#theme').textContent = d ? '☀' : '☾'; $('#theme').title = d ? 'Switch to light mode' : 'Switch to dark mode'; },
+};
+$('#theme').onclick = () => Theme.set(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
+Theme.icon();

@@ -20,6 +20,7 @@ import re
 import zipfile
 from collections import defaultdict
 
+from display_case import compound_title
 from common import DATA, RAW, ROOT, finalize_completeness, load_json, mark_enriched, save_json
 from enrich_bioactives import FDC, PRE, ZIP
 from xlsx_min import read_rows
@@ -60,7 +61,7 @@ IT = {"Cyanidin": "cianidina", "Delphinidin": "delfinidina", "Malvidin": "malvid
       "(-)-Epigallocatechin 3-gallate": "epigallocatechina gallato", "Biochanin A": "biochanina A",
       "1,2-Diferuloylgentiobiose": "diferuloil-genziobiosio", "p-Coumaroyl malic acid": "acido p-cumaroilmalico",
       "Avenanthramide 2c": "avenantramide 2c", "Avenanthramide 2f": "avenantramide 2f",
-      "5-Heneicosylresorcinol": "alchilresorcinoli", "5-Pentacosylresorcinol": "alchilresorcinoli", "5-Tricosylresorcinol": "alchilresorcinoli"}
+      "5-Heneicosylresorcinol": "5-eneicosilresorcinolo", "5-Pentacosylresorcinol": "5-pentacosilresorcinolo", "5-Tricosylresorcinol": "5-tricosilresorcinolo"}
 
 
 def fmt(v):
@@ -77,7 +78,9 @@ def tops(d, k=2):
     for n, v in d.items():
         agg[base(n)] += v
     best = [n for n, v in sorted(agg.items(), key=lambda x: -x[1]) if v > 0][:k]
-    return ", ".join(IT.get(n.strip(), n.strip()) for n in best), ", ".join(n.strip() for n in best)
+    # Title Case (user rule 2026-11-20), except words starting with a chemical locant such as "p-Coumaric"
+    return (compound_title(", ".join(IT.get(n.strip(), n.strip()) for n in best)),
+            compound_title(", ".join(n.strip() for n in best)))
 
 
 def load_usda():

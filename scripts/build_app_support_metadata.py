@@ -89,8 +89,8 @@ except ImportError:
 # Database release: metadata.version is the GitHub release tag of peak-season-database (semantic versioning: patch =
 # text/data fixes, minor = new fields or content, major = breaking format changes). schema_version is the JSON format
 # and changes independently. Bump both values here when preparing a release, then publish the tag v<DB_VERSION>.
-DB_VERSION = "1.1.2"
-DB_RELEASE_DATE = "2026-11-15"
+DB_VERSION = "1.1.3"
+DB_RELEASE_DATE = "2026-11-20"
 DISPLAY = load_json(ROOT / "scripts" / "config" / "source_display.json")["sources"]   # editore, titolo, logo condiviso
 
 

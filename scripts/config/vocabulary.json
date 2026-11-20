@@ -444,23 +444,28 @@
       "_glossary": "polyphenols",
       "carotenoidi": {
         "it": "Carotenoidi",
-        "en": "Carotenoids"
+        "en": "Carotenoids",
+        "glossary": "carotenoids"
       },
       "flavonoidi": {
         "it": "Flavonoidi",
-        "en": "Flavonoids"
+        "en": "Flavonoids",
+        "glossary": "flavonoids"
       },
       "acidi_fenolici": {
         "it": "Acidi fenolici",
-        "en": "Phenolic acids"
+        "en": "Phenolic acids",
+        "glossary": "polyphenols"
       },
       "altri_polifenoli": {
         "it": "Altri polifenoli",
-        "en": "Other polyphenols"
+        "en": "Other polyphenols",
+        "glossary": "polyphenols"
       },
       "polifenoli_totali": {
         "it": "Polifenoli totali",
-        "en": "Total polyphenols"
+        "en": "Total polyphenols",
+        "glossary": "polyphenols"
       }
     },
     "ripening_and_storage.ethylene_compatibility.ethylene_production_class": {
@@ -524,7 +529,6 @@
       }
     },
     "match": {
-      "_glossary": "data_quality",
       "_used_by": [
         "*.match",
         "botany.upov_match"

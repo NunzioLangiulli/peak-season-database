@@ -34,7 +34,7 @@ The browser opens at http://localhost:8765. If that port is busy (for example be
 | App Copy | interface texts, in Italian and English; keys cannot be changed | `data/ui_copy.json` |
 | Shared Corpus | texts shared by several products; a change applies to every linked product | `data/database.json` |
 | Product Texts | the texts of each product: specific text, or a corpus entry with an optional addition | `data/database.json` |
-| Images | main photo (star), view type, search for new photos and download from URL | `assets/images/`, `_metadata.json`, `_primary_manual.json`, database |
+| Images | main photo (star), view type, search for new photos, download from URL and delete photos (🗑; the original is backed up first) | `assets/images/`, `_metadata.json`, `_primary_manual.json`, database |
 | Icons | the icon of every state, category, zone and interface element | `data/ui_config.json` (and the database for `database` entries) |
 | Logos | each source's logo (uploaded from your computer), publisher and title shown in the source boxes, search text to find the logo; at the top, the list of missing logos, ready to copy | `app/assets/sources/`, `fonti_locali/loghi_fonti/`, `scripts/config/source_display.json`, database |
 | Links | every link: general ones (the sources) and per product, which you can edit, add or delete | `scripts/config/link_overrides.json`, database |
@@ -49,6 +49,8 @@ The browser opens at http://localhost:8765. If that port is busy (for example be
 If the check finds errors, the files are restored to their previous state.
 
 Texts can also be exported to CSV and re-imported (`;` separator, opens in Excel).
+
+The ☾/☀ button in the header switches between light and dark theme; by default the Studio follows the system setting and remembers your choice.
 
 ## Downloading a photo
 

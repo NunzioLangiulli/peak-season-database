@@ -216,8 +216,8 @@ def main():
             used_all += used + (["Orto da Coltivare (raccolta per area)"] if odc_row else [])
             if used_all:
                 sea["derivation_notes"] = {
-                    "it": "Fonti: " + ", ".join(dict.fromkeys(used_all)) + ". Stati calcolati per voto tra fonti (metodo in metadata.seasonality_method).",
-                    "en": "Sources: " + ", ".join(dict.fromkeys(used_all)) + ". States computed by voting across sources (method in metadata.seasonality_method)."}
+                    "it": "Fonti: " + ", ".join(dict.fromkeys(used_all)) + ". Se le fonti non sono d'accordo, si usa il dato su cui concorda il maggior numero di fonti (vedi la spiegazione «Stati della stagionalità»).",
+                    "en": "Sources: " + ", ".join(dict.fromkeys(used_all)) + ". If the sources disagree, the value most sources agree on is used (see the explanation “Seasonality states”)."}
                 enriched.append("seasonality.derivation_notes")
             # ---------------- calendario agronomico ODC
             if odc_row:

@@ -27,6 +27,9 @@ def cap_word(w, lang, first):
     lead = re.match(r"^[(\[«\"']+", w or "")
     if lead:                                       # "(bacche)" -> "(Bacche)": the bracket opens a new group
         return lead.group(0) + cap_word(w[lead.end():], lang, True)
+    if "/" in w.strip("/"):                        # "sodio/sale" -> "Sodio/Sale": each part is a word
+        parts = w.split("/")
+        return "/".join(cap_word(p, lang, first if i == 0 else True) for i, p in enumerate(parts))
     if not w or not w[0].isalpha() or not w[0].islower():
         return w                                   # numbers, acronyms, words already capitalised
     m = APOS.match(w)

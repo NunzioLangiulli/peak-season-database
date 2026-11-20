@@ -115,7 +115,7 @@
    },
    "text": {
     "it": "Frutta e verdura restano vive dopo la raccolta e respirano: consumano zuccheri e acqua e producono calore e CO2. Più respirano, prima perdono freschezza. Il livello traduce la classe di respirazione di Kader (USDA HB66, mg di CO2 per kg all'ora a 5 °C):\n• 1, si conserva a lungo: meno di 5\n• 2: da 5 a 10\n• 3: da 10 a 20\n• 4: da 20 a 40\n• 5: da 40 a 60\n• 6, da consumare subito: più di 60\nPer i prodotti secchi (cereali, legumi secchi) indica una lunga conservazione. È un'indicazione relativa, utile per confrontare i prodotti: le durate in giorni sono nei campi di conservazione.\n\nLa respirazione cresce con la temperatura. Il Q10 è il rapporto tra la respirazione a una temperatura e quella a 10 °C in meno: HB66 indica 2,5-4 tra 0 e 10 °C e 2-2,5 tra 10 e 20 °C. Per pochi prodotti sensibili al freddo, misurati solo sopra i 10 °C, la classe a 5 °C è stimata con i valori minimi (stima prudente).",
-    "en": "Fruit and vegetables stay alive after harvest and respire: they use up sugars and water and release heat and CO2. The more they respire, the sooner they lose freshness. The level turns Kader's respiration class (USDA HB66, mg of CO2 per kg per hour at 5 °C) into a number:\n• 1, keeps for a long time: below 5\n• 2: 5 to 10\n• 3: 10 to 20\n• 4: 20 to 40\n• 5: 40 to 60\n• 6, eat it soon: above 60\nFor dry products (grains, dried legumes) it means long storage. It is a relative indication for comparing produce: storage times in days are in the storage fields.\n\nRespiration rises with temperature. Q10 is the ratio between respiration at one temperature and at 10 °C lower: HB66 gives 2.5-4 between 0 and 10 °C and 2-2.5 between 10 and 20 °C. For a few chilling-sensitive products measured only above 10 °C, the 5 °C class is estimated with the lowest values (a cautious estimate)."
+    "en": "Fruit and vegetables stay alive after harvest and respire: they use up sugars and water and release heat and CO2. The more they respire, the sooner they lose freshness. The level turns Kader's respiration class (USDA HB66, mg of CO2 per kg per hour at 5 °C) into a number:\n• 1, keeps for a long time: below 5\n• 2: 5 to 10\n• 3: 10 to 20\n• 4: 20 to 40\n• 5: 40 to 60\n• 6, eat it soon: above 60\nFor dry products (grains, dried legumes) it means long storage. It is a relative indication for comparing produce: shelf life and storage life in days are in the storage fields.\n\nRespiration rises with temperature. Q10 is the ratio between respiration at one temperature and at 10 °C lower: HB66 gives 2.5-4 between 0 and 10 °C and 2-2.5 between 10 and 20 °C. For a few chilling-sensitive products measured only above 10 °C, the 5 °C class is estimated with the lowest values (a cautious estimate)."
    }
   },
   {
@@ -230,7 +230,7 @@
    },
    "text": {
     "it": "Sono le condizioni che massimizzano la durata nei magazzini e nella grande distribuzione (USDA HB66, UC Davis), con la durata corrispondente ('durata professionale'). Un frigorifero di casa può mantenere temperature di circa 4-5 °C con umidità variabile, quindi le durate domestiche sono di solito più brevi.",
-    "en": "These are the conditions that maximise storage life in warehouses and distribution (USDA HB66, UC Davis), with the corresponding 'commercial' storage time. A home fridge can maintain temperatures of around 4–5 °C with variable humidity, so home storage times are usually shorter."
+    "en": "These are the conditions that maximise storage life in warehouses and distribution (USDA HB66, UC Davis), with the corresponding 'commercial' storage life. A home fridge can maintain temperatures of around 4–5 °C with variable humidity, so home shelf life is usually shorter."
    }
   },
   {
@@ -244,7 +244,7 @@
    ],
    "term": {
     "it": "Durata in casa",
-    "en": "Home storage time"
+    "en": "Home shelf life"
    },
    "short": {
     "it": "Quanto dura in dispensa, in frigo e in congelatore.",
@@ -252,7 +252,7 @@
    },
    "text": {
     "it": "Le durate domestiche vengono da USDA FoodKeeper e partono dalla data di acquisto. 'Fino a maturazione' vuol dire che il prodotto resta fuori dal frigo finché matura; 'Solo frigorifero' che FoodKeeper non prevede la conservazione in dispensa a temperatura ambiente; 'Congelamento sconsigliato' che la qualità dopo lo scongelamento è scarsa.",
-    "en": "Home storage times come from USDA FoodKeeper and start from the purchase date. 'Until ripe' means the produce stays out of the fridge until ripe; 'Fridge only' that FoodKeeper gives no pantry and room temperature option; 'Freezing not recommended' that quality after thawing is poor."
+    "en": "Home shelf life comes from USDA FoodKeeper and starts from the purchase date. 'Until ripe' means the produce stays out of the fridge until ripe; 'Fridge only' that FoodKeeper gives no pantry and room temperature option; 'Freezing not recommended' that quality after thawing is poor."
    }
   },
   {
@@ -275,7 +275,7 @@
    },
    "text": {
     "it": "Il consiglio segue la guida 'Storing Fresh Fruits and Vegetables for Better Taste' di UC Davis (A. Kader e altri), che presta particolare attenzione al mantenimento del gusto e delle proprietà organolettiche dei prodotti, e USDA FoodKeeper per le durate. Alcuni prodotti sensibili al freddo (pomodoro, cetriolo, melanzana, peperone, banana, agrumi) danno il meglio fuori dal frigo. Una volta tagliato, ogni prodotto va in frigorifero.",
-    "en": "The advice follows UC Davis's 'Storing Fresh Fruits and Vegetables for Better Taste' (A. Kader et al.), written for best flavour, and USDA FoodKeeper for storage times. Some chilling-sensitive produce (tomato, cucumber, eggplant, pepper, banana, citrus) is best kept out of the fridge. Once cut, everything goes in the fridge."
+    "en": "The advice follows UC Davis's 'Storing Fresh Fruits and Vegetables for Better Taste' (A. Kader et al.), written for best flavour, and USDA FoodKeeper for shelf life. Some chilling-sensitive produce (tomato, cucumber, eggplant, pepper, banana, citrus) is best kept out of the fridge. Once cut, everything goes in the fridge."
    }
   },
   {
@@ -564,8 +564,8 @@
     "en": "Wording such as 'source of' or 'high in', with legal thresholds."
    },
    "text": {
-    "it": "Sono calcolate applicando le soglie del Reg. CE 1924/2006 ai valori per 100 g:\n• vitamine e minerali: 'fonte di' almeno il 15% del VNR, 'ad alto contenuto di' almeno il 30%\n• fibra: 3 g e 6 g\n• proteine: il 12% e il 20% delle calorie\nI testi del database usano 'ricco di' solo quando c'è l'indicazione 'ad alto contenuto'.",
-    "en": "They are computed by applying the thresholds of Regulation (EC) 1924/2006 to the values per 100 g:\n• vitamins and minerals: 'source of' at least 15% of the NRV, 'high in' at least 30%\n• fibre: 3 g and 6 g\n• protein: 12% and 20% of energy\nThe database texts say 'rich in' only when the 'high in' claim applies."
+    "it": "Le etichette applicano le soglie del Reg. CE 1924/2006 ai valori per 100 g di parte edibile. Ognuna viene assegnata così:\n• A basso contenuto calorico: al massimo 40 kcal\n• Senza grassi: al massimo 0,5 g di grassi\n• A basso contenuto di grassi: al massimo 3 g di grassi\n• Senza zuccheri: al massimo 0,5 g di zuccheri\n• A basso contenuto di zuccheri: al massimo 5 g di zuccheri\n• Senza sodio o senza sale: al massimo 5 mg di sodio\n• A bassissimo contenuto di sodio/sale: al massimo 40 mg di sodio\n• A basso contenuto di sodio/sale: al massimo 120 mg di sodio\n• Fonte di fibre: almeno 3 g di fibra, oppure 1,5 g ogni 100 kcal\n• Ad alto contenuto di fibre: almeno 6 g di fibra, oppure 3 g ogni 100 kcal\n• Fonte di proteine: almeno il 12% delle calorie viene dalle proteine\n• Ad alto contenuto di proteine: almeno il 20% delle calorie viene dalle proteine\n• Fonte di una vitamina o di un minerale: almeno il 15% del VNR\n• Ad alto contenuto di una vitamina o di un minerale: almeno il 30% del VNR\n\nI testi del database usano 'ricco di' solo quando c'è l'indicazione 'ad alto contenuto'.",
+    "en": "The labels apply the thresholds of Regulation (EC) 1924/2006 to the values per 100 g of edible portion. Each one is given as follows:\n• Low energy: at most 40 kcal\n• Fat-free: at most 0.5 g of fat\n• Low fat: at most 3 g of fat\n• Sugars-free: at most 0.5 g of sugars\n• Low sugars: at most 5 g of sugars\n• Sodium-free or salt-free: at most 5 mg of sodium\n• Very low sodium/salt: at most 40 mg of sodium\n• Low sodium/salt: at most 120 mg of sodium\n• Source of fibre: at least 3 g of fibre, or 1.5 g per 100 kcal\n• High fibre: at least 6 g of fibre, or 3 g per 100 kcal\n• Source of protein: at least 12% of the energy comes from protein\n• High protein: at least 20% of the energy comes from protein\n• Source of a vitamin or mineral: at least 15% of the NRV\n• High in a vitamin or mineral: at least 30% of the NRV\n\nThe database texts say 'rich in' only when the 'high in' claim applies."
    }
   },
   {
@@ -628,8 +628,8 @@
     "en": "The 14 substances that must always be declared on labels."
    },
    "text": {
-    "it": "L'Allegato II del Reg. UE 1169/2011 elenca 14 gruppi di allergeni: cereali con glutine, crostacei, uova, pesce, arachidi, soia, latte, frutta a guscio, sedano, senape, sesamo, solfiti, lupini e molluschi. Tra i nostri alimenti riguarda cereali con glutine, arachide, sedano e sedano rapa. Altre allergie (es. pesca, kiwi) esistono ma non sono in questo elenco legale.",
-    "en": "Annex II of EU Regulation 1169/2011 lists 14 allergen groups: cereals containing gluten, crustaceans, eggs, fish, peanuts, soy, milk, tree nuts, celery, mustard, sesame, sulphites, lupin and molluscs. Among our foods it applies to cereals with gluten, peanut, celery and celeriac. Other allergies (e.g. peach, kiwifruit) exist but are not on this legal list."
+    "it": "L'Allegato II del Reg. UE 1169/2011 elenca 14 gruppi di allergeni che vanno sempre dichiarati in etichetta: cereali con glutine, crostacei, uova, pesce, arachidi, soia, latte, frutta a guscio, sedano, senape, sesamo, solfiti, lupini e molluschi.\n\nTra i prodotti dell'app riguardano:\n• cereali con glutine: farro, orzo, grano duro e avena;\n• arachidi;\n• frutta a guscio: noce, nocciola, mandorla e pistacchio;\n• sedano: sedano e sedano rapa.\n\nAltre allergie (per esempio a pesca o kiwi) esistono, ma non sono in questo elenco di legge.",
+    "en": "Annex II of EU Regulation 1169/2011 lists 14 allergen groups that must always be declared on labels: cereals containing gluten, crustaceans, eggs, fish, peanuts, soy, milk, tree nuts, celery, mustard, sesame, sulphites, lupin and molluscs.\n\nAmong the app's produce they apply to:\n• cereals containing gluten: farro, barley, durum wheat and oats;\n• peanuts;\n• tree nuts: walnut, hazelnut, almond and pistachio;\n• celery: celery and celeriac.\n\nOther allergies (for example to peach or kiwifruit) exist, but they are not on this legal list."
    }
   },
   {
@@ -706,8 +706,8 @@
     "en": "A family of plant compounds: flavonoids, phenolic acids and others."
    },
    "text": {
-    "it": "I polifenoli totali sono misurati con il saggio di Folin-Ciocalteu (Phenol-Explorer), che dà un valore complessivo; le singole classi (acidi fenolici, stilbeni, lignani) sono la somma dei composti misurati in cromatografia. Sono valori indicativi per 100 g di prodotto crudo: variano molto con varietà, maturazione e coltivazione.",
-    "en": "Total polyphenols are measured with the Folin-Ciocalteu assay (Phenol-Explorer), which gives an overall value; individual classes (phenolic acids, stilbenes, lignans) are the sum of compounds measured by chromatography. They are indicative values per 100 g of raw produce: they vary widely with variety, ripeness and growing conditions."
+    "it": "I polifenoli totali sono misurati con il saggio di Folin-Ciocalteu (Phenol-Explorer), che dà un valore complessivo; gli acidi fenolici e gli altri polifenoli (per esempio resveratrolo, alchilresorcinoli e furanocumarine) sono la somma dei composti misurati in cromatografia. Sono valori indicativi per 100 g di prodotto crudo: variano molto con varietà, maturazione e coltivazione.",
+    "en": "Total polyphenols are measured with the Folin-Ciocalteu assay (Phenol-Explorer), which gives an overall value; phenolic acids and other polyphenols (for example resveratrol, alkylresorcinols and furanocoumarins) are the sum of compounds measured by chromatography. They are indicative values per 100 g of raw produce: they vary widely with variety, ripeness and growing conditions."
    }
   },
   {
@@ -734,8 +734,8 @@
     "en": "Anthocyanins, flavonols, flavones, flavanones, catechins."
    },
    "text": {
-    "it": "Sono il gruppo più grande di polifenoli. Le antocianine colorano di rosso-blu frutti di bosco e cavolo rosso; i flavonoli (quercetina) sono in cipolle e mele; i flavanoni (esperetina) negli agrumi; le catechine in mele e uva. I valori per classe vengono dalla banca dati USDA dei flavonoidi (somma dei composti misurati).",
-    "en": "They are the largest group of polyphenols. Anthocyanins colour berries and red cabbage red-blue; flavonols (quercetin) are in onions and apples; flavanones (hesperetin) in citrus; catechins in apples and grapes. Class values come from the USDA flavonoid database (sum of measured compounds)."
+    "it": "Sono il gruppo più grande di polifenoli. Le antocianine colorano di rosso-blu frutti di bosco e cavolo rosso; i flavonoli (quercetina) sono in cipolle e mele; i flavanoni (esperetina) negli agrumi; le catechine in mele e uva. I valori per classe vengono dalla banca dati USDA dei flavonoidi, per pochi prodotti da Phenol-Explorer (somma dei composti misurati).",
+    "en": "They are the largest group of polyphenols. Anthocyanins colour berries and red cabbage red-blue; flavonols (quercetin) are in onions and apples; flavanones (hesperetin) in citrus; catechins in apples and grapes. Class values come from the USDA flavonoid database, for a few products from Phenol-Explorer (sum of measured compounds)."
    }
   },
   {
@@ -778,8 +778,8 @@
     "en": "Litres of water used to produce 1 kg."
    },
    "text": {
-    "it": "Comprende l'acqua piovana usata dalla coltura, l'acqua di irrigazione e quella necessaria a diluire gli inquinanti, secondo i metodi degli studi raccolti da SU-EATABLE LIFE.\n\nI livelli sono una convenzione dell'app, con soglie fisse sui litri per kg di prodotto:\n• bassa: meno di 500\n• media: da 500 a 1500\n• alta: più di 1500\n\nÈ un valore medio con forte variabilità tra studi e Paesi: per questo il database riporta anche il numero di studi e l'intervallo minimo-massimo.",
-    "en": "It includes rainwater used by the crop, irrigation water and the water needed to dilute pollutants, following the methods of the studies collected by SU-EATABLE LIFE.\n\nThe levels are an app convention, with fixed thresholds on litres per kg of produce:\n• low: below 500\n• medium: 500 to 1500\n• high: above 1500\n\nIt is an average with large variability between studies and countries: that's why the database also gives the number of studies and the min-max range."
+    "it": "Comprende l'acqua piovana usata dalla coltura, l'acqua di irrigazione e quella necessaria a diluire gli inquinanti, secondo i metodi degli studi raccolti da SU-EATABLE LIFE.\n\nI livelli sono una convenzione dell'app, con soglie fisse sui litri per kg di prodotto:\n• bassa: meno di 500\n• media: da 500 a 1500\n• alta: più di 1500\n\nÈ un valore medio, che varia molto tra studi e Paesi: per questo sotto il valore compare anche l'intervallo minimo-massimo.",
+    "en": "It includes rainwater used by the crop, irrigation water and the water needed to dilute pollutants, following the methods of the studies collected by SU-EATABLE LIFE.\n\nThe levels are an app convention, with fixed thresholds on litres per kg of produce:\n• low: below 500\n• medium: 500 to 1500\n• high: above 1500\n\nIt is an average, which varies widely between studies and countries: that's why the min-max range is also shown under the value."
    }
   },
   {
@@ -922,8 +922,8 @@
     "en": "Latin name checked on EPPO, World Flora Online and GBIF."
    },
    "text": {
-    "it": "Il nome scientifico (genere e specie) identifica la pianta senza ambiguità tra lingue. È verificato su EPPO Global Database e su World Flora Online, il catalogo mondiale delle piante; per i funghi si usa GBIF, il database mondiale della biodiversità.\n\nNella scheda compaiono due codici diversi:\n• codice EPPO (5-6 lettere): identifica la specie nella protezione delle piante ed è assegnato da EPPO;\n• codice UPOV: identifica la specie nei registri delle varietà. Sementi e piante di specie ortive, agricole e da frutto si vendono nell'UE solo se la varietà è iscritta in un registro nazionale, riunito nel Catalogo comune UE; il numero di varietà iscritte in Italia dà un'idea della diversità coltivata.",
-    "en": "The scientific name (genus and species) identifies the plant unambiguously across languages. It is checked on the EPPO Global Database and on World Flora Online, the global plant catalogue; GBIF, the global biodiversity database, is used for fungi.\n\nThe record shows two different codes:\n• EPPO code (5-6 letters): identifies the species in plant protection and is assigned by EPPO;\n• UPOV code: identifies the species in variety registers. Seeds and plants of vegetable, agricultural and fruit species can be sold in the EU only if the variety is listed in a national register, gathered in the EU Common Catalogue; the number of varieties listed in Italy gives an idea of cultivated diversity."
+    "it": "Il nome scientifico (genere e specie) identifica la pianta senza ambiguità tra lingue. È verificato su EPPO Global Database e su World Flora Online, il catalogo mondiale delle piante; per i funghi si usa GBIF, il database mondiale della biodiversità.\n\nLe fonti usate identificano la specie anche con due codici:\n• codice EPPO (5-6 lettere), assegnato da EPPO e usato nella protezione delle piante;\n• codice UPOV, usato nei registri delle varietà. Sementi e piante di specie ortive, agricole e da frutto si vendono nell'UE solo se la varietà è iscritta in un registro nazionale, riunito nel Catalogo comune UE; il numero di varietà iscritte in Italia dà un'idea della diversità coltivata.",
+    "en": "The scientific name (genus and species) identifies the plant unambiguously across languages. It is checked on the EPPO Global Database and on World Flora Online, the global plant catalogue; GBIF, the global biodiversity database, is used for fungi.\n\nThe sources used also identify the species by two codes:\n• the EPPO code (5-6 letters), assigned by EPPO and used in plant protection;\n• the UPOV code, used in variety registers. Seeds and plants of vegetable, agricultural and fruit species can be sold in the EU only if the variety is listed in a national register, gathered in the EU Common Catalogue; the number of varieties listed in Italy gives an idea of cultivated diversity."
    }
   },
   {
@@ -952,9 +952,7 @@
   {
    "id": "useful_links",
    "sources": [],
-   "see_also": [
-    "data_quality"
-   ],
+   "see_also": [],
    "term": {
     "it": "Fonti e link utili",
     "en": "Sources and useful links"
@@ -966,23 +964,6 @@
    "text": {
     "it": "Ogni scheda elenca le fonti da cui vengono i dati e alcuni link per approfondire:\n• fonti: banche dati nutrizionali, manuali di conservazione, calendari di stagione, registri ufficiali;\n• link utili: schede di coltivazione, proprietà, prodotti tipici e altre pagine dedicate al prodotto.\nLe fonti sono scelte tra enti pubblici, università, banche dati scientifiche e associazioni riconosciute, e per ogni dato il database indica da dove viene.\n\nI link aprono siti esterni, che non fanno parte dell'app: contenuti e disponibilità dipendono dai rispettivi editori.",
     "en": "Each page lists the sources its data come from and some links to learn more:\n• sources: nutrition databases, storage handbooks, seasonal calendars, official registers;\n• useful links: growing guides, properties, traditional products and other pages about the product.\nSources are chosen among public bodies, universities, scientific databases and recognised associations, and for every value the database records where it comes from.\n\nThe links open external websites, which are not part of the app: their content and availability depend on their publishers."
-   }
-  },
-  {
-   "id": "data_quality",
-   "sources": [],
-   "see_also": [],
-   "term": {
-    "it": "Esatto o approssimato",
-    "en": "Exact or approximate"
-   },
-   "short": {
-    "it": "Se il dato viene proprio da questo alimento o da uno simile.",
-    "en": "Whether the data come from this very food or a similar one."
-   },
-   "text": {
-    "it": "'Esatto' indica che la fonte riporta proprio questo alimento; 'approssimato' che si è usata la voce più simile disponibile (es. la cicoria per il radicchio, le lattughe per la valerianella), dichiarata nella scheda. È un modo per rendere trasparente l'affidabilità di ogni dato.",
-    "en": "'Exact' means the source reports this very food; 'approximate' that the closest available entry was used (e.g. chicory for radicchio, lettuce for corn salad), stated in the record. It makes the reliability of each value transparent."
    }
   }
  ]

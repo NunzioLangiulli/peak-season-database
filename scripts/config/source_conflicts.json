@@ -135,7 +135,7 @@
       ],
       "why": [
         "FoodKeeper guarda alla sicurezza e alla durata, la guida UC Davis al gusto: questi prodotti soffrono il freddo e in frigo perdono qualità.",
-        "FoodKeeper focuses on safety and storage time, the UC Davis guide on taste: these products are chilling-sensitive and lose quality in the fridge."
+        "FoodKeeper focuses on safety and shelf life, the UC Davis guide on taste: these products are chilling-sensitive and lose quality in the fridge."
       ],
       "decision": [
         "Il 'dove' segue la guida UC Davis, le durate seguono FoodKeeper; l'etichetta breve riporta entrambe le opzioni e la scelta è spiegata nella scheda.",
@@ -155,7 +155,7 @@
       ],
       "issue": [
         "Le durate di HB66 (settimane o mesi) sono molto più lunghe di quelle di FoodKeeper (giorni).",
-        "HB66 storage times (weeks or months) are much longer than FoodKeeper's (days)."
+        "HB66 storage life (weeks or months) is much longer than FoodKeeper's shelf life (days)."
       ],
       "why": [
         "HB66 si riferisce a celle professionali a temperatura e umidità ottimali; FoodKeeper a un frigorifero di casa.",
@@ -163,7 +163,7 @@
       ],
       "decision": [
         "Sono due campi distinti: durata domestica e durata professionale. Una durata professionale non viene mai usata come durata domestica.",
-        "They are two separate fields: home and commercial storage time. A commercial time is never used as a home time."
+        "They are two separate fields: home shelf life and commercial storage life. A commercial value is never used as a home value."
       ],
       "rationale": [
         "Evita promesse irrealistiche all'utente.",

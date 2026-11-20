@@ -91,6 +91,14 @@ def main():
         if note and note not in gloss:
             errors.append(f"{it.get('id')}: macros_per_100g.carbs_note '{note}' is not a glossary entry")
 
+    # user rule (2026-11-20): every text shown by the app starts with a capital letter (display_case.py; fix with
+    # capitalize_display_texts.py)
+    import display_case
+    for path, text in display_case.scan(db):
+        errors.append(f"[case] {path}: starts with a lower-case letter: '{text[:60]}'")
+    for path, word in display_case.lowercase_proper_nouns(db):
+        warnings.append(f"[case] {path}: proper noun in lower case: '{word}'")
+
     items = db.get("items", [])
     ids = [it.get("id") for it in items]
     dup = {i for i in ids if ids.count(i) > 1}
