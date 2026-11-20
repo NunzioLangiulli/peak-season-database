@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Testi dell'interfaccia dell'app Peak Season (IT/EN). Li legge CopyService all'avvio; si modificano con scripts/copy_editor.py. I segnaposto tra graffe, es. {n}, vanno lasciati invariati. Chiavi uniche nel formato schermata.elemento.",
-    "updated": "2026-11-14"
+    "updated": "2026-11-20"
   },
   "strings": [
     {
@@ -512,22 +512,22 @@
       "screen": "home",
       "key": "home.unknown_description",
       "element_description": "Home screen: unknown description",
-      "it": "Il pallino grigio significa che nessuna delle fonti consultate (EUFIC e calendari regionali) riporta la stagionalità di questo prodotto per la zona climatica che hai scelto, e non esiste una zona vicina da cui stimarla. NON vuol dire che sia fuori stagione: il dato semplicemente manca. Puoi provare un'altra zona o area italiana nelle Impostazioni.",
-      "en": "The grey dot means that none of the sources consulted (EUFIC and regional calendars) gives the seasonality of this item for the climate zone you chose, and there is no neighbouring zone to estimate it from. It does NOT mean it is out of season: the data is simply missing. You can try another zone or Italian area in Settings."
+      "it": "Il pallino grigio significa che nessuna delle fonti consultate (EUFIC e Calendari regionali) riporta la stagionalità di questo prodotto per la zona climatica che hai scelto, e non esiste una zona vicina da cui stimarla. Non vuol dire che sia fuori stagione: il dato semplicemente manca.",
+      "en": "The grey dot means that none of the sources consulted (EUFIC and Regional calendars) gives the seasonality of this item for the climate zone you chose, and there is no neighbouring zone to estimate it from. It does not mean it is out of season: the data is simply missing.\n"
     },
     {
       "screen": "home",
       "key": "home.unknown_short",
       "element_description": "Home screen: unknown short",
-      "it": "Nessuna fonte per la tua zona: non vuol dire \"fuori stagione\".",
-      "en": "No source for your zone: it does not mean \"out of season\"."
+      "it": "Nessuna fonte per la tua zona: non vuol dire che sia fuori stagione.",
+      "en": "No source for your zone: it does not mean it is out of season."
     },
     {
       "screen": "home",
       "key": "home.approx_note",
       "element_description": "Home screen: approx note",
-      "it": "≈ stima dalla zona vicina (manca il dato della tua zona)",
-      "en": "≈ estimate from a neighbouring zone (no data for your zone)"
+      "it": "≈ Stima dalla zona vicina (manca il dato della tua zona)",
+      "en": "≈ Estimate from a neighbouring zone (no data for your zone)"
     },
     {
       "screen": "home",
@@ -953,8 +953,8 @@
       "screen": "storage_tips",
       "key": "storage_tips.storage_guide_intro",
       "element_description": "How to store them page: storage guide intro",
-      "it": "Sei tornato a casa con le buste della spesa: ecco dove mettere ogni cosa perché duri il più possibile.",
-      "en": "Back home with your shopping bags: here is where to put each item so it lasts as long as possible."
+      "it": "Sei tornato a casa con le buste della spesa: ecco dove conservare ogni cosa perché duri il più possibile.",
+      "en": "Back home with your shopping bags: here is where to store each item so it lasts as long as possible."
     },
     {
       "screen": "storage_tips",
@@ -988,8 +988,8 @@
       "screen": "storage_tips",
       "key": "storage_tips.ethylene_releases",
       "element_description": "How to store them page: ethylene releases",
-      "it": "rilascia etilene → tieni lontani:",
-      "en": "gives off ethylene → keep away:"
+      "it": "Rilascia etilene → Tieni lontani:",
+      "en": "Gives off ethylene → Keep away:"
     },
     {
       "screen": "storage_tips",
@@ -1254,7 +1254,7 @@
       "screen": "detail",
       "key": "detail.recipes_soon",
       "element_description": "Product detail page: recipes soon",
-      "it": "Note e ricette arriveranno presto.",
+      "it": "La funzione Ricette e Note arriverà presto.",
       "en": "Notes and recipes coming soon."
     },
     {
@@ -1471,8 +1471,8 @@
       "screen": "detail",
       "key": "detail.curve_basis_title",
       "element_description": "Product detail page: label above the technical note on how the seasonality curve was built (Sources section)",
-      "it": "Come Calcoliamo la Stagionalità",
-      "en": "How We Work Out the Season"
+      "it": "Come Viene Stimata la Stagionalità",
+      "en": "How Seasonality Is Estimated"
     },
     {
       "screen": "detail",
@@ -1527,7 +1527,7 @@
       "screen": "detail",
       "key": "detail.ethylene_production.moderate",
       "element_description": "Ethylene tag: production class moderate",
-      "it": "Produce Etilene Moderato",
+      "it": "Produce Moderato Etilene ",
       "en": "Moderate Ethylene Production"
     },
     {
@@ -1604,8 +1604,8 @@
       "screen": "settings",
       "key": "settings.frost_sub",
       "element_description": "Settings: frost sub",
-      "it": "Quanto sono trasparenti card, barre e pannelli sopra lo sfondo.",
-      "en": "How see-through cards, bars and panels are over the background."
+      "it": "Quanto sono trasparenti card, pannelli sopra lo sfondo ed altri elementi grafici dell'app.",
+      "en": "How see-through cards, panels overlaid on the background, and other graphical elements in the app."
     },
     {
       "screen": "settings",
@@ -1653,15 +1653,15 @@
       "screen": "settings",
       "key": "settings.zone_arctic",
       "element_description": "Settings: zone arctic",
-      "it": "Artica (non usata)",
+      "it": "Artica (Non usata)",
       "en": "Arctic (not used)"
     },
     {
       "screen": "settings",
       "key": "settings.map_note",
       "element_description": "Settings: map note",
-      "it": "Regioni biogeografiche europee (EEA, Copenaghen 2016, CC BY 4.0), le stesse della mappa EUFIC; confini degli Stati: Natural Earth. Le regioni Anatolica, del Mar Nero, Steppica e Macaronesica sono assegnate alla zona più simile.",
-      "en": "European biogeographical regions (EEA, Copenhagen 2016, CC BY 4.0), the same as the EUFIC map; country borders: Natural Earth. The Anatolian, Black Sea, Steppic and Macaronesian regions are assigned to the most similar zone."
+      "it": "Principali regioni biogeografiche europee (EEA, Copenaghen 2016, CC BY 4.0), le stesse della mappa EUFIC. Le regioni Anatolica, del Mar Nero, Steppica e Macaronesica sono state assegnate alla zona più simile.",
+      "en": "Main european biogeographical regions (EEA, Copenhagen 2016, CC BY 4.0), the same as the EUFIC map. The Anatolian, Black Sea, Steppic and Macaronesian regions have been assigned to the most similar zone."
     },
     {
       "screen": "settings",
@@ -1772,8 +1772,8 @@
       "screen": "settings",
       "key": "settings.approx_setting_sub",
       "element_description": "Settings: approx setting sub",
-      "it": "Se manca il dato della tua zona mostra la stima del database, copiata dalla zona con il clima più simile e segnata con ≈.",
-      "en": "When your zone has no data, show the database estimate, copied from the zone with the most similar climate and marked with ≈."
+      "it": "Se manca il dato della tua zona mostra la stima mutuata dalla zona con il clima più simile. Questo dato verrà segnato con il simbolo ≈.",
+      "en": "If data for your zone is unavailable, an estimate derived from the zone with the most similar climate is displayed. This value will be marked with the symbol ≈."
     },
     {
       "screen": "settings",
@@ -1793,8 +1793,8 @@
       "screen": "settings",
       "key": "settings.peak_notif_sub",
       "element_description": "Settings: peak notif sub",
-      "it": "Il primo di ogni mese, alle 9, ti dice cosa entra nel picco della stagione.",
-      "en": "On the 1st of each month at 9am, find out what reaches its seasonal peak."
+      "it": "Il primo di ogni mese, alle 09:00 AM, ti dice cosa entra nel picco della stagione.",
+      "en": "On the 1st of each month at 09:00 AM, find out what reaches its seasonal peak."
     },
     {
       "screen": "settings",
