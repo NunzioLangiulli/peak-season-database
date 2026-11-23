@@ -2153,17 +2153,6 @@
     "height": 1505,
     "view_type": "botanical_plate"
   },
-  "cicoria_da_taglio_cutting_chicory_02.jpg": {
-    "filename": "cicoria_da_taglio_cutting_chicory_02.jpg",
-    "author": "Oceancetaceen - Alice Chodura",
-    "license": "Public domain",
-    "license_url": null,
-    "source_url": "https://commons.wikimedia.org/wiki/File%3ACichorium_intybus_var_intybus_clean_no-description.jpg",
-    "provider": "wikimedia_commons",
-    "width": 1003,
-    "height": 1504,
-    "view_type": "botanical_plate"
-  },
   "cima_di_rapa_turnip_greens_01.jpg": {
     "filename": "cima_di_rapa_turnip_greens_01.jpg",
     "author": "valtercirillo / Pixabay",
@@ -2185,28 +2174,6 @@
     "width": 960,
     "height": 1440,
     "view_type": "botanical_plate"
-  },
-  "cima_di_rapa_turnip_greens_03.jpg": {
-    "filename": "cima_di_rapa_turnip_greens_03.jpg",
-    "author": "jjcsjoao / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/turnip-greens-vegetables-food-2554139/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 851,
-    "view_type": "full_frame"
-  },
-  "cipolla_estiva_summer_onion_02.jpg": {
-    "filename": "cipolla_estiva_summer_onion_02.jpg",
-    "author": "Niksy / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/onion-vegetables-fresh-food-healthy-959922/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 853,
-    "view_type": "cut_section"
   },
   "cipolla_estiva_summer_onion_03.jpg": {
     "filename": "cipolla_estiva_summer_onion_03.jpg",
@@ -8199,7 +8166,7 @@
     "license_url": null,
     "source_url": "https://commons.wikimedia.org/wiki/File:Chou_de_Bruxelles_nain_Vilmorin-Andrieux_1904.png",
     "provider": "wikimedia_commons",
-    "width": 1284,
+    "width": 1600,
     "height": 2400,
     "view_type": "botanical_plate"
   },
@@ -8211,7 +8178,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chou_de_Bruxelles_demi-nain_de_la_Halle_Vilmorin-Andrieux_1904.png",
     "provider": "wikimedia_commons",
     "width": 1863,
-    "height": 2400,
+    "height": 2794,
     "view_type": "botanical_plate"
   },
   "cavoletto_di_bruxelles_brussels_sprout_08.jpg": {
@@ -8221,42 +8188,9 @@
     "license_url": null,
     "source_url": "https://commons.wikimedia.org/wiki/File:Chou_de_Bruxelles_ordinaire_Vilmorin-Andrieux_1904.png",
     "provider": "wikimedia_commons",
-    "width": 1302,
+    "width": 1600,
     "height": 2400,
     "view_type": "botanical_plate"
-  },
-  "broccolo_broccoli_07.jpg": {
-    "filename": "broccolo_broccoli_07.jpg",
-    "author": "George Chernilevsky",
-    "license": "CC BY 4.0",
-    "license_url": "https://creativecommons.org/licenses/by/4.0",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Romanesco_broccoli_2025_G2.jpg",
-    "provider": "wikimedia_commons",
-    "width": 1920,
-    "height": 1102,
-    "view_type": "isolated_background"
-  },
-  "broccolo_broccoli_08.jpg": {
-    "filename": "broccolo_broccoli_08.jpg",
-    "author": "Miawgogo",
-    "license": "CC BY-SA 4.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Romanesco_broccoli,_Close_up.jpg",
-    "provider": "wikimedia_commons",
-    "width": 1920,
-    "height": 1280,
-    "view_type": "full_frame"
-  },
-  "broccolo_broccoli_09.jpg": {
-    "filename": "broccolo_broccoli_09.jpg",
-    "author": "Jon Sullivan",
-    "license": "Public domain",
-    "license_url": null,
-    "source_url": "https://commons.wikimedia.org/wiki/File:Fractal_Broccoli.jpg",
-    "provider": "wikimedia_commons",
-    "width": 1024,
-    "height": 768,
-    "view_type": "isolated_background"
   },
   "cavolo_cappuccio_cabbage_06.jpg": {
     "filename": "cavolo_cappuccio_cabbage_06.jpg",
@@ -8266,7 +8200,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Starr_070730-7852_Brassica_oleracea_var._capitata.jpg",
     "provider": "wikimedia_commons",
     "width": 1920,
-    "height": 1440,
+    "height": 1280,
     "view_type": "full_frame"
   },
   "cavolo_cappuccio_cabbage_07.jpg": {
@@ -8276,7 +8210,7 @@
     "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
     "source_url": "https://commons.wikimedia.org/wiki/File:Brassica-oleracea-alba.JPG",
     "provider": "wikimedia_commons",
-    "width": 1355,
+    "width": 1296,
     "height": 864,
     "view_type": "plant_in_field"
   },
@@ -8288,7 +8222,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Starr_070618-7337_Brassica_oleracea_var._capitata.jpg",
     "provider": "wikimedia_commons",
     "width": 1920,
-    "height": 1440,
+    "height": 1280,
     "view_type": "plant_in_field"
   },
   "cavolo_cappuccio_cabbage_09.jpg": {
@@ -8299,7 +8233,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Planche_botanique_de_formes_cultiv%C3%A9es_de_Brassica_oleracea_(chou_rouge).jpg",
     "provider": "wikimedia_commons",
     "width": 1797,
-    "height": 2400,
+    "height": 2696,
     "view_type": "botanical_plate"
   },
   "cavolo_cappuccio_cabbage_10.jpg": {
@@ -8309,7 +8243,7 @@
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Brassica_oleracea_convar._capitata_var._alba_(Wei%C3%9Fkohl)_2024-07-25_(01).jpg",
     "provider": "wikimedia_commons",
-    "width": 1920,
+    "width": 1748,
     "height": 1165,
     "view_type": "plant_in_field"
   },
@@ -8332,7 +8266,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chou_palmier_Vilmorin-Andrieux_1904.png",
     "provider": "wikimedia_commons",
     "width": 1695,
-    "height": 2400,
+    "height": 2542,
     "view_type": "botanical_plate"
   },
   "cavolo_nero_black_kale_07.jpg": {
@@ -8354,7 +8288,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chickpeas_-_Cicer_arietinum_-_%E0%B4%95%E0%B4%9F%E0%B4%B2.jpg",
     "provider": "wikimedia_commons",
     "width": 1920,
-    "height": 1440,
+    "height": 1280,
     "view_type": "full_frame"
   },
   "cece_chickpea_07.jpg": {
@@ -8365,7 +8299,84 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Cicer_arietinum_001.JPG",
     "provider": "wikimedia_commons",
     "width": 1920,
-    "height": 1440,
+    "height": 1280,
     "view_type": "plant_in_field"
+  },
+  "cicoria_da_taglio_cutting_chicory_03.jpg": {
+    "filename": "cicoria_da_taglio_cutting_chicory_03.jpg",
+    "author": "Stefan.lefnaer",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cichorium_intybus_sl9.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "cicoria_da_taglio_cutting_chicory_04.jpg": {
+    "filename": "cicoria_da_taglio_cutting_chicory_04.jpg",
+    "author": "Unknown",
+    "license": "Unknown",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 1240,
+    "height": 827,
+    "view_type": "full_frame"
+  },
+  "cima_di_rapa_turnip_greens_04.jpg": {
+    "filename": "cima_di_rapa_turnip_greens_04.jpg",
+    "author": "Unknown",
+    "license": "Unknown",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 1920,
+    "height": 1282,
+    "view_type": "isolated_background"
+  },
+  "cima_di_rapa_turnip_greens_05.jpg": {
+    "filename": "cima_di_rapa_turnip_greens_05.jpg",
+    "author": "Unknown",
+    "license": "Unknown",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 1200,
+    "height": 800,
+    "view_type": "isolated_background"
+  },
+  "cima_di_rapa_turnip_greens_06.jpg": {
+    "filename": "cima_di_rapa_turnip_greens_06.jpg",
+    "author": "Unknown",
+    "license": "Unknown",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 1200,
+    "height": 800,
+    "view_type": "full_frame"
+  },
+  "cipolla_estiva_summer_onion_06.jpg": {
+    "filename": "cipolla_estiva_summer_onion_06.jpg",
+    "author": "Alex Lomas",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Allium_cepa_(2944502550).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1277,
+    "view_type": "isolated_background"
+  },
+  "cipolla_estiva_summer_onion_07.jpg": {
+    "filename": "cipolla_estiva_summer_onion_07.jpg",
+    "author": "Ayotte, Gilles, 1948-",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Allium_cepa_15-p.bot-lilia.alliu-011.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1759,
+    "height": 1173,
+    "view_type": "cut_section"
   }
 }
