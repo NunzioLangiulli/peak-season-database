@@ -103,37 +103,6 @@
    ]
   },
   {
-   "item": "cicoria_da_cespo_chicory",
-   "draft": "Cicoria Catalogna Frastagliata",
-   "registered": "Catalogna a foglie frastagliate",
-   "upov": "CICHO_INT_FOL",
-   "match": "exact",
-   "records": [
-    "IT:Registered:NLI/VEG/IT/CICHO_INT_FOL/261425"
-   ]
-  },
-  {
-   "item": "cicoria_da_cespo_chicory",
-   "draft": "Cicoria Pan di Zucchero",
-   "registered": "Pan di zucchero",
-   "upov": "CICHO_INT_FOL",
-   "match": "exact",
-   "records": [
-    "IT:Registered:NLI/VEG/IT/CICHO_INT_FOL/261500",
-    "CZ:Surrendered:NLI/VEG/CZ/CICHO_INT_FOL/5618"
-   ]
-  },
-  {
-   "item": "cicoria_da_cespo_chicory",
-   "draft": "Cicoria Bianca di Milano",
-   "registered": "Bianca di Milano",
-   "upov": "CICHO_INT_FOL",
-   "match": "exact",
-   "records": [
-    "IT:Registered:NLI/VEG/IT/CICHO_INT_FOL/261415"
-   ]
-  },
-  {
    "item": "cicoria_da_taglio_cutting_chicory",
    "draft": "Cicoria Spadonino",
    "registered": "Spadona",

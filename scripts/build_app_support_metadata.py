@@ -89,8 +89,8 @@ except ImportError:
 # Database release: metadata.version is the GitHub release tag of peak-season-database (semantic versioning: patch =
 # text/data fixes, minor = new fields or content, major = breaking format changes). schema_version is the JSON format
 # and changes independently. Bump both values here when preparing a release, then publish the tag v<DB_VERSION>.
-DB_VERSION = "1.1.3"
-DB_RELEASE_DATE = "2026-11-20"
+DB_VERSION = "1.2.0"
+DB_RELEASE_DATE = "2026-11-23"
 DISPLAY = load_json(ROOT / "scripts" / "config" / "source_display.json")["sources"]   # editore, titolo, logo condiviso
 
 
@@ -294,6 +294,22 @@ def main():
                 else:
                     dress(x)
     dress(m.get("glossary") or {})
+    # old product ids -> product that replaces them (merged or removed records, data/merged_items_archive.json):
+    # the app moves saved favourites / shopping list / disliked ids to the replacement at startup. Chains are followed;
+    # only targets that exist are kept.
+    arch_path = DATA / "merged_items_archive.json"
+    arch = load_json(arch_path)["items"] if arch_path.exists() else {}
+    ids = {i["id"] for i in db["items"]}
+    step = {old: (a.get("merged_into") or a.get("replaced_by")) for old, a in arch.items()}
+    redirects = {}
+    for old in sorted(step):
+        new, seen = step[old], {old}
+        while new in step and new not in ids and new not in seen:
+            seen.add(new)
+            new = step[new]
+        if new in ids and old not in ids:
+            redirects[old] = new
+    m["id_redirects"] = redirects
     save_json(DATA / "database.json", db)
     print(f"families: {len(used)} (without name: {missing}); countries without ISO: {sorted(unknown_iso)}; "
           f"sources with favicon: {sum(1 for s in m['official_sources'] if s['favicon'])}/{len(m['official_sources'])}")

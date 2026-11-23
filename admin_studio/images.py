@@ -22,6 +22,8 @@ from common import DATA, IMAGES, SESSION, load_json, save_json
 
 META = IMAGES / "_metadata.json"
 MANUAL = IMAGES / "_primary_manual.json"
+REMOVED = IMAGES / "_removed"                         # deleted photos are moved here (as scripts/apply_image_selection.py does)
+ORIGINALS = IMAGES / "_originals"                     # uncropped originals, as scripts/crop_images.py keeps them
 VIEW_TYPES = ["full_frame", "isolated_background", "plant_in_field", "botanical_plate", "cut_section", "other"]
 MAX_BYTES = 40 * 1024 * 1024
 MAX_SIDE = 2400
@@ -62,7 +64,13 @@ def item_detail(iid):
     manual = load_json(MANUAL) if MANUAL.exists() else {}
     return {"id": iid, "name": it["names"]["it"], "name_en": it["names"]["en"], "scientific_name": it["botany"].get("scientific_name"),
             "primary": im.get("primary"), "primary_manual": manual.get(iid), "view_types": VIEW_TYPES, "links": links(it),
-            "images": [det.get(f, {"filename": f}) for f in im.get("gallery") or []]}
+            "images": [{**det.get(f, {"filename": f}), "v": _version(f)} for f in im.get("gallery") or []]}
+
+
+def _version(name):
+    """Changes whenever the file behind a name changes: the browser reloads instead of showing a cached photo."""
+    p = IMAGES / name
+    return int(p.stat().st_mtime) if p.exists() else 0
 
 
 def _align(im):
@@ -171,35 +179,92 @@ def resolve(url):
 
 
 def next_name(iid, gallery):
-    used = {int(m.group(1)) for f in list(gallery) + [p.name for p in IMAGES.glob(f"{iid}_*.jpg")]
-            if (m := re.fullmatch(re.escape(iid) + r"_(\d{2})\.jpg", f))}
+    """Next free <id>_NN.jpg. Numbers of deleted photos (assets/images/_removed/) and of any metadata entry are never
+    reused: a reused name would show the old photo from browser and WebP caches, and _originals/ would hold the wrong one."""
+    names = list(gallery) + [p.name for p in IMAGES.glob(f"{iid}_*.jpg")] + [p.name for p in REMOVED.glob(f"{iid}_*.jpg")]
+    names += [k for k in (load_json(META) if META.exists() else {}) if k.startswith(iid + "_")]
+    used = {int(m.group(1)) for f in names if (m := re.match(re.escape(iid) + r"_(\d{2})(?:\.|_)", f))}
     n = max(used, default=0) + 1
     if n > 99:
         raise ValueError("this product already has 99 photos")
     return f"{iid}_{n:02d}.jpg"
 
 
+_FETCHED = {}                                         # url -> (time, info, bytes): the preview's download is reused when adding
+
+
+def _url_info(url):
+    hit = _FETCHED.get(url)
+    if hit and time.time() - hit[0] < 900:
+        return dict(hit[1])
+    info = resolve(url)
+    _FETCHED[url] = (time.time(), dict(info), None)
+    return info
+
+
+def _url_bytes(url, info):
+    hit = _FETCHED.get(url)
+    if hit and hit[2] is not None and time.time() - hit[0] < 900:
+        return hit[2]
+    raw = info.pop("_bytes", None) or _get(info["image_url"], "image/*")[0]
+    info.pop("_bytes", None)
+    _FETCHED.clear()                                  # keep only the latest photo in memory
+    _FETCHED[url] = (time.time(), {k: v for k, v in info.items() if k != "_bytes"}, raw)
+    return raw
+
+
 def download(data):
-    from PIL import Image, ImageOps
     db = _db()
     it = next(x for x in db["items"] if x["id"] == data["id"])
-    info = resolve(data["url"])
+    info = _url_info(data["url"])
     for k in ("author", "license", "license_url"):
         if (data.get(k) or "").strip():
             info[k] = data[k].strip()                # what is typed in the form beats what is read from the source
     if not info.get("author") or not info.get("license"):
         raise ValueError("author and licence cannot be read from this source: type them in the form (they are needed to show the photo)")
-    raw = info.pop("_bytes", None) or _get(info["image_url"], "image/*")[0]
-    with Image.open(io.BytesIO(raw)) as im:
-        im = ImageOps.exif_transpose(im).convert("RGB")
-        im.thumbnail((MAX_SIDE, MAX_SIDE), Image.LANCZOS)
-        name = next_name(it["id"], it["images"].get("gallery") or [])
-        dst = IMAGES / name
-        im.save(dst, "JPEG", quality=90, optimize=True)
-        w, h = im.size
+    raw = _url_bytes(data["url"], info)
+    return _add(db, it, raw, info, data)
+
+
+def _data_url_bytes(data_url):
+    import base64
+    m = re.match(r"data:image/(?:jpeg|png|webp);base64,(.+)", data_url or "", re.S)
+    if not m:
+        raise ValueError("choose a JPG, PNG or WebP photo")
+    raw = base64.b64decode(m.group(1))
+    if len(raw) > MAX_BYTES:
+        raise ValueError("file too large (over 40 MB)")
+    return raw
+
+
+def upload(data):
+    """A photo file from the computer (data URL), with author and licence typed in the form."""
+    db = _db()
+    it = next(x for x in db["items"] if x["id"] == data["id"])
+    raw = _data_url_bytes(data.get("data_url"))
+    info = {k: (data.get(k) or "").strip() or None for k in ("author", "license", "license_url", "source_url")}
+    if not info["author"] or not info["license"]:
+        raise ValueError("author and licence are needed to show the photo in the app")
+    info["provider"] = "user"
+    # own photo without a web page: source_url stays empty (the app shows author and licence only)
+    return _add(db, it, raw, info, data)
+
+
+def _add(db, it, raw, info, data):
     vt = data.get("view_type") if data.get("view_type") in VIEW_TYPES else "full_frame"
+    src = _open(raw)
+    out, how = standardise(src, vt, data.get("crop"))
+    name = next_name(it["id"], it["images"].get("gallery") or [])
+    dst = IMAGES / name
+    out.save(dst, "JPEG", quality=90, optimize=True, progressive=True)
+    w, h = out.size
+    new = [str(dst)]
+    if how["changed"]:                               # the uncropped photo, like crop_images.py does
+        ORIGINALS.mkdir(exist_ok=True)
+        src.save(ORIGINALS / name, "JPEG", quality=90, optimize=True, progressive=True)
+        new.append(str(ORIGINALS / name))
     detail = {"filename": name, "author": info["author"][:300], "license": info["license"], "license_url": info.get("license_url"),
-              "source_url": info.get("source_url") or data["url"], "provider": info["provider"], "width": w, "height": h, "view_type": vt}
+              "source_url": info.get("source_url") or data.get("url"), "provider": info["provider"], "width": w, "height": h, "view_type": vt}
     meta = load_json(META) if META.exists() else {}
     meta[name] = detail
     save_json(META, meta)
@@ -214,7 +279,76 @@ def download(data):
         manual[it["id"]] = name
         save_json(MANUAL, manual)
     save_json(DATA / "database.json", db)
-    return {"new_files": [str(dst)], "added": detail}
+    return {"new_files": new, "added": detail, "crop": how["text"]}
+
+
+# ------------------------------------------------------------------ format rules (scripts/crop_images.py)
+def _open(raw):
+    from PIL import Image, ImageOps
+    with Image.open(io.BytesIO(raw)) as im:
+        im = ImageOps.exif_transpose(im).convert("RGB")
+        im.thumbnail((MAX_SIDE, MAX_SIDE), Image.LANCZOS)
+        return im.copy()
+
+
+def standardise(im, view_type, crop=None):
+    """The owner's format rules of scripts/crop_images.py (2026-11-06):
+    - botanical plates: portrait 2:3 WITHOUT cropping, margin in the paper colour;
+    - other landscape photos: centred 3:2 crop;
+    - portrait or square photos: left whole, unless crop = {"mode": "crop", "anchor": 0..1} asks for a 3:2 crop
+      (0 = keep the top part, 0.5 = centre, 1 = bottom part), as VERTICAL_ANCHOR does in crop_images.py.
+    Returns (image, {"changed", "text", "options"})."""
+    from PIL import Image
+    from crop_images import TOL, border_color
+    crop = crop or {}
+    w, h = im.size
+    if view_type == "botanical_plate":
+        if abs(w / h - 2 / 3) <= TOL:
+            return im, {"changed": False, "text": "Plate already 2:3: unchanged", "options": False}
+        nw, nh = (w, round(w * 3 / 2)) if w / h > 2 / 3 else (round(h * 2 / 3), h)
+        nw, nh = max(nw, w), max(nh, h)
+        out = Image.new("RGB", (nw, nh), border_color(im))
+        out.paste(im, ((nw - w) // 2, (nh - h) // 2))
+        return out, {"changed": True, "text": f"Plate brought to 2:3 with a paper-coloured margin ({w}×{h} → {nw}×{nh}), nothing cut", "options": False}
+    if h >= w and crop.get("mode") != "crop":
+        return im, {"changed": False, "text": "Portrait or square photo: kept whole (you can crop it to 3:2)", "options": True}
+    if abs(w / h - 1.5) <= TOL:
+        return im, {"changed": False, "text": "Already 3:2: unchanged", "options": h >= w}
+    if w / h > 1.5:
+        nw = round(h * 1.5)
+        box = ((w - nw) // 2, 0, (w - nw) // 2 + nw, h)
+        text = "Centred 3:2 crop (sides trimmed)"
+    else:
+        nh = round(w / 1.5)
+        a = min(1.0, max(0.0, float(crop.get("anchor", 0.5))))
+        top = round((h - nh) * a)
+        box = (0, top, w, top + nh)
+        text = "3:2 crop (top and bottom trimmed)" if h < w else f"3:2 crop of a portrait photo, keeping the {'top' if a < .34 else 'bottom' if a > .66 else 'centre'}"
+    out = im.crop(box)
+    return out, {"changed": True, "text": f"{text}: {w}×{h} → {out.size[0]}×{out.size[1]}", "options": h >= w}
+
+
+def _small(im, side=520):
+    import base64
+    t = im.copy()
+    t.thumbnail((side, side))
+    b = io.BytesIO()
+    t.save(b, "JPEG", quality=80)
+    return "data:image/jpeg;base64," + base64.b64encode(b.getvalue()).decode()
+
+
+def preview(data):
+    """Before/after of the format rules for a photo about to be added (URL or uploaded file); nothing is saved."""
+    vt = data.get("view_type") if data.get("view_type") in VIEW_TYPES else "full_frame"
+    if data.get("data_url"):
+        raw, info = _data_url_bytes(data["data_url"]), {}
+    else:
+        info = _url_info(data["url"])
+        raw = _url_bytes(data["url"], info)
+    src = _open(raw)
+    out, how = standardise(src, vt, data.get("crop"))
+    return {"before": _small(src), "after": _small(out), "size_before": src.size, "size_after": out.size, **how,
+            "author": info.get("author"), "license": info.get("license")}
 
 
 # ------------------------------------------------------------------ delete
@@ -255,5 +389,15 @@ def delete(data):
     save_json(META, meta)
     save_json(MANUAL, manual)
     save_json(DATA / "database.json", db)
-    path.unlink(missing_ok=True)
+    if path.exists():                                # kept in assets/images/_removed/ (not on Git), as the scripts do
+        REMOVED.mkdir(exist_ok=True)
+        dst = REMOVED / name
+        if dst.exists():
+            dst = REMOVED / f"{path.stem}_{int(time.time())}.jpg"
+        path.replace(dst)
+        moved = [str(dst)]
+        if (ORIGINALS / name).exists():              # its uncropped original goes with it
+            (ORIGINALS / name).replace(REMOVED / f"{dst.stem}_original.jpg")
+            moved.append(str(REMOVED / f"{dst.stem}_original.jpg"))
+        return {"deleted": name, "primary": im["primary"], "new_files": moved}   # dropped again if validation fails
     return {"deleted": name, "primary": im["primary"]}

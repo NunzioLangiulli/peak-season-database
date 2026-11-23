@@ -15,7 +15,7 @@ from common import CONFIG, DATA, RAW, add_discrepancy, finalize_completeness, lo
 # keywords (start of word) per product; exclusions to avoid wrong matches
 EXCLUDE = {"fico_fig": ["india"], "mela_apple": ["cotogn", "melanzan"], "pesca_peach": ["noce"], "cipolla_estiva_summer_onion": [],
            "cavolo_cappuccio_cabbage": ["nero", "verza", "rosso"], "lattuga_da_taglio_leaf_lettuce": [],
-           "cicoria_da_cespo_chicory": [], "radicchio_radicchio": []}
+           "radicchio_radicchio": []}
 EXTRA_KW = {"radicchio_radicchio": ["radicchio"], "lattuga_da_cespo_head_lettuce": ["lattuga", "insalata"],
             "lattuga_da_taglio_leaf_lettuce": ["lattuga", "insalata"], "uva_table_grape": ["uva da tavola"],
             "fagiolo_bean": ["fagiol"], "fagiolino_green_bean": [], "arancia_orange": ["arancia", "arance"],

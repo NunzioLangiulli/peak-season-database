@@ -12,7 +12,7 @@ N = "nutrition_and_sustainability"
 SRC = "https://www.smartfood.ieo.it/media/p02bkul0/smartfood-tab-porzioni-e-frequenze-completa.pdf"
 EURLEX = "https://eur-lex.europa.eu/legal-content/IT/TXT/HTML/?uri=CELEX:02011R1169-20180101"
 COOKED = {"spinacio_spinach", "bietola_da_coste_swiss_chard", "bietola_da_taglio_leaf_beet", "broccolo_broccoli", "cavolfiore_cauliflower",
-          "melanzana_eggplant", "cavolo_nero_black_kale", "cima_di_rapa_turnip_greens", "cicoria_da_cespo_chicory",
+          "melanzana_eggplant", "cavolo_nero_black_kale", "cima_di_rapa_turnip_greens",
           "cicoria_da_taglio_cutting_chicory", "scarola_escarole", "cavoletto_di_bruxelles_brussels_sprout", "cardo_cardoon",
           "cavolo_verza_savoy_cabbage", "cavolo_cappuccio_cabbage", "cavolo_rosso_red_cabbage"}
 

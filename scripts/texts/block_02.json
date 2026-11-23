@@ -165,38 +165,6 @@
       "Eat the skin if the cucumber is good quality; leftover pieces can be quick-pickled in a few hours or added to infused water and gazpacho."
     ]
   },
-  "cicoria_da_cespo_chicory": {
-    "pl": "frigorifero",
-    "rt": "non_climaterico",
-    "src": [
-      "usda_hb66",
-      "crea"
-    ],
-    "sl": [
-      "Cespo pulito, croccante e compatto, foglie verdi brillanti senza imbrunimenti.",
-      "Clean, crisp, compact head with bright green leaves and no browning."
-    ],
-    "ds": [
-      "Scegli cespi puliti, croccanti e ben chiusi, con foglie di colore brillante e senza margini secchi o bruni. Le foglie giovani e tenere sono preferibili a quelle esterne più dure e amare. Il tipo (Catalogna, Pan di Zucchero) cambia forma e grado di amaro.",
-      "Choose clean, crisp, tightly closed heads with brightly coloured leaves and no dry or brown edges. Young tender leaves are preferable to the tougher, more bitter outer ones. The type (Catalogna, Sugarloaf) changes shape and bitterness."
-    ],
-    "cs": [
-      "Frigo · 3-5 giorni",
-      "Fridge · 3-5 days"
-    ],
-    "si": [
-      "Conservala in frigorifero non lavata, in un sacchetto forato, e consumala in pochi giorni. Anche a 0 °C e umidità 95-100% queste insalate non si conservano oltre 2-3 settimane. Non temono il freddo ma vanno protette dal congelamento.",
-      "Keep it unwashed in a perforated bag in the fridge and use within a few days. Even at 0 °C and 95-100% humidity these greens do not keep beyond 2-3 weeks. They tolerate cold but must be protected from freezing."
-    ],
-    "hb": [
-      "Valori della cicoria di campo: per 100 g è fonte di vitamina A, vitamina E e vitamina C, con pochissime calorie. Il gusto amaro è tipico delle cicorie ed è più marcato nelle foglie esterne.",
-      "Values for wild chicory: per 100 g it is a source of vitamin A, vitamin E and vitamin C, with very few calories. The bitter taste is typical of chicories and stronger in the outer leaves."
-    ],
-    "wr": [
-      "Le foglie esterne più amare sono ottime ripassate in padella con aglio, olio e peperoncino o nelle minestre.",
-      "The bitterer outer leaves are great sautéed with garlic, oil and chilli or in soups."
-    ]
-  },
   "cicoria_da_taglio_cutting_chicory": {
     "pl": "frigorifero",
     "rt": "non_climaterico",

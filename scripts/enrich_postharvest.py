@@ -34,7 +34,7 @@ MAP = {  # id -> (HB66 chapter title, Table 1 key, quality)
     "cavolfiore_cauliflower": ("Cauliflower", "Cauliflower", "exact"), "broccolo_broccoli": ("Broccoli", "Broccoli", "exact"),
     "cavolo_cappuccio_cabbage": ("Cabbage", "Cabbage", "exact"), "cavolo_nero_black_kale": ("Greens for Cooking", "Kale", "approx"),
     "cavolo_rapa_kohlrabi": ("Kohlrabi", "Kohlrabi", "exact"), "cavolo_verza_savoy_cabbage": ("Cabbage", "Cabbage", "approx"),
-    "cetriolo_cucumber": ("Cucumber", "Cucumber", "exact"), "cicoria_da_cespo_chicory": ("Endive and Escarole", "Endive", "approx"),
+    "cetriolo_cucumber": ("Cucumber", "Cucumber", "exact"),
     "cicoria_da_taglio_cutting_chicory": ("Endive and Escarole", "Endive", "approx"),
     "cima_di_rapa_turnip_greens": ("Greens for Cooking", "Turnip greens", "approx"),
     "cipolla_estiva_summer_onion": ("Onion", "Onion", "exact"), "cipolla_invernale_winter_onion": ("Onion", "Onion", "exact"),

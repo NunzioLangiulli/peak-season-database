@@ -1,6 +1,9 @@
 // Peak Season Admin Studio: helpers shared by all tabs.
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+// Product name for lists and headings: English, then the Italian name muted after a dot. No brackets around the
+// Italian name, because many names already end with their own bracketed part ("Cipolla Invernale (Rossa/Conservazione)").
+const pname = (en, it) => !en || en === it ? esc(it || en) : esc(en) + ' <span class="itn">· ' + esc(it) + '</span>';
 const norm = s => String(s ?? '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 const api = {
   get: async u => (await fetch(u)).json(),

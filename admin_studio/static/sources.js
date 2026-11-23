@@ -93,7 +93,7 @@ Studio.tabs.links = {
     D.items.forEach(it => {
       const links = it.links.map((l, j) => [l, j]).filter(([l]) => !nq || norm([it.name, it.name_en, it.id, l.url, l.title.it, l.title.en, l.source_key, l.topic].join(' ')).includes(nq));
       if (!links.length || shown > 40) return; shown++;
-      const h = document.createElement('div'); h.className = 'prod'; h.textContent = `${it.name_en || it.name} (${it.name}) · ${it.links.length} links`; m.append(h);
+      const h = document.createElement('div'); h.className = 'prod'; h.innerHTML = `${pname(it.name_en, it.name)} <span class="itn">· ${it.links.length} links</span>`; m.append(h);
       links.forEach(([l]) => {
         const r = document.createElement('div'); r.className = 'row'; const orig = l._orig || l.url;
         r.innerHTML = `<div class="meta">${Lnk.logo(l.source_key)} <code>${esc(l.source_key)}</code> · ${esc(l.topic)}

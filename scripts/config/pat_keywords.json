@@ -103,13 +103,6 @@
     "cetriol"
    ]
   },
-  "cicoria_da_cespo_chicory": {
-   "include": [
-    "cicori",
-    "catalogn",
-    "puntarell"
-   ]
-  },
   "cicoria_da_taglio_cutting_chicory": {
    "include": [
     "cicori[ae] da taglio",

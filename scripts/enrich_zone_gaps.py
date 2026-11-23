@@ -15,7 +15,7 @@ from common import DATA, RAW, finalize_completeness, load_json, mark_enriched, s
 
 AT = {  # id -> Austrian calendar entry
     "bietola_da_coste_swiss_chard": "mangold", "bietola_da_taglio_leaf_beet": "mangold", "indivia_riccia_curly_endive": "endivie",
-    "scarola_escarole": "endivie", "cicoria_da_cespo_chicory": "zuckerhut", "fungo_pleurotus_oyster_mushroom": "pilze",
+    "scarola_escarole": "endivie", "fungo_pleurotus_oyster_mushroom": "pilze",
     "fungo_champignon_button_mushroom": "pilze", "radicchio_radicchio": "radicchio", "valerianella_corn_salad": "vogerlsalat",
     "pastinaca_parsnip": "pastinaken", "topinambur_jerusalem_artichoke": "topinambur", "rucola_arugula": "rucola",
     "ribes_redcurrant": "ribisel", "mela_cotogna_quince": "quitten", "sedano_rapa_celeriac": "sellerie",

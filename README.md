@@ -1,12 +1,12 @@
 # Peak Season – Seasonal Fruit & Vegetable Database
 
-An open, bilingual (Italian/English) database, **built entirely on verifiable sources**, describing **153 fresh products**: when they are in season in Italy and across Europe, how to choose them, how to store them, what they contain and what their environmental footprint is.
+An open, bilingual (Italian/English) database, **built entirely on verifiable sources**, describing **152 fresh products**: when they are in season in Italy and across Europe, how to choose them, how to store them, what they contain and what their environmental footprint is.
 
 It is the single source of truth for the **Peak Season** app ([peak-season-app](https://github.com/NunzioLangiulli/peak-season-app)), but it is designed to be used **without the app as well**: every rule the app applies is written into the database itself.
 
 | | |
 |---|---|
-| Products | 153 – 72 vegetables, 55 fruits, 10 herbs and spices, 10 mushrooms, 6 fresh cereals/pulses |
+| Products | 152 – 71 vegetables, 55 fruits, 10 herbs and spices, 10 mushrooms, 6 fresh cereals/pulses |
 | Sources | 46 official and scientific sources, listed in `metadata.official_sources` |
 | Seasonality | 3 Italian macro-areas + 6 European climate zones (EUFIC/EEA, 29 countries) |
 | Languages | every user-facing text is `{ "it": …, "en": … }` |
@@ -180,7 +180,7 @@ db = load_json("data/database.json")
 
 ### Versioning
 
-`metadata.version` is the GitHub release tag of this repository (current release: **v1.1.3**, `metadata.generated` = release date). It follows semantic versioning:
+`metadata.version` is the GitHub release tag of this repository (current release: **v1.2.0**, `metadata.generated` = release date). It follows semantic versioning:
 - **patch** (1.1.x): fixes to texts or data;
 - **minor** (1.x.0): new fields or new content;
 - **major** (x.0.0): breaking changes to the format.

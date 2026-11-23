@@ -455,13 +455,6 @@
       "gaps": {},
       "harvest_mismatch": {}
     },
-    "cicoria_da_cespo_chicory": {
-      "peak_italy": true,
-      "peak_eufic": true,
-      "flat_italy": false,
-      "gaps": {},
-      "harvest_mismatch": {}
-    },
     "cicoria_da_taglio_cutting_chicory": {
       "peak_italy": true,
       "peak_eufic": false,
@@ -2627,9 +2620,9 @@
     }
   },
   "summary": {
-    "items": 153,
-    "with_peak_italy": 128,
-    "with_peak_eufic": 70,
+    "items": 152,
+    "with_peak_italy": 127,
+    "with_peak_eufic": 69,
     "flat_italy": 6,
     "flat_everywhere": 5,
     "with_gaps": 6,

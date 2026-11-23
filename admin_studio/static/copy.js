@@ -209,7 +209,7 @@ Studio.tabs.items = {
       Nav.sec(m, {key: 'cat:' + c, title: esc(typeof Voc !== 'undefined' && Voc.groups.length ? Voc.label('category', c) : c), count: list.length + ' products', open: true, fill: body => {
         list.forEach(([it, fs]) => {
           const ch = fs.filter(([, j]) => Copy.changed.items.has(it.id + '|' + j)).length;
-          Nav.sec(body, {key: it.id, title: esc(it.name_en || it.name) + ' <span style="font-weight:400;color:var(--m)">(' + esc(it.name) + ')</span>',
+          Nav.sec(body, {key: it.id, title: pname(it.name_en, it.name),
             sub: esc(it.id), count: fs.length + ' texts' + (ch ? ' · ' + ch + ' changed' : ''), open: !!nq && opened++ < 25, fill: pb => {
               const secs = {}; fs.forEach(x => (secs[x[0].section] = secs[x[0].section] || []).push(x));
               Object.keys(secs).forEach(sn => Nav.sec(pb, {key: it.id + '|' + sn, title: esc(sn), count: secs[sn].length, open: true,

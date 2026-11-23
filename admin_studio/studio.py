@@ -422,6 +422,10 @@ class Handler(BaseHTTPRequestHandler):
             elif p == "/api/images/delete":             # the photo file is in the backup list: restored if validation fails
                 res = guarded([DB, images.META, images.MANUAL, images.photo_path(data["id"], data["filename"])],
                               lambda: images.delete(data), sync_args=())
+            elif p == "/api/images/preview":            # nothing saved: before/after of the format rules
+                res = {"ok": True, **images.preview(data)}
+            elif p == "/api/images/upload":
+                res = guarded([DB, images.META, images.MANUAL], lambda: images.upload(data), sync_args=())
             elif p == "/api/images/download":
                 res = guarded([DB, images.META, images.MANUAL], lambda: images.download(data), sync_args=())
             elif p == "/api/icons/save":

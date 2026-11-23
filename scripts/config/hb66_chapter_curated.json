@@ -219,12 +219,6 @@
    "sensitive_to_ethylene": true,
    "quote": "Eggplant fruit have a moderate to high sensitivity to ethylene exposure."
   },
-  "cicoria_da_cespo_chicory": {
-   "chapter": "Endive and Escarole",
-   "match": "approx",
-   "sensitive_to_ethylene": true,
-   "quote": "Production is very low, but exposure can result in leaf yellowing."
-  },
   "cicoria_da_taglio_cutting_chicory": {
    "chapter": "Endive and Escarole",
    "match": "approx",

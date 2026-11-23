@@ -1,7 +1,7 @@
 {
   "generated": "2026-11-05",
   "generator": "scripts/build_index.py",
-  "total_items": 154,
+  "total_items": 153,
   "from_draft": 91,
   "new_items": 63,
   "categories_breakdown": {
@@ -2004,114 +2004,10 @@
       "completion_status": "indexed"
     },
     {
-      "id": "cicoria_da_cespo_chicory",
-      "names": {
-        "it": "Cicoria da cespo (Catalogna / Pan di Zucchero)",
-        "en": "Chicory"
-      },
-      "scientific_name": "Cichorium intybus",
-      "category": "verdura",
-      "present_in_draft": true,
-      "draft_id": null,
-      "override_reason": null,
-      "added_from_sources": null,
-      "botany_check": {
-        "scientific_name_draft": "Cichorium intybus",
-        "eppo": {
-          "status": "ok",
-          "eppo_code": "CICIN",
-          "matched_on": "Cichorium intybus",
-          "eppo_preferred_name": "Cichorium intybus",
-          "common_names": {
-            "it": [
-              "cicoria selvatica",
-              "cicoria comune",
-              "radicchio"
-            ],
-            "en": [
-              "wild chicory",
-              "wild succory",
-              "chicory"
-            ]
-          },
-          "url": "https://gd.eppo.int/taxon/CICIN"
-        },
-        "wfo": {
-          "status": "ok",
-          "wfo_id": "wfo-0000080671",
-          "name": "Cichorium intybus L.",
-          "family": "Asteraceae",
-          "matched_on": "Cichorium intybus",
-          "url": "https://www.worldfloraonline.org/taxon/wfo-0000080671"
-        }
-      },
-      "sources": {
-        "crea": {
-          "code": "005240",
-          "name": "Cicoria, di campo, cruda",
-          "match": "approx",
-          "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005240"
-        },
-        "bda_ieo": {
-          "code": "319",
-          "name": "CICORIA",
-          "match": "approx",
-          "url": "https://bda.ieo.it/?page_id=87",
-          "api": {
-            "endpoint": "https://bda.ieo.it/api/BDA/FoodComponents",
-            "method": "POST",
-            "body": {
-              "language": 0,
-              "foodId": "<idFood da SearchFoodByCode '319'>"
-            }
-          }
-        },
-        "uc_davis": null,
-        "usda_hb66": {
-          "url": "https://www.ars.usda.gov/is/np/commercialstorage/commercialstorage.pdf",
-          "note": "voce da individuare nel PDF al Passo 1.3"
-        },
-        "odc_pdf_row": "Cicorie da cespo",
-        "wwf_row": null,
-        "greenpeace_name": null,
-        "biosuisse_row": "Cicoria",
-        "altroconsumo_url": null,
-        "ortodacoltivare_url": null,
-        "my_personaltrainer_url": null,
-        "eufic_keys": [
-          "chicory",
-          "chicory (stored)"
-        ],
-        "eufic_countries": [
-          "Belgium",
-          "Cyprus",
-          "Czech Republic",
-          "Germany",
-          "Netherlands",
-          "Portugal",
-          "Romania",
-          "Switzerland",
-          "United Kingdom"
-        ]
-      },
-      "coverage": {
-        "nutrition": true,
-        "postharvest_ucdavis": false,
-        "agronomy_odc": true,
-        "seasonality_sources": [
-          "odc_pdf_row",
-          "biosuisse_row",
-          "eufic"
-        ],
-        "eppo_code": "CICIN"
-      },
-      "completion_status": "indexed"
-    },
-    {
       "id": "cicoria_da_taglio_cutting_chicory",
       "names": {
-        "it": "Cicoria da taglio (Spadonino)",
-        "en": "Cutting Chicory"
+        "it": "Cicoria",
+        "en": "Chicory"
       },
       "scientific_name": "Cichorium intybus var. foliosum",
       "category": "verdura",

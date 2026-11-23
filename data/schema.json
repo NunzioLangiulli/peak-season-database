@@ -90,13 +90,16 @@
       }
     },
     "ImageDetail": {
-      "type": "object", "required": ["filename", "author", "license", "source_url", "view_type"], "additionalProperties": false,
+      "type": "object", "required": ["filename", "author", "license", "view_type"], "additionalProperties": false,
+      "description": "source_url is required (an http(s) URL) except for the user's own photos (provider = user), which have no web page: then it may be null or absent.",
+      "if": { "not": { "required": ["provider"], "properties": { "provider": { "const": "user" } } } },
+      "then": { "required": ["source_url"], "properties": { "source_url": { "$ref": "#/$defs/Url" } } },
       "properties": {
         "filename": { "type": "string", "pattern": "^[a-z0-9_]+_[0-9]{2}\\.jpg$" },
         "author": { "type": "string", "minLength": 1 },
         "license": { "type": "string", "minLength": 1 },
         "license_url": { "$ref": "#/$defs/UrlOrNull" },
-        "source_url": { "$ref": "#/$defs/Url" },
+        "source_url": { "$ref": "#/$defs/UrlOrNull" },
         "provider": { "type": ["string", "null"], "description": "wikimedia_commons | usda_ars | inaturalist | unsplash | pexels | pixabay | user" },
         "width": { "type": ["integer", "null"] },
         "height": { "type": ["integer", "null"] },
@@ -114,6 +117,7 @@
         "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
         "generated": { "type": "string", "format": "date" },
         "schema_version": { "type": "string" },
+        "id_redirects": { "type": "object", "description": "Old product ids (merged or removed records, data/merged_items_archive.json) -> id of the product that replaces them; the app moves saved ids at startup.", "propertyNames": { "pattern": "^[a-z0-9_]+$" }, "additionalProperties": { "type": "string", "pattern": "^[a-z0-9_]+$" } },
         "sustainable_diet_summary": {
           "type": "object", "required": ["it", "en", "source_url", "status"],
           "properties": {

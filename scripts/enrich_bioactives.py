@@ -26,7 +26,7 @@ FDC = {
     "cardo_cardoon": 169981, "cavoletto_di_bruxelles_brussels_sprout": 170383, "cavolfiore_cauliflower": 169986,
     "broccolo_broccoli": 170379, "cavolo_cappuccio_cabbage": 169975, "cavolo_nero_black_kale": (168421, "approx"),
     "cavolo_rapa_kohlrabi": 168424, "cavolo_verza_savoy_cabbage": 170388, "cece_chickpea": 173756, "cetriolo_cucumber": 168409,
-    "cicoria_da_cespo_chicory": (169992, "approx"), "cicoria_da_taglio_cutting_chicory": 169992,
+    "cicoria_da_taglio_cutting_chicory": 169992,
     "cima_di_rapa_turnip_greens": 170381, "cipolla_estiva_summer_onion": 170000, "cipolla_invernale_winter_onion": 170000,
     "fagiolo_bean": (175189, "approx"), "fagiolino_green_bean": 169961, "fava_broad_bean": 170377, "finocchio_fennel": 169385,
     "lattuga_da_cespo_head_lettuce": (168429, "approx"), "lattuga_da_taglio_leaf_lettuce": 169249, "lenticchia_lentil": 172420,

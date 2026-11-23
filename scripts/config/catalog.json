@@ -321,27 +321,6 @@
    ]
   },
   {
-   "id": "cicoria_da_cespo_chicory",
-   "crea": "005240",
-   "crea_q": "approx",
-   "bda": "319",
-   "bda_q": "approx",
-   "ucd": null,
-   "odc_row": "Cicorie da cespo",
-   "wwf": null,
-   "gp": null,
-   "altro": null,
-   "bs": "Cicoria",
-   "eufic": [
-    "chicory",
-    "chicory (stored)"
-   ],
-   "kw": [
-    "cicori"
-   ],
-   "odc_url": null
-  },
-  {
    "id": "cicoria_da_taglio_cutting_chicory",
    "crea": "005230",
    "bda": "320",

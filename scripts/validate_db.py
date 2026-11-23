@@ -101,6 +101,12 @@ def main():
 
     items = db.get("items", [])
     ids = [it.get("id") for it in items]
+    # id_redirects: old ids must not be live products, targets must exist
+    for old, new in (db["metadata"].get("id_redirects") or {}).items():
+        if old in ids:
+            errors.append(f"[id_redirects] '{old}' is still a product")
+        if new not in ids:
+            errors.append(f"[id_redirects] '{old}' -> '{new}': target is not a product")
     dup = {i for i in ids if ids.count(i) > 1}
     if dup:
         errors.append(f"duplicate IDs: {sorted(dup)}")
