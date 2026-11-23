@@ -1,7 +1,7 @@
 {
   "metadata": {
     "app_title": "Peak Season - Conscious & Seasonal Food Assistant",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "generated": "2026-11-23",
     "schema_version": "2.0",
     "sustainable_diet_summary": {
@@ -10990,9 +10990,9 @@
           "aglio_garlic_06.jpg",
           "aglio_garlic_07.jpg",
           "aglio_garlic_08.jpg",
+          "aglio_garlic_11.jpg",
           "aglio_garlic_09.jpg",
-          "aglio_garlic_10.jpg",
-          "aglio_garlic_11.jpg"
+          "aglio_garlic_10.jpg"
         ],
         "image_details": [
           {
@@ -11084,6 +11084,17 @@
             "view_type": "isolated_background"
           },
           {
+            "filename": "aglio_garlic_11.jpg",
+            "author": "nosolomarcas / Pixabay",
+            "license": "Pixabay Content License",
+            "license_url": "https://pixabay.com/service/license-summary/",
+            "source_url": "https://pixabay.com/photos/garlic-healthy-food-vegetable-9762451/",
+            "provider": "pixabay",
+            "width": 1280,
+            "height": 853,
+            "view_type": "cut_section"
+          },
+          {
             "filename": "aglio_garlic_09.jpg",
             "author": "Rawpixel",
             "license": "CC BY-SA 4.0",
@@ -11104,17 +11115,6 @@
             "width": 1005,
             "height": 1508,
             "view_type": "botanical_plate"
-          },
-          {
-            "filename": "aglio_garlic_11.jpg",
-            "author": "nosolomarcas / Pixabay",
-            "license": "Pixabay Content License",
-            "license_url": "https://pixabay.com/service/license-summary/",
-            "source_url": "https://pixabay.com/photos/garlic-healthy-food-vegetable-9762451/",
-            "provider": "pixabay",
-            "width": 1280,
-            "height": 853,
-            "view_type": "cut_section"
           }
         ]
       },
@@ -13561,10 +13561,10 @@
         "gallery": [
           "asparago_asparagus_01.jpg",
           "asparago_asparagus_03.jpg",
+          "asparago_asparagus_07.jpg",
           "asparago_asparagus_04.jpg",
           "asparago_asparagus_05.jpg",
-          "asparago_asparagus_06.jpg",
-          "asparago_asparagus_07.jpg"
+          "asparago_asparagus_06.jpg"
         ],
         "image_details": [
           {
@@ -13588,6 +13588,17 @@
             "width": 1280,
             "height": 853,
             "view_type": "full_frame"
+          },
+          {
+            "filename": "asparago_asparagus_07.jpg",
+            "author": "T_Kohei / Pixabay",
+            "license": "Pixabay Content License",
+            "license_url": "https://pixabay.com/service/license-summary/",
+            "source_url": "https://pixabay.com/photos/asparagus-plants-field-vegetable-6468205/",
+            "provider": "pixabay",
+            "width": 1280,
+            "height": 855,
+            "view_type": "plant_in_field"
           },
           {
             "filename": "asparago_asparagus_04.jpg",
@@ -13621,17 +13632,6 @@
             "width": 960,
             "height": 1440,
             "view_type": "botanical_plate"
-          },
-          {
-            "filename": "asparago_asparagus_07.jpg",
-            "author": "T_Kohei / Pixabay",
-            "license": "Pixabay Content License",
-            "license_url": "https://pixabay.com/service/license-summary/",
-            "source_url": "https://pixabay.com/photos/asparagus-plants-field-vegetable-6468205/",
-            "provider": "pixabay",
-            "width": 1280,
-            "height": 855,
-            "view_type": "plant_in_field"
           }
         ]
       },
@@ -16152,10 +16152,13 @@
         "primary": "carciofo_artichoke_02.jpg",
         "gallery": [
           "carciofo_artichoke_02.jpg",
-          "carciofo_artichoke_01.jpg",
           "carciofo_artichoke_03.jpg",
           "carciofo_artichoke_04.jpg",
-          "carciofo_artichoke_05.jpg"
+          "carciofo_artichoke_05.jpg",
+          "carciofo_artichoke_06.jpg",
+          "carciofo_artichoke_07.jpg",
+          "carciofo_artichoke_08.jpg",
+          "carciofo_artichoke_09.jpg"
         ],
         "image_details": [
           {
@@ -16167,17 +16170,6 @@
             "provider": "pixabay",
             "width": 1280,
             "height": 854,
-            "view_type": "full_frame"
-          },
-          {
-            "filename": "carciofo_artichoke_01.jpg",
-            "author": "Martin Adams / Unsplash",
-            "license": "Unsplash License",
-            "license_url": "https://unsplash.com/license",
-            "source_url": "https://unsplash.com/photos/close-up-photography-of-green-and-purple-vegetables-5XXfyMMan84?utm_source=peak_season&utm_medium=referral",
-            "provider": "unsplash",
-            "width": 1054,
-            "height": 703,
             "view_type": "full_frame"
           },
           {
@@ -16212,6 +16204,50 @@
             "width": 1106,
             "height": 737,
             "view_type": "plant_in_field"
+          },
+          {
+            "filename": "carciofo_artichoke_06.jpg",
+            "author": "Toby Hudson",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Artichoke_stack.JPG",
+            "provider": "wikimedia_commons",
+            "width": 1286,
+            "height": 857,
+            "view_type": "full_frame"
+          },
+          {
+            "filename": "carciofo_artichoke_07.jpg",
+            "author": "Hans Hillewaert",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Valencia_market_-_artichokes.jpg",
+            "provider": "wikimedia_commons",
+            "width": 1920,
+            "height": 1280,
+            "view_type": "full_frame"
+          },
+          {
+            "filename": "carciofo_artichoke_08.jpg",
+            "author": "Sandra Fauconnier",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Ripe_artichoke_flowers.jpg",
+            "provider": "wikimedia_commons",
+            "width": 1920,
+            "height": 1280,
+            "view_type": "plant_in_field"
+          },
+          {
+            "filename": "carciofo_artichoke_09.jpg",
+            "author": "Renata Apan",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Maltese_artichoke.jpg",
+            "provider": "wikimedia_commons",
+            "width": 1920,
+            "height": 1281,
+            "view_type": "full_frame"
           }
         ]
       },
@@ -18631,17 +18667,30 @@
         ]
       },
       "images": {
-        "primary": "carota_carrot_01.jpg",
+        "primary": "carota_carrot_08.jpg",
         "gallery": [
+          "carota_carrot_08.jpg",
           "carota_carrot_01.jpg",
-          "carota_carrot_02.jpg",
-          "carota_carrot_03.jpg",
           "carota_carrot_04.jpg",
+          "carota_carrot_09.jpg",
+          "carota_carrot_10.jpg",
+          "carota_carrot_02.jpg",
           "carota_carrot_05.jpg",
           "carota_carrot_06.jpg",
           "carota_carrot_07.jpg"
         ],
         "image_details": [
+          {
+            "filename": "carota_carrot_08.jpg",
+            "author": "Tomascastelazo",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Carrots_-_Daucus_carota_subsp._sativus.jpg",
+            "provider": "wikimedia_commons",
+            "width": 1794,
+            "height": 1196,
+            "view_type": "full_frame"
+          },
           {
             "filename": "carota_carrot_01.jpg",
             "author": "Nick Fewings / Unsplash",
@@ -18654,28 +18703,6 @@
             "view_type": "full_frame"
           },
           {
-            "filename": "carota_carrot_02.jpg",
-            "author": "janua2000 / Pixabay",
-            "license": "Pixabay Content License",
-            "license_url": "https://pixabay.com/service/license-summary/",
-            "source_url": "https://pixabay.com/photos/carrots-vegetables-healthy-155708/",
-            "provider": "pixabay",
-            "width": 1280,
-            "height": 853,
-            "view_type": "isolated_background"
-          },
-          {
-            "filename": "carota_carrot_03.jpg",
-            "author": "skorchanov / Pixabay",
-            "license": "Pixabay Content License",
-            "license_url": "https://pixabay.com/service/license-summary/",
-            "source_url": "https://pixabay.com/photos/carrot-landing-ridge-young-green-5300438/",
-            "provider": "pixabay",
-            "width": 1280,
-            "height": 853,
-            "view_type": "plant_in_field"
-          },
-          {
             "filename": "carota_carrot_04.jpg",
             "author": "klimkin / Pixabay",
             "license": "Pixabay Content License",
@@ -18685,6 +18712,39 @@
             "width": 1280,
             "height": 853,
             "view_type": "plant_in_field"
+          },
+          {
+            "filename": "carota_carrot_09.jpg",
+            "author": "domdomegg",
+            "license": "CC BY 4.0",
+            "license_url": "https://creativecommons.org/licenses/by/4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Carrots_at_Ljubljana_Central_Market.JPG",
+            "provider": "wikimedia_commons",
+            "width": 1616,
+            "height": 1077,
+            "view_type": "full_frame"
+          },
+          {
+            "filename": "carota_carrot_10.jpg",
+            "author": "Stacy Spensley",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:10_heriloom_carrots.jpg",
+            "provider": "wikimedia_commons",
+            "width": 1000,
+            "height": 667,
+            "view_type": "full_frame"
+          },
+          {
+            "filename": "carota_carrot_02.jpg",
+            "author": "janua2000 / Pixabay",
+            "license": "Pixabay Content License",
+            "license_url": "https://pixabay.com/service/license-summary/",
+            "source_url": "https://pixabay.com/photos/carrots-vegetables-healthy-155708/",
+            "provider": "pixabay",
+            "width": 1280,
+            "height": 853,
+            "view_type": "isolated_background"
           },
           {
             "filename": "carota_carrot_05.jpg",
@@ -21249,8 +21309,7 @@
           "barbabietola_beetroot_05.jpg",
           "barbabietola_beetroot_06.jpg",
           "barbabietola_beetroot_07.jpg",
-          "barbabietola_beetroot_08.jpg",
-          "barbabietola_beetroot_09.jpg"
+          "barbabietola_beetroot_08.jpg"
         ],
         "image_details": [
           {
@@ -21340,17 +21399,6 @@
             "width": 1264,
             "height": 843,
             "view_type": "plant_in_field"
-          },
-          {
-            "filename": "barbabietola_beetroot_09.jpg",
-            "author": "leppäkerttu / Pixabay",
-            "license": "Pixabay Content License",
-            "license_url": "https://pixabay.com/service/license-summary/",
-            "source_url": "https://pixabay.com/photos/beetroot-vaihannes-vegetables-beet-3150856/",
-            "provider": "pixabay",
-            "width": 1280,
-            "height": 848,
-            "view_type": "cut_section"
           }
         ]
       },
@@ -23576,7 +23624,6 @@
           "bietola_da_coste_swiss_chard_04.jpg",
           "bietola_da_coste_swiss_chard_03.jpg",
           "bietola_da_coste_swiss_chard_01.jpg",
-          "bietola_da_coste_swiss_chard_02.jpg",
           "bietola_da_coste_swiss_chard_05.jpg",
           "bietola_da_coste_swiss_chard_06.jpg",
           "bietola_da_coste_swiss_chard_07.jpg",
@@ -23615,17 +23662,6 @@
             "width": 1080,
             "height": 720,
             "view_type": "isolated_background"
-          },
-          {
-            "filename": "bietola_da_coste_swiss_chard_02.jpg",
-            "author": "MabelAmber / Pixabay",
-            "license": "Pixabay Content License",
-            "license_url": "https://pixabay.com/service/license-summary/",
-            "source_url": "https://pixabay.com/photos/swiss-chard-vegetable-kitchen-garden-3641280/",
-            "provider": "pixabay",
-            "width": 1280,
-            "height": 854,
-            "view_type": "plant_in_field"
           },
           {
             "filename": "bietola_da_coste_swiss_chard_05.jpg",
@@ -27674,9 +27710,8 @@
         "primary": "cavoletto_di_bruxelles_brussels_sprout_01.jpg",
         "gallery": [
           "cavoletto_di_bruxelles_brussels_sprout_01.jpg",
-          "cavoletto_di_bruxelles_brussels_sprout_02.jpg",
-          "cavoletto_di_bruxelles_brussels_sprout_04.jpg",
           "cavoletto_di_bruxelles_brussels_sprout_05.jpg",
+          "cavoletto_di_bruxelles_brussels_sprout_04.jpg",
           "cavoletto_di_bruxelles_brussels_sprout_06.jpg",
           "cavoletto_di_bruxelles_brussels_sprout_07.jpg",
           "cavoletto_di_bruxelles_brussels_sprout_08.jpg"
@@ -27694,18 +27729,15 @@
             "view_type": "full_frame"
           },
           {
-            "filename": "cavoletto_di_bruxelles_brussels_sprout_02.jpg",
-            "author": "ulleo / Pixabay",
-            "license": "Pixabay Content License",
-            "license_url": "https://pixabay.com/service/license-summary/",
-            "source_url": "https://pixabay.com/photos/brussels-sprouts-green-round-raw-3100702/",
-            "provider": "pixabay",
-            "width": 1090,
-            "height": 727,
-            "view_type": "other",
-            "flags": [
-              "dish"
-            ]
+            "filename": "cavoletto_di_bruxelles_brussels_sprout_05.jpg",
+            "author": "Krzysztof Ziarnek, Kenraiz",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Brassica_oleracea_var._gemmifera_%27Red%27_kz01.jpg",
+            "provider": "wikimedia_commons",
+            "width": 1920,
+            "height": 1280,
+            "view_type": "plant_in_field"
           },
           {
             "filename": "cavoletto_di_bruxelles_brussels_sprout_04.jpg",
@@ -27716,17 +27748,6 @@
             "provider": "wikimedia_commons",
             "width": 1920,
             "height": 1285,
-            "view_type": "plant_in_field"
-          },
-          {
-            "filename": "cavoletto_di_bruxelles_brussels_sprout_05.jpg",
-            "author": "Krzysztof Ziarnek, Kenraiz",
-            "license": "CC BY-SA 4.0",
-            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-            "source_url": "https://commons.wikimedia.org/wiki/File:Brassica_oleracea_var._gemmifera_%27Red%27_kz01.jpg",
-            "provider": "wikimedia_commons",
-            "width": 1920,
-            "height": 1280,
             "view_type": "plant_in_field"
           },
           {
@@ -29952,12 +29973,11 @@
         "primary": "cavolfiore_cauliflower_01.jpg",
         "gallery": [
           "cavolfiore_cauliflower_01.jpg",
-          "cavolfiore_cauliflower_02.jpg",
           "cavolfiore_cauliflower_03.jpg",
           "cavolfiore_cauliflower_04.jpg",
           "cavolfiore_cauliflower_05.jpg",
-          "cavolfiore_cauliflower_06.jpg",
-          "cavolfiore_cauliflower_07.jpg"
+          "cavolfiore_cauliflower_07.jpg",
+          "cavolfiore_cauliflower_06.jpg"
         ],
         "image_details": [
           {
@@ -29969,17 +29989,6 @@
             "provider": "pixabay",
             "width": 1280,
             "height": 854,
-            "view_type": "full_frame"
-          },
-          {
-            "filename": "cavolfiore_cauliflower_02.jpg",
-            "author": "Couleur / Pixabay",
-            "license": "Pixabay Content License",
-            "license_url": "https://pixabay.com/service/license-summary/",
-            "source_url": "https://pixabay.com/photos/cauliflower-broccoli-vegetable-10005684/",
-            "provider": "pixabay",
-            "width": 853,
-            "height": 569,
             "view_type": "full_frame"
           },
           {
@@ -30016,17 +30025,6 @@
             "view_type": "plant_in_field"
           },
           {
-            "filename": "cavolfiore_cauliflower_06.jpg",
-            "author": "MotionVision / Pixabay",
-            "license": "Pixabay Content License",
-            "license_url": "https://pixabay.com/service/license-summary/",
-            "source_url": "https://pixabay.com/photos/cauliflower-cabbage-flower-food-5406022/",
-            "provider": "pixabay",
-            "width": 1280,
-            "height": 853,
-            "view_type": "isolated_background"
-          },
-          {
             "filename": "cavolfiore_cauliflower_07.jpg",
             "author": "Couleur / Pixabay",
             "license": "Pixabay Content License",
@@ -30036,6 +30034,17 @@
             "width": 1263,
             "height": 842,
             "view_type": "plant_in_field"
+          },
+          {
+            "filename": "cavolfiore_cauliflower_06.jpg",
+            "author": "MotionVision / Pixabay",
+            "license": "Pixabay Content License",
+            "license_url": "https://pixabay.com/service/license-summary/",
+            "source_url": "https://pixabay.com/photos/cauliflower-cabbage-flower-food-5406022/",
+            "provider": "pixabay",
+            "width": 1280,
+            "height": 853,
+            "view_type": "isolated_background"
           }
         ]
       },
@@ -34948,8 +34957,8 @@
           "cavolo_cappuccio_cabbage_04.jpg",
           "cavolo_cappuccio_cabbage_07.jpg",
           "cavolo_cappuccio_cabbage_08.jpg",
-          "cavolo_cappuccio_cabbage_09.jpg",
-          "cavolo_cappuccio_cabbage_10.jpg"
+          "cavolo_cappuccio_cabbage_10.jpg",
+          "cavolo_cappuccio_cabbage_09.jpg"
         ],
         "image_details": [
           {
@@ -35008,17 +35017,6 @@
             "view_type": "plant_in_field"
           },
           {
-            "filename": "cavolo_cappuccio_cabbage_09.jpg",
-            "author": "Saporificifque",
-            "license": "CC0",
-            "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-            "source_url": "https://commons.wikimedia.org/wiki/File:Planche_botanique_de_formes_cultiv%C3%A9es_de_Brassica_oleracea_(chou_rouge).jpg",
-            "provider": "wikimedia_commons",
-            "width": 1797,
-            "height": 2696,
-            "view_type": "botanical_plate"
-          },
-          {
             "filename": "cavolo_cappuccio_cabbage_10.jpg",
             "author": "Simon Mannweiler",
             "license": "CC BY-SA 4.0",
@@ -35028,6 +35026,17 @@
             "width": 1748,
             "height": 1165,
             "view_type": "plant_in_field"
+          },
+          {
+            "filename": "cavolo_cappuccio_cabbage_09.jpg",
+            "author": "Saporificifque",
+            "license": "CC0",
+            "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Planche_botanique_de_formes_cultiv%C3%A9es_de_Brassica_oleracea_(chou_rouge).jpg",
+            "provider": "wikimedia_commons",
+            "width": 1797,
+            "height": 2696,
+            "view_type": "botanical_plate"
           }
         ]
       },
@@ -37364,14 +37373,25 @@
         ]
       },
       "images": {
-        "primary": "cavolo_nero_black_kale_03.jpg",
+        "primary": "cavolo_nero_black_kale_07.jpg",
         "gallery": [
+          "cavolo_nero_black_kale_07.jpg",
           "cavolo_nero_black_kale_03.jpg",
           "cavolo_nero_black_kale_05.jpg",
-          "cavolo_nero_black_kale_06.jpg",
-          "cavolo_nero_black_kale_07.jpg"
+          "cavolo_nero_black_kale_06.jpg"
         ],
         "image_details": [
+          {
+            "filename": "cavolo_nero_black_kale_07.jpg",
+            "author": "Frank Vincentz",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Kluse_-_Brassica_oleracea_var._palmifolia_-_Ostfriesische_Palme_03_ies.jpg",
+            "provider": "wikimedia_commons",
+            "width": 1920,
+            "height": 1280,
+            "view_type": "plant_in_field"
+          },
           {
             "filename": "cavolo_nero_black_kale_03.jpg",
             "author": "linsight / Pixabay",
@@ -37404,17 +37424,6 @@
             "width": 1695,
             "height": 2542,
             "view_type": "botanical_plate"
-          },
-          {
-            "filename": "cavolo_nero_black_kale_07.jpg",
-            "author": "Frank Vincentz",
-            "license": "CC BY-SA 3.0",
-            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-            "source_url": "https://commons.wikimedia.org/wiki/File:Kluse_-_Brassica_oleracea_var._palmifolia_-_Ostfriesische_Palme_03_ies.jpg",
-            "provider": "wikimedia_commons",
-            "width": 1920,
-            "height": 1280,
-            "view_type": "plant_in_field"
           }
         ]
       },
@@ -47841,8 +47850,8 @@
         "primary": "cicoria_da_taglio_cutting_chicory_04.jpg",
         "gallery": [
           "cicoria_da_taglio_cutting_chicory_04.jpg",
-          "cicoria_da_taglio_cutting_chicory_01.jpg",
-          "cicoria_da_taglio_cutting_chicory_03.jpg"
+          "cicoria_da_taglio_cutting_chicory_03.jpg",
+          "cicoria_da_taglio_cutting_chicory_01.jpg"
         ],
         "image_details": [
           {
@@ -47857,17 +47866,6 @@
             "view_type": "full_frame"
           },
           {
-            "filename": "cicoria_da_taglio_cutting_chicory_01.jpg",
-            "author": "Thomé, O. W.",
-            "license": "Public domain",
-            "license_url": null,
-            "source_url": "https://commons.wikimedia.org/wiki/File%3ACichorium_intybus_var_intybus.jpg",
-            "provider": "wikimedia_commons",
-            "width": 1003,
-            "height": 1505,
-            "view_type": "botanical_plate"
-          },
-          {
             "filename": "cicoria_da_taglio_cutting_chicory_03.jpg",
             "author": "Stefan.lefnaer",
             "license": "CC BY-SA 4.0",
@@ -47877,6 +47875,17 @@
             "width": 1920,
             "height": 1280,
             "view_type": "full_frame"
+          },
+          {
+            "filename": "cicoria_da_taglio_cutting_chicory_01.jpg",
+            "author": "Thomé, O. W.",
+            "license": "Public domain",
+            "license_url": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ACichorium_intybus_var_intybus.jpg",
+            "provider": "wikimedia_commons",
+            "width": 1003,
+            "height": 1505,
+            "view_type": "botanical_plate"
           }
         ]
       },
@@ -49674,9 +49683,9 @@
         "gallery": [
           "cima_di_rapa_turnip_greens_06.jpg",
           "cima_di_rapa_turnip_greens_01.jpg",
-          "cima_di_rapa_turnip_greens_02.jpg",
           "cima_di_rapa_turnip_greens_04.jpg",
-          "cima_di_rapa_turnip_greens_05.jpg"
+          "cima_di_rapa_turnip_greens_05.jpg",
+          "cima_di_rapa_turnip_greens_02.jpg"
         ],
         "image_details": [
           {
@@ -49702,17 +49711,6 @@
             "view_type": "isolated_background"
           },
           {
-            "filename": "cima_di_rapa_turnip_greens_02.jpg",
-            "author": "Elizabeth Blackwell",
-            "license": "Public domain",
-            "license_url": null,
-            "source_url": "https://commons.wikimedia.org/wiki/File%3ABrassica_rapa_%28watercolor%29.jpg",
-            "provider": "wikimedia_commons",
-            "width": 960,
-            "height": 1440,
-            "view_type": "botanical_plate"
-          },
-          {
             "filename": "cima_di_rapa_turnip_greens_04.jpg",
             "author": "Unknown",
             "license": "Unknown",
@@ -49733,6 +49731,17 @@
             "width": 1200,
             "height": 800,
             "view_type": "isolated_background"
+          },
+          {
+            "filename": "cima_di_rapa_turnip_greens_02.jpg",
+            "author": "Elizabeth Blackwell",
+            "license": "Public domain",
+            "license_url": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ABrassica_rapa_%28watercolor%29.jpg",
+            "provider": "wikimedia_commons",
+            "width": 960,
+            "height": 1440,
+            "view_type": "botanical_plate"
           }
         ]
       },
@@ -51587,11 +51596,11 @@
         "primary": "cipolla_estiva_summer_onion_01.jpg",
         "gallery": [
           "cipolla_estiva_summer_onion_01.jpg",
-          "cipolla_estiva_summer_onion_03.jpg",
-          "cipolla_estiva_summer_onion_04.jpg",
           "cipolla_estiva_summer_onion_05.jpg",
           "cipolla_estiva_summer_onion_06.jpg",
-          "cipolla_estiva_summer_onion_07.jpg"
+          "cipolla_estiva_summer_onion_07.jpg",
+          "cipolla_estiva_summer_onion_04.jpg",
+          "cipolla_estiva_summer_onion_03.jpg"
         ],
         "image_details": [
           {
@@ -51604,28 +51613,6 @@
             "width": 1080,
             "height": 720,
             "view_type": "full_frame"
-          },
-          {
-            "filename": "cipolla_estiva_summer_onion_03.jpg",
-            "author": "Prof. Dr. Otto Wilhelm Thomé",
-            "license": "Public domain",
-            "license_url": null,
-            "source_url": "https://commons.wikimedia.org/wiki/File%3AIllustration_Allium_schoenoprasum_and_Allium_cepa0_clean.jpg",
-            "provider": "wikimedia_commons",
-            "width": 1067,
-            "height": 1600,
-            "view_type": "botanical_plate"
-          },
-          {
-            "filename": "cipolla_estiva_summer_onion_04.jpg",
-            "author": "Unknown authorUnknown author",
-            "license": "Public domain",
-            "license_url": null,
-            "source_url": "https://commons.wikimedia.org/wiki/File%3ACamerarius_Zwibeln.jpg",
-            "provider": "wikimedia_commons",
-            "width": 960,
-            "height": 1440,
-            "view_type": "botanical_plate"
           },
           {
             "filename": "cipolla_estiva_summer_onion_05.jpg",
@@ -51659,6 +51646,28 @@
             "width": 1759,
             "height": 1173,
             "view_type": "cut_section"
+          },
+          {
+            "filename": "cipolla_estiva_summer_onion_04.jpg",
+            "author": "Unknown authorUnknown author",
+            "license": "Public domain",
+            "license_url": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ACamerarius_Zwibeln.jpg",
+            "provider": "wikimedia_commons",
+            "width": 960,
+            "height": 1440,
+            "view_type": "botanical_plate"
+          },
+          {
+            "filename": "cipolla_estiva_summer_onion_03.jpg",
+            "author": "Prof. Dr. Otto Wilhelm Thomé",
+            "license": "Public domain",
+            "license_url": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AIllustration_Allium_schoenoprasum_and_Allium_cepa0_clean.jpg",
+            "provider": "wikimedia_commons",
+            "width": 1067,
+            "height": 1600,
+            "view_type": "botanical_plate"
           }
         ]
       },
@@ -54167,14 +54176,25 @@
         ]
       },
       "images": {
-        "primary": "cipolla_invernale_winter_onion_01.jpg",
+        "primary": "cipolla_invernale_winter_onion_05.jpg",
         "gallery": [
+          "cipolla_invernale_winter_onion_05.jpg",
           "cipolla_invernale_winter_onion_01.jpg",
-          "cipolla_invernale_winter_onion_02.jpg",
           "cipolla_invernale_winter_onion_03.jpg",
           "cipolla_invernale_winter_onion_04.jpg"
         ],
         "image_details": [
+          {
+            "filename": "cipolla_invernale_winter_onion_05.jpg",
+            "author": "Daderot",
+            "license": "CC0",
+            "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Red_onions_-_San_Francisco,_CA.jpg",
+            "provider": "wikimedia_commons",
+            "width": 1350,
+            "height": 900,
+            "view_type": "full_frame"
+          },
           {
             "filename": "cipolla_invernale_winter_onion_01.jpg",
             "author": "ds_30 / Pixabay",
@@ -54185,17 +54205,6 @@
             "width": 1280,
             "height": 848,
             "view_type": "isolated_background"
-          },
-          {
-            "filename": "cipolla_invernale_winter_onion_02.jpg",
-            "author": "MabelAmber / Pixabay",
-            "license": "Pixabay Content License",
-            "license_url": "https://pixabay.com/service/license-summary/",
-            "source_url": "https://pixabay.com/photos/onion-root-vegetable-growth-harvest-3706937/",
-            "provider": "pixabay",
-            "width": 1280,
-            "height": 855,
-            "view_type": "plant_in_field"
           },
           {
             "filename": "cipolla_invernale_winter_onion_03.jpg",
@@ -56489,6 +56498,7 @@
         "gallery": [
           "fagiolo_bean_01.jpg",
           "fagiolo_bean_02.jpg",
+          "fagiolo_bean_04.jpg",
           "fagiolo_bean_03.jpg"
         ],
         "image_details": [
@@ -56513,6 +56523,17 @@
             "width": 960,
             "height": 640,
             "view_type": "isolated_background"
+          },
+          {
+            "filename": "fagiolo_bean_04.jpg",
+            "author": "Roger Culos",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Phaseolus_vulgaris_MHNT.BOT.2016.24.73.jpg",
+            "provider": "wikimedia_commons",
+            "width": 1920,
+            "height": 1280,
+            "view_type": "full_frame"
           },
           {
             "filename": "fagiolo_bean_03.jpg",
@@ -59126,24 +59147,13 @@
         ]
       },
       "images": {
-        "primary": "fagiolino_green_bean_01.jpg",
+        "primary": "fagiolino_green_bean_02.jpg",
         "gallery": [
-          "fagiolino_green_bean_01.jpg",
           "fagiolino_green_bean_02.jpg",
-          "fagiolino_green_bean_03.jpg"
+          "fagiolino_green_bean_04.jpg",
+          "fagiolino_green_bean_05.jpg"
         ],
         "image_details": [
-          {
-            "filename": "fagiolino_green_bean_01.jpg",
-            "author": "Bob Bowie / Unsplash",
-            "license": "Unsplash License",
-            "license_url": "https://unsplash.com/license",
-            "source_url": "https://unsplash.com/photos/green-kentucky-beans-2JDWDtCGREA?utm_source=peak_season&utm_medium=referral",
-            "provider": "unsplash",
-            "width": 1080,
-            "height": 720,
-            "view_type": "full_frame"
-          },
           {
             "filename": "fagiolino_green_bean_02.jpg",
             "author": "pixel1 / Pixabay",
@@ -59156,15 +59166,26 @@
             "view_type": "full_frame"
           },
           {
-            "filename": "fagiolino_green_bean_03.jpg",
-            "author": "Ulisse Aldrovandi",
-            "license": "Public domain",
-            "license_url": null,
-            "source_url": "https://commons.wikimedia.org/wiki/File%3APhaseolus_Indicus_Aldrovandi_5-2_175.png",
+            "filename": "fagiolino_green_bean_04.jpg",
+            "author": "Alabama Extension",
+            "license": "CC0",
+            "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Green_Beans_(Alabama_Extension).jpg",
             "provider": "wikimedia_commons",
-            "width": 960,
-            "height": 1443,
-            "view_type": "botanical_plate"
+            "width": 1726,
+            "height": 1151,
+            "view_type": "full_frame"
+          },
+          {
+            "filename": "fagiolino_green_bean_05.jpg",
+            "author": "www.Pixel.la Free Stock Photos",
+            "license": "CC0",
+            "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Green_beans_in_a_wooden_box.jpg",
+            "provider": "wikimedia_commons",
+            "width": 1920,
+            "height": 1280,
+            "view_type": "full_frame"
           }
         ]
       },
@@ -61434,10 +61455,9 @@
         "primary": "fava_broad_bean_02.jpg",
         "gallery": [
           "fava_broad_bean_02.jpg",
+          "fava_broad_bean_06.jpg",
           "fava_broad_bean_01.jpg",
-          "fava_broad_bean_03.jpg",
-          "fava_broad_bean_04.jpg",
-          "fava_broad_bean_05.jpg"
+          "fava_broad_bean_03.jpg"
         ],
         "image_details": [
           {
@@ -61450,6 +61470,17 @@
             "width": 1080,
             "height": 720,
             "view_type": "full_frame"
+          },
+          {
+            "filename": "fava_broad_bean_06.jpg",
+            "author": "Schlaghecken Josef",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Dicke_Bohne_(Vicia_faba)_erntereife_H%C3%BClsen,_Josef_Schlaghecken.jpg",
+            "provider": "wikimedia_commons",
+            "width": 1920,
+            "height": 1280,
+            "view_type": "plant_in_field"
           },
           {
             "filename": "fava_broad_bean_01.jpg",
@@ -61471,28 +61502,6 @@
             "provider": "wikimedia_commons",
             "width": 1067,
             "height": 1600,
-            "view_type": "botanical_plate"
-          },
-          {
-            "filename": "fava_broad_bean_04.jpg",
-            "author": "Ishizaki Yūshi",
-            "license": "Public domain",
-            "license_url": null,
-            "source_url": "https://commons.wikimedia.org/wiki/File%3ANaturalis_Biodiversity_Center_-_RMNH.ART.337_-_Pisum_sativum_-_Vicia_faba_-_Vigna_unguiculata_-_Duchesnea_chrysantha_-_Fragaria_sp._-_indet_-_Y%C5%ABshi_Ishizaki_-_Cock_Blomhoff_Collection_-_pencil_drawing_-_water_colour.jpg",
-            "provider": "wikimedia_commons",
-            "width": 1137,
-            "height": 1706,
-            "view_type": "botanical_plate"
-          },
-          {
-            "filename": "fava_broad_bean_05.jpg",
-            "author": "This file comes from the Wellcome Collection, a website operated by Wellcome Trust, a global charitable foundation based",
-            "license": "CC BY 4.0",
-            "license_url": "https://creativecommons.org/licenses/by/4.0",
-            "source_url": "https://commons.wikimedia.org/wiki/File%3ATen_seedlings_with_different_types_of_cotyledon_or_seed_leav_Wellcome_V0044555_%28cropped1%29.jpg",
-            "provider": "wikimedia_commons",
-            "width": 1113,
-            "height": 1670,
             "view_type": "botanical_plate"
           }
         ]
@@ -63636,15 +63645,30 @@
         ]
       },
       "images": {
-        "primary": "finocchio_fennel_01.jpg",
+        "primary": "finocchio_fennel_07.jpg",
         "gallery": [
+          "finocchio_fennel_07.jpg",
           "finocchio_fennel_01.jpg",
           "finocchio_fennel_02.jpg",
+          "finocchio_fennel_10.jpg",
+          "finocchio_fennel_08.jpg",
+          "finocchio_fennel_09.jpg",
           "finocchio_fennel_03.jpg",
           "finocchio_fennel_04.jpg",
           "finocchio_fennel_05.jpg"
         ],
         "image_details": [
+          {
+            "filename": "finocchio_fennel_07.jpg",
+            "author": "Jeffery Martin",
+            "license": "CC0",
+            "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Stack_of_fennel.jpg",
+            "provider": "wikimedia_commons",
+            "width": 1920,
+            "height": 1280,
+            "view_type": "full_frame"
+          },
           {
             "filename": "finocchio_fennel_01.jpg",
             "author": "matthiasboeckel / Pixabay",
@@ -63666,6 +63690,39 @@
             "width": 1280,
             "height": 852,
             "view_type": "isolated_background"
+          },
+          {
+            "filename": "finocchio_fennel_10.jpg",
+            "author": "Arnaud 25",
+            "license": "Public domain",
+            "license_url": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File:Fenouil.jpg",
+            "provider": "wikimedia_commons",
+            "width": 1024,
+            "height": 683,
+            "view_type": "isolated_background"
+          },
+          {
+            "filename": "finocchio_fennel_08.jpg",
+            "author": "Kolforn ( Kolforn ) I'd appreciate if you could mail me (Kolforn@gmail.com) if you want to use this picture out of the Wikimedia project scope. This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmi",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:-2019-03-07_Fennel_(Foeniculum),_Trimingham_(1).JPG",
+            "provider": "wikimedia_commons",
+            "width": 1920,
+            "height": 1280,
+            "view_type": "plant_in_field"
+          },
+          {
+            "filename": "finocchio_fennel_09.jpg",
+            "author": "Kolforn ( Kolforn ) I'd appreciate if you could mail me (Kolforn@gmail.com) if you want to use this picture out of the Wikimedia project scope. This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmi",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:-2019-03-07_Fennel_(Foeniculum),_Trimingham_(2).JPG",
+            "provider": "wikimedia_commons",
+            "width": 1920,
+            "height": 1280,
+            "view_type": "plant_in_field"
           },
           {
             "filename": "finocchio_fennel_03.jpg",
@@ -65946,15 +66003,28 @@
         ]
       },
       "images": {
-        "primary": "lattuga_da_cespo_head_lettuce_01.jpg",
+        "primary": "lattuga_da_cespo_head_lettuce_06.jpg",
         "gallery": [
+          "lattuga_da_cespo_head_lettuce_06.jpg",
           "lattuga_da_cespo_head_lettuce_01.jpg",
           "lattuga_da_cespo_head_lettuce_02.jpg",
           "lattuga_da_cespo_head_lettuce_03.jpg",
           "lattuga_da_cespo_head_lettuce_04.jpg",
-          "lattuga_da_cespo_head_lettuce_05.jpg"
+          "lattuga_da_cespo_head_lettuce_05.jpg",
+          "lattuga_da_cespo_head_lettuce_07.jpg"
         ],
         "image_details": [
+          {
+            "filename": "lattuga_da_cespo_head_lettuce_06.jpg",
+            "author": "Zolfeqar Fatihzadeh",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Iceberg_lettuce_in_Poplar_Farmhouse.jpg",
+            "provider": "wikimedia_commons",
+            "width": 1296,
+            "height": 864,
+            "view_type": "full_frame"
+          },
           {
             "filename": "lattuga_da_cespo_head_lettuce_01.jpg",
             "author": "Curious_Collectibles / Pixabay",
@@ -66009,6 +66079,17 @@
             "width": 1067,
             "height": 1600,
             "view_type": "botanical_plate"
+          },
+          {
+            "filename": "lattuga_da_cespo_head_lettuce_07.jpg",
+            "author": "Dwight Sipler from Stow, MA, USA",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Lettuce_%22Concept%22_(8070448172).jpg",
+            "provider": "wikimedia_commons",
+            "width": 1920,
+            "height": 1280,
+            "view_type": "plant_in_field"
           }
         ]
       },
@@ -102884,8 +102965,8 @@
             "height": 853,
             "view_type": "full_frame",
             "variety": {
-              "it": "Spinacino (raccolto giovane)",
-              "en": "Baby spinach"
+              "it": "Spinacino (Raccolto Giovane)",
+              "en": "Baby Spinach"
             }
           },
           {
@@ -157247,7 +157328,7 @@
             "view_type": "full_frame",
             "variety": {
               "it": "Pesca Tabacchiera dell'Etna",
-              "en": "Etna snuffbox peach"
+              "en": "Etna Snuffbox Peach"
             }
           },
           {

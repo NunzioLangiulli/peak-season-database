@@ -43,17 +43,6 @@
     "height": 693,
     "view_type": "full_frame"
   },
-  "carciofo_artichoke_01.jpg": {
-    "filename": "carciofo_artichoke_01.jpg",
-    "author": "Martin Adams / Unsplash",
-    "license": "Unsplash License",
-    "license_url": "https://unsplash.com/license",
-    "source_url": "https://unsplash.com/photos/close-up-photography-of-green-and-purple-vegetables-5XXfyMMan84?utm_source=peak_season&utm_medium=referral",
-    "provider": "unsplash",
-    "width": 1054,
-    "height": 703,
-    "view_type": "full_frame"
-  },
   "carota_carrot_01.jpg": {
     "filename": "carota_carrot_01.jpg",
     "author": "Nick Fewings / Unsplash",
@@ -97,42 +86,6 @@
     "width": 1080,
     "height": 720,
     "view_type": "isolated_background"
-  },
-  "bietola_da_coste_swiss_chard_02.jpg": {
-    "filename": "bietola_da_coste_swiss_chard_02.jpg",
-    "author": "MabelAmber / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/swiss-chard-vegetable-kitchen-garden-3641280/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 854,
-    "view_type": "plant_in_field"
-  },
-  "cavoletto_di_bruxelles_brussels_sprout_02.jpg": {
-    "filename": "cavoletto_di_bruxelles_brussels_sprout_02.jpg",
-    "author": "ulleo / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/brussels-sprouts-green-round-raw-3100702/",
-    "provider": "pixabay",
-    "width": 1090,
-    "height": 727,
-    "view_type": "other",
-    "flags": [
-      "dish"
-    ]
-  },
-  "cavolfiore_cauliflower_02.jpg": {
-    "filename": "cavolfiore_cauliflower_02.jpg",
-    "author": "Couleur / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/cauliflower-broccoli-vegetable-10005684/",
-    "provider": "pixabay",
-    "width": 853,
-    "height": 569,
-    "view_type": "full_frame"
   },
   "cavolo_cappuccio_cabbage_02.jpg": {
     "filename": "cavolo_cappuccio_cabbage_02.jpg",
@@ -198,17 +151,6 @@
     "provider": "unsplash",
     "width": 1080,
     "height": 719,
-    "view_type": "full_frame"
-  },
-  "fagiolino_green_bean_01.jpg": {
-    "filename": "fagiolino_green_bean_01.jpg",
-    "author": "Bob Bowie / Unsplash",
-    "license": "Unsplash License",
-    "license_url": "https://unsplash.com/license",
-    "source_url": "https://unsplash.com/photos/green-kentucky-beans-2JDWDtCGREA?utm_source=peak_season&utm_medium=referral",
-    "provider": "unsplash",
-    "width": 1080,
-    "height": 720,
     "view_type": "full_frame"
   },
   "fagiolino_green_bean_02.jpg": {
@@ -1581,17 +1523,6 @@
     "height": 853,
     "view_type": "isolated_background"
   },
-  "carota_carrot_03.jpg": {
-    "filename": "carota_carrot_03.jpg",
-    "author": "skorchanov / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/carrot-landing-ridge-young-green-5300438/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 853,
-    "view_type": "plant_in_field"
-  },
   "carota_carrot_04.jpg": {
     "filename": "carota_carrot_04.jpg",
     "author": "klimkin / Pixabay",
@@ -1701,17 +1632,6 @@
     "width": 1264,
     "height": 843,
     "view_type": "plant_in_field"
-  },
-  "barbabietola_beetroot_09.jpg": {
-    "filename": "barbabietola_beetroot_09.jpg",
-    "author": "leppäkerttu / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/beetroot-vaihannes-vegetables-beet-3150856/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 848,
-    "view_type": "cut_section"
   },
   "bietola_da_coste_swiss_chard_03.jpg": {
     "filename": "bietola_da_coste_swiss_chard_03.jpg",
@@ -2219,17 +2139,6 @@
     "height": 848,
     "view_type": "isolated_background"
   },
-  "cipolla_invernale_winter_onion_02.jpg": {
-    "filename": "cipolla_invernale_winter_onion_02.jpg",
-    "author": "MabelAmber / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/onion-root-vegetable-growth-harvest-3706937/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 855,
-    "view_type": "plant_in_field"
-  },
   "cipolla_invernale_winter_onion_03.jpg": {
     "filename": "cipolla_invernale_winter_onion_03.jpg",
     "author": "Unknown authorUnknown author",
@@ -2254,17 +2163,6 @@
   },
   "fagiolo_bean_03.jpg": {
     "filename": "fagiolo_bean_03.jpg",
-    "author": "Ulisse Aldrovandi",
-    "license": "Public domain",
-    "license_url": null,
-    "source_url": "https://commons.wikimedia.org/wiki/File%3APhaseolus_Indicus_Aldrovandi_5-2_175.png",
-    "provider": "wikimedia_commons",
-    "width": 960,
-    "height": 1443,
-    "view_type": "botanical_plate"
-  },
-  "fagiolino_green_bean_03.jpg": {
-    "filename": "fagiolino_green_bean_03.jpg",
     "author": "Ulisse Aldrovandi",
     "license": "Public domain",
     "license_url": null,
@@ -7730,28 +7628,6 @@
     "height": 1486,
     "view_type": "botanical_plate"
   },
-  "fava_broad_bean_04.jpg": {
-    "filename": "fava_broad_bean_04.jpg",
-    "author": "Ishizaki Yūshi",
-    "license": "Public domain",
-    "license_url": null,
-    "source_url": "https://commons.wikimedia.org/wiki/File%3ANaturalis_Biodiversity_Center_-_RMNH.ART.337_-_Pisum_sativum_-_Vicia_faba_-_Vigna_unguiculata_-_Duchesnea_chrysantha_-_Fragaria_sp._-_indet_-_Y%C5%ABshi_Ishizaki_-_Cock_Blomhoff_Collection_-_pencil_drawing_-_water_colour.jpg",
-    "provider": "wikimedia_commons",
-    "width": 1137,
-    "height": 1706,
-    "view_type": "botanical_plate"
-  },
-  "fava_broad_bean_05.jpg": {
-    "filename": "fava_broad_bean_05.jpg",
-    "author": "This file comes from the Wellcome Collection, a website operated by Wellcome Trust, a global charitable foundation based",
-    "license": "CC BY 4.0",
-    "license_url": "https://creativecommons.org/licenses/by/4.0",
-    "source_url": "https://commons.wikimedia.org/wiki/File%3ATen_seedlings_with_different_types_of_cotyledon_or_seed_leav_Wellcome_V0044555_%28cropped1%29.jpg",
-    "provider": "wikimedia_commons",
-    "width": 1113,
-    "height": 1670,
-    "view_type": "botanical_plate"
-  },
   "lattuga_da_cespo_head_lettuce_05.jpg": {
     "filename": "lattuga_da_cespo_head_lettuce_05.jpg",
     "author": "AnonymousUnknown author",
@@ -8378,5 +8254,203 @@
     "width": 1759,
     "height": 1173,
     "view_type": "cut_section"
+  },
+  "carciofo_artichoke_06.jpg": {
+    "filename": "carciofo_artichoke_06.jpg",
+    "author": "Toby Hudson",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Artichoke_stack.JPG",
+    "provider": "wikimedia_commons",
+    "width": 1286,
+    "height": 857,
+    "view_type": "full_frame"
+  },
+  "carciofo_artichoke_07.jpg": {
+    "filename": "carciofo_artichoke_07.jpg",
+    "author": "Hans Hillewaert",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Valencia_market_-_artichokes.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "carciofo_artichoke_08.jpg": {
+    "filename": "carciofo_artichoke_08.jpg",
+    "author": "Sandra Fauconnier",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ripe_artichoke_flowers.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "carciofo_artichoke_09.jpg": {
+    "filename": "carciofo_artichoke_09.jpg",
+    "author": "Renata Apan",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Maltese_artichoke.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1281,
+    "view_type": "full_frame"
+  },
+  "carota_carrot_08.jpg": {
+    "filename": "carota_carrot_08.jpg",
+    "author": "Tomascastelazo",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Carrots_-_Daucus_carota_subsp._sativus.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1794,
+    "height": 1196,
+    "view_type": "full_frame"
+  },
+  "carota_carrot_09.jpg": {
+    "filename": "carota_carrot_09.jpg",
+    "author": "domdomegg",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Carrots_at_Ljubljana_Central_Market.JPG",
+    "provider": "wikimedia_commons",
+    "width": 1616,
+    "height": 1077,
+    "view_type": "full_frame"
+  },
+  "carota_carrot_10.jpg": {
+    "filename": "carota_carrot_10.jpg",
+    "author": "Stacy Spensley",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:10_heriloom_carrots.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1000,
+    "height": 667,
+    "view_type": "full_frame"
+  },
+  "cipolla_invernale_winter_onion_05.jpg": {
+    "filename": "cipolla_invernale_winter_onion_05.jpg",
+    "author": "Daderot",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Red_onions_-_San_Francisco,_CA.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1350,
+    "height": 900,
+    "view_type": "full_frame"
+  },
+  "fagiolo_bean_04.jpg": {
+    "filename": "fagiolo_bean_04.jpg",
+    "author": "Roger Culos",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Phaseolus_vulgaris_MHNT.BOT.2016.24.73.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "fagiolino_green_bean_04.jpg": {
+    "filename": "fagiolino_green_bean_04.jpg",
+    "author": "Alabama Extension",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Green_Beans_(Alabama_Extension).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1726,
+    "height": 1151,
+    "view_type": "full_frame"
+  },
+  "fagiolino_green_bean_05.jpg": {
+    "filename": "fagiolino_green_bean_05.jpg",
+    "author": "www.Pixel.la Free Stock Photos",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Green_beans_in_a_wooden_box.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "fava_broad_bean_06.jpg": {
+    "filename": "fava_broad_bean_06.jpg",
+    "author": "Schlaghecken Josef",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dicke_Bohne_(Vicia_faba)_erntereife_H%C3%BClsen,_Josef_Schlaghecken.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "finocchio_fennel_07.jpg": {
+    "filename": "finocchio_fennel_07.jpg",
+    "author": "Jeffery Martin",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Stack_of_fennel.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "finocchio_fennel_08.jpg": {
+    "filename": "finocchio_fennel_08.jpg",
+    "author": "Kolforn ( Kolforn ) I'd appreciate if you could mail me (Kolforn@gmail.com) if you want to use this picture out of the Wikimedia project scope. This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmi",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:-2019-03-07_Fennel_(Foeniculum),_Trimingham_(1).JPG",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "finocchio_fennel_09.jpg": {
+    "filename": "finocchio_fennel_09.jpg",
+    "author": "Kolforn ( Kolforn ) I'd appreciate if you could mail me (Kolforn@gmail.com) if you want to use this picture out of the Wikimedia project scope. This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmi",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:-2019-03-07_Fennel_(Foeniculum),_Trimingham_(2).JPG",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "finocchio_fennel_10.jpg": {
+    "filename": "finocchio_fennel_10.jpg",
+    "author": "Arnaud 25",
+    "license": "Public domain",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fenouil.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1024,
+    "height": 683,
+    "view_type": "isolated_background"
+  },
+  "lattuga_da_cespo_head_lettuce_06.jpg": {
+    "filename": "lattuga_da_cespo_head_lettuce_06.jpg",
+    "author": "Zolfeqar Fatihzadeh",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Iceberg_lettuce_in_Poplar_Farmhouse.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1296,
+    "height": 864,
+    "view_type": "full_frame"
+  },
+  "lattuga_da_cespo_head_lettuce_07.jpg": {
+    "filename": "lattuga_da_cespo_head_lettuce_07.jpg",
+    "author": "Dwight Sipler from Stow, MA, USA",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lettuce_%22Concept%22_(8070448172).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
   }
 }
