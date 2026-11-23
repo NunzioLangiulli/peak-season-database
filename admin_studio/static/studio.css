@@ -184,3 +184,5 @@ details.sec details.sec details.sec>summary{background:none;border:0;border-bott
 .pv figcaption{font-size:11.5px;color:var(--m);margin-top:4px}
 .cropv .meta label{display:inline-flex;gap:4px;align-items:center}
 .itn{color:var(--m);font-weight:400}.plist div.on .itn{color:inherit;opacity:.8}
+.ph[draggable=true]{cursor:grab}.ph.dragging{opacity:.4}.ph.dropto{outline:2px dashed var(--g);outline-offset:2px}
+.ph .pos{font-size:11px;color:var(--m)}.ph .mv{padding:1px 6px;min-width:0}.ph .mv:disabled{opacity:.3;cursor:default}

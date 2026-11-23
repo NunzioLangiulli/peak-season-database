@@ -18,7 +18,7 @@ import urllib.parse
 import time
 from pathlib import Path
 
-from common import DATA, IMAGES, SESSION, load_json, save_json
+from common import DATA, IMAGES, SESSION, load_json, null_paths, save_json
 
 META = IMAGES / "_metadata.json"
 MANUAL = IMAGES / "_primary_manual.json"
@@ -80,7 +80,7 @@ def _align(im):
 
 
 def save(data):
-    """Main photo and view types of a product."""
+    """Main photo, gallery order and view types of a product."""
     db = _db()
     it = next(x for x in db["items"] if x["id"] == data["id"])
     im = it["images"]
@@ -93,15 +93,23 @@ def save(data):
             d["view_type"] = vt[d["filename"]]
             if d["filename"] in meta:
                 meta[d["filename"]]["view_type"] = d["view_type"]
-    p = data.get("primary")
-    if p and p != im.get("primary"):
-        if p not in (im.get("gallery") or []):
+    gal = im.get("gallery") or []
+    order = data.get("order")
+    if order and order != gal:
+        # the gallery order chosen by hand (sync_images.py keeps it); the first photo is the primary one
+        if sorted(order) != sorted(gal):
+            raise ValueError("the new order must contain exactly the photos of the gallery")
+        p = order[0]
+    else:
+        order, p = None, data.get("primary")
+    if order or (p and p != im.get("primary")):
+        if p not in gal:
             raise ValueError("the primary photo must be in the gallery")
         im["primary"] = p
-        im["gallery"] = [p] + [f for f in im["gallery"] if f != p]
+        im["gallery"] = list(order) if order else [p] + [f for f in gal if f != p]
         _align(im)
-        manual = load_json(MANUAL) if MANUAL.exists() else {}
-        manual[it["id"]] = p
+        manual = load_json(MANUAL) if MANUAL.exists() else {}   # recorded also on a pure reorder: without it
+        manual[it["id"]] = p                                  # sync_images.py would pick the first "whole" photo
         save_json(MANUAL, manual)
     save_json(META, meta)
     save_json(DATA / "database.json", db)
@@ -250,6 +258,21 @@ def upload(data):
     return _add(db, it, raw, info, data)
 
 
+IMAGE_FIELDS = {"images.primary", "images.gallery", "images.image_details"}
+
+
+def _completeness(it):
+    """Keeps data_completeness in step with the photos, as sync_images.py does: the first photo fills
+    images.primary (no longer missing), removing the last one empties it again."""
+    dc = it["data_completeness"]
+    dc["missing_fields"] = null_paths(it)
+    enr = set(dc["fields_enriched_via_scraping"])
+    enr = enr | IMAGE_FIELDS if it["images"].get("gallery") else enr - IMAGE_FIELDS
+    dc["fields_enriched_via_scraping"] = sorted(enr)
+    if dc["missing_fields"]:
+        dc["is_complete"] = False
+
+
 def _add(db, it, raw, info, data):
     vt = data.get("view_type") if data.get("view_type") in VIEW_TYPES else "full_frame"
     src = _open(raw)
@@ -278,6 +301,7 @@ def _add(db, it, raw, info, data):
         manual = load_json(MANUAL) if MANUAL.exists() else {}
         manual[it["id"]] = name
         save_json(MANUAL, manual)
+    _completeness(it)
     save_json(DATA / "database.json", db)
     return {"new_files": new, "added": detail, "crop": how["text"]}
 
@@ -386,6 +410,7 @@ def delete(data):
         if im["primary"]:
             im["gallery"] = [im["primary"]] + [f for f in im["gallery"] if f != im["primary"]]
     _align(im)
+    _completeness(it)
     save_json(META, meta)
     save_json(MANUAL, manual)
     save_json(DATA / "database.json", db)

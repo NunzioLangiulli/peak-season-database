@@ -15,6 +15,7 @@ Rules:
   - the main photo chosen by hand in the Admin Studio (assets/images/_primary_manual.json) always wins, if the file exists;
   - otherwise the main photo is the first "full_frame" photo (product filling the frame) without flagged issues and not of a specific variety; if there is none,
     the one already chosen stays if the file still exists, otherwise the lowest-numbered photo (owner rule, 2026-11-05);
+  - the gallery order already in the database (set in the Admin Studio) is kept; new photos go at the end by number;
   - a photo WITHOUT licence metadata does not enter the gallery (it is only flagged): for a photo of your own
     add an entry to _metadata.json with "provider": "user", author and licence.
 """
@@ -80,10 +81,16 @@ def main():
     changed, unlicensed = 0, []
     for it in db["items"]:
         iid = it["id"]
-        names = sorted(files.get(iid, []), key=lambda x: int(PAT.match(x).group("n")))
-        licensed = [n for n in names if n in meta and meta[n].get("license") and meta[n].get("source_url")]
-        unlicensed += [n for n in names if n not in licensed]
         old = it["images"]
+        # the gallery order set in the Admin Studio is kept: photos already in the gallery stay where they are (following
+        # any renaming), new photos are appended in number order (user request, 2026-11-23)
+        by_num = sorted(files.get(iid, []), key=lambda x: int(PAT.match(x).group("n")))
+        kept = [renamed.get(n, n) for n in old.get("gallery") or []]
+        names = [n for n in kept if n in by_num] + [n for n in by_num if n not in kept]
+        # own photos (provider "user", uploaded from the Admin Studio) may have no source URL, as the schema allows
+        licensed = [n for n in names if n in meta and meta[n].get("license")
+                    and (meta[n].get("source_url") or meta[n].get("provider") == "user")]
+        unlicensed += [n for n in names if n not in licensed]
         prev = renamed.get(old.get("primary"), old.get("primary"))   # the main photo follows any renaming
         ff = [n for n in licensed if meta[n].get("view_type") == "full_frame" and not meta[n].get("flags") and not meta[n].get("variety")]
         manual_p = renamed.get(manual.get(iid), manual.get(iid))     # chosen by hand in the Admin Studio: wins over the rule

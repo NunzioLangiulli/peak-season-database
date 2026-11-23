@@ -1,13 +1,19 @@
 // Images tab: each product's gallery, primary photo, view type, search and download of new photos.
 const VT_LABEL = {full_frame: 'Whole (fills the photo)', isolated_background: 'Whole on plain background', plant_in_field: 'Plant in the field',
   botanical_plate: 'Botanical plate', cut_section: 'Cut / section', other: 'Other'};
-const Img = {list: [], cur: null, item: null, primary: null, vt: {}};
+const Img = {list: [], cur: null, item: null, primary: null, vt: {}, order: []};
+// Gallery order chosen by hand: the first photo is always the primary one (star = move to the front).
+Img.move = (f, to) => {
+  const o = Img.order.filter(x => x !== f);
+  o.splice(Math.max(0, Math.min(to, o.length)), 0, f);
+  Img.order = o; Img.primary = o[0]; render();
+};
 
 Img.load = async () => { Img.list = await api.get('/api/images/items'); };
 Img.open = async id => {
   Img.cur = id;
   [Img.item, Img.list] = await Promise.all([api.get('/api/images/item?id=' + encodeURIComponent(id)), api.get('/api/images/items')]);   // counts always fresh
-  Img.primary = Img.item.primary; Img.vt = {}; render();
+  Img.primary = Img.item.primary; Img.vt = {}; Img.order = Img.item.images.map(d => d.filename); render();
 };
 Img.del = async (f, isP) => {
   if (Img.dirty()) return msg('Save or undo the pending changes of this product before deleting a photo.', true);
@@ -69,7 +75,7 @@ Img.uploadForm = it => {
     })();
   };
 };
-Img.dirty = () => (Img.item && Img.primary !== Img.item.primary ? 1 : 0) + Object.keys(Img.vt).length;
+Img.dirty = () => (Img.item && Img.order.join() !== Img.item.images.map(d => d.filename).join() ? 1 : 0) + Object.keys(Img.vt).length;
 
 Studio.tabs.images = {
   placeholder: 'Search product (Italian or English name, or id)…', load: Img.load, dirty: Img.dirty,
@@ -87,19 +93,30 @@ Studio.tabs.images = {
     if (!Img.item) { right.innerHTML = '<div class="empty">Pick a product from the list on the left.</div>'; return; }
     const it = Img.item;
     right.insertAdjacentHTML('beforeend', `<div class="box"><h3>${pname(it.name_en, it.name)} · <i>${esc(it.scientific_name || '')}</i> · ${it.images.length} photos</h3>
-      <div class="meta">Star = primary photo (cards and Home). The view type decides how the app uses the photo. Click a photo to open the full-resolution original.</div></div>`);
+      <div class="meta">The order here is the order of the gallery in the app: drag a photo, or use ◀ ▶, to move it. The first photo is the primary one (cards and Home); the star moves a photo to the front. The view type decides how the app uses the photo. Click a photo to open the full-resolution original.</div></div>`);
     const grid = document.createElement('div'); grid.className = 'grid';
-    it.images.forEach(d => {
-      const f = d.filename, isP = f === Img.primary, vt = Img.vt[f] || d.view_type;
-      const c = document.createElement('div'); c.className = 'ph' + (isP ? ' primary' : '') + ((Img.vt[f] || (isP && Img.primary !== it.primary)) ? ' changed' : '');
+    const det = Object.fromEntries(it.images.map(d => [d.filename, d])), was = it.images.map(d => d.filename);
+    Img.order.forEach((f, i) => {
+      const d = det[f], isP = i === 0, vt = Img.vt[f] || d.view_type;
+      const c = document.createElement('div'); c.className = 'ph' + (isP ? ' primary' : '') + ((Img.vt[f] || was[i] !== f) ? ' changed' : '');
+      c.draggable = true;
+      c.ondragstart = e => { e.dataTransfer.setData('text/plain', f); e.dataTransfer.effectAllowed = 'move'; c.classList.add('dragging'); };
+      c.ondragend = () => c.classList.remove('dragging');
+      c.ondragover = e => { e.preventDefault(); c.classList.add('dropto'); };
+      c.ondragleave = () => c.classList.remove('dropto');
+      c.ondrop = e => { e.preventDefault(); c.classList.remove('dropto'); const g = e.dataTransfer.getData('text/plain'); if (g && g !== f && Img.order.includes(g)) Img.move(g, i); };
       c.innerHTML = `<img loading="lazy" src="/img/${esc(f)}?v=${d.v || 0}" alt="${esc(f)}">
         <div class="c"><div class="meta" style="margin:0;justify-content:space-between"><b>${esc(f.replace(it.id + '_', '#').replace('.jpg', ''))}</b>
-        <span><button class="btn small del" title="Delete this photo">🗑</button> <span class="star ${isP ? 'on' : ''}" title="Set as primary photo">★</span></span></div>
+        <span class="pos">${i + 1}/${Img.order.length}</span>
+        <span><button class="btn small mv" data-d="-1" title="Move left" ${i ? '' : 'disabled'}>◀</button><button class="btn small mv" data-d="1" title="Move right" ${i < Img.order.length - 1 ? '' : 'disabled'}>▶</button>
+        <button class="btn small del" title="Delete this photo">🗑</button> <span class="star ${isP ? 'on' : ''}" title="Set as primary photo (moves it to the front)">★</span></span></div>
         <div class="credit" title="${esc((d.author || '') + ' · ' + (d.license || ''))}">${esc(d.author || 'author ?')} · ${esc(d.license || 'licence ?')}</div>
         ${(d.flags || []).length ? '<div class="no">Flagged: ' + esc(d.flags.join(', ')) + '</div>' : ''}
         <select>${it.view_types.map(v => `<option value="${v}" ${v === vt ? 'selected' : ''}>${VT_LABEL[v] || v}</option>`).join('')}</select></div>`;
       c.querySelector('img').onclick = () => window.open('/img/' + f + '?full=1&v=' + (d.v || 0), '_blank');
-      c.querySelector('.star').onclick = () => { Img.primary = f; render(); };
+      c.querySelector('img').draggable = false;
+      c.querySelector('.star').onclick = () => Img.move(f, 0);
+      c.querySelectorAll('.mv').forEach(b => b.onclick = () => Img.move(f, i + +b.dataset.d));
       c.querySelector('.del').onclick = () => Img.del(f, isP);
       c.querySelector('select').onchange = e => { if (e.target.value === d.view_type) delete Img.vt[f]; else Img.vt[f] = e.target.value; refreshDirty(); c.classList.add('changed'); };
       grid.append(c);
@@ -149,7 +166,7 @@ Studio.tabs.images = {
     };
   },
   async save() {
-    const res = await api.post('/api/images/save', {id: Img.cur, primary: Img.primary, view_types: Img.vt});
+    const res = await api.post('/api/images/save', {id: Img.cur, primary: Img.primary, order: Img.order, view_types: Img.vt});
     if (await afterSave(res, 'Image changes')) { await Img.load(); await Img.open(Img.cur); }
   },
 };
