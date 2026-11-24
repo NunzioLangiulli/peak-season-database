@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Testi dell'interfaccia dell'app Peak Season (IT/EN). Li legge CopyService all'avvio; si modificano con scripts/copy_editor.py. I segnaposto tra graffe, es. {n}, vanno lasciati invariati. Chiavi uniche nel formato schermata.elemento.",
-    "updated": "2026-11-20"
+    "updated": "2026-11-24"
   },
   "strings": [
     {
@@ -834,8 +834,8 @@
       "screen": "shopping_list",
       "key": "shopping_list.in_cart_header",
       "element_description": "Shopping list: in cart header — placeholders: {n}",
-      "it": "Nel Carrello ({n})",
-      "en": "In the Cart ({n})"
+      "it": "Già Presi ({n})",
+      "en": "Already Got ({n})"
     },
     {
       "screen": "shopping_list",
@@ -848,8 +848,29 @@
       "screen": "shopping_list",
       "key": "shopping_list.add_food_hint",
       "element_description": "Shopping list: add food hint",
-      "it": "Aggiungi un prodotto…",
-      "en": "Add an item…"
+      "it": "Aggiungi un prodotto o altro…",
+      "en": "Add a product or anything else…"
+    },
+    {
+      "screen": "shopping_list",
+      "key": "shopping_list.other_items_header",
+      "element_description": "Shopping list: header of the free-text items, shown below fruit and vegetables",
+      "it": "Altri Articoli",
+      "en": "Other Items"
+    },
+    {
+      "screen": "shopping_list",
+      "key": "shopping_list.add_custom_item",
+      "element_description": "Shopping list: row under the add field to add what was typed as a free-text item ({text} = typed text)",
+      "it": "Aggiungi {text}",
+      "en": "Add {text}"
+    },
+    {
+      "screen": "shopping_list",
+      "key": "shopping_list.custom_item_sub",
+      "element_description": "Shopping list: subtitle of the add-free-item row; {section} is replaced by the 'Other Items' header, in bold",
+      "it": "Non è tra i prodotti dell'app, aggiungilo negli {section}",
+      "en": "Not one of the app's products, add it to {section}"
     },
     {
       "screen": "shopping_list",
@@ -904,22 +925,22 @@
       "screen": "shopping_list",
       "key": "shopping_list.shopping_count.one",
       "element_description": "Shopping list: header counter, one product",
-      "it": "1 prodotto",
-      "en": "1 item"
+      "it": "1 Prodotto",
+      "en": "1 Item"
     },
     {
       "screen": "shopping_list",
       "key": "shopping_list.shopping_count.other",
       "element_description": "Shopping list: header counter, several products — placeholders: {n}",
-      "it": "{n} prodotti",
-      "en": "{n} items"
+      "it": "{n} Prodotti",
+      "en": "{n} Items"
     },
     {
       "screen": "shopping_list",
       "key": "shopping_list.shopping_counter",
       "element_description": "Shopping list: counter under the title — placeholders: {items} (= the shopping count text), {inCart}",
-      "it": "{items} da comprare · {inCart} nel carrello",
-      "en": "{items} to buy · {inCart} in the cart"
+      "it": "{items} da comprare · Già presi: {inCart}",
+      "en": "{items} to buy · Already got: {inCart}"
     },
     {
       "screen": "storage_tips",
@@ -1469,13 +1490,6 @@
     },
     {
       "screen": "detail",
-      "key": "detail.curve_basis_title",
-      "element_description": "Product detail page: label above the technical note on how the seasonality curve was built (Sources section)",
-      "it": "Come Viene Stimata la Stagionalità",
-      "en": "How Seasonality Is Estimated"
-    },
-    {
-      "screen": "detail",
       "key": "detail.seedbed_sowing",
       "element_description": "Product detail page: growing calendar row, sowing in a seedbed",
       "it": "Semina in Semenzaio",
@@ -1900,6 +1914,20 @@
       "element_description": "Settings: storage tips delay note",
       "it": "Con un ritardo, Android può anticiparla o posticiparla di qualche minuto per risparmiare batteria.",
       "en": "With a delay, Android may shift it by a few minutes to save battery."
+    },
+    {
+      "screen": "settings",
+      "key": "settings.shopping_full_list",
+      "element_description": "Settings: switch to write every product in the shopping notification, without the \"+N\" shortcut",
+      "it": "Elenco Completo nella Notifica",
+      "en": "Full List in the Notification"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.shopping_full_list_sub",
+      "element_description": "Settings: short warning under the full-list switch",
+      "it": "La notifica potrebbe diventare molto lunga.",
+      "en": "The notification may get very long."
     },
     {
       "screen": "settings",
