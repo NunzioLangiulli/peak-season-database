@@ -208,17 +208,6 @@
     "height": 854,
     "view_type": "other"
   },
-  "pisello_pea_01.jpg": {
-    "filename": "pisello_pea_01.jpg",
-    "author": "ha11ok / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/peas-vegetables-green-food-healthy-1205673/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 853,
-    "view_type": "full_frame"
-  },
   "ravanello_radish_01.jpg": {
     "filename": "ravanello_radish_01.jpg",
     "author": "Mirko_Fabian / Pixabay",
@@ -300,31 +289,6 @@
     "height": 1067,
     "view_type": "full_frame"
   },
-  "clementine_clementine_01.jpg": {
-    "filename": "clementine_clementine_01.jpg",
-    "author": "Couleur / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/mandarins-clementines-fruit-3114765/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 853,
-    "view_type": "other"
-  },
-  "fico_fig_01.jpg": {
-    "filename": "fico_fig_01.jpg",
-    "author": "stux / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/fig-slice-food-fruit-organic-972271/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 853,
-    "view_type": "cut_section",
-    "flags": [
-      "dish"
-    ]
-  },
   "fico_fig_02.jpg": {
     "filename": "fico_fig_02.jpg",
     "author": "Etienne",
@@ -335,17 +299,6 @@
     "width": 1600,
     "height": 1071,
     "view_type": "plant_in_field"
-  },
-  "fragola_strawberry_03.jpg": {
-    "filename": "fragola_strawberry_03.jpg",
-    "author": "Shixart1985",
-    "license": "CC BY 2.0",
-    "license_url": "https://creativecommons.org/licenses/by/2.0",
-    "source_url": "https://commons.wikimedia.org/wiki/File%3AFresh_and_ripe_strawberry_resting_in_an_open_palm_surrounded_by_natural_light.jpg",
-    "provider": "wikimedia_commons",
-    "width": 1600,
-    "height": 1068,
-    "view_type": "other"
   },
   "kiwi_kiwifruit_03.jpg": {
     "filename": "kiwi_kiwifruit_03.jpg",
@@ -367,17 +320,6 @@
     "provider": "wikimedia_commons",
     "width": 741,
     "height": 494,
-    "view_type": "plant_in_field"
-  },
-  "mela_apple_01.jpg": {
-    "filename": "mela_apple_01.jpg",
-    "author": "lumix2004 / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/apples-orchard-apple-trees-1873078/",
-    "provider": "pixabay",
-    "width": 1226,
-    "height": 817,
     "view_type": "plant_in_field"
   },
   "mela_apple_02.jpg": {
@@ -725,17 +667,6 @@
     "height": 853,
     "view_type": "plant_in_field"
   },
-  "lattuga_da_cespo_head_lettuce_03.jpg": {
-    "filename": "lattuga_da_cespo_head_lettuce_03.jpg",
-    "author": "Dwight Sipler from Stow, MA, USA",
-    "license": "CC BY 2.0",
-    "license_url": "https://creativecommons.org/licenses/by/2.0",
-    "source_url": "https://commons.wikimedia.org/wiki/File%3ALettuce_Mini_Heads_%287331119710%29.jpg",
-    "provider": "wikimedia_commons",
-    "width": 1448,
-    "height": 965,
-    "view_type": "plant_in_field"
-  },
   "patata_potato_03.jpg": {
     "filename": "patata_potato_03.jpg",
     "author": "Lars Blankers / Unsplash",
@@ -756,17 +687,6 @@
     "provider": "unsplash",
     "width": 1080,
     "height": 720,
-    "view_type": "other"
-  },
-  "pomodoro_tomato_04.jpg": {
-    "filename": "pomodoro_tomato_04.jpg",
-    "author": "Avin CP / Unsplash",
-    "license": "Unsplash License",
-    "license_url": "https://unsplash.com/license",
-    "source_url": "https://unsplash.com/photos/red-tomato-on-gray-concrete-surface-OlXUUQedQyM?utm_source=peak_season&utm_medium=referral",
-    "provider": "unsplash",
-    "width": 1080,
-    "height": 721,
     "view_type": "other"
   },
   "rapa_turnip_03.jpg": {
@@ -790,20 +710,6 @@
     "width": 912,
     "height": 608,
     "view_type": "other"
-  },
-  "spinacio_spinach_05.jpg": {
-    "filename": "spinacio_spinach_05.jpg",
-    "author": "Louis Hansel / Unsplash",
-    "license": "Unsplash License",
-    "license_url": "https://unsplash.com/license",
-    "source_url": "https://unsplash.com/photos/green-leaves-on-blue-plastic-bowl-4VMqrwYfmDw?utm_source=peak_season&utm_medium=referral",
-    "provider": "unsplash",
-    "width": 1080,
-    "height": 720,
-    "view_type": "other",
-    "flags": [
-      "dish"
-    ]
   },
   "zucchina_zucchini_03.jpg": {
     "filename": "zucchina_zucchini_03.jpg",
@@ -860,17 +766,6 @@
     "height": 1067,
     "view_type": "isolated_background"
   },
-  "cachi_persimmon_03.jpg": {
-    "filename": "cachi_persimmon_03.jpg",
-    "author": "Gabriella Clare Marino / Unsplash",
-    "license": "Unsplash License",
-    "license_url": "https://unsplash.com/license",
-    "source_url": "https://unsplash.com/photos/3-red-tomato-on-black-textile-wEjZtyvHs1w?utm_source=peak_season&utm_medium=referral",
-    "provider": "unsplash",
-    "width": 1080,
-    "height": 720,
-    "view_type": "isolated_background"
-  },
   "cachi_persimmon_05.jpg": {
     "filename": "cachi_persimmon_05.jpg",
     "author": "Joe Ravi",
@@ -903,17 +798,6 @@
     "width": 1080,
     "height": 720,
     "view_type": "isolated_background"
-  },
-  "clementine_clementine_04.jpg": {
-    "filename": "clementine_clementine_04.jpg",
-    "author": "Jonathan Pielmayer / Unsplash",
-    "license": "Unsplash License",
-    "license_url": "https://unsplash.com/license",
-    "source_url": "https://unsplash.com/photos/oranges-on-top-of-gray-wooden-table-uiPaZkzjv64?utm_source=peak_season&utm_medium=referral",
-    "provider": "unsplash",
-    "width": 1080,
-    "height": 720,
-    "view_type": "other"
   },
   "fragola_strawberry_05.jpg": {
     "filename": "fragola_strawberry_05.jpg",
@@ -980,20 +864,6 @@
     "width": 1080,
     "height": 720,
     "view_type": "cut_section"
-  },
-  "mirtillo_blueberry_03.jpg": {
-    "filename": "mirtillo_blueberry_03.jpg",
-    "author": "Joanna Kosinska / Unsplash",
-    "license": "Unsplash License",
-    "license_url": "https://unsplash.com/license",
-    "source_url": "https://unsplash.com/photos/blueberries-on-white-ceramic-container-4qujjbj3srs?utm_source=peak_season&utm_medium=referral",
-    "provider": "unsplash",
-    "width": 1080,
-    "height": 721,
-    "view_type": "other",
-    "flags": [
-      "dish"
-    ]
   },
   "mora_blackberry_03.jpg": {
     "filename": "mora_blackberry_03.jpg",
@@ -2678,17 +2548,6 @@
     "height": 853,
     "view_type": "isolated_background"
   },
-  "pomodoro_tomato_06.jpg": {
-    "filename": "pomodoro_tomato_06.jpg",
-    "author": "misskursovie2013 / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/tomatoes-red-two-on-a-branch-5247985/",
-    "provider": "pixabay",
-    "width": 1270,
-    "height": 847,
-    "view_type": "isolated_background"
-  },
   "pomodoro_tomato_07.jpg": {
     "filename": "pomodoro_tomato_07.jpg",
     "author": "Kathas_Fotos / Pixabay",
@@ -3613,28 +3472,6 @@
     "height": 1440,
     "view_type": "botanical_plate"
   },
-  "fico_fig_11.jpg": {
-    "filename": "fico_fig_11.jpg",
-    "author": "aplifeua / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/fruit-figs-organic-healthy-vitamin-7383451/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 853,
-    "view_type": "cut_section"
-  },
-  "fico_fig_12.jpg": {
-    "filename": "fico_fig_12.jpg",
-    "author": "StockSnap / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/figs-fruits-food-2619978/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 853,
-    "view_type": "cut_section"
-  },
   "fragola_strawberry_01.jpg": {
     "filename": "fragola_strawberry_01.jpg",
     "author": "Hans / Pixabay",
@@ -3699,17 +3536,6 @@
     "provider": "pixabay",
     "width": 1200,
     "height": 800,
-    "view_type": "cut_section"
-  },
-  "fragola_strawberry_09.jpg": {
-    "filename": "fragola_strawberry_09.jpg",
-    "author": "ignartonosbg / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/strawberry-fruit-food-red-fruits-7475493/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 853,
     "view_type": "cut_section"
   },
   "kiwi_kiwifruit_01.jpg": {
@@ -3799,17 +3625,6 @@
     "width": 801,
     "height": 1200,
     "view_type": "botanical_plate"
-  },
-  "limone_lemon_01.jpg": {
-    "filename": "limone_lemon_01.jpg",
-    "author": "skoddeheimen / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/citrus-lemon-citrus-lemon-yellow-2462779/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 853,
-    "view_type": "full_frame"
   },
   "limone_lemon_02.jpg": {
     "filename": "limone_lemon_02.jpg",
@@ -4141,39 +3956,6 @@
     "height": 853,
     "view_type": "isolated_background"
   },
-  "pera_pear_05.jpg": {
-    "filename": "pera_pear_05.jpg",
-    "author": "Photoshot / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/fruit-pear-yellow-eat-food-1161136/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 853,
-    "view_type": "isolated_background"
-  },
-  "pera_pear_06.jpg": {
-    "filename": "pera_pear_06.jpg",
-    "author": "eismannhans / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/pear-compote-fruit-food-175255/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 853,
-    "view_type": "isolated_background"
-  },
-  "pera_pear_07.jpg": {
-    "filename": "pera_pear_07.jpg",
-    "author": "FotoKrzyzanowski / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/fruit-pear-green-food-ripe-fruit-2248395/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 853,
-    "view_type": "isolated_background"
-  },
   "pera_pear_08.jpg": {
     "filename": "pera_pear_08.jpg",
     "author": "NickyPe / Pixabay",
@@ -4261,17 +4043,6 @@
     "width": 1280,
     "height": 853,
     "view_type": "plant_in_field"
-  },
-  "pesca_peach_05.jpg": {
-    "filename": "pesca_peach_05.jpg",
-    "author": "Couleur / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/peach-fruit-red-ripe-yummy-cute-2527208/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 853,
-    "view_type": "cut_section"
   },
   "susina_plum_02.jpg": {
     "filename": "susina_plum_02.jpg",
@@ -5208,17 +4979,6 @@
     "height": 1440,
     "view_type": "botanical_plate"
   },
-  "fungo_champignon_button_mushroom_06.jpg": {
-    "filename": "fungo_champignon_button_mushroom_06.jpg",
-    "author": "GuillermoVuljevas / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/mushrooms-food-mushroom-nature-2044114/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 851,
-    "view_type": "cut_section"
-  },
   "fungo_pleurotus_oyster_mushroom_01.jpg": {
     "filename": "fungo_pleurotus_oyster_mushroom_01.jpg",
     "author": "Serhii Zysko",
@@ -5516,17 +5276,6 @@
     "height": 1440,
     "view_type": "botanical_plate"
   },
-  "grano_saraceno_buckwheat_02.jpg": {
-    "filename": "grano_saraceno_buckwheat_02.jpg",
-    "author": "Nechaev / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/buckwheat-corn-grains-texture-3478554/",
-    "provider": "pixabay",
-    "width": 1082,
-    "height": 721,
-    "view_type": "full_frame"
-  },
   "grano_saraceno_buckwheat_03.jpg": {
     "filename": "grano_saraceno_buckwheat_03.jpg",
     "author": "NickyPe / Pixabay",
@@ -5593,28 +5342,6 @@
     "height": 853,
     "view_type": "cut_section"
   },
-  "sedano_rapa_celeriac_01.jpg": {
-    "filename": "sedano_rapa_celeriac_01.jpg",
-    "author": "Hans / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/celery-celeriac-vegetables-turnip-228002/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 853,
-    "view_type": "full_frame"
-  },
-  "indivia_belga_belgian_endive_01.jpg": {
-    "filename": "indivia_belga_belgian_endive_01.jpg",
-    "author": "Oceancetaceen - Alice Chodura",
-    "license": "Public domain",
-    "license_url": null,
-    "source_url": "https://commons.wikimedia.org/wiki/File%3ACichorium_intybus_var_intybus_clean_no-description.jpg",
-    "provider": "wikimedia_commons",
-    "width": 1003,
-    "height": 1504,
-    "view_type": "botanical_plate"
-  },
   "cipollotto_spring_onion_01.jpg": {
     "filename": "cipollotto_spring_onion_01.jpg",
     "author": "ArmbrustAnna / Pixabay",
@@ -5624,17 +5351,6 @@
     "provider": "pixabay",
     "width": 1280,
     "height": 853,
-    "view_type": "full_frame"
-  },
-  "cipollotto_spring_onion_02.jpg": {
-    "filename": "cipollotto_spring_onion_02.jpg",
-    "author": "congerdesign / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/spring-onions-vegetables-845032/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 848,
     "view_type": "full_frame"
   },
   "agretti_saltwort_01.jpg": {
@@ -5680,17 +5396,6 @@
     "width": 960,
     "height": 1440,
     "view_type": "botanical_plate"
-  },
-  "rabarbaro_rhubarb_01.jpg": {
-    "filename": "rabarbaro_rhubarb_01.jpg",
-    "author": "pixel2013 / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/rhubarb-farmers-local-market-market-1422546/",
-    "provider": "pixabay",
-    "width": 888,
-    "height": 592,
-    "view_type": "full_frame"
   },
   "rabarbaro_rhubarb_02.jpg": {
     "filename": "rabarbaro_rhubarb_02.jpg",
@@ -5769,28 +5474,6 @@
     "height": 1440,
     "view_type": "botanical_plate"
   },
-  "broccolo_romanesco_romanesco_01.jpg": {
-    "filename": "broccolo_romanesco_romanesco_01.jpg",
-    "author": "TraduzioniTecniche / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/romanesco-broccoli-green-1741608/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 851,
-    "view_type": "full_frame"
-  },
-  "broccolo_romanesco_romanesco_02.jpg": {
-    "filename": "broccolo_romanesco_romanesco_02.jpg",
-    "author": "TraduzioniTecniche / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/romanesco-broccoli-green-1741605/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 851,
-    "view_type": "full_frame"
-  },
   "broccolo_romanesco_romanesco_03.jpg": {
     "filename": "broccolo_romanesco_romanesco_03.jpg",
     "author": "Dietmar Rabich",
@@ -5802,28 +5485,6 @@
     "height": 638,
     "view_type": "full_frame"
   },
-  "broccolo_romanesco_romanesco_04.jpg": {
-    "filename": "broccolo_romanesco_romanesco_04.jpg",
-    "author": "Susbany / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/green-cauliflower-romanesco-cabbage-96893/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 853,
-    "view_type": "plant_in_field"
-  },
-  "puntarelle_puntarelle_01.jpg": {
-    "filename": "puntarelle_puntarelle_01.jpg",
-    "author": "Oceancetaceen - Alice Chodura",
-    "license": "Public domain",
-    "license_url": null,
-    "source_url": "https://commons.wikimedia.org/wiki/File%3ACichorium_intybus_var_intybus_clean_no-description.jpg",
-    "provider": "wikimedia_commons",
-    "width": 1003,
-    "height": 1504,
-    "view_type": "botanical_plate"
-  },
   "gombo_okra_01.jpg": {
     "filename": "gombo_okra_01.jpg",
     "author": "PavKorukonda / Pixabay",
@@ -5833,18 +5494,7 @@
     "provider": "pixabay",
     "width": 1280,
     "height": 853,
-    "view_type": "full_frame"
-  },
-  "gombo_okra_02.jpg": {
-    "filename": "gombo_okra_02.jpg",
-    "author": "feraugustodesign / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/okra-plant-vegetable-irrigation-588935/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 852,
-    "view_type": "plant_in_field"
+    "view_type": "cut_section"
   },
   "zucchina_spinosa_chayote_01.jpg": {
     "filename": "zucchina_spinosa_chayote_01.jpg",
@@ -5857,17 +5507,6 @@
     "height": 853,
     "view_type": "full_frame"
   },
-  "zucchina_spinosa_chayote_02.jpg": {
-    "filename": "zucchina_spinosa_chayote_02.jpg",
-    "author": "GoranH / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/mexican-cucumber-chayote-3672857/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 853,
-    "view_type": "plant_in_field"
-  },
   "zucchina_spinosa_chayote_03.jpg": {
     "filename": "zucchina_spinosa_chayote_03.jpg",
     "author": "M.S. del., J.N.Fitch lith.",
@@ -5878,17 +5517,6 @@
     "width": 960,
     "height": 1440,
     "view_type": "botanical_plate"
-  },
-  "lampascioni_tassel_hyacinth_01.jpg": {
-    "filename": "lampascioni_tassel_hyacinth_01.jpg",
-    "author": "Lucarelli",
-    "license": "CC BY-SA 3.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-    "source_url": "https://commons.wikimedia.org/wiki/File%3ALampascioni.jpg",
-    "provider": "wikimedia_commons",
-    "width": 960,
-    "height": 640,
-    "view_type": "full_frame"
   },
   "cicerchia_grass_pea_01.jpg": {
     "filename": "cicerchia_grass_pea_01.jpg",
@@ -6506,17 +6134,6 @@
     "height": 754,
     "view_type": "cut_section"
   },
-  "nocciola_hazelnut_01.jpg": {
-    "filename": "nocciola_hazelnut_01.jpg",
-    "author": "PIRO4D / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/hazelnuts-nuts-market-brown-nut-1583221/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 851,
-    "view_type": "full_frame"
-  },
   "nocciola_hazelnut_02.jpg": {
     "filename": "nocciola_hazelnut_02.jpg",
     "author": "Johann Georg Sturm (Painter: Jacob Sturm)",
@@ -6561,17 +6178,6 @@
     "height": 853,
     "view_type": "isolated_background"
   },
-  "mandorla_almond_03.jpg": {
-    "filename": "mandorla_almond_03.jpg",
-    "author": "Dennert, E.",
-    "license": "Public domain",
-    "license_url": null,
-    "source_url": "https://commons.wikimedia.org/wiki/File%3AHoffmann-Dennert_botanischer_Bilderatlas_%28Taf._50%29_%286425006941%29.jpg",
-    "provider": "wikimedia_commons",
-    "width": 960,
-    "height": 1440,
-    "view_type": "botanical_plate"
-  },
   "mandorla_almond_04.jpg": {
     "filename": "mandorla_almond_04.jpg",
     "author": "martin_hetto / Pixabay",
@@ -6582,17 +6188,6 @@
     "width": 1254,
     "height": 836,
     "view_type": "cut_section"
-  },
-  "pistacchio_pistachio_01.jpg": {
-    "filename": "pistacchio_pistachio_01.jpg",
-    "author": "alyerika / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/pistachios-shells-wood-pile-nuts-10218575/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 853,
-    "view_type": "full_frame"
   },
   "pistacchio_pistachio_02.jpg": {
     "filename": "pistacchio_pistachio_02.jpg",
@@ -6737,45 +6332,12 @@
     "height": 853,
     "view_type": "plant_in_field"
   },
-  "gelso_mulberry_03.jpg": {
-    "filename": "gelso_mulberry_03.jpg",
-    "author": "rneitzey / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/mulberry-israel-tree-organic-74643/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 853,
-    "view_type": "plant_in_field"
-  },
-  "gelso_mulberry_04.jpg": {
-    "filename": "gelso_mulberry_04.jpg",
-    "author": "Unknown authorUnknown author",
-    "license": "Public domain",
-    "license_url": null,
-    "source_url": "https://commons.wikimedia.org/wiki/File%3AEB1911_Moraceae_-_Morus_nigra.jpg",
-    "provider": "wikimedia_commons",
-    "width": 827,
-    "height": 1240,
-    "view_type": "botanical_plate"
-  },
   "gelso_mulberry_05.jpg": {
     "filename": "gelso_mulberry_05.jpg",
     "author": "AnonymousUnknown author [illustrator not stated, no signature]",
     "license": "Public domain",
     "license_url": null,
     "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_American_Flora._Vol._1%2C_1855_-_pl._44_Morus_nigra_%286021785145%29.jpg",
-    "provider": "wikimedia_commons",
-    "width": 960,
-    "height": 1440,
-    "view_type": "botanical_plate"
-  },
-  "gelso_mulberry_06.jpg": {
-    "filename": "gelso_mulberry_06.jpg",
-    "author": "Edward Step",
-    "license": "Public domain",
-    "license_url": null,
-    "source_url": "https://commons.wikimedia.org/wiki/File%3AWWB-0283-138-Morus_nigra-crop.png",
     "provider": "wikimedia_commons",
     "width": 960,
     "height": 1440,
@@ -6824,17 +6386,6 @@
     "width": 1280,
     "height": 853,
     "view_type": "plant_in_field"
-  },
-  "alchechengi_cape_gooseberry_04.jpg": {
-    "filename": "alchechengi_cape_gooseberry_04.jpg",
-    "author": "ValeriaLu / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/physalis-fall-food-leaf-fruit-2908594/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 853,
-    "view_type": "cut_section"
   },
   "cocco_coconut_01.jpg": {
     "filename": "cocco_coconut_01.jpg",
@@ -7045,17 +6596,6 @@
     "height": 1440,
     "view_type": "botanical_plate"
   },
-  "cedro_citron_01.jpg": {
-    "filename": "cedro_citron_01.jpg",
-    "author": "Citron",
-    "license": "CC BY-SA 3.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-    "source_url": "https://commons.wikimedia.org/wiki/File%3ACitron.jpg",
-    "provider": "wikimedia_commons",
-    "width": 960,
-    "height": 640,
-    "view_type": "full_frame"
-  },
   "cedro_citron_02.jpg": {
     "filename": "cedro_citron_02.jpg",
     "author": "Wikimedia Commons contributor",
@@ -7078,34 +6618,12 @@
     "height": 1440,
     "view_type": "botanical_plate"
   },
-  "oliva_olive_01.jpg": {
-    "filename": "oliva_olive_01.jpg",
-    "author": "tiburi / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/olives-nature-oil-green-natural-1586638/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 853,
-    "view_type": "full_frame"
-  },
   "oliva_olive_02.jpg": {
     "filename": "oliva_olive_02.jpg",
     "author": "Julie-Kolibrie / Pixabay",
     "license": "Pixabay Content License",
     "license_url": "https://pixabay.com/service/license-summary/",
     "source_url": "https://pixabay.com/photos/olives-tree-olive-tree-green-789140/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 853,
-    "view_type": "plant_in_field"
-  },
-  "oliva_olive_03.jpg": {
-    "filename": "oliva_olive_03.jpg",
-    "author": "MaliAroestiPhotography / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/olives-rain-green-tree-spain-5043603/",
     "provider": "pixabay",
     "width": 1280,
     "height": 853,
@@ -7232,28 +6750,6 @@
     "height": 852,
     "view_type": "full_frame"
   },
-  "shiitake_shiitake_02.jpg": {
-    "filename": "shiitake_shiitake_02.jpg",
-    "author": "6437364 / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/food-shiitake-mushrooms-dried-2990320/",
-    "provider": "pixabay",
-    "width": 1206,
-    "height": 804,
-    "view_type": "full_frame"
-  },
-  "shiitake_shiitake_03.jpg": {
-    "filename": "shiitake_shiitake_03.jpg",
-    "author": "6437364 / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/food-shiitake-mushrooms-dried-2990321/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 851,
-    "view_type": "full_frame"
-  },
   "cardoncello_king_oyster_mushroom_01.jpg": {
     "filename": "cardoncello_king_oyster_mushroom_01.jpg",
     "author": "Diego Delso",
@@ -7330,17 +6826,6 @@
     "width": 1080,
     "height": 720,
     "view_type": "full_frame"
-  },
-  "maracuja_passion_fruit_04.jpg": {
-    "filename": "maracuja_passion_fruit_04.jpg",
-    "author": "Michael Kucharski / Unsplash",
-    "license": "Unsplash License",
-    "license_url": "https://unsplash.com/license",
-    "source_url": "https://unsplash.com/photos/red-and-yellow-round-fruit-on-brown-wooden-table-dVBxFStU7kQ?utm_source=peak_season&utm_medium=referral",
-    "provider": "unsplash",
-    "width": 1080,
-    "height": 720,
-    "view_type": "cut_section"
   },
   "pastinaca_parsnip_03.jpg": {
     "filename": "pastinaca_parsnip_03.jpg",
@@ -7425,17 +6910,6 @@
     "license": "Public domain",
     "license_url": null,
     "source_url": "https://commons.wikimedia.org/wiki/File%3AIllustration_Foeniculum_vulgare1.jpg",
-    "provider": "wikimedia_commons",
-    "width": 1067,
-    "height": 1600,
-    "view_type": "botanical_plate"
-  },
-  "lattuga_da_taglio_leaf_lettuce_03.jpg": {
-    "filename": "lattuga_da_taglio_leaf_lettuce_03.jpg",
-    "author": "AnonymousUnknown author",
-    "license": "Public domain",
-    "license_url": null,
-    "source_url": "https://commons.wikimedia.org/wiki/File%3ALactuca_sativa_var._angustana_-_tablica_1_z_Rocznika_Wydzia%C5%82u_Lekarskiego_w_UJ_1840_T3.jpg",
     "provider": "wikimedia_commons",
     "width": 1067,
     "height": 1600,
@@ -7606,17 +7080,6 @@
     "height": 2150,
     "view_type": "botanical_plate"
   },
-  "oliva_olive_05.jpg": {
-    "filename": "oliva_olive_05.jpg",
-    "author": "Royle, J. Forbes",
-    "license": "Public domain",
-    "license_url": null,
-    "source_url": "https://commons.wikimedia.org/wiki/File%3AIllustrations_of_the_botany_and_other_branches_of_the_natural_history_of_the_Himalayan_Mountains_%28Pl._65%29_%286982085484%29%2C_Olea_ferruginea.jpg",
-    "provider": "wikimedia_commons",
-    "width": 1268,
-    "height": 1902,
-    "view_type": "botanical_plate"
-  },
   "finferlo_chanterelle_04.jpg": {
     "filename": "finferlo_chanterelle_04.jpg",
     "author": "Claude Casimir Gillet",
@@ -7626,28 +7089,6 @@
     "provider": "wikimedia_commons",
     "width": 991,
     "height": 1486,
-    "view_type": "botanical_plate"
-  },
-  "lattuga_da_cespo_head_lettuce_05.jpg": {
-    "filename": "lattuga_da_cespo_head_lettuce_05.jpg",
-    "author": "AnonymousUnknown author",
-    "license": "Public domain",
-    "license_url": null,
-    "source_url": "https://commons.wikimedia.org/wiki/File%3ALactuca_sativa_var._angustana_-_tablica_2_z_Rocznika_Wydzia%C5%82u_Lekarskiego_w_UJ_1840_T3.jpg",
-    "provider": "wikimedia_commons",
-    "width": 1067,
-    "height": 1600,
-    "view_type": "botanical_plate"
-  },
-  "lattuga_da_taglio_leaf_lettuce_04.jpg": {
-    "filename": "lattuga_da_taglio_leaf_lettuce_04.jpg",
-    "author": "Oceancetaceen - Alice Chodura",
-    "license": "Public domain",
-    "license_url": null,
-    "source_url": "https://commons.wikimedia.org/wiki/File%3ALactuca_sativa_-_001x.jpg",
-    "provider": "wikimedia_commons",
-    "width": 1067,
-    "height": 1600,
     "view_type": "botanical_plate"
   },
   "lenticchia_lentil_05.jpg": {
@@ -7824,17 +7265,6 @@
     "provider": "wikimedia_commons",
     "width": 1080,
     "height": 1620,
-    "view_type": "botanical_plate"
-  },
-  "mais_corn_07.jpg": {
-    "filename": "mais_corn_07.jpg",
-    "author": "Francisco Manuel Blanco (O.S.A.)",
-    "license": "Public domain",
-    "license_url": null,
-    "source_url": "https://commons.wikimedia.org/wiki/File%3AZea_mays_Blanco2.279.jpg",
-    "provider": "wikimedia_commons",
-    "width": 1102,
-    "height": 1653,
     "view_type": "botanical_plate"
   },
   "farro_emmer_05.jpg": {
@@ -8100,17 +7530,6 @@
     "width": 1920,
     "height": 1280,
     "view_type": "plant_in_field"
-  },
-  "cavolo_cappuccio_cabbage_09.jpg": {
-    "filename": "cavolo_cappuccio_cabbage_09.jpg",
-    "author": "Saporificifque",
-    "license": "CC0",
-    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Planche_botanique_de_formes_cultiv%C3%A9es_de_Brassica_oleracea_(chou_rouge).jpg",
-    "provider": "wikimedia_commons",
-    "width": 1797,
-    "height": 2696,
-    "view_type": "botanical_plate"
   },
   "cavolo_cappuccio_cabbage_10.jpg": {
     "filename": "cavolo_cappuccio_cabbage_10.jpg",
@@ -8452,5 +7871,2436 @@
     "width": 1920,
     "height": 1280,
     "view_type": "plant_in_field"
+  },
+  "lattuga_da_taglio_leaf_lettuce_05.jpg": {
+    "filename": "lattuga_da_taglio_leaf_lettuce_05.jpg",
+    "author": "Comedora",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lactuca_sativa_2.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1620,
+    "height": 1080,
+    "view_type": "full_frame"
+  },
+  "lattuga_da_taglio_leaf_lettuce_06.jpg": {
+    "filename": "lattuga_da_taglio_leaf_lettuce_06.jpg",
+    "author": "CostaPPPR",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:AlfaceDSC7218.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1277,
+    "view_type": "full_frame"
+  },
+  "porro_leek_01.jpg": {
+    "filename": "porro_leek_01.jpg",
+    "author": "Jean-noël Lafargue",
+    "license": "CC BY 4.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 882,
+    "height": 588,
+    "view_type": "full_frame"
+  },
+  "porro_leek_02.jpg": {
+    "filename": "porro_leek_02.jpg",
+    "author": "Schlaghecken Josef",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Porree_(Allium_porrum)_junge_Pflanzen_in_einer_Dammkultur_-_Josef_Schlaghecken.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1734,
+    "height": 2312,
+    "view_type": "plant_in_field"
+  },
+  "porro_leek_04.jpg": {
+    "filename": "porro_leek_04.jpg",
+    "author": "H. Alexander Talbot",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:BlanchedYoungLeeks_(8324507691).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "isolated_background"
+  },
+  "porro_leek_05.jpg": {
+    "filename": "porro_leek_05.jpg",
+    "author": "Daniel Zimmermann from Bayern, Deutschland (Germany)",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Daily_Nourishment.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "cut_section"
+  },
+  "porro_leek_06.jpg": {
+    "filename": "porro_leek_06.jpg",
+    "author": "Morten Copenhagen",
+    "license": "Public Domain",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 948,
+    "height": 2232,
+    "view_type": "full_frame"
+  },
+  "radicchio_radicchio_01.jpg": {
+    "filename": "radicchio_radicchio_01.jpg",
+    "author": "Michel Chauvet",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Radicchio_Chioggia_Torino.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1277,
+    "view_type": "full_frame"
+  },
+  "radicchio_radicchio_02.jpg": {
+    "filename": "radicchio_radicchio_02.jpg",
+    "author": "Michel Chauvet",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Radicchio_Treviso_Torino.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1277,
+    "view_type": "full_frame"
+  },
+  "radicchio_radicchio_03.jpg": {
+    "filename": "radicchio_radicchio_03.jpg",
+    "author": "Darya Pino from San Francisco, USA",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chioggia_Radicchio.jpg",
+    "provider": "wikimedia_commons",
+    "width": 720,
+    "height": 480,
+    "view_type": "full_frame"
+  },
+  "radicchio_radicchio_04.jpg": {
+    "filename": "radicchio_radicchio_04.jpg",
+    "author": "Graeme Churchard from Bristol (51.473110 -2.625987), UK",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Radiccio_near_the_Arsenale,_Venice.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1876,
+    "height": 1251,
+    "view_type": "full_frame"
+  },
+  "radicchio_radicchio_05.jpg": {
+    "filename": "radicchio_radicchio_05.jpg",
+    "author": "cyclonebill from Copenhagen, Denmark",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Radicchio_(5680915288).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1275,
+    "view_type": "cut_section"
+  },
+  "rucola_arugula_02.jpg": {
+    "filename": "rucola_arugula_02.jpg",
+    "author": "Peter Burka",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Arugula_(51107429934).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1281,
+    "view_type": "full_frame"
+  },
+  "rucola_arugula_03.jpg": {
+    "filename": "rucola_arugula_03.jpg",
+    "author": "Michał",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Atlas_roslin_pl_Rokietta_siewna_123_6958.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1200,
+    "height": 800,
+    "view_type": "plant_in_field"
+  },
+  "rucola_arugula_04.jpg": {
+    "filename": "rucola_arugula_04.jpg",
+    "author": "Schlaghecken Josef",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rucola_Bestand_erntefertig_-_15-05-2023.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "sedano_celery_05.jpg": {
+    "filename": "sedano_celery_05.jpg",
+    "author": "fir0002 flagstaffotos [at] gmail.com Canon 20D + Tamron 28-75mm f/2.8",
+    "license": "GFDL 1.2",
+    "license_url": "http://www.gnu.org/licenses/old-licenses/fdl-1.2.html",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Celery_cross_section.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1600,
+    "height": 1067,
+    "view_type": "cut_section"
+  },
+  "sedano_celery_06.jpg": {
+    "filename": "sedano_celery_06.jpg",
+    "author": "Unknown",
+    "license": "CC BY 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source_url": "https://commons.wikimedia.org/wiki/File:C%C3%A9leri.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1686,
+    "height": 1124,
+    "view_type": "isolated_background"
+  },
+  "sedano_celery_07.jpg": {
+    "filename": "sedano_celery_07.jpg",
+    "author": "Armando Olivo Martín del Campo",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Apio_Hoja.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1281,
+    "view_type": "plant_in_field"
+  },
+  "spinacio_spinach_06.jpg": {
+    "filename": "spinacio_spinach_06.jpg",
+    "author": "Rasbak",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pseudoperonospora_farinosa_f.sp._spinaciae_at_Spinacia_oleracea_(8).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1281,
+    "view_type": "full_frame"
+  },
+  "topinambur_jerusalem_artichoke_02.jpg": {
+    "filename": "topinambur_jerusalem_artichoke_02.jpg",
+    "author": "Benoît Prieur",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Boucheries_Andr%C3%A9_(Rillieux-la-Pape)_-_des_topinambours.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1716,
+    "height": 1144,
+    "view_type": "full_frame"
+  },
+  "topinambur_jerusalem_artichoke_03.jpg": {
+    "filename": "topinambur_jerusalem_artichoke_03.jpg",
+    "author": "Lupus Huwiki",
+    "license": "CC BY 4.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 960,
+    "height": 640,
+    "view_type": "cut_section"
+  },
+  "topinambur_jerusalem_artichoke_04.jpg": {
+    "filename": "topinambur_jerusalem_artichoke_04.jpg",
+    "author": "Kou07kou",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Topinambour.JPG",
+    "provider": "wikimedia_commons",
+    "width": 1536,
+    "height": 1024,
+    "view_type": "plant_in_field"
+  },
+  "topinambur_jerusalem_artichoke_05.jpg": {
+    "filename": "topinambur_jerusalem_artichoke_05.jpg",
+    "author": "Salicyna",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Helianthus_tuberosus_2018-10-09_2774.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "topinambur_jerusalem_artichoke_06.jpg": {
+    "filename": "topinambur_jerusalem_artichoke_06.jpg",
+    "author": "H2ase",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Topinambur_H2ase1.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "isolated_background"
+  },
+  "topinambur_jerusalem_artichoke_07.jpg": {
+    "filename": "topinambur_jerusalem_artichoke_07.jpg",
+    "author": "Christian Guthier",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Jerusalem_Artichokes_tubers.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "topinambur_jerusalem_artichoke_08.jpg": {
+    "filename": "topinambur_jerusalem_artichoke_08.jpg",
+    "author": "Robin",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Jerusalem_artichokes.jpg",
+    "provider": "wikimedia_commons",
+    "width": 950,
+    "height": 633,
+    "view_type": "isolated_background"
+  },
+  "valerianella_corn_salad_02.jpg": {
+    "filename": "valerianella_corn_salad_02.jpg",
+    "author": "Dinkum",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Au_march%C3%A9_-_m%C3%A2che_2.JPG",
+    "provider": "wikimedia_commons",
+    "width": 1413,
+    "height": 942,
+    "view_type": "full_frame"
+  },
+  "valerianella_corn_salad_03.jpg": {
+    "filename": "valerianella_corn_salad_03.jpg",
+    "author": "Kritzolina",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Wohnanlage_Ute-Strittmatter-Strasse_05.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "valerianella_corn_salad_04.jpg": {
+    "filename": "valerianella_corn_salad_04.jpg",
+    "author": "Michel Langeveld",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Valerianella_locusta_116794382.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "arancia_orange_07.jpg": {
+    "filename": "arancia_orange_07.jpg",
+    "author": "Chris Hawes",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Picture_Oranges.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1530,
+    "height": 1020,
+    "view_type": "full_frame"
+  },
+  "clementine_clementine_08.jpg": {
+    "filename": "clementine_clementine_08.jpg",
+    "author": "claralieu",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fruit_Reference_-60.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1728,
+    "height": 1152,
+    "view_type": "isolated_background"
+  },
+  "cavolo_cinese_chinese_cabbage_02.jpg": {
+    "filename": "cavolo_cinese_chinese_cabbage_02.jpg",
+    "author": "Steffen Bauer ( www.saatpilot.de )",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Brassica_rapa_Pak_Choi_Wei%C3%9F_(white-stemmed_pak_choi)_(SaatPilot).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1254,
+    "height": 1254,
+    "view_type": "plant_in_field"
+  },
+  "cavolo_cinese_chinese_cabbage_03.jpg": {
+    "filename": "cavolo_cinese_chinese_cabbage_03.jpg",
+    "author": "claralieu",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bok_Choy_-28.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "cavolo_cinese_chinese_cabbage_04.jpg": {
+    "filename": "cavolo_cinese_chinese_cabbage_04.jpg",
+    "author": "claralieu",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Vegetable_Reference_-32.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "isolated_background"
+  },
+  "kiwi_kiwifruit_05.jpg": {
+    "filename": "kiwi_kiwifruit_05.jpg",
+    "author": "David Adam Kess",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:(kiwifruit_or_Chinese_gooseberry)_is_the_edible_berry_of_a_woody_vine_in_the_genus_Actinidia.JPG",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "kiwi_kiwifruit_06.jpg": {
+    "filename": "kiwi_kiwifruit_06.jpg",
+    "author": "JJ Harrison ( https://www.jjharrison.com.au/ )",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Actinidia_chinensis_-_Austins_Ferry.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "limone_lemon_11.jpg": {
+    "filename": "limone_lemon_11.jpg",
+    "author": "Filo gèn'",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Citrus_limon_(Rutaceae).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "mela_apple_07.jpg": {
+    "filename": "mela_apple_07.jpg",
+    "author": "Dominicus Johannes Bergsma",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Malus_domestica_Allington_Pippin_01.JPG",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "melograno_pomegranate_11.jpg": {
+    "filename": "melograno_pomegranate_11.jpg",
+    "author": "Muthukovalan",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pomegranate_3.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1320,
+    "height": 880,
+    "view_type": "full_frame"
+  },
+  "mora_blackberry_06.jpg": {
+    "filename": "mora_blackberry_06.jpg",
+    "author": "Digihum",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Blackberries_from_the_Wincheap_Orchards.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1600,
+    "height": 1067,
+    "view_type": "full_frame"
+  },
+  "pesca_peach_06.jpg": {
+    "filename": "pesca_peach_06.jpg",
+    "author": "Evan-Amos",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:White-Peaches-Bunch.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1440,
+    "height": 960,
+    "view_type": "cut_section"
+  },
+  "pesca_peach_07.jpg": {
+    "filename": "pesca_peach_07.jpg",
+    "author": "Wellcome Collection",
+    "license": "CC BY 4.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 1501,
+    "height": 2400,
+    "view_type": "full_frame"
+  },
+  "pesca_peach_08.jpg": {
+    "filename": "pesca_peach_08.jpg",
+    "author": "Deborah Griscom Passmore",
+    "license": "Public domain",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pomological_Watercolor_POM00005183.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1580,
+    "height": 2400,
+    "view_type": "botanical_plate"
+  },
+  "prezzemolo_parsley_05.jpg": {
+    "filename": "prezzemolo_parsley_05.jpg",
+    "author": "Forest & Kim Starr",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Starr_070112-3393_Petroselinum_crispum.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "rosmarino_rosemary_05.jpg": {
+    "filename": "rosmarino_rosemary_05.jpg",
+    "author": "Photo by David J. Stang",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rosmarinus_officinalis_var_1zz.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1000,
+    "height": 667,
+    "view_type": "full_frame"
+  },
+  "salvia_sage_04.jpg": {
+    "filename": "salvia_sage_04.jpg",
+    "author": "Agnieszka Kwiecień, Nova",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Salvia_officinalis_Sza%C5%82wia_lekarska_2023-07-21_01.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "salvia_sage_05.jpg": {
+    "filename": "salvia_sage_05.jpg",
+    "author": "Krzysztof Golik",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Salvia_officinalis_in_Cardaillac_(1).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "menta_mint_09.jpg": {
+    "filename": "menta_mint_09.jpg",
+    "author": "Mohamed algethy",
+    "license": "CC BY 4.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 2400,
+    "height": 1600,
+    "view_type": "full_frame"
+  },
+  "erba_cipollina_chives_06.jpg": {
+    "filename": "erba_cipollina_chives_06.jpg",
+    "author": "Ayotte, Gilles, 1948-",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Allium_schoenoprasum_15-p.bot-lilia.alliu-068.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "erba_cipollina_chives_07.jpg": {
+    "filename": "erba_cipollina_chives_07.jpg",
+    "author": "Ayotte, Gilles, 1948-",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Allium_schoenoprasum_15-p.bot-lilia.alliu-068.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "zafferano_saffron_07.jpg": {
+    "filename": "zafferano_saffron_07.jpg",
+    "author": "Hubertl",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Safran-Weinviertel_Niederreiter_2_Gramm_8285.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1285,
+    "view_type": "isolated_background"
+  },
+  "farro_emmer_06.jpg": {
+    "filename": "farro_emmer_06.jpg",
+    "author": "Forest and Kim Starr",
+    "license": "CC BY 3.0 us",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/us/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Emmer_wheat_berries.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1646,
+    "height": 1097,
+    "view_type": "full_frame"
+  },
+  "riso_rice_06.jpg": {
+    "filename": "riso_rice_06.jpg",
+    "author": "JoabJacob",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rice_Grains_at_Bakin_Dogo_Market_Kaduna_North.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "cavolo_rosso_red_cabbage_05.jpg": {
+    "filename": "cavolo_rosso_red_cabbage_05.jpg",
+    "author": "Saporificifque",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Planche_botanique_de_formes_cultiv%C3%A9es_de_Brassica_oleracea_(chou_rouge).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1797,
+    "height": 2696,
+    "view_type": "botanical_plate"
+  },
+  "sedano_rapa_celeriac_02.jpg": {
+    "filename": "sedano_rapa_celeriac_02.jpg",
+    "author": "Jonathunder",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Celeriac.JPG",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1285,
+    "view_type": "full_frame"
+  },
+  "sedano_rapa_celeriac_03.jpg": {
+    "filename": "sedano_rapa_celeriac_03.jpg",
+    "author": "INRA DIST from France",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:C%C3%A9leri_Boule_Cl1JWeber_(23568799442).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1277,
+    "view_type": "full_frame"
+  },
+  "sedano_rapa_celeriac_04.jpg": {
+    "filename": "sedano_rapa_celeriac_04.jpg",
+    "author": "Tiia Monto",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Celery_root.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1515,
+    "height": 1010,
+    "view_type": "isolated_background"
+  },
+  "sedano_rapa_celeriac_05.jpg": {
+    "filename": "sedano_rapa_celeriac_05.jpg",
+    "author": "Jamain",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Celeriac_J2.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "sedano_rapa_celeriac_06.jpg": {
+    "filename": "sedano_rapa_celeriac_06.jpg",
+    "author": "L.Willms",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sellerieknolle.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "isolated_background"
+  },
+  "indivia_belga_belgian_endive_03.jpg": {
+    "filename": "indivia_belga_belgian_endive_03.jpg",
+    "author": "Forest & Kim Starr",
+    "license": "CC BY 3.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "indivia_belga_belgian_endive_04.jpg": {
+    "filename": "indivia_belga_belgian_endive_04.jpg",
+    "author": "INRA DIST",
+    "license": "CC BY 2.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 2126,
+    "height": 1415,
+    "view_type": "full_frame"
+  },
+  "indivia_belga_belgian_endive_05.jpg": {
+    "filename": "indivia_belga_belgian_endive_05.jpg",
+    "author": "David Monniaux",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Endive_p1160063.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "isolated_background"
+  },
+  "indivia_belga_belgian_endive_06.jpg": {
+    "filename": "indivia_belga_belgian_endive_06.jpg",
+    "author": "Schlaghecken Josef",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Zuckerhut_Zubereitung,_schneiden-4-Josef_Schlaghecken.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "cut_section"
+  },
+  "scarola_escarole_01.jpg": {
+    "filename": "scarola_escarole_01.jpg",
+    "author": "No machine-readable author provided. Pciarl assumed (based on copyright claims).",
+    "license": "Public domain",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Indivia.jpg",
+    "provider": "wikimedia_commons",
+    "width": 986,
+    "height": 657,
+    "view_type": "full_frame"
+  },
+  "scarola_escarole_02.jpg": {
+    "filename": "scarola_escarole_02.jpg",
+    "author": "Fumikas Sagisavas",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Endive_leafs.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "scarola_escarole_03.jpg": {
+    "filename": "scarola_escarole_03.jpg",
+    "author": "Unknown author Unknown author",
+    "license": "Public domain",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chicor%C3%A9e_fris%C3%A9e_fine_de_Louviers_Vilmorin-Andrieux_1904.png",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 2880,
+    "view_type": "botanical_plate"
+  },
+  "scarola_escarole_04.jpg": {
+    "filename": "scarola_escarole_04.jpg",
+    "author": "Unknown author Unknown author",
+    "license": "Public domain",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chicor%C3%A9e_fris%C3%A9e_d%27Anjou_Vilmorin-Andrieux_1904.png",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 2880,
+    "view_type": "botanical_plate"
+  },
+  "indivia_riccia_curly_endive_01.jpg": {
+    "filename": "indivia_riccia_curly_endive_01.jpg",
+    "author": "Dinkum",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Au_march%C3%A9_-_salade_fris%C3%A9e.JPG",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "indivia_riccia_curly_endive_02.jpg": {
+    "filename": "indivia_riccia_curly_endive_02.jpg",
+    "author": "Dinkum",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Au_march%C3%A9_-_salade_fris%C3%A9e_2.JPG",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "indivia_riccia_curly_endive_03.jpg": {
+    "filename": "indivia_riccia_curly_endive_03.jpg",
+    "author": "Rasbak",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cichorium_endivia_var._crispum_(01).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1281,
+    "view_type": "plant_in_field"
+  },
+  "indivia_riccia_curly_endive_04.jpg": {
+    "filename": "indivia_riccia_curly_endive_04.jpg",
+    "author": "Rasbak",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cichorium_endivia_var._crispum_(02).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1281,
+    "view_type": "plant_in_field"
+  },
+  "indivia_riccia_curly_endive_05.jpg": {
+    "filename": "indivia_riccia_curly_endive_05.jpg",
+    "author": "Atilin",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chicoree_frisee.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "cipollotto_spring_onion_04.jpg": {
+    "filename": "cipollotto_spring_onion_04.jpg",
+    "author": "Malyadri",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:SpringOnions.JPG",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "agretti_saltwort_03.jpg": {
+    "filename": "agretti_saltwort_03.jpg",
+    "author": "Schurdl",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Salsola_soda_6330.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1275,
+    "view_type": "full_frame"
+  },
+  "agretti_saltwort_04.jpg": {
+    "filename": "agretti_saltwort_04.jpg",
+    "author": "Schlaghecken Josef",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:M%C3%B6nchsbart-(Salsola_soda)-in_der_K%C3%BCche-gewaschen-1-Josef_Schlaghecken.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "isolated_background"
+  },
+  "crescione_watercress_03.jpg": {
+    "filename": "crescione_watercress_03.jpg",
+    "author": "Forest and Kim Starr",
+    "license": "CC BY 3.0 us",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/us/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Starr-180909-0775-Nasturtium_officinale-leaves-Lower_Kula_Pipeline_Waikamoi-Maui_(45815387931).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "crescione_watercress_04.jpg": {
+    "filename": "crescione_watercress_04.jpg",
+    "author": "Stefan.lefnaer",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Nasturtium_officinale_(s._str.)_sl53.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "rabarbaro_rhubarb_03.jpg": {
+    "filename": "rabarbaro_rhubarb_03.jpg",
+    "author": "Mykola Swarnyk",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rhubarb(byMSwarnyk).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1839,
+    "height": 1226,
+    "view_type": "full_frame"
+  },
+  "rabarbaro_rhubarb_04.jpg": {
+    "filename": "rabarbaro_rhubarb_04.jpg",
+    "author": "Evan-Amos",
+    "license": "Public domain",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:CSA-Rhubarb.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1662,
+    "height": 1108,
+    "view_type": "isolated_background"
+  },
+  "rabarbaro_rhubarb_05.jpg": {
+    "filename": "rabarbaro_rhubarb_05.jpg",
+    "author": "Unknown author Unknown author",
+    "license": "Public domain",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rhubarbe_hybride_Vilmorin-Andrieux_1904.png",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 2880,
+    "view_type": "botanical_plate"
+  },
+  "rabarbaro_rhubarb_06.jpg": {
+    "filename": "rabarbaro_rhubarb_06.jpg",
+    "author": "Halava",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rheum_australe_Oulu_05.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "rafano_horseradish_02.jpg": {
+    "filename": "rafano_horseradish_02.jpg",
+    "author": "Anna Reg",
+    "license": "CC BY 3.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 1878,
+    "height": 1252,
+    "view_type": "full_frame"
+  },
+  "rafano_horseradish_03.jpg": {
+    "filename": "rafano_horseradish_03.jpg",
+    "author": "Frank Vincentz",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Armoracia_rusticana_04_ies.jpg",
+    "provider": "wikimedia_commons",
+    "width": 800,
+    "height": 533,
+    "view_type": "cut_section"
+  },
+  "scorzonera_black_salsify_02.jpg": {
+    "filename": "scorzonera_black_salsify_02.jpg",
+    "author": "Oceancetaceen - Alice Chodura",
+    "license": "Public domain",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Scorzonera_hispanica.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1600,
+    "height": 2400,
+    "view_type": "botanical_plate"
+  },
+  "scorzonera_black_salsify_03.jpg": {
+    "filename": "scorzonera_black_salsify_03.jpg",
+    "author": "Jan Kops",
+    "license": "Public domain",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Scorzonera_hispanica_var._glastifolia_%E2%80%94_Flora_Batava_%E2%80%94_Volume_v16.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1810,
+    "height": 2715,
+    "view_type": "botanical_plate"
+  },
+  "scorzonera_black_salsify_04.jpg": {
+    "filename": "scorzonera_black_salsify_04.jpg",
+    "author": "Oceancetaceen - Alice Chodura",
+    "license": "Public domain",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Scorzonera_humilis001.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1600,
+    "height": 2400,
+    "view_type": "botanical_plate"
+  },
+  "scorzonera_black_salsify_05.jpg": {
+    "filename": "scorzonera_black_salsify_05.jpg",
+    "author": "Artemas Ward",
+    "license": "Public domain",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Salsify_%22Oyster-plant%22,_and_Scorzonera_%22Black_Salsify,%22_illustration_from_The_Encyclopedia_of_Food_by_Artemas_Ward.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1602,
+    "height": 2400,
+    "view_type": "botanical_plate"
+  },
+  "scorzonera_black_salsify_06.jpg": {
+    "filename": "scorzonera_black_salsify_06.jpg",
+    "author": "Goldlocki",
+    "license": "CC BY 3.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 2358,
+    "height": 1572,
+    "view_type": "full_frame"
+  },
+  "scorzonera_black_salsify_07.jpg": {
+    "filename": "scorzonera_black_salsify_07.jpg",
+    "author": "Stefan lefnaer",
+    "license": "CC BY 4.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 2400,
+    "height": 1600,
+    "view_type": "full_frame"
+  },
+  "cavolo_cinese_chinese_cabbage_05.jpg": {
+    "filename": "cavolo_cinese_chinese_cabbage_05.jpg",
+    "author": "Forest & Kim Starr",
+    "license": "CC BY 3.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "navone_swede_01.jpg": {
+    "filename": "navone_swede_01.jpg",
+    "author": "Miwok from France",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rutabaga_(16422869763).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1598,
+    "height": 1600,
+    "view_type": "full_frame"
+  },
+  "navone_swede_02.jpg": {
+    "filename": "navone_swede_02.jpg",
+    "author": "Saucemaster",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rutabaga.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "isolated_background"
+  },
+  "navone_swede_03.jpg": {
+    "filename": "navone_swede_03.jpg",
+    "author": "pin add",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Swede_-_rutabaga_-_veggiegroup.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1024,
+    "height": 683,
+    "view_type": "full_frame"
+  },
+  "navone_swede_04.jpg": {
+    "filename": "navone_swede_04.jpg",
+    "author": "Kolforn",
+    "license": "CC BY 4.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 2400,
+    "height": 1600,
+    "view_type": "full_frame"
+  },
+  "daikon_daikon_03.jpg": {
+    "filename": "daikon_daikon_03.jpg",
+    "author": "Steffen Bauer ( www.saatpilot.de )",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Raphanus_sativus_Daikon_White_(white_daikon_radish)_(SaatPilot).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1254,
+    "height": 1254,
+    "view_type": "full_frame"
+  },
+  "daikon_daikon_04.jpg": {
+    "filename": "daikon_daikon_04.jpg",
+    "author": "Steffen Bauer ( www.saatpilot.de )",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Raphanus_sativus_Daikon_White_(white_daikon_radish),_view_2_(SaatPilot).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1254,
+    "height": 836,
+    "view_type": "cut_section"
+  },
+  "daikon_daikon_05.jpg": {
+    "filename": "daikon_daikon_05.jpg",
+    "author": "Obaid Raza",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Daikon-pakistani.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "daikon_daikon_06.jpg": {
+    "filename": "daikon_daikon_06.jpg",
+    "author": "Ka23 13",
+    "license": "CC BY 4.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 2400,
+    "height": 1600,
+    "view_type": "full_frame"
+  },
+  "taccola_snow_pea_01.jpg": {
+    "filename": "taccola_snow_pea_01.jpg",
+    "author": "Forest and Kim Starr",
+    "license": "CC BY 3.0 us",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/us/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Starr-070730-7859-Pisum_sativum_var_macrocarpum-sugar_snap_peas-Foodland_Pukalani-Maui_(24864191996).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "taccola_snow_pea_02.jpg": {
+    "filename": "taccola_snow_pea_02.jpg",
+    "author": "Steffen Bauer ( www.saatpilot.de )",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pisum_sativum_Grey_Sugar_(snow_pea,_mangetout),_view_2_(SaatPilot).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1254,
+    "height": 1254,
+    "view_type": "plant_in_field"
+  },
+  "taccola_snow_pea_03.jpg": {
+    "filename": "taccola_snow_pea_03.jpg",
+    "author": "Vegan Feast Catering",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Snow_Pea_(4996848357).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "broccolo_romanesco_romanesco_05.jpg": {
+    "filename": "broccolo_romanesco_romanesco_05.jpg",
+    "author": "Ivar Leidus",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Romanesco_broccoli_texture.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1620,
+    "height": 1080,
+    "view_type": "full_frame"
+  },
+  "broccolo_romanesco_romanesco_06.jpg": {
+    "filename": "broccolo_romanesco_romanesco_06.jpg",
+    "author": "George Chernilevsky",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Romanesco_broccoli_2025_G2.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1653,
+    "height": 1102,
+    "view_type": "isolated_background"
+  },
+  "broccolo_romanesco_romanesco_07.jpg": {
+    "filename": "broccolo_romanesco_romanesco_07.jpg",
+    "author": "Jon Sullivan",
+    "license": "Public domain",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fractal_Broccoli.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1024,
+    "height": 683,
+    "view_type": "isolated_background"
+  },
+  "broccolo_romanesco_romanesco_08.jpg": {
+    "filename": "broccolo_romanesco_romanesco_08.jpg",
+    "author": "Ivar Leidus",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Romanesco_broccoli_(Brassica_oleracea).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "isolated_background"
+  },
+  "broccolo_romanesco_romanesco_09.jpg": {
+    "filename": "broccolo_romanesco_romanesco_09.jpg",
+    "author": "Roger prat",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chou_Romanesco-coupe_longitudinale.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1200,
+    "height": 1200,
+    "view_type": "cut_section"
+  },
+  "broccolo_romanesco_romanesco_10.jpg": {
+    "filename": "broccolo_romanesco_romanesco_10.jpg",
+    "author": "Thomas Oboe Lee",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Romanesco_broccoli_in_Rome,_Italy.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1285,
+    "view_type": "full_frame"
+  },
+  "broccolo_romanesco_romanesco_11.jpg": {
+    "filename": "broccolo_romanesco_romanesco_11.jpg",
+    "author": "Basotxerri",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Vitoria_-_Huertas_de_Olarizu_-_Romanescu_BT_01.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1802,
+    "height": 1201,
+    "view_type": "plant_in_field"
+  },
+  "puntarelle_puntarelle_02.jpg": {
+    "filename": "puntarelle_puntarelle_02.jpg",
+    "author": "Jerome Prohaska",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Innere_Bl%C3%BCtenknospen_der_Puntarelle.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "puntarelle_puntarelle_03.jpg": {
+    "filename": "puntarelle_puntarelle_03.jpg",
+    "author": "Michel Chauvet",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cicoria_puntarelle_Torino.JPG",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1273,
+    "view_type": "isolated_background"
+  },
+  "puntarelle_puntarelle_04.jpg": {
+    "filename": "puntarelle_puntarelle_04.jpg",
+    "author": "Michel Chauvet",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cicoria_puntarelle_Torino_coup%C3%A9e.JPG",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1273,
+    "view_type": "cut_section"
+  },
+  "asparago_selvatico_wild_asparagus_01.jpg": {
+    "filename": "asparago_selvatico_wild_asparagus_01.jpg",
+    "author": "SKsiddhartthan",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:New_stem_of_common_aspharagus.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1278,
+    "view_type": "full_frame"
+  },
+  "asparago_selvatico_wild_asparagus_02.jpg": {
+    "filename": "asparago_selvatico_wild_asparagus_02.jpg",
+    "author": "Sotiria Simota",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Wild_asparagus_cut.JPG",
+    "provider": "wikimedia_commons",
+    "width": 1620,
+    "height": 1080,
+    "view_type": "plant_in_field"
+  },
+  "asparago_selvatico_wild_asparagus_03.jpg": {
+    "filename": "asparago_selvatico_wild_asparagus_03.jpg",
+    "author": "H. Zell",
+    "license": "CC BY 3.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 1763,
+    "height": 1175,
+    "view_type": "full_frame"
+  },
+  "salicornia_samphire_02.jpg": {
+    "filename": "salicornia_samphire_02.jpg",
+    "author": "Bearas",
+    "license": "CC BY 3.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 2400,
+    "height": 1600,
+    "view_type": "full_frame"
+  },
+  "salicornia_samphire_03.jpg": {
+    "filename": "salicornia_samphire_03.jpg",
+    "author": "Thesupermat",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Salicornia_europaea_en_Bretagne.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "gombo_okra_04.jpg": {
+    "filename": "gombo_okra_04.jpg",
+    "author": "Ibrahim Somgalia Guitti",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fleur_et_fruit_de_gombo_(Abelmoschus_esculentus)_en_culture_au_Burkina_Faso_(78732).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "gombo_okra_05.jpg": {
+    "filename": "gombo_okra_05.jpg",
+    "author": "Wilfredor",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Okra_pods_on_Abelmoschus_esculentus_plant_in_Margarita_Island,_Venezuela.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1868,
+    "height": 1245,
+    "view_type": "plant_in_field"
+  },
+  "gombo_okra_06.jpg": {
+    "filename": "gombo_okra_06.jpg",
+    "author": "Steffen Bauer ( www.saatpilot.de )",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Abelmoschus_esculentus_%27Clemson_Spineless%27_(okra),_flowering_plant_(SaatPilot).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1254,
+    "height": 1254,
+    "view_type": "plant_in_field"
+  },
+  "gombo_okra_07.jpg": {
+    "filename": "gombo_okra_07.jpg",
+    "author": "ArionStar",
+    "license": "CC0 1.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 2400,
+    "height": 1600,
+    "view_type": "full_frame"
+  },
+  "zucchina_spinosa_chayote_04.jpg": {
+    "filename": "zucchina_spinosa_chayote_04.jpg",
+    "author": "Miwok",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chouchou_in_Reunion.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1347,
+    "height": 898,
+    "view_type": "full_frame"
+  },
+  "zucchina_spinosa_chayote_05.jpg": {
+    "filename": "zucchina_spinosa_chayote_05.jpg",
+    "author": "SKas",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:%D0%A7%D0%B0%D0%B9%D0%BE%D1%82%D1%8B.JPG",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "zucchina_spinosa_chayote_06.jpg": {
+    "filename": "zucchina_spinosa_chayote_06.jpg",
+    "author": "Carlos Manuel Citalán Marroquín",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sechium_edule_Chayote_on_the_vine.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "lampascioni_tassel_hyacinth_02.jpg": {
+    "filename": "lampascioni_tassel_hyacinth_02.jpg",
+    "author": "Stefan.lefnaer",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Muscari_comosum_sl13.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "lampascioni_tassel_hyacinth_03.jpg": {
+    "filename": "lampascioni_tassel_hyacinth_03.jpg",
+    "author": "Unknown",
+    "license": "Unknown",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 1092,
+    "height": 728,
+    "view_type": "full_frame"
+  },
+  "lampascioni_tassel_hyacinth_04.jpg": {
+    "filename": "lampascioni_tassel_hyacinth_04.jpg",
+    "author": "Walter Migula; Otto W Thomé",
+    "license": "CC BY 2.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 1549,
+    "height": 2400,
+    "view_type": "botanical_plate"
+  },
+  "cicerchia_grass_pea_03.jpg": {
+    "filename": "cicerchia_grass_pea_03.jpg",
+    "author": "Stefan.lefnaer",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lathyrus_sativus_sl29.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1800,
+    "height": 2400,
+    "view_type": "plant_in_field"
+  },
+  "nespola_loquat_04.jpg": {
+    "filename": "nespola_loquat_04.jpg",
+    "author": "Ivar Leidus",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Loquat_-_whole_and_cross_section.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "cut_section"
+  },
+  "nespola_loquat_05.jpg": {
+    "filename": "nespola_loquat_05.jpg",
+    "author": "Dinkun Chen",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Eriobotrya_japonica_Fruits.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1514,
+    "height": 1009,
+    "view_type": "isolated_background"
+  },
+  "nespola_loquat_06.jpg": {
+    "filename": "nespola_loquat_06.jpg",
+    "author": "Fumikas Sagisavas",
+    "license": "CC0 1.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 2400,
+    "height": 2400,
+    "view_type": "full_frame"
+  },
+  "pompelmo_grapefruit_05.jpg": {
+    "filename": "pompelmo_grapefruit_05.jpg",
+    "author": "Wuzyprod",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Grapefruit_from_Diamniadio,_Senegal_03.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "pompelmo_grapefruit_07.jpg": {
+    "filename": "pompelmo_grapefruit_07.jpg",
+    "author": "Ser Amantio di Nicolao",
+    "license": "CC BY 4.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 2400,
+    "height": 1601,
+    "view_type": "full_frame"
+  },
+  "mela_cotogna_quince_07.jpg": {
+    "filename": "mela_cotogna_quince_07.jpg",
+    "author": "Fructibus",
+    "license": "CC0 1.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 2400,
+    "height": 1600,
+    "view_type": "full_frame"
+  },
+  "ribes_redcurrant_09.jpg": {
+    "filename": "ribes_redcurrant_09.jpg",
+    "author": "Janusz Jakubowski from Warsaw, Poland",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ribes_rubrum_-_(PL)_Porzeczka_(27941676160).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1000,
+    "height": 667,
+    "view_type": "full_frame"
+  },
+  "maracuja_passion_fruit_05.jpg": {
+    "filename": "maracuja_passion_fruit_05.jpg",
+    "author": "Thamizhpparithi Maari",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:%22Passion_fruit%22.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1620,
+    "height": 1080,
+    "view_type": "full_frame"
+  },
+  "maracuja_passion_fruit_06.jpg": {
+    "filename": "maracuja_passion_fruit_06.jpg",
+    "author": "fir0002 flagstaffotos [at] gmail.com Canon 20D + Sigma 150mm f/2.8",
+    "license": "GFDL 1.2",
+    "license_url": "http://www.gnu.org/licenses/old-licenses/fdl-1.2.html",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Passionfruit_and_cross_section.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1414,
+    "height": 943,
+    "view_type": "cut_section"
+  },
+  "maracuja_passion_fruit_07.jpg": {
+    "filename": "maracuja_passion_fruit_07.jpg",
+    "author": "Ivar Leidus",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Passion_fruits_-_whole_and_halved.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "cut_section"
+  },
+  "amarena_sour_cherry_05.jpg": {
+    "filename": "amarena_sour_cherry_05.jpg",
+    "author": "Agnieszka Kwiecień, Nova",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Owoce_wisni.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1100,
+    "height": 733,
+    "view_type": "full_frame"
+  },
+  "noce_walnut_08.jpg": {
+    "filename": "noce_walnut_08.jpg",
+    "author": "pamsai, 200K views, thank you",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Walnuts_(6280039650).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "noce_walnut_09.jpg": {
+    "filename": "noce_walnut_09.jpg",
+    "author": "Vincent van Zeijst",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Walnuts_(from_France).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "cardo_cardoon_04.jpg": {
+    "filename": "cardo_cardoon_04.jpg",
+    "author": "Karelj",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cynara_cardunculus_Prague_2011_4.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "nocciola_hazelnut_04.jpg": {
+    "filename": "nocciola_hazelnut_04.jpg",
+    "author": "Ivar Leidus",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Hazelnuts_(Corylus_avellana)_-_whole_with_kernels.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1620,
+    "height": 1080,
+    "view_type": "cut_section"
+  },
+  "nocciola_hazelnut_05.jpg": {
+    "filename": "nocciola_hazelnut_05.jpg",
+    "author": "Ivar Leidus",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Hazelnuts_(Corylus_avellana).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "isolated_background"
+  },
+  "nocciola_hazelnut_06.jpg": {
+    "filename": "nocciola_hazelnut_06.jpg",
+    "author": "Linnearodrigs",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Hazelnut_Market_.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1281,
+    "view_type": "full_frame"
+  },
+  "nocciola_hazelnut_07.jpg": {
+    "filename": "nocciola_hazelnut_07.jpg",
+    "author": "Guilhem Vellut from Annecy, France",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Hazelnut_(51283027793).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "nocciola_hazelnut_08.jpg": {
+    "filename": "nocciola_hazelnut_08.jpg",
+    "author": "H. Alexander Talbot",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:SmokedHazelnuts_(8364526026).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "cut_section"
+  },
+  "nocciola_hazelnut_09.jpg": {
+    "filename": "nocciola_hazelnut_09.jpg",
+    "author": "Zeynel Cebeci",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Corylus_avellana_-_Hazelnut_02.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "mandorla_almond_05.jpg": {
+    "filename": "mandorla_almond_05.jpg",
+    "author": "Luigi Chiesa",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mandorle_sgusciate.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "mandorla_almond_06.jpg": {
+    "filename": "mandorla_almond_06.jpg",
+    "author": "Ivar Leidus",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Almonds_-_in_shell,_shell_cracked_open,_shelled,_blanched.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "cut_section"
+  },
+  "mandorla_almond_07.jpg": {
+    "filename": "mandorla_almond_07.jpg",
+    "author": "Vincent van Zeijst",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Almonds_(from_France).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "mandorla_almond_08.jpg": {
+    "filename": "mandorla_almond_08.jpg",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Almendras_(Prunus_dulcis),_Hu%C3%A9rmeda,_Espa%C3%B1a_2012-05-19,_DD_01.JPG",
+    "provider": "wikimedia_commons",
+    "width": 1594,
+    "height": 1063,
+    "view_type": "plant_in_field"
+  },
+  "mandorla_almond_09.jpg": {
+    "filename": "mandorla_almond_09.jpg",
+    "author": "Krzysztof Ziarnek, Kenraiz",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Prunus_dulcis_kz01.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "mandorla_almond_10.jpg": {
+    "filename": "mandorla_almond_10.jpg",
+    "author": "Rawpixel",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Illustration_from_Medical_Botany,_digitally_enhanced_from_rawpixel%27s_own_original_plates_62.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1717,
+    "height": 2576,
+    "view_type": "botanical_plate"
+  },
+  "mandorla_almond_11.jpg": {
+    "filename": "mandorla_almond_11.jpg",
+    "author": "Anonymous Unknown author [illustrator not stated, no signature]",
+    "license": "Public domain",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_American_Flora._Vol._1,_1855_-_pl._43_Prunus_amygdalus,_Oxalis_acetosella_(6022340342).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1655,
+    "height": 2482,
+    "view_type": "botanical_plate"
+  },
+  "pistacchio_pistachio_06.jpg": {
+    "filename": "pistacchio_pistachio_06.jpg",
+    "author": "Persian Dutch Network",
+    "license": "CC BY 4.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 2008,
+    "height": 1339,
+    "view_type": "full_frame"
+  },
+  "ribes_nero_blackcurrant_04.jpg": {
+    "filename": "ribes_nero_blackcurrant_04.jpg",
+    "author": "George Chernilevsky",
+    "license": "CC BY 4.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 1407,
+    "height": 938,
+    "view_type": "full_frame"
+  },
+  "ribes_nero_blackcurrant_05.jpg": {
+    "filename": "ribes_nero_blackcurrant_05.jpg",
+    "author": "Tiia Monto",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ribes_nigrum_Finland.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1134,
+    "height": 756,
+    "view_type": "plant_in_field"
+  },
+  "uva_spina_gooseberry_04.jpg": {
+    "filename": "uva_spina_gooseberry_04.jpg",
+    "author": "neurovelho",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gooseberries.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "uva_spina_gooseberry_05.jpg": {
+    "filename": "uva_spina_gooseberry_05.jpg",
+    "author": "Pavel Leman",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gooseberries.JPG",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "uva_spina_gooseberry_06.jpg": {
+    "filename": "uva_spina_gooseberry_06.jpg",
+    "author": "Timo Newton-Syms from Helsinki, Finland and Chalfont St Giles, Bucks, UK",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gooseberries_(5980340315).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1600,
+    "height": 1067,
+    "view_type": "plant_in_field"
+  },
+  "uva_spina_gooseberry_07.jpg": {
+    "filename": "uva_spina_gooseberry_07.jpg",
+    "author": "No machine-readable author provided. Jonline assumed (based on copyright claims).",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gooseberry-spring.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1800,
+    "height": 1200,
+    "view_type": "plant_in_field"
+  },
+  "uva_spina_gooseberry_08.jpg": {
+    "filename": "uva_spina_gooseberry_08.jpg",
+    "author": "mako from Kangasala, Suomi (Finland)",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gooseberry_closeup.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1024,
+    "height": 683,
+    "view_type": "plant_in_field"
+  },
+  "mirtillo_rosso_lingonberry_04.jpg": {
+    "filename": "mirtillo_rosso_lingonberry_04.jpg",
+    "author": "Agnieszka Kwiecień, Nova",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Vaccinium_vitis-idaea_Bor%C3%B3wka_brusznica_2023-08-25_Dolina_Roztoki_02.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "mirtillo_rosso_lingonberry_05.jpg": {
+    "filename": "mirtillo_rosso_lingonberry_05.jpg",
+    "author": "Alpsdake",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Vaccinium_vitis-idaea_in_Mount_Ontake.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "sambuco_elderberry_04.jpg": {
+    "filename": "sambuco_elderberry_04.jpg",
+    "author": "Robert Flogaus-Faust",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sambucus_racemosa_RF.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "sambuco_elderberry_05.jpg": {
+    "filename": "sambuco_elderberry_05.jpg",
+    "author": "Sunsight",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Berries_sambucus_racemosa.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "sambuco_elderberry_06.jpg": {
+    "filename": "sambuco_elderberry_06.jpg",
+    "author": "W. Bulach",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:00_3775_Schwarzer_Hollunder_(Sambucus_nigra).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "sambuco_elderberry_07.jpg": {
+    "filename": "sambuco_elderberry_07.jpg",
+    "author": "Amédée Masclef",
+    "license": "Public domain",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:150_Sambucus_nigra_L.jpg",
+    "provider": "wikimedia_commons",
+    "width": 612,
+    "height": 918,
+    "view_type": "botanical_plate"
+  },
+  "sambuco_elderberry_08.jpg": {
+    "filename": "sambuco_elderberry_08.jpg",
+    "author": "Sunsight",
+    "license": "CC BY-SA 4.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 2028,
+    "height": 1352,
+    "view_type": "full_frame"
+  },
+  "gelso_mulberry_08.jpg": {
+    "filename": "gelso_mulberry_08.jpg",
+    "author": "Steffen Bauer ( www.saatpilot.de )",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Morus_alba_(white_mulberry),_fruit_(SaatPilot).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1402,
+    "height": 935,
+    "view_type": "plant_in_field"
+  },
+  "gelso_mulberry_09.jpg": {
+    "filename": "gelso_mulberry_09.jpg",
+    "author": "Zeynel Cebeci",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Morus_sp._01.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "alchechengi_cape_gooseberry_06.jpg": {
+    "filename": "alchechengi_cape_gooseberry_06.jpg",
+    "author": "Ivar Leidus",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Physalis_peruviana_fruits_close-up.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "cut_section"
+  },
+  "alchechengi_cape_gooseberry_07.jpg": {
+    "filename": "alchechengi_cape_gooseberry_07.jpg",
+    "author": "Ivar Leidus",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Physalis_peruviana_calix_open_close-up.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "isolated_background"
+  },
+  "alchechengi_cape_gooseberry_08.jpg": {
+    "filename": "alchechengi_cape_gooseberry_08.jpg",
+    "author": "Rainer Zenz at German Wikipedia",
+    "license": "Public domain",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Physalis_rz.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "cut_section"
+  },
+  "alchechengi_cape_gooseberry_09.jpg": {
+    "filename": "alchechengi_cape_gooseberry_09.jpg",
+    "author": "Reinhold Möller Ermell",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lampionblume_(Physalis_alkekengi)-20260208-RM-121159.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "alchechengi_cape_gooseberry_10.jpg": {
+    "filename": "alchechengi_cape_gooseberry_10.jpg",
+    "author": "Fumikas Sagisavas",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Unpeeled_cape_gooseberries.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1920,
+    "view_type": "full_frame"
+  },
+  "cocco_coconut_05.jpg": {
+    "filename": "cocco_coconut_05.jpg",
+    "author": "Vyacheslav Argenberg",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Coconuts,_Shaheed_Island,_Andamans.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "cocco_coconut_06.jpg": {
+    "filename": "cocco_coconut_06.jpg",
+    "author": "Vyacheslav Argenberg",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Coconuts,_Andamans.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "carruba_carob_05.jpg": {
+    "filename": "carruba_carob_05.jpg",
+    "author": "Zeynel Cebeci",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ceratonia_siliqua_-_Carob_02.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "carruba_carob_06.jpg": {
+    "filename": "carruba_carob_06.jpg",
+    "author": "Zeynel Cebeci",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ceratonia_siliqua_-_Carob_05.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "carruba_carob_07.jpg": {
+    "filename": "carruba_carob_07.jpg",
+    "author": "Zeynel Cebeci",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ceratonia_siliqua_-_Carob_01.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "giuggiola_jujube_04.jpg": {
+    "filename": "giuggiola_jujube_04.jpg",
+    "author": "Ismael Olea",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ziziphus_jujuba_(fruit).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "giuggiola_jujube_05.jpg": {
+    "filename": "giuggiola_jujube_05.jpg",
+    "author": "Rémi Tournebize",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Jujube_n.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1756,
+    "height": 1171,
+    "view_type": "isolated_background"
+  },
+  "giuggiola_jujube_06.jpg": {
+    "filename": "giuggiola_jujube_06.jpg",
+    "author": "Franco Folini",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ziziphus_jujuba_(California).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1906,
+    "height": 1271,
+    "view_type": "full_frame"
+  },
+  "giuggiola_jujube_07.jpg": {
+    "filename": "giuggiola_jujube_07.jpg",
+    "author": "Fumikas Sagisavas",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ziziphus_jujuba_cv._Dongzao_(20240716).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1920,
+    "view_type": "full_frame"
+  },
+  "giuggiola_jujube_08.jpg": {
+    "filename": "giuggiola_jujube_08.jpg",
+    "author": "lienyuan lee",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:%E6%A3%97%E6%A8%B9_Jujube_Tree_-_panoramio.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "giuggiola_jujube_09.jpg": {
+    "filename": "giuggiola_jujube_09.jpg",
+    "author": "Michel Chauvet",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Jujubes_%C3%A0_Fossano.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1277,
+    "view_type": "plant_in_field"
+  },
+  "nespola_comune_medlar_06.jpg": {
+    "filename": "nespola_comune_medlar_06.jpg",
+    "author": "Takkk",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mespilus_germanica_03.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1920,
+    "view_type": "full_frame"
+  },
+  "nespola_comune_medlar_07.jpg": {
+    "filename": "nespola_comune_medlar_07.jpg",
+    "author": "Pascal39",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mespilus_germanica_St-Cyr-Montmalin_08_septembre_2014_0363.JPG",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "mirabella_mirabelle_plum_06.jpg": {
+    "filename": "mirabella_mirabelle_plum_06.jpg",
+    "author": "J-L Carton",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mirabelles.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "mirabella_mirabelle_plum_07.jpg": {
+    "filename": "mirabella_mirabelle_plum_07.jpg",
+    "author": "Garitzko",
+    "license": "Public domain",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Prunus_domestica_subsp_syriaca.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "isolated_background"
+  },
+  "mirabella_mirabelle_plum_08.jpg": {
+    "filename": "mirabella_mirabelle_plum_08.jpg",
+    "author": "Helge Klaus Rieder",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:RoscheiderhofMiarabelleVonNancy58.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "cedro_citron_04.jpg": {
+    "filename": "cedro_citron_04.jpg",
+    "author": "Tangopaso",
+    "license": "Public domain",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Citrons_de_Menton_(close-up).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "cedro_citron_05.jpg": {
+    "filename": "cedro_citron_05.jpg",
+    "author": "Amada44",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Citrus_medica_001.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1275,
+    "view_type": "plant_in_field"
+  },
+  "cedro_citron_06.jpg": {
+    "filename": "cedro_citron_06.jpg",
+    "author": "Paul Link",
+    "license": "Copyrighted free use",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Citrus_medica_L.JPG",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "cedro_citron_07.jpg": {
+    "filename": "cedro_citron_07.jpg",
+    "author": "Marrabbio2 at Italian Wikipedia",
+    "license": "Public domain",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Citrus_medica.JPG",
+    "provider": "wikimedia_commons",
+    "width": 1280,
+    "height": 853,
+    "view_type": "plant_in_field"
+  },
+  "chinotto_chinotto_01.jpg": {
+    "filename": "chinotto_chinotto_01.jpg",
+    "author": "Photo by David J. Stang",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Citrus_aurantium_var._myrtifolia_Chinotto_1zz.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "chinotto_chinotto_02.jpg": {
+    "filename": "chinotto_chinotto_02.jpg",
+    "author": "Edwards, Sydenham, 1768-1819; Shrewsbury, John Talbot, Earl of, 1791-1852, former owner",
+    "license": "No restrictions",
+    "license_url": "https://www.flickr.com/commons/usage/",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_Botanical_register_consisting_of_coloured_figures_of_(1815)_(14793099233).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1600,
+    "height": 2400,
+    "view_type": "botanical_plate"
+  },
+  "chinotto_chinotto_03.jpg": {
+    "filename": "chinotto_chinotto_03.jpg",
+    "author": "Descourtilz, J. Theodore.; Descourtilz, M. E.; Pichard.",
+    "license": "Public domain",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Flore_m%C3%A9dicale_des_Antilles,_ou,_Trait%C3%A9_des_plantes_usuelles_(Pl._219)_(8182078589).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1600,
+    "height": 2400,
+    "view_type": "botanical_plate"
+  },
+  "chinotto_chinotto_04.jpg": {
+    "filename": "chinotto_chinotto_04.jpg",
+    "author": "Nadiatalent",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Citrus_myrtifolia_2.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1280,
+    "height": 853,
+    "view_type": "plant_in_field"
+  },
+  "chinotto_chinotto_05.jpg": {
+    "filename": "chinotto_chinotto_05.jpg",
+    "author": "Tangopaso",
+    "license": "Public domain",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Citrus_myrtifolia_(villa_Hanbury,_Italy).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "oliva_olive_06.jpg": {
+    "filename": "oliva_olive_06.jpg",
+    "author": "Emőke Dénes",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lamiales_-_Olea_europaea_-_9.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "oliva_olive_07.jpg": {
+    "filename": "oliva_olive_07.jpg",
+    "author": "Burkhard Mücke",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Olivenbaum_(Olea_europaea)_15.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "oliva_olive_08.jpg": {
+    "filename": "oliva_olive_08.jpg",
+    "author": "SABENCIA Guillermo César Ruiz",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Olea_europaea._Olivar.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "oliva_olive_09.jpg": {
+    "filename": "oliva_olive_09.jpg",
+    "author": "François André Michaux (book author), Augustus Lucas Hillhouse (translator), iii (illustrator), eee (engraver)",
+    "license": "Public domain",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:NAS-087_Olea_europaea.png",
+    "provider": "wikimedia_commons",
+    "width": 1600,
+    "height": 2400,
+    "view_type": "botanical_plate"
+  },
+  "fungo_ovolo_caesars_mushroom_04.jpg": {
+    "filename": "fungo_ovolo_caesars_mushroom_04.jpg",
+    "author": "Yaqui",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Oronges.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "full_frame"
+  },
+  "fungo_ovolo_caesars_mushroom_05.jpg": {
+    "filename": "fungo_ovolo_caesars_mushroom_05.jpg",
+    "author": "Davide Puddu",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Amanita_caesarea_collection.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1776,
+    "height": 1184,
+    "view_type": "full_frame"
+  },
+  "tartufo_nero_black_truffle_04.jpg": {
+    "filename": "tartufo_nero_black_truffle_04.jpg",
+    "author": "Giorgi Sulamanidze",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Summer_Truffle_%E1%83%96%E1%83%90%E1%83%A4%E1%83%AE%E1%83%A3%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%A2%E1%83%A0%E1%83%98%E1%83%A3%E1%83%A4%E1%83%94%E1%83%9A%E1%83%98.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "cut_section"
+  },
+  "tartufo_nero_black_truffle_05.jpg": {
+    "filename": "tartufo_nero_black_truffle_05.jpg",
+    "author": "Nicolò Oppicelli",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Tuber_macrosporum_486366.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1804,
+    "height": 1203,
+    "view_type": "cut_section"
+  },
+  "tartufo_bianco_white_truffle_01.jpg": {
+    "filename": "tartufo_bianco_white_truffle_01.jpg",
+    "author": "Amireskanlou",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Donbalan_or_Truffle_Fungus.jpg",
+    "provider": "wikimedia_commons",
+    "width": 868,
+    "height": 579,
+    "view_type": "full_frame"
+  },
+  "tartufo_nero_black_truffle_06.jpg": {
+    "filename": "tartufo_nero_black_truffle_06.jpg",
+    "author": "Giorgi Sulamanidze",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:%E1%83%96%E1%83%90%E1%83%A4%E1%83%AE%E1%83%A3%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%A2%E1%83%A0%E1%83%98%E1%83%A3%E1%83%A4%E1%83%94%E1%83%9A%E1%83%98_Summer_Truffle_-_Tuber_aestivum.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "tartufo_nero_black_truffle_07.jpg": {
+    "filename": "tartufo_nero_black_truffle_07.jpg",
+    "author": "Camerano Viejo",
+    "license": "CC BY 4.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 2312,
+    "height": 1541,
+    "view_type": "full_frame"
+  },
+  "tartufo_bianco_white_truffle_02.jpg": {
+    "filename": "tartufo_bianco_white_truffle_02.jpg",
+    "author": "Mortazavifar",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:White-truffle-pic.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1278,
+    "view_type": "cut_section"
+  },
+  "tartufo_bianco_white_truffle_03.jpg": {
+    "filename": "tartufo_bianco_white_truffle_03.jpg",
+    "author": "Kent Wang",
+    "license": "CC BY 2.0",
+    "license_url": null,
+    "source_url": null,
+    "provider": "user",
+    "width": 1867,
+    "height": 1244,
+    "view_type": "full_frame"
+  },
+  "shiitake_shiitake_04.jpg": {
+    "filename": "shiitake_shiitake_04.jpg",
+    "author": "dominik18s from Crystal Lake, US",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Shiitake_Growing_On_Logs_In_Our_Garden_(8143332267).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1632,
+    "height": 1088,
+    "view_type": "plant_in_field"
+  },
+  "shiitake_shiitake_05.jpg": {
+    "filename": "shiitake_shiitake_05.jpg",
+    "author": "Marcelo Träsel from Porto Alegre, Brasil",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Shiitake_(3413384832).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "cut_section"
+  },
+  "shiitake_shiitake_06.jpg": {
+    "filename": "shiitake_shiitake_06.jpg",
+    "author": "Edruska",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Shiitake_(Lentinula_edodes).jpg",
+    "provider": "wikimedia_commons",
+    "width": 1200,
+    "height": 800,
+    "view_type": "full_frame"
+  },
+  "shiitake_shiitake_07.jpg": {
+    "filename": "shiitake_shiitake_07.jpg",
+    "author": "Fumikas Sagisavas",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Suizhou_pattern_shiitake_mushrooms.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1920,
+    "view_type": "full_frame"
+  },
+  "cardoncello_king_oyster_mushroom_03.jpg": {
+    "filename": "cardoncello_king_oyster_mushroom_03.jpg",
+    "author": "Holger Krisp",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kr%C3%A4uter-Seitling_Pleurotus_eryngii.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
+    "view_type": "plant_in_field"
+  },
+  "cardoncello_king_oyster_mushroom_04.jpg": {
+    "filename": "cardoncello_king_oyster_mushroom_04.jpg",
+    "author": "claralieu",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mushroom_Reference_-27.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1820,
+    "height": 1213,
+    "view_type": "isolated_background"
+  },
+  "cardoncello_king_oyster_mushroom_05.jpg": {
+    "filename": "cardoncello_king_oyster_mushroom_05.jpg",
+    "author": "Paul Asman and Jill Lenoble",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pleurotus_eryngii_mushrooms_at_the_Edgar_Quinet_market.jpg",
+    "provider": "wikimedia_commons",
+    "width": 1594,
+    "height": 1063,
+    "view_type": "full_frame"
   }
 }
