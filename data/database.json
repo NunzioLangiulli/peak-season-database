@@ -7524,8 +7524,8 @@
           "en": "Share of the purchased product that is eaten."
         },
         "text": {
-          "it": "Esempio: parte edibile 34% significa che su 1 kg di carciofi se ne mangiano 340 g; il resto sono scarti (foglie esterne, gambo). Tutti i valori nutrizionali sono riferiti a 100 g di parte edibile, come nelle tabelle CREA e BDA-IEO.",
-          "en": "Example: an edible portion of 34% means that out of 1 kg of artichokes 340 g are eaten; the rest is waste (outer leaves, stem). All nutrition values refer to 100 g of edible portion, as in the CREA and BDA-IEO tables."
+          "it": "Esempio: parte edibile 34% significa che su 1 kg di carciofi se ne mangiano 340 g; il resto sono scarti (foglie esterne, gambo). Tutti i valori nutrizionali sono riferiti a 100 g di parte edibile, come nelle tabelle CREA e BDA-IEO. Il calcolatore Quanto Comprarne, nella lista della spesa, serve quando una ricetta indica la quantità di prodotto da usare: scrivi la parte edibile e ti dice quanto comprarne. Funziona anche al contrario: dal peso acquistato ricavi la parte edibile.",
+          "en": "Example: an edible portion of 34% means that out of 1 kg of artichokes 340 g are eaten; the rest is waste (outer leaves, stem). All nutrition values refer to 100 g of edible portion, as in the CREA and BDA-IEO tables. The How Much to Buy calculator in the shopping list helps when a recipe gives the quantity of product to use: enter the edible part and it tells you how much to buy. It also works backwards: from the weight bought you get the edible part."
         },
         "sources": [
           {

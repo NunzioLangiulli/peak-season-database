@@ -897,15 +897,15 @@
       "screen": "shopping_list",
       "key": "shopping_list.net_weight",
       "element_description": "Shopping list: net weight",
-      "it": "Netto",
-      "en": "Net"
+      "it": "Parte Edibile",
+      "en": "Edible Part"
     },
     {
       "screen": "shopping_list",
       "key": "shopping_list.gross_to_buy",
       "element_description": "Shopping list: gross to buy",
-      "it": "Peso da comprare al banco:",
-      "en": "Weight to buy:"
+      "it": "Da Comprare",
+      "en": "To Buy"
     },
     {
       "screen": "shopping_list",
@@ -1863,8 +1863,8 @@
       "screen": "settings",
       "key": "settings.shopping_mode_sub",
       "element_description": "Settings: shopping mode sub",
-      "it": "Una notifica fissa, visibile anche dalla schermata di blocco, con la frutta e la verdura di stagione. Si attiva con l'icona del carrello in alto, nella Home oppure nella Lista della Spesa.",
-      "en": "A pinned notification, visible on the lock screen too, with the fruit and veg in season. Turn it on with the cart icon at the top, in Home or in the Shopping List."
+      "it": "Una notifica fissa, visibile anche dalla schermata di blocco, con la tua lista della spesa e i prodotti di stagione. Nella lista puoi aggiungere i prodotti dell'app o qualsiasi altro prodotto, così hai tutta la spesa in un unico posto. Si attiva con l'icona del carrello in alto, nella Home oppure nella Lista della Spesa.",
+      "en": "A pinned notification, visible on the lock screen too, with your shopping list and the produce in season. You can add the app's products or anything else to the list, so all your shopping is in one place. Turn it on with the cart icon at the top, in Home or in the Shopping List."
     },
     {
       "screen": "settings",
@@ -1876,16 +1876,23 @@
     {
       "screen": "settings",
       "key": "settings.shopping_mode_list_mode.highlight",
-      "element_description": "Settings: shopping mode list mode (highlight)",
-      "it": "Evidenzia i prodotti della tua lista della spesa tra quelli di stagione",
-      "en": "Highlights the items on your shopping list among the seasonal ones"
+      "element_description": "Settings: shopping mode list mode (shopping list at the top, then the seasonal products)",
+      "it": "Visualizza in cima la tua lista della spesa e poi i prodotti di stagione",
+      "en": "Shows your shopping list at the top, then the seasonal produce"
     },
     {
       "screen": "settings",
       "key": "settings.shopping_mode_list_mode.only_list",
       "element_description": "Settings: shopping mode list mode (only list)",
-      "it": "Mostra solo i prodotti della tua lista della spesa",
+      "it": "Visualizza solo i prodotti della tua lista della spesa",
       "en": "Shows only the items on your shopping list"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.shopping_mode_list_mode.only_season",
+      "element_description": "Settings: shopping mode list mode (only the seasonal products, the shopping list is ignored)",
+      "it": "Visualizza solo i prodotti di stagione",
+      "en": "Shows only the seasonal produce"
     },
     {
       "screen": "settings",
@@ -1963,6 +1970,20 @@
       "element_description": "Settings: storage tips delay note",
       "it": "Con un ritardo, Android può anticiparla o posticiparla di qualche minuto per risparmiare batteria.",
       "en": "With a delay, Android may shift it by a few minutes to save battery."
+    },
+    {
+      "screen": "settings",
+      "key": "settings.shopping_other_items",
+      "element_description": "Settings: switch to show the free-text Other Items of the shopping list in the shopping notification",
+      "it": "Visualizza Altri Articoli nella Notifica",
+      "en": "Show Other Items in the Notification"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.shopping_other_items_sub",
+      "element_description": "Settings: subtitle of the Other Items switch",
+      "it": "Mostra anche gli articoli che non sono prodotti dell'app, come latte o pane.",
+      "en": "Also shows the items that are not products of the app, such as milk or bread."
     },
     {
       "screen": "settings",
