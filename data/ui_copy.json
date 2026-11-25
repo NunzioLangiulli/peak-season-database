@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Testi dell'interfaccia dell'app Peak Season (IT/EN). Li legge CopyService all'avvio; si modificano con scripts/copy_editor.py. I segnaposto tra graffe, es. {n}, vanno lasciati invariati. Chiavi uniche nel formato schermata.elemento.",
-    "updated": "2026-11-24"
+    "updated": "2026-11-25"
   },
   "strings": [
     {
@@ -835,7 +835,7 @@
       "key": "shopping_list.in_cart_header",
       "element_description": "Shopping list: in cart header — placeholders: {n}",
       "it": "Già Presi ({n})",
-      "en": "Already Got ({n})"
+      "en": "Already Picked Up ({n})"
     },
     {
       "screen": "shopping_list",
@@ -1095,6 +1095,48 @@
       "element_description": "Notifications: notif list title — placeholders: {inSeason}, {total}",
       "it": "La Tua Lista: {inSeason} su {total} di Stagione",
       "en": "Your List: {inSeason} of {total} in Season"
+    },
+    {
+      "screen": "notifications",
+      "key": "notifications.notif_empty_list_title",
+      "element_description": "Shopping notification: title when the shopping list is empty",
+      "it": "La Tua Lista è Vuota",
+      "en": "Your List Is Empty"
+    },
+    {
+      "screen": "notifications",
+      "key": "notifications.notif_empty_list_body",
+      "element_description": "Shopping notification: text when the shopping list is empty",
+      "it": "Aggiungi dei prodotti alla Lista della Spesa, oppure in Impostazioni › Modalità Spesa scegli di vedere anche i prodotti di stagione.",
+      "en": "Add some items to the Shopping List, or in Settings › Shopping Mode choose to see the seasonal produce too."
+    },
+    {
+      "screen": "notifications",
+      "key": "notifications.notif_all_picked_title",
+      "element_description": "Shopping notification: title when every product on the list is already picked up",
+      "it": "Hai Già Preso Tutto",
+      "en": "You've Got Everything"
+    },
+    {
+      "screen": "notifications",
+      "key": "notifications.notif_all_picked_body",
+      "element_description": "Shopping notification: text when every product on the list is already picked up",
+      "it": "Tutti i prodotti della tua lista sono tra i Già Presi. Se sono di una spesa passata, toglili e aggiungi quelli nuovi alla Lista della Spesa, oppure in Impostazioni › Modalità Spesa scegli di vedere anche i prodotti di stagione.",
+      "en": "All the items on your list are under Already Picked Up. If they are from a past shopping trip, remove them and add the new ones to the Shopping List, or in Settings › Shopping Mode choose to see the seasonal produce too."
+    },
+    {
+      "screen": "notifications",
+      "key": "notifications.notif_only_other_items_title",
+      "element_description": "Shopping notification: title when the list has only Other Items and their switch is off",
+      "it": "La Tua Lista ha Solo Altri Articoli",
+      "en": "Your List Has Only Other Items"
+    },
+    {
+      "screen": "notifications",
+      "key": "notifications.notif_only_other_items_body",
+      "element_description": "Shopping notification: text when the list has only Other Items and their switch is off",
+      "it": "Per vederli qui, in Impostazioni › Modalità Spesa attiva Visualizza Altri Articoli nella Notifica, oppure aggiungi dei prodotti alla Lista della Spesa.",
+      "en": "To see them here, in Settings › Shopping Mode turn on Show Other Items in the Notification, or add some items to the Shopping List."
     },
     {
       "screen": "notifications",
@@ -1982,8 +2024,8 @@
       "screen": "settings",
       "key": "settings.shopping_other_items_sub",
       "element_description": "Settings: subtitle of the Other Items switch",
-      "it": "Mostra anche gli articoli che non sono prodotti dell'app, come latte o pane.",
-      "en": "Also shows the items that are not products of the app, such as milk or bread."
+      "it": "Mostra anche gli articoli che non sono prodotti dell'app, e che hai aggiunto nella sezione Altri Articoli.",
+      "en": "Also shows the items that are not products of the app, and which you have added in the Other Items section."
     },
     {
       "screen": "settings",
