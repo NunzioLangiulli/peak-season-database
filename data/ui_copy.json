@@ -911,8 +911,8 @@
       "screen": "shopping_list",
       "key": "shopping_list.edible_yield",
       "element_description": "Shopping list: edible yield — placeholders: {pct}",
-      "it": "Resa edibile: {pct}%",
-      "en": "Edible yield: {pct}%"
+      "it": "Resa Edibile: {pct}%",
+      "en": "Edible Yield: {pct}%"
     },
     {
       "screen": "shopping_list",
