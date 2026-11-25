@@ -206,6 +206,7 @@ def main():
         ("53_scheda_grano_allergeni", {}, [], False, "food=grano_duro_durum_wheat", 3600),
         ("54_scheda_fava_favismo", {}, [], False, "food=fava_broad_bean", 3600),
         ("59_lista_calcolatore_altri_articoli", {"customShoppingItems": ['{"id":"c1","text":"Latte","done":false}', '{"id":"c2","text":"Pane","done":false}', '{"id":"c3","text":"Uova","done":true}']}, [("click", 132, 402), ("wait", 1200)], False, "tab=1", 2200),
+        ("60_lista_calcolatore_en", {"language": "en"}, [("click", 132, 384), ("wait", 1200)], False, "tab=1", 2200),
         ("38_zone_climatiche_mappa_dark", {"themeMode": "dark"}, [], True, "help=eufic_zones", 1500),
         ("34_famiglia_solanaceae", {}, [], False, "family=Solanaceae", H),
         ("35_mesi_gennaio_centrato", {}, [], False, "month=1", H),
