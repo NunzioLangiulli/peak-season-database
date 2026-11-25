@@ -65,17 +65,6 @@
     "height": 606,
     "view_type": "cut_section"
   },
-  "barbabietola_beetroot_02.jpg": {
-    "filename": "barbabietola_beetroot_02.jpg",
-    "author": "Desertrose7 / Pixabay",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "source_url": "https://pixabay.com/photos/beetroot-food-diet-vegetable-687251/",
-    "provider": "pixabay",
-    "width": 1280,
-    "height": 853,
-    "view_type": "other"
-  },
   "bietola_da_coste_swiss_chard_01.jpg": {
     "filename": "bietola_da_coste_swiss_chard_01.jpg",
     "author": "Jo Sonn / Unsplash",
@@ -10301,6 +10290,17 @@
     "provider": "wikimedia_commons",
     "width": 1594,
     "height": 1063,
+    "view_type": "full_frame"
+  },
+  "barbabietola_beetroot_10.jpg": {
+    "filename": "barbabietola_beetroot_10.jpg",
+    "author": "Bhaskaranaidu",
+    "license": "Public domain",
+    "license_url": null,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Beet_root.JPG",
+    "provider": "wikimedia_commons",
+    "width": 1920,
+    "height": 1280,
     "view_type": "full_frame"
   }
 }

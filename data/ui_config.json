@@ -860,6 +860,15 @@
       "target": "app"
     },
     {
+      "slot": "settings.check_updates",
+      "group": "Impostazioni",
+      "group_en": "Settings",
+      "description": "Riga Controlla Aggiornamenti (Informazioni)",
+      "description_en": "Check for Updates row (About)",
+      "icon": "material:update",
+      "target": "app"
+    },
+    {
       "slot": "settings.license",
       "group": "Impostazioni",
       "group_en": "Settings",

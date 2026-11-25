@@ -21300,18 +21300,29 @@
         ]
       },
       "images": {
-        "primary": "barbabietola_beetroot_04.jpg",
+        "primary": "barbabietola_beetroot_10.jpg",
         "gallery": [
+          "barbabietola_beetroot_10.jpg",
           "barbabietola_beetroot_04.jpg",
           "barbabietola_beetroot_03.jpg",
           "barbabietola_beetroot_01.jpg",
-          "barbabietola_beetroot_02.jpg",
           "barbabietola_beetroot_05.jpg",
           "barbabietola_beetroot_06.jpg",
           "barbabietola_beetroot_07.jpg",
           "barbabietola_beetroot_08.jpg"
         ],
         "image_details": [
+          {
+            "filename": "barbabietola_beetroot_10.jpg",
+            "author": "Bhaskaranaidu",
+            "license": "Public domain",
+            "license_url": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File:Beet_root.JPG",
+            "provider": "wikimedia_commons",
+            "width": 1920,
+            "height": 1280,
+            "view_type": "full_frame"
+          },
           {
             "filename": "barbabietola_beetroot_04.jpg",
             "author": "Couleur / Pixabay",
@@ -21344,17 +21355,6 @@
             "width": 909,
             "height": 606,
             "view_type": "cut_section"
-          },
-          {
-            "filename": "barbabietola_beetroot_02.jpg",
-            "author": "Desertrose7 / Pixabay",
-            "license": "Pixabay Content License",
-            "license_url": "https://pixabay.com/service/license-summary/",
-            "source_url": "https://pixabay.com/photos/beetroot-food-diet-vegetable-687251/",
-            "provider": "pixabay",
-            "width": 1280,
-            "height": 853,
-            "view_type": "other"
           },
           {
             "filename": "barbabietola_beetroot_05.jpg",
@@ -201730,25 +201730,25 @@
         "varieties_verification": []
       },
       "images": {
-        "primary": "cavolo_rosso_red_cabbage_05.jpg",
+        "primary": "cavolo_rosso_red_cabbage_03.jpg",
         "gallery": [
-          "cavolo_rosso_red_cabbage_05.jpg",
+          "cavolo_rosso_red_cabbage_03.jpg",
           "cavolo_rosso_red_cabbage_02.jpg",
           "cavolo_rosso_red_cabbage_01.jpg",
-          "cavolo_rosso_red_cabbage_03.jpg",
-          "cavolo_rosso_red_cabbage_04.jpg"
+          "cavolo_rosso_red_cabbage_04.jpg",
+          "cavolo_rosso_red_cabbage_05.jpg"
         ],
         "image_details": [
           {
-            "filename": "cavolo_rosso_red_cabbage_05.jpg",
-            "author": "Saporificifque",
-            "license": "CC0",
-            "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-            "source_url": "https://commons.wikimedia.org/wiki/File:Planche_botanique_de_formes_cultiv%C3%A9es_de_Brassica_oleracea_(chou_rouge).jpg",
-            "provider": "wikimedia_commons",
-            "width": 1797,
-            "height": 2696,
-            "view_type": "botanical_plate"
+            "filename": "cavolo_rosso_red_cabbage_03.jpg",
+            "author": "matthiasboeckel / Pixabay",
+            "license": "Pixabay Content License",
+            "license_url": "https://pixabay.com/service/license-summary/",
+            "source_url": "https://pixabay.com/photos/red-cabbages-cabbages-vegetables-6804099/",
+            "provider": "pixabay",
+            "width": 1094,
+            "height": 729,
+            "view_type": "full_frame"
           },
           {
             "filename": "cavolo_rosso_red_cabbage_02.jpg",
@@ -201773,17 +201773,6 @@
             "view_type": "plant_in_field"
           },
           {
-            "filename": "cavolo_rosso_red_cabbage_03.jpg",
-            "author": "matthiasboeckel / Pixabay",
-            "license": "Pixabay Content License",
-            "license_url": "https://pixabay.com/service/license-summary/",
-            "source_url": "https://pixabay.com/photos/red-cabbages-cabbages-vegetables-6804099/",
-            "provider": "pixabay",
-            "width": 1094,
-            "height": 729,
-            "view_type": "full_frame"
-          },
-          {
             "filename": "cavolo_rosso_red_cabbage_04.jpg",
             "author": "StefanHoffmann / Pixabay",
             "license": "Pixabay Content License",
@@ -201793,6 +201782,17 @@
             "width": 1280,
             "height": 853,
             "view_type": "cut_section"
+          },
+          {
+            "filename": "cavolo_rosso_red_cabbage_05.jpg",
+            "author": "Saporificifque",
+            "license": "CC0",
+            "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Planche_botanique_de_formes_cultiv%C3%A9es_de_Brassica_oleracea_(chou_rouge).jpg",
+            "provider": "wikimedia_commons",
+            "width": 1797,
+            "height": 2696,
+            "view_type": "botanical_plate"
           }
         ]
       },

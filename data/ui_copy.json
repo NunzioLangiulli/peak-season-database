@@ -1148,9 +1148,9 @@
     {
       "screen": "notifications",
       "key": "notifications.line_list",
-      "element_description": "Notifications: line list",
-      "it": "Lista",
-      "en": "List"
+      "element_description": "Shopping notification: label of the first line, with the products of the shopping list still to buy",
+      "it": "Lista della Spesa",
+      "en": "Shopping List"
     },
     {
       "screen": "notifications",
@@ -1886,6 +1886,55 @@
       "element_description": "Settings: shopping mode list mode (only list)",
       "it": "Mostra solo i prodotti della tua lista della spesa",
       "en": "Shows only the items on your shopping list"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.check_updates",
+      "element_description": "Settings: row that checks GitHub for a newer app version",
+      "it": "Controlla Aggiornamenti",
+      "en": "Check for Updates"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.check_updates_sub",
+      "element_description": "Settings: subtitle of the check-for-updates row",
+      "it": "Cerca su GitHub se c'è una versione più recente dell'app",
+      "en": "Looks on GitHub for a newer version of the app"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.update_available_title",
+      "element_description": "Settings: title of the dialog when a newer version exists",
+      "it": "Nuova Versione Disponibile",
+      "en": "New Version Available"
+    },
+    {
+      "screen": "settings",
+      "key": "settings.update_available_body",
+      "element_description": "Settings: dialog text when a newer version exists ({latest}, {current} = versions)",
+      "it": "È disponibile la versione {latest}. Tu hai la {current}.",
+      "en": "Version {latest} is available. You have {current}."
+    },
+    {
+      "screen": "settings",
+      "key": "settings.up_to_date",
+      "element_description": "Settings: dialog text when the app is already the latest version ({current} = version)",
+      "it": "Hai già l'ultima versione ({current}).",
+      "en": "You already have the latest version ({current})."
+    },
+    {
+      "screen": "settings",
+      "key": "settings.update_error",
+      "element_description": "Settings: dialog text when GitHub cannot be reached",
+      "it": "Non è stato possibile controllare gli aggiornamenti. Verifica la connessione e riprova.",
+      "en": "Could not check for updates. Check your connection and try again."
+    },
+    {
+      "screen": "settings",
+      "key": "settings.update_open",
+      "element_description": "Settings: button that opens the new release on GitHub",
+      "it": "Apri su GitHub",
+      "en": "Open on GitHub"
     },
     {
       "screen": "settings",
