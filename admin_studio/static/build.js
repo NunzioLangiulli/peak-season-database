@@ -57,7 +57,11 @@ $('#iphone_text').innerHTML = `<p>An iPhone app can only be compiled on a Mac wi
   <b>GitHub Actions</b> (workflow <code>app/.github/workflows/ios.yml</code>) builds an <b>unsigned .ipa</b> automatically.</p>
   <ol>
     <li><b>Automatic:</b> every time an app release is published on GitHub (for example with <b>Publish…</b> after raising the app version),
-      the workflow builds <code>PeakSeason-&lt;version&gt;-unsigned.ipa</code> and attaches it to the release. It takes about 15-30 minutes.</li>
+      the workflow builds <code>PeakSeason-&lt;version&gt;-unsigned.ipa</code>, attaches it to the release and adds the version to the
+      SideStore source (<code>sidestore/source.json</code> in the app repository). It takes about 15-30 minutes.
+      If the source update fails (the run shows an error after attaching the .ipa), in <code>app/</code> run <code>git pull</code>, then
+      <code>python sidestore/update_source.py --version X --tag vX --ipa PeakSeason-X-unsigned.ipa --size &lt;ipa bytes&gt; --date &lt;release publishedAt&gt;</code>,
+      then commit and push.</li>
     <li><b>By hand:</b> on github.com open <i>peak-season-app → Actions → iOS build → Run workflow</i>; the .ipa is in the run's artifacts.</li>
     <li><b>Install it on the iPhone:</b> download the .ipa and sign it with your own free Apple ID using
       <a href="https://sideloadly.io/" target="_blank" rel="noopener">Sideloadly</a> (Windows, with a cable) or AltStore/SideStore.

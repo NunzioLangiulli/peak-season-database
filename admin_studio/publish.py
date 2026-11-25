@@ -7,11 +7,19 @@ Publish (the "Publish…" button). Steps, in order; the first failure stops ever
   1. sync the database, copy and icons into the app (scripts/build_app_assets.py)
   2. validate the database (scripts/validate_db.py)
   3. run the app tests and build the Android APK (only when the app is included or its version has no release yet)
-  4. commit and push the included repositories (English messages, no co-author lines)
+  4. commit and push the included repositories (English messages, no co-author lines); before pushing, the commits
+     already on GitHub are pulled in with a rebase: after each app release the iOS workflow pushes a bot commit
+     ("SideStore source: Peak Season X") to the app repository's main, and without it the next push would be rejected
   5. create a GitHub release for an included repository whose version has no release yet:
      - database: tag v<metadata.version>  (DB_VERSION in scripts/build_app_support_metadata.py)
      - app: tag v<appVersion in app/lib/app_info.dart> with the APK attached as PeakSeason-<version>.apk; publishing
-       the app release also starts the iOS workflow (.github/workflows/ios.yml), which attaches the unsigned .ipa.
+       the app release also starts the iOS workflow (.github/workflows/ios.yml), which attaches the unsigned .ipa and
+       adds the version to the SideStore source (sidestore/source.json on main in the app repository).
+       If the workflow's push of the source fails (e.g. a GitHub 500), do it by hand in app/:
+         git pull
+         python sidestore/update_source.py --version X --tag vX --ipa PeakSeason-X-unsigned.ipa --size <ipa bytes> --date <release publishedAt>
+       then commit ("SideStore source: Peak Season X") and push. The size and date are in
+       gh release view vX --repo NunzioLangiulli/peak-season-app --json publishedAt,assets
 Commit & Push (the "Commit & Push" button): steps 1, 2 and 4 only.
 Versions: current version, latest GitHub release and Git state of both repositories; a new version is written
 everywhere it lives (database: DB_VERSION/DB_RELEASE_DATE and README; app: app_info.dart, pubspec.yaml, README).
@@ -207,6 +215,8 @@ def commit_and_push(only, messages):
         else:
             print(f"$ Commit the {k} repository", flush=True)
             print("no changes: nothing to commit", flush=True)
+        # bring in commits pushed meanwhile (the iOS workflow's SideStore commit on the app repo), then push
+        run(f"Get the latest {k} commits from GitHub", [GIT, "pull", "--rebase", "--autostash"], path)
         run(f"Push the {k} repository", [GIT, "push"], path)
     for k in REPOS:
         if k not in only:
@@ -249,7 +259,8 @@ def publish(only, messages):
         shutil.copyfile(APK, asset)
         run(f"Create the app release v{av}", [GH, "release", "create", f"v{av}", str(asset), "--repo", REPOS["app"][1], "--target", "main",
                                                "--title", f"Peak Season {av}", "--generate-notes"])
-        print("The iOS workflow now builds the unsigned .ipa and attaches it to this release (about 15-30 minutes).", flush=True)
+        print("The iOS workflow now builds the unsigned .ipa, attaches it to this release and adds the version to the "
+              "SideStore source (about 15-30 minutes).", flush=True)
     elif "app" in only:
         print(f"$ App v{av} is already released: no new release", flush=True)
     print("✓ Published", flush=True)
